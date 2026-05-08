@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marine · Expedition PH: Natural History</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="museum.css">
+</head>
+<body>
+
+<header id="header">
+  <a href="index.html" class="header-logo">Expedition PH</a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="regions.html">Island Groups</a>
+    <a href="flora.html">Flora</a>
+    <a href="fauna.html" class="active">Fauna</a>
+    <a href="geology.html">Geology</a>
+    <a href="places.html">Places</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="history.html">History</a>
+      <a href="exhibits.html">Exhibits</a>
+  </nav>
+</header>
+
+<div class="subpage-breadcrumb"><a href="fauna.html">Fauna</a><span class="breadcrumb-sep">&#8594;</span><span>Marine</span></div>
+
+<div class="page-hero">
+  <img class="page-hero-img" src="image/Whale Shark Butanding.png" alt="Philippine Marine Life">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-inner">
+    <p class="page-eyebrow">Philippine Marine Life</p>
+    <h1 class="page-title">Beneath the <em>Coral Triangle</em></h1>
+    <p class="page-desc">The Philippines anchors the Coral Triangle — the most biodiverse marine ecosystem on Earth, with 915 fish species and over 500 coral species.</p>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item reveal"><span class="stat-num" data-target="915">0</span><span class="stat-lbl">Fish Species</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="500">0</span><span class="stat-lbl">Coral Species</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="24">0</span><span class="stat-lbl">Profiled</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="143">0</span><span class="stat-lbl">Endemic Marine Fish</span></div>
+</div>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Featured Species &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section section-dark2">
+  <div class="featured-card reveal" onclick="openCard(this)" data-funfact="Every whale shark has a unique pattern of white spots — like a fingerprint. Scientists use photo-identification software to track individuals across ocean basins, some travelling over 13,000 km.">
+    <img class="featured-card-img" src="image/Whale Shark Butanding.png" alt="Whale Shark">
+    <div class="featured-card-body">
+      <div class="featured-label">&#9670; &nbsp; Marine · Fish &nbsp; · &nbsp; Endangered</div>
+      <div class="featured-name">Whale Shark</div>
+      <div class="featured-sci">Rhincodon typus</div>
+      <p class="featured-desc">The world's largest fish — a gentle giant that filters plankton from Philippine seas. Donsol in Sorsogon is one of the world's top sites for whale shark encounters, drawing researchers and divers from every continent.</p>
+      <div class="badge-row">
+        <span class="badge">Donsol</span>
+        <span class="badge">Sorsogon</span>
+        <span class="badge">Coral Triangle</span>
+        <span class="badge">World's Largest Fish</span>
+        <span class="badge">Plankton Feeder</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; All Species &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section">
+  <p class="section-eyebrow reveal">The Collection</p>
+  <h2 class="section-title reveal">Philippine <em>Marine Life</em></h2>
+  <p class="section-body reveal">Twenty-four species — sharks, rays, reef fish, dolphins, deep-sea dwellers, and crustaceans — representing the astonishing depth of Philippine marine biodiversity.</p>
+  <div class="filter-bar reveal">
+    <button class="filter-btn active" onclick="filterCards('all',this)">All</button>
+  </div>
+  <div class="grid grid-3" id="species-grid">
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="Dugongs are more closely related to elephants than to whales or dolphins. They can live up to 70 years and are thought to be the origin of ancient mermaid legends among Filipino sailors.">
+      <img src="image/Dugong.jpg" alt="Dugong" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine Mammal</div>
+        <div class="card-title">Dugong<em>Dugong dugon</em></div>
+        <p class="card-desc">The only strictly marine herbivorous mammal. Philippine waters — particularly Palawan and the Sulu Sea — hold some of the last significant Dugong populations in Asia.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="Every whale shark has a unique pattern of white spots — like a fingerprint. Scientists use photo-identification software to track individuals across ocean basins, some travelling over 13,000 km.">
+      <img src="image/Whale Shark Butanding.png" alt="Whale Shark" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Fish</div>
+        <div class="card-title">Whale Shark<em>Rhincodon typus</em></div>
+        <p class="card-desc">The world's largest fish. Donsol in Sorsogon is one of the world's top sites for whale shark encounters — a peaceful giant that filters plankton from Philippine seas.</p>
+        <span class="card-status status-endangered">Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="The Whitefin Topeshark is found only in Philippine waters — one of the most range-restricted sharks in the world. Its small coastal habitat and slow reproduction rate make it extraordinarily vulnerable to fishing pressure and habitat degradation.">
+      <img src="https://picsum.photos/seed/ph-topeshark/600/400" alt="Whitefin Topeshark" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Shark</div>
+        <div class="card-title">Whitefin Topeshark<em>Hemitriakis leucoperiptera</em></div>
+        <p class="card-desc">A small, slender shark found only in Philippine coastal waters — one of the most geographically restricted sharks on Earth. Critically threatened by targeted fishing and bycatch across its entire tiny range.</p>
+        <span class="card-status status-critical">Critically Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="The Blue-spotted Angelfish is endemic to the Philippines and a handful of nearby reefs — making it one of the most geographically restricted marine angelfish in the Indo-Pacific. Its vivid cobalt spots are unique among Philippine reef fish.">
+      <img src="https://picsum.photos/seed/ph-angelfish/600/400" alt="Blue-spotted Angelfish" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Fish</div>
+        <div class="card-title">Blue-spotted Angelfish<em>Chaetodontoplus caeruleopunctatus</em></div>
+        <p class="card-desc">A striking reef fish found only in Philippine waters — its vivid cobalt-blue spots on a dark body make it one of the most visually distinctive angelfish in the Indo-Pacific. A prized species in the aquarium trade, adding to its conservation pressure.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="The Philippine Guitarfish is a ray that looks like a shark from above and a ray from below — a living bridge between two of the ocean's most iconic fish groups. Its flattened body allows it to hide motionless on the seabed waiting for prey.">
+      <img src="https://picsum.photos/seed/ph-guitarfish/600/400" alt="Philippine Guitarfish" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Ray</div>
+        <div class="card-title">Philippine Guitarfish<em>Rhinobatos whitei</em></div>
+        <p class="card-desc">A cartilaginous fish halfway between a shark and a ray — named for its guitar-shaped body. Found in shallow Philippine coastal waters, it has been devastated by targeted fishing and is now one of the most endangered elasmobranchs in Asia.</p>
+        <span class="card-status status-critical">Critically Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="The Manila Sea Catfish uses long, sensitive barbels around its mouth to detect prey buried in muddy seabed sediment — essentially 'feeling' for food in the dark, turbid waters of Manila Bay and Laguna de Bay.">
+      <img src="https://picsum.photos/seed/ph-sea-catfish/600/400" alt="Manila Sea Catfish" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Fish</div>
+        <div class="card-title">Manila Sea Catfish<em>Arius manillensis</em></div>
+        <p class="card-desc">A brackish-water catfish endemic to Manila Bay and Laguna de Bay — a cultural and culinary staple of the region for centuries. Heavily impacted by the dramatic decline in water quality and overfishing in its native waters.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="The Culion Silverside forms massive, shimmering schools near the surface of the sea — their mirrored scales moving in perfect unison, making the entire school appear as a single living organism to confuse predators.">
+      <img src="https://picsum.photos/seed/ph-silverside/600/400" alt="Culion Silverside" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Fish</div>
+        <div class="card-title">Culion Silverside<em>Atherinomorus elymus</em></div>
+        <p class="card-desc">A small, schooling silverside fish endemic to the waters around Culion Island in Palawan. A key prey species in the food web of one of the Philippines' most biodiverse marine regions.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="The Philippine Anchovy travels in schools so dense they are visible from the surface as dark moving shadows beneath the water — a critical food source for tuna, dolphins, and seabirds across the Philippine Sea.">
+      <img src="https://picsum.photos/seed/ph-anchovy/600/400" alt="Philippine Anchovy" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Fish</div>
+        <div class="card-title">Philippine Anchovy<em>Encrasicholina philippinensis</em></div>
+        <p class="card-desc">A small, abundant pelagic fish that forms the foundation of Philippine marine food webs. An economically vital species — dried and fermented into the beloved condiment bagoong — and a keystone prey species for larger marine predators.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="The Zulu Eelblenny is so secretive it spends almost its entire life hidden inside coral crevices and rocky reef holes — emerging only briefly at night to hunt. Most of what science knows about it comes from specimens collected by chance.">
+      <img src="https://picsum.photos/seed/ph-eelblenny/600/400" alt="Zulu Eelblenny" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Fish</div>
+        <div class="card-title">Zulu Eelblenny<em>Sticharium zulu</em></div>
+        <p class="card-desc">A cryptic, eel-like blenny endemic to Philippine reef habitats. Rarely seen and poorly studied, it lives hidden within coral rubble and reef crevices — one of many small reef fish that highlight how much remains unknown about Philippine marine biodiversity.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="The Cuyo Coralbrotula lives entirely within living coral heads — sheltering inside the coral structure and feeding on tiny invertebrates without ever needing to venture into open water. Its entire world is a single coral colony.">
+      <img src="https://picsum.photos/seed/ph-coralbrotula/600/400" alt="Cuyo Coralbrotula" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Fish</div>
+        <div class="card-title">Cuyo Coralbrotula<em>Diancistrus cuyoensis</em></div>
+        <p class="card-desc">A tiny, secretive fish found only in the coral reefs surrounding the Cuyo Islands of Palawan. It lives entirely within living coral heads — making it entirely dependent on the health of Philippine reef ecosystems for its survival.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="The Philippine Chimaera lives in the deep sea where no sunlight penetrates — using electrosensory pores on its snout to detect the faint electrical fields of prey buried in the seabed. It is a living fossil, its lineage unchanged for over 400 million years.">
+      <img src="https://picsum.photos/seed/ph-chimaera/600/400" alt="Philippine Chimaera" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Deep Sea</div>
+        <div class="card-title">Philippine Chimaera<em>Hydrolagus philippinensis</em></div>
+        <p class="card-desc">A ghostly deep-sea fish from a lineage older than the dinosaurs. Found in the abyssal depths of Philippine waters, it is rarely encountered and almost entirely unstudied — a reminder of how little we know of the deep Philippine Sea.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="The Short-horn Triangular Batfish walks along the seabed using its modified pectoral fins as legs — one of the few fish in the world that literally walks rather than swims to move across the ocean floor.">
+      <img src="https://picsum.photos/seed/ph-batfish/600/400" alt="Short-horn Triangular Batfish" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Fish</div>
+        <div class="card-title">Short-horn Triangular Batfish<em>Halieutaea brevicornis</em></div>
+        <p class="card-desc">A bizarre, flattened fish that walks along the seabed on modified fins rather than swimming. Its triangular, armoured body and lure-tipped snout make it one of the most unusual fish found in Philippine coastal waters.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="The Onefin Catshark is named for an unusual anatomical feature — one of its two dorsal fins is dramatically reduced, giving it a distinctive silhouette unlike any other shark found in Philippine waters.">
+      <img src="https://picsum.photos/seed/ph-catshark/600/400" alt="Onefin Catshark" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Shark</div>
+        <div class="card-title">Onefin Catshark<em>Apristurus investigatoris</em></div>
+        <p class="card-desc">A small, deep-water catshark found in the depths of the Philippine Sea. Rarely encountered and poorly understood, it is one of several endemic or near-endemic sharks in Philippine waters whose populations have never been formally assessed.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="Brackish crabs can survive in waters that shift from almost freshwater to nearly full seawater within a single tide cycle — tolerating salt concentrations that would kill most marine or freshwater animals within hours.">
+      <img src="https://picsum.photos/seed/ph-brackish-crab/600/400" alt="Brackish Crabs" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Crustacean</div>
+        <div class="card-title">Brackish Crabs<em>Varuna spp. / Scylla spp.</em></div>
+        <p class="card-desc">A group of crabs inhabiting the mangrove fringes and estuaries of the Philippine archipelago — ecosystems that filter coastal waters, protect shorelines from typhoons, and serve as nurseries for hundreds of marine species.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="The Sinarapan is the world's smallest commercial fish — so tiny that roughly 1,000 individuals weigh less than a gram. Locals harvest them in ultra-fine nets and eat them whole, often dried or made into fritters called okoy. It exists nowhere else on Earth.">
+      <img src="image/Sinarapan.png" alt="Sinarapan" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Fish</div>
+        <div class="card-title">Sinarapan<em>Mistichthys luzonensis</em></div>
+        <p class="card-desc">The world's smallest commercial fish — found only in Lake Buhi, Camarines Sur, Luzon. A cultural icon of the Bicol region, it has been harvested for generations but is now critically threatened by overfishing and the introduction of invasive species into its only known habitat.</p>
+        <span class="card-status status-critical">Critically Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="Thielle's Anemonefish is one of the rarest clownfish in the world — found only in Philippine waters and described from just a handful of specimens. Unlike common clownfish, it lives in deeper reef habitats that are rarely visited by divers.">
+      <img src="https://picsum.photos/seed/ph-thielles-anemone/600/400" alt="Thielle's Anemonefish" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Fish</div>
+        <div class="card-title">Thielle's Anemonefish<em>Amphiprion thiellei</em></div>
+        <p class="card-desc">One of the world's rarest and least-known clownfish — found only in Philippine reef waters. Its relationship with its host anemone, spawning behaviour, and population size remain almost entirely unstudied by science.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="The Azure Damselfish forms small, tightly defended territories on coral rubble — the male guards the nest so aggressively that it will charge fish many times its own size, including divers who approach too closely to its patch of reef.">
+      <img src="https://picsum.photos/seed/ph-azure-damsel/600/400" alt="Azure Damselfish" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Fish</div>
+        <div class="card-title">Azure Damselfish<em>Altrichthys azurelineatus</em></div>
+        <p class="card-desc">A small, brilliantly coloured damselfish endemic to the reefs of Mindanao and nearby islands. One of the few damselfish species where both parents share equal responsibility for guarding and fanning the nest until eggs hatch.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="The Latigo Fairy Wrasse was named after marine biologist Brian Greene and was only formally described in 2022 — discovered in the deep reef zone between 40–70 metres, a depth range often called the 'twilight zone' that remains largely unexplored.">
+      <img src="https://picsum.photos/seed/ph-latigo-wrasse/600/400" alt="Latigo Fairy Wrasse" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Fish</div>
+        <div class="card-title">Latigo Fairy Wrasse<em>Cirrhilabrus briangreenei</em></div>
+        <p class="card-desc">A dazzlingly coloured fairy wrasse discovered only recently in the deep reefs of the Philippines. Its vivid magenta and orange hues make it one of the most visually striking wrasses in the Indo-Pacific — and a reminder of how many new species await discovery in Philippine waters.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="The Magma Fairy Wrasse gets its name from its fiery red coloration — which intensifies dramatically when males display to females or rivals. It was only scientifically described in 2020, found in the mesophotic reef zone off the Philippine coast.">
+      <img src="https://picsum.photos/seed/ph-magma-wrasse/600/400" alt="Magma Fairy Wrasse" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Fish</div>
+        <div class="card-title">Magma Fairy Wrasse<em>Cirrhilabrus shutmani</em></div>
+        <p class="card-desc">A brilliantly coloured wrasse found only in the deep Philippine reefs — its fiery red and orange body blazes through the dim water of the mesophotic zone. Formally described in 2020, it is one of several new wrasse species recently discovered in Philippine waters.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="The Jaguar Dottyback is so territorial that it will defend a coral crevice against fish ten times its size. Males can change sex to female and back again depending on the social dynamics of the local reef — one of the most flexible reproductive strategies in the fish world.">
+      <img src="https://picsum.photos/seed/ph-jaguar-dotty/600/400" alt="Jaguar Dottyback" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Fish</div>
+        <div class="card-title">Jaguar Dottyback<em>Pseudochromis moorei</em></div>
+        <p class="card-desc">A small but ferociously territorial reef fish endemic to Philippine waters. Its bold spotted pattern and aggressive disposition belie its tiny size — it defends coral crevices against all comers and can reverse its sex depending on the needs of its local population.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="The Whitechin Surgeonfish uses the razor-sharp spine at the base of its tail — the 'scalpel' that gives surgeonfish their name — as a weapon so effective it can slice through fishing nets. It grazes algae off reef surfaces, keeping corals clear and healthy.">
+      <img src="https://picsum.photos/seed/ph-surgeonfish/600/400" alt="Whitechin Surgeonfish" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Fish</div>
+        <div class="card-title">Whitechin Surgeonfish<em>Acanthurus albimento</em></div>
+        <p class="card-desc">An endemic surgeonfish found grazing algae across Philippine coral reefs. As a key herbivore, it keeps reefs clean and free of algae overgrowth — playing a vital role in maintaining the balance and health of the coral ecosystems it inhabits.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="During spawning displays, the male Philippine Flasher Wrasse 'flashes' — rapidly erecting its elongated dorsal fin rays and firing bursts of intense colour as it spirals upward through the water column. The display lasts only seconds but is among the most spectacular courtship performances of any reef fish in the world.">
+      <img src="https://picsum.photos/seed/ph-flasher-wrasse/600/400" alt="Philippine Flasher Wrasse" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Fish</div>
+        <div class="card-title">Philippine Flasher Wrasse<em>Paracheilinus carpenteri</em></div>
+        <p class="card-desc">An endemic reef wrasse found only in the Philippine and nearby Indonesian reefs — the male's electric-blue, orange, and red breeding colours are among the most vivid of any fish on the Coral Triangle. First described in 1978 from Philippine specimens, it remains a prized sighting for divers on deep reef slopes across the archipelago.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="The Nautilus has survived virtually unchanged for 500 million years — outlasting the dinosaurs, three mass extinctions, and almost every major change in Earth's oceans. Its shell is divided into sealed gas-filled chambers that act as a ballast system to control buoyancy with extraordinary precision.">
+      <img src="https://picsum.photos/seed/ph-nautilus/600/400" alt="Philippine Nautilus" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Cephalopod</div>
+        <div class="card-title">Philippine Nautilus<em>Nautilus pompilius</em></div>
+        <p class="card-desc">A living fossil found in the deep reefs of the Philippines — its spiral shell and tentacled form virtually unchanged for 500 million years. Collected for its beautiful shell across generations, it is now protected under Philippine law, though enforcement in remote reef areas remains a challenge.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="The Sulu Dragonfish lives in permanent darkness over 200 metres deep — it produces its own light through bioluminescent photophores along its body, using the glow to attract prey and communicate with others in the pitch-black depths of the Sulu Sea.">
+      <img src="https://picsum.photos/seed/ph-sulu-dragon/600/400" alt="Sulu Dragonfish" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Marine · Deep Sea</div>
+        <div class="card-title">Sulu Dragonfish<em>Eustomias suluensis</em></div>
+        <p class="card-desc">A bioluminescent deep-sea predator found only in the depths of the Sulu Sea. Armed with long, fang-like teeth and light-producing organs along its body, it is one of the most alien-looking creatures in Philippine waters — and one of the least studied.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-dark2 section-centered">
+  <p class="section-eyebrow reveal">Conservation</p>
+  <h2 class="section-title reveal section-title-centered">The Stakes of <em>Survival</em></h2>
+  <p class="section-body reveal section-body-spaced">The Philippines has lost over 70% of its original forest cover. Every species documented here depends on urgent collective action.</p>
+  <div class="reveal cta-row">
+    <a href="places.html" class="btn-gold">Explore Habitats</a>
+    <a href="species.html?group=marine" class="btn-outline">View All Marine Species</a>
+    <a href="fauna.html" class="btn-outline">Back to Fauna</a>
+  </div>
+</section>
+
+<div id="modal" class="modal">
+  <div class="modal-card">
+    <button type="button" class="modal-close" onclick="closeModal()">&#x2715;</button>
+    <div class="modal-card-img"><img id="modal-img" src="" alt=""></div>
+    <div class="modal-card-body">
+      <div class="modal-card-tag" id="modal-tag"></div>
+      <div class="modal-card-title" id="modal-title"></div>
+      <p class="modal-card-desc" id="modal-desc"></p>
+      <span id="modal-status" class="modal-status-hidden"></span>
+      <div id="modal-funfact" class="modal-card-funfact modal-status-hidden">
+        <div class="modal-card-funfact-label">&#9670; Fun Fact</div>
+        <p class="modal-card-funfact-text" id="modal-funfact-text"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="guide"><div class="guide-title">&#9670; Marine Guide</div><p class="guide-text" id="guide-text">Click any card to view full details.</p></div>
+<button class="audio-btn" id="audio-btn" onclick="toggleSound()">&#9654; Ambient Sound</button>
+<audio id="sound" loop><source src="image/Expidition PH ost.mp3" type="audio/mpeg"></audio>
+
+<footer>
+  <div><div class="footer-brand-name">Expedition PH</div><p class="footer-tagline">A digital exploration of the Philippine archipelago's natural heritage.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="regions.html">Island Groups</a></li><li><a href="flora.html">Flora</a></li><li><a href="fauna.html">Fauna</a></li><li><a href="geology.html">Geology</a></li></ul></div>
+  <div><h4>Fauna</h4><ul><li><a href="birds.html">Birds</a></li><li><a href="mammals.html">Mammals</a></li><li><a href="reptiles.html">Reptiles</a></li><li><a href="marine.html">Marine</a></li><li><a href="insects.html">Insects</a></li><li><a href="freshwater.html">Freshwater</a></li><li><a href="extinct.html">Lost Species</a></li></ul></div>
+  <div><h4>Discover</h4><ul><li><a href="places.html">Places</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="species.html">Species Index</a></li><li><a href="protected-areas.html">Protected Areas</a></li></ul></div>
+  <div><h4>About</h4><ul><li><a href="exhibits.html">Exhibits</a></li><li><a href="visit.html">About This Project</a></li></ul></div>
+</footer>
+<div class="footer-bottom"><span>&copy; 2025 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
+
+<script src="museum.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fauna · Expedition PH: Natural History</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="museum.css">
+</head>
+<body>
+
+<header id="header">
+  <a href="index.html" class="header-logo">Expedition PH</a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="regions.html">Island Groups</a>
+    <a href="flora.html">Flora</a>
+    <a href="fauna.html" class="active">Fauna</a>
+    <a href="geology.html">Geology</a>
+    <a href="places.html">Places</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="history.html">History</a>
+      <a href="exhibits.html">Exhibits</a>
+  </nav>
+</header>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <img class="page-hero-img" src="image/Agila.jpg" alt="Philippine Eagle">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-inner">
+    <p class="page-eyebrow">Philippine Fauna</p>
+    <h1 class="page-title">Life Across the <em>Archipelago</em></h1>
+    <p class="page-desc">From rainforest predators to deep-sea ghosts, from iridescent reef fish to ancient insects — the Philippines harbours one of the most extraordinary concentrations of animal life on Earth.</p>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-item reveal"><span class="stat-num" data-target="52177">0</span><span class="stat-lbl">Known Species</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="706">0</span><span class="stat-lbl">Bird Species</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="238">0</span><span class="stat-lbl">Endemic Birds</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="915">0</span><span class="stat-lbl">Fish Species</span></div>
+</div>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Explore by Group &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<!-- HUB CARDS -->
+<section class="section">
+  <div class="grid fauna-hub-grid">
+
+    <!-- BIRDS -->
+    <div class="fauna-hub-card">
+      <div class="fauna-hub-img-wrap">
+        <img src="image/Agila.jpg" alt="Philippine Birds">
+        <div class="fauna-hub-img-overlay"></div>
+        <div class="fauna-hub-count">706 Species</div>
+      </div>
+      <div class="fauna-hub-body">
+        <div class="card-tag">Aves</div>
+        <div class="fauna-hub-title">Philippine <em>Birds</em></div>
+        <p class="fauna-hub-desc">From the world's most powerful raptor to iridescent sunbirds of the Cordillera cloud forests — 706 recorded species, 238 found nowhere else on Earth.</p>
+        <a href="birds.html" class="btn-outline fauna-hub-btn">Explore Birds</a>
+      </div>
+    </div>
+
+    <!-- MAMMALS -->
+    <div class="fauna-hub-card">
+      <div class="fauna-hub-img-wrap">
+        <img src="image/Tarsier.jpg" alt="Philippine Mammals">
+        <div class="fauna-hub-img-overlay"></div>
+        <div class="fauna-hub-count">167 Species</div>
+      </div>
+      <div class="fauna-hub-body">
+        <div class="card-tag">Mammalia</div>
+        <div class="fauna-hub-title">Philippine <em>Mammals</em></div>
+        <p class="fauna-hub-desc">167 native species, 102 endemic — from the world's smallest primate to giant cloud rats of the Luzon highlands and critically endangered bovids of Mindoro.</p>
+        <a href="mammals.html" class="btn-outline fauna-hub-btn">Explore Mammals</a>
+      </div>
+    </div>
+
+    <!-- REPTILES -->
+    <div class="fauna-hub-card">
+      <div class="fauna-hub-img-wrap">
+        <img src="image/Buwaya.png" alt="Philippine Reptiles">
+        <div class="fauna-hub-img-overlay"></div>
+        <div class="fauna-hub-count">340 Species</div>
+      </div>
+      <div class="fauna-hub-body">
+        <div class="card-tag">Reptilia</div>
+        <div class="fauna-hub-title">Philippine <em>Reptiles</em></div>
+        <p class="fauna-hub-desc">340 reptile species, 187 endemic — spitting cobras, water-walking lizards, heat-sensing pit vipers, and one of the world's most endangered crocodilians.</p>
+        <a href="reptiles.html" class="btn-outline fauna-hub-btn">Explore Reptiles</a>
+      </div>
+    </div>
+
+    <!-- MARINE -->
+    <div class="fauna-hub-card">
+      <div class="fauna-hub-img-wrap">
+        <img src="image/Whale Shark Butanding.png" alt="Philippine Marine Life">
+        <div class="fauna-hub-img-overlay"></div>
+        <div class="fauna-hub-count">915 Fish Species</div>
+      </div>
+      <div class="fauna-hub-body">
+        <div class="card-tag">Marine</div>
+        <div class="fauna-hub-title">Philippine <em>Marine Life</em></div>
+        <p class="fauna-hub-desc">The Philippines anchors the Coral Triangle — the most biodiverse marine ecosystem on Earth, with 915 fish species and over 500 coral species.</p>
+        <a href="marine.html" class="btn-outline fauna-hub-btn">Explore Marine</a>
+      </div>
+    </div>
+
+    <!-- INSECTS -->
+    <div class="fauna-hub-card">
+      <div class="fauna-hub-img-wrap">
+        <img src="image/Atlas Moth.png" alt="Philippine Insects">
+        <div class="fauna-hub-img-overlay"></div>
+        <div class="fauna-hub-count">21,000+ Species</div>
+      </div>
+      <div class="fauna-hub-body">
+        <div class="card-tag">Insecta</div>
+        <div class="fauna-hub-title">Philippine <em>Insects</em></div>
+        <p class="fauna-hub-desc">21,000+ insect species, 70% endemic — giant moths, birdwing butterflies, synchronised fireflies, and 110+ endemic tiger beetle species.</p>
+        <a href="insects.html" class="btn-outline fauna-hub-btn">Explore Insects</a>
+      </div>
+    </div>
+
+    <!-- FRESHWATER -->
+    <div class="fauna-hub-card">
+      <div class="fauna-hub-img-wrap">
+        <img src="image/Tawilis.png" alt="Philippine Freshwater Life">
+        <div class="fauna-hub-img-overlay"></div>
+        <div class="fauna-hub-count">281 Fish Species</div>
+      </div>
+      <div class="fauna-hub-body">
+        <div class="card-tag">Freshwater</div>
+        <div class="fauna-hub-title">Philippine <em>Freshwater</em></div>
+        <p class="fauna-hub-desc">281 freshwater fish species, 67 endemic — from Taal Lake's one-of-a-kind sardine to highland stream gobies found on a single mountain.</p>
+        <a href="freshwater.html" class="btn-outline fauna-hub-btn">Explore Freshwater</a>
+      </div>
+    </div>
+
+    <!-- LOST SPECIES -->
+    <div class="fauna-hub-card">
+      <div class="fauna-hub-img-wrap">
+        <img src="image/Cebu Flowerpecker.png" alt="Lost Species of the Philippines">
+        <div class="fauna-hub-img-overlay"></div>
+        <div class="fauna-hub-count">12 Species Profiled</div>
+      </div>
+      <div class="fauna-hub-body">
+        <div class="card-tag">Extinct · Rediscovered</div>
+        <div class="fauna-hub-title">Philippine <em>Lost Species</em></div>
+        <p class="fauna-hub-desc">Prehistoric giants, modern extinctions, and miraculous rediscoveries — twelve species that define what the Philippines has lost and what it still fights to keep.</p>
+        <a href="extinct.html" class="btn-outline fauna-hub-btn">Explore Lost Species</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONSERVATION CTA -->
+<section class="section section-dark2 section-centered">
+  <p class="section-eyebrow reveal">Conservation</p>
+  <h2 class="section-title reveal section-title-centered">The Stakes of <em>Survival</em></h2>
+  <p class="section-body reveal section-body-spaced">The Philippines has lost over 70% of its original forest cover. Every species documented here depends on urgent collective action — from habitat protection to community-led conservation.</p>
+  <div class="reveal cta-row">
+    <a href="places.html" class="btn-gold">Explore Habitats</a>
+    <a href="regions.html" class="btn-outline">View by Region</a>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-card">
+    <button type="button" class="modal-close" onclick="closeModal()">&#x2715;</button>
+    <div class="modal-card-img"><img id="modal-img" src="" alt=""></div>
+    <div class="modal-card-body">
+      <div class="modal-card-tag" id="modal-tag"></div>
+      <div class="modal-card-title" id="modal-title"></div>
+      <p class="modal-card-desc" id="modal-desc"></p>
+      <span id="modal-status" class="modal-status-hidden"></span>
+      <div id="modal-funfact" class="modal-card-funfact modal-status-hidden">
+        <div class="modal-card-funfact-label">&#9670; Fun Fact</div>
+        <p class="modal-card-funfact-text" id="modal-funfact-text"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GUIDE -->
+<div class="guide"><div class="guide-title">&#9670; Fauna Guide</div><p class="guide-text" id="guide-text">Select a group above to explore species.</p></div>
+
+<!-- AUDIO -->
+<button class="audio-btn" id="audio-btn" onclick="toggleSound()">&#9654; Ambient Sound</button>
+<audio id="sound" loop><source src="image/Expidition PH ost.mp3" type="audio/mpeg"></audio>
+
+<!-- FOOTER -->
+<footer>
+  <div><div class="footer-brand-name">Expedition PH</div><p class="footer-tagline">A digital exploration of the Philippine archipelago's natural heritage.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="regions.html">Island Groups</a></li><li><a href="flora.html">Flora</a></li><li><a href="fauna.html">Fauna</a></li><li><a href="geology.html">Geology</a></li></ul></div>
+  <div><h4>Fauna</h4><ul><li><a href="birds.html">Birds</a></li><li><a href="mammals.html">Mammals</a></li><li><a href="reptiles.html">Reptiles</a></li><li><a href="marine.html">Marine</a></li><li><a href="insects.html">Insects</a></li><li><a href="freshwater.html">Freshwater</a></li><li><a href="extinct.html">Lost Species</a></li></ul></div>
+  <div><h4>Discover</h4><ul><li><a href="places.html">Places</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="species.html">Species Index</a></li><li><a href="protected-areas.html">Protected Areas</a></li></ul></div>
+  <div><h4>About</h4><ul><li><a href="exhibits.html">Exhibits</a></li><li><a href="visit.html">About This Project</a></li></ul></div>
+</footer>
+<div class="footer-bottom"><span>&copy; 2025 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
+
+<script src="museum.js"></script>
+</body>
+</html>

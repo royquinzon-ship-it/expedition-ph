@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freshwater · Expedition PH: Natural History</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="museum.css">
+</head>
+<body>
+
+<header id="header">
+  <a href="index.html" class="header-logo">Expedition PH</a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="regions.html">Island Groups</a>
+    <a href="flora.html">Flora</a>
+    <a href="fauna.html" class="active">Fauna</a>
+    <a href="geology.html">Geology</a>
+    <a href="places.html">Places</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="history.html">History</a>
+      <a href="exhibits.html">Exhibits</a>
+  </nav>
+</header>
+
+<div class="subpage-breadcrumb"><a href="fauna.html">Fauna</a><span class="breadcrumb-sep">&#8594;</span><span>Freshwater</span></div>
+
+<div class="page-hero">
+  <img class="page-hero-img" src="image/Tawilis.png" alt="Philippine Freshwater Life">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-inner">
+    <p class="page-eyebrow">Philippine Freshwater</p>
+    <h1 class="page-title">Life in the <em>Lakes &amp; Rivers</em></h1>
+    <p class="page-desc">281 freshwater fish species, 67 endemic — from Taal Lake's one-of-a-kind sardine to highland stream gobies found on a single mountain.</p>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item reveal"><span class="stat-num" data-target="281">0</span><span class="stat-lbl">Freshwater Fish</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="67">0</span><span class="stat-lbl">Endemic</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="24">0</span><span class="stat-lbl">Profiled</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="40">0</span><span class="stat-lbl">Threatened Species</span></div>
+</div>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Featured Species &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section section-dark2">
+  <div class="featured-card reveal" onclick="openCard(this)" data-funfact="The Tawilis is the only freshwater sardine in the world — found exclusively in Taal Lake. It evolved from marine ancestors trapped when volcanic activity isolated the lake from the sea thousands of years ago.">
+    <img class="featured-card-img" src="image/Tawilis.png" alt="Tawilis">
+    <div class="featured-card-body">
+      <div class="featured-label">&#9670; &nbsp; Freshwater · Fish &nbsp; · &nbsp; Critically Endangered</div>
+      <div class="featured-name">Tawilis</div>
+      <div class="featured-sci">Sardinella tawilis</div>
+      <p class="featured-desc">The world's only freshwater sardine — found exclusively in Taal Lake, Batangas. A cultural icon of the Bicol region, evolved from marine ancestors trapped when the lake was isolated from the sea thousands of years ago. Now critically threatened by overfishing and volcanic activity.</p>
+      <div class="badge-row">
+        <span class="badge">Taal Lake</span>
+        <span class="badge">Batangas</span>
+        <span class="badge">World's Only Freshwater Sardine</span>
+        <span class="badge">Critically Endangered</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; All Species &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section">
+  <p class="section-eyebrow reveal">The Collection</p>
+  <h2 class="section-title reveal">Philippine <em>Freshwater</em></h2>
+  <p class="section-body reveal">Twenty-four species — sardines, eels, gobies, barbs, crabs, shrimp, snakeheads, stingrays, and more — representing the remarkable freshwater biodiversity of Philippine lakes and rivers.</p>
+  <div class="filter-bar reveal">
+    <button class="filter-btn active" onclick="filterCards('all',this)">All</button>
+  </div>
+  <div class="grid grid-3" id="species-grid">
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="The Tawilis is the only freshwater sardine in the world — found exclusively in Taal Lake. It evolved from marine ancestors trapped when volcanic activity isolated the lake from the sea thousands of years ago.">
+      <img src="image/Tawilis.png" alt="Tawilis" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Fish</div>
+        <div class="card-title">Tawilis<em>Sardinella tawilis</em></div>
+        <p class="card-desc">The world's only freshwater sardine — found exclusively in Taal Lake, Batangas. A cultural and culinary icon of the Batangas region, now threatened by overfishing and volcanic activity.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="The Luzon Ricefish lives in rice paddies, streams, and small lakes — its life cycle is so perfectly synced with the Philippine wet season that its breeding peaks exactly when flooded paddies offer the most food and shelter for its young.">
+      <img src="https://picsum.photos/seed/ph-ricefish/600/400" alt="Luzon Ricefish" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Fish</div>
+        <div class="card-title">Luzon Ricefish<em>Oryzias luzonensis</em></div>
+        <p class="card-desc">A tiny endemic fish found in the shallow lakes, streams, and rice paddies of Luzon. One of several Philippine ricefish whose populations have declined sharply due to pesticide use, water pollution, and habitat loss in agricultural landscapes.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="The Philippine Silver Perch is one of the most economically important native fish in Philippine inland waters — yet it has been so overwhelmed by introduced tilapia and carp in its native lakes that it has disappeared from many historical localities.">
+      <img src="https://picsum.photos/seed/ph-silver-perch/600/400" alt="Philippine Silver Perch" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Fish</div>
+        <div class="card-title">Philippine Silver Perch<em>Leiopotherapon plumbeus</em></div>
+        <p class="card-desc">Known locally as Ayungin — a beloved native perch of Philippine lakes and rivers. Culturally significant and once abundant, it is now increasingly rare in many water bodies due to competition from invasive fish species and overfishing.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="The Mindanao Rasbora is found only in fast-flowing highland streams of Mindanao — its preference for clear, cool, well-oxygenated water makes it one of the first species to disappear when deforestation causes siltation and warming of streams.">
+      <img src="https://picsum.photos/seed/ph-rasbora/600/400" alt="Mindanao Rasbora" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Fish</div>
+        <div class="card-title">Mindanao Rasbora<em>Rasbora philippina</em></div>
+        <p class="card-desc">A small, schooling fish endemic to the highland streams of Mindanao. Its strict requirement for clean, fast-flowing water makes it a sensitive indicator of stream health — and a species under pressure from forest loss across its range.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="The Luzon River Pipefish is a freshwater relative of seahorses — and like its marine cousins, it is the male that carries and broods the eggs in a specialised pouch until they hatch. It is one of the very few pipefishes adapted to life in freshwater rivers.">
+      <img src="https://picsum.photos/seed/ph-river-pipefish/600/400" alt="Luzon River Pipefish" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Fish</div>
+        <div class="card-title">Luzon River Pipefish<em>Microphis pleurostictus</em></div>
+        <p class="card-desc">A freshwater relative of seahorses — found only in the rivers of Luzon. Slender, slow-moving, and cryptically coloured, it clings to aquatic vegetation in gentle currents and is almost never seen despite living alongside human settlements.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="Schoppe's Barb was only scientifically described in 2004 — found in a single river system in Palawan. Its discovery highlighted how many new fish species remain undescribed in Philippine freshwater habitats that have never been systematically surveyed.">
+      <img src="https://picsum.photos/seed/ph-schoppes-barb/600/400" alt="Schoppe's Barb" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Fish</div>
+        <div class="card-title">Schoppe's Barb<em>Cyclocheilichthys schoppeae</em></div>
+        <p class="card-desc">A small, recently described barb found only in the freshwater rivers of Palawan. One of several endemic cyprinids discovered in Philippine freshwaters in the 21st century — a testament to how much biodiversity remains undocumented in the archipelago.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="The Palawan Blue-clawed Crab was only described by science in 2012 — yet has probably existed in Palawan's forest streams for millions of years. Its vivid electric-blue claws became an instant conservation icon on social media, helping raise awareness for freshwater biodiversity across Palawan.">
+      <img src="https://picsum.photos/seed/ph-blue-crab/600/400" alt="Palawan Blue-clawed Freshwater Crab" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Crustacean</div>
+        <div class="card-title">Palawan Blue-clawed Freshwater Crab<em>Insulamon palawanense</em></div>
+        <p class="card-desc">A stunning freshwater crab endemic to the mountain streams of Palawan, with brilliant electric-blue claws among the most vivid of any freshwater crustacean in Asia. One of four closely related blue-clawed crab species described from Palawan in 2012, each found in a different river catchment of the same island.</p>
+        <span class="card-status status-endangered">Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="The Giant Freshwater Prawn can grow to 32 cm. Males develop two types: one with massive blue claws used for fighting, and one with small orange claws used for sneaking. The sneakers outlive the fighters — who exhaust themselves in combat over females.">
+      <img src="https://picsum.photos/seed/ph-fw-prawn/600/400" alt="Giant Freshwater Prawn" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Crustacean</div>
+        <div class="card-title">Giant Freshwater Prawn<em>Macrobrachium rosenbergii</em></div>
+        <p class="card-desc">The world's largest freshwater prawn — known in the Philippines as Ulang. Found in major rivers across Luzon, Mindanao, and the Visayas, it is one of the most economically important native freshwater species. Wild populations have declined sharply due to overfishing and river degradation.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="The Giant Mottled Eel migrates over 4,000 kilometres to spawn in the deep ocean — and then dies. Its larvae drift back to freshwater on ocean currents, entering rivers as transparent glass eels and growing for up to 30 years before making the final journey back to sea.">
+      <img src="https://picsum.photos/seed/ph-giant-eel/600/400" alt="Giant Mottled Eel" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Fish</div>
+        <div class="card-title">Giant Mottled Eel<em>Anguilla marmorata</em></div>
+        <p class="card-desc">The world's largest freshwater eel — reaching over 1.8 metres. Found in rivers and lakes across the Philippine archipelago, it can travel overland on wet nights to cross between water bodies. One of the most widely harvested freshwater fish in the Philippines, increasingly threatened by dam construction blocking its migration routes.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="During breeding season, male Philippine Stream Gobies transform from pale grey to vivid electric blue-green almost overnight. After spawning, the male guards the eggs alone, fanning them constantly with his fins until they hatch.">
+      <img src="https://picsum.photos/seed/ph-stream-goby/600/400" alt="Philippine Stream Goby" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Fish</div>
+        <div class="card-title">Philippine Stream Goby<em>Stiphodon elegans</em></div>
+        <p class="card-desc">A small, spectacularly coloured goby of Philippine highland streams. Males develop brilliant blue-green breeding colouration that rivals any reef fish. A sensitive indicator of water quality — it disappears from streams as soon as siltation or deforestation degrades the clear, swift water it requires.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="The Philippine Mudskipper can spend more time out of water than in it — breathing through its moist skin and holding air in its gill chambers. It can even climb mangrove roots using its pectoral fins as arms, making it arguably the most terrestrial fish in the Philippines.">
+      <img src="https://picsum.photos/seed/ph-mudskipper/600/400" alt="Philippine Mudskipper" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Fish</div>
+        <div class="card-title">Philippine Mudskipper<em>Periophthalmus gracilis</em></div>
+        <p class="card-desc">A remarkable fish that spends much of its life out of water — walking on its pectoral fins across mangrove mud flats and climbing roots above the waterline. Found across the Philippine coastline in mangrove and estuarine habitats, it is a keystone species of intertidal ecosystems.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="Lake Lanao once harboured 18 species of endemic cyprinid fish found nowhere else on Earth. Today, most are extinct or critically endangered due to the introduction of invasive carp and snakeheads in the 1960s — the most catastrophic freshwater fish extinction event in Philippine history.">
+      <img src="https://picsum.photos/seed/ph-lanao-barb/600/400" alt="Lake Lanao Barb" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Fish</div>
+        <div class="card-title">Lake Lanao Barb<em>Barbodes lanaoensis</em></div>
+        <p class="card-desc">One of the endemic cyprinid fishes of Lake Lanao, Mindanao — a lake once famous for an extraordinary radiation of freshwater fish found nowhere else. The introduction of invasive species in the 1960s triggered the most devastating freshwater fish extinction event in Philippine history.</p>
+        <span class="card-status status-critical">Critically Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="The Philippine Snakehead can cross dry land — using a wriggling motion and its pectoral fins, it can travel up to 400 metres over wet ground to reach a new water body. It can survive out of water for up to four days, breathing air directly through a specialised labyrinth organ.">
+      <img src="https://picsum.photos/seed/ph-snakehead/600/400" alt="Philippine Snakehead" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Fish</div>
+        <div class="card-title">Philippine Snakehead<em>Channa striata</em></div>
+        <p class="card-desc">A powerful predatory fish capable of breathing air and crossing land between water bodies. Known locally as Dalag, it is one of the most widespread and culturally important freshwater fish in the Philippines — and one of the most aggressive predators in Philippine rivers, capable of taking prey as large as frogs and small birds.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="The Philippine Glass Goby is completely transparent — you can see its beating heart, spine, and internal organs through its body wall. Despite this seeming vulnerability, its transparency provides perfect camouflage in open water, making it practically invisible to predators looking down from above.">
+      <img src="https://picsum.photos/seed/ph-glass-goby/600/400" alt="Philippine Glass Goby" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Fish</div>
+        <div class="card-title">Philippine Glass Goby<em>Gobiopterus lacustris</em></div>
+        <p class="card-desc">A tiny, completely transparent goby found in Philippine lakes and coastal lagoons — its internal organs fully visible through its crystal-clear body. One of the few entirely transparent vertebrates in the world, it forms dense schools in open water where its invisibility is its only defence against predators.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="Palawan's freshwater streams have been so geographically isolated for millions of years that they have developed their own unique fish communities — the Palawan Barb is one of several endemic cyprinids that evolved independently in these isolated forest streams, found nowhere else on Earth.">
+      <img src="https://picsum.photos/seed/ph-palawan-barb/600/400" alt="Palawan Barb" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Fish</div>
+        <div class="card-title">Palawan Barb<em>Barbodes palawanensis</em></div>
+        <p class="card-desc">A small, colourful barb endemic to the freshwater rivers of Palawan. Found in clear, fast-flowing forest streams, it is one of several cyprinid species that evolved in Palawan's long-isolated watershed — a freshwater equivalent of island biogeography playing out in a single river system.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="Philippine freshwater shrimp of the genus Caridina trace their lineages back over 50 million years to when the Philippine islands first emerged from the sea. Some species live their entire life cycle in a single stream pool — making them extraordinarily vulnerable to any change in their tiny habitat.">
+      <img src="https://picsum.photos/seed/ph-fw-shrimp/600/400" alt="Philippine Freshwater Shrimp" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Crustacean</div>
+        <div class="card-title">Philippine Freshwater Shrimp<em>Caridina philippinensis</em></div>
+        <p class="card-desc">A tiny, transparent freshwater shrimp endemic to Philippine highland streams. Several distinct species inhabit the mountain rivers of Luzon, Mindanao, and Palawan — each adapted to the specific chemistry and flow of its home stream. Increasingly popular in the freshwater aquarium trade, adding pressure to wild populations.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="The Philippine Stone Loach uses its sucker-like mouth to anchor itself to rocks in the most turbulent rapids — feeding on algae and diatoms that coat submerged surfaces. It can maintain its grip in currents so powerful they would sweep away any other fish of its size.">
+      <img src="https://picsum.photos/seed/ph-stone-loach/600/400" alt="Philippine Stone Loach" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Fish</div>
+        <div class="card-title">Philippine Stone Loach<em>Homaloptera orthogoniata</em></div>
+        <p class="card-desc">A small, flattened loach found in the swift mountain streams of the Philippines. Its sucker-like mouth and flattened body are perfect adaptations for life on the bottom of fast-flowing rapids, where it grazes algae from rocks in currents that would sweep away larger fish.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="The Palawan Freshwater Stingray is found hundreds of kilometres inland — normally an ocean creature, it has adapted over millennia to life in freshwater, losing the ability to osmoregulate in salt water. Its disc-shaped body makes it impossible to distinguish from the riverbed when motionless.">
+      <img src="https://picsum.photos/seed/ph-fw-stingray/600/400" alt="Palawan Freshwater Stingray" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Fish</div>
+        <div class="card-title">Palawan Freshwater Stingray<em>Himantura chaophraya</em></div>
+        <p class="card-desc">A large stingray found in the major river systems of Palawan — one of the few rays fully adapted to freshwater. It buries itself in sandy riverbeds, perfectly camouflaged, and delivers a venomous tail spine to anything that steps on it. One of the least-studied large freshwater animals in the Philippines.</p>
+        <span class="card-status status-endangered">Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="The Philippine Freshwater Needlefish can leap entirely out of the water when alarmed — reaching heights of up to 60 cm above the surface. Its needle-shaped beak has caused fatal injuries to fishermen who were struck by leaping fish when shining lights on the water at night.">
+      <img src="https://picsum.photos/seed/ph-needlefish/600/400" alt="Philippine Freshwater Needlefish" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Fish</div>
+        <div class="card-title">Philippine Freshwater Needlefish<em>Xenentodon cancila</em></div>
+        <p class="card-desc">A slender, surface-dwelling predator found in Philippine rivers and lakes — its elongated beak lined with tiny, sharp teeth for seizing small fish at the water surface. Known to Philippine fishermen as Katambak, it is a prized food fish that leaps dramatically when hooked or startled.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="The Philippine Mountain Goby can climb waterfalls using a specialised suction disc formed by its fused pelvic fins — allowing it to ascend near-vertical wet rock faces against powerful falls. It migrates upstream each breeding season, returning to the pools where it hatched.">
+      <img src="https://picsum.photos/seed/ph-mtn-goby/600/400" alt="Philippine Mountain Goby" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Fish</div>
+        <div class="card-title">Philippine Mountain Goby<em>Sicyopus discordipinnis</em></div>
+        <p class="card-desc">A small goby found in the fast-flowing mountain streams and waterfalls of the Philippines. Unlike most fish, it can climb vertical waterfalls using its pelvic fins as a suction disc — migrating upstream past seemingly impassable cascades to reach breeding pools high in the Philippine highlands.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="Philippine freshwater crabs of the genus Sundathelphusa are so geographically fragmented that different river systems on the same mountain harbour genetically distinct populations — isolated for tens of thousands of years. This makes every Philippine river valley potentially home to its own unique crab species.">
+      <img src="https://picsum.photos/seed/ph-fw-crab/600/400" alt="Philippine Forest Stream Crab" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Crustacean</div>
+        <div class="card-title">Philippine Forest Stream Crab<em>Sundathelphusa spp.</em></div>
+        <p class="card-desc">A diverse group of freshwater crabs endemic to Philippine mountain forest streams. Each river system — sometimes each valley — harbours its own genetically distinct species, making the Philippines one of the world's most diverse countries for freshwater crab endemism. Threatened by deforestation, which removes the leaf litter and stream shading they depend on.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="The Philippine Glassperch school moves as a single organism — each fish responding to its neighbours in less than a tenth of a second. This collective response creates a rippling, silvery confusion that makes it nearly impossible for a predator to target a single individual.">
+      <img src="https://picsum.photos/seed/ph-glassperch/600/400" alt="Philippine Glassperch" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Fish</div>
+        <div class="card-title">Philippine Glassperch<em>Ambassis miops</em></div>
+        <p class="card-desc">A small, semi-transparent perch found in Philippine rivers, lakes, and estuaries. Its partially transparent body and schooling behaviour make it one of the most common yet least-noticed fish in Philippine freshwater — a key prey species for larger fish and waterbirds across the entire archipelago.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="The Lizard Goby earns its name from the way it perches motionless on rocks and submerged logs — propped up on its pectoral fins exactly like a basking lizard — before darting after passing invertebrates with explosive speed.">
+      <img src="https://picsum.photos/seed/ph-lizard-goby/600/400" alt="Lizard Goby" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Fish</div>
+        <div class="card-title">Lizard Goby<em>Rhinogobius philippinus</em></div>
+        <p class="card-desc">A small, bottom-dwelling goby endemic to Philippine freshwater streams. Named for its lizard-like resting posture on rocks and submerged wood, it is a common but poorly studied resident of clean lowland and upland rivers across the archipelago.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="freshwater" onclick="openCard(this)" data-funfact="The Philippine Freshwater Turtle was once so abundant in Laguna de Bay that fishing communities harvested it for food alongside fish. Today, overharvesting and habitat degradation have made it one of the most threatened freshwater turtles in Southeast Asia, with captive breeding now the primary hope for its survival.">
+      <img src="image/Philippine Forest Turtle.png" alt="Philippine Pond Turtle" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Freshwater · Turtle</div>
+        <div class="card-title">Philippine Pond Turtle<em>Siebenrockiella crassicollis</em></div>
+        <p class="card-desc">A small, dark freshwater turtle found in the lowland rivers, lakes, and swamps of Luzon and Mindanao. Once extremely common in Laguna de Bay and the Agusan Marsh, its populations have collapsed due to overharvesting for food and the pet trade. One of the most threatened freshwater turtles in the Philippines.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-dark2 section-centered">
+  <p class="section-eyebrow reveal">Conservation</p>
+  <h2 class="section-title reveal section-title-centered">The Stakes of <em>Survival</em></h2>
+  <p class="section-body reveal section-body-spaced">The Philippines has lost over 70% of its original forest cover. Every species documented here depends on urgent collective action.</p>
+  <div class="reveal cta-row">
+    <a href="places.html" class="btn-gold">Explore Habitats</a>
+    <a href="species.html?group=freshwater" class="btn-outline">View All Freshwater Species</a>
+    <a href="fauna.html" class="btn-outline">Back to Fauna</a>
+  </div>
+</section>
+
+<div id="modal" class="modal">
+  <div class="modal-card">
+    <button type="button" class="modal-close" onclick="closeModal()">&#x2715;</button>
+    <div class="modal-card-img"><img id="modal-img" src="" alt=""></div>
+    <div class="modal-card-body">
+      <div class="modal-card-tag" id="modal-tag"></div>
+      <div class="modal-card-title" id="modal-title"></div>
+      <p class="modal-card-desc" id="modal-desc"></p>
+      <span id="modal-status" class="modal-status-hidden"></span>
+      <div id="modal-funfact" class="modal-card-funfact modal-status-hidden">
+        <div class="modal-card-funfact-label">&#9670; Fun Fact</div>
+        <p class="modal-card-funfact-text" id="modal-funfact-text"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="guide"><div class="guide-title">&#9670; Freshwater Guide</div><p class="guide-text" id="guide-text">Click any card to view full details.</p></div>
+<button class="audio-btn" id="audio-btn" onclick="toggleSound()">&#9654; Ambient Sound</button>
+<audio id="sound" loop><source src="image/Expidition PH ost.mp3" type="audio/mpeg"></audio>
+
+<footer>
+  <div><div class="footer-brand-name">Expedition PH</div><p class="footer-tagline">A digital exploration of the Philippine archipelago's natural heritage.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="regions.html">Island Groups</a></li><li><a href="flora.html">Flora</a></li><li><a href="fauna.html">Fauna</a></li><li><a href="geology.html">Geology</a></li></ul></div>
+  <div><h4>Fauna</h4><ul><li><a href="birds.html">Birds</a></li><li><a href="mammals.html">Mammals</a></li><li><a href="reptiles.html">Reptiles</a></li><li><a href="marine.html">Marine</a></li><li><a href="insects.html">Insects</a></li><li><a href="freshwater.html">Freshwater</a></li><li><a href="extinct.html">Lost Species</a></li></ul></div>
+  <div><h4>Discover</h4><ul><li><a href="places.html">Places</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="species.html">Species Index</a></li><li><a href="protected-areas.html">Protected Areas</a></li></ul></div>
+  <div><h4>About</h4><ul><li><a href="exhibits.html">Exhibits</a></li><li><a href="visit.html">About This Project</a></li></ul></div>
+</footer>
+<div class="footer-bottom"><span>&copy; 2025 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
+
+<script src="museum.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"visited.html\\\\|history.html\\\\|visit.html\" /c/Users/royqu/philippine-natural-history/*.html)",
+      "Bash(node -e \":*)",
+      "Bash(node replace2.js)",
+      "Bash(grep -l \"audio-btn\\\\|id=\\\\\"sound\\\\\"\" \"c:/Users/royqu/philippine-natural-history/\"*.html)",
+      "Bash(grep -l \"museum.js\" \"c:/Users/royqu/philippine-natural-history/\"*.html)",
+      "Bash(ls \"c:/Users/royqu/philippine-natural-history/\"*.html)",
+      "Bash(xargs -I{} basename {})",
+      "Bash(grep -rn \"style=\" \"c:/Users/royqu/philippine-natural-history/\"*.html)"
+    ]
+  }
+}

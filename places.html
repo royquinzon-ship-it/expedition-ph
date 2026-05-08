@@ -1,0 +1,561 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Places · Expedition PH: Natural History</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="museum.css">
+</head>
+<body>
+
+<header id="header">
+  <a href="index.html" class="header-logo">Expedition PH</a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="regions.html">Island Groups</a>
+    <a href="flora.html">Flora</a>
+    <a href="fauna.html">Fauna</a>
+    <a href="geology.html">Geology</a>
+    <a href="places.html" class="active">Places</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="history.html">History</a>
+      <a href="exhibits.html">Exhibits</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <img class="page-hero-img" src="image/Palawan.png" alt="Palawan">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-inner">
+    <p class="page-eyebrow">Destinations</p>
+    <h1 class="page-title">Places to <em>Explore</em></h1>
+    <p class="page-desc">From UNESCO World Heritage sites to remote highland wildernesses — the Philippines holds some of the most extraordinary natural destinations on Earth.</p>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item reveal"><span class="stat-num" data-target="7641">0</span><span class="stat-lbl">Islands</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="5">0</span><span class="stat-lbl">UNESCO Sites</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="243">0</span><span class="stat-lbl">Protected Areas</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="36000">0</span><span class="stat-lbl">km of Coastline</span></div>
+</div>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Featured Destinations &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section section-dark2">
+  <div class="featured-slider reveal">
+
+    <div class="featured-slide active">
+      <div class="featured-card" onclick="openCard(this)" data-funfact="Palawan has more than 1,700 islands and islets of its own. Despite being the Philippines' largest province, its population density is one of the lowest in the country — much of it remains wild and roadless.">
+        <img class="featured-card-img" src="image/Palawan.png" alt="Palawan">
+        <div class="featured-card-body">
+          <div class="featured-label">&#9670; &nbsp; UNESCO World Heritage &nbsp; · &nbsp; Region IV-B · MIMAROPA</div>
+          <div class="featured-name">Palawan</div>
+          <div class="featured-sci">The Last Frontier</div>
+          <p class="featured-desc">Stretching 450 kilometres from Mindoro to Borneo, Palawan is the Philippines' most biodiverse island. Its forests contain some of the last intact lowland dipterocarp stands in Southeast Asia. The Puerto Princesa Subterranean River — the world's longest navigable underground river — runs 8.2 kilometres beneath the limestone karst before emptying into the South China Sea. Above ground, the island shelters the Irrawaddy Dolphin, Philippine Cockatoo, and Palawan Peacock-Pheasant.</p>
+          <div class="badge-row">
+            <span class="badge">UNESCO Heritage</span>
+            <span class="badge">Last Frontier</span>
+            <span class="badge">Underground River</span>
+            <span class="badge">Coral Triangle</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="featured-slide">
+      <div class="featured-card" onclick="openCard(this)" data-funfact="Tubbataha is only accessible by liveaboard for about 3 months a year due to sea conditions. The rest of the year it is completely off-limits — which is precisely why it remains so pristine. Its remoteness is its greatest protection.">
+        <img class="featured-card-img" src="image/Tubataha reef.png" alt="Tubbataha Reef">
+        <div class="featured-card-body">
+          <div class="featured-label">&#9670; &nbsp; UNESCO World Heritage &nbsp; · &nbsp; Sulu Sea</div>
+          <div class="featured-name">Tubbataha Reef</div>
+          <div class="featured-sci">Heart of the Coral Triangle</div>
+          <p class="featured-desc">A remote atoll rising from the depths of the Sulu Sea — accessible only by liveaboard for three months a year. Tubbataha holds 360 coral species, 600 fish species, and nesting populations of sharks and sea turtles on atolls untouched by daily human contact. Its fish biomass rivals the most pristine mid-Pacific reefs, and its waters shelter the Scalloped Hammerhead, one of the ocean's most threatened sharks.</p>
+          <div class="badge-row">
+            <span class="badge">UNESCO Heritage</span>
+            <span class="badge">Marine Protected Area</span>
+            <span class="badge">Hammerhead Sharks</span>
+            <span class="badge">600+ Fish Species</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="featured-slide">
+      <div class="featured-card" onclick="openCard(this)" data-funfact="If all the Banaue Rice Terraces were laid end to end, they would circle half the globe. They are maintained using the same hand-built irrigation channels constructed by the Ifugao people over 2,000 years ago — with no machinery, only the knowledge passed from generation to generation.">
+        <img class="featured-card-img" src="image/Banaue Rice Terreces.png" alt="Banaue Rice Terraces">
+        <div class="featured-card-body">
+          <div class="featured-label">&#9670; &nbsp; UNESCO World Heritage &nbsp; · &nbsp; Cordillera · Ifugao</div>
+          <div class="featured-name">Banaue Rice Terraces</div>
+          <div class="featured-sci">Stairway to the Sky</div>
+          <p class="featured-desc">Carved into the Cordillera mountains by the Ifugao people over 2,000 years ago using only hand tools, the Banaue terraces are one of the world's great feats of human engineering. A living cultural landscape where ancient irrigation systems still water active rice fields — maintained by a community whose relationship with the mountain has never been broken. The Ifugao Hudhud chants, sung during harvest, are themselves a UNESCO Intangible Heritage.</p>
+          <div class="badge-row">
+            <span class="badge">UNESCO Heritage</span>
+            <span class="badge">2,000 Years Old</span>
+            <span class="badge">Living Landscape</span>
+            <span class="badge">Ifugao Culture</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="featured-nav">
+    <button type="button" class="feat-nav-btn" onclick="slideFeatured(-1)">&#9664; Prev</button>
+    <div class="feat-dots">
+      <button type="button" class="feat-dot active" onclick="goFeatured(0)" title="Palawan"></button>
+      <button type="button" class="feat-dot" onclick="goFeatured(1)" title="Tubbataha Reef"></button>
+      <button type="button" class="feat-dot" onclick="goFeatured(2)" title="Banaue Rice Terraces"></button>
+    </div>
+    <button type="button" class="feat-nav-btn" onclick="slideFeatured(1)">Next &#9654;</button>
+  </div>
+</section>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; All Destinations &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section">
+  <p class="section-eyebrow reveal">39 Destinations</p>
+  <h2 class="section-title reveal">Natural <em>Destinations</em></h2>
+  <p class="section-body reveal">Extraordinary places across the archipelago — from UNESCO World Heritage sites to volcanic islands, coral sanctuaries, and highland wilderness.</p>
+  <p id="results-hint"></p>
+
+  <div class="filter-bar reveal">
+    <button type="button" class="filter-btn active" onclick="filterCards('all',this)">All</button>
+    <button type="button" class="filter-btn" onclick="filterCards('luzon',this)">Luzon</button>
+    <button type="button" class="filter-btn" onclick="filterCards('visayas',this)">Visayas</button>
+    <button type="button" class="filter-btn" onclick="filterCards('mindanao',this)">Mindanao</button>
+  </div>
+
+  <div class="filter-bar reveal" id="type-filter-bar">
+    <button type="button" class="filter-btn active" id="type-all-btn" onclick="filterByType('all',this)">All Types</button>
+    <button type="button" class="filter-btn" onclick="filterByType('marine',this)">&#9670; Marine</button>
+    <button type="button" class="filter-btn" onclick="filterByType('volcanic',this)">&#9670; Volcanic</button>
+    <button type="button" class="filter-btn" onclick="filterByType('highland',this)">&#9670; Highland</button>
+    <button type="button" class="filter-btn" onclick="filterByType('cultural',this)">&#9670; Cultural</button>
+    <button type="button" class="filter-btn" onclick="filterByType('wildlife',this)">&#9670; Wildlife</button>
+    <button type="button" class="filter-btn filter-btn-threat" onclick="filterByType('threat',this)">&#9888; Under Threat</button>
+  </div>
+  <p class="season-note">&#9670; <strong>Best season</strong> — optimal window for weather, wildlife activity &amp; sea conditions. Philippine dry season <em>(amihan)</em> runs November–May; typhoon season <em>(habagat)</em> runs June–October. Year-round destinations remain accessible in all seasons.</p>
+  <div class="places-search-wrap">
+    <input type="search" id="places-search" class="places-search" placeholder="&#9670;  Search destinations — e.g. reef, volcano, lake, UNESCO…" autocomplete="off">
+  </div>
+
+  <div class="grid grid-3 reveal">
+
+
+    <div class="card filterable" data-category="visayas" data-type="marine" data-threat="true" data-threat-reason="Threatened by climate-driven coral bleaching, illegal fishing by foreign vessels, and inadequate patrol coverage across its vast remote expanse in the Sulu Sea." data-season="Mar–Jun" onclick="openCard(this)" data-funfact="Tubbataha is only accessible by liveaboard for about 3 months a year due to sea conditions. The rest of the year it is completely off-limits — which is precisely why it remains so pristine.">
+      <img src="image/Tubataha reef.png" alt="Tubbataha Reef" loading="lazy">
+      <span class="place-threat-badge">&#9888; Under Threat</span>
+      <div class="card-body"><div class="card-tag">UNESCO · Sulu Sea</div><div class="card-title">Tubbataha Reef</div><p class="card-desc">A remote atoll in the Sulu Sea accessible only by liveaboard. 360 coral species, 600 fish species, nesting sharks and sea turtles. One of the most pristine marine ecosystems on Earth.</p><div class="place-meta"><span class="place-season">&#9670; Best: Mar–Jun</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="luzon" data-type="cultural" data-season="Nov–Apr" onclick="openCard(this)" data-funfact="If all the Banaue Rice Terraces were laid end to end, they would circle half the globe. They are maintained using the same hand-built irrigation channels constructed by the Ifugao people over 2,000 years ago.">
+      <img src="image/Banaue Rice Terreces.png" alt="Banaue Terraces" loading="lazy">
+      <div class="card-body"><div class="card-tag">UNESCO · Ifugao</div><div class="card-title">Banaue Rice Terraces</div><p class="card-desc">Carved into the Cordillera mountains by the Ifugao people over 2,000 years ago. A living cultural landscape where ancient farming techniques have shaped an extraordinary mountain environment.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–Apr</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="mindanao" data-type="highland" data-season="Mar–Jun" onclick="openCard(this)" data-funfact="Mount Hamiguitan is one of the very few places on Earth where a complete elevational gradient — from tropical dipterocarp forest at sea level to pygmy forest at the summit — survives entirely intact within a single protected area. Its pitcher plants include species found absolutely nowhere else on Earth.">
+      <img src="image/Sierra Madre.png" alt="Mount Hamiguitan" loading="lazy">
+      <div class="card-body"><div class="card-tag">UNESCO · Davao Oriental</div><div class="card-title">Mount Hamiguitan Range</div><p class="card-desc">A UNESCO World Heritage Site inscribed in 2014 for its extraordinary range of ecosystems — from lowland dipterocarp forest to a rare pygmy forest at its 1,637m summit. Shelters 341 plant species, 177 animals, and carnivorous pitcher plants endemic to its peaks, including the critically endangered Philippine Eagle.</p><div class="place-meta"><span class="place-season">&#9670; Best: Mar–Jun</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="luzon" data-type="wildlife" data-threat="true" data-threat-reason="Under sustained pressure from illegal logging, slash-and-burn agriculture, and mining concessions steadily eroding Luzon's last great forest frontier." data-season="Nov–May" onclick="openCard(this)" data-funfact="The Sierra Madre acts as a natural barrier protecting Metro Manila from the full force of Pacific typhoons. Without this mountain range, the capital would be far more exposed to catastrophic storm damage.">
+      <img src="image/Sierra Madre.png" alt="Sierra Madre" loading="lazy">
+      <span class="place-threat-badge">&#9888; Under Threat</span>
+      <div class="card-body"><div class="card-tag">Forest Frontier · Luzon</div><div class="card-title">Sierra Madre</div><p class="card-desc">The longest mountain range in the Philippines and the country's last great forest frontier. Shelters the <a href="species.html" class="place-sp-link">Philippine Crocodile</a>, <a href="species.html" class="place-sp-link">Philippine Eagle</a>, and thousands of endemic species in one of Asia's largest remaining rainforest blocks.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–May</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="mindanao" data-type="highland" data-season="Mar–May" onclick="openCard(this)" data-funfact="Mount Apo means 'grandfather' or 'master' in several Mindanao languages. Its geothermal energy now powers a significant portion of Mindanao's electricity grid — the mountain literally lights up the island.">
+      <img src="image/Mt. Apo.png" alt="Mount Apo" loading="lazy">
+      <div class="card-body"><div class="card-tag">National Park · Mindanao</div><div class="card-title">Mount Apo</div><p class="card-desc">The Philippines' highest peak at 2,954m — home of the <a href="species.html" class="place-sp-link">Philippine Eagle</a>. Ancient rainforests, hot springs, and geothermal activity make Apo one of the country's most dramatic natural destinations.</p><div class="place-meta"><span class="place-season">&#9670; Best: Mar–May</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="luzon" data-type="volcanic" data-season="Nov–Apr" onclick="openCard(this)" data-funfact="The name Mayon comes from 'Magayon' — meaning beautiful in Bicolano. Local legend says the volcano is the body of a beautiful princess named Daragang Magayon, who was buried there after a tragic love story.">
+      <img src="image/Mayon Volcano.png" alt="Mayon Volcano" loading="lazy">
+      <div class="card-body"><div class="card-tag">Active Volcano · Luzon</div><div class="card-title">Mayon Volcano</div><p class="card-desc">The world's most perfect volcanic cone towers over the Bicol region. The surrounding Mayon Biosphere Reserve shelters lowland forests rich in endemic species — and the volcano itself is in constant, beautiful activity.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–Apr</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="mindanao" data-type="wildlife" data-threat="true" data-threat-reason="Threatened by drainage for agriculture, settlement encroachment, and pollution from upstream gold mining operations in the Agusan River watershed." data-season="Nov–Apr" onclick="openCard(this)" data-funfact="The floating islands of Agusan Marsh physically move with the seasons — entire plant communities drift across the marsh, shifting the landscape every year. Indigenous Manobo communities have lived on and with them for generations.">
+      <img src="image/Agusan Marsh.png" alt="Agusan Marsh" loading="lazy">
+      <span class="place-threat-badge">&#9888; Under Threat</span>
+      <div class="card-body"><div class="card-tag">Wetland · Mindanao</div><div class="card-title">Agusan Marsh</div><p class="card-desc">One of Southeast Asia's largest freshwater swamp forests — a mosaic of lakes, floating islands, and floodplain forest. Home to the <a href="species.html" class="place-sp-link">Philippine Crocodile</a>, Estuarine Crocodile, and rare waterbirds.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–Apr</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="luzon" data-type="cultural" data-season="Mar–May" onclick="openCard(this)" data-funfact="The stone houses of the Ivatan people in Batanes are built with walls up to a metre thick to withstand winds exceeding 200 km/h. The islands sit directly in the path of more typhoons than almost anywhere else on Earth.">
+      <img src="image/Batanes.png" alt="Batanes" loading="lazy">
+      <div class="card-body"><div class="card-tag">Island Province · Luzon</div><div class="card-title">Batanes</div><p class="card-desc">The northernmost Philippine islands — rugged, windswept, and unlike anywhere else in the archipelago. Rolling hills, stone villages, and dramatic cliff coastlines shaped by the full fury of Pacific typhoons.</p><div class="place-meta"><span class="place-season">&#9670; Best: Mar–May</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="visayas" data-type="cultural" data-threat="true" data-threat-reason="Quarrying on outer hills and invasive grass species are altering the monument's distinctive landscape, while growing tourism accelerates erosion." data-season="Nov–May" onclick="openCard(this)" data-funfact="Local Bohol legend says the Chocolate Hills were formed from the tears of a heartbroken giant who wept over a lost love, and his tears solidified into the hills we see today.">
+      <img src="image/Chocolate hills.png" alt="Chocolate Hills" loading="lazy">
+      <span class="place-threat-badge">&#9888; Under Threat</span>
+      <div class="card-body"><div class="card-tag">Geological Wonder · Bohol</div><div class="card-title">Chocolate Hills</div><p class="card-desc">Over 1,700 conical limestone mounds turn chocolate-brown in the dry season. A Philippine National Geological Monument and one of the most recognisable landscapes in Southeast Asia.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–May</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="luzon" data-type="wildlife" data-season="Nov–May" onclick="openCard(this)" data-funfact="The Underground River empties directly into the South China Sea — making it one of the few places on Earth where a navigable underground river meets the open ocean. At low tide, saltwater flows back into the cave entrance.">
+      <img src="image/Palawan Underground River.png" alt="Puerto Princesa Subterranean River National Park" loading="lazy">
+      <div class="card-body"><div class="card-tag">UNESCO · Region IV-B</div><div class="card-title">Puerto Princesa Subterranean River National Park</div><p class="card-desc">The Puerto Princesa Subterranean River navigates 8.2km beneath Palawan's limestone karst before emptying into the sea. One of the world's longest navigable underground rivers and a UNESCO World Heritage Site.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–May</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="luzon" data-type="highland" data-season="Oct–Apr" onclick="openCard(this)" data-funfact="The Ibaloi people call Mount Pulag 'Playground of the Gods.' On summit mornings, the cloud sea below makes it feel like you are standing on top of the world — a white ocean stretching to every horizon.">
+      <img src="image/Mt. Pulag.png" alt="Mount Pulag" loading="lazy">
+      <div class="card-body"><div class="card-tag">Highland · Luzon</div><div class="card-title">Mount Pulag</div><p class="card-desc">Luzon's highest peak at 2,922m — known for its "sea of clouds" and rare dwarf bamboo grasslands. A sacred mountain to the indigenous Ibaloi and Kalanguya peoples of the Cordillera.</p><div class="place-meta"><span class="place-season">&#9670; Best: Oct–Apr</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="mindanao" data-type="highland" data-season="Nov–Apr" onclick="openCard(this)" data-funfact="Mt. Pandadagsaan earned the name 'White Peak' from the pale limestone and light-coloured rock exposed at its summit — which glows distinctly bright against the surrounding green montane forest when viewed from the valleys below.">
+      <img src="https://picsum.photos/seed/ph-pandadagsaan/600/400" alt="Mt. Pandadagsaan" loading="lazy">
+      <div class="card-body"><div class="card-tag">Highland Peak · Mindanao</div><div class="card-title">Mt. Pandadagsaan</div><p class="card-desc">Known as White Peak for its pale rocky summit rising above the montane forests of Mindanao. A highland trekking destination offering sweeping views across the surrounding ranges, with mossy forest trails sheltering endemic orchids, pitcher plants, and mountain birds.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–Apr</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="luzon" data-type="volcanic" data-threat="true" data-threat-reason="The endemic Tawilis sardine faces extinction from overfishing, lake eutrophication from fish pens, and water chemistry damage from the January 2020 eruption." data-season="Nov–May" onclick="openCard(this)" data-funfact="Taal Lake holds the world's only freshwater sardine — the Tawilis (Sardinella tawilis) — a species found in no other lake on Earth. The same lake surrounds an active volcano that sits inside a larger volcanic crater, making it a volcano within a lake within a volcano.">
+      <img src="image/Taal.png" alt="Taal Volcano" loading="lazy">
+      <span class="place-threat-badge">&#9888; Under Threat</span>
+      <div class="card-body"><div class="card-tag">Active Volcano · Batangas</div><div class="card-title">Taal Volcano &amp; Lake</div><p class="card-desc">One of the world's most unique volcanic systems — an active island volcano rising from a crater lake, itself enclosed within one of the largest calderas in Southeast Asia. Home to the endemic Tawilis sardine and a dramatic landscape sculpted by centuries of eruptions.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–May</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="luzon" data-type="volcanic" data-season="Dec–May" onclick="openCard(this)" data-funfact="The 1991 eruption of Mount Pinatubo was the second-largest volcanic eruption of the 20th century. So much ash and sulfur dioxide was ejected into the stratosphere that it temporarily cooled the entire planet's temperature by 0.5°C for over a year.">
+      <img src="image/Mt. Pinatubo.png" alt="Mount Pinatubo" loading="lazy">
+      <div class="card-body"><div class="card-tag">Crater Lake · Zambales</div><div class="card-title">Mount Pinatubo</div><p class="card-desc">The site of the 20th century's second-largest volcanic eruption now harbours a stunning turquoise crater lake ringed by lahar-sculpted badlands. The surrounding Aeta communities have lived in relationship with the volcano for thousands of years.</p><div class="place-meta"><span class="place-season">&#9670; Best: Dec–May</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="mindanao" data-type="volcanic" data-season="Nov–May" onclick="openCard(this)" data-funfact="The original stone grave markers are still visible below the water. Divers visit the cemetery today — making it one of the only dive sites in the world that is also an active burial ground.">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Sunken_Cemetery_Cross_Camiguin.jpg/1280px-Sunken_Cemetery_Cross_Camiguin.jpg" alt="Sunken Cemetery Camiguin" loading="lazy">
+      <div class="card-body"><div class="card-tag">Volcanic Site · Camiguin</div><div class="card-title">Sunken Cemetery of Camiguin</div><p class="card-desc">In 1871, a series of volcanic eruptions on Camiguin Island caused the ground to sink — taking the local cemetery with it into the sea. A large white cross now marks the spot above the waterline, surrounded by the open ocean. Below, coral has colonised the grave markers. The dead and the reef have become one.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–May</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="luzon" data-type="cultural" data-season="Nov–Apr" onclick="openCard(this)" data-funfact="The Igorot practice of hanging coffins on cliffsides in Sagada dates back at least 2,000 years. The higher the coffin is placed, the closer the deceased is to the ancestral spirits — and the more difficult it becomes for enemies to disturb their rest.">
+      <img src="image/Sagada.png" alt="Sagada" loading="lazy">
+      <div class="card-body"><div class="card-tag">Cultural Heritage · Mountain Province</div><div class="card-title">Sagada &amp; Hanging Coffins</div><p class="card-desc">Nestled in the Cordillera highlands, Sagada is surrounded by pine forests, limestone caves, and dramatic cliffs where ancient hanging coffins bear witness to the Igorot's ancestral burial tradition. Echo Valley and Sumaguing Cave draw explorers from around the world.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–Apr</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="luzon" data-type="cultural" data-season="Nov–Apr" onclick="openCard(this)" data-funfact="Vigan is one of only a handful of Spanish colonial towns in Asia preserved almost entirely intact. Its cobblestone streets were once paved with the ballast stones of galleons — Chinese merchants traded goods here in exchange for silver from Mexico during the Manila Galleon Trade era.">
+      <img src="image/Vigan.png" alt="Vigan" loading="lazy">
+      <div class="card-body"><div class="card-tag">UNESCO Heritage · Ilocos Sur</div><div class="card-title">Vigan Heritage City</div><p class="card-desc">The best-preserved Spanish colonial city in Asia — its Mestizo District of cobblestone streets and ancestral mansions is a UNESCO World Heritage Site. The surrounding Ilocos coast is a landscape of red sand beaches, tobacco farms, and centuries of maritime history.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–Apr</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="visayas" data-type="marine" data-season="Nov–May" onclick="openCard(this)" data-funfact="Boracay's famous White Beach is composed almost entirely of coral fragments — not continental sand. The fine powder texture comes from centuries of coral breakdown, and its brilliant white colour is caused by the high calcium carbonate content reflecting sunlight.">
+      <img src="image/Boracay.png" alt="Boracay" loading="lazy">
+      <div class="card-body"><div class="card-tag">Island Beach · Aklan</div><div class="card-title">Boracay</div><p class="card-desc">A slender island of powdered coral beaches, clear turquoise shallows, and dramatic kite-surfing winds off Bulabog Beach. Boracay's White Beach stretches 4 kilometres and is consistently ranked among the world's finest. The surrounding waters hold extensive seagrass beds — habitat for dugong and sea turtles.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–May</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="mindanao" data-type="volcanic" data-season="Nov–May" onclick="openCard(this)" data-funfact="Camiguin has more volcanoes per square kilometre than any other island on Earth. One of its eruptions in 1871 was so violent it submerged an entire cemetery — whose cross now stands visible just offshore at low tide, a haunting landmark locals call the Sunken Cemetery.">
+      <img src="image/Camiguin.png" alt="Camiguin" loading="lazy">
+      <div class="card-body"><div class="card-tag">Volcanic Island · Northern Mindanao</div><div class="card-title">Camiguin</div><p class="card-desc">Called the "Island Born of Fire," Camiguin holds seven volcanoes on an island smaller than many cities. Its waters shelter the <a href="species.html" class="place-sp-link">Camiguin Flying Fox</a> (Critically Endangered), its cold springs and reefs are among the clearest in the Visayan Sea, and Mount Hibok-Hibok looms active above it all.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–May</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="visayas" data-type="marine" data-threat="true" data-threat-reason="Repeated coral bleaching from rising sea temperatures has damaged reef structure, while growing visitor numbers are straining the community management system." data-season="Mar–Jun" onclick="openCard(this)" data-funfact="Apo Island's marine sanctuary, established in 1982, is one of the world's oldest community-managed marine reserves. Fish biomass inside the sanctuary is more than five times higher than in unprotected areas — a globally cited proof that small-scale community protection can reverse reef decline.">
+      <img src="image/Apo Island.png" alt="Apo Island" loading="lazy">
+      <span class="place-threat-badge">&#9888; Under Threat</span>
+      <div class="card-body"><div class="card-tag">Marine Sanctuary · Negros Oriental</div><div class="card-title">Apo Island</div><p class="card-desc">A tiny volcanic island surrounded by one of Southeast Asia's most celebrated community-managed marine sanctuaries. <a href="species.html" class="place-sp-link">Green sea turtles</a> gather here year-round, reef fish biomass rivals pristine mid-Pacific reefs, and the surrounding wall dives are among the most dramatic in the Philippines.</p><div class="place-meta"><span class="place-season">&#9670; Best: Mar–Jun</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="mindanao" data-type="marine" data-season="Aug–Nov" onclick="openCard(this)" data-funfact="Siargao's Cloud 9 surf break became internationally famous only in the 1990s when foreign surfers first documented it. The island's unique geography — sitting directly in the path of Pacific swells — produces powerful, hollow waves that break over a shallow reef, creating ideal conditions for world-class surfing.">
+      <img src="https://picsum.photos/seed/ph-siargao/600/400" alt="Siargao" loading="lazy">
+      <div class="card-body"><div class="card-tag">Surf Capital · Surigao del Norte</div><div class="card-title">Siargao Island</div><p class="card-desc">The Philippines' surfing capital — a teardrop-shaped island fringed by mangroves, lagoons, and world-class reef breaks. Beyond Cloud 9, Siargao shelters the Sohoton Cove, whose crystal caves flood at high tide, and the Magpupungko rock pools that only appear at low water.</p><div class="place-meta"><span class="place-season">&#9670; Best: Aug–Nov</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="luzon" data-type="marine" data-season="Nov–May" onclick="openCard(this)" data-funfact="The limestone karst towers of El Nido rise directly from the sea — some reaching over 300 metres. These formations began as coral reefs some 30 million years ago, and the fossils of ancient marine life are still visible within the rock walls above the waterline.">
+      <img src="https://picsum.photos/seed/ph-elnido/600/400" alt="El Nido" loading="lazy">
+      <div class="card-body"><div class="card-tag">Marine Park · Palawan · Region IV-B</div><div class="card-title">El Nido</div><p class="card-desc">A maze of ancient limestone cliffs, hidden lagoons, and white sand beaches at the northern tip of Palawan. The El Nido–Taytay Managed Resource Protected Area covers over 900 km² of some of the most biodiverse marine habitat in the Coral Triangle.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–May</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="luzon" data-type="marine" data-season="Nov–May" onclick="openCard(this)" data-funfact="Coron Bay holds some of the most famous wreck dives in the world — a fleet of Japanese supply ships sunk by American aircraft in a single raid in 1944. The wrecks now form artificial reefs draped in corals and inhabited by enormous groupers, lionfish, and resident sea turtles.">
+      <img src="https://picsum.photos/seed/ph-coron/600/400" alt="Coron" loading="lazy">
+      <div class="card-body"><div class="card-tag">Wreck Diving &amp; Lakes · Palawan · Region IV-B</div><div class="card-title">Coron &amp; Kayangan Lake</div><p class="card-desc">Coron is dominated by jagged limestone peaks rising from turquoise waters. Kayangan Lake — fed by underground springs and rated among Asia's cleanest lakes — sits inside a karst crater accessible only by a steep forest trail. Below the bay, WWII wreck dives reveal coral-encrusted history.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–May</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="mindanao" data-type="highland" data-season="Year-round" onclick="openCard(this)" data-funfact="Lake Sebu's Seven Falls — a series of cascading waterfalls on the Agus River — hold deep spiritual significance for the T'boli people, whose epic song-poem Tudbulul describes the spirit of the falls as a guardian of the land. The T'boli are also celebrated for the dream-woven T'nalak cloth, produced only by women called Fu Dalu.">
+      <img src="https://picsum.photos/seed/ph-lakesebu/600/400" alt="Lake Sebu" loading="lazy">
+      <div class="card-body"><div class="card-tag">Highland Lake · South Cotabato</div><div class="card-title">Lake Sebu</div><p class="card-desc">A highland lake ringed by hills and T'boli communities in South Cotabato. The surrounding forests shelter endemic birds, the lake itself is home to rare freshwater species, and the Seven Falls cascade through one of the most culturally rich landscapes in Mindanao.</p><div class="place-meta"><span class="place-season">&#9670; Best: Year-round</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="luzon" data-type="marine" data-season="Nov–Jun" onclick="openCard(this)" data-funfact="Donsol in Sorsogon is where the world first learned that whale sharks could be reliably encountered in the wild. Before the late 1990s, whale shark aggregations of this scale were unknown to science — local fishermen had simply been living alongside them for generations without telling the outside world.">
+      <img src="image/Whale Shark Butanding.png" alt="Donsol Whale Shark" loading="lazy">
+      <div class="card-body"><div class="card-tag">Eco-Tourism · Sorsogon</div><div class="card-title">Donsol Whale Shark Trail</div><p class="card-desc">The whale shark capital of the world — a small fishing town where butanding (<a href="species.html" class="place-sp-link">whale sharks</a>) gather in extraordinary numbers from November to June, feeding on plankton in the warm Ticao Pass. Interaction is strictly regulated: no touching, no flash, snorkel only — a global model for sustainable wildlife tourism.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–Jun</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="luzon" data-type="marine" data-threat="true" data-threat-reason="Despite protected status, Apo Reef faces persistent poaching by foreign and domestic fishing vessels — limited patrol boats make remote enforcement difficult." data-season="Mar–Jun" onclick="openCard(this)" data-funfact="Apo Reef was declared a protected area in 1996, but local fishermen had been destroying it for decades before enforcement began. Today its recovery is considered one of the most successful large-scale reef rehabilitation stories in the Philippines — though it remains under severe poaching pressure.">
+      <img src="https://picsum.photos/seed/ph-aporeef/600/400" alt="Apo Reef" loading="lazy">
+      <span class="place-threat-badge">&#9888; Under Threat</span>
+      <div class="card-body"><div class="card-tag">Natural Park · Occidental Mindoro</div><div class="card-title">Apo Reef</div><p class="card-desc">The world's second-largest contiguous coral reef system and the Philippines' largest coral reef — a remote atoll rising from the Sulu Sea between Mindoro and Palawan. Its outer walls plunge hundreds of metres into the deep, drawing hammerhead sharks, thresher sharks, and massive schools of barracuda.</p><div class="place-meta"><span class="place-season">&#9670; Best: Mar–Jun</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="luzon" data-type="cultural" data-season="Nov–May" onclick="openCard(this)" data-funfact="Callao Cave in Cagayan is where archaeologists in 2019 announced the discovery of Homo luzonensis — a previously unknown human species that lived in the Philippines at least 50,000 years ago. The cave thus became one of the most scientifically significant sites in all of Southeast Asian prehistory.">
+      <img src="https://picsum.photos/seed/ph-callao/600/400" alt="Callao Cave" loading="lazy">
+      <div class="card-body"><div class="card-tag">Natural Cave · Cagayan</div><div class="card-title">Callao Cave &amp; Homo luzonensis</div><p class="card-desc">A seven-chambered limestone cave on the banks of the Pinacanauan River in Cagayan — where sunlight streams through a natural skylight to illuminate a chapel inside the cave. Its deeper passages yielded bones of Homo luzonensis, rewriting the timeline of human presence in Southeast Asia.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–May</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="visayas" data-type="marine" data-threat="true" data-threat-reason="Rising sea temperatures have triggered repeated bleaching events, and tour boat groundings have caused direct physical damage to portions of the wall reef." data-season="Mar–Jun" onclick="openCard(this)" data-funfact="Balicasag Island's marine sanctuary was established in 1985 and is one of the oldest no-take zones in the Philippines. A single hectare of healthy reef here supports more fish biomass than many entire reef systems elsewhere in Southeast Asia — a testament to three decades of community protection.">
+      <img src="https://picsum.photos/seed/ph-balicasag/600/400" alt="Balicasag Island" loading="lazy">
+      <span class="place-threat-badge">&#9888; Under Threat</span>
+      <div class="card-body"><div class="card-tag">Marine Sanctuary · Bohol</div><div class="card-title">Balicasag Island</div><p class="card-desc">A tiny coral island off the southwestern tip of Bohol, encircled by a wall reef that drops vertically into deep water. <a href="species.html" class="place-sp-link">Green and hawksbill sea turtles</a> rest on the reef plateau year-round, spinner dolphins ride the currents offshore, and the no-take sanctuary zone has allowed the reef to recover to near-pristine condition.</p><div class="place-meta"><span class="place-season">&#9670; Best: Mar–Jun</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="visayas" data-type="wildlife" data-threat="true" data-threat-reason="Coastal reclamation projects across Cebu Bay are steadily reducing the tidal flats that tens of thousands of migratory shorebirds depend on to refuel each year." data-season="Sep–Nov" onclick="openCard(this)" data-funfact="Olango Island's tidal flats are so rich in invertebrates that they attract over 48 species of migratory shorebirds — some flying non-stop from breeding grounds in Siberia and Alaska. The island is one of only a handful of critical stopover points in the entire East Asian–Australasian Flyway south of Japan.">
+      <img src="https://picsum.photos/seed/ph-olango/600/400" alt="Olango Wildlife Sanctuary" loading="lazy">
+      <span class="place-threat-badge">&#9888; Under Threat</span>
+      <div class="card-body"><div class="card-tag">Wildlife Sanctuary · Cebu</div><div class="card-title">Olango Island Wildlife Sanctuary</div><p class="card-desc">A Ramsar-listed wetland and one of the most important migratory bird stopovers in Southeast Asia. Every year tens of thousands of shorebirds — including globally threatened species like the Chinese Egret and Far Eastern Curlew — rest and refuel on Olango's tidal flats before continuing south to Australia.</p><div class="place-meta"><span class="place-season">&#9670; Best: Sep–Nov</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="visayas" data-type="wildlife" data-season="Nov–May" onclick="openCard(this)" data-funfact="The jellyfish of Sohoton Cove are stingless because the enclosed lagoon has no predators to threaten them — so over thousands of generations they lost their venom. Swim among millions of jellyfish with no risk of a sting — one of the most surreal wildlife encounters available anywhere in the Philippines.">
+      <img src="https://picsum.photos/seed/ph-sohoton/600/400" alt="Sohoton Cove" loading="lazy">
+      <div class="card-body"><div class="card-tag">Natural Cove &amp; Cave · Samar</div><div class="card-title">Sohoton Cove</div><p class="card-desc">A hidden tidal cove in Northern Samar reachable only at low tide through a narrow limestone passage. Inside, the brackish water teems with millions of stingless jellyfish, cathedral-ceilinged caves glow with bioluminescent organisms, and the forest canopy above shelters rare hornbills and flying foxes.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–May</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="visayas" data-type="volcanic" data-threat="true" data-threat-reason="Forest clearing for agriculture on the lower slopes has pushed critically endangered Negros endemic birds into ever-smaller high-elevation forest refuges." data-season="Mar–May" onclick="openCard(this)" data-funfact="Mount Kanlaon is the most active volcano in the Visayas, with over 30 recorded eruptions since 1866. Its summit crater sits at 2,465 metres and is often shrouded in mist — making it one of the most atmospheric and challenging climbs in the Philippine archipelago.">
+      <img src="https://picsum.photos/seed/ph-kanlaon/600/400" alt="Mount Kanlaon" loading="lazy">
+      <span class="place-threat-badge">&#9888; Under Threat</span>
+      <div class="card-body"><div class="card-tag">Natural Park · Negros</div><div class="card-title">Mount Kanlaon Natural Park</div><p class="card-desc">An active stratovolcano and the highest peak in the Visayas, its montane forests sheltering critically endangered Visayan birds found nowhere else — including the <a href="species.html" class="place-sp-link">Visayan Flowerpecker</a> and <a href="species.html" class="place-sp-link">Writhed Hornbill</a>. The national park is one of the last intact forest sanctuaries on the heavily deforested island of Negros.</p><div class="place-meta"><span class="place-season">&#9670; Best: Mar–May</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="mindanao" data-type="wildlife" data-season="Nov–May" onclick="openCard(this)" data-funfact="The blue colour of the Hinatuan Enchanted River is so vivid and uniform that early scientists suspected it was artificially coloured. The hue comes from the extraordinary depth and clarity of the water, which absorbs all warm wavelengths of light, scattering only deep blue back to the surface — a phenomenon enhanced by its connection to the open sea through underwater passages.">
+      <img src="https://picsum.photos/seed/ph-hinatuan/600/400" alt="Hinatuan Enchanted River" loading="lazy">
+      <div class="card-body"><div class="card-tag">River Sanctuary · Surigao del Sur</div><div class="card-title">Hinatuan Enchanted River</div><p class="card-desc">A short but impossibly deep river in Surigao del Sur — its water an otherworldly cobalt blue fed by underwater springs connecting to the open sea. Saltwater fish from the ocean swim freely upriver, surrounding swimmers. At noon each day, all visitors are asked to leave the water for the "Fish Feeding" — and thousands of fish surface at once.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–May</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="mindanao" data-type="wildlife" data-threat="true" data-threat-reason="Introduced tilapia and decades of overfishing have driven most endemic fish species to near-extinction — one of the most acute freshwater biodiversity crises in the Philippines." data-season="Year-round" onclick="openCard(this)" data-funfact="Lake Lanao is one of the world's ancient lakes — estimated to be over a million years old. This antiquity allowed its endemic fish to evolve in total isolation, producing a flock of species found absolutely nowhere else on Earth. Tragically, introduced tilapia and overfishing have driven most of these endemics to extinction within living memory.">
+      <img src="https://picsum.photos/seed/ph-lanao/600/400" alt="Lake Lanao" loading="lazy">
+      <span class="place-threat-badge">&#9888; Under Threat</span>
+      <div class="card-body"><div class="card-tag">Ancient Lake · Lanao del Sur</div><div class="card-title">Lake Lanao</div><p class="card-desc">The Philippines' second-largest lake and one of Southeast Asia's most ancient — a vast freshwater body in the Mindanao highlands sacred to the Maranao people. Its isolation produced one of the world's most remarkable freshwater fish radiations, with endemic species now critically threatened by introduced competitors and habitat change.</p><div class="place-meta"><span class="place-season">&#9670; Best: Year-round</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="mindanao" data-type="wildlife" data-season="Nov–May" onclick="openCard(this)" data-funfact="Aliwagwag Falls drops across 84 tiers over a vertical descent of 340 metres — making it one of the tallest multi-tiered waterfalls in Southeast Asia. The surrounding forest is so remote that new plant species are still being described from its watershed.">
+      <img src="https://picsum.photos/seed/ph-aliwagwag/600/400" alt="Aliwagwag Falls" loading="lazy">
+      <div class="card-body"><div class="card-tag">Waterfall &amp; Forest · Davao Oriental</div><div class="card-title">Aliwagwag Falls</div><p class="card-desc">Eighty-four cascading tiers plunge 340 metres through old-growth rainforest in Davao Oriental — one of the tallest multi-tiered waterfalls in Southeast Asia. The surrounding Pujada Bay Protected Landscape is a frontier wilderness of intact lowland dipterocarp forest, undisturbed coral reefs, and undescribed endemic species.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–May</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="mindanao" data-type="volcanic" data-season="Mar–May" onclick="openCard(this)" data-funfact="Lake Holon sits inside the crater of Mount Parker — an active but long-dormant volcano. The Tboli call it Maughan, 'forbidden lake,' and it was off-limits to outsiders for generations. It was formally opened to trekkers only in the 2000s, and its surrounding forest remains almost entirely intact.">
+      <img src="https://picsum.photos/seed/ph-holon/600/400" alt="Lake Holon" loading="lazy">
+      <div class="card-body"><div class="card-tag">Crater Lake · South Cotabato</div><div class="card-title">Lake Holon</div><p class="card-desc">One of the Philippines' most pristine crater lakes, nestled inside the summit caldera of Mount Parker in South Cotabato. Reached by a two-day trek through mossy montane forest, Holon's emerald waters are surrounded by endemic pitcher plants, wild orchids, and the rich T'boli cultural landscape of the highlands.</p><div class="place-meta"><span class="place-season">&#9670; Best: Mar–May</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="mindanao" data-type="wildlife" data-season="Year-round" onclick="openCard(this)" data-funfact="The Philippine Eagle Center in Davao City has successfully bred the Philippine Eagle in captivity — a feat considered nearly impossible for large raptors. Each captive-bred eagle costs more to raise than a human university education, reflecting how demanding and rare these birds truly are.">
+      <img src="image/Agila.jpg" alt="Philippine Eagle Center" loading="lazy">
+      <div class="card-body"><div class="card-tag">Conservation Center · Davao City</div><div class="card-title">Philippine Eagle Center</div><p class="card-desc">The primary conservation breeding facility for the Philippine Eagle — the country's national bird and one of the world's most endangered raptors. Home to rescued and captive-bred eagles in large naturalistic enclosures, the center leads research into eagle ecology and runs education programs reaching thousands of students annually.</p><div class="place-meta"><span class="place-season">&#9670; Best: Year-round</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="luzon" data-type="wildlife" data-threat="true" data-threat-reason="The Tamaraw population has collapsed from over 10,000 in the early 20th century to fewer than 500 today, driven by habitat loss from agricultural encroachment and past hunting. Rinderpest introduced by cattle wiped out a large portion of the population in the 1930s." data-season="Nov–May" onclick="openCard(this)" data-funfact="The Tamaraw is found on one island and one island only — Mindoro. It has never existed anywhere else on Earth. Despite being a buffalo, it is a solitary animal unlike any other bovine — living and foraging alone in the mountain forest rather than in herds.">
+      <img src="image/Tamaraw.jpg" alt="Mts. Iglit-Baco Natural Park" loading="lazy">
+      <span class="place-threat-badge">&#9888; Under Threat</span>
+      <div class="card-body"><div class="card-tag">Natural Park · Occidental Mindoro</div><div class="card-title">Mts. Iglit-Baco Natural Park</div><p class="card-desc">The last stronghold of the <a href="species.html" class="place-sp-link">Tamaraw</a> — the critically endangered dwarf buffalo found only on Mindoro. Its montane grasslands and forest mosaic shelter fewer than 500 remaining individuals of one of the world's rarest large mammals, alongside the Mindoro Bleeding-heart Dove and endemic forest birds.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–May</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="visayas" data-type="wildlife" data-season="Nov–May" onclick="openCard(this)" data-funfact="Samar Island Natural Park contains the largest remaining block of lowland rainforest in the Visayas — a forest so intact that the Philippine Warty Pig, considered locally extinct elsewhere in the region, still maintains a viable population inside its boundaries.">
+      <img src="image/Sierra Madre.png" alt="Samar Island Natural Park" loading="lazy">
+      <div class="card-body"><div class="card-tag">Natural Park · Eastern Samar</div><div class="card-title">Samar Island Natural Park</div><p class="card-desc">The largest intact lowland rainforest in the Visayas — a vast karst and forest wilderness sheltering the <a href="species.html" class="place-sp-link">Philippine Cockatoo</a>, Samar Cobra, and rare cave-dwelling species in one of the most geologically complex island interiors in the archipelago. Its limestone cave systems rival those of Palawan in scale.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–May</span></div></div>
+    </div>
+
+    <div class="card filterable" data-category="luzon" data-type="wildlife" data-season="Nov–May" onclick="openCard(this)" data-funfact="Calauit's African animals were brought to Palawan in 1976 by President Marcos, who displaced the indigenous Tagbanwa community to create an African game reserve. Today the animals — giraffes, zebras, impalas, and waterbucks — roam freely alongside endemic Philippine species, creating the world's most unusual wildlife overlap.">
+      <img src="https://picsum.photos/seed/ph-calauit/600/400" alt="Calauit Wildlife Sanctuary" loading="lazy">
+      <div class="card-body"><div class="card-tag">Wildlife Sanctuary · Palawan · Region IV-B</div><div class="card-title">Calauit Wildlife Sanctuary</div><p class="card-desc">An extraordinary island sanctuary in northern Palawan where African savanna animals — giraffes, zebras, and impalas — share habitat with endemic Philippine species including the Calamian Deer, <a href="species.html" class="place-sp-link">Palawan Bearcats</a>, and <a href="species.html" class="place-sp-link">Philippine Cockatoos</a>. A surreal and ecologically unique conservation experiment with a complex human history.</p><div class="place-meta"><span class="place-season">&#9670; Best: Nov–May</span></div></div>
+    </div>
+
+  </div>
+</section>
+
+<div id="modal" class="modal">
+  <div class="modal-card">
+    <button type="button" class="modal-close" onclick="closeModal()">&#x2715;</button>
+    <div class="modal-card-img"><img id="modal-img" src="" alt=""></div>
+    <div class="modal-card-body">
+      <div class="modal-card-tag" id="modal-tag"></div>
+      <div class="modal-card-title" id="modal-title"></div>
+      <p class="modal-card-desc" id="modal-desc"></p>
+      <span id="modal-status" class="modal-status-hidden"></span>
+      <div id="modal-funfact" class="modal-card-funfact modal-status-hidden">
+        <div class="modal-card-funfact-label">&#9670; Fun Fact</div>
+        <p class="modal-card-funfact-text" id="modal-funfact-text"></p>
+      </div>
+      <div id="modal-threat-box" class="modal-threat-box modal-status-hidden">
+        <div class="modal-threat-label">&#9888; Conservation Concern</div>
+        <p class="modal-threat-text" id="modal-threat-text"></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="guide"><div class="guide-title">&#9670; Places Guide</div><p class="guide-text" id="guide-text">Explore 39 destinations — filter by island group or click any card to learn more. &nbsp;&#9670;&nbsp; <a href="protected-areas.html" class="guide-pa-link">View all 243 Protected Areas &rarr;</a></p></div>
+<button type="button" class="audio-btn" id="audio-btn" onclick="toggleSound()">&#9654; Ambient Sound</button>
+<audio id="sound" loop><source src="image/Expidition PH ost.mp3" type="audio/mpeg"></audio>
+
+<footer>
+  <div><div class="footer-brand-name">Expedition PH</div><p class="footer-tagline">A digital exploration of the Philippine archipelago's natural heritage.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="regions.html">Island Groups</a></li><li><a href="flora.html">Flora</a></li><li><a href="fauna.html">Fauna</a></li><li><a href="geology.html">Geology</a></li></ul></div>
+  <div><h4>Fauna</h4><ul><li><a href="birds.html">Birds</a></li><li><a href="mammals.html">Mammals</a></li><li><a href="reptiles.html">Reptiles</a></li><li><a href="marine.html">Marine</a></li><li><a href="insects.html">Insects</a></li><li><a href="freshwater.html">Freshwater</a></li><li><a href="extinct.html">Lost Species</a></li></ul></div>
+  <div><h4>Discover</h4><ul><li><a href="places.html">Places</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="species.html">Species Index</a></li><li><a href="protected-areas.html">Protected Areas</a></li></ul></div>
+  <div><h4>About</h4><ul><li><a href="exhibits.html">Exhibits</a></li><li><a href="visit.html">About This Project</a></li></ul></div>
+</footer>
+<div class="footer-bottom"><span>&copy; 2025 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
+
+<style>
+.place-sp-link { color: var(--gold, #c9a84c); text-decoration: underline; text-underline-offset: 2px; font-style: italic; }
+.place-sp-link:hover { opacity: 0.8; }
+.filter-count { font-size: 0.7em; opacity: 0.7; margin-left: 0.2em; }
+.place-meta { display: flex; gap: 0.6rem; align-items: center; margin-top: 0.4rem; flex-wrap: wrap; }
+.place-season { font-size: 0.72rem; color: var(--gold, #c9a84c); letter-spacing: 0.03em; }
+.place-threat-badge { display: block; background: rgba(220,50,50,0.15); color: #e05555; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.2rem 0.7rem; text-align: center; border-bottom: 1px solid rgba(220,50,50,0.25); }
+/* Season note */
+.season-note { text-align:center; font-size:0.74rem; color:var(--text-muted, rgba(255,255,255,0.45)); max-width:640px; margin:0.4rem auto 1.4rem; line-height:1.7; font-style:italic; }
+.season-note strong { color:var(--gold, #c9a84c); font-style:normal; }
+/* Under Threat filter btn */
+.filter-btn-threat { border-color: rgba(224,85,85,0.4) !important; }
+.filter-btn-threat:hover, .filter-btn-threat.active { background: rgba(224,85,85,0.15) !important; color: #e05555 !important; border-color: #e05555 !important; }
+/* Featured slider */
+.featured-slide { display: none; }
+.featured-slide.active { display: block; }
+.featured-nav { display: flex; align-items: center; justify-content: center; gap: 1.2rem; margin-top: 1.2rem; padding-top: 0.9rem; border-top: 1px solid rgba(255,255,255,0.08); }
+.feat-nav-btn { background: none; border: 1px solid rgba(201,168,76,0.4); color: var(--gold, #c9a84c); padding: 0.35rem 1.1rem; cursor: pointer; font-size: 0.74rem; letter-spacing: 0.05em; transition: background 0.2s; }
+.feat-nav-btn:hover { background: rgba(201,168,76,0.12); }
+.feat-dots { display: flex; gap: 0.55rem; align-items: center; }
+.feat-dot { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,0.2); border: none; cursor: pointer; padding: 0; transition: background 0.25s; }
+.feat-dot.active { background: var(--gold, #c9a84c); }
+/* Search bar */
+.places-search-wrap { max-width: 540px; margin: 0.8rem auto 0; }
+.places-search { width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); color: #fff; padding: 0.6rem 1rem; font-size: 0.82rem; font-family: inherit; outline: none; box-sizing: border-box; }
+.places-search::placeholder { color: rgba(255,255,255,0.3); }
+.places-search:focus { border-color: rgba(201,168,76,0.5); }
+/* Threat modal box */
+.modal-threat-box { background: rgba(220,50,50,0.07); border-left: 2px solid #e05555; padding: 0.7rem 0.9rem; margin-top: 0.8rem; }
+.modal-threat-label { font-size: 0.54rem; letter-spacing: 0.18em; text-transform: uppercase; color: #e05555; margin-bottom: 0.3rem; font-weight: 600; }
+.modal-threat-text { font-size: 0.78rem; line-height: 1.7; color: rgba(255,255,255,0.6); margin: 0; }
+@media(max-width: 700px) {
+  .places-search-wrap { max-width: 100%; }
+  .featured-nav { gap: 0.8rem; }
+  .feat-nav-btn { padding: 0.3rem 0.8rem; font-size: 0.68rem; }
+}
+</style>
+<script src="museum.js"></script>
+<script>
+(function(){
+  var activeCategory = 'all';
+  var activeType = 'all';
+
+  function applyFilters() {
+    document.querySelectorAll('.filterable').forEach(function(card) {
+      var catMatch = activeCategory === 'all' || card.dataset.category === activeCategory;
+      var typeMatch = activeType === 'all' ||
+        (activeType === 'threat' ? card.dataset.threat === 'true' : card.dataset.type === activeType);
+      card.style.display = (catMatch && typeMatch) ? '' : 'none';
+    });
+    updateCounts();
+  }
+
+  function updateCounts() {
+    ['all','luzon','visayas','mindanao'].forEach(function(cat) {
+      var btn = document.querySelector('[onclick="filterCards(\'' + cat + '\',this)"]') ||
+                document.querySelector('[onclick*="filterCards(\'all\'"]');
+      if (!btn) return;
+      var count = cat === 'all'
+        ? document.querySelectorAll('.filterable').length
+        : document.querySelectorAll('.filterable[data-category="' + cat + '"]').length;
+      var existing = btn.querySelector('.filter-count');
+      if (!existing) {
+        var span = document.createElement('span');
+        span.className = 'filter-count';
+        btn.appendChild(span);
+        existing = span;
+      }
+      existing.textContent = '(' + count + ')';
+    });
+  }
+
+  window.filterByType = function(type, btn) {
+    activeType = type;
+    document.querySelectorAll('#type-filter-bar .filter-btn').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+    applyFilters();
+  };
+
+  // Override filterCards for this page to support dual filtering
+  var _origFilterCards = window.filterCards;
+  window.filterCards = function(category, btn) {
+    activeCategory = category;
+    document.querySelectorAll('.filter-bar:first-of-type .filter-btn, #type-filter-bar').length;
+    // update island group buttons active state
+    var islandBar = document.querySelector('.filter-bar');
+    if (islandBar) {
+      islandBar.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+    }
+    applyFilters();
+  };
+
+  function updateResultsHint() {
+    var visible = document.querySelectorAll('.filterable:not([style*="none"])').length;
+    var hint = document.getElementById('results-hint');
+    if (!hint) return;
+    hint.textContent = visible + ' destination' + (visible !== 1 ? 's' : '') + ' shown' +
+      (visible > 12 ? ' — use the type filter above to narrow results' : '');
+  }
+
+  var _origApplyFilters = applyFilters;
+  applyFilters = function() {
+    _origApplyFilters();
+    updateResultsHint();
+  };
+
+  /* Search */
+  var searchTerm = '';
+  function applySearch() {
+    var q = searchTerm.toLowerCase();
+    if (!q) { applyFilters(); return; }
+    document.querySelectorAll('.filterable').forEach(function(card) {
+      var title = (card.querySelector('.card-title') || {}).textContent || '';
+      var desc  = (card.querySelector('.card-desc')  || {}).textContent || '';
+      var tag   = (card.querySelector('.card-tag')   || {}).textContent || '';
+      var match = (title + ' ' + desc + ' ' + tag).toLowerCase().indexOf(q) !== -1;
+      card.style.display = match ? '' : 'none';
+    });
+    updateResultsHint();
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    updateCounts();
+    updateResultsHint();
+    var searchEl = document.getElementById('places-search');
+    if (searchEl) {
+      searchEl.addEventListener('input', function(){
+        searchTerm = this.value.trim();
+        if (searchTerm) {
+          // Reset filters when searching
+          activeCategory = 'all'; activeType = 'all';
+          document.querySelectorAll('.filter-bar .filter-btn, #type-filter-bar .filter-btn').forEach(function(b){ b.classList.remove('active'); });
+          document.querySelector('[onclick*="filterCards(\'all\'"]') && document.querySelector('[onclick*="filterCards(\'all\'"]').classList.add('active');
+          document.getElementById('type-all-btn') && document.getElementById('type-all-btn').classList.add('active');
+        }
+        applySearch();
+      });
+    }
+  });
+
+  /* Extend openCard to show threat reason */
+  var _baseOpenCard = window.openCard;
+  window.openCard = function(el) {
+    _baseOpenCard(el);
+    var threatBox  = document.getElementById('modal-threat-box');
+    var threatText = document.getElementById('modal-threat-text');
+    var reason = el.dataset.threatReason;
+    if (reason && threatBox && threatText) {
+      threatText.textContent = reason;
+      threatBox.classList.remove('modal-status-hidden');
+    } else if (threatBox) {
+      threatBox.classList.add('modal-status-hidden');
+    }
+  };
+
+  /* Featured slider */
+  var featIdx = 0;
+  window.goFeatured = function(n) {
+    var slides = document.querySelectorAll('.featured-slide');
+    var dots   = document.querySelectorAll('.feat-dot');
+    slides[featIdx].classList.remove('active');
+    dots[featIdx].classList.remove('active');
+    featIdx = ((n % slides.length) + slides.length) % slides.length;
+    slides[featIdx].classList.add('active');
+    dots[featIdx].classList.add('active');
+  };
+  window.slideFeatured = function(dir) { goFeatured(featIdx + dir); };
+})();
+</script>
+</body>
+</html>

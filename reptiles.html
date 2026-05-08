@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reptiles · Expedition PH: Natural History</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="museum.css">
+</head>
+<body>
+
+<header id="header">
+  <a href="index.html" class="header-logo">Expedition PH</a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="regions.html">Island Groups</a>
+    <a href="flora.html">Flora</a>
+    <a href="fauna.html" class="active">Fauna</a>
+    <a href="geology.html">Geology</a>
+    <a href="places.html">Places</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="history.html">History</a>
+      <a href="exhibits.html">Exhibits</a>
+  </nav>
+</header>
+
+<div class="subpage-breadcrumb"><a href="fauna.html">Fauna</a><span class="breadcrumb-sep">&#8594;</span><span>Reptiles</span></div>
+
+<div class="page-hero">
+  <img class="page-hero-img" src="image/Buwaya.png" alt="Philippine Reptiles">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-inner">
+    <p class="page-eyebrow">Philippine Reptiles</p>
+    <h1 class="page-title">Scales &amp; <em>Serpents</em></h1>
+    <p class="page-desc">340 reptile species, 187 endemic — spitting cobras, water-walking lizards, heat-sensing pit vipers, and one of the world's most endangered crocodilians.</p>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item reveal"><span class="stat-num" data-target="340">0</span><span class="stat-lbl">Species</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="187">0</span><span class="stat-lbl">Endemic</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="24">0</span><span class="stat-lbl">Profiled</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="72">0</span><span class="stat-lbl">Threatened</span></div>
+</div>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Featured Species &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section section-dark2">
+  <div class="featured-card reveal" onclick="openCard(this)" data-funfact="Philippine Crocodiles are one of the smallest crocodile species in the world, rarely exceeding 3 metres. Despite their size, they are apex predators of Philippine freshwater ecosystems.">
+    <img class="featured-card-img" src="image/Buwaya.png" alt="Philippine Crocodile">
+    <div class="featured-card-body">
+      <div class="featured-label">&#9670; &nbsp; Reptile &nbsp; · &nbsp; Critically Endangered</div>
+      <div class="featured-name">Philippine Crocodile</div>
+      <div class="featured-sci">Crocodylus mindorensis</div>
+      <p class="featured-desc">One of the world's most endangered crocodilians — found only in freshwater habitats of the Philippines. Estimated fewer than 250 individuals remain in the wild, protected by community wardens in the Sierra Madre and Mindanao.</p>
+      <div class="badge-row">
+        <span class="badge">Sierra Madre</span>
+        <span class="badge">Mindanao</span>
+        <span class="badge">Freshwater</span>
+        <span class="badge">Critically Endangered</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; All Species &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section">
+  <p class="section-eyebrow reveal">The Collection</p>
+  <h2 class="section-title reveal">Philippine <em>Reptiles</em></h2>
+  <p class="section-body reveal">Twenty-four species — crocodilians, sea turtles, pythons, lizards, geckos, cobras, and frogs — a cross-section of the cold-blooded life of the Philippine archipelago.</p>
+  <div class="filter-bar reveal">
+    <button class="filter-btn active" onclick="filterCards('all',this)">All</button>
+  </div>
+  <div class="grid grid-3" id="species-grid">
+
+    <div class="card filterable" data-category="reptile" onclick="openCard(this)" data-funfact="Philippine Crocodiles are one of the smallest crocodile species in the world, rarely exceeding 3 metres. Despite their size, they are apex predators of Philippine freshwater ecosystems.">
+      <img src="image/Buwaya.png" alt="Philippine Crocodile" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Reptile · Crocodilian</div>
+        <div class="card-title">Philippine Crocodile<em>Crocodylus mindorensis</em></div>
+        <p class="card-desc">One of the world's most endangered crocodilians, found only in freshwater habitats of the Philippines. Estimated fewer than 250 individuals remain.</p>
+        <span class="card-status status-critical">Critically Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="reptile" onclick="openCard(this)" data-funfact="The Philippine Cobra can spit venom up to 3 metres with pinpoint accuracy, aiming directly for the eyes. Its venom is among the most potent of any cobra species — affecting the nervous system within minutes.">
+      <img src="image/Philippine cobra.png" alt="Philippine Cobra" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Reptile · Snake</div>
+        <div class="card-title">Philippine Cobra<em>Naja philippinensis</em></div>
+        <p class="card-desc">One of the world's most venomous cobras — capable of spitting venom with deadly accuracy. Endemic to the northern Philippines, it inhabits lowland forests, grasslands, and rice paddies.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="reptile" onclick="openCard(this)" data-funfact="Philippine Pit Vipers have heat-sensing pits between their eyes and nostrils that detect temperature differences as small as 0.003°C — allowing them to strike warm-blooded prey with precision in complete darkness.">
+      <img src="image/philippine pit vipers.png" alt="Philippine Pit Vipers" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Reptile · Viper</div>
+        <div class="card-title">Philippine Pit Viper<em>Trimeresurus flavomaculatus</em></div>
+        <p class="card-desc">A venomous tree-dwelling viper found across the Philippine archipelago. Its heat-sensing pits make it a precise nocturnal predator of the forest undergrowth and canopy.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="reptile" onclick="openCard(this)" data-funfact="The Philippine Sailfin Lizard can run bipedally across the surface of water using its powerful hind legs and the large sail-like crest on its tail — earning it the nickname 'the Jesus lizard of the Philippines.'">
+      <img src="image/Philippine sailfin lizard.png" alt="Philippine Sailfin Lizard" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Reptile · Lizard</div>
+        <div class="card-title">Philippine Sailfin Lizard<em>Hydrosaurus pustulatus</em></div>
+        <p class="card-desc">A striking semi-aquatic lizard found along Philippine riverbanks and coasts. Named for the dramatic sail-like crest on its tail, it can run on water and is an excellent swimmer.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="reptile" onclick="openCard(this)" data-funfact="The Philippine Forest Turtle was once thought extinct. Rediscovered in the late 1980s, it is now considered one of the world's 25 most endangered turtles — still found only in Leyte and Palawan.">
+      <img src="image/Philippine Forest Turtle.png" alt="Philippine Forest Turtle" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Reptile · Turtle</div>
+        <div class="card-title">Philippine Forest Turtle<em>Siebenrockiella leytensis</em></div>
+        <p class="card-desc">One of the world's most endangered freshwater turtles — found only in Leyte and Palawan. Critically threatened by habitat loss and collection for the illegal pet trade.</p>
+        <span class="card-status status-critical">Critically Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="reptile" onclick="openCard(this)" data-funfact="Unlike the Philippine Cobra, the Samar Cobra cannot spit venom. However, its bite delivers highly cytotoxic venom that destroys tissue at the wound site — causing severe localised damage rather than systemic nerve effects.">
+      <img src="image/Philippine cobra.png" alt="Samar Cobra" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Reptile · Snake</div>
+        <div class="card-title">Samar Cobra<em>Naja samarensis</em></div>
+        <p class="card-desc">A venomous cobra endemic to the southern Philippines — found on Mindanao, Samar, Leyte, and nearby islands. Its cytotoxic venom and bold temperament make it one of the most medically significant snakes in the region.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="reptile" onclick="openCard(this)" data-funfact="Gray's Monitor is one of the very few monitor lizards that eats fruit as a major part of its diet — dispersing seeds across Philippine forests in a role previously thought impossible for a large carnivorous reptile.">
+      <img src="https://picsum.photos/seed/ph-grays-monitor/600/400" alt="Gray's Monitor" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Reptile · Monitor</div>
+        <div class="card-title">Gray's Monitor<em>Varanus olivaceus</em></div>
+        <p class="card-desc">The world's only fruit-eating monitor lizard — a remarkable evolutionary anomaly. Found on Luzon and nearby islands, it climbs trees to reach fruiting canopy plants and plays an irreplaceable role as a forest seed disperser.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="reptile" onclick="openCard(this)" data-funfact="The Ornate Monitor can climb vertical rock faces with ease using its powerful claws — and has been observed raiding sea turtle nests on Philippine beaches, making it one of the few reptiles to prey on the eggs of other reptiles at scale.">
+      <img src="https://picsum.photos/seed/ph-ornate-monitor/600/400" alt="Ornate Monitor" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Reptile · Monitor</div>
+        <div class="card-title">Ornate Monitor<em>Varanus ornatus</em></div>
+        <p class="card-desc">A large, powerfully built monitor lizard found across the Philippine archipelago. An opportunistic predator, it hunts fish, crabs, birds, and small mammals across a wide range of coastal and forest habitats.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="reptile" onclick="openCard(this)" data-funfact="The Philippine Flying Dragon extends its ribs outward to stretch a bright orange-and-blue skin membrane — gliding up to 9 metres between trees. Males use their coloured dewlap for territorial displays, flashing it like a semaphore flag to rival males on adjacent trees.">
+      <img src="https://picsum.photos/seed/ph-flying-dragon/600/400" alt="Philippine Flying Dragon" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Reptile · Lizard</div>
+        <div class="card-title">Philippine Flying Dragon<em>Draco volans</em></div>
+        <p class="card-desc">A small agamid lizard capable of gliding between trees by extending its elongated ribs to form a colourful wing membrane. Found across Philippine lowland and montane forests, it is one of the most acrobatic reptiles in Southeast Asia — and a common sight on the trunks of large forest trees.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="reptile" onclick="openCard(this)" data-funfact="The Tokay Gecko's adhesive toe pads use van der Waals forces — molecular-scale attraction between surfaces — allowing it to walk upside down on glass. Scientists are studying its foot structure to develop dry adhesives for robotics and medicine.">
+      <img src="https://picsum.photos/seed/ph-tokay/600/400" alt="Tokay Gecko" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Reptile · Gecko</div>
+        <div class="card-title">Tokay Gecko<em>Gekko gecko</em></div>
+        <p class="card-desc">The largest gecko in the Philippines — its loud two-syllable call 'to-kay' echoes through Philippine homes and forests at night. A voracious predator of insects and small vertebrates, considered a symbol of good luck but heavily targeted by the illegal wildlife trade for supposed medicinal properties.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="reptile" onclick="openCard(this)" data-funfact="The Philippine Sun Skink can shed and regrow its tail up to four times during its lifetime — each regenerated tail is composed of cartilage rather than bone. The detached tail continues to wriggle for up to 30 minutes after separation, distracting predators while the skink escapes.">
+      <img src="https://picsum.photos/seed/ph-sun-skink/600/400" alt="Philippine Sun Skink" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Reptile · Skink</div>
+        <div class="card-title">Philippine Sun Skink<em>Eutropis multicarinata</em></div>
+        <p class="card-desc">One of the most widespread lizards in the Philippines — its metallic bronze-and-copper scales glimmer in forest sunlight. Found from sea level to over 1,500 metres, this adaptable skink occupies gardens, farms, and primary forest alike, making it one of the most commonly encountered reptiles across the archipelago.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="reptile" onclick="openCard(this)" data-funfact="Green Sea Turtles navigate back to the exact beach where they hatched — sometimes crossing the entire Pacific Ocean. Scientists believe they imprint on the unique magnetic signature of their birth beach as hatchlings and use it as a compass decades later.">
+      <img src="https://picsum.photos/seed/ph-sea-turtle/600/400" alt="Green Sea Turtle" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Reptile · Sea Turtle</div>
+        <div class="card-title">Green Sea Turtle<em>Chelonia mydas</em></div>
+        <p class="card-desc">One of five sea turtle species nesting on Philippine beaches. The Philippines hosts critical nesting sites in the Turtle Islands, Palawan, and Batanes — and territorial waters serve as important feeding grounds for this ancient, legally protected ocean traveller.</p>
+        <span class="card-status status-endangered">Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="reptile" onclick="openCard(this)" data-funfact="The Hawksbill Sea Turtle has a unique hawk-like beak that reaches into narrow coral crevices to extract sea sponges — its primary food. It is the only animal that eats sponges as a dietary staple, making it irreplaceable in controlling sponge growth on coral reefs.">
+      <img src="https://picsum.photos/seed/ph-hawksbill/600/400" alt="Hawksbill Sea Turtle" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Reptile · Sea Turtle</div>
+        <div class="card-title">Hawksbill Sea Turtle<em>Eretmochelys imbricata</em></div>
+        <p class="card-desc">Critically endangered and among the most threatened sea turtles in the world. Philippine reefs are critical foraging and nesting habitat — yet its striking shell has made it the most heavily exploited sea turtle in history, decimated by centuries of trade in tortoiseshell.</p>
+        <span class="card-status status-critical">Critically Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="reptile" onclick="openCard(this)" data-funfact="The King Cobra is the world's longest venomous snake — reaching up to 5.5 metres. It feeds almost exclusively on other snakes. A female King Cobra is the only snake known to build a nest and actively guard her eggs until they hatch.">
+      <img src="image/Philippine cobra.png" alt="King Cobra" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Reptile · Snake</div>
+        <div class="card-title">King Cobra<em>Ophiophagus hannah</em></div>
+        <p class="card-desc">The world's longest venomous snake — found in the forests of Luzon, Palawan, Mindanao, and the Visayas. Despite its intimidating size, it preys almost exclusively on other snakes and is rarely aggressive unless threatened or cornered near a nest.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="reptile" onclick="openCard(this)" data-funfact="The Reticulated Python is the world's longest snake — individuals exceeding 7 metres have been recorded in Philippine forests. It kills by constriction, tightening its coils each time the prey exhales — until the prey cannot inhale again.">
+      <img src="https://picsum.photos/seed/ph-retic-python/600/400" alt="Reticulated Python" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Reptile · Snake</div>
+        <div class="card-title">Reticulated Python<em>Malayopython reticulatus</em></div>
+        <p class="card-desc">The world's longest snake — found in the rainforests of Luzon, Mindanao, and Palawan. This powerful constrictor is an apex predator capable of taking deer and large pigs. Despite its size, it is increasingly threatened by habitat loss and hunting for skin and meat.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="reptile" onclick="openCard(this)" data-funfact="The Blue-lipped Sea Krait is equally at home on land and at sea — it hunts fish underwater, holding its breath for up to 30 minutes, then comes ashore to rest, digest, and lay eggs. Unlike most sea snakes, it regularly climbs rocks and tree roots above the tide line.">
+      <img src="https://picsum.photos/seed/ph-sea-krait/600/400" alt="Blue-lipped Sea Krait" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Reptile · Snake</div>
+        <div class="card-title">Blue-lipped Sea Krait<em>Laticauda laticaudata</em></div>
+        <p class="card-desc">A venomous amphibious sea snake found on Philippine coral reefs and rocky shorelines. Banded in black and blue-grey, it hunts eels and small fish underwater before hauling out onto rocks to rest and digest. Despite its potent venom, it is remarkably docile and rarely bites unprovoked.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="reptile" onclick="openCard(this)" data-funfact="The Water Monitor swims with a sinuous, crocodile-like movement of its flattened tail and can remain submerged for up to 30 minutes. It is immune to the toxic secretions of bufo toads that would kill a dog — making it one of the most versatile predators in Philippine wetlands.">
+      <img src="https://picsum.photos/seed/ph-water-monitor/600/400" alt="Water Monitor" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Reptile · Monitor</div>
+        <div class="card-title">Water Monitor<em>Varanus salvator</em></div>
+        <p class="card-desc">The Philippines' largest lizard — reaching up to 2.5 metres. An adaptable apex predator found from mangrove coasts to highland rivers, it swims powerfully and scavenges alongside crocodiles in Philippine wetlands. Locally known as Bayawak, it plays a vital ecological role as a scavenger and predator.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="reptile" onclick="openCard(this)" data-funfact="The Philippine Forest Dragon is so cryptic that it relies entirely on camouflage — remaining completely motionless even when approached within centimetres. Males rapidly flush their throat dewlap from pale to brilliant yellow-orange during territorial displays.">
+      <img src="https://picsum.photos/seed/ph-forest-dragon/600/400" alt="Philippine Forest Dragon" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Reptile · Lizard</div>
+        <div class="card-title">Philippine Forest Dragon<em>Gonocephalus sophiae</em></div>
+        <p class="card-desc">A spectacular crested agamid lizard found in the highland forests of Palawan and Mindanao. Its rough, bark-like colouring makes it nearly impossible to spot when motionless on a mossy branch — yet when displaying, the male's vivid dewlap blazes like a flame in the forest understorey.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="reptile" onclick="openCard(this)" data-funfact="The Philippine Soft-shell Turtle breathes through its leathery neck skin as well as its lungs — allowing it to remain submerged for hours. It is the largest freshwater turtle in the Philippines, with a shell spanning over a metre, and was once found across the archipelago's major river systems.">
+      <img src="https://picsum.photos/seed/ph-softshell/600/400" alt="Philippine Soft-shell Turtle" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Reptile · Turtle</div>
+        <div class="card-title">Philippine Soft-shell Turtle<em>Pelochelys cantorii</em></div>
+        <p class="card-desc">One of the world's largest freshwater turtles — found in the major river systems of Luzon, Mindanao, and Palawan. Its leathery, unmineralised shell distinguishes it from all other Philippine turtles. Critically threatened by hunting, sand mining, and the loss of the large river habitats it depends on.</p>
+        <span class="card-status status-endangered">Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="amphibian" onclick="openCard(this)" data-funfact="The Philippine Giant Forest Frog has fangs on its lower jaw — making it one of the few frogs in the world capable of a genuinely painful bite. It uses these fangs to wrestle rival males during breeding season in a style of combat more like two mammals than typical frog behaviour.">
+      <img src="https://picsum.photos/seed/ph-giant-frog/600/400" alt="Philippine Giant Forest Frog" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Amphibian · Frog</div>
+        <div class="card-title">Philippine Giant Forest Frog<em>Limnonectes leytensis</em></div>
+        <p class="card-desc">One of the largest frogs in the Philippines — a powerful, fanged predator of forest streams. Found across Leyte, Samar, and Mindanao, it hunts crabs, smaller frogs, and invertebrates from streamside rocks, defending territories with surprisingly aggressive physical combat.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="amphibian" onclick="openCard(this)" data-funfact="The Mindanao Horned Forest Frog completely bypasses the tadpole stage — eggs are laid on damp forest soil and hatch directly as fully formed miniature froglets. This unique reproductive strategy is an adaptation to the unstable, flash-flooding forest streams of Mindanao.">
+      <img src="https://picsum.photos/seed/ph-horned-frog2/600/400" alt="Mindanao Horned Forest Frog" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Amphibian · Frog</div>
+        <div class="card-title">Mindanao Horned Forest Frog<em>Ceratobatrachus guentheri</em></div>
+        <p class="card-desc">A remarkable frog of Mindanao forest floors whose eggs hatch directly as miniature froglets, with no tadpole stage at all. A master of leaf-litter camouflage, it ambushes invertebrates from the forest floor and is rarely detected despite being widespread across the southern Philippines.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="amphibian" onclick="openCard(this)" data-funfact="The Philippine Flying Frog uses its enormous, fully webbed feet like parachutes — spreading them wide during a leap to glide from tree to tree in the Palawan rainforest canopy. A single glide can cover over 12 metres, making it one of the most aerial frogs in Asia.">
+      <img src="https://picsum.photos/seed/ph-flying-frog/600/400" alt="Philippine Flying Frog" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Amphibian · Frog</div>
+        <div class="card-title">Philippine Flying Frog<em>Rhacophorus pardalis</em></div>
+        <p class="card-desc">A spectacular gliding frog found in the rainforests of Palawan and northern Mindanao. Its fully webbed feet act as parachutes, allowing glides of over 12 metres between trees. It lays eggs in foam nests above water — the tadpoles drop into the water below when they hatch.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="reptile" onclick="openCard(this)" data-funfact="The Philippine Rat Snake is a powerful constrictor that regularly raids bird nests in the forest canopy — it is one of the few snakes in the Philippines that actively hunts warm-blooded prey by climbing trees. Despite being completely harmless, its speed and defensive posturing cause it to be frequently mistaken for a cobra.">
+      <img src="https://picsum.photos/seed/ph-rat-snake/600/400" alt="Philippine Rat Snake" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Reptile · Snake</div>
+        <div class="card-title">Philippine Rat Snake<em>Ptyas luzonensis</em></div>
+        <p class="card-desc">A large, fast-moving, non-venomous snake endemic to Luzon. A skilled climber and agile predator of rodents, birds, and lizards, it plays a critical role in controlling rat populations in Philippine agricultural landscapes — making it one of the most ecologically valuable snakes in the archipelago.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="amphibian" onclick="openCard(this)" data-funfact="The Palawan Horned Frog's leaf-like appearance is so convincing that it can sit motionless on the forest floor for hours among dead leaves — completely invisible to both predators and prey.">
+      <img src="image/Palawan Horned Frog.png" alt="Palawan Horned Frog" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Amphibian · Frog</div>
+        <div class="card-title">Palawan Horned Frog<em>Megophrys ligayae</em></div>
+        <p class="card-desc">A master of camouflage — its textured skin and leaf-like shape make it nearly indistinguishable from the forest floor. Endemic to Palawan's lowland and montane rainforests.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-dark2 section-centered">
+  <p class="section-eyebrow reveal">Conservation</p>
+  <h2 class="section-title reveal section-title-centered">The Stakes of <em>Survival</em></h2>
+  <p class="section-body reveal section-body-spaced">The Philippines has lost over 70% of its original forest cover. Every species documented here depends on urgent collective action.</p>
+  <div class="reveal cta-row">
+    <a href="places.html" class="btn-gold">Explore Habitats</a>
+    <a href="species.html?group=reptiles" class="btn-outline">View All Reptile Species</a>
+    <a href="fauna.html" class="btn-outline">Back to Fauna</a>
+  </div>
+</section>
+
+<div id="modal" class="modal">
+  <div class="modal-card">
+    <button type="button" class="modal-close" onclick="closeModal()">&#x2715;</button>
+    <div class="modal-card-img"><img id="modal-img" src="" alt=""></div>
+    <div class="modal-card-body">
+      <div class="modal-card-tag" id="modal-tag"></div>
+      <div class="modal-card-title" id="modal-title"></div>
+      <p class="modal-card-desc" id="modal-desc"></p>
+      <span id="modal-status" class="modal-status-hidden"></span>
+      <div id="modal-funfact" class="modal-card-funfact modal-status-hidden">
+        <div class="modal-card-funfact-label">&#9670; Fun Fact</div>
+        <p class="modal-card-funfact-text" id="modal-funfact-text"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="guide"><div class="guide-title">&#9670; Reptiles Guide</div><p class="guide-text" id="guide-text">Click any card to view full details.</p></div>
+<button class="audio-btn" id="audio-btn" onclick="toggleSound()">&#9654; Ambient Sound</button>
+<audio id="sound" loop><source src="image/Expidition PH ost.mp3" type="audio/mpeg"></audio>
+
+<footer>
+  <div><div class="footer-brand-name">Expedition PH</div><p class="footer-tagline">A digital exploration of the Philippine archipelago's natural heritage.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="regions.html">Island Groups</a></li><li><a href="flora.html">Flora</a></li><li><a href="fauna.html">Fauna</a></li><li><a href="geology.html">Geology</a></li></ul></div>
+  <div><h4>Fauna</h4><ul><li><a href="birds.html">Birds</a></li><li><a href="mammals.html">Mammals</a></li><li><a href="reptiles.html">Reptiles</a></li><li><a href="marine.html">Marine</a></li><li><a href="insects.html">Insects</a></li><li><a href="freshwater.html">Freshwater</a></li><li><a href="extinct.html">Lost Species</a></li></ul></div>
+  <div><h4>Discover</h4><ul><li><a href="places.html">Places</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="species.html">Species Index</a></li><li><a href="protected-areas.html">Protected Areas</a></li></ul></div>
+  <div><h4>About</h4><ul><li><a href="exhibits.html">Exhibits</a></li><li><a href="visit.html">About This Project</a></li></ul></div>
+</footer>
+<div class="footer-bottom"><span>&copy; 2025 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
+
+<script src="museum.js"></script>
+</body>
+</html>

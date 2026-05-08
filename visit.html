@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About · Expedition PH: Natural History</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="museum.css">
+<style>
+/* ── ABOUT PAGE ── */
+.about-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+.about-img-block {
+  position: relative;
+}
+.about-hero-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 3px;
+  opacity: 0.82;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.about-img-caption {
+  margin-top: 0.75rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dim);
+  text-align: center;
+}
+
+/* Site sections grid */
+.site-sections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.site-section-card {
+  background: var(--dark2);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 4px;
+  padding: 1.5rem 1.25rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: border-color 0.25s, transform 0.25s;
+}
+.site-section-card:hover { border-color: var(--gold-border); transform: translateY(-3px); }
+.site-section-num {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+}
+.site-section-name {
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cream);
+}
+.site-section-highlight {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.8;
+}
+.site-section-desc {
+  font-size: 0.78rem;
+  color: var(--dim);
+  line-height: 1.65;
+  margin-top: 0.25rem;
+}
+
+/* Contact cards */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto 2.5rem;
+}
+.contact-card {
+  background: var(--dark2);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 4px;
+  padding: 1.25rem 1.25rem;
+}
+.contact-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 0.4rem;
+}
+.contact-value {
+  font-size: 0.9rem;
+  color: var(--cream);
+  word-break: break-all;
+}
+
+/* Newsletter */
+.newsletter-block {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+}
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+.newsletter-input {
+  flex: 1;
+  background: var(--dark2);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 3px;
+  padding: 0.65rem 1rem;
+  font-size: 0.82rem;
+  color: var(--cream);
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.newsletter-input:focus { border-color: var(--gold-border); }
+.newsletter-input::placeholder { color: var(--dim); }
+
+@media(max-width:900px) {
+  .about-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .site-sections-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media(max-width:580px) {
+  .site-sections-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .newsletter-form { flex-direction: column; }
+}
+
+/* Page-specific utilities */
+.about-body-spaced { margin-top: 1rem; }
+.section-centered-block { text-align: center; }
+.section-title-wide { text-align: center; max-width: none; }
+.section-body-centered-mb { text-align: center; margin-bottom: 2.5rem; }
+.section-body-centered-mb2 { text-align: center; margin-bottom: 2rem; }
+.newsletter-title { text-align: center; font-size: 1.4rem; max-width: none; }
+</style>
+</head>
+<body>
+
+<header id="header">
+  <a href="index.html" class="header-logo">Expedition PH</a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="regions.html">Island Groups</a>
+    <a href="flora.html">Flora</a>
+    <a href="fauna.html">Fauna</a>
+    <a href="geology.html">Geology</a>
+    <a href="places.html">Places</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="history.html">History</a>
+  </nav>
+</header>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <img class="page-hero-img" src="image/Pinas.png" alt="Philippine archipelago">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-inner">
+    <p class="page-eyebrow">About This Project</p>
+    <h1 class="page-title">About <em>Expedition PH</em></h1>
+    <p class="page-desc">A personal project dedicated to documenting and celebrating the extraordinary biodiversity of the Philippine archipelago.</p>
+  </div>
+</div>
+
+<!-- ABOUT SECTION -->
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; The Project &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section">
+  <div class="about-layout">
+    <div>
+      <p class="section-eyebrow reveal">Why This Exists</p>
+      <h2 class="section-title reveal reveal-delay-1">Why <em>Expedition PH</em></h2>
+      <p class="section-body reveal reveal-delay-2">The Philippines is one of the most biodiverse places on Earth — and one of the least known outside its borders. This site is a personal effort to document, share, and celebrate the natural heritage of the archipelago: its species, its landscapes, its geological history, and the conservation challenges it faces.</p>
+      <p class="section-body reveal reveal-delay-3 about-body-spaced">All content here is compiled from published scientific literature, field observations, and a deep personal passion for Filipino wildlife and wild places.</p>
+    </div>
+    <div class="about-img-block reveal">
+      <img class="about-hero-img" src="image/Sierra Madre.png" alt="Philippine Sierra Madre forest">
+      <p class="about-img-caption">Sierra Madre — the longest mountain range in the Philippines</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; What's Inside &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section">
+  <p class="section-eyebrow reveal section-centered-block">Explore the Site</p>
+  <h2 class="section-title reveal reveal-delay-1 section-title-wide">Six Ways to <em>Explore</em></h2>
+  <p class="section-body reveal reveal-delay-2 section-body-centered-mb">Each section covers a different dimension of Philippine natural heritage.</p>
+
+  <div class="site-sections-grid">
+    <a href="exhibits.html" class="site-section-card reveal">
+      <div class="site-section-num">01</div>
+      <div class="site-section-name">Exhibits</div>
+      <div class="site-section-highlight">Six Permanent Galleries</div>
+      <p class="site-section-desc">From living reefs and ancient flora to birds, geology, and freshwater worlds — six galleries of Philippine natural heritage.</p>
+    </a>
+    <a href="species.html" class="site-section-card reveal reveal-delay-1">
+      <div class="site-section-num">02</div>
+      <div class="site-section-name">Species Index</div>
+      <div class="site-section-highlight">Iconic Animals</div>
+      <p class="site-section-desc">Detailed profiles of the Philippines' most remarkable and threatened species, with conservation status and habitat information.</p>
+    </a>
+    <a href="history.html" class="site-section-card reveal reveal-delay-2">
+      <div class="site-section-num">03</div>
+      <div class="site-section-name">History</div>
+      <div class="site-section-highlight">65 Million Years</div>
+      <p class="site-section-desc">A timeline from tectonic formation to the present day — tracing the geological and ecological history of the archipelago.</p>
+    </a>
+    <a href="places.html" class="site-section-card reveal">
+      <div class="site-section-num">04</div>
+      <div class="site-section-name">Places</div>
+      <div class="site-section-highlight">39 Destinations</div>
+      <p class="site-section-desc">Natural destinations across the archipelago — from UNESCO World Heritage Sites to hidden wilderness areas.</p>
+    </a>
+    <a href="protected-areas.html" class="site-section-card reveal reveal-delay-1">
+      <div class="site-section-num">05</div>
+      <div class="site-section-name">Protected Areas</div>
+      <div class="site-section-highlight">243 NIPAS Sites</div>
+      <p class="site-section-desc">The full index of Philippine protected areas under the National Integrated Protected Areas System.</p>
+    </a>
+    <a href="gallery.html" class="site-section-card reveal reveal-delay-2">
+      <div class="site-section-num">06</div>
+      <div class="site-section-name">Gallery</div>
+      <div class="site-section-highlight">Visual Archive</div>
+      <p class="site-section-desc">Visual records of Philippine flora, fauna, landscapes, and marine life — from Palawan to the Cordillera.</p>
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Get in Touch &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section">
+  <p class="section-eyebrow reveal section-centered-block">Contact</p>
+  <h2 class="section-title reveal reveal-delay-1 section-title-wide">Say <em>Hello</em></h2>
+  <p class="section-body reveal reveal-delay-2 section-body-centered-mb2">Questions, corrections, contributions, or just want to talk about Philippine wildlife — all messages welcome.</p>
+
+  <div class="contact-grid reveal reveal-delay-3">
+    <div class="contact-card">
+      <div class="contact-label">Email</div>
+      <div class="contact-value">your@email.com</div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-label">Instagram</div>
+      <div class="contact-value">@yourhandle</div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-label">Based in</div>
+      <div class="contact-value">Philippines</div>
+    </div>
+  </div>
+
+  <div class="newsletter-block reveal">
+    <p class="section-eyebrow section-centered-block">Stay Updated</p>
+    <h3 class="section-title newsletter-title">New content, <em>delivered</em></h3>
+    <p class="section-body section-centered-block">Species profiles, field notes, and site updates — straight to your inbox.</p>
+    <form class="newsletter-form" onsubmit="return false;">
+      <input type="email" class="newsletter-input" placeholder="Your email address">
+      <button type="submit" class="btn-primary">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- AUDIO -->
+<button type="button" class="audio-btn" id="audio-btn" onclick="toggleSound()">&#9654; Ambient Sound</button>
+<audio id="sound" loop><source src="image/Expidition PH ost.mp3" type="audio/mpeg"></audio>
+
+<!-- FOOTER -->
+<footer>
+  <div><div class="footer-brand-name">Expedition PH</div><p class="footer-tagline">A digital exploration of the Philippine archipelago's natural heritage.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="regions.html">Island Groups</a></li><li><a href="flora.html">Flora</a></li><li><a href="fauna.html">Fauna</a></li><li><a href="geology.html">Geology</a></li></ul></div>
+  <div><h4>Fauna</h4><ul><li><a href="birds.html">Birds</a></li><li><a href="mammals.html">Mammals</a></li><li><a href="reptiles.html">Reptiles</a></li><li><a href="marine.html">Marine</a></li><li><a href="insects.html">Insects</a></li><li><a href="freshwater.html">Freshwater</a></li><li><a href="extinct.html">Lost Species</a></li></ul></div>
+  <div><h4>Discover</h4><ul><li><a href="places.html">Places</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="species.html">Species Index</a></li><li><a href="protected-areas.html">Protected Areas</a></li></ul></div>
+  <div><h4>About</h4><ul><li><a href="exhibits.html">Exhibits</a></li><li><a href="visit.html">About This Project</a></li></ul></div>
+</footer>
+<div class="footer-bottom"><span>&copy; 2025 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
+
+<script src="museum.js"></script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insects · Expedition PH: Natural History</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="museum.css">
+</head>
+<body>
+
+<header id="header">
+  <a href="index.html" class="header-logo">Expedition PH</a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="regions.html">Island Groups</a>
+    <a href="flora.html">Flora</a>
+    <a href="fauna.html" class="active">Fauna</a>
+    <a href="geology.html">Geology</a>
+    <a href="places.html">Places</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="history.html">History</a>
+      <a href="exhibits.html">Exhibits</a>
+  </nav>
+</header>
+
+<div class="subpage-breadcrumb"><a href="fauna.html">Fauna</a><span class="breadcrumb-sep">&#8594;</span><span>Insects</span></div>
+
+<div class="page-hero">
+  <img class="page-hero-img" src="image/Atlas Moth.png" alt="Philippine Insects">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-inner">
+    <p class="page-eyebrow">Philippine Insects</p>
+    <h1 class="page-title">Invertebrates of the <em>Canopy</em></h1>
+    <p class="page-desc">21,000+ insect species, 70% endemic — giant moths, birdwing butterflies, synchronised fireflies, and 110+ endemic tiger beetle species.</p>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item reveal"><span class="stat-num" data-target="21000">0</span><span class="stat-lbl">Insect Species</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="352">0</span><span class="stat-lbl">Endemic Butterflies</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="24">0</span><span class="stat-lbl">Profiled</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="110">0</span><span class="stat-lbl">Tiger Beetle Species</span></div>
+</div>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Featured Species &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section section-dark2">
+  <div class="featured-card reveal" onclick="openCard(this)" data-funfact="The Atlas Moth has no mouth and cannot eat as an adult. It lives entirely off fat stored during its caterpillar stage — surviving only 1–2 weeks as a moth, just long enough to find a mate and lay eggs.">
+    <img class="featured-card-img" src="image/Atlas Moth.png" alt="Atlas Moth">
+    <div class="featured-card-body">
+      <div class="featured-label">&#9670; &nbsp; Insect · Moth</div>
+      <div class="featured-name">Atlas Moth</div>
+      <div class="featured-sci">Attacus atlas</div>
+      <p class="featured-desc">One of the largest moths in the world — with a wingspan reaching 30 cm. It has no mouth and cannot eat as an adult, surviving entirely on fat reserves stored during its caterpillar stage. Its wingtips mimic snake heads to deter predators.</p>
+      <div class="badge-row">
+        <span class="badge">Palawan</span>
+        <span class="badge">Mindanao</span>
+        <span class="badge">Largest Moth</span>
+        <span class="badge">No Mouth</span>
+        <span class="badge">30cm Wingspan</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; All Species &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section">
+  <p class="section-eyebrow reveal">The Collection</p>
+  <h2 class="section-title reveal">Philippine <em>Insects</em></h2>
+  <p class="section-body reveal">Twenty-four species — moths, butterflies, beetles, fireflies, dragonflies, mantids, scorpions, and more — representing the vast invertebrate diversity of the Philippine archipelago.</p>
+  <div class="filter-bar reveal">
+    <button class="filter-btn active" onclick="filterCards('all',this)">All</button>
+  </div>
+  <div class="grid grid-3" id="species-grid">
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="The Atlas Moth has no mouth and cannot eat as an adult. It survives entirely on fat stored during its caterpillar stage — living only 1–2 weeks as a moth, just long enough to find a mate and lay eggs.">
+      <img src="image/Atlas Moth.png" alt="Atlas Moth" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Insect · Moth</div>
+        <div class="card-title">Atlas Moth<em>Attacus atlas</em></div>
+        <p class="card-desc">One of the largest moths in the world — its wingspan can reach 30 cm. The wingtips of its wings mimic the head of a snake to deter predators. Found in Philippine forests from lowlands to highlands.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="The Luzon Peacock Swallowtail is one of the world's rarest butterflies — found only in the pine forests of the Cordillera above 1,500 metres. Its iridescent wings shift colour depending on the angle of light, ranging from deep blue to brilliant green.">
+      <img src="image/Luzon peacock swallowtail.png" alt="Luzon Peacock Swallowtail" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Insect · Butterfly</div>
+        <div class="card-title">Luzon Peacock Swallowtail<em>Papilio chikae</em></div>
+        <p class="card-desc">One of the world's rarest and most beautiful butterflies — found only in the highland pine forests of the Cordillera in Luzon. Its dazzling iridescent wings make it one of the most coveted species among collectors, adding to the pressure it already faces from habitat loss.</p>
+        <span class="card-status status-endangered">Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="The Magellan Birdwing is protected by Philippine law — it is illegal to collect, sell, or export it. Despite this, it remains heavily targeted by collectors willing to pay thousands of dollars for a single specimen on the black market.">
+      <img src="image/Luzon peacock swallowtail.png" alt="Magellan Birdwing" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Insect · Butterfly</div>
+        <div class="card-title">Magellan Birdwing<em>Troides magellanus</em></div>
+        <p class="card-desc">One of the largest butterflies in the world — with a wingspan reaching 19 cm. Found only in Palawan and a few Visayan islands, its golden-yellow hindwings and velvety black forewings make it the most spectacular butterfly in the Philippine archipelago.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="The Palawan Birdwing is the largest butterfly endemic solely to the Philippines. Its triangular wing shape — unique among birdwings — is the reason it is also known as the Triangle Birdwing, and it inspired a Philippine postage stamp.">
+      <img src="image/Luzon peacock swallowtail.png" alt="Palawan Birdwing" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Insect · Butterfly</div>
+        <div class="card-title">Palawan Birdwing<em>Trogonoptera trojana</em></div>
+        <p class="card-desc">The largest butterfly found exclusively in the Philippines — endemic to Palawan. Its unusually triangular wings of deep emerald green and black distinguish it from all other birdwings. A protected species and an icon of Palawan's extraordinary natural heritage.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="The Semper's Birdwing is named after German naturalist Carl Semper, who documented Philippine biodiversity in the 19th century. Its striking red and black wings are thought to mimic the colours of toxic pipevine plants — warning predators away.">
+      <img src="image/Luzon peacock swallowtail.png" alt="Semper's Birdwing" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Insect · Butterfly</div>
+        <div class="card-title">Semper's Birdwing<em>Atrophaneura semperi</em></div>
+        <p class="card-desc">A striking black and crimson birdwing butterfly found in the forests of Mindanao and Samar. One of the most visually dramatic Philippine butterflies — its vivid red colouring signals toxicity to predators and makes it immediately recognisable in the forest canopy.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="The Emerald Swallowtail's wings shift colour depending on the angle of light — appearing green, blue, or gold as it moves through the forest. This optical effect is produced by microscopic structures on the wing scales, not by pigment.">
+      <img src="image/Luzon peacock swallowtail.png" alt="Emerald Swallowtail" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Insect · Butterfly</div>
+        <div class="card-title">Emerald Swallowtail<em>Papilio palinurus</em></div>
+        <p class="card-desc">One of the most iridescent butterflies in the world — its wings shimmer between emerald green and gold depending on the angle of light. Found in the rainforests of Palawan and Mindanao, it is a favourite subject of wildlife photographers and an important forest pollinator.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="The Scarlet Mormon is one of the Philippines' most widespread large butterflies — yet the female can mimic up to three completely different toxic butterfly species simultaneously, depending on which island she lives on. Each population has evolved its own local disguise.">
+      <img src="image/Luzon peacock swallowtail.png" alt="Scarlet Mormon" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Insect · Butterfly</div>
+        <div class="card-title">Scarlet Mormon<em>Papilio rumanzovia</em></div>
+        <p class="card-desc">A large, brilliantly coloured swallowtail butterfly widespread across the Philippine archipelago. The female is a remarkable mimic — she can resemble different toxic species on different islands, one of the most complex mimicry systems known in any butterfly.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="The Philippine Tiger Beetle is a sprinting predator — it runs so fast that its eyes cannot process images fast enough to track prey, so it repeatedly stops, relocates its target, then sprints again. It can run at speeds equivalent to a human running 480 km/h relative to body size.">
+      <img src="https://picsum.photos/seed/ph-tiger-beetle/600/400" alt="Philippine Tiger Beetle" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Insect · Beetle</div>
+        <div class="card-title">Philippine Tiger Beetle<em>Cicindela spp.</em></div>
+        <p class="card-desc">Over 110 of the world's tiger beetle species are found only in the Philippines — the highest concentration of endemic tiger beetles anywhere on Earth. These iridescent, fast-moving predators inhabit forest floors, riverbanks, and open sandy areas across every major island group.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="Male Philippine Fireflies synchronise their flashes with such precision that entire riverbanks pulse in perfect unison — a phenomenon that once drew thousands of tourists to the mangroves of Palawan and Leyte before light pollution disrupted their displays.">
+      <img src="https://picsum.photos/seed/ph-firefly/600/400" alt="Philippine Firefly" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Insect · Beetle</div>
+        <div class="card-title">Philippine Firefly<em>Pteroptyx spp.</em></div>
+        <p class="card-desc">Several endemic firefly species illuminate the mangrove forests of the Philippines — creating synchronised light displays along riverbanks that are among the most spectacular natural phenomena in Southeast Asia. Their populations are declining due to light pollution and mangrove loss.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="The Mindoro Stick Insect — Conlephasma enigma — was discovered on Mount Halcon on Mindoro and described only in 2012. It represents an entirely new genus unknown to science — found in one of the most isolated and least-explored forests in the Philippines.">
+      <img src="https://picsum.photos/seed/ph-stick-insect/600/400" alt="Mindoro Stick Insect" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Insect · Phasmatodea</div>
+        <div class="card-title">Mindoro Stick Insect<em>Conlephasma enigma</em></div>
+        <p class="card-desc">An entirely new genus of stick insect discovered on Mount Halcon, Mindoro — described by science only in 2012. Its extraordinary camouflage makes it virtually indistinguishable from the forest branches it clings to, and its discovery highlighted how much of Mindoro's highland fauna remains unknown.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="Philippine Damselflies of the genus Risiocnemis are so diverse that new species are still being described from every major mountain range. Their larvae are fully aquatic — making them indicators of stream health, and their disappearance signals degraded water quality upstream.">
+      <img src="https://picsum.photos/seed/ph-damselfly/600/400" alt="Philippine Damselfly" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Insect · Odonata</div>
+        <div class="card-title">Philippine Damselfly<em>Risiocnemis spp.</em></div>
+        <p class="card-desc">A diverse genus of damselflies endemic to the Philippines — with new species still being discovered in highland forest streams. Their iridescent wings and aquatic larvae make them both beautiful and ecologically vital indicators of freshwater ecosystem health.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="The Philippine Dragonfly Neurothemis terminata is one of the few dragonfly species whose males and females look so different from each other that early naturalists classified them as two separate species — the male is vivid red, the female cryptic brown.">
+      <img src="https://picsum.photos/seed/ph-dragonfly/600/400" alt="Philippine Dragonfly" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Insect · Odonata</div>
+        <div class="card-title">Philippine Dragonfly<em>Neurothemis terminata</em></div>
+        <p class="card-desc">A widespread and visually striking dragonfly found across the Philippine archipelago. The male's vivid scarlet body and wing markings are among the most recognisable of any Philippine insect — a common sight above rice paddies, ponds, and slow-moving forest streams.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="The Philippine Longhorn Beetle uses antennae longer than its own body to detect the chemical signals of mating partners and host trees from hundreds of metres away. Its larvae spend years tunnelling inside living trees before emerging as adults.">
+      <img src="https://picsum.photos/seed/ph-longhorn/600/400" alt="Philippine Longhorn Beetle" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Insect · Beetle</div>
+        <div class="card-title">Philippine Longhorn Beetle<em>Batocera spp.</em></div>
+        <p class="card-desc">A group of large, strikingly patterned beetles endemic to Philippine forests. The adults are impressive with antennae exceeding body length, while their larvae play a vital ecological role as wood decomposers — breaking down dead timber and recycling nutrients back into the forest floor.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="Philippine Cicadas produce calls that can exceed 120 decibels — louder than a chainsaw. Each species has a completely unique call frequency, allowing dozens of species to occupy the same forest without interfering with each other's mating signals.">
+      <img src="https://picsum.photos/seed/ph-cicada/600/400" alt="Philippine Cicada" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Insect · Hemiptera</div>
+        <div class="card-title">Philippine Cicada<em>Dundubia spp.</em></div>
+        <p class="card-desc">The defining sound of the Philippine forest — cicadas of the genus Dundubia produce deafening, multi-layered choruses from the treetops. Several species are endemic to specific islands or mountain ranges, their calls so distinct that scientists use sound recordings to identify new species.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="The Philippine Tarantula uses vibration-sensing hairs on its legs to detect prey moving through the leaf litter up to 30 cm away — striking with such speed that the entire attack takes less than a tenth of a second. Despite their fearsome appearance, they rarely bite humans unprovoked.">
+      <img src="https://picsum.photos/seed/ph-tarantula/600/400" alt="Philippine Tarantula" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Arachnid · Spider</div>
+        <div class="card-title">Philippine Tarantula<em>Orphnaecus spp.</em></div>
+        <p class="card-desc">Several tarantula species are endemic to the Philippines — found in the forest floors and root systems of Luzon, Mindanao, and Palawan. These large, hairy spiders are important predators of forest invertebrates and are increasingly threatened by habitat loss and collection for the pet trade.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="The Philippine Walking Leaf is so convincing that other insects regularly try to land on it — mistaking the living animal for an actual fallen leaf. Even its legs have flattened, leaf-like lobes that complete the illusion when it freezes motionless on the forest floor.">
+      <img src="https://picsum.photos/seed/ph-walking-leaf/600/400" alt="Philippine Walking Leaf" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Insect · Phasmatodea</div>
+        <div class="card-title">Philippine Walking Leaf<em>Phyllium philippinicum</em></div>
+        <p class="card-desc">One of the world's most convincing leaf mimics — its flattened, lobed body resembles a living green leaf in extraordinary detail, complete with vein markings and irregular bite marks along the edges. Found in the rainforests of Palawan and Mindanao, it is virtually invisible when motionless among fallen leaves.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="The Philippine Praying Mantis can turn its head 180° in each direction — the only insect capable of this. Its strike takes less than 70 milliseconds — far faster than the human eye can follow. Large individuals have been observed catching geckos and small hummingbirds.">
+      <img src="https://picsum.photos/seed/ph-mantis/600/400" alt="Philippine Praying Mantis" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Insect · Mantodea</div>
+        <div class="card-title">Philippine Praying Mantis<em>Hierodula philippina</em></div>
+        <p class="card-desc">A large ambush predator of Philippine forests and gardens — remarkable for its binocular vision, rotating head, and lightning-fast strike. Several species are endemic to the Philippines, occupying habitats from lowland forest to highland grasslands as apex predators of the insect world.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="The Philippine Giant Centipede is the largest centipede in Asia — reaching over 30 cm. Its venom is potent enough to kill small mammals and has been recorded causing severe pain and tissue necrosis in humans. Despite this, it is collected and consumed in some rural Philippine communities.">
+      <img src="https://picsum.photos/seed/ph-centipede/600/400" alt="Philippine Giant Centipede" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Myriapoda · Centipede</div>
+        <div class="card-title">Philippine Giant Centipede<em>Scolopendra dehaani</em></div>
+        <p class="card-desc">One of the largest centipedes in the world — a formidable nocturnal predator found across the Philippine archipelago. It hunts mice, frogs, geckos, and large insects with venomous forcipules, and its bold, aggressive behaviour makes it one of the most fearsome invertebrates on the Philippine forest floor.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="The Blue Crow Butterfly is toxic to predators — it absorbs poisonous alkaloids from its larval host plants and retains them through metamorphosis. Birds that eat one never try again. It advertises this toxicity with its iridescent blue wings — a strategy known as aposematism.">
+      <img src="image/Luzon peacock swallowtail.png" alt="Blue Crow Butterfly" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Insect · Butterfly</div>
+        <div class="card-title">Blue Crow Butterfly<em>Euploea midamus</em></div>
+        <p class="card-desc">A striking iridescent-blue butterfly found across the Philippine archipelago. Toxic to predators from birth due to alkaloids absorbed from its larval food plants, it flies boldly and openly through the forest — advertising its unpalatability with its brilliant metallic wing sheen.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="Philippine Weaver Ants build nests by pulling living leaves together and using their larvae as living glue guns — workers hold larvae in their mandibles and move them back and forth across leaf edges, triggering the larvae to release silk that binds the leaves together.">
+      <img src="https://picsum.photos/seed/ph-weaver-ant/600/400" alt="Philippine Weaver Ant" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Insect · Hymenoptera</div>
+        <div class="card-title">Philippine Weaver Ant<em>Oecophylla smaragdina</em></div>
+        <p class="card-desc">A highly aggressive, cooperative ant that builds elaborate leaf nests in the Philippine forest canopy. Colonies can number hundreds of thousands and defend territories aggressively — preying on insects many times their individual size. Their acidic bite and larvae are used as flavour ingredients in traditional Filipino cuisine.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="The Philippine Giant Forest Scorpion is among the largest scorpions in the world — yet its venom is far less potent than smaller desert scorpions. It relies primarily on its massive pincers to subdue prey. Most remarkably, its entire exoskeleton fluoresces blue-green under ultraviolet light.">
+      <img src="https://picsum.photos/seed/ph-scorpion/600/400" alt="Philippine Giant Forest Scorpion" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Arachnida · Scorpion</div>
+        <div class="card-title">Philippine Giant Forest Scorpion<em>Heterometrus longimanus</em></div>
+        <p class="card-desc">One of Asia's largest scorpions — a powerful nocturnal predator of the Philippine forest floor. Its glossy black exoskeleton glows blue-green under ultraviolet light, a fluorescence unique to scorpions whose evolutionary purpose remains a mystery to scientists.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="The Coconut Rhinoceros Beetle can lift 850 times its own body weight — proportionally stronger than any other animal on Earth. Its larvae spend 3–9 months consuming decomposing wood, playing a vital role in nutrient cycling before emerging as adults to bore into coconut palm crowns.">
+      <img src="https://picsum.photos/seed/ph-rhino-beetle/600/400" alt="Coconut Rhinoceros Beetle" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Insect · Beetle</div>
+        <div class="card-title">Coconut Rhinoceros Beetle<em>Oryctes rhinoceros</em></div>
+        <p class="card-desc">A massive beetle whose adults tunnel into coconut palm crowns to feed on sap — making it one of the most economically significant insects in the Philippines. Despite its pest status, it plays an important ecological role as a decomposer of dead wood, and is deeply embedded in traditional ecological knowledge of many Philippine farming communities.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="The Philippine Giant Water Bug regularly preys on small fish, frogs, and even duckling-sized birds — stabbing them with its needle-like beak and injecting enzymes that dissolve flesh from the inside. Males incubate eggs glued to their backs until they hatch.">
+      <img src="https://picsum.photos/seed/ph-water-bug/600/400" alt="Philippine Giant Water Bug" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Insect · Hemiptera</div>
+        <div class="card-title">Philippine Giant Water Bug<em>Lethocerus indicus</em></div>
+        <p class="card-desc">A formidable aquatic predator found in Philippine rice paddies, ponds, and slow-moving streams. This giant water bug ambushes prey many times its own size — including fish, frogs, and small birds — and is also a cherished delicacy in rural Philippine communities, eaten fried or used as a flavouring in traditional sauces.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="insect" onclick="openCard(this)" data-funfact="The Philippine Assassin Bug injects a venom that liquefies the internal organs of its prey — then drinks the resulting fluid through its needle-like beak. Despite its brutal hunting method, some species are being studied for potential medical applications of their venom compounds.">
+      <img src="https://picsum.photos/seed/ph-assassin-bug/600/400" alt="Philippine Assassin Bug" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Insect · Hemiptera</div>
+        <div class="card-title">Philippine Assassin Bug<em>Sycanus spp.</em></div>
+        <p class="card-desc">A group of predatory insects found across Philippine forests and gardens — named for their ambush hunting style and venomous bite. Several species are endemic to specific Philippine islands and play an important role as natural pest controllers in forest and agricultural ecosystems.</p>
+        <span class="card-status status-vulnerable">Data Deficient</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-dark2 section-centered">
+  <p class="section-eyebrow reveal">Conservation</p>
+  <h2 class="section-title reveal section-title-centered">The Stakes of <em>Survival</em></h2>
+  <p class="section-body reveal section-body-spaced">The Philippines has lost over 70% of its original forest cover. Every species documented here depends on urgent collective action.</p>
+  <div class="reveal cta-row">
+    <a href="places.html" class="btn-gold">Explore Habitats</a>
+    <a href="species.html?group=insects" class="btn-outline">View All Insect Species</a>
+    <a href="fauna.html" class="btn-outline">Back to Fauna</a>
+  </div>
+</section>
+
+<div id="modal" class="modal">
+  <div class="modal-card">
+    <button type="button" class="modal-close" onclick="closeModal()">&#x2715;</button>
+    <div class="modal-card-img"><img id="modal-img" src="" alt=""></div>
+    <div class="modal-card-body">
+      <div class="modal-card-tag" id="modal-tag"></div>
+      <div class="modal-card-title" id="modal-title"></div>
+      <p class="modal-card-desc" id="modal-desc"></p>
+      <span id="modal-status" class="modal-status-hidden"></span>
+      <div id="modal-funfact" class="modal-card-funfact modal-status-hidden">
+        <div class="modal-card-funfact-label">&#9670; Fun Fact</div>
+        <p class="modal-card-funfact-text" id="modal-funfact-text"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="guide"><div class="guide-title">&#9670; Insects Guide</div><p class="guide-text" id="guide-text">Click any card to view full details.</p></div>
+<button class="audio-btn" id="audio-btn" onclick="toggleSound()">&#9654; Ambient Sound</button>
+<audio id="sound" loop><source src="image/Expidition PH ost.mp3" type="audio/mpeg"></audio>
+
+<footer>
+  <div><div class="footer-brand-name">Expedition PH</div><p class="footer-tagline">A digital exploration of the Philippine archipelago's natural heritage.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="regions.html">Island Groups</a></li><li><a href="flora.html">Flora</a></li><li><a href="fauna.html">Fauna</a></li><li><a href="geology.html">Geology</a></li></ul></div>
+  <div><h4>Fauna</h4><ul><li><a href="birds.html">Birds</a></li><li><a href="mammals.html">Mammals</a></li><li><a href="reptiles.html">Reptiles</a></li><li><a href="marine.html">Marine</a></li><li><a href="insects.html">Insects</a></li><li><a href="freshwater.html">Freshwater</a></li><li><a href="extinct.html">Lost Species</a></li></ul></div>
+  <div><h4>Discover</h4><ul><li><a href="places.html">Places</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="species.html">Species Index</a></li><li><a href="protected-areas.html">Protected Areas</a></li></ul></div>
+  <div><h4>About</h4><ul><li><a href="exhibits.html">Exhibits</a></li><li><a href="visit.html">About This Project</a></li></ul></div>
+</footer>
+<div class="footer-bottom"><span>&copy; 2025 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
+
+<script src="museum.js"></script>
+</body>
+</html>

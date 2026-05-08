@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birds · Expedition PH: Natural History</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="museum.css">
+</head>
+<body>
+
+<header id="header">
+  <a href="index.html" class="header-logo">Expedition PH</a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="regions.html">Island Groups</a>
+    <a href="flora.html">Flora</a>
+    <a href="fauna.html" class="active">Fauna</a>
+    <a href="geology.html">Geology</a>
+    <a href="places.html">Places</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="history.html">History</a>
+      <a href="exhibits.html">Exhibits</a>
+  </nav>
+</header>
+
+<div class="subpage-breadcrumb"><a href="fauna.html">Fauna</a><span class="breadcrumb-sep">&#8594;</span><span>Birds</span></div>
+
+<div class="page-hero">
+  <img class="page-hero-img" src="image/Agila.jpg" alt="Philippine Birds">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-inner">
+    <p class="page-eyebrow">Philippine Birds</p>
+    <h1 class="page-title">Wings Over the <em>Archipelago</em></h1>
+    <p class="page-desc">706 recorded species, 238 endemic — from the world's most powerful raptor to iridescent sunbirds of the Cordillera cloud forests.</p>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item reveal"><span class="stat-num" data-target="706">0</span><span class="stat-lbl">Bird Species</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="238">0</span><span class="stat-lbl">Endemic Birds</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="24">0</span><span class="stat-lbl">Profiled</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="67">0</span><span class="stat-lbl">Threatened Species</span></div>
+</div>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Featured Species &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section section-dark2">
+  <div class="featured-card reveal" onclick="openCard(this)" data-funfact="A breeding pair raises only one chick every two years — making every surviving eagle critical to the species. The eagle is so protective of its territory it will defend up to 100 km² of forest.">
+    <img class="featured-card-img" src="image/Agila.jpg" alt="Philippine Eagle">
+    <div class="featured-card-body">
+      <div class="featured-label">&#9670; &nbsp; National Symbol &nbsp; · &nbsp; Critically Endangered</div>
+      <div class="featured-name">Philippine Eagle</div>
+      <div class="featured-sci">Pithecophaga jefferyi</div>
+      <p class="featured-desc">The national bird of the Philippines and one of the world's rarest, largest, and most powerful birds of prey. Found only in the rainforests of Mindanao, Leyte, Samar, and Luzon, this magnificent raptor reigns at the top of the forest food chain. Its wingspan can reach up to 2 metres, and it preys on monkeys, flying lemurs, and large bats. Fewer than 800 individuals remain in the wild.</p>
+      <div class="badge-row">
+        <span class="badge">Luzon</span>
+        <span class="badge">Mindanao</span>
+        <span class="badge">Forest Predator</span>
+        <span class="badge">National Symbol</span>
+        <span class="badge">Wingspan 2m</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; All Species &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section">
+  <p class="section-eyebrow reveal">The Collection</p>
+  <h2 class="section-title reveal">Philippine <em>Birds</em></h2>
+  <p class="section-body reveal">Twenty-four iconic species from 706 recorded — raptors, hornbills, parrots, doves, pittas, kingfishers, and songbirds found nowhere else on Earth.</p>
+  <div class="filter-bar reveal">
+    <button class="filter-btn active" onclick="filterCards('all',this)">All</button>
+  </div>
+  <div class="grid grid-3" id="species-grid">
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="A breeding pair raises only one chick every two years. The chick stays with its parents for up to 20 months — one of the longest parental care periods of any bird.">
+      <img src="image/Agila.jpg" alt="Philippine Eagle" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Raptor</div>
+        <div class="card-title">Philippine Eagle<em>Pithecophaga jefferyi</em></div>
+        <p class="card-desc">The world's most powerful raptor. Wingspan up to 2m. Found only in Philippine rainforests. National bird and symbol of conservation.</p>
+        <span class="card-status status-critical">Critically Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="Philippine Cockatoos can mimic human speech and live up to 40 years in the wild. In some communities, individual birds are known by name and treated as members of the village.">
+      <img src="image/Loro.jpg" alt="Philippine Cockatoo" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Parrot</div>
+        <div class="card-title">Philippine Cockatoo<em>Cacatua haematuropygia</em></div>
+        <p class="card-desc">Known as the Katala — once widespread across the Philippines, now surviving mainly on Palawan. Community-led conservation has helped stabilise populations.</p>
+        <span class="card-status status-critical">Critically Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="During nesting, the female seals herself inside a tree hollow using mud and droppings, leaving only a small slit. The male feeds her through this slit for the entire 40-day incubation period.">
+      <img src="image/Palawan kalaw.png" alt="Philippine Hornbill" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Hornbill</div>
+        <div class="card-title">Philippine Hornbill<em>Buceros hydrocorax</em></div>
+        <p class="card-desc">The Rufous Hornbill, known locally as Kalaw, is a forest sentinel found across the Philippines. Its loud call echoes through lowland and montane rainforests.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="The male Palawan Peacock-Pheasant's iridescent eyespots reflect UV light invisible to humans — females can see these patterns clearly and use them to select the most genetically fit mate.">
+      <img src="image/Palawan Peacock-pheasant.png" alt="Palawan Peacock-Pheasant" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Pheasant</div>
+        <div class="card-title">Palawan Peacock-Pheasant<em>Polyplectron napoleonis</em></div>
+        <p class="card-desc">Among the most stunning birds of the Philippine forest floor — the male's metallic blue-green plumage and iridescent eyespots make it one of the most beautiful pheasants in the world. Endemic to Palawan.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="The Luzon Bleeding-Heart Dove gets its name from a vivid crimson breast patch that looks exactly like an open wound. When threatened, it sprints through the undergrowth rather than flying — relying on camouflage over escape.">
+      <img src="image/Luzon Bleeding Heart.png" alt="Luzon Bleeding-Heart Dove" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Dove</div>
+        <div class="card-title">Luzon Bleeding-Heart Dove<em>Gallicolumba luzonica</em></div>
+        <p class="card-desc">One of the most striking ground doves in the world — its vivid crimson breast patch mimics a bleeding wound. Found in the forests of Luzon and nearby islands, it walks the forest floor in search of seeds and invertebrates.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="The Mindoro Bleeding-Heart Dove is so secretive and rare that almost no photographs of it exist in the wild. It is one of the least-studied birds in the Philippines — known to science primarily from museum specimens.">
+      <img src="image/Mindoro Bleeding-heart dove.png" alt="Mindoro Bleeding-Heart Dove" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Dove</div>
+        <div class="card-title">Mindoro Bleeding-Heart Dove<em>Gallicolumba platenae</em></div>
+        <p class="card-desc">One of the rarest and most mysterious doves in the world — confined to the forests of Mindoro. Its secretive ground-dwelling habits make it nearly impossible to study, and almost nothing is known of its behaviour.</p>
+        <span class="card-status status-critical">Critically Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="The Philippine Eagle-Owl is one of the largest owls in the world. Its deep resonant call can travel over a kilometre through dense forest — used to mark vast nocturnal territories that it defends aggressively year-round.">
+      <img src="image/Philippine eagle-owl.png" alt="Philippine Eagle-Owl" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Owl</div>
+        <div class="card-title">Philippine Eagle-Owl<em>Bubo philippensis</em></div>
+        <p class="card-desc">One of the largest owls in the world — a powerful nocturnal predator of Philippine lowland and foothill forests. Its deep booming call is one of the most haunting sounds of the Philippine night.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="If Walden's Hornbill male is killed while the female is sealed inside a nesting cavity, both the female and chick will starve to death — the male is the sole provider during the 40+ day incubation period.">
+      <img src="image/Philippine Walden's Hornbill.png" alt="Walden's Hornbill" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Hornbill</div>
+        <div class="card-title">Walden's Hornbill<em>Rhabdotorrhinus waldeni</em></div>
+        <p class="card-desc">Found only on Panay and Negros — one of the world's most critically endangered hornbills. Deforestation has reduced its population to the point where individual nesting pairs are tracked by conservationists.</p>
+        <span class="card-status status-critical">Critically Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="The Philippine Forest Duck is the only dabbling duck endemic to the Philippines. Despite heavy hunting pressure, it has adapted to both freshwater wetlands and coastal mangroves — one of the most habitat-flexible waterfowl in Asia.">
+      <img src="image/Philippine Forest Duck.png" alt="Philippine Forest Duck" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Waterfowl</div>
+        <div class="card-title">Philippine Forest Duck<em>Anas luzonica</em></div>
+        <p class="card-desc">The only dabbling duck endemic to the Philippines. Found across Luzon, Mindanao, and surrounding islands in rivers, lakes, and mangroves. Its chestnut and white plumage is unmistakable among Philippine waterbirds.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="The Philippine Leafbird is one of the most brilliantly coloured birds in the Visayas — the male's vivid emerald green and cobalt blue plumage makes it almost invisible among sunlit forest canopy leaves. It is a critical seed disperser and pollinator, yet its forest home on Cebu, Negros, and Leyte has been reduced to tiny isolated fragments.">
+      <img src="image/Philippine Leafbird.png" alt="Philippine Leafbird" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Leafbird</div>
+        <div class="card-title">Philippine Leafbird<em>Chloropsis flavipennis</em></div>
+        <p class="card-desc">A jewel of the Visayan forest — the male's iridescent green and blue plumage is among the most spectacular of any Philippine songbird. Found on Cebu, Negros, and Leyte, it is a vital pollinator and seed disperser whose survival depends on the last remaining lowland forest fragments of the Visayas.</p>
+        <span class="card-status status-endangered">Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="The Philippine Serpent Eagle specialises in hunting venomous snakes — using thick, heavily scaled legs as armour against bites. It can swallow prey whole in flight, tossing the snake into the air and catching it head-first.">
+      <img src="image/Philippine Serpent eagle.png" alt="Philippine Serpent Eagle" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Raptor</div>
+        <div class="card-title">Philippine Serpent Eagle<em>Spilornis holospilus</em></div>
+        <p class="card-desc">A medium-sized raptor found across the Philippine archipelago. A specialist predator of snakes and lizards — its piercing yellow eyes and loud, distinctive call make it a recognisable presence in Philippine forests.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="The Sulu Hornbill is among the world's rarest birds — fewer than 40 individuals are estimated to survive. Found only on the Sulu Archipelago, it faces extinction from deforestation and the near-total loss of its island forest habitat.">
+      <img src="image/Sulu Hornbill.png" alt="Sulu Hornbill" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Hornbill</div>
+        <div class="card-title">Sulu Hornbill<em>Anthracoceros montani</em></div>
+        <p class="card-desc">One of the world's most critically endangered hornbills — found only on Tawi-Tawi in the Sulu Archipelago. With fewer than 40 individuals remaining, it faces imminent extinction without urgent intervention.</p>
+        <span class="card-status status-critical">Critically Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="The Philippine Hanging Parrot earned its name from its habit of roosting upside down like a bat. One of the smallest parrots in the world, it pollinates flowers as it feeds on nectar — acting as a flying pollinator across Philippine forests.">
+      <img src="image/Philippine Hanging Parrot.png" alt="Philippine Hanging Parrot" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Parrot</div>
+        <div class="card-title">Philippine Hanging Parrot<em>Loriculus philippensis</em></div>
+        <p class="card-desc">A tiny, vivid green parrot known for sleeping upside down like a bat. Found across the Philippine archipelago, it feeds on nectar, pollen, and soft fruit — playing an important role as a forest pollinator.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="The Giant Scops Owl was known only from historical specimens for over 80 years before being rediscovered alive in the forests of Mindanao in the 1990s — one of the most significant ornithological rediscoveries in Southeast Asia.">
+      <img src="image/Philippine Giant scoop owl.png" alt="Giant Scops Owl" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Owl</div>
+        <div class="card-title">Giant Scops Owl<em>Otus gurneyi</em></div>
+        <p class="card-desc">One of the world's largest scops owls — believed extinct for over 80 years before its dramatic rediscovery in Mindanao. This massive, forest-dwelling owl is still rarely encountered and poorly understood.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="The male Flaming Sunbird's brilliant crimson and orange plumage is among the most vivid of any Philippine bird. Its curved bill is perfectly shaped to probe specific highland orchid flowers — making it an irreplaceable pollinator.">
+      <img src="image/Philippine Flaming Sunbird.png" alt="Flaming Sunbird" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Sunbird</div>
+        <div class="card-title">Flaming Sunbird<em>Aethopyga flagrans</em></div>
+        <p class="card-desc">A brilliantly coloured nectar-feeding bird of Philippine highland forests. The male's fiery red and orange plumage is among the most spectacular of any small Philippine bird, flashing like an ember through the forest canopy.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="Despite its small size, the Lowland White-eye forms large mixed-species foraging flocks that police entire forest patches. Dozens of other bird species follow these flocks to exploit the insects they flush from vegetation.">
+      <img src="image/Philippine Lowland white- eye.png" alt="Lowland White-eye" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · White-eye</div>
+        <div class="card-title">Lowland White-eye<em>Zosterops meyeni</em></div>
+        <p class="card-desc">A small, sociable bird endemic to the Philippine lowlands — recognisable by the distinctive white ring around its eye. Often the nucleus of large mixed-species feeding flocks, making it a keystone species of forest bird communities.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="The Philippine Falconet is one of the world's smallest raptors — barely larger than a sparrow — yet it hunts insects, lizards, and even small birds with the speed and aggression of a much larger falcon.">
+      <img src="image/Philippine Falconet.png" alt="Philippine Falconet" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Raptor</div>
+        <div class="card-title">Philippine Falconet<em>Microhierax erythrogenys</em></div>
+        <p class="card-desc">The world's smallest falcon — a pocket-sized predator that hunts from open perches across Philippine lowland forests and forest edges. Despite its tiny size, it is bold and aggressive, regularly taking prey larger than itself.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="The Philippine Hawk-Eagle builds one of the largest nests of any raptor in Southeast Asia — a platform of sticks up to 1.5 metres wide, rebuilt and reused year after year high in the forest canopy. A nesting pair claims and defends a territory of several square kilometres.">
+      <img src="image/Philippine Hawk- eagle.png" alt="Philippine Hawk-Eagle" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Raptor</div>
+        <div class="card-title">Philippine Hawk-Eagle<em>Nisaetus philippensis</em></div>
+        <p class="card-desc">A powerful, crested eagle endemic to the forests of Luzon and the Visayas. Second only to the Philippine Eagle among the archipelago's forest raptors — it hunts birds, lizards, and small mammals through the dense rainforest canopy with remarkable agility.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="The Philippine Trogon nests inside active termite mounds — excavating a chamber within the mound while the termites simply seal themselves off from the intruders. The nest stays perfectly temperature-controlled by the termites' own ventilation system.">
+      <img src="image/Philippine Trogon.png" alt="Philippine Trogon" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Trogon</div>
+        <div class="card-title">Philippine Trogon<em>Harpactes ardens</em></div>
+        <p class="card-desc">One of the most colourful birds in the Philippine forest — the male's deep crimson breast and emerald-green back make it a striking sight perched motionless in the shaded understorey. Found across the major Philippine islands in primary and mature secondary forest.</p>
+        <span class="card-status status-vulnerable">Near Threatened</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="The Philippine Pitta is so vividly coloured that early naturalist collectors could not believe it was a real forest bird — its crimson belly, sky-blue wing patches, and bottle-green back make it look more like a jewel than a living creature.">
+      <img src="image/Philippine Pitta.png" alt="Philippine Pitta" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Pitta</div>
+        <div class="card-title">Philippine Pitta<em>Erythropitta erythrogaster</em></div>
+        <p class="card-desc">One of the most vividly coloured birds in the Philippine forest — its crimson, cobalt, and emerald plumage blazes on the forest floor. Found across the major Philippine islands, it hunts earthworms and invertebrates among leaf litter with a quick, jerky gait.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="The Blue-naped Parrot can live up to 30 years in the wild and mates for life. A pair will occupy and defend the same tree hollow year after year — returning to the same nest site even after the loss of a partner.">
+      <img src="image/Philippine Blue naped Parrot.png" alt="Blue-naped Parrot" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Parrot</div>
+        <div class="card-title">Blue-naped Parrot<em>Tanygnathus lucionensis</em></div>
+        <p class="card-desc">A large, vivid green parrot with a distinctive turquoise-blue nape — found across the Philippine archipelago. A noisy, sociable bird of forest canopy and forest edges, it is heavily traded as a pet, reducing wild populations significantly across its range.</p>
+        <span class="card-status status-vulnerable">Near Threatened</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="The Philippine Kingfisher is one of the smallest kingfishers in the world — yet it dives at over 40 km/h with such precision it can strike a fish in water less than 3 cm deep. Its plumage is so intensely orange it appears to glow in shaded forest light.">
+      <img src="image/Philippine Kingfisher.png" alt="Philippine Kingfisher" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Kingfisher</div>
+        <div class="card-title">Philippine Kingfisher<em>Ceyx melanurus</em></div>
+        <p class="card-desc">A tiny, fiery-orange endemic kingfisher found along the forest streams of Luzon. One of the most threatened kingfishers in the world — its dependence on clean, clear forest streams means it vanishes as soon as forest cover is removed upstream.</p>
+        <span class="card-status status-endangered">Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="The Philippine Bulbul forms enormous communal roosts in the forest canopy at dusk — sometimes thousands of birds converging on a single grove of trees. As they circle and land in wave after wave, the noise can be heard from over a kilometre away.">
+      <img src="image/Phiilippine Bulbul.png" alt="Philippine Bulbul" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Bulbul</div>
+        <div class="card-title">Philippine Bulbul<em>Hypsipetes philippinus</em></div>
+        <p class="card-desc">One of the most vocal and widespread forest birds of the Philippine archipelago. Its loud, rich calls are among the defining sounds of Philippine forest — and as a prolific fruit-eater and seed disperser, it plays a critical role in forest regeneration across multiple island groups.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="bird" onclick="openCard(this)" data-funfact="Johnstone's Lorikeet feeds almost exclusively on nectar and pollen from highland flowers — its brush-tipped tongue is perfectly adapted to reach deep into blossoms. It is so dependent on specific flowering trees that its movements track the blooming cycles of the Mindanao highlands.">
+      <img src="image/Philippine Johnstore lorekeet.png" alt="Johnstone's Lorikeet" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Bird · Parrot</div>
+        <div class="card-title">Johnstone's Lorikeet<em>Trichoglossus johnstoniae</em></div>
+        <p class="card-desc">A small, brilliantly coloured lorikeet found only in the montane forests of Mindanao above 1,000 metres. One of the least-known parrots in the Philippines — its high-altitude habitat and secretive habits make it rarely encountered even by experienced birders.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-dark2 section-centered">
+  <p class="section-eyebrow reveal">Conservation</p>
+  <h2 class="section-title reveal section-title-centered">The Stakes of <em>Survival</em></h2>
+  <p class="section-body reveal section-body-spaced">The Philippines has lost over 70% of its original forest cover. Every species documented here depends on urgent collective action.</p>
+  <div class="reveal cta-row">
+    <a href="places.html" class="btn-gold">Explore Habitats</a>
+    <a href="species.html?group=birds" class="btn-outline">View All Bird Species</a>
+    <a href="fauna.html" class="btn-outline">Back to Fauna</a>
+  </div>
+</section>
+
+<div id="modal" class="modal">
+  <div class="modal-card">
+    <button type="button" class="modal-close" onclick="closeModal()">&#x2715;</button>
+    <div class="modal-card-img"><img id="modal-img" src="" alt=""></div>
+    <div class="modal-card-body">
+      <div class="modal-card-tag" id="modal-tag"></div>
+      <div class="modal-card-title" id="modal-title"></div>
+      <p class="modal-card-desc" id="modal-desc"></p>
+      <span id="modal-status" class="modal-status-hidden"></span>
+      <div id="modal-funfact" class="modal-card-funfact modal-status-hidden">
+        <div class="modal-card-funfact-label">&#9670; Fun Fact</div>
+        <p class="modal-card-funfact-text" id="modal-funfact-text"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="guide"><div class="guide-title">&#9670; Birds Guide</div><p class="guide-text" id="guide-text">Click any card to view full details.</p></div>
+<button class="audio-btn" id="audio-btn" onclick="toggleSound()">&#9654; Ambient Sound</button>
+<audio id="sound" loop><source src="image/Expidition PH ost.mp3" type="audio/mpeg"></audio>
+
+<footer>
+  <div><div class="footer-brand-name">Expedition PH</div><p class="footer-tagline">A digital exploration of the Philippine archipelago's natural heritage.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="regions.html">Island Groups</a></li><li><a href="flora.html">Flora</a></li><li><a href="fauna.html">Fauna</a></li><li><a href="geology.html">Geology</a></li></ul></div>
+  <div><h4>Fauna</h4><ul><li><a href="birds.html">Birds</a></li><li><a href="mammals.html">Mammals</a></li><li><a href="reptiles.html">Reptiles</a></li><li><a href="marine.html">Marine</a></li><li><a href="insects.html">Insects</a></li><li><a href="freshwater.html">Freshwater</a></li><li><a href="extinct.html">Lost Species</a></li></ul></div>
+  <div><h4>Discover</h4><ul><li><a href="places.html">Places</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="species.html">Species Index</a></li><li><a href="protected-areas.html">Protected Areas</a></li></ul></div>
+  <div><h4>About</h4><ul><li><a href="exhibits.html">Exhibits</a></li><li><a href="visit.html">About This Project</a></li></ul></div>
+</footer>
+<div class="footer-bottom"><span>&copy; 2025 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
+
+<script src="museum.js"></script>
+</body>
+</html>

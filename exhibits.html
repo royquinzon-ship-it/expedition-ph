@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exhibits · Expedition PH: Natural History</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="museum.css">
+<style>
+/* ── EXHIBITS PAGE ── */
+.exhibits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.exhibit-card {
+  background: var(--dark2);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 4px;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: border-color 0.25s, transform 0.25s;
+}
+.exhibit-card:hover { border-color: var(--gold-border); transform: translateY(-3px); }
+.exhibit-card.featured {
+  grid-column: span 3;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 2.5rem;
+  border-color: var(--gold-border);
+  background: linear-gradient(135deg, var(--dark2) 60%, rgba(201,168,76,0.06));
+}
+.exhibit-featured-text { flex: 1; display: flex; flex-direction: column; gap: 0.75rem; }
+.exhibit-featured-img {
+  flex: 0 0 360px;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  border-radius: 3px;
+  opacity: 0.85;
+}
+.exhibit-tag {
+  display: inline-block;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold-border);
+  padding: 0.2rem 0.65rem;
+  border-radius: 2rem;
+  width: fit-content;
+}
+.exhibit-number {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+.exhibit-icon { font-size: 2rem; opacity: 0.7; }
+.exhibit-name {
+  font-family: 'Merriweather', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--cream);
+  line-height: 1.3;
+}
+.exhibit-card.featured .exhibit-name { font-size: 1.6rem; }
+.exhibit-desc {
+  font-size: 0.82rem;
+  color: var(--dim);
+  line-height: 1.7;
+}
+.exhibit-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.exhibit-link:hover { opacity: 0.75; }
+
+/* Tour callout */
+.tour-callout {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.tour-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 3px;
+  opacity: 0.8;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+@media(max-width:960px) {
+  .exhibits-grid { grid-template-columns: repeat(2, 1fr); }
+  .exhibit-card.featured { grid-column: span 2; flex-direction: column; }
+  .exhibit-featured-img { flex: unset; width: 100%; }
+  .tour-callout { grid-template-columns: 1fr; }
+}
+@media(max-width:640px) {
+  .exhibits-grid { grid-template-columns: 1fr; }
+  .exhibit-card.featured { grid-column: span 1; }
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <a href="index.html" class="header-logo">Expedition PH</a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="regions.html">Island Groups</a>
+    <a href="flora.html">Flora</a>
+    <a href="fauna.html">Fauna</a>
+    <a href="geology.html">Geology</a>
+    <a href="places.html">Places</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="history.html">History</a>
+    <a href="exhibits.html" class="active">Exhibits</a>
+  </nav>
+</header>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <img class="page-hero-img" src="image/Tubataha reef.png" alt="Tubataha Reef">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-inner">
+    <p class="page-eyebrow">Permanent Collection</p>
+    <h1 class="page-title">Explore the <em>Exhibits</em></h1>
+    <p class="page-desc">Six permanent galleries spanning the full breadth of Philippine natural heritage — from ancient volcanic geology to the living reefs of the Coral Triangle.</p>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-item reveal"><span class="stat-num" data-target="6">0</span><span class="stat-lbl">Galleries</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="52000">0</span><span class="stat-lbl">Known Species</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="706">0</span><span class="stat-lbl">Bird Species</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="500">0</span><span class="stat-lbl">Coral Species</span></div>
+</div>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; The Galleries &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<!-- EXHIBITS GRID -->
+<section class="section">
+  <div class="exhibits-grid">
+
+    <div class="exhibit-card featured reveal">
+      <div class="exhibit-featured-text">
+        <div class="exhibit-tag">Featured Hall</div>
+        <div class="exhibit-number">Hall I</div>
+        <div class="exhibit-name">The Living Reef</div>
+        <p class="exhibit-desc">The Philippines harbors the world's most diverse coral reef ecosystems. Sitting at the apex of the Coral Triangle, these underwater gardens are home to over 500 coral species and thousands of reef fish. The collection documents reef morphology, symbiotic relationships, and the impact of warming oceans on one of Earth's most complex habitats.</p>
+        <a href="marine.html" class="exhibit-link">Explore Marine Life →</a>
+      </div>
+      <img class="exhibit-featured-img" src="image/Tubataha reef.png" alt="Tubataha Reef — Living Reef exhibit">
+    </div>
+
+    <div class="exhibit-card reveal reveal-delay-1">
+      <div class="exhibit-number">Hall II</div>
+      <div class="exhibit-icon">🌿</div>
+      <div class="exhibit-name">Philippine Flora</div>
+      <p class="exhibit-desc">Over 9,253 vascular plant species call the Philippines home — more than 3,500 found nowhere else on Earth. Explore ancient dipterocarp forests, carnivorous pitcher plants of Palawan, the towering Molave, and endemic orchids of extraordinary rarity including the Waling-Waling, queen of Philippine orchids.</p>
+      <a href="flora.html" class="exhibit-link">Explore Flora →</a>
+    </div>
+
+    <div class="exhibit-card reveal reveal-delay-2">
+      <div class="exhibit-number">Hall III</div>
+      <div class="exhibit-icon">🦅</div>
+      <div class="exhibit-name">Winged Archipelago</div>
+      <p class="exhibit-desc">706 bird species call these islands home. Witness the Philippine Eagle — the world's largest and most powerful raptor — alongside 238 endemic species found nowhere else. From the lowland hornbills to the highland pittas, this hall celebrates the Philippines as one of the world's premier birdwatching destinations.</p>
+      <a href="birds.html" class="exhibit-link">Explore Birds →</a>
+    </div>
+
+    <div class="exhibit-card reveal">
+      <div class="exhibit-number">Hall IV</div>
+      <div class="exhibit-icon">⛰️</div>
+      <div class="exhibit-name">Earth &amp; Stone</div>
+      <p class="exhibit-desc">The Philippine archipelago sits on the Pacific Ring of Fire, shaped by titanic geological forces over millions of years. Explore volcanic formations from Mayon, Pinatubo, and Taal, alongside ancient seabeds now lifted into mountain ranges. Discover the fossils that reveal the islands' deep past — including remains of ancient elephants and stegodonts.</p>
+      <a href="geology.html" class="exhibit-link">Explore Geology →</a>
+    </div>
+
+    <div class="exhibit-card reveal reveal-delay-1">
+      <div class="exhibit-number">Hall V</div>
+      <div class="exhibit-icon">🦎</div>
+      <div class="exhibit-name">Hidden Fauna</div>
+      <p class="exhibit-desc">From the world's smallest primate — the Philippine Tarsier — to the Palawan Bearcat and the Philippine Crocodile, discover the mammals, reptiles, and amphibians of an island paradise. This hall also features the Sailfin Lizard, the Butaan monitor, and a remarkable diversity of geckos and skinks unique to specific islands.</p>
+      <a href="fauna.html" class="exhibit-link">Explore Fauna →</a>
+    </div>
+
+    <div class="exhibit-card reveal reveal-delay-2">
+      <div class="exhibit-number">Hall VI</div>
+      <div class="exhibit-icon">💧</div>
+      <div class="exhibit-name">Freshwater Worlds</div>
+      <p class="exhibit-desc">Ancient lakes like Lanao and Taal harbor unique endemic life forms shaped by millions of years of isolation. Lake Lanao alone contains over 17 endemic species of cyprinid fish found nowhere else on Earth. Witness evolution in microcosm — a living laboratory of adaptive radiation driven by geological isolation.</p>
+      <a href="freshwater.html" class="exhibit-link">Explore Freshwater →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- GUIDED TOURS CALLOUT -->
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Explore Further &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section">
+  <div class="tour-callout">
+    <div>
+      <p class="section-eyebrow reveal">Go Deeper</p>
+      <h2 class="section-title reveal reveal-delay-1">Explore with <em>Context</em></h2>
+      <p class="section-body reveal reveal-delay-2">Each gallery connects to a dedicated section with detailed species profiles, field records, and conservation data. Browse the Species Index for a comprehensive catalogue, or visit Protected Areas to see where these habitats are preserved in the wild.</p>
+      <div class="cta-row reveal reveal-delay-3">
+        <a href="species.html" class="btn-primary">Species Index</a>
+        <a href="protected-areas.html" class="btn-secondary">Protected Areas</a>
+      </div>
+    </div>
+    <img class="tour-img reveal" src="image/Sierra Madre.png" alt="Philippine forest">
+  </div>
+</section>
+
+<!-- AUDIO -->
+<button type="button" class="audio-btn" id="audio-btn" onclick="toggleSound()">&#9654; Ambient Sound</button>
+<audio id="sound" loop><source src="image/Expidition PH ost.mp3" type="audio/mpeg"></audio>
+
+<!-- FOOTER -->
+<footer>
+  <div><div class="footer-brand-name">Expedition PH</div><p class="footer-tagline">A digital exploration of the Philippine archipelago's natural heritage.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="regions.html">Island Groups</a></li><li><a href="flora.html">Flora</a></li><li><a href="fauna.html">Fauna</a></li><li><a href="geology.html">Geology</a></li></ul></div>
+  <div><h4>Fauna</h4><ul><li><a href="birds.html">Birds</a></li><li><a href="mammals.html">Mammals</a></li><li><a href="reptiles.html">Reptiles</a></li><li><a href="marine.html">Marine</a></li><li><a href="insects.html">Insects</a></li><li><a href="freshwater.html">Freshwater</a></li><li><a href="extinct.html">Lost Species</a></li></ul></div>
+  <div><h4>Discover</h4><ul><li><a href="places.html">Places</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="species.html">Species Index</a></li><li><a href="protected-areas.html">Protected Areas</a></li></ul></div>
+  <div><h4>About</h4><ul><li><a href="exhibits.html">Exhibits</a></li><li><a href="visit.html">About This Project</a></li></ul></div>
+</footer>
+<div class="footer-bottom"><span>&copy; 2025 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
+
+<script src="museum.js"></script>
+</body>
+</html>

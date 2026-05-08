@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expedition PH: Natural History</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="museum.css">
+</head>
+<body>
+
+<header id="header">
+  <a href="index.html" class="header-logo">Expedition PH</a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="regions.html">Island Groups</a>
+    <a href="flora.html">Flora</a>
+    <a href="fauna.html">Fauna</a>
+    <a href="geology.html">Geology</a>
+    <a href="places.html">Places</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="history.html">History</a>
+      <a href="exhibits.html">Exhibits</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-eyebrow">Philippine Natural History</p>
+  <h1>A Living Archive of the <em>Archipelago</em></h1>
+  <p>7,641 islands. 52,177 known species. One of the most biodiverse places on Earth — and one of the most threatened.</p>
+  <div class="hero-cta">
+    <a href="regions.html" class="btn-gold">Explore the Islands</a>
+    <a href="fauna.html" class="btn-outline">Meet the Wildlife</a>
+  </div>
+  <div class="hero-scroll"><div class="scroll-bar"></div>Scroll</div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-item reveal"><span class="stat-num" data-target="52177">0</span><span class="stat-lbl">Known Species</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="706">0</span><span class="stat-lbl">Bird Species</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="915">0</span><span class="stat-lbl">Fish Species</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="7641">0</span><span class="stat-lbl">Islands</span></div>
+</div>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Explore by Island Group &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<!-- ISLAND GROUP EXPLORER -->
+<section class="section section-dark2">
+  <p class="section-eyebrow reveal">Three Island Groups</p>
+  <h2 class="section-title reveal">Explore by <em>Island Group</em></h2>
+  <p class="section-body reveal">Each island group is a distinct natural world. Select one to discover its landmarks, wildlife, and ecosystems.</p>
+
+  <div class="region-bar reveal">
+    <button type="button" class="region-btn active" onclick="loadRegion('luzon',this)">Luzon</button>
+    <button type="button" class="region-btn" onclick="loadRegion('visayas',this)">Visayas</button>
+    <button type="button" class="region-btn" onclick="loadRegion('mindanao',this)">Mindanao</button>
+  </div>
+  <div class="region-info reveal" id="region-desc"></div>
+  <div class="grid grid-4 reveal" id="region-content"></div>
+  <a href="regions.html" class="preview-link reveal">View all island groups →</a>
+</section>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Flora &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<!-- FLORA PREVIEW -->
+<section class="section">
+  <p class="section-eyebrow reveal">9,253 Vascular Plant Species</p>
+  <h2 class="section-title reveal">Philippine <em>Flora</em></h2>
+  <p class="section-body reveal">More than 3,500 plant species found nowhere else on Earth — from ancient dipterocarp forests to carnivorous highland pitcher plants.</p>
+  <div class="grid grid-4 reveal">
+    <div class="card" role="button" tabindex="0" onclick="openCard(this)" data-funfact="A single hectare of Philippine dipterocarp forest can hold more tree species than all of Europe combined.">
+      <img src="image/Sierra Madre.png" alt="Dipterocarp Forest" loading="lazy">
+      <div class="card-body"><div class="card-tag">Forest</div><div class="card-title">Dipterocarp Forest</div><p class="card-desc">Ancient canopy forests among the last intact in Southeast Asia.</p></div>
+    </div>
+    <div class="card" role="button" tabindex="0" onclick="openCard(this)" data-funfact="The Waling-Waling blooms only once a year for about three weeks, typically in September.">
+      <img src="image/Waling Waling.png" alt="Waling-Waling" loading="lazy">
+      <div class="card-body"><div class="card-tag">Orchid</div><div class="card-title">Waling-Waling</div><p class="card-desc">The Queen of Philippine Orchids, blooming in the highlands of Mindanao.</p></div>
+    </div>
+    <div class="card" role="button" tabindex="0" onclick="openCard(this)" data-funfact="Some Philippine Nepenthes are large enough to digest frogs, lizards, and even small rats.">
+      <img src="image/Palawan.png" alt="Pitcher Plant" loading="lazy">
+      <div class="card-body"><div class="card-tag">Carnivorous Plant</div><div class="card-title">Pitcher Plant</div><p class="card-desc">Carnivorous Nepenthes species unique to Palawan's ultramafic peaks.</p></div>
+    </div>
+    <div class="card" role="button" tabindex="0" onclick="openCard(this)" data-funfact="Rafflesia spends 9 months developing as a bud, then blooms for only 5–7 days before rotting.">
+      <img src="image/Sierra Madre.png" alt="Rafflesia" loading="lazy">
+      <div class="card-body"><div class="card-tag">Parasitic Flower</div><div class="card-title">Rafflesia</div><p class="card-desc">The world's largest individual flower, found in Philippine rainforests.</p></div>
+    </div>
+  </div>
+  <a href="flora.html" class="preview-link reveal">Explore all flora →</a>
+</section>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Fauna &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<!-- FAUNA PREVIEW -->
+<section class="section section-dark2">
+  <p class="section-eyebrow reveal">Icons of the Wild</p>
+  <h2 class="section-title reveal">Philippine <em>Fauna</em></h2>
+  <p class="section-body reveal">Among the world's most threatened biodiversity hotspots — extraordinary creatures fighting for survival.</p>
+  <div class="grid grid-3 reveal">
+    <div class="card" role="button" tabindex="0" onclick="openCard(this)" data-funfact="A breeding pair raises only one chick every two years — making every surviving eagle critical to the species.">
+      <img src="image/Agila.jpg" alt="Philippine Eagle" loading="lazy">
+      <div class="card-body"><div class="card-tag">Raptor</div><div class="card-title">Philippine Eagle<em>Pithecophaga jefferyi</em></div><p class="card-desc">The national bird and world's most powerful raptor. Fewer than 800 remain.</p><span class="card-status status-critical">Critically Endangered</span></div>
+    </div>
+    <div class="card" role="button" tabindex="0" onclick="openCard(this)" data-funfact="Each eye is as large as its entire brain. It can rotate its head nearly 180° in each direction.">
+      <img src="image/Tarsier.jpg" alt="Philippine Tarsier" loading="lazy">
+      <div class="card-body"><div class="card-tag">Primate</div><div class="card-title">Philippine Tarsier<em>Carlito syrichta</em></div><p class="card-desc">One of the world's smallest primates with eyes larger than its brain.</p><span class="card-status status-vulnerable">Near Threatened</span></div>
+    </div>
+    <div class="card" role="button" tabindex="0" onclick="openCard(this)" data-funfact="Unlike water buffalos, Tamaraw are entirely solitary — adults live and forage alone.">
+      <img src="image/Tamaraw.jpg" alt="Tamaraw" loading="lazy">
+      <div class="card-body"><div class="card-tag">Endemic Mammal</div><div class="card-title">Tamaraw<em>Bubalus mindorensis</em></div><p class="card-desc">A small solitary buffalo found only on Mindoro. Fewer than 600 survive.</p><span class="card-status status-critical">Critically Endangered</span></div>
+    </div>
+  </div>
+  <a href="fauna.html" class="preview-link reveal">View all species →</a>
+</section>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Gallery &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<!-- GALLERY PREVIEW -->
+<section class="section">
+  <p class="section-eyebrow reveal">Visual Archive</p>
+  <h2 class="section-title reveal">From the <em>Gallery</em></h2>
+  <div class="masonry reveal">
+    <div class="gal-item" role="button" tabindex="0" onclick="openModal('image/Palawan.png','Palawan Rainforest')"><img src="image/Palawan.png" alt="Palawan Rainforest" loading="lazy"><div class="gal-overlay"><span class="gal-caption">Palawan Rainforest · Flora</span></div></div>
+    <div class="gal-item" role="button" tabindex="0" onclick="openModal('image/Tubataha reef.png','Tubbataha Reef')"><img src="image/Tubataha reef.png" alt="Tubbataha Reef" loading="lazy"><div class="gal-overlay"><span class="gal-caption">Tubbataha Reef · Marine</span></div></div>
+    <div class="gal-item" role="button" tabindex="0" onclick="openModal('image/Mayon Volcano.png','Mount Mayon')"><img src="image/Mayon Volcano.png" alt="Mount Mayon" loading="lazy"><div class="gal-overlay"><span class="gal-caption">Mount Mayon · Geology</span></div></div>
+    <div class="gal-item" role="button" tabindex="0" onclick="openModal('image/Dugong.jpg','Coral Triangle')"><img src="image/Dugong.jpg" alt="Coral Triangle" loading="lazy"><div class="gal-overlay"><span class="gal-caption">Coral Triangle · Marine</span></div></div>
+    <div class="gal-item" role="button" tabindex="0" onclick="openModal('image/Chocolate hills.png','Chocolate Hills')"><img src="image/Chocolate hills.png" alt="Chocolate Hills" loading="lazy"><div class="gal-overlay"><span class="gal-caption">Chocolate Hills · Bohol</span></div></div>
+    <div class="gal-item" role="button" tabindex="0" onclick="openModal('image/Batanes.png','Batanes')"><img src="image/Batanes.png" alt="Batanes" loading="lazy"><div class="gal-overlay"><span class="gal-caption">Batanes · Northern Luzon</span></div></div>
+  </div>
+  <a href="gallery.html" class="preview-link reveal">View full gallery →</a>
+</section>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-card">
+    <button type="button" class="modal-close" onclick="closeModal()">&#x2715;</button>
+    <div class="modal-card-img"><img id="modal-img" src="" alt=""></div>
+    <div class="modal-card-body">
+      <div class="modal-card-tag" id="modal-tag"></div>
+      <div class="modal-card-title" id="modal-title"></div>
+      <p class="modal-card-desc" id="modal-desc"></p>
+      <span id="modal-status" class="modal-status-hidden"></span>
+      <div id="modal-funfact" class="modal-card-funfact modal-status-hidden">
+        <div class="modal-card-funfact-label">&#9670; Fun Fact</div>
+        <p class="modal-card-funfact-text" id="modal-funfact-text"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="guide"><div class="guide-title">&#9670; Museum Guide</div><p class="guide-text" id="guide-text">Select an island group or scroll to explore.</p></div>
+<button type="button" class="audio-btn" id="audio-btn" onclick="toggleSound()">&#9654; Ambient Sound</button>
+<audio id="sound" loop><source src="image/Expedition PH ost.mp3" type="audio/mpeg"></audio>
+
+</main>
+
+<footer>
+  <div><div class="footer-brand-name">Expedition PH</div><p class="footer-tagline">A digital exploration of the Philippine archipelago's natural heritage.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="regions.html">Island Groups</a></li><li><a href="flora.html">Flora</a></li><li><a href="fauna.html">Fauna</a></li><li><a href="geology.html">Geology</a></li></ul></div>
+  <div><h4>Fauna</h4><ul><li><a href="birds.html">Birds</a></li><li><a href="mammals.html">Mammals</a></li><li><a href="reptiles.html">Reptiles</a></li><li><a href="marine.html">Marine</a></li><li><a href="insects.html">Insects</a></li><li><a href="freshwater.html">Freshwater</a></li><li><a href="extinct.html">Lost Species</a></li></ul></div>
+  <div><h4>Discover</h4><ul><li><a href="places.html">Places</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="species.html">Species Index</a></li><li><a href="protected-areas.html">Protected Areas</a></li></ul></div>
+  <div><h4>About</h4><ul><li><a href="exhibits.html">Exhibits</a></li><li><a href="visit.html">About This Project</a></li></ul></div>
+</footer>
+<div class="footer-bottom"><span>&copy; 2025 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
+
+<script src="museum.js"></script>
+<script>
+const regions = {
+  luzon: {
+    desc: "The Philippines' largest island — home to the Sierra Madre, the nation's last great forest frontier, and the Cordillera highlands where ancient rice terraces have been cultivated for over 2,000 years.",
+    items: [
+      { img:'image/Sierra Madre.png',  name:'Sierra Madre',    sub:'Forest Frontier · Aurora' },
+      { img:'image/Banaue Rice Terreces.png',  name:'Banaue Terraces', sub:'UNESCO Heritage · Ifugao' },
+      { img:'image/Mayon Volcano.png',    name:'Mayon Volcano',   sub:'Active Volcano · Albay' },
+      { img:'image/Batanes.png', name:'Batanes',         sub:'Landscape · Cagayan' }
+    ]
+  },
+  visayas: {
+    desc: "The central island chain — Cebu, Bohol, Leyte, Samar, Negros, and Panay — surrounded by the world's richest coral reefs and home to the Philippine Tarsier and the iconic Chocolate Hills.",
+    items: [
+      { img:'image/Chocolate hills.png', name:'Chocolate Hills',  sub:'Geological Wonder · Bohol' },
+      { img:'image/Tubataha reef.png', name:'Tubbataha Reef',   sub:'UNESCO Marine Park · Sulu Sea' },
+      { img:'image/Tarsier.jpg',                               name:'Philippine Tarsier',sub:'Endemic Primate · Bohol' },
+      { img:'image/Boracay.png',                                name:'Cebu Highlands',   sub:'Landscape · Cebu' }
+    ]
+  },
+  mindanao: {
+    desc: "The Philippines' second-largest island — Mount Apo towers above ancient rainforests sheltering the Philippine Eagle, the Waling-Waling orchid, and the vast Agusan Marsh wetlands.",
+    items: [
+      { img:'image/Agila.jpg',                               name:'Philippine Eagle', sub:'Critically Endangered · Davao' },
+      { img:'image/Mt. Apo.png',    name:'Mount Apo',        sub:'Highest Peak · Davao' },
+      { img:'image/Agusan Marsh.png', name:'Agusan Marsh',     sub:'Wetland Reserve · Agusan' },
+      { img:'image/Camiguin.png',                            name:'Waling-Waling',    sub:'Queen of Orchids · Davao' }
+    ]
+  }
+};
+
+function loadRegion(key, btn) {
+  document.querySelectorAll('.region-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  const r = regions[key];
+  document.getElementById('region-desc').textContent = r.desc;
+  const content = document.getElementById('region-content');
+  content.innerHTML = '';
+  r.items.forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'region-card';
+
+    const img = document.createElement('img');
+    img.src = item.img;
+    img.alt = item.name;
+    img.loading = 'lazy';
+
+    const body = document.createElement('div');
+    body.className = 'region-card-body';
+
+    const title = document.createElement('div');
+    title.className = 'region-card-title';
+    title.textContent = item.name;
+
+    const sub = document.createElement('div');
+    sub.className = 'region-card-sub';
+    sub.textContent = item.sub;
+
+    body.appendChild(title);
+    body.appendChild(sub);
+    card.appendChild(img);
+    card.appendChild(body);
+    content.appendChild(card);
+  });
+  document.getElementById('guide-text').textContent = 'Exploring ' + key.charAt(0).toUpperCase() + key.slice(1);
+}
+
+loadRegion('luzon', null);
+</script>
+</body>
+</html>

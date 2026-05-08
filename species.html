@@ -1,0 +1,500 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Species Index · Expedition PH: Natural History</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="museum.css">
+<style>
+
+/* ── Filter bar ── */
+.species-controls {
+  display: flex; flex-wrap: wrap; gap: 1rem 1.5rem;
+  align-items: center; margin-bottom: 2.5rem;
+}
+.filter-group { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.filter-btn {
+  font-size: 0.62rem; letter-spacing: 0.13em; text-transform: uppercase;
+  padding: 0.35rem 0.9rem; background: none; cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.1); color: var(--dim);
+  transition: color 0.18s, border-color 0.18s, background 0.18s;
+}
+.filter-btn:hover  { color: #fff; border-color: rgba(255,255,255,0.3); }
+.filter-btn.active { color: var(--gold); border-color: rgba(201,168,76,0.55); background: rgba(201,168,76,0.06); }
+.filter-btn.status-cr.active  { color: #e63946; border-color: rgba(230,57,70,0.5);   background: rgba(230,57,70,0.06); }
+.filter-btn.status-en.active  { color: #f4813f; border-color: rgba(244,129,63,0.5);  background: rgba(244,129,63,0.06); }
+.filter-btn.status-vu.active  { color: #f9c74f; border-color: rgba(249,199,79,0.5);  background: rgba(249,199,79,0.06); }
+.filter-btn.status-endemic.active { color: #a8dadc; border-color: rgba(168,218,220,0.5); background: rgba(168,218,220,0.06); }
+
+.species-search {
+  margin-left: auto;
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.12);
+  color: #fff; font-family: 'Inter', sans-serif; font-size: 0.78rem;
+  padding: 0.45rem 0.9rem; outline: none; width: 220px;
+  transition: border-color 0.2s;
+}
+.species-search::placeholder { color: var(--dim); }
+.species-search:focus { border-color: rgba(201,168,76,0.4); }
+.species-count {
+  font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--dim); width: 100%; margin-top: -0.5rem;
+}
+
+/* ── Species card grid ── */
+.species-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.sp-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  cursor: pointer; overflow: hidden; position: relative;
+  transition: border-color 0.2s, transform 0.18s;
+}
+.sp-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-2px); }
+.sp-card-img-wrap { position: relative; }
+.sp-card-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+
+.sp-status-badge {
+  position: absolute; top: 0.5rem; right: 0.5rem;
+  font-size: 0.52rem; letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 0.18rem 0.5rem; font-weight: 600;
+}
+.badge-cr { background: rgba(230,57,70,0.9);   color: #fff; }
+.badge-en { background: rgba(244,129,63,0.9);  color: #fff; }
+.badge-vu { background: rgba(249,199,79,0.9);  color: #111; }
+.badge-nt { background: rgba(144,190,109,0.9); color: #111; }
+.badge-lc { background: rgba(67,170,139,0.9);  color: #fff; }
+.badge-ex { background: rgba(80,80,80,0.9);    color: #fff; }
+.badge-dd { background: rgba(72,149,239,0.9);  color: #fff; }
+
+.sp-endemic-dot {
+  position: absolute; top: 0.5rem; left: 0.5rem;
+  width: 7px; height: 7px; border-radius: 50%; background: #a8dadc;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.5);
+}
+.sp-card-body { padding: 0.65rem 0.8rem 0.75rem; }
+.sp-group-tag { font-size: 0.52rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.18rem; }
+.sp-name { font-family: 'Merriweather', serif; font-size: 0.88rem; font-weight: 700; line-height: 1.25; margin-bottom: 0.15rem; }
+.sp-sci  { font-size: 0.65rem; font-style: italic; color: var(--dim); margin-bottom: 0.3rem; }
+.sp-islands { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+.sp-island-pill {
+  font-size: 0.5rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.1rem 0.4rem; border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.4);
+}
+
+/* ── Species modal ── */
+#sp-modal {
+  display: none; position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,0.86); overflow-y: auto;
+  padding: 2rem 1rem; align-items: flex-start; justify-content: center;
+}
+#sp-modal.open { display: flex; }
+.sp-modal-card {
+  background: #0f0f0f; border: 1px solid rgba(255,255,255,0.08);
+  max-width: 640px; width: 100%; position: relative; margin: auto;
+}
+.sp-modal-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+.sp-modal-close {
+  position: absolute; top: 0.6rem; right: 0.7rem; z-index: 2;
+  background: rgba(0,0,0,0.6); border: none; color: rgba(255,255,255,0.6);
+  font-size: 1rem; cursor: pointer; padding: 0.25rem 0.5rem; transition: color 0.15s;
+}
+.sp-modal-close:hover { color: #fff; }
+.sp-modal-body { padding: 1.4rem 1.6rem; }
+.sp-modal-badges { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.75rem; }
+.sp-modal-status {
+  font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 0.22rem 0.65rem; font-weight: 600;
+}
+.sp-modal-endemic {
+  font-size: 0.56rem; letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 0.2rem 0.6rem; border: 1px solid rgba(168,218,220,0.5); color: #a8dadc;
+}
+.sp-modal-name  { font-family: 'Merriweather', serif; font-size: 1.55rem; font-weight: 700; line-height: 1.15; margin-bottom: 0.2rem; }
+.sp-modal-sci   { font-size: 0.82rem; font-style: italic; color: var(--dim); margin-bottom: 0.15rem; }
+.sp-modal-local { font-size: 0.7rem; color: var(--gold); letter-spacing: 0.05em; margin-bottom: 1rem; }
+.sp-modal-islands { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.sp-modal-island { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.22rem 0.7rem; border: 1px solid; }
+.isl-luzon    { color: #c9a84c; border-color: rgba(201,168,76,0.4); }
+.isl-visayas  { color: #4cb9c4; border-color: rgba(76,185,196,0.4); }
+.isl-mindanao { color: #c9784c; border-color: rgba(201,120,76,0.4); }
+.isl-palawan  { color: #a8dadc; border-color: rgba(168,218,220,0.4); }
+.sp-modal-desc { font-size: 0.83rem; line-height: 1.82; color: rgba(255,255,255,0.68); margin-bottom: 1rem; }
+.sp-modal-fact { background: rgba(201,168,76,0.05); border-left: 2px solid var(--gold); padding: 0.75rem 0.9rem; }
+.sp-modal-fact-label { font-size: 0.54rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+.sp-modal-fact-text  { font-size: 0.78rem; line-height: 1.75; color: rgba(255,255,255,0.6); font-style: italic; margin: 0; }
+.sp-modal-places { margin-top: 0.9rem; }
+.sp-modal-places-label { font-size: 0.54rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.45rem; }
+.sp-modal-place-link { display: inline-block; font-size: 0.72rem; color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 0.2rem 0.65rem; margin: 0.15rem 0.2rem 0 0; text-decoration: none; transition: background 0.2s, color 0.2s, border-color 0.2s; }
+.sp-modal-place-link:hover { background: rgba(201,168,76,0.12); color: var(--gold); border-color: rgba(201,168,76,0.35); }
+
+.sp-no-results { grid-column: 1/-1; text-align: center; padding: 4rem 1rem; color: var(--dim); font-size: 0.82rem; letter-spacing: 0.05em; }
+
+/* ── Status legend ── */
+.status-legend { display:flex; flex-wrap:wrap; gap:0.6rem; justify-content:center; margin-top:1.5rem; }
+.status-legend .sp-status-badge { position:static; font-size:0.65rem; padding:0.3rem 0.9rem; }
+.status-legend .sp-modal-endemic { font-size:0.65rem; padding:0.3rem 0.9rem; }
+/* Hidden by default — toggled by JS */
+.sp-modal-endemic-hidden { display:none; }
+
+/* ── Mobile ── */
+@media(max-width:768px) {
+  .species-grid { grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 0.75rem; }
+  .species-search { width: 100%; margin-left: 0; }
+  .sp-modal-name { font-size: 1.25rem; }
+}
+@media(max-width:480px) {
+  .species-grid { grid-template-columns: repeat(2, 1fr); }
+  .filter-btn { font-size: 0.58rem; padding: 0.3rem 0.7rem; }
+}
+.section-note { max-width: 700px; margin: 0 auto 1.5rem; font-size: 0.82rem; color: var(--text-muted); text-align: center; font-style: italic; line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<header id="header">
+  <a href="index.html" class="header-logo">Expedition PH</a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="regions.html">Island Groups</a>
+    <a href="flora.html">Flora</a>
+    <a href="fauna.html">Fauna</a>
+    <a href="geology.html">Geology</a>
+    <a href="places.html">Places</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="history.html">History</a>
+      <a href="exhibits.html">Exhibits</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <img class="page-hero-img" src="image/Sierra Madre.png" alt="Philippine Wildlife">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-inner">
+    <p class="page-eyebrow">Philippine Biodiversity</p>
+    <h1 class="page-title">Species <em>Index</em></h1>
+    <p class="page-desc">A curated index of the Philippines' most iconic, endemic, and endangered species — from the world's most powerful eagle to the planet's smallest commercial fish.</p>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item reveal"><span class="stat-num" data-target="52">0</span><span class="stat-lbl">Birds</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="11">0</span><span class="stat-lbl">Mammals</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="18">0</span><span class="stat-lbl">Reptiles</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="73">0</span><span class="stat-lbl">Marine &amp; More</span></div>
+</div>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Browse the Collection &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section">
+  <p class="section-eyebrow reveal">169 Species Profiled</p>
+  <h2 class="section-title reveal">Explore Philippine <em>Wildlife &amp; Flora</em></h2>
+  <p class="section-body reveal">Filter by group, conservation status, or search by name. Click any species for its full profile.</p>
+  <p class="section-note reveal">&#9670; This is a curated index of highlighted species — not an exhaustive catalogue. The Philippines hosts over 52,000 known species, including 9,000+ endemic plants, 650+ resident birds, and thousands of marine organisms yet to be fully described.</p>
+
+  <div class="species-controls">
+    <div class="filter-group" id="group-filters">
+      <button type="button" class="filter-btn active" data-group="all">All</button>
+      <button type="button" class="filter-btn" data-group="birds">Birds</button>
+      <button type="button" class="filter-btn" data-group="mammals">Mammals</button>
+      <button type="button" class="filter-btn" data-group="reptiles">Reptiles</button>
+      <button type="button" class="filter-btn" data-group="marine">Marine</button>
+      <button type="button" class="filter-btn" data-group="plants">Plants</button>
+      <button type="button" class="filter-btn" data-group="insects">Insects</button>
+      <button type="button" class="filter-btn" data-group="freshwater">Freshwater</button>
+    </div>
+    <div class="filter-group" id="status-filters">
+      <button type="button" class="filter-btn active" data-status="all">All Status</button>
+      <button type="button" class="filter-btn status-cr" data-status="cr">&#x25CF; CR</button>
+      <button type="button" class="filter-btn status-en" data-status="en">&#x25CF; EN</button>
+      <button type="button" class="filter-btn status-vu" data-status="vu">&#x25CF; VU</button>
+      <button type="button" class="filter-btn status-endemic" data-status="endemic">&#x25CF; Endemic Only</button>
+    </div>
+    <input type="search" class="species-search" id="species-search" placeholder="&#9670;  Search species…" autocomplete="off">
+    <div class="species-count" id="species-count"></div>
+  </div>
+
+  <div class="species-grid" id="species-grid"></div>
+</section>
+
+<section class="section section-dark2 section-centered">
+  <p class="section-eyebrow reveal">Conservation Status Guide</p>
+  <h2 class="section-title reveal section-title-centered">Understanding the <em>Threat Levels</em></h2>
+  <div class="status-legend reveal">
+    <span class="sp-status-badge badge-cr">CR — Critically Endangered</span>
+    <span class="sp-status-badge badge-en">EN — Endangered</span>
+    <span class="sp-status-badge badge-vu">VU — Vulnerable</span>
+    <span class="sp-status-badge badge-nt">NT — Near Threatened</span>
+    <span class="sp-status-badge badge-lc">LC — Least Concern</span>
+    <span class="sp-status-badge badge-ex">EX — Extinct</span>
+    <span class="sp-status-badge badge-dd">DD — Data Deficient</span>
+    <span class="sp-modal-endemic">&#x25CF; Philippine Endemic</span>
+  </div>
+</section>
+
+<div id="sp-modal">
+  <div class="sp-modal-card">
+    <button type="button" class="sp-modal-close" onclick="closeSpModal()">&#x2715;</button>
+    <img class="sp-modal-img" id="sp-modal-img" src="" alt="">
+    <div class="sp-modal-body">
+      <div class="sp-modal-badges">
+        <span class="sp-modal-status"  id="sp-modal-status"></span>
+        <span class="sp-modal-endemic sp-modal-endemic-hidden" id="sp-modal-endemic">&#x25CF; Philippine Endemic</span>
+      </div>
+      <div class="sp-modal-name"    id="sp-modal-name"></div>
+      <div class="sp-modal-sci"     id="sp-modal-sci"></div>
+      <div class="sp-modal-local"   id="sp-modal-local"></div>
+      <div class="sp-modal-islands" id="sp-modal-islands"></div>
+      <p class="sp-modal-desc"      id="sp-modal-desc"></p>
+      <div class="sp-modal-fact">
+        <div class="sp-modal-fact-label">&#9670; Did You Know</div>
+        <p class="sp-modal-fact-text" id="sp-modal-fact"></p>
+      </div>
+      <div class="sp-modal-places" id="sp-modal-places"></div>
+    </div>
+  </div>
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-card">
+    <button type="button" class="modal-close" onclick="closeModal()">&#x2715;</button>
+    <div class="modal-card-img"><img id="modal-img" src="" alt=""></div>
+    <div class="modal-card-body">
+      <div class="modal-card-tag"   id="modal-tag"></div>
+      <div class="modal-card-title" id="modal-title"></div>
+      <p class="modal-card-desc"    id="modal-desc"></p>
+      <span id="modal-status" class="modal-status-hidden"></span>
+      <div id="modal-funfact" class="modal-card-funfact modal-status-hidden">
+        <div class="modal-card-funfact-label">&#9670; Fun Fact</div>
+        <p class="modal-card-funfact-text" id="modal-funfact-text"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="guide"><div class="guide-title">&#9670; Species Guide</div><p class="guide-text" id="guide-text">Filter and explore 169 profiled Philippine species.</p></div>
+<button type="button" class="audio-btn" id="audio-btn" onclick="toggleSound()">&#9654; Ambient Sound</button>
+<audio id="sound" loop><source src="image/Expidition PH ost.mp3" type="audio/mpeg"></audio>
+
+<footer>
+  <div><div class="footer-brand-name">Expedition PH</div><p class="footer-tagline">A digital exploration of the Philippine archipelago's natural heritage.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="regions.html">Island Groups</a></li><li><a href="flora.html">Flora</a></li><li><a href="fauna.html">Fauna</a></li><li><a href="geology.html">Geology</a></li></ul></div>
+  <div><h4>Fauna</h4><ul><li><a href="birds.html">Birds</a></li><li><a href="mammals.html">Mammals</a></li><li><a href="reptiles.html">Reptiles</a></li><li><a href="marine.html">Marine</a></li><li><a href="insects.html">Insects</a></li><li><a href="freshwater.html">Freshwater</a></li><li><a href="extinct.html">Lost Species</a></li></ul></div>
+  <div><h4>Discover</h4><ul><li><a href="places.html">Places</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="species.html">Species Index</a></li><li><a href="protected-areas.html">Protected Areas</a></li></ul></div>
+  <div><h4>About</h4><ul><li><a href="exhibits.html">Exhibits</a></li><li><a href="visit.html">About This Project</a></li></ul></div>
+</footer>
+<div class="footer-bottom"><span>&copy; 2025 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
+
+<script src="museum.js"></script>
+<script src="ph-species.js"></script>
+<script>
+(function(){
+  var STATUS_LABELS = { cr:'Critically Endangered', en:'Endangered', vu:'Vulnerable', nt:'Near Threatened', lc:'Least Concern', ex:'Extinct', dd:'Data Deficient' };
+  var GROUP_LABELS  = { birds:'Birds', mammals:'Mammals', reptiles:'Reptiles', marine:'Marine', plants:'Plants', insects:'Insects', freshwater:'Freshwater' };
+  var ISLAND_LABELS = { luzon:'Luzon', visayas:'Visayas', mindanao:'Mindanao', palawan:'Palawan' };
+
+  var SPECIES_PLACES = {
+    'philippine-eagle':               ['Mount Apo', 'Sierra Madre', 'Davao Highlands', 'Philippine Eagle Center'],
+    'philippine-cockatoo':            ['Palawan', 'El Nido', 'Calauit Wildlife Sanctuary'],
+    'palawan-peacock-pheasant':       ['Palawan', 'El Nido'],
+    'philippine-duck':                ['Sierra Madre'],
+    'luzon-bleeding-heart':           ['Sierra Madre'],
+    'philippine-serpent-eagle':       ['Sierra Madre', 'Davao Highlands'],
+    'sulu-hornbill':                  ['Siargao Island'],
+    'cebu-flowerpecker':              ['Apo Island'],
+    'visayan-warty-pig':              ['Mount Kanlaon Natural Park'],
+    'visayan-spotted-deer':           ['Mount Kanlaon Natural Park'],
+    'tamaraw':                        ['Palawan'],
+    'philippine-tarsier':             ['Chocolate Hills'],
+    'palawan-bearcat':                ['Palawan', 'Calauit Wildlife Sanctuary'],
+    'dugong':                         ['Palawan', 'Tubbataha Reef'],
+    'irrawaddy-dolphin':              ['Palawan'],
+    'philippine-crocodile':           ['Sierra Madre', 'Agusan Marsh'],
+    'philippine-sailfin-lizard':      ['Sierra Madre'],
+    'philippine-forest-turtle':       ['Sierra Madre', 'Palawan'],
+    'green-sea-turtle':               ['Tubbataha Reef', 'Apo Island', 'Balicasag Island'],
+    'hawksbill-sea-turtle':           ['Tubbataha Reef', 'Apo Island', 'Balicasag Island'],
+    'whale-shark':                    ['Donsol Whale Shark Trail', 'Tubbataha Reef', 'Apo Reef'],
+    'thresher-shark':                 ['Apo Island'],
+    'bumphead-parrotfish':            ['Tubbataha Reef', 'Apo Reef'],
+    'humphead-wrasse':                ['Tubbataha Reef', 'Apo Reef'],
+    'giant-clam':                     ['Tubbataha Reef'],
+    'blue-ringed-octopus':            ['Tubbataha Reef', 'Apo Island'],
+    'pygmy-seahorse':                 ['Tubbataha Reef', 'Apo Reef'],
+    'waling-waling':                  ['Davao Highlands'],
+    'tawilis':                        ['Taal Volcano & Lake'],
+    'sinarapan':                      ['Lake Sebu'],
+    'atlas-moth':                     ['Sierra Madre'],
+    'camiguin-flying-fox':            ['Camiguin'],
+    'giant-golden-crowned-flying-fox':['Sierra Madre'],
+    'philippine-cobra':               ['Sierra Madre'],
+    'leatherback-sea-turtle':         ['Tubbataha Reef', 'Siargao Island'],
+    'scalloped-hammerhead':           ['Tubbataha Reef', 'Apo Reef'],
+    'manta-ray':                      ['Tubbataha Reef', 'Donsol Whale Shark Trail'],
+    'oceanic-manta-ray':              ['Tubbataha Reef'],
+    'reef-manta-ray':                 ['Apo Island', 'Balicasag Island']
+  };
+
+  var LOCAL_IMGS = {
+    'philippine-eagle':          'Agila.jpg',
+    'cebu-flowerpecker':         'Cebu Flowerpecker.png',
+    'sulu-hornbill':             'Sulu Hornbill.png',
+    'palawan-peacock-pheasant':  'Palawan Peacock-pheasant.png',
+    'philippine-duck':           'Philippine Forest Duck.png',
+    'philippine-serpent-eagle':  'Philippine Serpent eagle.png',
+    'luzon-bleeding-heart':      'Luzon Bleeding Heart.png',
+    'philippine-tarsier':        'Tarsier.jpg',
+    'tamaraw':                   'Tamaraw.jpg',
+    'visayan-warty-pig':         'Visayan Baboy Ramo.png',
+    'visayan-spotted-deer':      'Visayan Spotted Deer.png',
+    'philippine-pangolin':       'Panggoline.jpg',
+    'philippine-brown-deer':     'Philippine Deer.png',
+    'palawan-bearcat':           'Palawan Bear cat.png',
+    'dugong':                    'Dugong.jpg',
+    'philippine-crocodile':      'Buwaya.png',
+    'philippine-sailfin-lizard': 'Philippine sailfin lizard.png',
+    'philippine-forest-turtle':  'Philippine Forest Turtle.png',
+    'philippine-cobra':          'Philippine cobra.png',
+    'whale-shark':               'Whale Shark Butanding.png',
+    'tawilis':                   'Tawilis.png',
+    'sinarapan':                 'Sinarapan.png',
+    'atlas-moth':                'Atlas Moth.png',
+    'philippine-cockatoo':       'Loro.jpg',
+    'blue-naped-parrot':         'Philippine Blue naped Parrot.png',
+    'colasisi':                  'Philippine Hanging Parrot.png',
+    'philippine-falconet':       'Philippine Falconet.png',
+    'philippine-hawk-eagle':     'Philippine Hawk- eagle.png',
+    'philippine-kingfisher':     'Philippine Kingfisher.png',
+    'giant-scops-owl':           'Philippine Giant scoop owl.png',
+    'philippine-eagle-owl':      'Philippine eagle-owl.png',
+    'waldens-hornbill':          'Philippine Walden\'s Hornbill.png',
+    'palawan-hornbill':          'Palawan kalaw.png',
+    'mindoro-bleeding-heart':    'Mindoro Bleeding-heart dove.png',
+    'cebu-large-sparrowhawk':    'Cebu Large Sparrowhawk.png',
+    'philippine-leafbird':       'Philippine Leafbird.png',
+    'philippine-trogon':         'Philippine Trogon.png',
+    'philippine-pitta':          'Philippine Pitta.png',
+    'philippine-bulbul':         'Phiilippine Bulbul.png',
+    'lowland-white-eye':         'Philippine Lowland white- eye.png',
+    'johnstones-lorikeet':       'Philippine Johnstore lorekeet.png'
+  };
+
+  function spImgSrc(s, w, h) {
+    if (LOCAL_IMGS[s.id]) return 'image/' + LOCAL_IMGS[s.id];
+    return 'https://picsum.photos/seed/' + s.img + '/' + w + '/' + h;
+  }
+
+  var activeGroup  = 'all';
+  var activeStatus = 'all';
+  var searchTerm   = '';
+
+  var grid    = document.getElementById('species-grid');
+  var countEl = document.getElementById('species-count');
+
+  function render() {
+    var list = PH_SPECIES.filter(function(s){
+      if (activeGroup !== 'all' && s.group !== activeGroup) return false;
+      if (activeStatus === 'endemic') return s.endemic;
+      if (activeStatus !== 'all' && s.status !== activeStatus) return false;
+      if (searchTerm) {
+        var q = searchTerm.toLowerCase();
+        return s.name.toLowerCase().indexOf(q)  !== -1 ||
+               s.sci.toLowerCase().indexOf(q)   !== -1 ||
+               s.local.toLowerCase().indexOf(q) !== -1;
+      }
+      return true;
+    });
+
+    countEl.textContent = list.length + ' of ' + PH_SPECIES.length + ' species shown';
+
+    if (!list.length) {
+      grid.innerHTML = '<div class="sp-no-results">&#9670;&nbsp; No species match your filters.</div>';
+      return;
+    }
+
+    grid.innerHTML = list.map(function(s){
+      var islandPills = s.islands.map(function(i){
+        return '<span class="sp-island-pill">' + (ISLAND_LABELS[i] || i) + '</span>';
+      }).join('');
+      return '<div class="sp-card reveal" onclick="openSpModal(\'' + s.id + '\')">' +
+        '<div class="sp-card-img-wrap">' +
+          '<img class="sp-card-img" src="' + spImgSrc(s, 400, 300) + '" alt="' + s.name + '" loading="lazy">' +
+          '<span class="sp-status-badge badge-' + s.status + '">' + s.status.toUpperCase() + '</span>' +
+          (s.endemic ? '<span class="sp-endemic-dot" title="Philippine Endemic"></span>' : '') +
+        '</div>' +
+        '<div class="sp-card-body">' +
+          '<div class="sp-group-tag">' + (GROUP_LABELS[s.group] || s.group) + '</div>' +
+          '<div class="sp-name">' + s.name + '</div>' +
+          '<div class="sp-sci">'  + s.sci  + '</div>' +
+          '<div class="sp-islands">' + islandPills + '</div>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.05 });
+    grid.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+  }
+
+  window.openSpModal = function(id) {
+    var s = PH_SPECIES.find(function(x){ return x.id === id; });
+    if (!s) return;
+    document.getElementById('sp-modal-img').src = spImgSrc(s, 800, 450);
+    document.getElementById('sp-modal-img').alt = s.name;
+    var statusEl = document.getElementById('sp-modal-status');
+    statusEl.textContent = s.status.toUpperCase() + ' — ' + (STATUS_LABELS[s.status] || '');
+    statusEl.className = 'sp-modal-status badge-' + s.status;
+    statusEl.style.position = 'static';
+    document.getElementById('sp-modal-endemic').classList.toggle('sp-modal-endemic-hidden', !s.endemic);
+    document.getElementById('sp-modal-name').textContent  = s.name;
+    document.getElementById('sp-modal-sci').textContent   = s.sci;
+    document.getElementById('sp-modal-local').innerHTML   = '&#9670; ' + s.local;
+    document.getElementById('sp-modal-desc').textContent  = s.desc;
+    document.getElementById('sp-modal-fact').textContent  = s.fact;
+    document.getElementById('sp-modal-islands').innerHTML = s.islands.map(function(i){
+      return '<span class="sp-modal-island isl-' + i + '">' + (ISLAND_LABELS[i] || i) + '</span>';
+    }).join('');
+    var places = SPECIES_PLACES[s.id];
+    var placesEl = document.getElementById('sp-modal-places');
+    if (places && places.length) {
+      placesEl.innerHTML = '<div class="sp-modal-places-label">&#9670; Where to Find in the Wild</div>' +
+        places.map(function(p){ return '<a href="places.html" class="sp-modal-place-link">&#9670; ' + p + '</a>'; }).join('');
+    } else {
+      placesEl.innerHTML = '';
+    }
+    document.getElementById('sp-modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  window.closeSpModal = function() {
+    document.getElementById('sp-modal').classList.remove('open');
+    document.body.style.overflow = '';
+  };
+  document.getElementById('sp-modal').addEventListener('click', function(e){ if(e.target===this) closeSpModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeSpModal(); });
+
+  document.getElementById('group-filters').addEventListener('click', function(e){
+    var btn = e.target.closest('.filter-btn'); if (!btn) return;
+    activeGroup = btn.dataset.group;
+    this.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.toggle('active', b===btn); });
+    render();
+  });
+  document.getElementById('status-filters').addEventListener('click', function(e){
+    var btn = e.target.closest('.filter-btn'); if (!btn) return;
+    activeStatus = btn.dataset.status;
+    this.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.toggle('active', b===btn); });
+    render();
+  });
+  document.getElementById('species-search').addEventListener('input', function(){
+    searchTerm = this.value.trim(); render();
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

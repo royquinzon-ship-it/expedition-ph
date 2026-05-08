@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mammals · Expedition PH: Natural History</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="museum.css">
+</head>
+<body>
+
+<header id="header">
+  <a href="index.html" class="header-logo">Expedition PH</a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="regions.html">Island Groups</a>
+    <a href="flora.html">Flora</a>
+    <a href="fauna.html" class="active">Fauna</a>
+    <a href="geology.html">Geology</a>
+    <a href="places.html">Places</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="history.html">History</a>
+      <a href="exhibits.html">Exhibits</a>
+  </nav>
+</header>
+
+<div class="subpage-breadcrumb"><a href="fauna.html">Fauna</a><span class="breadcrumb-sep">&#8594;</span><span>Mammals</span></div>
+
+<div class="page-hero">
+  <img class="page-hero-img" src="image/Tarsier.jpg" alt="Philippine Mammals">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-inner">
+    <p class="page-eyebrow">Philippine Mammals</p>
+    <h1 class="page-title">Warm Blood of the <em>Islands</em></h1>
+    <p class="page-desc">167 native species, 102 endemic — from the world's smallest primate to giant cloud rats of the Luzon highlands.</p>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item reveal"><span class="stat-num" data-target="167">0</span><span class="stat-lbl">Native Species</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="102">0</span><span class="stat-lbl">Endemic</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="24">0</span><span class="stat-lbl">Profiled</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="49">0</span><span class="stat-lbl">Threatened</span></div>
+</div>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Featured Species &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section section-dark2">
+  <div class="featured-card reveal" onclick="openCard(this)" data-funfact="Each of the tarsier's eyes is as large as its entire brain. Unable to move its eyeballs, it can rotate its head nearly 180° in each direction — like an owl.">
+    <img class="featured-card-img" src="image/Tarsier.jpg" alt="Philippine Tarsier">
+    <div class="featured-card-body">
+      <div class="featured-label">&#9670; &nbsp; Mammal · Primate &nbsp; · &nbsp; Near Threatened</div>
+      <div class="featured-name">Philippine Tarsier</div>
+      <div class="featured-sci">Carlito syrichta</div>
+      <p class="featured-desc">One of the world's smallest primates — each eye is larger than its brain. A nocturnal insectivore of the Philippine forest floor, the Tarsier communicates in ultrasonic frequencies inaudible to humans. Found in Bohol, Samar, and Mindanao.</p>
+      <div class="badge-row">
+        <span class="badge">Bohol</span>
+        <span class="badge">Mindanao</span>
+        <span class="badge">Samar</span>
+        <span class="badge">Nocturnal</span>
+        <span class="badge">Eyes Larger Than Brain</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; All Species &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section">
+  <p class="section-eyebrow reveal">The Collection</p>
+  <h2 class="section-title reveal">Philippine <em>Mammals</em></h2>
+  <p class="section-body reveal">Twenty-four species — primates, bats, deer, rodents, bovids, and colugos — representing the extraordinary mammal diversity of the Philippine archipelago.</p>
+  <div class="filter-bar reveal">
+    <button class="filter-btn active" onclick="filterCards('all',this)">All</button>
+  </div>
+  <div class="grid grid-3" id="species-grid">
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="Each of the tarsier's eyes is as large as its entire brain. Unable to move its eyeballs, it can rotate its head nearly 180° in each direction — like an owl.">
+      <img src="image/Tarsier.jpg" alt="Philippine Tarsier" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Primate</div>
+        <div class="card-title">Philippine Tarsier<em>Carlito syrichta</em></div>
+        <p class="card-desc">One of the world's smallest primates — each eye is larger than its brain and fixed in its skull. A nocturnal insectivore of Bohol, Samar, and Mindanao.</p>
+        <span class="card-status status-vulnerable">Near Threatened</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="Unlike the closely related water buffalo, Tamaraw are entirely solitary — adults live and forage alone, only coming together briefly to mate.">
+      <img src="image/Tamaraw.jpg" alt="Tamaraw" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Bovid</div>
+        <div class="card-title">Tamaraw<em>Bubalus mindorensis</em></div>
+        <p class="card-desc">A small, solitary buffalo found only on the island of Mindoro. Once ranged widely, now confined to Mount Iglit-Baco. Fewer than 600 survive.</p>
+        <span class="card-status status-critical">Critically Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="Pangolin scales are made of keratin — the same material as human fingernails. When threatened, they curl into a tight ball. Ironically, this defence makes them easy to pick up and poach.">
+      <img src="image/Panggoline.jpg" alt="Philippine Pangolin" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Pangolin</div>
+        <div class="card-title">Philippine Pangolin<em>Manis culionensis</em></div>
+        <p class="card-desc">The most trafficked mammal on Earth. The Philippine Pangolin is found on Palawan and surrounding islands. Its scales are in high demand in illegal wildlife trade.</p>
+        <span class="card-status status-critical">Critically Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="During breeding season, male Visayan Warty Pigs grow a dramatic mohawk-like crest of long hair along their spine — making them look unlike any other pig species in the world.">
+      <img src="image/Visayan Baboy Ramo.png" alt="Visayan Warty Pig" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Pig</div>
+        <div class="card-title">Visayan Warty Pig<em>Sus cebifrons</em></div>
+        <p class="card-desc">Endemic to the Visayan islands, the Visayan Warty Pig is one of the world's rarest pigs. Habitat loss and hunting have reduced it to tiny forest fragments.</p>
+        <span class="card-status status-critical">Critically Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="The Palawan Bearcat's scent glands produce an odour that smells remarkably like buttered popcorn. Scientists believe this scent is used to mark territory and communicate with other bearcats.">
+      <img src="image/Palawan Bear cat.png" alt="Palawan Bearcat" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Viverrid</div>
+        <div class="card-title">Palawan Bearcat<em>Arctictis binturong whitei</em></div>
+        <p class="card-desc">Also called the Binturong, this cat-bear-like creature is the heaviest member of the civet family. Its prehensile tail and popcorn-like scent make it one of Palawan's most unusual residents.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="The Giant Golden-crowned Flying Fox is the world's largest bat, with a wingspan of up to 1.7 metres. Despite its size, it feeds only on fruit and figs — and is one of the most important seed dispersers in Philippine rainforests.">
+      <img src="image/philippine Giant golden-crowned flying fox.png" alt="Philippine Giant Golden-crowned Flying Fox" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Megabat</div>
+        <div class="card-title">Giant Golden-crowned Flying Fox<em>Acerodon jubatus</em></div>
+        <p class="card-desc">The world's largest bat — wingspan up to 1.7 metres. Found only in the Philippines, this massive fruit bat is a critical forest regenerator, dispersing seeds across vast distances each night.</p>
+        <span class="card-status status-endangered">Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="Unlike most deer that lose their spots as adults, the Visayan Spotted Deer retains its white spots for life. It is one of the rarest deer in the world — fewer than 2,500 individuals are estimated to survive in the wild.">
+      <img src="image/Visayan Spotted Deer.png" alt="Visayan Spotted Deer" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Deer</div>
+        <div class="card-title">Visayan Spotted Deer<em>Rusa alfredi</em></div>
+        <p class="card-desc">One of the world's rarest deer, endemic to the Visayan islands. Found only in fragments of remaining forest on Panay and Negros, it is critically threatened by habitat loss and hunting.</p>
+        <span class="card-status status-endangered">Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="The Philippine Deer has adapted to a wider range of habitats than any other large native mammal in the Philippines — from sea-level mangroves to cloud forests above 2,000 metres.">
+      <img src="image/Philippine Deer.png" alt="Philippine Deer" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Deer</div>
+        <div class="card-title">Philippine Deer<em>Rusa marianna</em></div>
+        <p class="card-desc">The most widespread large native mammal in the Philippines. Found across multiple island groups from lowland forests to highland grasslands, it plays an important role as a prey species and seed disperser.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="The Philippine Naked-backed Fruit Bat gets its name from wings that attach along the middle of its back — making the back appear completely bare when wings are folded. It was once so abundant its roosts darkened the sky.">
+      <img src="image/Philippine naked-backed fruit bat.png" alt="Philippine Naked-backed Fruit Bat" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Megabat</div>
+        <div class="card-title">Philippine Naked-backed Fruit Bat<em>Dobsonia chapmani</em></div>
+        <p class="card-desc">Once thought extinct, this large cave-roosting fruit bat was rediscovered on Cebu and Negros. A critical pollinator and seed disperser of Philippine forests, its colonies have been decimated by hunting and cave disturbance.</p>
+        <span class="card-status status-critical">Critically Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="The 'warts' on the Philippine Warty Pig's face are actually enlarged skin pads that protect males during combat. Unlike the Visayan species, it is found across multiple Philippine island groups.">
+      <img src="image/Philippine Warty Pig.png" alt="Philippine Warty Pig" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Pig</div>
+        <div class="card-title">Philippine Warty Pig<em>Sus philippensis</em></div>
+        <p class="card-desc">A native wild pig found across Luzon, Mindanao, and surrounding islands. More widely distributed than its Visayan cousin, it inhabits forests from sea level to the mountains and plays a key role in forest seed dispersal.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="Despite being called a badger, the Palawan Stink Badger is actually more closely related to skunks. It can spray a foul-smelling secretion several metres — a defence unknown in true badgers.">
+      <img src="image/Palawan stink badger.png" alt="Palawan Stink Badger" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Mustelid</div>
+        <div class="card-title">Palawan Stink Badger<em>Mydaus marchei</em></div>
+        <p class="card-desc">A peculiar nocturnal mammal endemic to Palawan — more closely related to skunks than true badgers. It forages the forest floor at night, using its powerful claws to dig for invertebrates and roots.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="The Calamian Deer is one of only three spotted deer species in the world and the only one endemic to the Philippines outside the Visayas. Its population exists on just a handful of islands in the Calamian group.">
+      <img src="image/Philippine Calamian Deer.png" alt="Calamian Deer" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Deer</div>
+        <div class="card-title">Calamian Deer<em>Axis calamianensis</em></div>
+        <p class="card-desc">Found only on the Calamian Islands of Palawan — one of the world's most restricted-range deer. Its spotted coat and compact build make it unlike any other Philippine deer species.</p>
+        <span class="card-status status-endangered">Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="The Dinagat Bushy-tailed Cloud Rat was believed extinct for decades before being rediscovered. Its entire known range is Dinagat Island — one of the smallest geographic ranges of any Philippine mammal. Mining operations clearing Dinagat's forest in the 2000s brought it to the brink before conservation action intervened.">
+      <img src="image/Dinagat bushy-tailed cloud rat.png" alt="Dinagat Bushy-tailed Cloud Rat" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Rodent</div>
+        <div class="card-title">Dinagat Bushy-tailed Cloud Rat<em>Crateromys australis</em></div>
+        <p class="card-desc">A large, bushy-tailed arboreal rodent found only on Dinagat Island off the northeastern coast of Mindanao. One of the most geographically restricted mammals in the Philippines, it clings to survival in the island's last forest fragments under severe pressure from mining and deforestation.</p>
+        <span class="card-status status-critical">Critically Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="The Philippine Mouse-Deer is the world's smallest hoofed animal — standing just 18 cm at the shoulder and weighing under 2 kg. Despite resembling a tiny deer, it has fangs instead of antlers, which males use in combat.">
+      <img src="image/Philippine mouse-deer.png" alt="Philippine Mouse-Deer" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Chevrotain</div>
+        <div class="card-title">Philippine Mouse-Deer<em>Tragulus nigricans</em></div>
+        <p class="card-desc">The world's smallest hoofed mammal — found only on Balabac Island and nearby islets of Palawan. This ancient, fanged herbivore is a living relic of a lineage that predates true deer by millions of years.</p>
+        <span class="card-status status-endangered">Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="The Dinagat Gymnure is found only on Dinagat Island — one of the smallest geographic ranges of any mammal on Earth. When mining operations began clearing Dinagat's forests in the 2000s, this species came within years of being wiped out before it had even been thoroughly studied.">
+      <img src="image/Dinagat Gymnure.png"alt= "Dinagat Gymnure" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Gymnure</div>
+        <div class="card-title">Dinagat Gymnure<em>Podogymnura aureospinula</em></div>
+        <p class="card-desc">A Critically Endangered moonrat found only on Dinagat Island in Mindanao — one of the most range-restricted mammals on Earth. A close relative of the Mindanao Gymnure, it inhabits the island's last remaining forest fragments and faces extinction from mining and deforestation.</p>
+        <span class="card-status status-critical">Critically Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="Shrews have one of the highest metabolic rates of any mammal — the Mindanao Shrew must eat almost continuously, consuming up to three times its own body weight in insects daily just to survive. If it goes more than a few hours without food, it will die.">
+      <img src="image/Mindanao Shrew.png"alt= "Mindanao Shrew" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Shrew</div>
+        <div class="card-title">Mindanao Shrew<em>Crocidura beatus</em></div>
+        <p class="card-desc">A small, frenetic insectivore endemic to the forests of Mindanao. One of several shrew species unique to the Philippine archipelago, it hunts insects, worms, and invertebrates through the forest leaf litter almost without rest, driven by one of the highest metabolic rates in the animal kingdom.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="The Panay Cloudrunner was only scientifically described in 1996. It spends its entire life in the forest canopy, nesting in tree hollows — it is so arboreal that it is almost never seen on the ground.">
+      <img src="image/Panay Cloudrunner.png"alt= "Panay Cloudrunner" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Rodent</div>
+        <div class="card-title">Panay Cloudrunner<em>Crateromys heaneyi</em></div>
+        <p class="card-desc">A large, arboreal rodent found only in the remaining forests of Panay. Described by science only in 1996, its ecology remains poorly studied — it is threatened by the rapid deforestation of the Visayan islands.</p>
+        <span class="card-status status-endangered">Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="The civet's digestive enzymes break down proteins in coffee beans in a way no roasting process can replicate — reducing bitterness and adding a distinctive smoothness. A kilogram of Kape Alamid can sell for over $500. Wild civets are now captured and cage-farmed to meet demand, turning a fascinating natural behaviour into a conservation concern.">
+      <img src="https://picsum.photos/seed/ph-musang/600/400" alt="Asian Palm Civet" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Civet</div>
+        <div class="card-title">Asian Palm Civet<em>Paradoxurus philippinensis</em></div>
+        <p class="card-desc">A nocturnal, tree-climbing omnivore endemic to the Philippines — known locally as the <em>musang</em>. Found from Batanes to Tawi-Tawi across forest edges and secondary growth, it is also the source of <em>Kape Alamid</em> — one of the world's most prized and unusual coffees.</p>
+        <span class="card-status status-lc">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="The Mindanao Gymnure is a living fossil — gymnures represent one of the most ancient lineages of placental mammals, with relatives dating back over 60 million years. It is found only in the mossy cloud forests of Mindanao above 1,500 metres and is rarely encountered even by field biologists.">
+      <img src="https://picsum.photos/seed/ph-gymnure/600/400" alt="Mindanao Gymnure" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Gymnure</div>
+        <div class="card-title">Mindanao Gymnure<em>Podogymnura truei</em></div>
+        <p class="card-desc">A small, ancient insectivore endemic to the highland mossy forests of Mindanao — one of only two gymnure species in the Philippines. Its lineage predates many modern mammal groups, making it one of the most evolutionarily significant of the Philippines' endemic mammals.</p>
+        <span class="card-status status-endangered">Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="The Visayan Leopard Cat is the only wild felid endemic to the Philippines — a small, spotted forest cat roughly the size of a domestic cat. It is so secretive and forest-dependent that most Filipinos have never seen one in the wild, even in areas where it still survives.">
+      <img src="https://picsum.photos/seed/ph-leopardcat/600/400" alt="Visayan Leopard Cat" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Felid</div>
+        <div class="card-title">Visayan Leopard Cat<em>Prionailurus bengalensis rabori</em></div>
+        <p class="card-desc">The Philippines' only native wild cat — a small, spotted felid found in the remaining forests of Negros, Cebu, Panay, and Palawan. Resembling a miniature leopard, it hunts birds, lizards, and small mammals at night, and is severely threatened by deforestation across the Visayan islands.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="The Colugo can glide over 136 metres in a single leap — farther than any other gliding mammal. Its patagium stretches from chin to tail tip. Paradoxically, it is the closest living relative of primates — more closely related to us than to any other mammal order.">
+      <img src="image/Philippine Colugo.png" alt="Philippine Colugo" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Colugo</div>
+        <div class="card-title">Philippine Colugo<em>Cynocephalus volans</em></div>
+        <p class="card-desc">The world's most capable gliding mammal — endemic to the Philippines. Its webbed membrane spans from neck to tail tip, allowing it to glide silently between trees over 100 metres. Paradoxically, it is the closest living relative of primates, more closely related to monkeys and apes than to any other mammal.</p>
+        <span class="card-status status-vulnerable">Least Concern</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="Despite weighing only 4–5 kg, the Palawan Porcupine's quills can measure up to 50 cm — nearly the animal's own body length. When threatened, it rattles its hollow tail quills as a warning, then charges backwards, embedding quills that detach on contact.">
+      <img src="https://picsum.photos/seed/ph-porcupine/600/400" alt="Palawan Porcupine" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Rodent</div>
+        <div class="card-title">Palawan Porcupine<em>Hystrix pumila</em></div>
+        <p class="card-desc">A small, spiny rodent endemic to Palawan and several nearby islands — among the smallest porcupines in the world. It forages the forest floor at night for roots, bulbs, and fallen fruit, using its formidable quills as a defence against Philippine forest predators.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="The Philippine Tube-nosed Bat has bizarre forward-pointing tubular nostrils whose function remains debated by scientists. One hypothesis is that the tubes help it echolocate with greater precision in the dense, reverberant canopy of Philippine rainforests.">
+      <img src="image/Philippine naked-backed fruit bat.png" alt="Philippine Tube-nosed Bat" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Bat</div>
+        <div class="card-title">Philippine Tube-nosed Bat<em>Nyctimene rabori</em></div>
+        <p class="card-desc">A Critically Endangered fruit bat endemic to the Philippines, recognisable by its bizarre forward-pointing tubular nostrils. Found in old-growth forests of Negros and Cebu — islands that have lost over 98% of their original forest cover, leaving this bat clinging to survival in tiny fragments.</p>
+        <span class="card-status status-critical">Critically Endangered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="mammal" onclick="openCard(this)" data-funfact="The Palawan Shrew is one of several shrew species found only on Palawan — an island so biologically distinct that it is considered its own biogeographic zone, more closely connected to Borneo than to the rest of the Philippines. Shrews have the fastest heartbeat of any mammal, reaching over 1,200 beats per minute.">
+      <img src="https://picsum.photos/seed/ph-palawan-shrew/600/400" alt="Palawan Shrew" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Mammal · Shrew</div>
+        <div class="card-title">Palawan Shrew<em>Crocidura grayi</em></div>
+        <p class="card-desc">A tiny, frenetic insectivore endemic to Palawan — an island whose unique geology and Bornean biological connections make it a world apart from the rest of the Philippine archipelago. Like all shrews, it must eat nearly constantly to fuel one of the fastest metabolisms in the mammal world.</p>
+        <span class="card-status status-vulnerable">Vulnerable</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-dark2 section-centered">
+  <p class="section-eyebrow reveal">Conservation</p>
+  <h2 class="section-title reveal section-title-centered">The Stakes of <em>Survival</em></h2>
+  <p class="section-body reveal section-body-spaced">The Philippines has lost over 70% of its original forest cover. Every species documented here depends on urgent collective action.</p>
+  <div class="reveal cta-row">
+    <a href="places.html" class="btn-gold">Explore Habitats</a>
+    <a href="species.html?group=mammals" class="btn-outline">View All Mammal Species</a>
+    <a href="fauna.html" class="btn-outline">Back to Fauna</a>
+  </div>
+</section>
+
+<div id="modal" class="modal">
+  <div class="modal-card">
+    <button type="button" class="modal-close" onclick="closeModal()">&#x2715;</button>
+    <div class="modal-card-img"><img id="modal-img" src="" alt=""></div>
+    <div class="modal-card-body">
+      <div class="modal-card-tag" id="modal-tag"></div>
+      <div class="modal-card-title" id="modal-title"></div>
+      <p class="modal-card-desc" id="modal-desc"></p>
+      <span id="modal-status" class="modal-status-hidden"></span>
+      <div id="modal-funfact" class="modal-card-funfact modal-status-hidden">
+        <div class="modal-card-funfact-label">&#9670; Fun Fact</div>
+        <p class="modal-card-funfact-text" id="modal-funfact-text"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="guide"><div class="guide-title">&#9670; Mammals Guide</div><p class="guide-text" id="guide-text">Click any card to view full details.</p></div>
+<button class="audio-btn" id="audio-btn" onclick="toggleSound()">&#9654; Ambient Sound</button>
+<audio id="sound" loop><source src="image/Expidition PH ost.mp3" type="audio/mpeg"></audio>
+
+<footer>
+  <div><div class="footer-brand-name">Expedition PH</div><p class="footer-tagline">A digital exploration of the Philippine archipelago's natural heritage.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="regions.html">Island Groups</a></li><li><a href="flora.html">Flora</a></li><li><a href="fauna.html">Fauna</a></li><li><a href="geology.html">Geology</a></li></ul></div>
+  <div><h4>Fauna</h4><ul><li><a href="birds.html">Birds</a></li><li><a href="mammals.html">Mammals</a></li><li><a href="reptiles.html">Reptiles</a></li><li><a href="marine.html">Marine</a></li><li><a href="insects.html">Insects</a></li><li><a href="freshwater.html">Freshwater</a></li><li><a href="extinct.html">Lost Species</a></li></ul></div>
+  <div><h4>Discover</h4><ul><li><a href="places.html">Places</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="species.html">Species Index</a></li><li><a href="protected-areas.html">Protected Areas</a></li></ul></div>
+  <div><h4>About</h4><ul><li><a href="exhibits.html">Exhibits</a></li><li><a href="visit.html">About This Project</a></li></ul></div>
+</footer>
+<div class="footer-bottom"><span>&copy; 2025 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
+
+<script src="museum.js"></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lost Species · Expedition PH: Natural History</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="museum.css">
+</head>
+<body>
+
+<header id="header">
+  <a href="index.html" class="header-logo">Expedition PH</a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="regions.html">Island Groups</a>
+    <a href="flora.html">Flora</a>
+    <a href="fauna.html" class="active">Fauna</a>
+    <a href="geology.html">Geology</a>
+    <a href="places.html">Places</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="history.html">History</a>
+      <a href="exhibits.html">Exhibits</a>
+  </nav>
+</header>
+
+<div class="subpage-breadcrumb"><a href="fauna.html">Fauna</a><span class="breadcrumb-sep">&#8594;</span><span>Lost Species</span></div>
+
+<div class="page-hero">
+  <img class="page-hero-img" src="image/Cebu Flowerpecker.png" alt="Cebu Flowerpecker">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-inner">
+    <p class="page-eyebrow">Philippine Lost Species</p>
+    <h1 class="page-title">Echoes Across the <em>Archipelago</em></h1>
+    <p class="page-desc">Extinct, possibly vanished, and miraculously rediscovered — twelve species that remind us what the Philippines has lost, and what it still fights to keep.</p>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item reveal"><span class="stat-num" data-target="100">0</span><span class="stat-lbl">Extinct Species (est.)</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="700">0</span><span class="stat-lbl">Years of Habitat Loss</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="12">0</span><span class="stat-lbl">Species Profiled</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="3">0</span><span class="stat-lbl">Rediscovered</span></div>
+</div>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Featured Species &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section section-dark2">
+  <div class="featured-card reveal" onclick="openCard(this)" data-funfact="Stegodon luzonensis is one of the most remarkable examples of insular dwarfism in the fossil record. Cut-marked bones found alongside its remains in the Cagayan Valley suggest early hominins — possibly Homo luzonensis — hunted it. It was one of the last megafauna to walk Luzon before rising sea levels and human pressure ended the Pleistocene world of the Philippines forever.">
+    <img class="featured-card-img" src="image/Luzon Stegodon.png" alt="Luzon Stegodon">
+    <div class="featured-card-body">
+      <div class="featured-label">&#9670; &nbsp; Prehistoric Giant &nbsp; · &nbsp; Extinct</div>
+      <div class="featured-name">Luzon Stegodon</div>
+      <div class="featured-sci">Stegodon luzonensis</div>
+      <p class="featured-desc">A dwarf elephant that roamed Luzon during the Pleistocene, Stegodon luzonensis is a window into the Philippines' lost megafauna. Fossilised remains found in the Cagayan Valley — alongside evidence of early hominin activity — reveal an ancient world where elephants, rhinoceroses, and giant tortoises shared the island with some of the earliest people in Southeast Asia. Gone for 10,000 years, its bones still tell the story of a vanished wilderness.</p>
+      <div class="badge-row">
+        <span class="badge">Luzon</span>
+        <span class="badge">Pleistocene</span>
+        <span class="badge">Extinct ~10,000 BP</span>
+        <span class="badge">Insular Dwarfism</span>
+        <span class="badge">Cagayan Valley</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; All Species &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section">
+  <p class="section-eyebrow reveal">The Record</p>
+  <h2 class="section-title reveal">Philippine <em>Lost Species</em></h2>
+  <p class="section-body reveal">Twelve species across three fates — confirmed extinct, possibly gone, and miraculously rediscovered. Each one a chapter in the Philippines' contested history with its own wilderness.</p>
+  <div class="filter-bar reveal">
+    <button type="button" class="filter-btn active" onclick="filterCards('all',this)">All</button>
+    <button type="button" class="filter-btn" onclick="filterCards('prehistoric',this)">Prehistoric</button>
+    <button type="button" class="filter-btn" onclick="filterCards('modern',this)">Confirmed Extinct</button>
+    <button type="button" class="filter-btn" onclick="filterCards('rediscovered',this)">Rediscovered</button>
+  </div>
+  <div class="grid grid-3" id="species-grid">
+
+    <!-- ── PREHISTORIC ── -->
+
+    <div class="card filterable" data-category="prehistoric" onclick="openCard(this)" data-funfact="Stegodon luzonensis was a dwarf elephant that evolved in island isolation on Luzon. Isolated island populations often evolve to smaller sizes over many generations — a phenomenon called insular dwarfism. This species likely went extinct around 10,000 years ago as the last ice age ended and sea levels rose.">
+      <img src="image/Luzon Stegodon.png" alt="Stegodon luzonensis" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Prehistoric · Mammal</div>
+        <div class="card-title">Luzon Stegodon<em>Stegodon luzonensis</em></div>
+        <p class="card-desc">A dwarf stegodon that roamed Luzon during the Pleistocene. Fossilised remains found in Cagayan Valley confirm its presence alongside early hominins on the island. Extinct ~10,000 years ago.</p>
+        <span class="card-status status-critical">Extinct</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="prehistoric" onclick="openCard(this)" data-funfact="Fossil evidence from Callao Cave in Cagayan shows cut marks on rhinoceros bones dating back roughly 700,000 years — making it one of the oldest evidence of hominin activity in the Philippines. The species likely survived until the early Holocene before disappearing as forests changed and human pressure increased.">
+      <img src="image/Philippine Rhinoceros.png" alt="Philippine Rhinoceros" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Prehistoric · Mammal</div>
+        <div class="card-title">Philippine Rhinoceros<em>Rhinoceros philippinensis</em></div>
+        <p class="card-desc">A rhinoceros species that inhabited Luzon until at least the Holocene. Cut-marked bones in Callao Cave suggest it was hunted by early hominins. One of the largest prehistoric mammals ever documented in the Philippines.</p>
+        <span class="card-status status-critical">Extinct</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="prehistoric" onclick="openCard(this)" data-funfact="Fossil remains of the Luzon Giant Tortoise have been recovered from Pleistocene deposits across Luzon, including the Cagayan Valley. Like many giant tortoises on islands worldwide, it likely fell victim to a combination of climate shifts at the end of the last ice age and hunting pressure from early human settlers. Giant tortoises were easy prey — slow-moving, predictable, and a rich source of meat — making them among the first megafauna to disappear wherever humans arrived.">
+      <img src="image/Luzon giant tortoise.png" alt="Luzon Giant Tortoise" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Prehistoric · Reptile</div>
+        <div class="card-title">Luzon Giant Tortoise<em>Geochelone sp.</em></div>
+        <p class="card-desc">A large land tortoise that inhabited Luzon during the Pleistocene, known from fossil remains found in Cagayan Valley deposits. It likely disappeared around 10,000 years ago — a casualty of rising sea levels, habitat shifts, and early human hunting that ended the age of Philippine megafauna.</p>
+        <span class="card-status status-critical">Extinct</span>
+      </div>
+    </div>
+
+    <!-- ── CONFIRMED EXTINCT (MODERN) ── -->
+
+    <div class="card filterable" data-category="modern" onclick="openCard(this)" data-funfact="The Cebu Warty Pig was once widespread across Cebu. As the island's forests fell to agricultural expansion during the Spanish colonial period, the pig retreated and eventually vanished. It was last recorded in the 19th century. The closely related Visayan Warty Pig (Sus cebifrons) survives on Negros and Panay but is Critically Endangered.">
+      <img src="image/Cebu warty pig.png" alt="Cebu Warty Pig" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Modern · Mammal</div>
+        <div class="card-title">Cebu Warty Pig<em>Sus cebifrons negrinus</em></div>
+        <p class="card-desc">A subspecies of the Visayan Warty Pig endemic to Cebu. Driven to extinction by the near-total deforestation of Cebu during the colonial era. Last recorded in the 19th century. No known surviving specimens.</p>
+        <span class="card-status status-critical">Extinct</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="modern" onclick="openCard(this)" data-funfact="The Cebu Large Sparrowhawk is known only from a single specimen collected in 1888. As Cebu's forests were almost completely cleared by the early 20th century, this raptor — like many other Cebu endemics — had no habitat left. It has never been confirmed in a subsequent survey.">
+      <img src="image/Cebu Large Sparrowhawk.png" alt="Cebu Large Sparrowhawk" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Modern · Bird</div>
+        <div class="card-title">Cebu Large Sparrowhawk<em>Accipiter griseiceps</em></div>
+        <p class="card-desc">A hawk endemic to Cebu, known only from a single specimen collected in 1888. The loss of Cebu's forests erased this raptor before it could be studied. Considered extinct by the IUCN — no confirmed sighting in over 130 years.</p>
+        <span class="card-status status-critical">Extinct</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="modern" onclick="openCard(this)" data-funfact="Lake Lanao in Mindanao was once one of the world's most remarkable freshwater biodiversity hotspots — its ancient, isolated waters had evolved an entire endemic fish fauna found nowhere else. Within decades of human settlement intensification around the lake, introduced species and overfishing wiped out the entire endemic cyprinid radiation. It is considered one of the worst freshwater extinction events in history.">
+      <div class="card-no-img" aria-hidden="true">
+        <div class="card-no-img-icon">&#128031;</div>
+        <div class="card-no-img-txt">No image available</div>
+      </div>
+      <div class="card-body">
+        <div class="card-tag">Modern · Fish</div>
+        <div class="card-title">Lake Lanao Cyprinids<em>Barbodes spp. (18 species)</em></div>
+        <p class="card-desc">Eighteen endemic cyprinid fish species that evolved in isolation in Lake Lanao, Mindanao. All are now believed extinct — victims of introduced species, over-fishing, and habitat degradation in what is considered one of the worst freshwater extinction events in the Pacific.</p>
+        <span class="card-status status-critical">Extinct</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="modern" onclick="openCard(this)" data-funfact="The Negros Naked-backed Fruit Bat was known from specimens collected in the 1960s–70s on Negros Island. Intensive logging of the lowland dipterocarp forests it depended on likely drove it to extinction before it could be formally studied. It has never been recorded in any modern bat survey.">
+      <div class="card-no-img" aria-hidden="true">
+        <div class="card-no-img-icon">&#129415;</div>
+        <div class="card-no-img-txt">No image available</div>
+      </div>
+      <div class="card-body">
+        <div class="card-tag">Modern · Mammal</div>
+        <div class="card-title">Negros Naked-backed Fruit Bat<em>Dobsonia chapmani</em></div>
+        <p class="card-desc">A large fruit bat endemic to Negros and Cebu, last recorded in the 1970s. Dependent on lowland dipterocarp forest for roosting and foraging, it vanished as Negros lost over 95% of its forest cover by the late 20th century. Feared extinct.</p>
+        <span class="card-status status-lost">Possibly Extinct</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="modern" onclick="openCard(this)" data-funfact="The Philippine Bare-backed Fruit Bat is one of several large fruit bats on Negros whose status is unknown. Unlike better-documented species, it has never attracted significant conservation attention, and systematic cave and forest surveys on Negros remain incomplete. Its fate remains uncertain.">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dobsonia_minor.jpg" alt="Philippine Bare-backed Fruit Bat" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Modern · Mammal</div>
+        <div class="card-title">Philippine Giant Cave Bat<em>Otopteropus cartilagonodus</em></div>
+        <p class="card-desc">A small fruit bat found only in montane forests of Luzon, last confirmed in the 1980s. Dependent on old-growth forest caves for roosting, it has not been encountered in any recent survey. The IUCN lists it as Vulnerable but its current status may be far worse.</p>
+        <span class="card-status status-lost">Possibly Extinct</span>
+      </div>
+    </div>
+
+    <!-- ── REDISCOVERED ── -->
+
+    <div class="card filterable" data-category="rediscovered" onclick="openCard(this)" data-funfact="The Cebu Flowerpecker was one of the most dramatic wildlife rediscoveries of the 20th century. Declared extinct after 86 years of absence, it was found in 1992 in a tiny forest patch on Cebu — proving that hope can survive even the most drastic habitat destruction. Conservation work has since focused on expanding the tiny forest remnants it depends on.">
+      <img src="image/Cebu Flowerpecker.png" alt="Cebu Flowerpecker" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Rediscovered · Bird</div>
+        <div class="card-title">Cebu Flowerpecker<em>Dicaeum quadricolor</em></div>
+        <p class="card-desc">Declared extinct in 1906 after Cebu's forests were razed. Rediscovered in 1992 in a tiny remaining forest patch. One of the most dramatic wildlife comebacks in Southeast Asia — fewer than 200 individuals remain.</p>
+        <span class="card-status status-found">Rediscovered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="rediscovered" onclick="openCard(this)" data-funfact="The Calamian Deer is the only surviving member of what was once a wider rusa deer population in Palawan and its satellite islands. After decades of hunting and habitat loss reduced populations to dangerously low numbers, conservation efforts in the Calamian Islands have helped populations partially recover. It remains the only deer species native to Palawan.">
+      <img src="image/Philippine Calamian Deer.png" alt="Calamian Deer" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Rediscovered · Mammal</div>
+        <div class="card-title">Calamian Deer<em>Axis calamianensis</em></div>
+        <p class="card-desc">Once hunted almost to extinction across the Calamian Islands, this Palawan-endemic deer was thought to be functionally gone by the 1970s. Conservation surveys and local protection helped populations recover. Now listed as Endangered — still surviving, but fragile.</p>
+        <span class="card-status status-found">Rediscovered</span>
+      </div>
+    </div>
+
+    <div class="card filterable" data-category="rediscovered" onclick="openCard(this)" data-funfact="The Palawan Bearded Pig is the largest native land mammal on Palawan. By the late 20th century, hunting and habitat fragmentation had reduced it to dangerously low numbers in many parts of Palawan. Recent camera-trap surveys have confirmed its presence in previously unrecorded forest zones, offering cautious optimism for the species' recovery if habitat protection continues.">
+      <img src="image/Palawan bearded pig.png" alt="Palawan Bearded Pig" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Rediscovered · Mammal</div>
+        <div class="card-title">Palawan Bearded Pig<em>Sus barbatus ahoenobarbus</em></div>
+        <p class="card-desc">The largest native land mammal on Palawan, once considered locally extinct in several parts of its range. Camera-trap surveys have since confirmed populations in previously unrecorded forest zones. Its survival depends on sustained protection of Palawan's remaining interior forests.</p>
+        <span class="card-status status-found">Rediscovered</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-dark2 section-centered">
+  <p class="section-eyebrow reveal">Conservation</p>
+  <h2 class="section-title reveal section-title-centered">Extinction Is <em>Not Inevitable</em></h2>
+  <p class="section-body reveal section-body-spaced">The Cebu Flowerpecker was gone for 86 years before it came back. Every patch of forest protected is a chance for another miracle. The Philippines has already lost so much — but what remains is worth fighting for.</p>
+  <div class="reveal cta-row">
+    <a href="places.html" class="btn-gold">Explore Habitats</a>
+    <a href="species.html?group=extinct" class="btn-outline">View All Lost Species</a>
+    <a href="fauna.html" class="btn-outline">Back to Fauna</a>
+  </div>
+</section>
+
+<div id="modal" class="modal">
+  <div class="modal-card">
+    <button type="button" class="modal-close" onclick="closeModal()">&#x2715;</button>
+    <div class="modal-card-img"><img id="modal-img" src="" alt=""></div>
+    <div class="modal-card-body">
+      <div class="modal-card-tag" id="modal-tag"></div>
+      <div class="modal-card-title" id="modal-title"></div>
+      <p class="modal-card-desc" id="modal-desc"></p>
+      <span id="modal-status" class="modal-status-hidden"></span>
+      <div id="modal-funfact" class="modal-card-funfact modal-status-hidden">
+        <div class="modal-card-funfact-label">&#9670; Fun Fact</div>
+        <p class="modal-card-funfact-text" id="modal-funfact-text"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="guide"><div class="guide-title">&#9670; Lost Species Guide</div><p class="guide-text" id="guide-text">Click any card to view full details.</p></div>
+<button type="button" class="audio-btn" id="audio-btn" onclick="toggleSound()">&#9654; Ambient Sound</button>
+<audio id="sound" loop><source src="image/Expidition PH ost.mp3" type="audio/mpeg"></audio>
+
+<footer>
+  <div><div class="footer-brand-name">Expedition PH</div><p class="footer-tagline">A digital exploration of the Philippine archipelago's natural heritage.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="regions.html">Island Groups</a></li><li><a href="flora.html">Flora</a></li><li><a href="fauna.html">Fauna</a></li><li><a href="geology.html">Geology</a></li></ul></div>
+  <div><h4>Fauna</h4><ul><li><a href="birds.html">Birds</a></li><li><a href="mammals.html">Mammals</a></li><li><a href="reptiles.html">Reptiles</a></li><li><a href="marine.html">Marine</a></li><li><a href="insects.html">Insects</a></li><li><a href="freshwater.html">Freshwater</a></li><li><a href="extinct.html">Lost Species</a></li></ul></div>
+  <div><h4>Discover</h4><ul><li><a href="places.html">Places</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="species.html">Species Index</a></li><li><a href="protected-areas.html">Protected Areas</a></li></ul></div>
+  <div><h4>About</h4><ul><li><a href="exhibits.html">Exhibits</a></li><li><a href="visit.html">About This Project</a></li></ul></div>
+</footer>
+<div class="footer-bottom"><span>&copy; 2025 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
+
+<script src="museum.js"></script>
+</body>
+</html>

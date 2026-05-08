@@ -1,0 +1,485 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geology · Expedition PH: Natural History</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="museum.css">
+<style>
+.two-col { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: start; }
+@media(max-width:900px){ .two-col { grid-template-columns:1fr; gap:3rem; } }
+
+/* ── Unique Sites Grid ── */
+.sites-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem; margin-top: 3rem;
+}
+.site-card {
+  display: flex; flex-direction: column;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.site-card:hover {
+  border-color: rgba(201,168,76,0.3);
+  background: rgba(201,168,76,0.03);
+}
+.site-img-wrap {
+  position: relative; overflow: hidden; flex-shrink: 0;
+}
+.site-img-wrap img {
+  width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block;
+  transition: transform 0.4s ease;
+}
+.site-card:hover .site-img-wrap img { transform: scale(1.03); }
+.site-tag {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 0.4rem 0.8rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.75));
+  font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+}
+.site-body { padding: 1.3rem 1.4rem 1.5rem; display: flex; flex-direction: column; flex: 1; }
+.site-category {
+  font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.4rem;
+}
+.site-name {
+  font-family: 'Merriweather', serif; font-size: 1.1rem; font-weight: 700;
+  line-height: 1.3; margin-bottom: 0.7rem;
+}
+.site-desc {
+  font-size: 0.82rem; line-height: 1.8; color: var(--dim); flex: 1;
+  margin-bottom: 1rem;
+}
+.site-unique-label {
+  font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.35rem;
+}
+.site-unique-text {
+  font-size: 0.78rem; line-height: 1.65; color: rgba(255,255,255,0.55);
+  font-style: italic;
+  padding-left: 0.8rem; border-left: 2px solid rgba(201,168,76,0.3);
+}
+
+@media(max-width:900px){ .sites-grid { grid-template-columns: 1fr; } }
+@media(max-width:600px){ .site-name { font-size: 1rem; } }
+</style>
+</head>
+<body>
+
+<header id="header">
+  <a href="index.html" class="header-logo">Expedition PH</a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="regions.html">Island Groups</a>
+    <a href="flora.html">Flora</a>
+    <a href="fauna.html">Fauna</a>
+    <a href="geology.html" class="active">Geology</a>
+    <a href="places.html">Places</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="history.html">History</a>
+      <a href="exhibits.html">Exhibits</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <img class="page-hero-img" src="image/Mayon Volcano.png" alt="Philippine volcano">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-inner">
+    <p class="page-eyebrow">Earth &amp; Deep Time</p>
+    <h1 class="page-title">Geology of the <em>Archipelago</em></h1>
+    <p class="page-desc">65 million years of tectonic collision, volcanic eruption, and biological isolation — the Philippine archipelago is one of the most geologically dramatic places on Earth.</p>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item reveal"><span class="stat-num" data-target="65">0</span><span class="stat-lbl">Million Years Old</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="300">0</span><span class="stat-lbl">Volcanoes Total</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="24">0</span><span class="stat-lbl">Active Volcanoes</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="7641">0</span><span class="stat-lbl">Islands</span></div>
+</div>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Deep Time &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<!-- TIMELINE + FEATURED -->
+<section class="section section-dark2">
+  <p class="section-eyebrow reveal">65 Million Years</p>
+  <h2 class="section-title reveal">The Story of an <em>Archipelago</em></h2>
+  <p class="section-body reveal">Tectonic collisions, rising seas, ancient migrations, and explosive evolution — the Philippine islands have one of the most dramatic natural histories on Earth.</p>
+
+  <div class="two-col reveal">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-year">65 Million Years Ago · Paleocene</div>
+        <div class="tl-event">The Proto-Philippine Sea</div>
+        <p class="tl-desc">Tectonic plates collide in the western Pacific. Volcanic island arcs emerge from the sea, laying the geological foundation for what will become one of the world's most biodiverse regions.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">30 Million Years Ago · Oligocene</div>
+        <div class="tl-event">Collision &amp; Uplift</div>
+        <p class="tl-desc">The Philippine Sea Plate collides with the Eurasian Plate. Mountain ranges begin to form. Limestone deposits from ancient coral reefs are lifted above sea level, creating the karst landscapes of Palawan and Bohol.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">20 Million Years Ago · Miocene</div>
+        <div class="tl-event">Land Bridges &amp; First Fauna</div>
+        <p class="tl-desc">Periodic land connections allow the first land animals to colonize the islands from mainland Asia. Ancient elephants (Stegodon), giant tortoises, and early primates make landfall.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2 Million Years Ago · Pleistocene</div>
+        <div class="tl-event">Islands of Isolation</div>
+        <p class="tl-desc">Rising seas permanently separate the islands. Isolated populations evolve rapidly into new endemic species — the origin of the Philippines' extraordinary biodiversity. This is when the Philippine Eagle lineage begins.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">10,000 Years Ago · Holocene</div>
+        <div class="tl-event">The Tubataha Reef Forms</div>
+        <p class="tl-desc">Post-glacial sea levels stabilise. The Philippines sits at the apex of the Tubataha Reef — 76% of all known coral species, 37% of reef fish species, in one of Earth's most productive marine ecosystems.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1991</div>
+        <div class="tl-event">Pinatubo Erupts</div>
+        <p class="tl-desc">The second-largest volcanic eruption of the 20th century. Mount Pinatubo ejects 10 cubic kilometres of material, temporarily cooling global temperatures and reshaping the landscape of Central Luzon.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">Today</div>
+        <div class="tl-event">A Living Volcano Nation</div>
+        <p class="tl-desc">The Philippines remains one of the most volcanically active nations on Earth — sitting on the Pacific Ring of Fire, with 24 active volcanoes and continuous seismic activity shaping its coasts and mountains.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="card card-mb" onclick="openCard(this)">
+        <img src="image/Mayon Volcano.png" alt="Mayon Volcano" loading="lazy">
+        <div class="card-body">
+          <div class="card-tag">Active Volcano</div>
+          <div class="card-title">Mayon Volcano</div>
+          <p class="card-desc">The world's most perfect volcanic cone rises 2,462m above Albay province. Active and beautiful — erupting over 50 times in recorded history. The surrounding biosphere reserve shelters remarkable endemic life.</p>
+        </div>
+      </div>
+      <div class="card" onclick="openCard(this)">
+        <img src="image/Taal.png" alt="Taal Volcano" loading="lazy">
+        <div class="card-body">
+          <div class="card-tag">Caldera Lake</div>
+          <div class="card-title">Taal Volcano</div>
+          <p class="card-desc">A volcanic island within a lake, within an island. One of the world's smallest active volcanoes — yet Taal's 2020 eruption was among the Philippines' most dramatic in decades.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Geological Features &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<!-- GEOLOGICAL FEATURES -->
+<section class="section">
+  <p class="section-eyebrow reveal">The Collection</p>
+  <h2 class="section-title reveal">Volcanoes, Karst &amp; <em>Coral</em></h2>
+  <p class="section-body reveal">From the Ring of Fire to the world's most biodiverse marine system — the Philippine geological story spans the full drama of Earth science.</p>
+
+  <div class="filter-bar reveal">
+    <button class="filter-btn active" onclick="filterCards('all',this)">All</button>
+    <button class="filter-btn" onclick="filterCards('volcano',this)">Volcanoes</button>
+    <button class="filter-btn" onclick="filterCards('karst',this)">Karst &amp; Cave</button>
+    <button class="filter-btn" onclick="filterCards('marine',this)">Marine Geology</button>
+    <button class="filter-btn" onclick="filterCards('mountain',this)">Mountains</button>
+  </div>
+
+  <div class="grid grid-3 reveal">
+
+    <div class="card filterable" data-category="volcano" onclick="openCard(this)" data-funfact="Mayon's near-perfect cone shape is maintained because it erupts frequently from a single central vent, building up symmetrically each time. It has erupted over 50 times in recorded history — and is still going.">
+      <img src="image/Mayon Volcano.png" alt="Mayon" loading="lazy">
+      <div class="card-body"><div class="card-tag">Active Volcano</div><div class="card-title">Mayon Volcano</div><p class="card-desc">2,462m. The world's most symmetrical volcanic cone. Over 50 recorded eruptions. Surrounded by a UNESCO biosphere reserve rich in endemic life.</p></div>
+    </div>
+
+    <div class="card filterable" data-category="volcano" onclick="openCard(this)" data-funfact="Taal is a volcano on an island in a lake on a larger island — making it one of the world's most unusual geological formations. The lake inside its crater is one of the most acidic natural bodies of water on Earth.">
+      <img src="image/Taal.png" alt="Taal" loading="lazy">
+      <div class="card-body"><div class="card-tag">Caldera · Active</div><div class="card-title">Taal Volcano</div><p class="card-desc">A lake within a crater within a lake — Taal is one of the Philippines' most unique geological formations and one of the world's most dangerous volcanoes per area.</p></div>
+    </div>
+
+    <div class="card filterable" data-category="mountain" onclick="openCard(this)" data-funfact="Mount Apo means 'grandfather' or 'master' in several Mindanao languages. Its summit has active sulfur vents and steam fumaroles — you can sometimes see the volcano breathing.">
+      <img src="image/Mt. Apo.png" alt="Mount Apo" loading="lazy">
+      <div class="card-body"><div class="card-tag">Highest Peak</div><div class="card-title">Mount Apo</div><p class="card-desc">At 2,954m, Mount Apo is the Philippines' highest peak and the home of the Philippine Eagle. Its slopes shelter ancient rainforests and a remarkable diversity of highland endemic species.</p></div>
+    </div>
+
+    <div class="card filterable" data-category="karst" onclick="openCard(this)" data-funfact="The karst caves of Palawan have their own unique ecosystems — species of spiders, crabs, and fish that evolved in complete darkness, never found anywhere else on Earth. Some caves have never been fully explored.">
+      <img src="image/Palawan Karst.png" alt="Limestone Karst" loading="lazy">
+      <div class="card-body"><div class="card-tag">Karst · Limestone</div><div class="card-title">Palawan Karst</div><p class="card-desc">Ancient coral reefs lifted over millions of years form the dramatic limestone towers of Palawan. Riddled with caves sheltering endemic cave fauna and the UNESCO-listed Underground River.</p></div>
+    </div>
+
+    <div class="card filterable" data-category="karst" onclick="openCard(this)" data-funfact="In the dry season, all 1,700+ Chocolate Hills turn the same shade of brown simultaneously — as their grass dries out at the same rate due to the identical limestone composition beneath each mound.">
+      <img src="image/Chocolate hills.png" alt="Chocolate Hills" loading="lazy">
+      <div class="card-body"><div class="card-tag">Karst Mounds</div><div class="card-title">Chocolate Hills</div><p class="card-desc">Over 1,700 conical limestone mounds, turning chocolate brown in the dry season. A geological wonder of Bohol — formed by the weathering of marine limestone over millions of years.</p></div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="The Philippines sits at the very apex of the Tubataha Reef — the region with the highest marine biodiversity on Earth. More species of coral, fish, and sea turtles live here than anywhere else in the ocean.">
+      <img src="image/Tubataha reef.png" alt="Tubataha Reef" loading="lazy">
+      <div class="card-body"><div class="card-tag">Marine Geology</div><div class="card-title">Tubataha Reef</div><p class="card-desc">The planet's most biodiverse marine ecosystem. Built over millennia on volcanic seamounts, the reefs of the Philippines host 76% of all known coral species.</p></div>
+    </div>
+
+    <div class="card filterable" data-category="marine" onclick="openCard(this)" data-funfact="If you dropped Mount Everest into the Philippine Trench, its peak would still be more than 2 km underwater. The pressure at the bottom is over 1,000 times the pressure at sea level — yet life still exists there.">
+      <img src="image/Philippine Trench.png" alt="Philippine Trench" loading="lazy">
+      <div class="card-body"><div class="card-tag">Ocean Trench</div><div class="card-title">Philippine Trench</div><p class="card-desc">At 10,540m deep, the Philippine Trench is the third-deepest point on Earth. Formed by the subduction of the Philippine Sea Plate — the same tectonic force that created the entire archipelago.</p></div>
+    </div>
+
+    <div class="card filterable" data-category="volcano" onclick="openCard(this)" data-funfact="Pinatubo's 1991 eruption lowered global temperatures by 0.5°C for nearly two years by injecting 20 million tonnes of sulfur dioxide into the stratosphere. The crater lake that formed afterward is now one of the most beautiful in Asia.">
+      <img src="image/Mt. Pinatubo.png" alt="Mount Pinatubo" loading="lazy">
+      <div class="card-body"><div class="card-tag">Volcano · Historic</div><div class="card-title">Mount Pinatubo</div><p class="card-desc">The 1991 eruption was the 20th century's second-largest. The crater lake formed in the caldera is now a destination of extraordinary beauty — turquoise against grey volcanic rock.</p></div>
+    </div>
+
+    <div class="card filterable" data-category="mountain" onclick="openCard(this)" data-funfact="On clear mornings at Mount Pulag, the cloud sea below the summit looks like a white ocean stretching to the horizon. The Ibaloi people call it the 'Playground of the Gods' and consider it sacred ground.">
+      <img src="image/Mt. Pulag.png" alt="Mount Pulag" loading="lazy">
+      <div class="card-body"><div class="card-tag">Mountain · Cordillera</div><div class="card-title">Mount Pulag</div><p class="card-desc">At 2,922m, Mount Pulag is Luzon's highest peak. Its summit is home to a rare dwarf bamboo grassland — a high-altitude ecosystem found only in the Philippine highlands.</p></div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Unique Geological &amp; Natural Sites &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<!-- UNIQUE NATURAL SITES -->
+<section class="section section-dark2">
+  <p class="section-eyebrow reveal">Natural Wonders</p>
+  <h2 class="section-title reveal">Sites Found <em>Nowhere Else</em></h2>
+  <p class="section-body reveal">The Philippines holds natural phenomena so unusual — so specific to their place — that they defy easy categorisation. These are the sites that leave scientists, explorers, and travellers without words.</p>
+
+  <div class="sites-grid reveal">
+
+    <div class="site-card" onclick="openSite(this)"
+      data-img="image/Palawan Underground River.png"
+      data-unique="The cave ceiling reaches 60 metres — tall enough to fit a 20-storey building. Its deepest chambers are completely unexplored and home to species seen nowhere else on Earth.">
+      <div class="site-img-wrap">
+        <img src="image/Palawan Underground River.png" alt="Puerto Princesa Underground River" loading="lazy">
+        <div class="site-tag">Palawan · UNESCO World Heritage</div>
+      </div>
+      <div class="site-body">
+        <div class="site-category">Karst · Underground River</div>
+        <div class="site-name">Puerto Princesa Underground River</div>
+        <p class="site-desc">At 8.2 km, one of the world's longest navigable underground rivers flows through a limestone mountain straight into the sea. Inside its cathedral-like chambers, stalactites the size of trees hang above a river that has flowed in complete darkness for millions of years.</p>
+        <div class="site-unique-label">&#9670; What Makes It Unique</div>
+        <p class="site-unique-text">One of only two navigable underground rivers in the world that empties directly into the sea — creating a tidal pulse inside the cave.</p>
+      </div>
+    </div>
+
+    <div class="site-card" onclick="openSite(this)"
+      data-img="image/Hinatuan Enchanted River.png"
+      data-unique="Divers have followed the river to depths beyond 80 metres without finding its bottom or source. Its colour cannot be explained by any known geological process at the surface.">
+      <div class="site-img-wrap">
+        <img src="image/Hinatuan Enchanted River.png" alt="Hinatuan Enchanted River" loading="lazy">
+        <div class="site-tag">Surigao del Sur · CARAGA</div>
+      </div>
+      <div class="site-body">
+        <div class="site-category">River · Geological Anomaly</div>
+        <div class="site-name">Hinatuan Enchanted River</div>
+        <p class="site-desc">A short river of impossible blue — so deep and so clear that its bottom is invisible. Its water is brackish (part saltwater, part freshwater), yet the source of both the water and its extraordinary colour remains scientifically unexplained. Every day at noon, the caretaker plays music and the fish swarm upward from the depths.</p>
+        <div class="site-unique-label">&#9670; What Makes It Unique</div>
+        <p class="site-unique-text">No diver has ever found the source or the bottom. The river appears fully formed — as though the earth simply decided to place a deep, luminous pool at the edge of the jungle.</p>
+      </div>
+    </div>
+
+    <div class="site-card" onclick="openSite(this)"
+      data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Sohoton_Cove_National_Park%2C_Bucas_Grande_Island%2C_Surigao_del_Norte.jpg/1280px-Sohoton_Cove_National_Park%2C_Bucas_Grande_Island%2C_Surigao_del_Norte.jpg"
+      data-unique="The jellyfish have been isolated so long that they have lost their sting entirely — it is completely safe to swim among thousands of them in a lagoon hidden inside a limestone island.">
+      <div class="site-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Sohoton_Cove_National_Park%2C_Bucas_Grande_Island%2C_Surigao_del_Norte.jpg/1280px-Sohoton_Cove_National_Park%2C_Bucas_Grande_Island%2C_Surigao_del_Norte.jpg" alt="Sohoton Cove" loading="lazy">
+        <div class="site-tag">Surigao del Norte · CARAGA</div>
+      </div>
+      <div class="site-body">
+        <div class="site-category">Marine · Lagoon · Cave</div>
+        <div class="site-name">Sohoton Cove & Jellyfish Sanctuary</div>
+        <p class="site-desc">Deep inside limestone islands, a hidden lagoon accessible only through a submerged cave at low tide is home to millions of stingless jellyfish. The lagoon glows at night with bioluminescence. Ancient stalactites hang above the water; the jellyfish pulse below. It is one of the most surreal natural environments in Southeast Asia.</p>
+        <div class="site-unique-label">&#9670; What Makes It Unique</div>
+        <p class="site-unique-text">The lagoon can only be entered by diving under a submerged limestone arch — the entrance disappears completely at high tide. Only a handful of such stingless jellyfish sanctuaries exist in the world.</p>
+      </div>
+    </div>
+
+    <div class="site-card" onclick="openSite(this)"
+      data-img="image/Hundred Islands.png"
+      data-unique="Hundred Islands National Park actually contains 124 islands at low tide — though only about 123 remain at high tide. The park is one of the Philippines' oldest protected areas, declared a national park in 1940.">
+      <div class="site-img-wrap">
+        <img src="image/Hundred Islands.png" alt="Hundred Islands" loading="lazy">
+        <div class="site-tag">Pangasinan · Luzon</div>
+      </div>
+      <div class="site-body">
+        <div class="site-category">Karst · National Park</div>
+        <div class="site-name">Hundred Islands</div>
+        <p class="site-desc">A scattered archipelago of limestone karst islands in the Lingayen Gulf — shaped by millennia of wave action and coral uplift. The Philippines' third-oldest national park, sheltering reef fish, nesting seabirds, and centuries-old marine biodiversity.</p>
+        <div class="site-unique-label">&#9670; What Makes It Unique</div>
+        <p class="site-unique-text">Hundred Islands National Park actually contains 124 islands at low tide — though only about 123 remain at high tide. The park is one of the Philippines' oldest protected areas, declared a national park in 1940.</p>
+      </div>
+    </div>
+
+    <div class="site-card" onclick="openSite(this)"
+      data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Kayangan_lake_coron_palawan.jpg/1280px-Kayangan_lake_coron_palawan.jpg"
+      data-unique="Kayangan Lake is one of the cleanest lakes in Asia — its water is so clear you can see 10 metres into it. The lake fills an ancient coral reef tower that was lifted above sea level millions of years ago.">
+      <div class="site-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Kayangan_lake_coron_palawan.jpg/1280px-Kayangan_lake_coron_palawan.jpg" alt="Kayangan Lake Coron" loading="lazy">
+        <div class="site-tag">Coron · Palawan · MIMAROPA</div>
+      </div>
+      <div class="site-body">
+        <div class="site-category">Karst Lake · Freshwater</div>
+        <div class="site-name">Kayangan Lake, Coron</div>
+        <p class="site-desc">A freshwater lake cupped inside an ancient limestone mountain — a coral reef tower that the sea lifted above the surface millions of years ago. The lake is reached by climbing over a limestone ridge and descending into a world of mirror-still water, towering karst walls, and submerged stalactites. One of the cleanest freshwater lakes in Asia.</p>
+        <div class="site-unique-label">&#9670; What Makes It Unique</div>
+        <p class="site-unique-text">The lake sits inside what was once a coral reef — now 50 metres above sea level. Below its surface, ancient coral formations and submerged stalactites create an underwater landscape unlike anything else in the Philippines.</p>
+      </div>
+    </div>
+
+    <div class="site-card" onclick="openSite(this)"
+      data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Mount_Hamiguitan_Range_Wildlife_Sanctuary_view_from_summit.jpg/1280px-Mount_Hamiguitan_Range_Wildlife_Sanctuary_view_from_summit.jpg"
+      data-unique="Mount Hamiguitan's pygmy forest — trees that should grow 30 metres tall but grow only knee-high due to the toxic, nutrient-poor ultramafic soil — is found nowhere else in the Philippines.">
+      <div class="site-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Mount_Hamiguitan_Range_Wildlife_Sanctuary_view_from_summit.jpg/1280px-Mount_Hamiguitan_Range_Wildlife_Sanctuary_view_from_summit.jpg" alt="Mount Hamiguitan" loading="lazy">
+        <div class="site-tag">Davao Oriental · UNESCO World Heritage</div>
+      </div>
+      <div class="site-body">
+        <div class="site-category">Mountain · Ultramafic · UNESCO</div>
+        <div class="site-name">Mount Hamiguitan Range</div>
+        <p class="site-desc">A pyramid-shaped mountain rising from the sea in Davao Oriental, built on ultramafic rock — ancient ocean crust so toxic and nutrient-poor that most plants cannot survive on it. Those that can have evolved into bizarre, miniaturised forms found nowhere else on Earth: a pygmy forest of bonsai-like trees, carnivorous pitcher plants, and thousands of orchid species compressed into one extraordinary ridge.</p>
+        <div class="site-unique-label">&#9670; What Makes It Unique</div>
+        <p class="site-unique-text">The ultramafic soil of Hamiguitan is high in heavy metals and almost entirely lacking in nutrients — creating an evolutionary pressure cooker that has produced over 1,500 endemic plant species on a single mountain.</p>
+      </div>
+    </div>
+
+    <div class="site-card" onclick="openSite(this)"
+      data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Tubbataha_reef.jpg/1280px-Tubbataha_reef.jpg"
+      data-unique="Tubbataha is accessible for only 3 months per year due to the Sulu Sea's prevailing winds — an accidental protection that has kept it among the most pristine reef systems on Earth.">
+      <div class="site-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Tubbataha_reef.jpg/1280px-Tubbataha_reef.jpg" alt="Tubbataha Reef" loading="lazy">
+        <div class="site-tag">Sulu Sea · Palawan · UNESCO World Heritage</div>
+      </div>
+      <div class="site-body">
+        <div class="site-category">Marine · Atoll · UNESCO</div>
+        <div class="site-name">Tubbataha Reef Natural Park</div>
+        <p class="site-desc">Two coral atolls rising from the floor of the Sulu Sea — 150 km from the nearest land, accessible only by liveaboard vessel. Tubbataha shelters 360 coral species, 600 fish species, 11 shark species, and 100 bird species on two atolls that together measure barely 100 hectares above water. Below the surface lies an undisturbed reef ecosystem of extraordinary completeness.</p>
+        <div class="site-unique-label">&#9670; What Makes It Unique</div>
+        <p class="site-unique-text">Tubbataha is considered the best reference reef in the Philippines — a baseline of what Philippine reefs looked like before human impact. Its shark populations are among the densest in Southeast Asia.</p>
+      </div>
+    </div>
+
+    <div class="site-card" onclick="openSite(this)"
+      data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Inside_Langun_Gobingob_Cave.jpg/1280px-Inside_Langun_Gobingob_Cave.jpg"
+      data-unique="The main chamber of Langun-Gobingob is large enough to land a helicopter inside — and still has floor area to spare. Much of the system has never been explored by humans.">
+      <div class="site-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Inside_Langun_Gobingob_Cave.jpg/1280px-Inside_Langun_Gobingob_Cave.jpg" alt="Langun-Gobingob Cave" loading="lazy">
+        <div class="site-tag">Samar · Eastern Visayas</div>
+      </div>
+      <div class="site-body">
+        <div class="site-category">Cave System · Limestone</div>
+        <div class="site-name">Langun-Gobingob Cave System</div>
+        <p class="site-desc">One of the largest cave systems in Asia — a 2.9 km² labyrinth of chambers, underground rivers, and passages beneath the limestone mountains of Samar Island. Its main chamber is so large it creates its own microclimate: clouds form inside the cave and it rains underground. The cave shelters unique endemic invertebrates and has been inhabited by humans since prehistoric times.</p>
+        <div class="site-unique-label">&#9670; What Makes It Unique</div>
+        <p class="site-unique-text">The cave is so large it contains its own weather system. Clouds form inside the main chamber — and on some days, it rains within the cave while the sky outside is clear.</p>
+      </div>
+    </div>
+
+    <div class="site-card" onclick="openSite(this)"
+      data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/ApoReef2.jpg/1280px-ApoReef2.jpg"
+      data-unique="Apo Reef is one of the few remaining reef systems in the Philippines large enough to be self-sustaining — its fish populations reproduce faster than they can be depleted, if protected.">
+      <div class="site-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/ApoReef2.jpg/1280px-ApoReef2.jpg" alt="Apo Reef" loading="lazy">
+        <div class="site-tag">Mindoro Strait · MIMAROPA</div>
+      </div>
+      <div class="site-body">
+        <div class="site-category">Marine · Coral Reef</div>
+        <div class="site-name">Apo Reef Natural Park</div>
+        <p class="site-desc">The second-largest contiguous coral reef in the world — a 34 km² platform reef rising from the deep waters of the Mindoro Strait. Unlike the patchwork reefs of the coastline, Apo Reef is a single unbroken expanse of living coral, home to sea turtles, reef sharks, manta rays, and over 500 species of fish. It sits in one of the world's most important cetacean migration corridors.</p>
+        <div class="site-unique-label">&#9670; What Makes It Unique</div>
+        <p class="site-unique-text">Apo Reef rises from water over 2,000 metres deep — an isolated submarine plateau that has grown, layer by layer, for hundreds of thousands of years. It is one of the last truly intact large reef platforms in Asia.</p>
+      </div>
+    </div>
+
+    <div class="site-card" onclick="openSite(this)"
+      data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Magpupungko_Tidal_Pools.jpg/1280px-Magpupungko_Tidal_Pools.jpg"
+      data-unique="At low tide, the rock pools reveal a labyrinth of natural basins carved over millions of years by the combined force of waves and rock. At high tide, every pool vanishes beneath the Pacific.">
+      <div class="site-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Magpupungko_Tidal_Pools.jpg/1280px-Magpupungko_Tidal_Pools.jpg" alt="Magpupungko Rock Pools" loading="lazy">
+        <div class="site-tag">Siargao · CARAGA</div>
+      </div>
+      <div class="site-body">
+        <div class="site-category">Coastal · Tidal Platform</div>
+        <div class="site-name">Magpupungko Rock Pools</div>
+        <p class="site-desc">A vast volcanic rock platform on the Pacific coast of Siargao that is completely submerged at high tide — and transforms into a landscape of crystal-clear tidal pools at low. Carved by millions of years of Pacific wave action into a maze of natural basins, each pool holds its own miniature ecosystem: sea urchins, starfish, small reef fish, and invertebrates stranded by the retreating ocean.</p>
+        <div class="site-unique-label">&#9670; What Makes It Unique</div>
+        <p class="site-unique-text">The site exists only for 4–5 hours a day during low tide. At all other times, it is open ocean. The timing of each visit depends entirely on the moon.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div id="site-modal" class="modal">
+  <div class="modal-card">
+    <button type="button" class="modal-close" onclick="closeSiteModal()">&#x2715;</button>
+    <div class="modal-card-img"><img id="site-modal-img" src="" alt=""></div>
+    <div class="modal-card-body">
+      <div class="modal-card-tag" id="site-modal-tag"></div>
+      <div class="modal-card-title" id="site-modal-title"></div>
+      <p class="modal-card-desc" id="site-modal-desc"></p>
+      <div id="site-modal-unique" class="modal-card-funfact">
+        <div class="modal-card-funfact-label">&#9670; What Makes It Unique</div>
+        <p class="modal-card-funfact-text" id="site-modal-unique-text"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-card">
+    <button type="button" class="modal-close" onclick="closeModal()">&#x2715;</button>
+    <div class="modal-card-img"><img id="modal-img" src="" alt=""></div>
+    <div class="modal-card-body">
+      <div class="modal-card-tag" id="modal-tag"></div>
+      <div class="modal-card-title" id="modal-title"></div>
+      <p class="modal-card-desc" id="modal-desc"></p>
+      <span id="modal-status" class="modal-status-hidden"></span>
+      <div id="modal-funfact" class="modal-card-funfact modal-status-hidden">
+        <div class="modal-card-funfact-label">&#9670; Fun Fact</div>
+        <p class="modal-card-funfact-text" id="modal-funfact-text"></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="guide"><div class="guide-title">&#9670; Geology Guide</div><p class="guide-text" id="guide-text">Scroll the timeline or filter geological features below.</p></div>
+<button class="audio-btn" id="audio-btn" onclick="toggleSound()">&#9654; Ambient Sound</button>
+<audio id="sound" loop><source src="image/Expidition PH ost.mp3" type="audio/mpeg"></audio>
+
+<footer>
+  <div><div class="footer-brand-name">Expedition PH</div><p class="footer-tagline">A digital exploration of the Philippine archipelago's natural heritage.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="regions.html">Island Groups</a></li><li><a href="flora.html">Flora</a></li><li><a href="fauna.html">Fauna</a></li><li><a href="geology.html">Geology</a></li></ul></div>
+  <div><h4>Fauna</h4><ul><li><a href="birds.html">Birds</a></li><li><a href="mammals.html">Mammals</a></li><li><a href="reptiles.html">Reptiles</a></li><li><a href="marine.html">Marine</a></li><li><a href="insects.html">Insects</a></li><li><a href="freshwater.html">Freshwater</a></li><li><a href="extinct.html">Lost Species</a></li></ul></div>
+  <div><h4>Discover</h4><ul><li><a href="places.html">Places</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="species.html">Species Index</a></li><li><a href="protected-areas.html">Protected Areas</a></li></ul></div>
+  <div><h4>About</h4><ul><li><a href="exhibits.html">Exhibits</a></li><li><a href="visit.html">About This Project</a></li></ul></div>
+</footer>
+<div class="footer-bottom"><span>&copy; 2025 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
+
+<script src="museum.js"></script>
+<script>
+function openSite(card) {
+  var img    = card.dataset.img   || '';
+  var unique = card.dataset.unique || '';
+  var tag    = card.querySelector('.site-tag').textContent;
+  var name   = card.querySelector('.site-name').textContent;
+  var desc   = card.querySelector('.site-desc').textContent;
+
+  document.getElementById('site-modal-img').src         = img;
+  document.getElementById('site-modal-img').alt         = name;
+  document.getElementById('site-modal-tag').textContent = tag;
+  document.getElementById('site-modal-title').textContent = name;
+  document.getElementById('site-modal-desc').textContent  = desc;
+  document.getElementById('site-modal-unique-text').textContent = unique;
+
+  document.getElementById('site-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeSiteModal() {
+  document.getElementById('site-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('site-modal').addEventListener('click', function(e){
+  if (e.target === this) closeSiteModal();
+});
+</script>
+</body>
+</html>

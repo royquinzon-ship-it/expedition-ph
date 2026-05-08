@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery · Expedition PH: Natural History</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="museum.css">
+<style>
+.gal-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; }
+.gal-grid .gal-item:nth-child(1) { grid-column:span 2; grid-row:span 2; }
+.gal-grid .gal-item:nth-child(7) { grid-column:span 2; }
+.gal-grid .gal-item img { width:100%; height:240px; object-fit:cover; display:block; transition:transform 0.5s; }
+.gal-grid .gal-item:nth-child(1) img { height:100%; min-height:490px; }
+.gal-grid .gal-item:nth-child(7) img { height:240px; }
+.gal-grid .gal-item:hover img { transform:scale(1.04); }
+@media(max-width:900px){ .gal-grid { grid-template-columns:repeat(2,1fr); } .gal-grid .gal-item:nth-child(1){ grid-column:span 2; } .gal-grid .gal-item:nth-child(1) img { min-height:300px; } }
+@media(max-width:600px){ .gal-grid { grid-template-columns:1fr; } .gal-grid .gal-item:nth-child(1), .gal-grid .gal-item:nth-child(7){ grid-column:span 1; } }
+</style>
+</head>
+<body>
+
+<header id="header">
+  <a href="index.html" class="header-logo">Expedition PH</a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="regions.html">Island Groups</a>
+    <a href="flora.html">Flora</a>
+    <a href="fauna.html">Fauna</a>
+    <a href="geology.html">Geology</a>
+    <a href="places.html">Places</a>
+    <a href="gallery.html" class="active">Gallery</a>
+      <a href="exhibits.html">Exhibits</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <img class="page-hero-img" src="image/Tubataha reef.png" alt="Philippine reef">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-inner">
+    <p class="page-eyebrow">Visual Archive</p>
+    <h1 class="page-title">The <em>Gallery</em></h1>
+    <p class="page-desc">Landscapes, specimens, and living records from across the Philippine archipelago — from the cloud forests of the Cordillera to the reefs of the Sulu Sea.</p>
+  </div>
+</div>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Flora &amp; Fauna &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<!-- ROW 1 -->
+<section class="section section-dark2">
+  <p class="section-eyebrow reveal">Life in the Islands</p>
+  <h2 class="section-title reveal">Flora &amp; <em>Fauna</em></h2>
+  <div class="filter-bar reveal">
+    <button class="filter-btn active" onclick="filterMasonry('all',this)">All</button>
+    <button class="filter-btn" onclick="filterMasonry('flora',this)">Flora</button>
+    <button class="filter-btn" onclick="filterMasonry('fauna',this)">Fauna</button>
+    <button class="filter-btn" onclick="filterMasonry('marine',this)">Marine</button>
+    <button class="filter-btn" onclick="filterMasonry('landscape',this)">Landscape</button>
+  </div>
+  <div class="gal-grid reveal" id="gallery-grid">
+    <div class="gal-item filterable" data-category="flora" onclick="openModal('image/Palawan.png','Palawan Rainforest · Flora')">
+      <img src="image/Palawan.png" alt="Palawan Rainforest" loading="lazy">
+      <div class="gal-overlay"><span class="gal-caption">Palawan Rainforest · Flora</span></div>
+    </div>
+    <div class="gal-item filterable" data-category="marine" onclick="openModal('image/Tubataha reef.png','Tubbataha Reef · Marine')">
+      <img src="image/Tubataha reef.png" alt="Tubbataha Reef" loading="lazy">
+      <div class="gal-overlay"><span class="gal-caption">Tubbataha Reef · Marine</span></div>
+    </div>
+    <div class="gal-item filterable" data-category="fauna" onclick="openModal('image/Agila.jpg','Philippine Eagle · Fauna · Mindanao')">
+      <img src="image/Agila.jpg" alt="Philippine Eagle" loading="lazy">
+      <div class="gal-overlay"><span class="gal-caption">Philippine Eagle · Fauna · Mindanao</span></div>
+    </div>
+    <div class="gal-item filterable" data-category="landscape" onclick="openModal('image/Mayon Volcano.png','Mount Mayon · Geology · Bicol')">
+      <img src="image/Mayon Volcano.png" alt="Mount Mayon" loading="lazy">
+      <div class="gal-overlay"><span class="gal-caption">Mount Mayon · Geology · Bicol</span></div>
+    </div>
+    <div class="gal-item filterable" data-category="marine" onclick="openModal('image/Dugong.jpg','Coral Triangle Life · Marine · Visayas')">
+      <img src="image/Dugong.jpg" alt="Coral Triangle" loading="lazy">
+      <div class="gal-overlay"><span class="gal-caption">Coral Triangle Life · Marine · Visayas</span></div>
+    </div>
+    <div class="gal-item filterable" data-category="fauna" onclick="openModal('image/Philippine sailfin lizard.png','Sailfin Lizard · Fauna · Luzon')">
+      <img src="image/Philippine sailfin lizard.png" alt="Sailfin Lizard" loading="lazy">
+      <div class="gal-overlay"><span class="gal-caption">Sailfin Lizard · Fauna · Luzon</span></div>
+    </div>
+    <div class="gal-item filterable" data-category="flora" onclick="openModal('https://picsum.photos/seed/ph-g7/1400/900','Waling-Waling Orchid · Flora · Mindanao')">
+      <img src="https://picsum.photos/seed/ph-g7/600/400" alt="Waling-Waling" loading="lazy">
+      <div class="gal-overlay"><span class="gal-caption">Waling-Waling Orchid · Flora · Mindanao</span></div>
+    </div>
+    <div class="gal-item filterable" data-category="fauna" onclick="openModal('image/Tarsier.jpg','Philippine Tarsier · Fauna · Bohol')">
+      <img src="image/Tarsier.jpg" alt="Philippine Tarsier" loading="lazy">
+      <div class="gal-overlay"><span class="gal-caption">Philippine Tarsier · Fauna · Bohol</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Landscapes &amp; Marine &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<!-- ROW 2 - masonry -->
+<section class="section">
+  <p class="section-eyebrow reveal">Deeper Waters</p>
+  <h2 class="section-title reveal">Marine &amp; <em>Highland</em></h2>
+  <p class="section-body reveal">From the world's deepest oceanic trenches to misty cloud forests above 1,500 metres.</p>
+  <div class="masonry reveal">
+    <div class="gal-item" onclick="openModal('image/Tamaraw.jpg','Tamaraw · Fauna · Mindoro')">
+      <img src="image/Tamaraw.jpg" alt="Tamaraw" loading="lazy">
+      <div class="gal-overlay"><span class="gal-caption">Tamaraw · Fauna · Mindoro</span></div>
+    </div>
+    <div class="gal-item" onclick="openModal('image/Dugong.jpg','Irrawaddy Dolphin · Marine · Palawan')">
+      <img src="image/Dugong.jpg" alt="Irrawaddy Dolphin" loading="lazy">
+      <div class="gal-overlay"><span class="gal-caption">Irrawaddy Dolphin · Marine · Palawan</span></div>
+    </div>
+    <div class="gal-item" onclick="openModal('image/Mt. Pulag.png','Cordillera Highlands · Landscape · Benguet')">
+      <img src="image/Mt. Pulag.png" alt="Cordillera" loading="lazy">
+      <div class="gal-overlay"><span class="gal-caption">Cordillera Highlands · Landscape</span></div>
+    </div>
+    <div class="gal-item" onclick="openModal('image/Loro.jpg','Philippine Cockatoo · Fauna · Palawan')">
+      <img src="image/Loro.jpg" alt="Philippine Cockatoo" loading="lazy">
+      <div class="gal-overlay"><span class="gal-caption">Philippine Cockatoo · Fauna · Palawan</span></div>
+    </div>
+    <div class="gal-item" onclick="openModal('image/Palawan Underground River.png','Limestone Karst · Geology · Palawan')">
+      <img src="image/Palawan Underground River.png" alt="Limestone Karst" loading="lazy">
+      <div class="gal-overlay"><span class="gal-caption">Limestone Karst · Geology · Palawan</span></div>
+    </div>
+    <div class="gal-item" onclick="openModal('image/Luzon peacock swallowtail.png','Luzon Peacock Swallowtail · Fauna · Luzon')">
+      <img src="image/Luzon peacock swallowtail.png" alt="Luzon Swallowtail" loading="lazy">
+      <div class="gal-overlay"><span class="gal-caption">Luzon Peacock Swallowtail · Fauna</span></div>
+    </div>
+    <div class="gal-item" onclick="openModal('image/Palawan Underground River.png','Karst Caves · Geology · Palawan')">
+      <img src="image/Palawan Underground River.png" alt="Karst Caves" loading="lazy">
+      <div class="gal-overlay"><span class="gal-caption">Karst Caves · Geology · Palawan</span></div>
+    </div>
+    <div class="gal-item" onclick="openModal('https://picsum.photos/seed/ph-flora3/1400/900','Pitcher Plant · Flora · Palawan')">
+      <img src="https://picsum.photos/seed/ph-flora3/600/400" alt="Pitcher Plant" loading="lazy">
+      <div class="gal-overlay"><span class="gal-caption">Pitcher Plant · Flora · Palawan</span></div>
+    </div>
+    <div class="gal-item" onclick="openModal('image/Chocolate hills.png','Chocolate Hills · Geology · Bohol')">
+      <img src="image/Chocolate hills.png" alt="Chocolate Hills" loading="lazy">
+      <div class="gal-overlay"><span class="gal-caption">Chocolate Hills · Geology · Bohol</span></div>
+    </div>
+    <div class="gal-item" onclick="openModal('https://picsum.photos/seed/ph-mangrove/1400/900','Mangrove Forest · Flora · Palawan')">
+      <img src="https://picsum.photos/seed/ph-mangrove/600/400" alt="Mangrove Forest" loading="lazy">
+      <div class="gal-overlay"><span class="gal-caption">Mangrove Forest · Flora · Palawan</span></div>
+    </div>
+    <div class="gal-item" onclick="openModal('image/Whale Shark Butanding.png','Whale Shark · Marine · Donsol')">
+      <img src="image/Whale Shark Butanding.png" alt="Whale Shark" loading="lazy">
+      <div class="gal-overlay"><span class="gal-caption">Whale Shark · Marine · Donsol</span></div>
+    </div>
+    <div class="gal-item" onclick="openModal('image/Batanes.png','Batanes · Landscape · Northern Luzon')">
+      <img src="image/Batanes.png" alt="Batanes" loading="lazy">
+      <div class="gal-overlay"><span class="gal-caption">Batanes · Landscape · Northern Luzon</span></div>
+    </div>
+  </div>
+</section>
+
+<div id="modal" class="modal"><button class="modal-close" onclick="closeModal()">&#x2715;</button><img id="modal-img" src="" alt=""><p class="modal-caption" id="modal-caption"></p></div>
+<div class="guide"><div class="guide-title">&#9670; Gallery Guide</div><p class="guide-text" id="guide-text">Filter by category or click any image to view full size.</p></div>
+<button class="audio-btn" id="audio-btn" onclick="toggleSound()">&#9654; Ambient Sound</button>
+<audio id="sound" loop><source src="image/Expidition PH ost.mp3" type="audio/mpeg"></audio>
+
+<footer>
+  <div><div class="footer-brand-name">Expedition PH</div><p class="footer-tagline">A digital exploration of the Philippine archipelago's natural heritage.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="regions.html">Island Groups</a></li><li><a href="flora.html">Flora</a></li><li><a href="fauna.html">Fauna</a></li><li><a href="geology.html">Geology</a></li></ul></div>
+  <div><h4>Fauna</h4><ul><li><a href="birds.html">Birds</a></li><li><a href="mammals.html">Mammals</a></li><li><a href="reptiles.html">Reptiles</a></li><li><a href="marine.html">Marine</a></li><li><a href="insects.html">Insects</a></li><li><a href="freshwater.html">Freshwater</a></li><li><a href="extinct.html">Lost Species</a></li></ul></div>
+  <div><h4>Discover</h4><ul><li><a href="places.html">Places</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="species.html">Species Index</a></li><li><a href="protected-areas.html">Protected Areas</a></li></ul></div>
+  <div><h4>About</h4><ul><li><a href="exhibits.html">Exhibits</a></li><li><a href="visit.html">About This Project</a></li></ul></div>
+</footer>
+<div class="footer-bottom"><span>&copy; 2025 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
+
+<script src="museum.js"></script>
+<script>
+function filterMasonry(category, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#gallery-grid .filterable').forEach(item => {
+    item.style.display = (category === 'all' || item.dataset.category === category) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

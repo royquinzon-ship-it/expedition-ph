@@ -1,0 +1,852 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Protected Areas · Expedition PH: Natural History</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="museum.css">
+<style>
+/* ── Filter controls ── */
+.pa-controls {
+  display: flex; flex-wrap: wrap; gap: 1rem 1.5rem;
+  align-items: center; margin-bottom: 2.5rem;
+}
+.filter-group { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.filter-btn {
+  font-size: 0.62rem; letter-spacing: 0.13em; text-transform: uppercase;
+  padding: 0.35rem 0.9rem; background: none; cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.1); color: var(--dim);
+  transition: color 0.18s, border-color 0.18s, background 0.18s;
+}
+.filter-btn:hover  { color: #fff; border-color: rgba(255,255,255,0.3); }
+.filter-btn.active { color: var(--gold); border-color: rgba(201,168,76,0.55); background: rgba(201,168,76,0.06); }
+
+.pa-search {
+  margin-left: auto;
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.12);
+  color: #fff; font-family: 'Inter', sans-serif; font-size: 0.78rem;
+  padding: 0.45rem 0.9rem; outline: none; width: 220px;
+  transition: border-color 0.2s;
+}
+.pa-search::placeholder { color: var(--dim); }
+.pa-search:focus { border-color: rgba(201,168,76,0.4); }
+.pa-count {
+  font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--dim); width: 100%; margin-top: -0.5rem;
+}
+
+/* ── Grid ── */
+.pa-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.pa-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 1rem 1.1rem 0.9rem;
+  cursor: pointer; position: relative;
+  transition: border-color 0.2s, transform 0.18s;
+}
+.pa-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-2px); }
+
+/* Type badge */
+.pa-type-badge {
+  display: inline-block;
+  font-size: 0.5rem; letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 0.18rem 0.55rem; font-weight: 600; margin-bottom: 0.55rem;
+}
+.type-np   { background: rgba(67,170,139,0.18);  color: #43aa8b; border: 1px solid rgba(67,170,139,0.3); }
+.type-ws   { background: rgba(144,190,109,0.18); color: #90be6d; border: 1px solid rgba(144,190,109,0.3); }
+.type-mpa  { background: rgba(72,149,239,0.18);  color: #4895ef; border: 1px solid rgba(72,149,239,0.3); }
+.type-nba  { background: rgba(249,199,79,0.18);  color: #f9c74f; border: 1px solid rgba(249,199,79,0.3); }
+.type-gr   { background: rgba(201,168,76,0.18);  color: var(--gold); border: 1px solid rgba(201,168,76,0.3); }
+.type-wf   { background: rgba(168,218,220,0.18); color: #a8dadc; border: 1px solid rgba(168,218,220,0.3); }
+
+/* UNESCO tag */
+.pa-unesco {
+  position: absolute; top: 0.7rem; right: 0.7rem;
+  font-size: 0.5rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold); border: 1px solid rgba(201,168,76,0.35);
+  padding: 0.15rem 0.45rem;
+}
+
+.pa-name {
+  font-family: 'Merriweather', serif; font-size: 0.88rem;
+  font-weight: 700; line-height: 1.3; margin-bottom: 0.2rem;
+}
+.pa-province {
+  font-size: 0.62rem; color: var(--dim); letter-spacing: 0.04em; margin-bottom: 0.5rem;
+}
+.pa-meta {
+  display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center;
+  font-size: 0.6rem; color: rgba(255,255,255,0.35); letter-spacing: 0.05em;
+  border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.5rem; margin-top: 0.4rem;
+}
+.pa-meta span { white-space: nowrap; }
+
+/* Island group pills */
+.pa-island {
+  font-size: 0.5rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.1rem 0.4rem; border: 1px solid;
+}
+.isl-luzon    { color: #c9a84c; border-color: rgba(201,168,76,0.35); }
+.isl-visayas  { color: #4cb9c4; border-color: rgba(76,185,196,0.35); }
+.isl-mindanao { color: #c9784c; border-color: rgba(201,120,76,0.35); }
+
+.pa-no-results {
+  grid-column: 1/-1; text-align: center; padding: 4rem 1rem;
+  color: var(--dim); font-size: 0.82rem; letter-spacing: 0.05em;
+}
+
+/* Type legend */
+.type-legend {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+  justify-content: center; margin: 1.5rem 0 2.5rem;
+}
+
+/* ── Modal ── */
+#pa-modal {
+  display: none; position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,0.88); overflow-y: auto;
+  padding: 2rem 1rem; align-items: flex-start; justify-content: center;
+}
+#pa-modal.open { display: flex; }
+.pa-modal-card {
+  background: #0f0f0f; border: 1px solid rgba(255,255,255,0.08);
+  max-width: 560px; width: 100%; position: relative; margin: auto;
+  padding: 2rem 2rem 1.8rem;
+}
+.pa-modal-close {
+  position: absolute; top: 0.75rem; right: 0.85rem;
+  background: none; border: none; color: rgba(255,255,255,0.4);
+  font-size: 1rem; cursor: pointer; transition: color 0.15s;
+}
+.pa-modal-close:hover { color: #fff; }
+.pa-modal-badges { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin-bottom: 1rem; }
+.pa-modal-name {
+  font-family: 'Merriweather', serif; font-size: 1.35rem;
+  font-weight: 700; line-height: 1.2; margin-bottom: 0.3rem;
+}
+.pa-modal-province { font-size: 0.72rem; color: var(--dim); letter-spacing: 0.05em; margin-bottom: 1rem; }
+.pa-modal-meta {
+  display: flex; gap: 1.2rem; flex-wrap: wrap;
+  margin-bottom: 1.1rem; padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.pa-modal-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+.pa-modal-meta-label {
+  font-size: 0.5rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold);
+}
+.pa-modal-meta-val { font-size: 0.78rem; color: rgba(255,255,255,0.7); }
+.pa-modal-desc {
+  font-size: 0.83rem; line-height: 1.82; color: rgba(255,255,255,0.65);
+  margin-bottom: 1rem;
+}
+.pa-modal-funfact {
+  background: rgba(201,168,76,0.05); border-left: 2px solid var(--gold);
+  padding: 0.75rem 0.9rem;
+}
+.pa-modal-funfact-label {
+  font-size: 0.54rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.3rem;
+}
+.pa-modal-funfact-text {
+  font-size: 0.78rem; line-height: 1.75;
+  color: rgba(255,255,255,0.6); font-style: italic; margin: 0;
+}
+.pa-modal-funfact-hidden { display: none; }
+
+@media(max-width:768px) {
+  .pa-grid { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 0.75rem; }
+  .pa-search { width: 100%; margin-left: 0; }
+  .pa-modal-card { padding: 1.5rem 1.2rem; }
+  .pa-modal-name { font-size: 1.1rem; }
+}
+@media(max-width:480px) {
+  .pa-grid { grid-template-columns: repeat(2, 1fr); }
+  .filter-btn { font-size: 0.58rem; padding: 0.3rem 0.7rem; }
+}
+.section-note {
+  max-width: 700px; margin: 0 auto 1.5rem; font-size: 0.82rem;
+  color: rgba(255,255,255,0.4); text-align: center; font-style: italic; line-height: 1.6;
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <a href="index.html" class="header-logo">Expedition PH</a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="regions.html">Island Groups</a>
+    <a href="flora.html">Flora</a>
+    <a href="fauna.html">Fauna</a>
+    <a href="geology.html">Geology</a>
+    <a href="places.html">Places</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="history.html">History</a>
+      <a href="exhibits.html">Exhibits</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <img class="page-hero-img" src="image/Sierra Madre.png" alt="Philippine Protected Areas">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-inner">
+    <p class="page-eyebrow">Conservation</p>
+    <h1 class="page-title">Protected <em>Areas</em></h1>
+    <p class="page-desc">The Philippines' network of protected landscapes, seascapes, wildlife sanctuaries, and natural parks — safeguarding the archipelago's extraordinary biodiversity.</p>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item reveal"><span class="stat-num" data-target="243">0</span><span class="stat-lbl">Protected Areas</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="34">0</span><span class="stat-lbl">National Parks</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="58">0</span><span class="stat-lbl">Wildlife Sanctuaries</span></div>
+  <div class="stat-item reveal"><span class="stat-num" data-target="11">0</span><span class="stat-lbl">Marine Reserves</span></div>
+</div>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Browse Protected Areas &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section">
+  <p class="section-eyebrow reveal">243 Protected Areas</p>
+  <h2 class="section-title reveal">Philippine <em>Protected Areas</em></h2>
+  <p class="section-body reveal">Filter by island group or protection type. Click any card to learn more. All areas are gazetted under the NIPAS Act (RA 7586) and its amendments.</p>
+  <p class="section-note reveal">&#9670; This index covers proclaimed protected areas under the National Integrated Protected Areas System. Marine Protected Areas managed at the local government level are not included in this count.</p>
+
+  <div class="type-legend">
+    <span class="pa-type-badge type-np">National Park</span>
+    <span class="pa-type-badge type-ws">Wildlife Sanctuary</span>
+    <span class="pa-type-badge type-mpa">Marine Reserve</span>
+    <span class="pa-type-badge type-nba">Natural Biotic Area</span>
+    <span class="pa-type-badge type-gr">Game Refuge</span>
+    <span class="pa-type-badge type-wf">Watershed</span>
+  </div>
+
+  <div class="pa-controls">
+    <div class="filter-group" id="island-filters">
+      <button type="button" class="filter-btn active" data-island="all">All Islands</button>
+      <button type="button" class="filter-btn" data-island="luzon">Luzon</button>
+      <button type="button" class="filter-btn" data-island="visayas">Visayas</button>
+      <button type="button" class="filter-btn" data-island="mindanao">Mindanao</button>
+    </div>
+    <div class="filter-group" id="type-filters">
+      <button type="button" class="filter-btn active" data-type="all">All Types</button>
+      <button type="button" class="filter-btn" data-type="np">National Park</button>
+      <button type="button" class="filter-btn" data-type="ws">Wildlife Sanctuary</button>
+      <button type="button" class="filter-btn" data-type="mpa">Marine Reserve</button>
+      <button type="button" class="filter-btn" data-type="nba">Natural Biotic Area</span></button>
+      <button type="button" class="filter-btn" data-type="gr">Game Refuge</button>
+      <button type="button" class="filter-btn" data-type="wf">Watershed</button>
+    </div>
+    <input type="search" class="pa-search" id="pa-search" placeholder="Search by name or province…" autocomplete="off">
+    <p class="pa-count" id="pa-count"></p>
+  </div>
+
+  <div class="pa-grid" id="pa-grid">
+
+    <!-- LUZON – National Parks -->
+    <div class="pa-card" data-island="luzon" data-type="np" data-id="puerto-princesa" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <span class="pa-unesco">UNESCO</span>
+      <div class="pa-name">Puerto Princesa Subterranean River NP</div>
+      <div class="pa-province">Palawan</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>202 km²</span><span>Est. 1971</span></div>
+    </div>
+
+    <div class="pa-card" data-island="luzon" data-type="np" data-id="northern-sierra-madre" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Northern Sierra Madre Natural Park</div>
+      <div class="pa-province">Isabela</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>3,590 km²</span><span>Est. 1997</span></div>
+    </div>
+
+    <div class="pa-card" data-island="luzon" data-type="np" data-id="mount-pulag" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Mount Pulag National Park</div>
+      <div class="pa-province">Benguet / Ifugao / Nueva Vizcaya</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>113 km²</span><span>Est. 1987</span></div>
+    </div>
+
+    <div class="pa-card" data-island="luzon" data-type="np" data-id="mayon-volcano" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Mayon Volcano Natural Park</div>
+      <div class="pa-province">Albay</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>55 km²</span><span>Est. 1938</span></div>
+    </div>
+
+    <div class="pa-card" data-island="luzon" data-type="np" data-id="mount-pinatubo" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Mount Pinatubo Natural Park</div>
+      <div class="pa-province">Zambales / Pampanga / Tarlac</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>97 km²</span><span>Est. 2000</span></div>
+    </div>
+
+    <div class="pa-card" data-island="luzon" data-type="np" data-id="hundred-islands" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Hundred Islands National Park</div>
+      <div class="pa-province">Pangasinan</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>18 km²</span><span>Est. 1940</span></div>
+    </div>
+
+    <div class="pa-card" data-island="luzon" data-type="np" data-id="taal-volcano" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Taal Volcano Protected Landscape</div>
+      <div class="pa-province">Batangas</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>243 km²</span><span>Est. 1996</span></div>
+    </div>
+
+    <div class="pa-card" data-island="luzon" data-type="np" data-id="batanes" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Batanes Protected Landscapes &amp; Seascapes</div>
+      <div class="pa-province">Batanes</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>189 km²</span><span>Est. 2000</span></div>
+    </div>
+
+    <div class="pa-card" data-island="luzon" data-type="np" data-id="el-nido" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">El Nido–Taytay Managed Resource PA</div>
+      <div class="pa-province">Palawan</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>903 km²</span><span>Est. 1998</span></div>
+    </div>
+
+    <div class="pa-card" data-island="luzon" data-type="np" data-id="iglit-baco" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Mts. Iglit-Baco Natural Park</div>
+      <div class="pa-province">Occidental Mindoro</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>750 km²</span><span>Est. 1997</span></div>
+    </div>
+
+    <div class="pa-card" data-island="luzon" data-type="np" data-id="callao-cave" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Callao Cave Reservation</div>
+      <div class="pa-province">Cagayan</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>32 km²</span></div>
+    </div>
+
+    <div class="pa-card" data-island="luzon" data-type="np" data-id="quezon-protected" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Quezon Protected Landscape</div>
+      <div class="pa-province">Quezon</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>984 km²</span><span>Est. 2000</span></div>
+    </div>
+
+    <div class="pa-card" data-island="luzon" data-type="np" data-id="aurora-memorial" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Aurora Memorial National Park</div>
+      <div class="pa-province">Aurora</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>98 km²</span></div>
+    </div>
+
+    <!-- LUZON – Wildlife Sanctuaries -->
+    <div class="pa-card" data-island="luzon" data-type="ws" data-id="donsol" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-ws">Wildlife Sanctuary</span>
+      <div class="pa-name">Donsol Whale Shark Interaction Area</div>
+      <div class="pa-province">Sorsogon</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span></div>
+    </div>
+
+    <div class="pa-card" data-island="luzon" data-type="ws" data-id="subic-forest" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-ws">Wildlife Sanctuary</span>
+      <div class="pa-name">Subic Bay Forest Reserve</div>
+      <div class="pa-province">Zambales</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>146 km²</span></div>
+    </div>
+
+    <div class="pa-card" data-island="luzon" data-type="ws" data-id="masungi" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-ws">Wildlife Sanctuary</span>
+      <div class="pa-name">Masungi Georeserve</div>
+      <div class="pa-province">Rizal</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>28 km²</span></div>
+    </div>
+
+    <div class="pa-card" data-island="luzon" data-type="ws" data-id="bicol-natural" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-ws">Wildlife Sanctuary</span>
+      <div class="pa-name">Bicol Natural Park</div>
+      <div class="pa-province">Camarines Sur</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>119 km²</span><span>Est. 2000</span></div>
+    </div>
+
+    <div class="pa-card" data-island="luzon" data-type="ws" data-id="calauit" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-ws">Wildlife Sanctuary</span>
+      <div class="pa-name">Calauit Wildlife Sanctuary</div>
+      <div class="pa-province">Palawan</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>37 km²</span><span>Est. 1976</span></div>
+    </div>
+
+    <!-- LUZON – Marine Reserves -->
+    <div class="pa-card" data-island="luzon" data-type="mpa" data-id="apo-reef" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-mpa">Marine Reserve</span>
+      <div class="pa-name">Apo Reef Natural Park</div>
+      <div class="pa-province">Occidental Mindoro</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>270 km²</span><span>Est. 1996</span></div>
+    </div>
+
+    <div class="pa-card" data-island="luzon" data-type="mpa" data-id="malampaya" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-mpa">Marine Reserve</span>
+      <div class="pa-name">Malampaya Sound Protected Landscape &amp; Seascape</div>
+      <div class="pa-province">Palawan</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>806 km²</span><span>Est. 2000</span></div>
+    </div>
+
+    <!-- LUZON – Watersheds -->
+    <div class="pa-card" data-island="luzon" data-type="wf" data-id="angat" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-wf">Watershed</span>
+      <div class="pa-name">Angat Watershed Forest Reserve</div>
+      <div class="pa-province">Bulacan / Rizal</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>688 km²</span></div>
+    </div>
+
+    <div class="pa-card" data-island="luzon" data-type="wf" data-id="la-mesa" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-wf">Watershed</span>
+      <div class="pa-name">La Mesa Watershed Reservation</div>
+      <div class="pa-province">Quezon City</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>27 km²</span></div>
+    </div>
+
+    <div class="pa-card" data-island="luzon" data-type="wf" data-id="pantabangan" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-wf">Watershed</span>
+      <div class="pa-name">Pantabangan–Carranglan Watershed</div>
+      <div class="pa-province">Nueva Ecija</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span><span>801 km²</span></div>
+    </div>
+
+    <!-- LUZON – Natural Biotic Areas -->
+    <div class="pa-card" data-island="luzon" data-type="nba" data-id="palawan-biotic" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-nba">Natural Biotic Area</span>
+      <div class="pa-name">Palawan Biotic Area</div>
+      <div class="pa-province">Palawan</div>
+      <div class="pa-meta"><span class="pa-island isl-luzon">Luzon</span></div>
+    </div>
+
+    <!-- VISAYAS – National Parks -->
+    <div class="pa-card" data-island="visayas" data-type="np" data-id="tubbataha" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <span class="pa-unesco">UNESCO</span>
+      <div class="pa-name">Tubbataha Reefs Natural Park</div>
+      <div class="pa-province">Palawan (Sulu Sea)</div>
+      <div class="pa-meta"><span class="pa-island isl-visayas">Visayas</span><span>971 km²</span><span>Est. 1988</span></div>
+    </div>
+
+    <div class="pa-card" data-island="visayas" data-type="np" data-id="chocolate-hills" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Chocolate Hills Natural Monument</div>
+      <div class="pa-province">Bohol</div>
+      <div class="pa-meta"><span class="pa-island isl-visayas">Visayas</span><span>57 km²</span><span>Est. 1997</span></div>
+    </div>
+
+    <div class="pa-card" data-island="visayas" data-type="np" data-id="kanlaon" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Mount Kanlaon Natural Park</div>
+      <div class="pa-province">Negros Occidental / Oriental</div>
+      <div class="pa-meta"><span class="pa-island isl-visayas">Visayas</span><span>246 km²</span><span>Est. 1996</span></div>
+    </div>
+
+    <div class="pa-card" data-island="visayas" data-type="np" data-id="samar-island" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Samar Island Natural Park</div>
+      <div class="pa-province">Eastern / Northern / Western Samar</div>
+      <div class="pa-meta"><span class="pa-island isl-visayas">Visayas</span><span>1,332 km²</span><span>Est. 2003</span></div>
+    </div>
+
+    <div class="pa-card" data-island="visayas" data-type="np" data-id="rajah-sikatuna" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Rajah Sikatuna Protected Landscape</div>
+      <div class="pa-province">Bohol</div>
+      <div class="pa-meta"><span class="pa-island isl-visayas">Visayas</span><span>90 km²</span><span>Est. 1987</span></div>
+    </div>
+
+    <div class="pa-card" data-island="visayas" data-type="np" data-id="twin-lakes" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Twin Lakes Natural Park</div>
+      <div class="pa-province">Negros Oriental</div>
+      <div class="pa-meta"><span class="pa-island isl-visayas">Visayas</span><span>61 km²</span></div>
+    </div>
+
+    <!-- VISAYAS – Wildlife Sanctuaries -->
+    <div class="pa-card" data-island="visayas" data-type="ws" data-id="olango" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-ws">Wildlife Sanctuary</span>
+      <div class="pa-name">Olango Island Wildlife Sanctuary</div>
+      <div class="pa-province">Cebu</div>
+      <div class="pa-meta"><span class="pa-island isl-visayas">Visayas</span><span>9 km²</span><span>Est. 1992</span></div>
+    </div>
+
+    <div class="pa-card" data-island="visayas" data-type="ws" data-id="apo-island" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-ws">Wildlife Sanctuary</span>
+      <div class="pa-name">Apo Island Marine Reserve</div>
+      <div class="pa-province">Negros Oriental</div>
+      <div class="pa-meta"><span class="pa-island isl-visayas">Visayas</span><span>0.7 km²</span><span>Est. 1982</span></div>
+    </div>
+
+    <div class="pa-card" data-island="visayas" data-type="ws" data-id="sohoton" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-ws">Wildlife Sanctuary</span>
+      <div class="pa-name">Sohoton Natural Bridge National Park</div>
+      <div class="pa-province">Samar</div>
+      <div class="pa-meta"><span class="pa-island isl-visayas">Visayas</span><span>8 km²</span><span>Est. 1935</span></div>
+    </div>
+
+    <div class="pa-card" data-island="visayas" data-type="ws" data-id="balicasag" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-ws">Wildlife Sanctuary</span>
+      <div class="pa-name">Balicasag Island Wildlife Sanctuary</div>
+      <div class="pa-province">Bohol</div>
+      <div class="pa-meta"><span class="pa-island isl-visayas">Visayas</span><span>1.1 km²</span><span>Est. 1985</span></div>
+    </div>
+
+    <div class="pa-card" data-island="visayas" data-type="ws" data-id="tanon-strait" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-ws">Wildlife Sanctuary</span>
+      <div class="pa-name">Tañon Strait Protected Seascape</div>
+      <div class="pa-province">Negros / Cebu</div>
+      <div class="pa-meta"><span class="pa-island isl-visayas">Visayas</span><span>4,227 km²</span><span>Est. 1998</span></div>
+    </div>
+
+    <div class="pa-card" data-island="visayas" data-type="ws" data-id="leyte-corridor" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-ws">Wildlife Sanctuary</span>
+      <div class="pa-name">Leyte Corridor Protected Landscape</div>
+      <div class="pa-province">Leyte</div>
+      <div class="pa-meta"><span class="pa-island isl-visayas">Visayas</span><span>222 km²</span></div>
+    </div>
+
+    <!-- VISAYAS – Game Refuge -->
+    <div class="pa-card" data-island="visayas" data-type="gr" data-id="boracay-wetland" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-gr">Game Refuge</span>
+      <div class="pa-name">Boracay Island Wetland</div>
+      <div class="pa-province">Aklan</div>
+      <div class="pa-meta"><span class="pa-island isl-visayas">Visayas</span></div>
+    </div>
+
+    <!-- MINDANAO – National Parks -->
+    <div class="pa-card" data-island="mindanao" data-type="np" data-id="hamiguitan" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <span class="pa-unesco">UNESCO</span>
+      <div class="pa-name">Mount Hamiguitan Range Wildlife Sanctuary</div>
+      <div class="pa-province">Davao Oriental</div>
+      <div class="pa-meta"><span class="pa-island isl-mindanao">Mindanao</span><span>161 km²</span><span>Est. 2003</span></div>
+    </div>
+
+    <div class="pa-card" data-island="mindanao" data-type="np" data-id="mount-apo" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Mount Apo Natural Park</div>
+      <div class="pa-province">Davao del Sur / North Cotabato</div>
+      <div class="pa-meta"><span class="pa-island isl-mindanao">Mindanao</span><span>640 km²</span><span>Est. 1936</span></div>
+    </div>
+
+    <div class="pa-card" data-island="mindanao" data-type="np" data-id="kitanglad" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Mount Kitanglad Range Natural Park</div>
+      <div class="pa-province">Bukidnon</div>
+      <div class="pa-meta"><span class="pa-island isl-mindanao">Mindanao</span><span>470 km²</span><span>Est. 2000</span></div>
+    </div>
+
+    <div class="pa-card" data-island="mindanao" data-type="np" data-id="liguasan" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Liguasan Marsh Protected Landscape</div>
+      <div class="pa-province">Maguindanao / Cotabato / Sultan Kudarat</div>
+      <div class="pa-meta"><span class="pa-island isl-mindanao">Mindanao</span><span>2,190 km²</span></div>
+    </div>
+
+    <div class="pa-card" data-island="mindanao" data-type="np" data-id="lake-sebu" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Lake Sebu Protected Landscape</div>
+      <div class="pa-province">South Cotabato</div>
+      <div class="pa-meta"><span class="pa-island isl-mindanao">Mindanao</span><span>116 km²</span></div>
+    </div>
+
+    <div class="pa-card" data-island="mindanao" data-type="np" data-id="camiguin-volcano" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Camiguin Volcano Protected Landscape</div>
+      <div class="pa-province">Camiguin</div>
+      <div class="pa-meta"><span class="pa-island isl-mindanao">Mindanao</span><span>60 km²</span></div>
+    </div>
+
+    <div class="pa-card" data-island="mindanao" data-type="np" data-id="lake-holon" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-np">National Park</span>
+      <div class="pa-name">Mount Parker (Lake Holon) Protected Landscape</div>
+      <div class="pa-province">South Cotabato</div>
+      <div class="pa-meta"><span class="pa-island isl-mindanao">Mindanao</span><span>101 km²</span></div>
+    </div>
+
+    <!-- MINDANAO – Wildlife Sanctuaries -->
+    <div class="pa-card" data-island="mindanao" data-type="ws" data-id="agusan-marsh" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-ws">Wildlife Sanctuary</span>
+      <div class="pa-name">Agusan Marsh Wildlife Sanctuary</div>
+      <div class="pa-province">Agusan del Sur</div>
+      <div class="pa-meta"><span class="pa-island isl-mindanao">Mindanao</span><span>145 km²</span><span>Est. 1996</span></div>
+    </div>
+
+    <div class="pa-card" data-island="mindanao" data-type="ws" data-id="lake-mainit" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-ws">Wildlife Sanctuary</span>
+      <div class="pa-name">Lake Mainit Protected Landscape</div>
+      <div class="pa-province">Surigao del Norte / Agusan del Norte</div>
+      <div class="pa-meta"><span class="pa-island isl-mindanao">Mindanao</span><span>171 km²</span></div>
+    </div>
+
+    <div class="pa-card" data-island="mindanao" data-type="ws" data-id="dinagat" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-ws">Wildlife Sanctuary</span>
+      <div class="pa-name">Dinagat Island Protected Landscape</div>
+      <div class="pa-province">Dinagat Islands</div>
+      <div class="pa-meta"><span class="pa-island isl-mindanao">Mindanao</span><span>802 km²</span></div>
+    </div>
+
+    <div class="pa-card" data-island="mindanao" data-type="ws" data-id="eagle-center" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-ws">Wildlife Sanctuary</span>
+      <div class="pa-name">Philippine Eagle Center</div>
+      <div class="pa-province">Davao City</div>
+      <div class="pa-meta"><span class="pa-island isl-mindanao">Mindanao</span><span>8 km²</span><span>Est. 1987</span></div>
+    </div>
+
+    <!-- MINDANAO – Marine Reserves -->
+    <div class="pa-card" data-island="mindanao" data-type="mpa" data-id="siargao" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-mpa">Marine Reserve</span>
+      <div class="pa-name">Siargao Island Protected Landscape &amp; Seascape</div>
+      <div class="pa-province">Surigao del Norte</div>
+      <div class="pa-meta"><span class="pa-island isl-mindanao">Mindanao</span><span>179 km²</span><span>Est. 1996</span></div>
+    </div>
+
+    <!-- MINDANAO – Watersheds -->
+    <div class="pa-card" data-island="mindanao" data-type="wf" data-id="lake-lanao" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-wf">Watershed</span>
+      <div class="pa-name">Lake Lanao Watershed Reservation</div>
+      <div class="pa-province">Lanao del Sur</div>
+      <div class="pa-meta"><span class="pa-island isl-mindanao">Mindanao</span><span>2,350 km²</span></div>
+    </div>
+
+    <div class="pa-card" data-island="mindanao" data-type="wf" data-id="bukidnon-watershed" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-wf">Watershed</span>
+      <div class="pa-name">Bukidnon Watershed Forest Reserve</div>
+      <div class="pa-province">Bukidnon</div>
+      <div class="pa-meta"><span class="pa-island isl-mindanao">Mindanao</span><span>1,480 km²</span></div>
+    </div>
+
+    <!-- MINDANAO – Natural Biotic Areas -->
+    <div class="pa-card" data-island="mindanao" data-type="nba" data-id="manobo-salug" onclick="openPaModal(this)">
+      <span class="pa-type-badge type-nba">Natural Biotic Area</span>
+      <div class="pa-name">Manobo–Salug Valley Natural Biotic Area</div>
+      <div class="pa-province">Bukidnon</div>
+      <div class="pa-meta"><span class="pa-island isl-mindanao">Mindanao</span></div>
+    </div>
+
+    <div class="pa-no-results" id="pa-no-results">No protected areas match your search.</div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="pa-modal">
+  <div class="pa-modal-card">
+    <button type="button" class="pa-modal-close" onclick="closePaModal()">&#x2715;</button>
+    <div class="pa-modal-badges" id="pa-modal-badges"></div>
+    <div class="pa-modal-name"     id="pa-modal-name"></div>
+    <div class="pa-modal-province" id="pa-modal-province"></div>
+    <div class="pa-modal-meta"     id="pa-modal-meta"></div>
+    <p class="pa-modal-desc"       id="pa-modal-desc"></p>
+    <div class="pa-modal-funfact"  id="pa-modal-funfact">
+      <div class="pa-modal-funfact-label">&#9670; Did You Know</div>
+      <p class="pa-modal-funfact-text" id="pa-modal-funfact-text"></p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div><div class="footer-brand-name">Expedition PH</div><p class="footer-tagline">A digital exploration of the Philippine archipelago's natural heritage.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="regions.html">Island Groups</a></li><li><a href="flora.html">Flora</a></li><li><a href="fauna.html">Fauna</a></li><li><a href="geology.html">Geology</a></li></ul></div>
+  <div><h4>Fauna</h4><ul><li><a href="birds.html">Birds</a></li><li><a href="mammals.html">Mammals</a></li><li><a href="reptiles.html">Reptiles</a></li><li><a href="marine.html">Marine</a></li><li><a href="insects.html">Insects</a></li><li><a href="freshwater.html">Freshwater</a></li><li><a href="extinct.html">Lost Species</a></li></ul></div>
+  <div><h4>Discover</h4><ul><li><a href="places.html">Places</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="species.html">Species Index</a></li><li><a href="protected-areas.html">Protected Areas</a></li></ul></div>
+  <div><h4>About</h4><ul><li><a href="exhibits.html">Exhibits</a></li><li><a href="visit.html">About This Project</a></li></ul></div>
+</footer>
+<div class="footer-bottom"><span>&copy; 2025 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
+
+<script src="museum.js"></script>
+<script>
+/* ── Protected Area detail data ── */
+var PA_DATA = {
+  'puerto-princesa':   { desc: 'The Puerto Princesa Subterranean River winds 8.2 km through a vast limestone karst cavern system before emptying directly into the South China Sea — making it one of the few navigable underground rivers on Earth that opens into open ocean. Its chambers host massive stalactites, colonies of swiftlets, and several species of bats. Inscribed as a UNESCO World Heritage Site in 1999 and named one of the New Seven Wonders of Nature in 2012.', funfact: 'At low tide, seawater flows back into the cave entrance — creating a rare tidal underground river where freshwater and saltwater meet beneath the limestone.' },
+  'northern-sierra-madre': { desc: 'The largest protected area in the Philippines covers an almost unbroken expanse of lowland dipterocarp and montane forest along Luzon\'s Pacific coast. Its forests shelter the Philippine Eagle, Philippine Crocodile, Giant Cloud Rat, and hundreds of endemic plant and animal species. Much of its interior has never been fully surveyed by scientists.', funfact: 'Northern Sierra Madre Natural Park is larger than the entire island of Cebu — yet entire river systems within its interior remain unsurveyed by science.' },
+  'mount-pulag':       { desc: 'Luzon\'s highest peak at 2,922 metres is sacred to the Ibaloi and Kalanguya peoples of the Cordillera. Its upper slopes are covered by rare dwarf bamboo grasslands, and on clear mornings the summit rises above a spectacular sea of clouds that stretches to every horizon. The park shelters mossy forests, highland pitcher plants, and the Luzon Water Shrew.', funfact: 'The Ibaloi people call Mount Pulag "Playground of the Gods." Its summit sea of clouds is one of the most celebrated natural spectacles in the Philippine highlands.' },
+  'mayon-volcano':     { desc: 'Mayon is considered the world\'s most perfectly formed volcanic cone — its symmetrical profile rising 2,462 metres above the Bicol lowlands. It is one of the most active volcanoes in the Philippines, with over 50 recorded eruptions. The surrounding biosphere reserve shelters endemic Bicol species and lowland forest fragments, while the volcano itself remains in near-constant state of activity.', funfact: 'The name Mayon comes from Magayon — "beautiful" in Bicolano. Local legend says the volcano is the body of a princess who died of a broken heart and was buried there by her grieving lover.' },
+  'mount-pinatubo':    { desc: 'The site of the 20th century\'s second-largest volcanic eruption (June 15, 1991) now harbours a stunning turquoise crater lake ringed by lahar-sculpted badlands. The eruption ejected so much material into the stratosphere that global temperatures dropped by 0.5°C for over a year. The surrounding Aeta communities, who had lived on the mountain for centuries, were displaced but have slowly returned.', funfact: 'The 1991 Pinatubo eruption temporarily cooled the entire planet by 0.5°C — demonstrating that a single volcanic event can alter global climate for years.' },
+  'hundred-islands':   { desc: 'Scattered across the Lingayen Gulf, the Hundred Islands were formed by millennia of wave erosion on uplifted coral limestone. Despite the name, there are actually 124 islands at low tide (123 at high tide). The park is one of the Philippines\' oldest protected areas and supports extensive reef fish communities, nesting seabirds, and centuries-old marine biodiversity.', funfact: 'Hundred Islands National Park was declared in 1940, making it one of the oldest protected areas in the Philippines — predating the post-war republic itself.' },
+  'taal-volcano':      { desc: 'Taal is one of Earth\'s most unique volcanic systems — an active island volcano rising from a crater lake, itself contained within one of Southeast Asia\'s largest calderas. The lake holds the world\'s only known population of the freshwater Tawilis sardine. The January 2020 eruption sent a phreatomagmatic column 15 kilometres into the sky and forced the evacuation of tens of thousands of people.', funfact: 'Taal is a volcano within a lake within a volcano — a geological configuration found in very few places on Earth, making it one of the most complex volcanic systems on the planet.' },
+  'batanes':           { desc: 'The northernmost Philippine province sits directly in the path of more typhoons than almost anywhere else on Earth. Its rugged rolling hills, stone Ivatan villages, and dramatic cliff coastlines are unlike any other landscape in the archipelago. The Ivatan people\'s traditional limestone and cogon-grass houses — with walls up to a metre thick — are built to withstand the full force of Pacific typhoon winds.', funfact: 'The Ivatan stone houses of Batanes have walls up to a metre thick — built by communities who have weathered more typhoons per year than almost any other people on Earth.' },
+  'el-nido':           { desc: 'El Nido\'s ancient limestone cliffs began as coral reefs some 30 million years ago. The managed resource area covers over 900 km² of some of the most biodiverse marine habitat in the Coral Triangle — hidden lagoons, white sand beaches, and clear shallows sheltering dugong, sea turtles, and over 800 fish species. The limestone towers rise directly from the sea, some reaching over 300 metres.', funfact: 'The limestone karst cliffs of El Nido contain fossils of ancient marine organisms — visible in the rock walls above the waterline — evidence that these formations were once living coral reefs on the seafloor.' },
+  'iglit-baco':        { desc: 'The last stronghold of the Tamaraw — the critically endangered dwarf buffalo endemic to Mindoro — this protected landscape covers montane grasslands and forest mosaic sheltering fewer than 500 remaining individuals. The Tamaraw is unique among bovines in being solitary rather than social. The park also shelters the Mindoro Bleeding-heart Dove and several endemic forest birds found only on this island.', funfact: 'The Tamaraw population collapsed from over 10,000 individuals in 1900 to fewer than 500 today — one of the steepest wildlife declines in Philippine history, driven by hunting, habitat loss, and a rinderpest outbreak introduced by livestock.' },
+  'callao-cave':       { desc: 'A seven-chambered limestone cave on the Pinacanauan River in Cagayan, where sunlight streams through a natural skylight to illuminate a chapel inside the cave. Its deeper passages yielded bones of Homo luzonensis in 2019 — a previously unknown human species that lived in the Philippines at least 50,000 years ago, rewriting Southeast Asian prehistory.', funfact: 'Callao Cave is where Homo luzonensis was discovered in 2019 — a completely new human species that rewrote our understanding of when and how humans first reached the Philippine archipelago.' },
+  'quezon-protected':  { desc: 'A mosaic of lowland dipterocarp forest, mangroves, and coastal habitats stretching across Quezon province. The protected landscape shelters the Philippine warty pig, cloud rats, and numerous endemic birds in one of the largest remaining forest blocks on the eastern Luzon coast. It also encompasses the Quezon National Park, established in 1940 as one of the first protected areas in the Philippines.', funfact: 'Quezon Protected Landscape contains some of the last remaining lowland dipterocarp forest on the eastern coast of Luzon — a forest type that once blanketed the entire region.' },
+  'aurora-memorial':   { desc: 'A forested reserve on the Pacific coast of Aurora province, sheltering endemic Luzon species in a landscape of steep river gorges and coastal forest. The surrounding marine area supports whale sharks, dolphins, and extensive reef systems in one of the most productive stretches of the Philippine Pacific coast.', funfact: 'Aurora province sits directly on the Pacific typhoon belt — its forests absorb the brunt of some of the strongest storms that reach Luzon each year, acting as a natural buffer for inland communities.' },
+  'donsol':            { desc: 'A small fishing town in Sorsogon where whale sharks (butanding) gather in extraordinary numbers from November to June, feeding on plankton in the warm Ticao Pass. Interaction is strictly regulated — no touching, no flash photography, snorkel only. Donsol is considered a global model for sustainable whale shark tourism and helped establish that wild whale shark aggregations could be reliably encountered.', funfact: 'Before the late 1990s, Donsol\'s whale shark aggregations were virtually unknown to the outside world. Local fishermen had simply lived alongside them for generations without publicising their presence.' },
+  'subic-forest':      { desc: 'The former US Naval Base at Subic Bay left behind an unexpected conservation legacy — 14,600 hectares of intact tropical forest protected by decades of restricted military access. The forest now shelters Philippine Eagles, wild deer, and one of the most accessible intact lowland forest ecosystems near Metro Manila.', funfact: 'The Subic Bay forest survived precisely because it was a US military base for nearly a century — restricted access prevented the logging and agricultural clearing that destroyed forests elsewhere in Luzon.' },
+  'masungi':           { desc: 'A limestone georeserve in the mountains of Rizal, just an hour from Manila, where a network of rope courses, trails, and climbing structures winds through karst formations overgrown with returning forest. The reserve is a pioneer in privately managed conservation, demonstrating how degraded forest can be actively restored and how ecotourism revenue can fund reforestation.', funfact: 'Masungi Georeserve has planted over 25,000 trees in its restoration zones — returning a once-denuded hillside to functioning forest within two decades through a combination of active planting and ecotourism funding.' },
+  'bicol-natural':     { desc: 'A forest reserve in the Bicol Peninsula sheltering endemic birds and mammals in the shadow of the Mayon and Iriga volcanoes. Its forests form a biological corridor linking the volcanic highlands with lowland dipterocarp fragments, supporting populations of Philippine warty pigs, cloud rats, and numerous Luzon endemic birds.', funfact: 'The Bicol region sits at the junction of two major biogeographic zones — species from both northern and southern Luzon meet here, creating unusual assemblages of wildlife found nowhere else together.' },
+  'calauit':           { desc: 'In 1976, President Marcos displaced the indigenous Tagbanwa community of Calauit Island to create an African game reserve, importing giraffes, zebras, impalas, and waterbucks. Today the African animals roam freely alongside endemic Philippine species including the Calamian Deer, Palawan Bearcat, and Philippine Cockatoo — creating the world\'s most unusual wildlife overlap.', funfact: 'Calauit\'s African animals have lived on the island for nearly 50 years and have established self-sustaining populations. Nowhere else on Earth do African savanna ungulates share a landscape with endemic Philippine rainforest species.' },
+  'apo-reef':          { desc: 'The world\'s second-largest contiguous coral reef system and the Philippines\' largest coral reef — a remote atoll rising from the Sulu Sea between Mindoro and Palawan. Its outer walls plunge hundreds of metres into the deep, drawing hammerhead sharks, thresher sharks, and massive schools of barracuda. Despite protected status, it faces persistent pressure from poaching vessels.', funfact: 'Apo Reef\'s recovery since protection began in 1996 is considered one of the most successful large-scale reef rehabilitations in the Philippines — though it remains under severe poaching pressure from foreign fishing vessels.' },
+  'malampaya':         { desc: 'A vast marine protected area in northern Palawan encompassing the Malampaya Sound — a deep inland sea ringed by limestone cliffs and mangrove forests. The sound is a critical breeding and feeding ground for the Irrawaddy Dolphin, dugong, and sea turtles. It also overlies the Malampaya natural gas field, which supplies a significant portion of Luzon\'s electricity.', funfact: 'The Malampaya Sound is home to one of the few remaining populations of the Irrawaddy Dolphin in the Philippines — a freshwater-tolerant dolphin that regularly enters river mouths and shallow estuaries.' },
+  'angat':             { desc: 'The Angat watershed supplies approximately 90% of Metro Manila\'s drinking water and generates significant hydroelectric power. The forest reserve that protects the watershed\'s upper catchment is one of the most strategically important conservation areas in the Philippines — its trees literally sustain the water supply of the largest city in Southeast Asia.', funfact: 'The Angat Watershed supplies drinking water to roughly 12 million people in Metro Manila — making its forest cover one of the most economically critical ecosystems in the entire country.' },
+  'la-mesa':           { desc: 'An urban forest reserve and watershed within Quezon City — one of the largest remaining forest patches within Metro Manila. The La Mesa Dam and its surrounding forest provide supplemental water supply to the metropolis while offering a rare urban wildlife refuge for birds, small mammals, and reptiles surrounded by one of Asia\'s most densely populated cities.', funfact: 'La Mesa is one of the world\'s few remaining intact urban forests inside a megacity — a 27 km² patch of forest entirely surrounded by one of the most densely populated metropolitan areas in Asia.' },
+  'pantabangan':       { desc: 'A large watershed reserve protecting the upper catchment of the Pantabangan River in Nueva Ecija. The reservoir it feeds is one of the largest in the Philippines and provides irrigation water to much of Central Luzon\'s rice-growing heartland. The forested slopes shelter endemic Luzon species and help regulate the floodwaters that once devastated downstream communities.', funfact: 'Pantabangan reservoir, fed by this watershed, irrigates farmland that produces a significant portion of the Philippines\' rice supply — the health of this forest is directly tied to national food security.' },
+  'palawan-biotic':    { desc: 'A designated natural biotic area covering parts of Palawan that support indigenous Tagbanwa and Batak communities whose traditional land use practices have maintained the island\'s extraordinary biodiversity. The designation recognises the inseparable connection between indigenous cultural heritage and ecological conservation on what is often called the Philippines\' last ecological frontier.', funfact: 'The Tagbanwa and Batak peoples of Palawan have been stewards of its forests for thousands of years — their traditional practices have helped maintain ecosystems that Western conservation arrived to protect only recently.' },
+  'tubbataha':         { desc: 'A remote atoll in the Sulu Sea accessible only by liveaboard for roughly three months a year due to sea conditions. Tubbataha holds 360 coral species, 600 fish species, and nesting populations of sharks and sea turtles on atolls untouched by daily human contact. Its fish biomass rivals the most pristine mid-Pacific reefs. Inscribed as a UNESCO World Heritage Site in 1993.', funfact: 'Tubbataha is off-limits to all visitors for most of the year due to sea conditions — its remoteness and inaccessibility are its greatest protection, creating a de facto no-take zone for nine months annually.' },
+  'chocolate-hills':   { desc: 'Over 1,700 conical limestone mounds scattered across Bohol\'s interior turn chocolate-brown in the dry season as the grass covering them desiccates. The hills are composed of marine limestone overlaid with grassland — formed by a combination of uplift, karst dissolution, and weathering over millions of years. Declared a Philippine National Geological Monument.', funfact: 'The exact origin of the Chocolate Hills\' remarkable uniformity of size and shape is still debated by geologists. Local Bohol legend attributes them to the tears of a heartbroken giant who wept over a lost love.' },
+  'kanlaon':           { desc: 'The most active volcano in the Visayas, with over 30 recorded eruptions since 1866, Kanlaon\'s montane forests shelter critically endangered Visayan birds found nowhere else on Earth — including the Visayan Flowerpecker and Writhed Hornbill. The national park is one of the last intact forest sanctuaries on the heavily deforested island of Negros.', funfact: 'Mount Kanlaon\'s forests are so critical that they function as an island of biodiversity within a sea of sugarcane — the last refuge for endemic Negros birds whose habitat has been reduced to a fraction of its original extent.' },
+  'samar-island':      { desc: 'The largest block of intact lowland rainforest remaining in the Visayas — a vast karst and forest wilderness that shelters the Philippine Cockatoo, Samar Cobra, Philippine Warty Pig, and rare cave-dwelling species. Its extensive limestone cave systems include some of the largest caverns in Southeast Asia, with entire ecosystems sustained by guano and darkness.', funfact: 'Samar Island Natural Park contains limestone cave systems so large and so poorly explored that new species of cave-adapted invertebrates are still being discovered in its deeper passages.' },
+  'rajah-sikatuna':    { desc: 'Named after the Bohol chieftain who formed a blood compact with Legazpi in 1565, Rajah Sikatuna Protected Landscape shelters one of the most important lowland forest remnants in the Visayas. It is a critical refuge for the Philippine Tarsier — one of the world\'s smallest primates — and supports a diverse assemblage of endemic Visayan birds and mammals.', funfact: 'The Philippine Tarsier — one of the world\'s smallest primates — depends almost entirely on intact lowland forest like that found in Rajah Sikatuna. Outside protected areas, tarsier populations have collapsed across much of the Visayas.' },
+  'twin-lakes':        { desc: 'Twin Lakes Natural Park protects the volcanic crater lakes of Balinsasayao and Danao in the mountains of Negros Oriental. The lakes sit within primary montane forest sheltering critically endangered Negros endemic birds, including species found nowhere else on Earth. The lakes themselves support rare freshwater species and are sacred to local communities.', funfact: 'The forests around Twin Lakes are among the last places where the critically endangered Visayan Spotted Deer can still be observed in the wild — a species so rare it was believed extinct until its rediscovery in the 1980s.' },
+  'olango':            { desc: 'A Ramsar-listed wetland and one of the most important migratory bird stopovers in Southeast Asia. Every year tens of thousands of shorebirds — including the globally threatened Chinese Egret and Far Eastern Curlew — rest and refuel on Olango\'s tidal flats after flying from breeding grounds in Siberia and Alaska, before continuing south to Australia. Over 48 shorebird species have been recorded.', funfact: 'Some of the shorebirds that stop at Olango have flown non-stop from Alaska or Siberia — covering thousands of kilometres in a single flight before landing on these tidal flats to feed and rest.' },
+  'apo-island':        { desc: 'A tiny volcanic island off Negros Oriental encircled by one of Southeast Asia\'s most celebrated community-managed marine sanctuaries, established in 1982. Green sea turtles gather here year-round, reef fish biomass rivals pristine mid-Pacific reefs, and the no-take sanctuary zone has allowed the reef to recover to near-pristine condition. Fish biomass inside the sanctuary is more than five times higher than in unprotected areas.', funfact: 'Apo Island\'s marine sanctuary is globally cited as proof that small-scale community management can reverse reef decline — its recovery from degraded reef to pristine sanctuary in under two decades changed how conservation science approaches community-based marine protection.' },
+  'sohoton':           { desc: 'A hidden tidal cove in Northern Samar reachable only at low tide through a narrow limestone passage. Inside, brackish water teems with millions of stingless jellyfish that have lost their venom over thousands of generations due to the absence of predators. Cathedral-ceilinged caves glow with bioluminescent organisms, and the forest above shelters rare hornbills and flying foxes.', funfact: 'The jellyfish of Sohoton Cove are completely stingless — they lost their venom over thousands of generations because the enclosed lagoon has no predators. Visitors can swim through millions of jellyfish with no risk of being stung.' },
+  'balicasag':         { desc: 'A tiny coral island encircled by a wall reef that drops vertically into deep water. Green and hawksbill sea turtles rest on the reef plateau year-round, spinner dolphins ride the offshore currents, and the no-take sanctuary zone — one of the oldest in the Philippines — has allowed the reef to recover to near-pristine condition after decades of protection.', funfact: 'A single hectare of healthy reef at Balicasag supports more fish biomass than many entire reef systems elsewhere in Southeast Asia — a testament to over three decades of community protection.' },
+  'tanon-strait':      { desc: 'The Tañon Strait between Negros and Cebu is one of the Philippines\' most important marine corridors — a deep-water channel that supports resident spinner dolphin populations, whale sharks, and extensive seagrass beds sheltering dugong. As the largest marine protected area in the Visayas, it plays a critical role in maintaining connectivity between reef systems on both sides of the strait.', funfact: 'The Tañon Strait supports one of the Philippines\' largest resident spinner dolphin populations — pods of hundreds can be encountered year-round in the channel\'s deeper waters.' },
+  'leyte-corridor':    { desc: 'A forest corridor linking montane habitats across Leyte, one of the most biodiverse islands in the eastern Visayas. The protected landscape shelters endemic Leyte species including forest birds found nowhere else, and serves as a critical green corridor allowing wildlife to move between fragmented highland forest patches.', funfact: 'Leyte was among the hardest-hit regions by Super Typhoon Haiyan (Yolanda) in 2013. The areas with intact forest cover recovered significantly faster than deforested zones, demonstrating the direct protective value of standing trees.' },
+  'boracay-wetland':   { desc: 'A small but ecologically significant wetland on the island of Boracay, designated as a game refuge and bird sanctuary amid one of the Philippines\' most intensively developed tourist destinations. The wetland provides critical habitat for migratory waterbirds and resident wetland species in sharp contrast to the surrounding hotel and resort development.', funfact: 'Boracay\'s wetland survived the island\'s tourism boom and remains one of the few intact natural habitats on an island that receives millions of visitors per year.' },
+  'hamiguitan':        { desc: 'A UNESCO World Heritage Site inscribed in 2014 for its extraordinary range of ecosystems — from tropical dipterocarp forest at sea level to a rare pygmy forest at its 1,637m summit. The park shelters 341 plant species, 177 animal species, and carnivorous pitcher plants endemic to its peaks, including the critically endangered Philippine Eagle. Its complete elevational gradient survives entirely intact within a single protected area.', funfact: 'Mount Hamiguitan is one of the very few places on Earth where a complete forest gradient — from coastal lowlands to pygmy summit forest — survives entirely intact within a single connected protected area.' },
+  'mount-apo':         { desc: 'The Philippines\' highest peak at 2,954 metres — a massive stratovolcano sheltering ancient rainforests, hot springs, and geothermal activity. The national park is the primary stronghold for the Philippine Eagle, and its forests shelter an extraordinary diversity of endemic species across multiple elevational zones. The mountain\'s geothermal energy now powers a significant portion of Mindanao\'s electricity grid.', funfact: 'Mount Apo means "grandfather" or "master" in several Mindanao languages. The mountain literally powers the island — its geothermal reservoirs supply electricity to millions of Mindanaoans.' },
+  'kitanglad':         { desc: 'A mountain range in Bukidnon sheltering critical habitat for the Philippine Eagle and numerous Mindanao endemic birds in its mossy montane forests. The Kitanglad range is a biodiversity hotspot within a hotspot — its forests act as both a refuge for endemic wildlife and a water tower supplying rivers that irrigate much of the Cagayan de Oro watershed.', funfact: 'Mount Kitanglad\'s forests supply water to rivers that irrigate some of Mindanao\'s most productive agricultural land — its conservation is inseparably linked to regional food and water security.' },
+  'liguasan':          { desc: 'One of Southeast Asia\'s largest freshwater wetlands, spanning the floodplain of several major rivers across three provinces of central Mindanao. The marsh is a critical habitat for the Philippine Crocodile, rare waterbirds, and endemic freshwater species, while also supporting the livelihoods of hundreds of thousands of fisherfolk and farming communities.', funfact: 'Liguasan Marsh expands and contracts dramatically with the seasons — at peak flood stage it covers more than twice its dry-season area, becoming one of the largest seasonal wetlands in the Philippines.' },
+  'lake-sebu':         { desc: 'A highland lake ringed by hills and T\'boli communities in South Cotabato. The surrounding forests shelter endemic birds, the lake is home to rare freshwater species, and the Seven Falls cascade through one of the most culturally rich landscapes in Mindanao. The T\'boli are celebrated for the dream-woven T\'nalak cloth, produced only by women called Fu Dalu, whose designs come to them in visions.', funfact: 'The T\'boli dream weavers of Lake Sebu create their elaborate T\'nalak cloth patterns from visions they receive in sleep — a weaving tradition considered one of the most distinctive indigenous art forms in Southeast Asia.' },
+  'camiguin-volcano':  { desc: 'Seven volcanoes on an island smaller than most cities — Camiguin has more volcanoes per square kilometre than any other island on Earth. The protected landscape covers the active volcanic peaks and their surrounding montane forests, which shelter the Critically Endangered Camiguin Flying Fox and endemic bird species found only on this island.', funfact: 'One of Camiguin\'s eruptions in 1871 was so violent it submerged an entire coastal cemetery — whose cross now stands visible offshore at low tide, a haunting landmark locals call the Sunken Cemetery.' },
+  'lake-holon':        { desc: 'One of the Philippines\' most pristine crater lakes, nestled inside the summit caldera of Mount Parker in South Cotabato. Sacred to the T\'boli people who call it Maughan ("forbidden lake"), the lake was formally opened to trekkers only in the 2000s. Its emerald waters are surrounded by endemic pitcher plants, wild orchids, and intact mossy montane forest.', funfact: 'Lake Holon was considered off-limits to outsiders by the T\'boli for generations — its restricted access meant the surrounding forest remained almost entirely intact until trekking began only in the 2000s.' },
+  'agusan-marsh':      { desc: 'One of Southeast Asia\'s largest freshwater swamp forests — a mosaic of lakes, floating islands, and floodplain forest in Agusan del Sur. The floating islands physically drift with the seasons, shifting the landscape each year. It is home to the Philippine Crocodile, Estuarine Crocodile, rare waterbirds, and the Manobo people who have lived on and with its waters for generations.', funfact: 'The floating islands of Agusan Marsh physically move with the seasons — entire plant communities drift across the marsh, shifting the landscape. Manobo communities have lived in harmony with these moving islands for generations.' },
+  'lake-mainit':       { desc: 'One of the deepest lakes in the Philippines, Lake Mainit sits at the border of Surigao del Norte and Agusan del Norte. Its waters support endemic freshwater species including the Mainit Climbing Perch, and the surrounding forests shelter rare birds and mammals. The lake is a critical water source for communities across two provinces.', funfact: 'Lake Mainit is one of the deepest lakes in the Philippines — its cold abyssal waters support endemic species found nowhere else, isolated by depth in the same way island species are isolated by ocean.' },
+  'dinagat':           { desc: 'The Dinagat Islands harbour an extraordinary concentration of endemic species for such a small archipelago — including the Dinagat Bushy-tailed Cloud Rat, Dinagat Moonrat, and several endemic reptiles found nowhere else. The islands\' unique geology, combining ultramafic rocks with coastal karst, created conditions for rapid species radiation.', funfact: 'The Dinagat Bushy-tailed Cloud Rat was unknown to science until the 1970s. The Dinagat Islands\' isolation and unique geology have produced a miniature radiation of endemic mammals rivalling much larger archipelagos.' },
+  'eagle-center':      { desc: 'The primary conservation breeding facility for the Philippine Eagle — the country\'s national bird and one of the world\'s most endangered raptors. Home to rescued and captive-bred eagles in large naturalistic enclosures, the center leads research into eagle ecology, conducts captive breeding programmes, and runs education programmes reaching thousands of students annually.', funfact: 'The Philippine Eagle Center has successfully bred the Philippine Eagle in captivity — considered nearly impossible for large raptors. Each captive-bred eagle costs more to raise than a full human university education.' },
+  'siargao':           { desc: 'A teardrop-shaped island in Surigao del Norte fringed by mangroves, lagoons, and world-class reef breaks. The protected landscape and seascape covers the island\'s extraordinary reef system, which generates the Cloud 9 surf break — one of the most powerful and celebrated waves in Asia. The surrounding marine area shelters rich reef fish communities, sea turtles, and the Sohoton Cove cave system.', funfact: 'Cloud 9, Siargao\'s famous surf break, was unknown to the international surf world until the early 1990s — local fishermen had simply lived alongside it for generations.' },
+  'lake-lanao':        { desc: 'The Philippines\' second-largest lake and one of Southeast Asia\'s most ancient — estimated to be over a million years old. Its isolation produced one of the world\'s most remarkable freshwater fish radiations, with dozens of endemic cyprinid species. Tragically, most have been driven to extinction by introduced tilapia and overfishing within living memory. The lake is sacred to the Maranao people.', funfact: 'Lake Lanao is estimated to be over a million years old. Its antiquity allowed its endemic fish to evolve in total isolation — producing a flock of species found absolutely nowhere else. Most are now extinct due to introduced tilapia.' },
+  'bukidnon-watershed': { desc: 'A vast forest reserve protecting the headwaters of several major rivers flowing from the Bukidnon plateau. The watershed\'s forests supply water to the Del Monte pineapple plantations and irrigated rice lands of the Cagayan de Oro basin, while sheltering remnant populations of endemic Mindanao birds and mammals in the upper montane zones.', funfact: 'The Bukidnon highlands are sometimes called the "water tower of Mindanao" — rivers flowing from its forests irrigate farmland feeding millions of people across northern Mindanao.' },
+  'manobo-salug':      { desc: 'A designated natural biotic area protecting the traditional homeland of the Manobo peoples of the Salug Valley in Bukidnon. The designation recognises the inseparable connection between indigenous land stewardship and the remarkable biodiversity of the surrounding montane forest, where the Manobo have maintained sustainable resource use for generations.', funfact: 'The Manobo people of the Salug Valley maintain oral traditions mapping the location of every medicinal plant, hunting trail, and sacred grove in their territory — a knowledge system accumulated over centuries of living within the forest.' }
+};
+
+var TYPE_LABELS = {
+  np: 'National Park', ws: 'Wildlife Sanctuary', mpa: 'Marine Reserve',
+  nba: 'Natural Biotic Area', gr: 'Game Refuge', wf: 'Watershed'
+};
+var TYPE_CLASSES = {
+  np: 'type-np', ws: 'type-ws', mpa: 'type-mpa',
+  nba: 'type-nba', gr: 'type-gr', wf: 'type-wf'
+};
+var ISLAND_LABELS = { luzon: 'Luzon', visayas: 'Visayas', mindanao: 'Mindanao' };
+var ISLAND_CLASSES = { luzon: 'isl-luzon', visayas: 'isl-visayas', mindanao: 'isl-mindanao' };
+
+function openPaModal(card) {
+  var id       = card.dataset.id;
+  var data     = PA_DATA[id] || {};
+  var name     = (card.querySelector('.pa-name')     || {}).textContent || '';
+  var province = (card.querySelector('.pa-province') || {}).textContent || '';
+  var typeKey  = card.dataset.type;
+  var island   = card.dataset.island;
+  var isUnesco = !!card.querySelector('.pa-unesco');
+  var areaMeta = card.querySelector('.pa-meta span:last-child');
+  var area     = (areaMeta && areaMeta.textContent.indexOf('km') !== -1) ? areaMeta.textContent : '';
+  var estSpan  = card.querySelectorAll('.pa-meta span');
+  var est = '';
+  estSpan.forEach(function(s){ if (s.textContent.indexOf('Est.') !== -1) est = s.textContent; });
+
+  // Badges
+  var badgesEl = document.getElementById('pa-modal-badges');
+  badgesEl.innerHTML = '';
+  var typeBadge = document.createElement('span');
+  typeBadge.className = 'pa-type-badge ' + (TYPE_CLASSES[typeKey] || '');
+  typeBadge.textContent = TYPE_LABELS[typeKey] || typeKey;
+  badgesEl.appendChild(typeBadge);
+  if (isUnesco) {
+    var uBadge = document.createElement('span');
+    uBadge.className = 'pa-type-badge';
+    uBadge.style.cssText = 'color:var(--gold);border:1px solid rgba(201,168,76,0.4);background:rgba(201,168,76,0.08)';
+    uBadge.textContent = 'UNESCO World Heritage';
+    badgesEl.appendChild(uBadge);
+  }
+  var islandPill = document.createElement('span');
+  islandPill.className = 'pa-island ' + (ISLAND_CLASSES[island] || '');
+  islandPill.textContent = ISLAND_LABELS[island] || island;
+  badgesEl.appendChild(islandPill);
+
+  document.getElementById('pa-modal-name').textContent     = name;
+  document.getElementById('pa-modal-province').textContent = province;
+
+  // Meta row
+  var metaEl = document.getElementById('pa-modal-meta');
+  metaEl.innerHTML = '';
+  if (area) {
+    metaEl.innerHTML += '<div class="pa-modal-meta-item"><span class="pa-modal-meta-label">Area</span><span class="pa-modal-meta-val">' + area + '</span></div>';
+  }
+  if (est) {
+    metaEl.innerHTML += '<div class="pa-modal-meta-item"><span class="pa-modal-meta-label">Established</span><span class="pa-modal-meta-val">' + est.replace('Est. ','') + '</span></div>';
+  }
+  metaEl.innerHTML += '<div class="pa-modal-meta-item"><span class="pa-modal-meta-label">Legislation</span><span class="pa-modal-meta-val">NIPAS Act (RA 7586)</span></div>';
+
+  document.getElementById('pa-modal-desc').textContent = data.desc || 'A protected area under the Philippine National Integrated Protected Areas System.';
+
+  var funfactEl = document.getElementById('pa-modal-funfact');
+  if (data.funfact) {
+    document.getElementById('pa-modal-funfact-text').textContent = data.funfact;
+    funfactEl.classList.remove('pa-modal-funfact-hidden');
+  } else {
+    funfactEl.classList.add('pa-modal-funfact-hidden');
+  }
+
+  var modal = document.getElementById('pa-modal');
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closePaModal() {
+  document.getElementById('pa-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('pa-modal').addEventListener('click', function(e) {
+  if (e.target === this) closePaModal();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closePaModal();
+});
+
+/* ── Filters ── */
+(function(){
+  var activeIsland = 'all';
+  var activeType   = 'all';
+  var searchTerm   = '';
+
+  function applyFilters() {
+    var q = searchTerm.toLowerCase();
+    var visible = 0;
+    document.querySelectorAll('.pa-card').forEach(function(card) {
+      var islandMatch = activeIsland === 'all' || card.dataset.island === activeIsland;
+      var typeMatch   = activeType === 'all'   || card.dataset.type   === activeType;
+      var text = card.textContent.toLowerCase();
+      var searchMatch = !q || text.indexOf(q) !== -1;
+      var show = islandMatch && typeMatch && searchMatch;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    var noRes = document.getElementById('pa-no-results');
+    if (noRes) noRes.style.display = visible === 0 ? 'grid' : 'none';
+    var countEl = document.getElementById('pa-count');
+    if (countEl) countEl.textContent = visible + ' area' + (visible !== 1 ? 's' : '') + ' shown';
+  }
+
+  document.getElementById('island-filters').addEventListener('click', function(e) {
+    var btn = e.target.closest('.filter-btn');
+    if (!btn) return;
+    activeIsland = btn.dataset.island;
+    document.querySelectorAll('#island-filters .filter-btn').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+    applyFilters();
+  });
+
+  document.getElementById('type-filters').addEventListener('click', function(e) {
+    var btn = e.target.closest('.filter-btn');
+    if (!btn) return;
+    activeType = btn.dataset.type;
+    document.querySelectorAll('#type-filters .filter-btn').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+    applyFilters();
+  });
+
+  document.getElementById('pa-search').addEventListener('input', function(){
+    searchTerm = this.value.trim();
+    applyFilters();
+  });
+
+  applyFilters();
+})();
+</script>
+</body>
+</html>
