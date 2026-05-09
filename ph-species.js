@@ -626,6 +626,19 @@ var PH_SPECIES = [
     img: 'nepenthes-attenboroughii'
   },
   {
+    id: 'rafflesia-schadenbergiana',
+    name: 'Giant Mindanao Rafflesia',
+    local: 'Pukot / Bulaklak ng Diablo',
+    sci: 'Rafflesia schadenbergiana',
+    group: 'plants',
+    status: 'cr',
+    endemic: true,
+    islands: ['mindanao'],
+    desc: "Rafflesia schadenbergiana is the largest flower endemic to the Philippines and one of the rarest plants on Earth. Found only in the montane forests of Mindanao, it produces flowers that can reach up to 80 centimeters in diameter — among the largest of any Rafflesia species in the world. Like all Rafflesia, it is a holoparasite — it has no roots, no leaves, no stem, and no chlorophyll. It exists entirely inside the tissue of a single host vine (Tetrastigma), invisible for most of its life until a massive bud erupts through the bark and slowly unfolds into its enormous flower. The bloom lasts only 5 to 7 days before collapsing and rotting, emitting a powerful smell of decaying flesh to attract the carrion flies that pollinate it. Habitat destruction and the rarity of mature host vines make this one of the most threatened plants in the Philippines.",
+    fact: "Rafflesia schadenbergiana spends up to 9 months developing as an invisible bud inside its host vine — growing slowly beneath the bark with no external signs of its presence. Then, over just a few days, an enormous cabbage-like bud erupts from the vine and expands into a flower that can weigh up to 10 kilograms. The entire above-ground existence of the plant lasts less than two weeks.",
+    img: 'rafflesia-schadenbergiana'
+  },
+  {
     id: 'nepenthes-philippinensis',
     name: 'Pitcher Plant',
     local: 'Tambisaw',
