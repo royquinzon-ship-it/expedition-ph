@@ -748,6 +748,8 @@ footer ul li a:hover { color: var(--gold); }
 }
 
 @media(max-width:1100px) { .fauna-hub-grid { grid-template-columns: repeat(2,1fr) !important; } }
+@media(min-width:1101px) { .fauna-hub-grid > .fauna-hub-card:last-child { grid-column: 2; } }
+@media(min-width:701px) and (max-width:1100px) { .fauna-hub-grid > .fauna-hub-card:last-child { grid-column: 1 / -1; width: calc(50% - 10px); margin: 0 auto; } }
 @media(max-width:700px) { .fauna-hub-grid { grid-template-columns: 1fr !important; } .subpage-breadcrumb { display: none; } }
 
 /* ── HOME HERO ── */
