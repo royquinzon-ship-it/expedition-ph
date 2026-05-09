@@ -1687,6 +1687,19 @@ var PH_SPECIES = [
     img: 'dipterocarp-forest'
   },
   {
+    id: 'yakal',
+    name: 'Yakal',
+    local: 'Yakal / Iron Wood',
+    sci: 'Hopea plagata',
+    group: 'plants',
+    status: 'cr',
+    endemic: true,
+    islands: ['luzon', 'visayas'],
+    desc: 'Yakal (Hopea plagata) is a critically endangered Philippine endemic dipterocarp tree prized for its exceptionally hard, dense ironwood timber. Once abundant in the lowland and montane forests of Luzon and the Visayas, Yakal has been devastated by decades of illegal logging. Its timber — among the hardest and most durable in the Philippines — was historically used for ship construction, railroad ties, and heavy infrastructure. Today, large old-growth Yakal trees are extremely rare and the species is considered functionally extinct across much of its former range. Active reforestation programs are underway but recovery is slow due to the tree\'s naturally slow growth rate.',
+    fact: 'Yakal wood is so extraordinarily dense — with a specific gravity exceeding 1.0 — that it actually sinks in water, unlike most timber species. This remarkable density made it the preferred wood for ship keels and marine construction during the Spanish colonial era, directly contributing to its overcutting and near-extinction in Philippine forests.',
+    img: 'yakal'
+  },
+  {
     id: 'medinilla-magnifica',
     name: 'Philippine Medinilla',
     local: 'Kapa-kapa',
