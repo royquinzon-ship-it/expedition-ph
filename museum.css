@@ -215,8 +215,8 @@ nav a:hover, nav a.active { color: var(--gold); }
 
 .card img {
   width: 100%; height: 220px;
-  object-fit: cover; display: block;
-  background: #0a0a0a;
+  object-fit: contain; display: block;
+  background: var(--dark3);
   transition: transform 0.5s;
 }
 
@@ -704,7 +704,7 @@ footer ul li a:hover { color: var(--gold); }
 .fauna-hub-card { background: var(--dark3); border: 1px solid rgba(255,255,255,0.05); overflow: hidden; display: flex; flex-direction: column; transition: border-color 0.3s, transform 0.3s; cursor: pointer; }
 .fauna-hub-card:hover { border-color: rgba(212,175,55,0.45); transform: translateY(-4px); }
 .fauna-hub-img-wrap { position: relative; overflow: hidden; height: 220px; }
-.fauna-hub-img-wrap img { width: 100%; height: 100%; object-fit: cover; background: #0a0a0a; display: block; transition: transform 0.5s; }
+.fauna-hub-img-wrap img { width: 100%; height: 100%; object-fit: contain; background: var(--dark3); display: block; transition: transform 0.5s; }
 .fauna-hub-card:hover .fauna-hub-img-wrap img { transform: scale(1.05); }
 .fauna-hub-img-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(5,5,5,0.65) 0%, transparent 60%); }
 .fauna-hub-count { position: absolute; bottom: 0.75rem; right: 0.9rem; font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); background: rgba(5,5,5,0.7); padding: 0.2rem 0.55rem; border: 1px solid var(--gold-border); }
