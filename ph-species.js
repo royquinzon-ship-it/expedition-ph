@@ -613,6 +613,19 @@ var PH_SPECIES = [
     img: 'kamagong'
   },
   {
+    id: 'nepenthes-attenboroughii',
+    name: "Attenborough's Pitcher Plant",
+    local: 'Pananggitan ni Attenborough',
+    sci: 'Nepenthes attenboroughii',
+    group: 'plants',
+    status: 'cr',
+    endemic: true,
+    islands: ['palawan'],
+    desc: "Nepenthes attenboroughii is one of the world's largest carnivorous plants, discovered only in 2009 on the summit of Mt. Victoria in Palawan — a mountain that had never been scientifically explored. Its pitchers can grow up to 30 centimeters tall and hold over a liter of digestive fluid, making them large enough to trap and digest not just insects but small vertebrates including frogs, lizards, and rats. The species is endemic to a single mountain in the Philippines, making it one of the most geographically restricted plants on Earth. Named in honor of Sir David Attenborough in recognition of his decades of work raising awareness of the natural world, the discovery of this species was celebrated as one of the most remarkable botanical finds of the 21st century.",
+    fact: "Nepenthes attenboroughii was discovered when a group of Filipino and British researchers climbed Mt. Victoria following reports from local Christian missionaries who had seen enormous pitcher plants on the summit. The mountain had no trails and had never been formally surveyed — the team had to hack through dense jungle for days before reaching the summit where the plant grew. It was immediately recognized as a new species and named after Sir David Attenborough upon publication in 2009.",
+    img: 'nepenthes-attenboroughii'
+  },
+  {
     id: 'nepenthes-philippinensis',
     name: 'Pitcher Plant',
     local: 'Tambisaw',
