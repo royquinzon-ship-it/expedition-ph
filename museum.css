@@ -713,7 +713,6 @@ footer ul li a:hover { color: var(--gold); }
 .fauna-hub-title em { font-style: italic; color: var(--gold); }
 .fauna-hub-desc { font-size: 0.82rem; color: var(--dim); line-height: 1.65; flex: 1; margin-bottom: 1.25rem; }
 .fauna-hub-btn { align-self: flex-start; padding: 0.55rem 1.3rem; font-size: 0.72rem; }
-.fauna-hub-grid > .fauna-hub-card:last-child:nth-child(3n+1) { grid-column: 2; }
 .subpage-breadcrumb { position: fixed; top: 56px; left: 48px; z-index: 999; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--dim); display: flex; gap: 0.5rem; align-items: center; }
 .subpage-breadcrumb a { color: var(--gold); text-decoration: none; }
 .breadcrumb-sep { color: var(--dim); }
