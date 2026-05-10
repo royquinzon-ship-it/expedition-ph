@@ -10,7 +10,8 @@ var PH_PROVINCES = [
     known_for: "Heritage Churches & Windmills",
     desc: "Ilocos Norte occupies the northwestern tip of Luzon, where rolling sand dunes near Paoay and the Bangui Windmill Complex line a rugged coastline battered by the South China Sea. The province is draped in tobacco fields and cogon grasslands, and its coastline shelters nesting sea turtles and diverse shorebirds. Inland, Ilocos Norte's rivers and wetlands support migratory waterbirds, while centuries of Ilocano culture have produced the UNESCO-listed St. Augustine Church of Paoay and the vibrant Pamulinawen Festival.",
     fact: "The Bangui Windmill Complex along the Luzon Strait is the first wind farm in Southeast Asia, harnessing trade winds that gust at over 60 km/h for much of the year.",
-    img_seed: "ilocos-norte"
+    img_seed: "ilocos-norte",
+    img: "image/Ilocos Norte Landmark.jpg"
   },
   {
     name: "Ilocos Sur",
@@ -20,7 +21,8 @@ var PH_PROVINCES = [
     known_for: "Colonial Vigan & Tobacco",
     desc: "Ilocos Sur stretches along the northwestern Luzon coast, its narrow coastal plain squeezed between the Cordillera foothills and the South China Sea. The Abra River delta creates productive wetlands that attract egrets, herons, and migratory ducks each dry season. Vigan City, a UNESCO World Heritage Site, preserves one of Asia's best-surviving examples of a Spanish colonial town, its cobblestoned Calle Crisologo flanked by ancestral bahay na bato mansions.",
     fact: "Vigan is the only Hispanic colonial town in Asia where the original urban fabric — grid layout, stone churches, and trading houses — has survived largely intact for over 400 years.",
-    img_seed: "ilocos-sur"
+    img_seed: "ilocos-sur",
+    img: "image/Vigan.jpg"
   },
   {
     name: "La Union",

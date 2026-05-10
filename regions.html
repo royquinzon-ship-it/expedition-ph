@@ -985,7 +985,7 @@ document.addEventListener('DOMContentLoaded', function(){
     var regionName = ig
       ? (ig.regions_list.find(function(r){ return r.key === p.region_key; }) || {}).name || p.region_key
       : p.region_key;
-    document.getElementById('prov-modal-img').src = 'https://picsum.photos/seed/' + p.img_seed + '/800/450';
+    document.getElementById('prov-modal-img').src = p.img || ('https://picsum.photos/seed/' + p.img_seed + '/800/450');
     document.getElementById('prov-modal-img').alt = p.name;
     document.getElementById('prov-modal-tag').textContent = p.known_for;
     document.getElementById('prov-modal-name').textContent = p.name;
