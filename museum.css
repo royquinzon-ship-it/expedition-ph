@@ -50,6 +50,11 @@ header.scrolled { padding: 10px 48px; }
   text-decoration: none;
   white-space: nowrap;
 }
+.header-sub {
+  font-size: 0.58rem; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--dim);
+  margin-left: 0.5rem;
+}
 
 nav { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
 
