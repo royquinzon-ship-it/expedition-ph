@@ -32,7 +32,8 @@ var PH_PROVINCES = [
     known_for: "Surf Breaks & Pine Forests",
     desc: "La Union is the smallest province in the Ilocos Region, yet it packs a remarkable diversity of landscapes: white-sand surfing beaches at San Juan, rugged headlands, and the lower slopes of the Cordillera clothed in pine and broadleaf forest. Its freshwater rivers descend steeply from the mountains, providing habitat for native freshwater fish and riparian birds. The province is culturally known for its Ilocano-Ibaloy heritage and the Chinese-influenced Namnama Festival.",
     fact: "The surf break at San Juan, La Union — locally called \"Urbiztondo\" — is one of the most consistent beach breaks in the Philippines, drawing international surfers during the northeast monsoon from October to March.",
-    img_seed: "la-union"
+    img_seed: "la-union",
+    img: "image/Baluarte watchtower La Union.jpg"
   },
   {
     name: "Pangasinan",
@@ -42,7 +43,8 @@ var PH_PROVINCES = [
     known_for: "Hundred Islands & Salt Beds",
     desc: "Pangasinan faces Lingayen Gulf along a wide coastal plain flanked by the Cordillera and Zambales mountain ranges, creating one of Luzon's most productive agricultural and fishery landscapes. The Hundred Islands National Park — actually 124 islands at low tide — shelters coral reefs, sea turtles, and hawksbill turtle nesting grounds within Alaminos Bay. The province's vast salt beds in Dasol and Infanta are some of the country's largest, and its bangus (milkfish) aquaculture industry supplies much of the national demand.",
     fact: "Bolinao in northwestern Pangasinan hosts one of the largest colonies of the Critically Endangered giant clam (Tridacna gigas) under active mariculture conservation, with some individuals exceeding 1 metre in shell width.",
-    img_seed: "pangasinan"
+    img_seed: "pangasinan",
+    img: "image/Bolinao Falls Panggasinan.jpg"
   },
 
   // ── REGION II – Cagayan Valley ────────────────────────────────────────────
