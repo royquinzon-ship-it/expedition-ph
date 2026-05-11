@@ -56,7 +56,8 @@ var PH_PROVINCES = [
     known_for: "Rolling Hills & Stone Villages",
     desc: "Batanes is the northernmost and smallest province of the Philippines, a remote archipelago of ten islands perched between the Luzon Strait and the Pacific, battered by typhoons and sculpted into sweeping green hillscapes unlike anywhere else in the country. The islands' isolation has preserved a unique Ivatan culture famous for its limestone-and-cogon vakul headgear and sturdy stone houses built to withstand typhoon winds exceeding 200 km/h. The surrounding seas are rich in marlins, tunas, and flying fish, and the cliffs of Sabtang Island provide nesting habitat for frigatebirds and petrels.",
     fact: "Batanes sits atop the Luzon Strait volcanic arc and experiences more typhoons per year than any other Philippine province, yet the traditional Ivatan stone houses have withstood direct hits from super typhoons for centuries without collapse.",
-    img_seed: "batanes"
+    img_seed: "batanes",
+    img: "image/Batanes Light House .jpg"
   },
   {
     name: "Cagayan",
@@ -66,7 +67,8 @@ var PH_PROVINCES = [
     known_for: "Cagayan River & Fossil Beds",
     desc: "Cagayan is the largest province in the Philippines by land area, occupying the wide Cagayan Valley drained by the Cagayan River — the country's longest river at 505 kilometres. The Sierra Madre mountain range lines its eastern edge, sheltering one of the world's largest remaining contiguous tropical rainforests and harbouring endemic species including the Philippine Eagle, the Giant Cloud Rat, and more than 200 species of birds. Fossil beds in the Cagayan Valley have yielded Pleistocene megafauna including Stegodon and giant tortoise remains, making the province a treasure trove of Philippine paleontology.",
     fact: "The Callao Cave archaeological site in Cagayan contains fossilised foot bones of Homo luzonensis, a newly described human species that lived at least 67,000 years ago — predating any other known Homo sapiens presence in the Philippines.",
-    img_seed: "cagayan"
+    img_seed: "cagayan",
+    img: "image/Capen Engano Cagayan.jpg"
   },
   {
     name: "Isabela",
@@ -76,7 +78,8 @@ var PH_PROVINCES = [
     known_for: "Corn & Magat Dam Watershed",
     desc: "Isabela is the second-largest Philippine province, a vast lowland agricultural plain flanked by the Sierra Madre to the east and the Caraballo Mountains to the southwest, drained by the Cagayan River and its tributaries. The Magat River watershed feeds the Magat Dam, one of the country's largest hydroelectric reservoirs, which creates an important freshwater ecosystem for wading birds and migratory waterfowl. Vast tracts of Sierra Madre old-growth forest within Isabela harbour the highest diversity of Philippine forest birds in Luzon.",
     fact: "The Northern Sierra Madre Natural Park in Isabela is the largest protected area in the Philippines at 359,486 hectares, sheltering over 700 plant species and more than 300 bird species, including 10 Critically Endangered taxa.",
-    img_seed: "isabela"
+    img_seed: "isabela",
+    img: "image/Sta. Victoria Caves Isabela.jpg"
   },
   {
     name: "Nueva Vizcaya",
@@ -86,7 +89,8 @@ var PH_PROVINCES = [
     known_for: "Strawberries & Mountain Crossroads",
     desc: "Nueva Vizcaya is a landlocked highland province sitting astride the Caraballo Mountains and the southern end of the Cagayan Valley, serving as the gateway between Luzon's northern highlands and the southern lowlands. Its cool climate and fertile volcanic soils produce strawberries, peanuts, and highland vegetables, while its river valleys and mossy forest patches shelter a diverse community of montane birds and small mammals. The Magat River originates in its mountains, and traditional Ifugao and Isinai communities maintain ancestral domain forests across much of the province.",
     fact: "The Dupax del Norte fossil site in Nueva Vizcaya has produced some of the most complete Pleistocene proboscidean fossils in the Philippines, including Stegodon luzonensis teeth that indicate a wet, forested valley environment over 700,000 years ago.",
-    img_seed: "nueva-vizcaya"
+    img_seed: "nueva-vizcaya",
+    img: "image/Caraballo Range Nueva Viscaya.jpg"
   },
   {
     name: "Quirino",
@@ -96,7 +100,8 @@ var PH_PROVINCES = [
     known_for: "Ecotourism & Wild Rivers",
     desc: "Quirino is one of the least-populated provinces in Luzon, a rugged upland territory on the eastern slopes of the Caraballo Mountains largely blanketed by tropical rainforest and bisected by white-water rivers including the Cagayan tributary system. The Quirino Protected Landscape shelters Philippine Eagles, critically endangered freshwater crocodiles in the Siitan River, and a remarkable diversity of endemic reptiles and amphibians. Its remoteness has kept significant forest cover intact, making it a priority landscape for Philippine biodiversity conservation.",
     fact: "The Siitan River in Quirino is one of only a handful of confirmed wild habitats of the Philippine Crocodile (Crocodylus mindorensis), with a small but breeding population that conservationists have monitored since the 1990s.",
-    img_seed: "quirino"
+    img_seed: "quirino",
+    img: "image/Nagtipunan Quirino.jpg"
   },
 
   // ── CAR – Cordillera Administrative Region ────────────────────────────────
