@@ -256,12 +256,18 @@
 /* ── Jump navigation ── */
 .ig-jump-nav {
   display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;
+  /* Explicitly reset properties inherited from museum.css global "nav" mobile sidebar rule */
+  flex-direction: row; align-items: center;
+  height: auto; max-height: none; width: auto; max-width: none;
+  right: auto; border-left: none; overflow-y: visible;
   position: sticky; top: 58px; z-index: 500;
   background: rgba(8,8,8,0.94); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
   padding: 0.55rem 1rem; margin: 0 -5rem 2.5rem;
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 .ig-jump-btn {
+  /* Reset "nav a" mobile rule that sets width:100% and full-width border */
+  width: auto; border-bottom: 1px solid rgba(255,255,255,0.1);
   font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase;
   padding: 0.3rem 1rem; border: 1px solid rgba(255,255,255,0.1);
   color: var(--dim); text-decoration: none;

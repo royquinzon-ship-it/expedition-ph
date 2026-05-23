@@ -668,7 +668,7 @@ footer ul li a:hover { color: var(--gold); }
   header { padding: 14px 20px; }
   header.scrolled { padding: 10px 20px; }
   .nav-toggle { display: flex; }
-  nav {
+  header nav {
     position: fixed;
     top: 0; right: -100%;
     width: 72%;
@@ -686,8 +686,8 @@ footer ul li a:hover { color: var(--gold); }
     flex-wrap: nowrap;
     overflow-y: auto;
   }
-  nav.open { right: 0; }
-  nav a {
+  header nav.open { right: 0; }
+  header nav a {
     font-size: 0.88rem;
     padding: 0.8rem 0;
     width: 100%;
