@@ -300,6 +300,9 @@
   .ig-region-block { margin-bottom:1.5rem; }
   .prov-btn { font-size:0.72rem; padding:0.4rem 0.8rem; }
 }
+@media(max-width:700px) {
+  .ig-jump-nav { margin: 0 -1.5rem 2.5rem; }
+}
 @media(max-width:480px) {
   .ig-intro-name { font-size:1.3rem; }
   .ig-stat-value { font-size:0.95rem; }
@@ -474,7 +477,6 @@
     <a href="#ig-luzon"    class="ig-jump-btn" data-ig="luzon">&#9670; Luzon</a>
     <a href="#ig-visayas"  class="ig-jump-btn" data-ig="visayas">&#9670; Visayas</a>
     <a href="#ig-mindanao" class="ig-jump-btn" data-ig="mindanao">&#9670; Mindanao</a>
-      <a href="exhibits.html">Exhibits</a>
   </nav>
 
   <div class="prov-search-wrap">
@@ -629,8 +631,24 @@
   /* ── Leaflet Map ── */
   /* Initial view — Philippine archipelago bounds before data loads */
   var map = L.map('ph-leaflet-map', {
-    zoomControl: true, attributionControl: false, scrollWheelZoom: true
+    zoomControl: true, attributionControl: false, scrollWheelZoom: false
   });
+
+  /* Mobile touch-trap fix: overlay requires a tap before map captures touches */
+  var mapEl = document.getElementById('ph-leaflet-map');
+  var isTouchDevice = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+  if (isTouchDevice) {
+    map.dragging.disable();
+    var touchOverlay = document.createElement('div');
+    touchOverlay.style.cssText = 'position:absolute;inset:0;z-index:1001;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.38);pointer-events:all;cursor:pointer;';
+    touchOverlay.innerHTML = '<span style="font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.75);background:rgba(10,10,10,0.78);padding:0.45rem 1rem;border:1px solid rgba(255,255,255,0.15);">Tap to interact with map</span>';
+    mapEl.style.position = 'relative';
+    mapEl.appendChild(touchOverlay);
+    touchOverlay.addEventListener('click', function() {
+      map.dragging.enable();
+      touchOverlay.remove();
+    });
+  }
   map.fitBounds(PH_BOUNDS);
 
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
