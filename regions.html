@@ -258,7 +258,7 @@
   display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;
   position: sticky; top: 58px; z-index: 500;
   background: rgba(8,8,8,0.94); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
-  padding: 0.55rem 1rem; margin: 0 -2rem 2.5rem;
+  padding: 0.55rem 1rem; margin: 0 -5rem 2.5rem;
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 .ig-jump-btn {
@@ -291,6 +291,9 @@
 .ig-block.search-empty { display: none; }
 
 /* ── Mobile ── */
+@media(max-width:1100px) {
+  .ig-jump-nav { margin: 0 -3rem 2.5rem; }
+}
 @media(max-width:768px) {
   .ig-block { margin-bottom:2.2rem; padding-bottom:2.2rem; }
   .ig-intro-num { font-size:2.5rem; }
@@ -640,7 +643,7 @@
   if (isTouchDevice) {
     map.dragging.disable();
     var touchOverlay = document.createElement('div');
-    touchOverlay.style.cssText = 'position:absolute;inset:0;z-index:1001;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.38);pointer-events:all;cursor:pointer;';
+    touchOverlay.style.cssText = 'position:absolute;top:0;left:0;right:0;bottom:0;z-index:1001;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.38);pointer-events:all;cursor:pointer;';
     touchOverlay.innerHTML = '<span style="font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.75);background:rgba(10,10,10,0.78);padding:0.45rem 1rem;border:1px solid rgba(255,255,255,0.15);">Tap to interact with map</span>';
     mapEl.style.position = 'relative';
     mapEl.appendChild(touchOverlay);
