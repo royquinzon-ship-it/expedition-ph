@@ -29,11 +29,11 @@ var PH_PROVINCES = [
     capital: "San Fernando City",
     region_key: "region1",
     island_group: "luzon",
-    known_for: "Baluarte Watchtower & Urbiztondo Beach",
+    known_for: "Immuki Island",
     desc: "La Union is the smallest province in the Ilocos Region, yet it packs a remarkable diversity of landscapes: white-sand surfing beaches at San Juan, rugged headlands, and the lower slopes of the Cordillera clothed in pine and broadleaf forest. Its freshwater rivers descend steeply from the mountains, providing habitat for native freshwater fish and riparian birds. The province is culturally known for its Ilocano-Ibaloy heritage and the Chinese-influenced Namnama Festival.",
-    fact: "The surf break at San Juan, La Union — locally called \"Urbiztondo\" — is one of the most consistent beach breaks in the Philippines, drawing international surfers during the northeast monsoon from October to March.",
+    fact: "Immuki Island off the coast of La Union is a small limestone islet fringed by coral reef habitat, where the clear waters of the South China Sea support diverse reef fish, sea urchins, and occasional sea turtle sightings — a rare pocket of marine biodiversity along the heavily populated Ilocos coastline.",
     img_seed: "la-union",
-    img: "image/Baluarte watchtower La Union.jpg"
+    img: "image/Immuki Island La Union.jpg"
   },
   {
     name: "Pangasinan",
