@@ -9,7 +9,7 @@ var PH_PROVINCES = [
     island_group: "luzon",
     known_for: "Kapurpurawan Rock Formation",
     desc: "Ilocos Norte occupies the northwestern tip of Luzon, where rolling sand dunes near Paoay and the Bangui Windmill Complex line a rugged coastline battered by the South China Sea. The province is draped in tobacco fields and cogon grasslands, and its coastline shelters nesting sea turtles and diverse shorebirds. Inland, Ilocos Norte's rivers and wetlands support migratory waterbirds, while centuries of Ilocano culture have produced the UNESCO-listed St. Augustine Church of Paoay and the vibrant Pamulinawen Festival.",
-    fact: "The Bangui Windmill Complex along the Luzon Strait is the first wind farm in Southeast Asia, harnessing trade winds that gust at over 60 km/h for much of the year.",
+    fact: "The Kapurpurawan Rock Formation is a rare coastal outcrop of calcium carbonate-rich sedimentary rock sculpted by millennia of wind and wave erosion along the Luzon Strait — its blindingly white surface is caused by dense concentrations of calcium carbonate originally deposited by ancient marine organisms.",
     img_seed: "ilocos-norte",
     img: "image/Kapurpurawan  Rock Formation.jpg"
   },
@@ -20,7 +20,7 @@ var PH_PROVINCES = [
     island_group: "luzon",
     known_for: "Pinsal Falls",
     desc: "Ilocos Sur stretches along the northwestern Luzon coast, its narrow coastal plain squeezed between the Cordillera foothills and the South China Sea. The Abra River delta creates productive wetlands that attract egrets, herons, and migratory ducks each dry season. Vigan City, a UNESCO World Heritage Site, preserves one of Asia's best-surviving examples of a Spanish colonial town, its cobblestoned Calle Crisologo flanked by ancestral bahay na bato mansions.",
-    fact: "Vigan is the only Hispanic colonial town in Asia where the original urban fabric — grid layout, stone churches, and trading houses — has survived largely intact for over 400 years.",
+    fact: "Pinsal Falls plunges over ancient volcanic basalt formations in the forested hills of Santa Maria, fed by rivers draining the western slopes of the Cordillera — its flow rate can increase tenfold during the wet season as the mountain watershed channels monsoon rainfall directly into the falls.",
     img_seed: "ilocos-sur",
     img: "image/Pinsal Falls ILocos Sur.jpg"
   },
