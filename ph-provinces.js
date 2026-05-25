@@ -8,7 +8,7 @@ var PH_PROVINCES = [
     region_key: "region1",
     island_group: "luzon",
     known_for: "Kapurpurawan Rock Formation",
-    desc: "Ilocos Norte occupies the northwestern tip of Luzon, where rolling sand dunes near Paoay and the Bangui Windmill Complex line a rugged coastline battered by the South China Sea. The province is draped in tobacco fields and cogon grasslands, and its coastline shelters nesting sea turtles and diverse shorebirds. Inland, Ilocos Norte's rivers and wetlands support migratory waterbirds, while centuries of Ilocano culture have produced the UNESCO-listed St. Augustine Church of Paoay and the vibrant Pamulinawen Festival.",
+    desc: "Ilocos Norte occupies the northwestern tip of Luzon, where rolling sand dunes near Paoay and the Bangui Windmill Complex line a rugged coastline battered by the South China Sea. The Kapurpurawan Rock Formation in Burgos stands as one of the most striking coastal geological features in the north, while Paoay Lake — a natural tectonic lake — shelters freshwater birds and endemic aquatic life year-round. The province's coastline along Pagudpud is a nesting ground for sea turtles, and Saud Beach and Patapat Viaduct offer dramatic encounters with the raw Luzon Strait shoreline. Inland, Ilocos Norte's rivers and wetlands support migratory waterbirds, and the Cordillera foothills harbour resident Cordillera raptors and forest birds.",
     fact: "The Kapurpurawan Rock Formation is a rare coastal outcrop of calcium carbonate-rich sedimentary rock sculpted by millennia of wind and wave erosion along the Luzon Strait — its blindingly white surface is caused by dense concentrations of calcium carbonate originally deposited by ancient marine organisms.",
     img_seed: "ilocos-norte",
     img: "image/Kapurpurawan  Rock Formation.jpg"
@@ -19,7 +19,7 @@ var PH_PROVINCES = [
     region_key: "region1",
     island_group: "luzon",
     known_for: "Pinsal Falls",
-    desc: "Ilocos Sur stretches along the northwestern Luzon coast, its narrow coastal plain squeezed between the Cordillera foothills and the South China Sea. The Abra River delta creates productive wetlands that attract egrets, herons, and migratory ducks each dry season. Vigan City, a UNESCO World Heritage Site, preserves one of Asia's best-surviving examples of a Spanish colonial town, its cobblestoned Calle Crisologo flanked by ancestral bahay na bato mansions.",
+    desc: "Ilocos Sur stretches along the northwestern Luzon coast, its narrow coastal plain squeezed between the Cordillera foothills and the South China Sea. Pinsal Falls in Santa Maria is a powerful multi-cascade waterfall set within forested slopes, fed by Cordillera rivers at their most dramatic during the wet season. The Abra River delta creates productive wetlands that attract egrets, herons, and migratory ducks each dry season, while the Nagbacalan Lily Pond in Caoayan offers a rare lowland wetland rich in native aquatic plants and waterbirds. The Bantay Nature Park preserves a remnant patch of lowland forest, and the rugged coastline south of Vigan shelters small coves and rocky intertidal zones teeming with marine invertebrates.",
     fact: "Pinsal Falls plunges over ancient volcanic basalt formations in the forested hills of Santa Maria, fed by rivers draining the western slopes of the Cordillera — its flow rate can increase tenfold during the wet season as the mountain watershed channels monsoon rainfall directly into the falls.",
     img_seed: "ilocos-sur",
     img: "image/Pinsal Falls ILocos Sur.jpg"
@@ -30,7 +30,7 @@ var PH_PROVINCES = [
     region_key: "region1",
     island_group: "luzon",
     known_for: "Immuki Island",
-    desc: "La Union is the smallest province in the Ilocos Region, yet it packs a remarkable diversity of landscapes: white-sand surfing beaches at San Juan, rugged headlands, and the lower slopes of the Cordillera clothed in pine and broadleaf forest. Its freshwater rivers descend steeply from the mountains, providing habitat for native freshwater fish and riparian birds. The province is culturally known for its Ilocano-Ibaloy heritage and the Chinese-influenced Namnama Festival.",
+    desc: "La Union is the smallest province in the Ilocos Region, yet it packs a remarkable diversity of natural landscapes. Immuki Island off the San Fernando coast is a limestone islet fringed by coral reef, offering some of the clearest snorkelling waters along the Ilocos coast. Tangadan Falls in San Gabriel tumbles through dense montane forest in the lower Cordillera, while the Baroro River valley provides a rich riparian corridor for kingfishers, herons, and native freshwater fish. The Pugo highlands along the Cordillera foothills are blanketed in pine forest, and the surf beaches of San Juan sit on a coastline shaped by the long-shore drift of the South China Sea.",
     fact: "Immuki Island off the coast of La Union is a small limestone islet fringed by coral reef habitat, where the clear waters of the South China Sea support diverse reef fish, sea urchins, and occasional sea turtle sightings — a rare pocket of marine biodiversity along the heavily populated Ilocos coastline.",
     img_seed: "la-union",
     img: "image/Immuki Island La Union.jpg"
@@ -111,7 +111,7 @@ var PH_PROVINCES = [
     region_key: "car",
     island_group: "luzon",
     known_for: "Kaparkan Falls",
-    desc: "Abra is a landlocked Cordillera province drained by the Abra River, which cuts through steep mountain ridges before emptying into the Ilocos Sur coast. Its lower river valley is warm and produces tobacco and rice, while its upper slopes are cloaked in dipterocarp and pine forest inhabited by a remarkable diversity of Cordillera raptors and hornbills. The Itneg (Tingguian) people, renowned for their intricate weaving, oral epics, and sacred Bodong peace pact system, form the province's dominant indigenous community.",
+    desc: "Abra is a landlocked Cordillera province drained by the Abra River, which cuts through steep mountain ridges before emptying into the Ilocos Sur coast. Kaparkan Falls in Tineg is the province's most spectacular natural feature — a rare travertine cascade whose terraced limestone pools are unlike any other waterfall formation in northern Luzon. Kili-Kili Falls and Balugbog Falls offer further deep-forest waterfall experiences along the Cordillera river systems, while Lake Amianan in Licuan-Baay is a highland lake surrounded by montane forest rich in endemic birds. The upper Abra River tributaries support one of the last confirmed populations of the Philippine Freshwater Crocodile, and the surrounding forest slopes shelter a remarkable diversity of Cordillera raptors and hornbills.",
     fact: "Kaparkan Falls in Tineg, Abra is a rare multi-tiered travertine waterfall — its stepped terraces are built up over centuries by calcium carbonate deposits precipitating out of the mineral-rich mountain water, the same geological process that forms cave stalactites, making it one of the few travertine formations of its kind in the Philippines.",
     img_seed: "abra",
     img: "image/Kaparkan Falls Abra.jpg"
