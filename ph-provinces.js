@@ -110,10 +110,11 @@ var PH_PROVINCES = [
     capital: "Bangued",
     region_key: "car",
     island_group: "luzon",
-    known_for: "Tobacco & Itneg Culture",
+    known_for: "Kaparkan Falls",
     desc: "Abra is a landlocked Cordillera province drained by the Abra River, which cuts through steep mountain ridges before emptying into the Ilocos Sur coast. Its lower river valley is warm and produces tobacco and rice, while its upper slopes are cloaked in dipterocarp and pine forest inhabited by a remarkable diversity of Cordillera raptors and hornbills. The Itneg (Tingguian) people, renowned for their intricate weaving, oral epics, and sacred Bodong peace pact system, form the province's dominant indigenous community.",
-    fact: "The Abra River is one of the few rivers in northern Luzon that still hosts confirmed populations of the Philippine Freshwater Crocodile in its upper tributaries, drawing researchers studying this Critically Endangered species.",
-    img_seed: "abra"
+    fact: "Kaparkan Falls in Tineg, Abra is a rare multi-tiered travertine waterfall — its stepped terraces are built up over centuries by calcium carbonate deposits precipitating out of the mineral-rich mountain water, the same geological process that forms cave stalactites, making it one of the few travertine formations of its kind in the Philippines.",
+    img_seed: "abra",
+    img: "image/Kaparkan Falls Abra.jpg"
   },
   {
     name: "Apayao",
