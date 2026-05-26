@@ -132,40 +132,44 @@ var PH_PROVINCES = [
     capital: "La Trinidad",
     region_key: "car",
     island_group: "luzon",
-    known_for: "Strawberries & Baguio Highlands",
-    desc: "Benguet is the gateway to the Cordillera highlands, home to the summer capital Baguio City and some of the Philippines' most dramatic mountain scenery, including Mount Pulag — the highest peak in Luzon at 2,922 metres — which rises through mossy forest into rare Philippine dwarf bamboo grassland above the clouds. The province's cold climate and fertile volcanic soils have made it the country's vegetable basket, producing strawberries, carrots, cabbage, and cut flowers. The Kankanaey and Ibaloy peoples have terraced these mountain slopes for agriculture for centuries, maintaining an intimate land-culture relationship.",
-    fact: "The summit grasslands of Mount Pulag create a sea of clouds phenomenon at dawn that draws tens of thousands of hikers annually, and they host the Philippine Dwarf Kingfisher and the endemic Luzon Rosefinch found nowhere else on Earth.",
-    img_seed: "benguet"
+    known_for: "Mt. Pulag, Ambongdolan River & Cordillera Highlands",
+    desc: "Benguet is the gateway to the Cordillera highlands, home to the summer capital Baguio City and some of the Philippines' most dramatic mountain scenery. Mount Pulag — the highest peak in Luzon at 2,922 metres — rises through mossy forest into rare Philippine dwarf bamboo grassland above the clouds. The Ambongdolan River flows through scenic gorges and turquoise pools in Tublay, one of the province's most pristine river ecosystems. Bued River carves its way through the lowlands and has been central to Ibaloy settlements for generations. The vast pine forests of Atok and Kabayan shelter cold-spring creeks and waterfalls including Tondaligan and the cascades near Kibungan. The Kankanaey and Ibaloy peoples have terraced these mountain slopes for agriculture for centuries, maintaining an intimate land-culture relationship.",
+    fact: "The summit grasslands of Mount Pulag create a sea of clouds phenomenon at dawn that draws tens of thousands of hikers annually, and they host the Philippine Dwarf Kingfisher and the endemic Luzon Rosefinch found nowhere else on Earth. The Ambongdolan River in Tublay is known for its striking blue-green waters fed by cold mountain springs, and remains one of the cleanest river systems in the Cordillera.",
+    img_seed: "benguet",
+    img: "image/Ambongdolan River Benguet.jpg"
   },
   {
     name: "Ifugao",
     capital: "Lagawe",
     region_key: "car",
     island_group: "luzon",
-    known_for: "UNESCO Rice Terraces & Hudhud",
-    desc: "Ifugao is the heartland of the famous Banaue Rice Terraces, a 2,000-year-old hydraulic civilisation carved into steep mountain slopes by the Ifugao people, recognised as a UNESCO World Heritage Site and often called the Eighth Wonder of the World. The province's cloud forest ridges above the terraces shelter the Ifugao Leaf-warbler, Philippine Eagle, and dozens of endemic Luzon montane birds, while forest patches within the terrace system serve as critical water catchments maintaining the irrigation channels. The Ifugao oral epic Hudhud, chanted during rice harvest, is also a UNESCO Intangible Cultural Heritage.",
-    fact: "The Ifugao muyong — privately owned family woodlots integrated into the terrace system — represent one of the world's oldest and most sophisticated community-based watershed management systems, maintaining spring-fed irrigation for over 2,000 years without modern infrastructure.",
-    img_seed: "ifugao"
+    known_for: "Banaue Rice Terraces, Tappiyah Falls & Hapao Wetlands",
+    desc: "Ifugao is the heartland of the famous Banaue Rice Terraces, a 2,000-year-old hydraulic civilisation carved into steep mountain slopes by the Ifugao people, recognised as a UNESCO World Heritage Site and often called the Eighth Wonder of the World. Tappiyah Falls plunges 21 metres into a crystal-clear pool accessible by a scenic trek through the terraces near Batad village. The Hapao Rice Terraces in Hungduan include a cluster of natural wetlands that serve as a Ramsar-listed site, hosting migratory waterbirds and endemic freshwater species. Mount Napulawan, one of the highest peaks in the Cordillera at over 2,600 metres, shelters old-growth mossy forest and is a critical habitat for the Philippine Eagle. The Ibulao River and its tributaries cut through limestone gorges and dense forest, supplying the irrigation channels that keep the terraces alive. The province's cloud forest ridges shelter the Ifugao Leaf-warbler and dozens of endemic Luzon montane birds.",
+    fact: "The Ifugao muyong — privately owned family woodlots integrated into the terrace system — represent one of the world's oldest and most sophisticated community-based watershed management systems, maintaining spring-fed irrigation for over 2,000 years without modern infrastructure. Tappiyah Falls and the Batad amphitheatre terraces together form one of the most photographed cultural-natural landscapes in Southeast Asia.",
+    img_seed: "ifugao",
+    img: "image/Banaue Rice Terreces.jpg"
   },
   {
     name: "Kalinga",
     capital: "Tabuk City",
     region_key: "car",
     island_group: "luzon",
-    known_for: "Chico River & Tattooing Tradition",
-    desc: "Kalinga is a rugged mountain province carved by the Chico River and its tributaries, which have formed dramatic gorges and river terraces through ancient limestone and granite. Its forests are among the most important bird areas in the northern Cordillera, sheltering Philippine Eagles, Luzon Hornbills, and the elusive Whiskered Pitta in its old-growth dipterocarp stands. The Kalinga people are renowned for their Bodong peace pact system, which governed inter-tribal relations for centuries, and for the intricate batok (tattoo) tradition kept alive by centenarian elder Whang-od Oggay.",
-    fact: "Whang-od Oggay of Buscalan village, Tinglayan, is the last traditional mambabatok (tattoo artist) of the Butbut Kalinga, now over 100 years old, and was recognised as a National Living Treasure (Gawad sa Manlilikha ng Bayan) by the Philippine government in 2018.",
-    img_seed: "kalinga"
+    known_for: "Chico River, Tinglayan Gorge & Buscalan Village",
+    desc: "Kalinga is a rugged mountain province carved by the Chico River and its tributaries, which have formed dramatic gorges and river terraces through ancient limestone and granite. The Chico River Gorge in Tinglayan is one of the most spectacular river canyons in the Philippines, with sheer cliff walls and rapids that draw kayakers and trekkers. Balbalasang-Balbalan National Park in the northern highlands protects vast tracts of old-growth montane forest, cloud forest, and mossy ridgelines that are home to the Philippine Eagle, Luzon Hornbill, and the elusive Whiskered Pitta. The Mabongtot Falls and several unnamed cascades deep within the park remain largely unexplored. The Pasil River, another major tributary of the Chico, flows through ancestral forests and limestone outcrops rich in cave formations. The Kalinga people are renowned for their Bodong peace pact system and for the intricate batok (tattoo) tradition kept alive by centenarian elder Whang-od Oggay of Buscalan village.",
+    fact: "Whang-od Oggay of Buscalan village, Tinglayan, is the last traditional mambabatok (tattoo artist) of the Butbut Kalinga, now over 100 years old, and was recognised as a National Living Treasure (Gawad sa Manlilikha ng Bayan) by the Philippine government in 2018. Balbalasang-Balbalan National Park is one of the least disturbed protected areas in Luzon, with elevations ranging from 300 to over 2,000 metres sheltering some of the Cordillera's most intact watershed forests.",
+    img_seed: "kalinga",
+    img: "image/Chicko River Kalinga.jpg"
   },
   {
     name: "Mountain Province",
     capital: "Bontoc",
     region_key: "car",
     island_group: "luzon",
-    known_for: "Hanging Coffins & Rice Terraces",
-    desc: "Mountain Province sits at the geographic heart of the Cordillera, its landscape a dramatic succession of river gorges, pine-forested ridges, and ancient rice terraces clinging to near-vertical canyon walls along the Chico River. The Sagada municipality is globally known for its centuries-old practice of hanging coffins on limestone cliff faces, a burial tradition of the Kankanaey that keeps ancestors close to the sky. The province's upper elevation forests shelter an extraordinary concentration of endemic amphibians and birds found only in the central Cordillera.",
-    fact: "Sagada's Echo Valley hanging coffins, some over 2,000 years old, represent one of the world's most unusual burial traditions; the oldest coffins were carved from single logs of solid pine by the deceased themselves before death.",
-    img_seed: "mountain-province"
+    known_for: "Sagada Caves, Blue Soil Hills & Bomod-ok Falls",
+    desc: "Mountain Province sits at the geographic heart of the Cordillera, its landscape a dramatic succession of river gorges, pine-forested ridges, and ancient rice terraces carved into steep mountain slopes. Sagada is home to Sumaguing Cave and Lumiang Cave, two interconnected limestone caverns whose towering chambers and underground rivers rank among the most impressive cave systems in the Philippines. The Blue Soil Hills of Besao are an otherworldly geological formation — rolling slopes of naturally bluish-grey clay soil unlike anything else in the Cordillera. Lake Danum in Sagada is a serene high-altitude lake ringed by mossy forest, while the Bomod-ok (Big) Falls in Bauko drops some 200 metres and is one of the largest waterfalls in the Cordillera. The province's upper elevation forests shelter endemic amphibians and birds found only in the central Cordillera, including the Mountain Shrike-babbler.",
+    fact: "Sagada's Echo Valley hanging coffins, some over 2,000 years old, represent one of the world's most unusual burial traditions; the oldest coffins were carved from single logs of solid pine by the deceased themselves before death. The interconnected Sumaguing–Lumiang cave system stretches over a kilometre and features massive stalactite chambers that local guides navigate by torchlight, making it one of the most adventurous spelunking routes in Southeast Asia.",
+    img_seed: "mountain-province",
+    img: "image/Blue Soil Hills Mountain Province.jpg"
   },
 
   // ── REGION III – Central Luzon ────────────────────────────────────────────
