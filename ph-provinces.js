@@ -121,10 +121,11 @@ var PH_PROVINCES = [
     capital: "Kabugao",
     region_key: "car",
     island_group: "luzon",
-    known_for: "Pristine Rivers & Isnag Heritage",
-    desc: "Apayao is the most remote and least-visited province of the Cordillera, a densely forested upland territory bordering Cagayan, Ilocos Norte, and Kalinga. Its river system — particularly the Apayao-Abulug River — flows through limestone gorges and old-growth rainforest, supporting endemic freshwater fish and some of the richest montane bird communities in northern Luzon. The Isnag people, masters of forest survival and known for their fearsome historical warrior culture, remain the primary indigenous stewards of this extraordinarily biodiverse landscape.",
-    fact: "The Apayao-Abulug watershed contains one of the last large intact lowland-to-montane rainforest gradients in northern Luzon, including dipterocarp forest below 500 m that has been almost entirely lost elsewhere in the region.",
-    img_seed: "apayao"
+    known_for: "Lussok Cave",
+    desc: "Apayao is the most remote and least-visited province of the Cordillera, a densely forested upland territory where vast limestone karst formations hide some of the most spectacular cave systems in northern Luzon. Lussok Cave in Luna is one of the most impressive — a cathedral-like underground river cave carved through ancient limestone by the Lussok River, its chambers draped with stalactites, stalagmites, and cave curtains formed over millions of years. The cave opens onto a crystal-clear underground river navigable by bamboo raft, its walls colonised by cave swiftlets, bats, and rare cave-adapted invertebrates. Beyond the cave, the Apayao-Abulug River flows through limestone gorges and old-growth rainforest, supporting endemic freshwater fish and some of the richest montane bird communities in northern Luzon.",
+    fact: "Lussok Cave in Luna, Apayao is an active underground river cave carved through Miocene-age limestone by the Lussok River — its cave formations, including stalactites and flowstone curtains, are still actively growing as mineral-saturated groundwater seeps through the rock, depositing calcite layer by layer over thousands of years.",
+    img_seed: "apayao",
+    img: "image/Lussok Cave.jpeg"
   },
   {
     name: "Benguet",
