@@ -178,60 +178,66 @@ var PH_PROVINCES = [
     capital: "Baler",
     region_key: "region3",
     island_group: "luzon",
-    known_for: "Pacific Swells & Cloud Forest",
-    desc: "Aurora faces the Pacific Ocean along Luzon's eastern coast, shielded from the west by the Sierra Madre — the Philippines' longest mountain range and one of its most biodiverse forest landscapes. The province is famous among surfers for the powerful Pacific swells at Baler Bay, where the sport of surfing was introduced to the Philippines through the filming of Apocalypse Now. Its interior Sierra Madre forests are critical habitat for the Philippine Eagle, the Golden-crowned Flying Fox, and more than 60 species of Luzon-endemic birds.",
-    fact: "Aurora Province contains the largest remaining lowland dipterocarp forest on the Pacific slope of the Sierra Madre, and its offshore waters regularly record blue marlin exceeding 500 kg — earning the bay the nickname \"Marlin Coast.\"",
-    img_seed: "aurora"
+    known_for: "Millennium Balete Tree & Sierra Madre Rainforest",
+    desc: "Aurora faces the Pacific Ocean along Luzon's eastern coast, sheltered from the west by the Sierra Madre — the Philippines' longest mountain range and one of its most biodiverse forest landscapes. Within the municipality of Baler stands the Millennium Balete Tree (Ficus balete), one of the oldest and largest trees in the Philippines, its massive intertwined root system encircling a cold freshwater spring pool where visitors swim beneath an ancient canopy. Aurora's interior Sierra Madre forests are critical habitat for the Philippine Eagle, the Golden-crowned Flying Fox, and more than 60 species of Luzon-endemic birds, while its Pacific-facing coast hosts powerful swells that first brought surfing to the Philippines.",
+    fact: "The Millennium Balete Tree of Baler is a Ficus species estimated to be over 600 years old, with a trunk so vast that dozens of people linking hands cannot encircle it — freshwater springs well up naturally at its roots to form a clear swimming pool, making it one of the few trees in the Philippines that functions as both a living ecological monument and an active bathing site for the local community.",
+    img_seed: "aurora",
+    img: "image/Balete Tree , Balete Park Aurora.jpg"
   },
   {
     name: "Bataan",
     capital: "Balanga City",
     region_key: "region3",
     island_group: "luzon",
-    known_for: "WWII History & Mangrove Coast",
-    desc: "Bataan is a mountainous peninsula jutting into Manila Bay, its western shore lined with some of Luzon's best-preserved mangrove ecosystems and its interior forested highlands sheltering nesting raptors and endemic forest birds. Mount Natib, the peninsula's dormant volcano, rises through dense rainforest that forms part of the Manila Bay watershed. The peninsula is historically sacred as the site of the World War II Bataan Death March, and its natural landscape of jungle, mountains, and coastal wetlands make it a compelling fusion of natural and historical heritage.",
-    fact: "The Las Piñas–Parañaque Critical Habitat and Ecotourism Area is adjacent to Manila Bay; however, the mangroves of Bataan's Balanga City Wetland Park host one of Luzon's largest wintering populations of the Chinese Egret, a globally Vulnerable species.",
-    img_seed: "bataan"
+    known_for: "Pantingan Peak & Mangrove Coast",
+    desc: "Bataan is a mountainous peninsula jutting into Manila Bay, its rugged interior rising to Pantingan Peak — one of the most challenging trekking summits in Central Luzon, its forested slopes sheltering nesting raptors and endemic forest birds within the Mount Natib watershed. The western shore is lined with some of Luzon's best-preserved mangrove ecosystems, while the dormant volcano Mount Natib anchors a dense rainforest that feeds the Manila Bay watershed. Bataan's landscape of cloud-shrouded peaks, jungle, and coastal wetlands frames one of the Philippines' most historically significant peninsulas, site of the World War II Bataan Death March.",
+    fact: "Pantingan Peak in the Bataan Natural Park sits within the Mount Natib volcanic massif, whose crater lake and surrounding old-growth forest form one of the last intact lowland rainforest patches in Central Luzon — the watershed supplies freshwater to several municipalities and supports populations of the Philippine Hawk-Eagle and the rare Luzon Hornbill.",
+    img_seed: "bataan",
+    img: "image/Pantingan Peak  Bataan.jpg"
   },
   {
     name: "Bulacan",
     capital: "Malolos City",
     region_key: "region3",
     island_group: "luzon",
-    known_for: "Pampanga Delta & Fireworks Capital",
-    desc: "Bulacan occupies the northern fringe of Manila Bay's vast delta system, where the Pampanga and Angat rivers deposit rich alluvial soils across broad rice-growing plains that transition north into the rolling foothills of the Sierra Madre. The Angat Reservoir and its watershed forests form the primary water supply for Metro Manila, making Bulacan's upland ecosystems critically important to millions of people. The province is historically significant as the birthplace of Philippine Independence, where the First Philippine Republic was proclaimed in Malolos in 1899.",
-    fact: "Bulacan's municipality of Bocaue hosts the annual Bocaue River Festival (Pagoda Festival), but the province is equally notable for its large fireworks manufacturing industry — responsible for supplying over 90% of consumer fireworks used nationwide during New Year celebrations.",
-    img_seed: "bulacan"
+    known_for: "Biak-na-Bato National Park & Angat Watershed",
+    desc: "Bulacan occupies the northern fringe of Manila Bay's vast delta system, with its uplands anchored by Biak-na-Bato National Park — a labyrinthine landscape of volcanic rock formations, cave networks, and forest-clad ridges carved by centuries of erosion along the foothills of the Sierra Madre. The Angat Reservoir and its surrounding watershed forests form the primary water supply for Metro Manila, making Bulacan's upland ecosystems critically important to millions of people. The province's broad alluvial plains, fed by the Pampanga and Angat rivers, transition from productive rice-growing lowlands into these rugged forested highlands sheltering endemic wildlife.",
+    fact: "Biak-na-Bato National Park's cave system served as the mountain headquarters of Emilio Aguinaldo and the Katipunan revolutionaries during the Philippine Revolution of 1896–1897 — the same caves are also home to large colonies of cave-roosting bats and swiftlets, whose guano has built up deep deposits on cave floors over thousands of years, supporting entire invertebrate food webs in the dark.",
+    img_seed: "bulacan",
+    img: "image/Biak na Bato Bulacan.jpg"
   },
   {
     name: "Nueva Ecija",
     capital: "Palayan City",
     region_key: "region3",
     island_group: "luzon",
-    known_for: "Rice Granary of the Philippines",
-    desc: "Nueva Ecija is the Philippines' premier rice-producing province, an expansive lowland plain irrigated by the Pampanga River system and the Upper Pampanga River Integrated Irrigation System — one of the largest irrigation networks in Southeast Asia. The Pantabangan-Carranglan Watershed Forest Reserve in the Caraballo Mountains to the east protects the upstream catchment of the Pantabangan Dam, which irrigates hundreds of thousands of hectares of paddies. The province's rice paddies and wetlands are important wintering habitats for migratory shorebirds and ducks along the East Asian-Australasian Flyway.",
-    fact: "Pantabangan Reservoir in Nueva Ecija is the Philippines' largest inland body of water created by a dam, covering over 8,700 hectares when full; when water levels drop during drought years, the ruins of the submerged town of Old Pantabangan emerge from the water.",
-    img_seed: "nueva-ecija"
+    known_for: "Minalungao National Park & Pantabangan Reservoir",
+    desc: "Nueva Ecija is the Philippines' premier rice-producing province, but its eastern edge rises into the Caraballo Mountains where Minalungao National Park preserves a dramatic gorge carved by the Peñaranda River through towering limestone karst formations, its turquoise waters threading beneath sheer rock faces draped in forest. The Pantabangan Reservoir and surrounding watershed forest reserve protect the upstream catchment feeding one of the largest irrigation networks in Southeast Asia. The province's vast rice paddies and wetlands also serve as critical wintering habitat for migratory shorebirds and ducks along the East Asian-Australasian Flyway.",
+    fact: "Minalungao National Park's gorge was sculpted by millions of years of river erosion cutting through Miocene-age limestone, producing sheer karst cliffs and a vivid turquoise river channel that contrasts sharply with the surrounding lowland plain. Pantabangan Reservoir, covering over 8,700 hectares when full, is the Philippines' largest dam-created inland water body; during severe drought years, the submerged ruins of the old town of Pantabangan re-emerge from the receding water.",
+    img_seed: "nueva-ecija",
+    img: "image/Minalungao Park Nueva Ecija.jpg"
   },
   {
     name: "Pampanga",
     capital: "City of San Fernando",
     region_key: "region3",
     island_group: "luzon",
-    known_for: "Culinary Capital & Mount Arayat",
-    desc: "Pampanga is the undisputed culinary capital of the Philippines, home to a rich Kapampangan food tradition that has produced some of the country's most celebrated dishes, from sisig to kare-kare to tocino. The volcanic cone of Mount Arayat rises dramatically from the flat Pampanga plain, its forests forming an isolated sky-island that supports populations of Philippine forest birds separated from the main Luzon mountain ranges. The province's wetlands and fishponds along Manila Bay's northern shore are internationally important for migratory shorebirds, hosting globally significant populations of Far Eastern Curlew and other species.",
-    fact: "Mount Arayat is an isolated Pleistocene volcano rising 1,026 metres above an otherwise featureless plain; its forest interior shelters the endemic Luzon Bleeding-heart Pigeon, and its dual peaks are the subject of a Kapampangan legend involving two lovestruck giants.",
-    img_seed: "pampanga"
+    known_for: "Tutulari Avatar Gorge & Mount Arayat",
+    desc: "Pampanga's dramatic natural interior is anchored by the Tutulari Avatar Gorge — a narrow canyon of towering volcanic rock walls draped in hanging vegetation, carved by centuries of river erosion through the Zambales mountain foothills. The isolated volcanic cone of Mount Arayat rises from the flat Pampanga plain, its forests forming a sky-island supporting Philippine forest birds separated from the main Luzon ranges. Along Manila Bay's northern shore, the province's wetlands and fishponds are internationally important wintering grounds for migratory shorebirds, including globally significant populations of the Far Eastern Curlew.",
+    fact: "Tutulari Gorge sits within the foothills of the Zambales volcanic arc, where ancient lava flows and pyroclastic deposits were later incised by river erosion to form sheer canyon walls — the same volcanic geology that produced Mount Pinatubo to the northwest. Mount Arayat, rising 1,026 metres above an otherwise featureless plain, is an isolated Pleistocene volcano whose forest interior shelters the endemic Luzon Bleeding-heart Pigeon.",
+    img_seed: "pampanga",
+    img: "image/Tutulari Avatar Gorge  Pampanga.jpg"
   },
   {
     name: "Tarlac",
     capital: "Tarlac City",
     region_key: "region3",
     island_group: "luzon",
-    known_for: "Sugarcane Plains & Hacienda Luisita",
-    desc: "Tarlac is a landlocked agricultural province at the center of Central Luzon, its vast plains divided between sugarcane estates, rice paddies, and the lower slopes of the Zambales Mountains to the west. The Tarlac River and its tributary network flow through productive wetlands that host nesting Purple Heron and Purple Swamphen colonies, while the Sacobia-Bamban River basin was dramatically reshaped by the 1991 eruption of Mount Pinatubo and its subsequent lahar flows. The province reflects the social tensions of Philippine agricultural history, most famously at Hacienda Luisita, which became a flashpoint for land reform debates.",
-    fact: "The 1991 eruption of Mount Pinatubo deposited lahar flows up to 200 metres deep in some Tarlac river valleys, burying entire barrios and farmlands; two decades later, secondary vegetation and freshwater wetlands have colonised the hardened lahar plains, creating new ecosystems.",
-    img_seed: "tarlac"
+    known_for: "Ubod Falls & Zambales Mountain Foothills",
+    desc: "Tarlac is a landlocked province at the heart of Central Luzon, its western edge climbing into the Zambales Mountains where forest streams cascade down to form Ubod Falls — a series of tiered waterfalls fed by cold springs deep within the foothills. The province's vast plains are divided between sugarcane estates and rice paddies, while the Tarlac River and its tributaries support productive wetlands hosting nesting Purple Heron and Purple Swamphen colonies. The Sacobia-Bamban River basin was dramatically reshaped by the 1991 eruption of Mount Pinatubo, whose lahar flows buried entire barrios and farmlands before secondary vegetation slowly reclaimed the hardened plains.",
+    fact: "Ubod Falls in the Zambales foothills is fed by springs draining through volcanic rock of the Zambales Ophiolite Complex — one of the oldest and best-exposed sections of ancient oceanic crust on land in Southeast Asia, thrust onto the surface by tectonic collision over 50 million years ago. The same Pinatubo eruption that reshaped Tarlac's river valleys temporarily lowered global temperatures by 0.5°C — the largest climate cooling event since Krakatoa in 1883.",
+    img_seed: "tarlac",
+    img: "image/Ubod Falls Tarlac.jpg"
   },
   {
     name: "Zambales",
