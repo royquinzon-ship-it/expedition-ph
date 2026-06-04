@@ -181,7 +181,8 @@ var PH_PROVINCES = [
     known_for: "Millennium Balete Tree & Sierra Madre Rainforest",
     desc: "Aurora faces the Pacific Ocean along Luzon's eastern coast, sheltered from the west by the Sierra Madre — the Philippines' longest mountain range and one of its most biodiverse forest landscapes. Within the municipality of Baler stands the Millennium Balete Tree (Ficus balete), one of the oldest and largest trees in the Philippines, its massive intertwined root system encircling a cold freshwater spring pool where visitors swim beneath an ancient canopy. Aurora's interior Sierra Madre forests are critical habitat for the Philippine Eagle, the Golden-crowned Flying Fox, and more than 60 species of Luzon-endemic birds, while its Pacific-facing coast hosts powerful swells that first brought surfing to the Philippines.",
     fact: "The Millennium Balete Tree of Baler is a Ficus species estimated to be over 600 years old, with a trunk so vast that dozens of people linking hands cannot encircle it — freshwater springs well up naturally at its roots to form a clear swimming pool, making it one of the few trees in the Philippines that functions as both a living ecological monument and an active bathing site for the local community.",
-    img_seed: "aurora"
+    img_seed: "aurora",
+    img: "image/Balete Tree , Balete Park Aurora.jpg"
   },
   {
     name: "Bataan",
