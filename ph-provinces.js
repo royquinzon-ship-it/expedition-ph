@@ -181,8 +181,7 @@ var PH_PROVINCES = [
     known_for: "Millennium Balete Tree & Sierra Madre Rainforest",
     desc: "Aurora faces the Pacific Ocean along Luzon's eastern coast, sheltered from the west by the Sierra Madre — the Philippines' longest mountain range and one of its most biodiverse forest landscapes. Within the municipality of Baler stands the Millennium Balete Tree (Ficus balete), one of the oldest and largest trees in the Philippines, its massive intertwined root system encircling a cold freshwater spring pool where visitors swim beneath an ancient canopy. Aurora's interior Sierra Madre forests are critical habitat for the Philippine Eagle, the Golden-crowned Flying Fox, and more than 60 species of Luzon-endemic birds, while its Pacific-facing coast hosts powerful swells that first brought surfing to the Philippines.",
     fact: "The Millennium Balete Tree of Baler is a Ficus species estimated to be over 600 years old, with a trunk so vast that dozens of people linking hands cannot encircle it — freshwater springs well up naturally at its roots to form a clear swimming pool, making it one of the few trees in the Philippines that functions as both a living ecological monument and an active bathing site for the local community.",
-    img_seed: "aurora",
-    img: "image/Balete Tree , Balete Park Aurora.jpg"
+    img_seed: "aurora"
   },
   {
     name: "Bataan",
@@ -256,50 +255,55 @@ var PH_PROVINCES = [
     capital: "Batangas City",
     region_key: "region4a",
     island_group: "luzon",
-    known_for: "Taal Volcano & Dive Sites",
-    desc: "Batangas is a peninsula province south of Manila, dominated by the geological wonder of Taal Volcano — a volcano within a lake within a volcano — and bounded by the Batangas Bay and Verde Island Passage, which marine biologists have called the \"centre of the centre of marine biodiversity\" for its extraordinary concentration of reef fish and coral species. The Taal Caldera hosts Lake Taal, whose hyper-acidic crater lake supports the unique Taal Sardine and is home to one of the world's few freshwater-adapted sea snakes. Inland, Batangas' rolling hills are blanketed in lanzones orchards and sugarcane, while its coast is dotted with world-class dive resorts.",
-    fact: "The Verde Island Passage, separating Batangas from Mindoro, has been documented to contain more fish species per unit area than any other marine habitat on Earth, including more than 1,700 species of fish and over 500 coral species — leading scientists to call it the \"Amazon of the Sea.\"",
-    img_seed: "batangas"
+    known_for: "Mt. Maculot & Verde Island Passage",
+    desc: "Batangas is a rugged peninsula province south of Manila where dramatic volcanic geology, highland trekking terrain, and one of Earth's most extraordinary marine corridors converge in a remarkably compact landscape. Mt. Maculot rises sharply above the southern shore of Lake Taal, its iconic basalt rockpile summit commanding sweeping panoramas over the Taal Caldera — a volcano nested within a lake nested within an ancient caldera, one of the planet's most geologically layered landforms. Lake Taal's isolated freshwater caldera harbours two biological anomalies found nowhere else on Earth: the Tawilis (Sardinella tawilis), the world's only truly freshwater sardine, and the Lake Taal sea snake (Hydrophis semperi), a marine reptile stranded and gradually adapted to fresh water over millennia of geological isolation. Offshore, the Verde Island Passage separating Batangas from Mindoro shelters more reef fish species per unit area than any other marine habitat on Earth, with scientists designating it the \"centre of the centre of marine biodiversity.\"",
+    fact: "The Lake Taal sea snake (Hydrophis semperi) is one of the world's only sea snakes to have permanently colonised a freshwater lake — isolated within Taal's caldera long after its marine connection closed, it gradually adapted over millennia into a fully freshwater reptile, completing its entire life cycle within a landlocked volcanic lake and found nowhere else on Earth.",
+    img_seed: "batangas",
+    img: "image/Mt Maculot Batangas.jpg"
   },
   {
     name: "Cavite",
     capital: "Imus City",
     region_key: "region4a",
     island_group: "luzon",
-    known_for: "Philippine Revolution & Bay Coast",
-    desc: "Cavite is a compact, densely populated province on the southwestern shore of Manila Bay, its historic towns and peninsular geography having made it the cradle of the Philippine Revolution against Spain in 1896. Its northern shore faces Manila Bay's productive but heavily impacted coastal waters, while the Cavite Coastal Wetlands — though much reduced by urban expansion — remain important staging areas for migratory waders. The province's Tagaytay Ridge, shared with Batangas, offers commanding views over the Taal Caldera and is one of the country's premier highland escape destinations.",
-    fact: "Kawit's Aguinaldo Shrine balcony is where General Emilio Aguinaldo proclaimed Philippine Independence from Spain on 12 June 1898 — the event now commemorated as Philippine Independence Day and one of the most historically charged sites in Southeast Asia.",
-    img_seed: "cavite"
+    known_for: "Malibiclibic Falls & Mt. Palay-Palay Forest",
+    desc: "Cavite is a compact peninsula province on the southwestern shore of Manila Bay, its urbanised lowlands giving way to forested hills in the south where pockets of extraordinary biodiversity persist. Malibiclibic Falls in General Emilio Aguinaldo cascades through forested slopes near the foot of Mt. Mataas na Gulod, fed by rivers draining the southern highlands of the province. To the southwest, the Mounts Palay-Palay–Mataas-na-Gulod Protected Landscape preserves Cavite's last remaining tract of lowland dipterocarp rainforest — a 3,973-hectare refuge that shelters the Luzon Bleeding-heart, the Philippine Eagle-Owl, and the Rufous Hornbill among 175 documented terrestrial vertebrate species. Along the coast, Manila Bay's degraded but still biologically active mudflats and mangrove fringes provide feeding habitat for resident waterbirds and migratory shorebirds during the Northeast Monsoon.",
+    fact: "The Mounts Palay-Palay–Mataas-na-Gulod Protected Landscape — Cavite's last remaining lowland dipterocarp rainforest — has been documented to harbour 121 bird species, of which 91 are Philippine endemics, giving the protected area a 75% avian endemism rate and making it one of the most species-dense forest fragments on Luzon.",
+    img_seed: "cavite",
+    img: "image/Malibiclibic Falls Cavite.jpg"
   },
   {
     name: "Laguna",
     capital: "Santa Cruz",
     region_key: "region4a",
     island_group: "luzon",
-    known_for: "Laguna de Bay & Hot Springs",
-    desc: "Laguna is home to Laguna de Bay — the Philippines' largest lake and Southeast Asia's third-largest — a vast shallow freshwater body that supports hundreds of thousands of fisherfolk and one of the country's most important inland fishery industries. The southern shore transitions into the dramatic landscape of the Sierra Madre foothills and the volcanic peaks of Mount Banahaw and Mount San Cristobal, whose cloud forests are sacred to folk religious communities and harbour remarkable endemic flora. Pagsanjan Falls in the Sierra Madre foothills plunges through a dramatic limestone gorge that has been used as a film set for several international productions.",
-    fact: "Laguna de Bay has a surface area of 949 square kilometres but averages only 2.8 metres in depth, making it extremely productive for aquaculture — its floating fish pens produce over 100,000 metric tons of milkfish annually, the world's highest yield from a single lake.",
-    img_seed: "laguna"
+    known_for: "Pagsanjan Falls & Mt. Makiling Reserve",
+    desc: "Laguna wraps around the southern shore of Laguna de Bay — the Philippines' largest lake at nearly 950 square kilometres yet averaging only 2.8 metres in depth — whose vast shallow waters support an extraordinary diversity of freshwater life and one of the country's most productive inland fisheries. Pagsanjan Falls plunges through a dramatic gorge carved by the Balanac and Bumbungan rivers, its towering cliffs draped in ferns and orchids within the forested Pagsanjan Gorge National Park. To the south, Mt. Makiling — managed by the University of the Philippines Los Baños as a biological reserve since 1960 and designated an ASEAN Heritage Park — is one of the most intensively studied forests in the Philippines, its cloud-draped slopes sheltering 72 threatened plant species and a rich fauna of endemic birds, reptiles, and bats. At the Laguna-Quezon border, the active volcanic cone of Mt. Banahaw rises to 2,177 metres, its isolated forests serving as the type locality for multiple endemic species found nowhere else on Earth.",
+    fact: "Mt. Banahaw–San Cristobal Protected Landscape is the type locality for at least four endemic small mammal species — Apomys banahao, Apomys magnus, Musseromys gulantang, and Rhynchomys banahao — all described from specimens collected on its forested slopes and confirmed by peer-reviewed research to be found nowhere else in the Philippines.",
+    img_seed: "laguna",
+    img: "image/Pagsanjan Falls Laguna.jpg"
   },
   {
     name: "Quezon",
     capital: "Lucena City",
     region_key: "region4a",
     island_group: "luzon",
-    known_for: "Pacific Coastline & Coconuts",
-    desc: "Quezon Province is the largest province in CALABARZON, its territory wrapping around the southern Sierra Madre and facing the Pacific Ocean on one side and the sheltered Bondoc Peninsula on the other, creating extraordinary ecological diversity in a single administrative unit. The Quezon Protected Landscape and the Sierra Madre corridor protect old-growth dipterocarp forest that shelters Philippine Eagles, Philippine Cockatoos, and an exceptional diversity of endemic Luzon wildlife. Offshore, Quezon's Pacific coast includes some of the country's least-disturbed coral reefs and whale shark aggregation sites near Atimonan.",
-    fact: "Mount Banahaw in Quezon is considered sacred by millions of Filipino folk Catholics, and its summit forests — designated as a protected area — harbour the highest density of Philippine endemic epiphytic orchids recorded anywhere in Luzon.",
-    img_seed: "quezon"
+    known_for: "Jomalig Island & Polillo Archipelago",
+    desc: "Quezon is CALABARZON's largest province, its territory stretching from the sheltered coast of Tayabas Bay to the raw Pacific seaboard, creating one of the most ecologically diverse coastlines in Luzon. Jomalig Island — part of the Polillo Archipelago lying 25 kilometres off the Pacific coast — is a designated Key Biodiversity Area sheltering an important population of the Vulnerable Philippine Duck alongside over 25 species of migratory shorebirds in its wetlands and marshes. Inland, the Quezon Protected Landscape preserves 938 hectares of old-growth dipterocarp forest within the southern Sierra Madre, where a published botanical survey documented 328 plant species across 84 families. At the province's northern border, Mt. Banahaw–San Cristobal rises to 2,177 metres, its isolated volcanic forests supporting high plant endemism and serving as the type locality for several species found nowhere else on Earth.",
+    fact: "The Polillo Islands archipelago of Quezon Province is designated a Key Biodiversity Area by BirdLife International, harbouring seven endemic bird subspecies and several reptile species restricted to the archipelago — including the Polillo Calotes and Polillo Forest Frog — alongside globally threatened Philippine endemics such as the Gray's Monitor Lizard (Varanus olivaceus), Sailfin Lizard (Hydrosaurus pustulatus), and the Giant Golden-crowned Flying Fox (Acerodon jubatus).",
+    img_seed: "quezon",
+    img: "image/Jomalig Island Quezon.jpg"
   },
   {
     name: "Rizal",
     capital: "Antipolo City",
     region_key: "region4a",
     island_group: "luzon",
-    known_for: "Sierra Madre Foothills & Antipolo",
-    desc: "Rizal is the province immediately east of Metro Manila, its densely urbanised western lowlands giving way eastward to the rugged foothills and lower slopes of the Sierra Madre, creating a striking juxtaposition of megacity suburbs and old-growth forest within a few kilometres. The Marikina River watershed, which drains much of the province, has been a focus of restoration efforts after catastrophic flooding events linked to deforestation upstream. The province is named after national hero José Rizal, who was born in Calamba (now in Laguna) and imprisoned in Fort Santiago, and its Antipolo City is one of the most-visited Catholic pilgrimage destinations in the country.",
-    fact: "Despite being one of the most densely populated provinces in the Philippines, Rizal's Sierra Madre slopes still shelter populations of the Philippine Eagle, the country's national bird, that are documented within 20 kilometres of Metro Manila's eastern boundary.",
-    img_seed: "rizal"
+    known_for: "Sierra Madre & Masungi Georeserve",
+    desc: "Rizal is the province immediately east of Metro Manila, its densely urbanised western lowlands ascending sharply into the rugged lower slopes of the Sierra Madre — the longest mountain range in the Philippines and home to approximately 40% of the country's remaining forest cover. The Upper Marikina River Basin Protected Landscape covers 26,125 hectares of critical watershed forest declared under Proclamation No. 296 (2011), sheltering 178 documented plant species — 67 endemic to the Philippines and 31 globally threatened — while supplying Metro Manila with a significant portion of its freshwater. Within this protected landscape, the Masungi Georeserve in Tanay has restored over 400 hectares of degraded karst forest, documenting the Critically Endangered North Luzon Cloud Rat and producing new species discoveries within sight of the country's largest urban conglomeration. Rizal's Sierra Madre slopes form one of the most ecologically critical forest frontiers in Luzon, buffering Metro Manila from the full force of typhoon rainfall and flash floods.",
+    fact: "University of the Philippines Los Baños researchers described a new endemic land snail species — Hypselostoma latispira masungiensis — from specimens collected at the Masungi Georeserve in Tanay, Rizal, a 400-hectare restored karst forest where the Critically Endangered North Luzon Cloud Rat has also been documented just kilometres from the eastern edge of Metro Manila.",
+    img_seed: "rizal",
+    img: "image/Sierra Madre.jpg"
   },
 
   // ── REGION IV-B – MIMAROPA ────────────────────────────────────────────────
