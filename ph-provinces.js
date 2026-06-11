@@ -314,10 +314,11 @@ var PH_PROVINCES = [
     capital: "Boac",
     region_key: "region4b",
     island_group: "luzon",
-    known_for: "Moriones Festival & Heart-Shaped Isle",
-    desc: "Marinduque is a heart-shaped island province sitting in the middle of the Sibuyan Sea, its interior dominated by three volcanic peaks — Marlanga, Malindig, and Talipan — clothed in secondary forest and orchards of calamansi and coconut. The coastal waters surrounding the island are home to diverse coral reef communities, though they were badly affected by the 1996 Marcopper mining tailings spill that discharged millions of tonnes of waste into the Boac River. The province is most famous for its Moriones Festival during Holy Week, in which participants don Roman centurion masks and costumes in a dramatic street re-enactment.",
-    fact: "The 1996 Marcopper Mine disaster on Marinduque — caused by a drainage tunnel collapse that released tailings into the Boac River — was the largest mining disaster in Philippine history and rendered the Boac River biologically dead for years, becoming a landmark case in Philippine environmental law.",
-    img_seed: "marinduque"
+    known_for: "Kawa Kawa Falls",
+    desc: "Marinduque rises from the Sibuyan Sea as a heart-shaped island built around Mount Malindig, a potentially active andesitic stratovolcano reaching 1,157 metres above sea level. Its summit is draped in mossy forest thick with wild orchids and ferns, while the mountain's western foothills are warmed by the solfataric springs of Malbog — a quiet reminder of the volcanic heat still present below. Tucked into the forested hills of Sta. Cruz, Kawa Kawa Falls descends through a series of three cascades into deep, rounded pools sculpted from the bedrock over centuries of flowing water. The surrounding shallows of the Sibuyan Sea shelter coral reef communities, while the Boac River drainage still carries the long ecological shadow of the 1996 Marcopper tailings spill.",
+    fact: "Kawa Kawa Falls in Sta. Cruz takes its name from the Filipino word for a large cooking cauldron — centuries of cascading water have carved a series of deep, rounded plunge pools into the bedrock through hydraulic action and abrasion, the largest measuring roughly 10 metres across and 4 metres deep at its centre.",
+    img_seed: "marinduque",
+    img: "image/Kawa Kawa Falls Marinduque.jpg"
   },
   {
     name: "Occidental Mindoro",
