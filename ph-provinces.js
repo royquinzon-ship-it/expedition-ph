@@ -325,10 +325,11 @@ var PH_PROVINCES = [
     capital: "Mamburao",
     region_key: "region4b",
     island_group: "luzon",
-    known_for: "Tamaraw Sanctuary & Reefs",
-    desc: "Occidental Mindoro occupies the western portion of Mindoro island, its rugged interior mountains sheltering the Mount Iglit-Baco National Park — the last stronghold of the Critically Endangered Tamaraw (Bubalus mindorensis), the world's smallest and rarest wild bovine species. The province's western coastline faces the Mindoro Strait and Sulu Sea, with coral reefs rivalling the Tubbataha system in diversity, and the mangrove-lined estuaries are important nursery grounds for commercially important fish. The Mangyan indigenous peoples — including the Alangan and Iraya — maintain traditional communities in the interior forests, practicing swidden agriculture and rattan craft.",
-    fact: "The Tamaraw (Bubalus mindorensis) is a dwarf buffalo found only on Mindoro and nowhere else on Earth; the global population has recovered from a low of fewer than 100 individuals in the 1970s to approximately 600 today, entirely due to the protection of Mount Iglit-Baco National Park.",
-    img_seed: "occidental-mindoro"
+    known_for: "Mount Iglit-Baco National Park",
+    desc: "Occidental Mindoro occupies the western half of Mindoro island, its rugged interior dominated by the peaks and plateaus of Mount Iglit-Baco National Park — a mosaic of montane grassland, open plateau, and forest that forms the last secure habitat of the Critically Endangered Tamaraw (Bubalus mindorensis), a dwarf buffalo found nowhere else on Earth. The province's western coastline faces the Mindoro Strait, where coral reef systems and mangrove-lined estuaries provide nursery grounds for a wide range of fish and invertebrates. Inland, rivers draining the Iglit-Baco range support riparian forest corridors that shelter endemic birds including the Mindoro Bleeding-heart, one of many species found nowhere outside the island.",
+    fact: "Mount Iglit-Baco National Park is the last stronghold of the Tamaraw (Bubalus mindorensis) — the population crashed to fewer than 100 individuals in the 1970s due to hunting and habitat loss, but protection of the park has allowed the core population to recover at an average annual growth rate of approximately 5 per cent in recent decades.",
+    img_seed: "occidental-mindoro",
+    img: "image/Mt. Iglit Oc. Mindoro.jpg"
   },
   {
     name: "Oriental Mindoro",
