@@ -404,10 +404,11 @@ var PH_PROVINCES = [
     capital: "Virac",
     region_key: "region5",
     island_group: "luzon",
-    known_for: "Surfing & Typhoon-Resistant Culture",
-    desc: "Catanduanes is an island province off the Pacific coast of Bicol, perched directly in the path of typhoons sweeping toward mainland Luzon and earning the reputation as the \"Land of the Howling Winds.\" Its Pacific-facing beaches, particularly Puraran's famous Majestic Beach, produce consistent, powerful surf barrels considered among the best in Asia. The island's interior forests shelter endemic Bicol birds, and its coastal wetlands and seagrass beds harbour nesting marine turtles, dugongs, and the Critically Endangered Humpback Wrasse. Catandunganon culture has evolved a remarkable resilience and resourcefulness in response to centuries of typhoon exposure.",
-    fact: "Puraran Beach's \"Majestic\" break on Catanduanes is a barreling hollow reef wave that breaks perfectly for 200 metres and has been rated by international surf magazines as one of Asia's top ten surf breaks — yet the entire island receives an average of five direct typhoon hits per year.",
-    img_seed: "catanduanes"
+    known_for: "Binurong Point",
+    desc: "Catanduanes is an island province off the Pacific coast of Bicol, positioned directly in the path of typhoons sweeping toward Luzon — one of the most typhoon-exposed landmasses in the world, averaging around five direct typhoon hits per year. Its rugged coastline is defined by volcanic rock formations like those of Binurong Point in Baras, where sheer cliffs drop directly into the Philippine Sea and strong updrafts draw raptors and seabirds to the exposed headland. The island's interior forests shelter endemic Bicol birds, while coastal wetlands and seagrass beds provide habitat for nesting marine turtles and dugongs.",
+    fact: "Binurong Point in Baras sits atop volcanic rock formations where sheer cliffs plunge directly into the Philippine Sea — the exposed headland funnels strong coastal updrafts that attract raptors including the Philippine hawk-eagle and white-collared kingfisher, making it one of the most accessible seacliff bird-watching sites on Catanduanes.",
+    img_seed: "catanduanes",
+    img: "image/Binurong point Catanduanes.jpg"
   },
   {
     name: "Masbate",
