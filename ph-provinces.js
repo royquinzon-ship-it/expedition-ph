@@ -336,10 +336,11 @@ var PH_PROVINCES = [
     capital: "Calapan City",
     region_key: "region4b",
     island_group: "luzon",
-    known_for: "Whale Sharks & Mangyan Weaving",
-    desc: "Oriental Mindoro is the more accessible and populous side of Mindoro island, facing the Verde Island Passage with productive coral reefs and featuring the whale shark aggregation site of Sabang Beach near Puerto Galera — a UNESCO-Man and Biosphere Reserve whose reefs are among the most studied in the Indo-Pacific. The Halcon-Naujan Lake National Park protects both the summit forests of Mount Halcon — one of the Philippines' most challenging climbs — and Naujan Lake, the country's fourth-largest lake and a critical wintering habitat for waterbirds. The Mangyan tribes of the interior continue their ancient tradition of pre-colonial baybayin script writing on bamboo strips.",
-    fact: "Puerto Galera's reefs have been documented to contain more than 750 fish species and over 400 coral species within a 3-kilometre radius, making it one of the most species-dense marine areas in the Coral Triangle.",
-    img_seed: "oriental-mindoro"
+    known_for: "Mount Halcon",
+    desc: "Oriental Mindoro's interior is anchored by Mount Halcon, the highest peak in the MIMAROPA region at 2,616 metres, its slopes rising through lowland dipterocarp forest into dense montane growth and mossy summit forest. The mountain is a designated Key Biodiversity Area harbouring more threatened endemic species than any other KBA on Mindoro, including the Mindoro Bleeding-heart and the Mindoro Imperial Pigeon. The province's northern coastline faces the Verde Island Passage, one of the most species-dense marine corridors in the Coral Triangle, and Puerto Galera's reefs have been documented to contain more than 750 fish species within a 3-kilometre radius. Naujan Lake — the country's fourth-largest freshwater lake — lies at the mountain's eastern foothills and serves as a critical wintering habitat for migratory waterbirds.",
+    fact: "Mount Halcon is a Key Biodiversity Area spanning 509 square kilometres and harbours more threatened endemic species than any other KBA on Mindoro — 16 in total, including three Critically Endangered, four Endangered, and nine Vulnerable, making it one of the most ecologically significant peaks in the Philippine highlands.",
+    img_seed: "oriental-mindoro",
+    img: "image/Mt. Halcon Or. Mindoro.jpg"
   },
   {
     name: "Palawan",
