@@ -371,10 +371,11 @@ var PH_PROVINCES = [
     capital: "Legazpi City",
     region_key: "region5",
     island_group: "luzon",
-    known_for: "Mayon Volcano & Abaca Fibre",
-    desc: "Albay is dominated by the near-perfect cone of Mayon Volcano — the Philippines' most active stratovolcano at 2,463 metres, which has erupted over 50 times in recorded history and whose slopes are draped in lush rainforest and productive volcanic soils yielding excellent abaca fibre and pili nuts. The Albay Gulf and the Ticao Pass shelter diverse cetaceans, with blue whales, sperm whales, and orcas regularly sighted offshore during the dry season. The Mayon Volcano Natural Park's forest serves as important habitat for Philippine Eagles and endemic Bicol forest birds, while the surrounding coast hosts nesting Olive Ridley sea turtles.",
-    fact: "Mayon Volcano's nearly perfect symmetrical cone, with a slope deviation of less than 2 degrees from a perfect geometric cone, makes it one of the most geometrically precise stratovolcanoes on Earth — a combination of its frequent small eruptions and the way pyroclastic flows distribute material evenly down all sides.",
-    img_seed: "albay"
+    known_for: "Quitinday Green Hills",
+    desc: "Albay's landscape is defined by two geological extremes — the near-perfect cone of Mayon Volcano rising to 2,463 metres above the coastal plain, and the rolling limestone mounds of Quitinday Green Hills, formed from ancient coral reef deposits compressed and uplifted by tectonic plate movement millions of years ago. Mayon is the Philippines' most active stratovolcano, having erupted over 52 times in recorded history, yet its forested slopes support 104 land vertebrate species including the Giant Golden-Crowned Flying Fox and the Philippine Warty Pig. The Albay Gulf and Ticao Pass shelter diverse cetaceans, with sperm whales, whale sharks, and dolphins sighted offshore during the dry season.",
+    fact: "The Quitinday Green Hills of Camalig are a field of limestone mounds formed from ancient coral reef deposits compressed and uplifted by tectonic plate movement millions of years ago — prehistoric marine fossils can still be found embedded in the slopes, making the hills a visible record of the seafloor that once lay beneath this part of Luzon.",
+    img_seed: "albay",
+    img: "image/Quitinday Green Hills Albay.jpg"
   },
   {
     name: "Camarines Norte",
