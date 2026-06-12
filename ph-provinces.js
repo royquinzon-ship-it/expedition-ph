@@ -415,10 +415,11 @@ var PH_PROVINCES = [
     capital: "Masbate City",
     region_key: "region5",
     island_group: "luzon",
-    known_for: "Rodeo & Whale Shark Corridor",
-    desc: "Masbate is a three-island province sitting at the junction of the Sibuyan Sea, Visayan Sea, and Ticao Pass, its strategic position in Philippine waters making it one of the most important cetacean migration corridors in the country. The Ticao Pass between Masbate and Sorsogon is one of the world's premier whale watching sites, with blue whales, Bryde's whales, and spinner dolphins frequenting these nutrient-rich straits. Masbate's rolling grasslands support the Philippines' most thriving cattle ranching industry, and the annual Masbate Rodeo Festival is the country's largest, drawing cowboys from across the archipelago.",
-    fact: "The Ticao Pass between Masbate and Sorsogon records some of the highest densities of blue whales in Southeast Asian waters during the northeast monsoon, with researchers from Ticao Island documenting over 50 individual blue whales identified by fluke patterns in a single season.",
-    img_seed: "masbate"
+    known_for: "Catandayagan Falls",
+    desc: "Masbate is a three-island province sitting at the junction of the Sibuyan Sea, Visayan Sea, and Ticao Pass, its strategic position making it one of the most important cetacean migration corridors in the Philippines. The nutrient-rich Ticao Pass draws blue whales, Bryde's whales, and spinner dolphins and has been documented as one of Southeast Asia's most productive whale-watching straits. On the western shoreline of Ticao Island, Catandayagan Falls drops approximately 30 metres from a limestone sea cliff directly into the Masbate Pass, its source a small freshwater lake hidden within dense forest at the top of the escarpment.",
+    fact: "Catandayagan Falls on Ticao Island is among an estimated 40 waterfalls worldwide that empty directly into the ocean — its cascade plunges approximately 30 metres from the edge of a limestone sea cliff straight into the Masbate Pass, fed by a freshwater lake concealed within dense forest on top of the escarpment.",
+    img_seed: "masbate",
+    img: "image/Catandayagan Falls Ticao Island Masbate.jpg"
   },
   {
     name: "Sorsogon",
