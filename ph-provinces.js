@@ -347,10 +347,11 @@ var PH_PROVINCES = [
     capital: "Puerto Princesa City",
     region_key: "region4b",
     island_group: "luzon",
-    known_for: "Last Frontier & Underground River",
-    desc: "Palawan is the Philippines' \"Last Ecological Frontier\" — a 450-kilometre-long narrow island stretching from Mindoro Strait to Borneo, enveloped by the Sulu Sea and South China Sea and gifted with the country's most biodiverse and least-disturbed marine and terrestrial ecosystems. The Puerto Princesa Subterranean River National Park, a UNESCO World Heritage Site and one of the New Seven Wonders of Nature, features an 8.2-kilometre navigable underground river through dramatic karst limestone chambers filled with massive stalactites and diverse cave-adapted fauna. El Nido and the Tubbataha Reefs Natural Park — the latter a UNESCO World Heritage Site — contain the Philippines' most pristine coral atolls and are home to populations of manta rays, whale sharks, and nesting hawksbill turtles.",
-    fact: "Tubbataha Reefs Natural Park in the Sulu Sea, accessible only from Palawan, harbours 360 coral species, 600 fish species, 13 shark species, and nesting populations of three marine turtle species within a 97,030-hectare no-take marine protected area with no permanent human habitation.",
-    img_seed: "palawan"
+    known_for: "Palawan Karst Landscape",
+    desc: "Palawan is the Philippines' last ecological frontier — a 450-kilometre narrow island stretching toward Borneo, its rugged interior built on limestone karst formed from ancient coral reefs roughly 20 million years old. The Puerto Princesa Subterranean River National Park, a UNESCO World Heritage Site, channels an 8.2-kilometre underground river through dramatic karst chambers packed with stalactites and cave-adapted fauna, its lower reach tidal and brackish where the river flows directly into the sea. Offshore, the Tubbataha Reefs Natural Park — a no-take marine protected area in the Sulu Sea — protects the Philippines' most pristine coral atolls, with manta rays, whale sharks, and nesting populations of hawksbill and green sea turtles.",
+    fact: "The karst limestone underlying the Puerto Princesa Subterranean River National Park was formed from ancient coral reefs approximately 20 million years ago — the underground river carved an 8.2-kilometre channel through this ancient reef rock, and its lower half is tidal and brackish, making it one of the few navigable underground rivers in the world that empties directly into the sea.",
+    img_seed: "palawan",
+    img: "image/Palawan Karst.jpg"
   },
   {
     name: "Romblon",
