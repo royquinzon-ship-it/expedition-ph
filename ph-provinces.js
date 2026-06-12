@@ -382,10 +382,11 @@ var PH_PROVINCES = [
     capital: "Daet",
     region_key: "region5",
     island_group: "luzon",
-    known_for: "Gold Mining & Surf Destination",
-    desc: "Camarines Norte is the northernmost province of the Bicol Region, its landscape shaped by a coastal plain facing Lamon Bay and interior hills rich in gold deposits that have been mined since pre-colonial times. The province's Pacific-facing coast at Mercedes and Bagasbas is famous for beginner-friendly surf breaks, and its offshore islands and reefs in the Calaguas Group contain pristine white-sand beaches and coral gardens among the most unspoiled in southern Luzon. The Paracale goldfields have been worked for over 400 years and continue to produce some of the Philippines' highest-grade alluvial gold.",
-    fact: "The Calaguas Islands off Camarines Norte's coast remained effectively unreachable without local fishermen's guidance until the early 2000s; their reefs have since been documented to rival the Tubbataha system in coral cover, with over 65% live hard coral cover recorded on some transects.",
-    img_seed: "camarines-norte"
+    known_for: "Colasi Falls",
+    desc: "Camarines Norte is the northernmost province of the Bicol Region, its landscape shaped by a Pacific-facing coastal plain bordering Lamon Bay and forested interior hills drained by rivers flowing east toward the Philippine Sea. In the municipality of Mercedes, Colasi Falls drops approximately 21 metres through three successive cascades in intact tropical forest, its catchment sustaining riparian habitat for migratory and resident birds. Offshore, the Calaguas Islands — a remote archipelago of 17 islands and islets — support a marine protected sanctuary whose reefs are among the most isolated along the Pacific coast of Luzon, though they face recurring Crown-of-Thorns starfish outbreaks that threaten live coral cover.",
+    fact: "Colasi Falls in Mercedes drops approximately 21 metres in three successive cascades — the tiered structure is characteristic of waterfalls carved through alternating bands of harder and softer rock, where each resistant layer produces a distinct step in the stream's longitudinal profile as the river gradually incises through the hillside.",
+    img_seed: "camarines-norte",
+    img: "image/Colasi Falls Camarines Norte.jpg"
   },
   {
     name: "Camarines Sur",
