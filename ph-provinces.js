@@ -358,10 +358,11 @@ var PH_PROVINCES = [
     capital: "Romblon",
     region_key: "region4b",
     island_group: "luzon",
-    known_for: "Marble Industry & Dugong Habitat",
-    desc: "Romblon is an archipelagic province of three major islands — Romblon, Tablas, and Sibuyan — scattered across the Sibuyan Sea, connected by narrow straits rich in marine biodiversity and strong currents that maintain exceptionally clear, nutrient-rich waters. The province is world-famous for its white marble, quarried from the limestone mountains of Romblon Island and crafted into tiles, sculptures, and decorative pieces exported globally. Sibuyan Island's Mount Guiting-Guiting, rising to 2,058 metres, is one of the Philippines' most technically demanding climbs, its summit ridge guarded by razor-sharp ultramafic rock outcrops harbouring a unique mossy forest flora found nowhere else.",
-    fact: "The Sibuyan Sea surrounding Romblon is one of the deepest inter-island seas in the Philippines, reaching depths of over 500 metres, and its combination of deep water upwelling and shallow reefs supports year-round sightings of thresher sharks, hammerheads, and blue whales.",
-    img_seed: "romblon"
+    known_for: "Mount Guiting-Guiting",
+    desc: "Romblon is an archipelagic province of three major islands — Romblon, Tablas, and Sibuyan — scattered across the Sibuyan Sea, linked by strong currents that maintain exceptionally clear, nutrient-rich waters. Sibuyan Island has been called the Galápagos of Asia for its extraordinary endemism, the product of millions of years of oceanic isolation — its interior is dominated by Mount Guiting-Guiting, a 2,058-metre granite massif whose jagged ridgeline and ultramafic soils support specialized plant communities found nowhere else, including the Sibuyan pitcher plant (Nepenthes sibuyanensis). The surrounding Sibuyan Sea plunges to depths exceeding 500 metres, where deep-water upwelling feeds shallow reefs frequented by thresher sharks, hammerheads, and passing cetaceans.",
+    fact: "Mount Guiting-Guiting Natural Park harbours over 700 vascular plant species, with approximately 54 endemic to Sibuyan Island alone — the mountain's granite and ultramafic geology, combined with millions of years of isolation, has produced forest stands of up to 1,551 trees per hectare, among the densest recorded anywhere in the Philippines.",
+    img_seed: "romblon",
+    img: "image/Mt. Guiting guiting Romblon.jpg"
   },
 
   // ── REGION V – Bicol Region ───────────────────────────────────────────────
