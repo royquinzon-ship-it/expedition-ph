@@ -327,7 +327,7 @@ var PH_PROVINCES = [
     island_group: "luzon",
     known_for: "Mount Iglit-Baco National Park",
     desc: "Occidental Mindoro occupies the western half of Mindoro island, its rugged interior dominated by the peaks and plateaus of Mount Iglit-Baco National Park — a mosaic of montane grassland, open plateau, and forest that forms the last secure habitat of the Critically Endangered Tamaraw (Bubalus mindorensis), a dwarf buffalo found nowhere else on Earth. The province's western coastline faces the Mindoro Strait, where coral reef systems and mangrove-lined estuaries provide nursery grounds for a wide range of fish and invertebrates. Inland, rivers draining the Iglit-Baco range support riparian forest corridors that shelter endemic birds including the Mindoro Bleeding-heart, one of many species found nowhere outside the island.",
-    fact: "Mount Iglit-Baco National Park is the last stronghold of the Tamaraw (Bubalus mindorensis) — the population crashed to fewer than 100 individuals in the 1970s due to hunting and habitat loss, but protection of the park has allowed the core population to recover at an average annual growth rate of approximately 5 per cent in recent decades.",
+    fact: "Mount Iglit-Baco National Park is the last stronghold of the Tamaraw (Bubalus mindorensis) — the population crashed to fewer than 100 individuals in the 1970s due to hunting and habitat loss, but protection of the park has allowed the core population to recover at an average annual growth rate of approximately 5 percent in recent decades.",
     img_seed: "occidental-mindoro",
     img: "image/Mt. Iglit Oc. Mindoro.jpg"
   },
