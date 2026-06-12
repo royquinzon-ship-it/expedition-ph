@@ -393,10 +393,11 @@ var PH_PROVINCES = [
     capital: "Pili",
     region_key: "region5",
     island_group: "luzon",
-    known_for: "CamSur Watersports & Pili Nuts",
-    desc: "Camarines Sur is the largest province in Bicol, a diverse landscape of volcanic mountains, river deltas, coastal lagoons, and the Ragay Gulf coastline that provides habitat for an extraordinary range of wildlife including nesting sea turtles, Philippine Forest Turtles, and enormous colonies of cave-roosting swiftlets. The Isarog Natural Park on Mount Isarog protects a critical mossy forest that is home to the endemic Bicol Shrew and the CamSur subspecies of Philippine Scops Owl. Naga City, the regional centre, and the CWC Watersports Complex in Pili have made the province a centre of cable wakeboarding tourism.",
-    fact: "Lake Buhi in Camarines Sur is home to the Sinarapan (Mistichthys luzonensis), recognized as the world's smallest commercially harvested fish at just 9–12 mm in length; it is endemic to this single lake and has been threatened by introduced species and habitat degradation.",
-    img_seed: "camarines-sur"
+    known_for: "Caramoan Islands",
+    desc: "Camarines Sur is the largest province in Bicol, its landscape ranging from the limestone karst islets of the Caramoan Peninsula to the volcanic slopes of Mount Isarog, whose mossy forest harbours the endemic Bicol Shrew and a subspecies of the Philippine Scops Owl. The province's coastal lagoons and river deltas provide nesting habitat for sea turtles and Philippine Forest Turtles, while Lake Buhi shelters the Sinarapan (Mistichthys luzonensis) — the world's smallest commercially harvested fish at just 9–12 mm in length, endemic to this single lake. The Ragay Gulf coastline supports mangrove systems and seagrass beds that serve as nursery grounds for diverse marine species.",
+    fact: "Caramoan National Park was established in 1938, making it one of the oldest protected areas in the Philippines — its 34.5 square kilometres of limestone karst islets, sea cliffs, and coral-rich waters on the Bicol Peninsula preserve cave-adapted wildlife and coastal ecosystems that have been under formal protection for nearly nine decades.",
+    img_seed: "camarines-sur",
+    img: "image/Caramoan Islands Camrines Sur.jpg"
   },
   {
     name: "Catanduanes",
