@@ -426,10 +426,11 @@ var PH_PROVINCES = [
     capital: "Sorsogon City",
     region_key: "region5",
     island_group: "luzon",
-    known_for: "Whale Sharks & Bulusan Volcano",
-    desc: "Sorsogon occupies the southernmost tip of Luzon, its landscape shaped by the active Bulusan Volcano and its lake-filled crater, and its waters at Donsol Bay harboring the world's largest seasonal aggregation of whale sharks — which Filipinos call butanding — drawing ecotourists from across the globe. The Bulusan Volcano Natural Park's mossy forests are classified as one of the 25 most important bird areas in the Philippines, sheltering Philippine Cockatoos, Tarictic Hornbills, and a remarkable endemic forest avifauna. Sorsogon's coastline opens onto the San Bernardino Strait, one of the most powerful tidal passages in the archipelago.",
-    fact: "Donsol Bay in Sorsogon hosts up to 200 individual whale sharks (Rhincodon typus) identified by spot patterns each season from November to June, making it the world's largest known seasonal gathering of this species — a discovery that transformed a small fishing town into an internationally recognised ecotourism destination.",
-    img_seed: "sorsogon"
+    known_for: "Tikling Island",
+    desc: "Sorsogon occupies the southernmost tip of Luzon, its landscape shaped by the active Bulusan Volcano and its crater lake, and its waters at Donsol Bay hosting the world's largest known seasonal aggregation of whale sharks. Off the coast of Matnog, Tikling Island's beach glows pink from the accumulated shells of foraminifera — microscopic marine organisms whose calcium carbonate remains wash ashore and blend with the fine white coral sand. The island's northern shore is fringed by dense mangrove forest, and its surrounding reefs serve as breeding habitat for diverse reef fish. Sorsogon's coastline opens onto the San Bernardino Strait, one of the most powerful tidal passages in the archipelago.",
+    fact: "The pink hue of Tikling Island's beach in Matnog comes from the accumulated shells of foraminifera — microscopic single-celled marine organisms that build calcium carbonate shells tinted red and pink, which break down over time and mix with the white coral sand to give the beach its distinctive colour.",
+    img_seed: "sorsogon",
+    img: "image/Tikling Island Sorsogon.jpg"
   },
 
   // ── REGION VI – Western Visayas ───────────────────────────────────────────
