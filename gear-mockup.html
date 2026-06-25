@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gear — Eagle Eye Structural Engineering Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --hero-bg:    #0b2444;
+      --navy:       #143362;;
+      --white:      #FFFFFF;
+      --gray-50:    #F9FAFB;
+      --gray-100:   #F3F4F6;
+      --gray-200:   #E5E7EB;
+      --gray-300:   #D1D5DB;
+      --gray-400:   #9CA3AF;
+      --gray-500:   #6B7280;
+      --gray-700:   #374151;
+      --gray-800:   #1F2937;
+      --gray-900:   #111827;
+      --green:      #0d7c61;
+      --green-dark: #e6f7f2;
+      --amber:      #F59E0B;
+      --font: 'Inter', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); color: var(--gray-800); background: var(--white); font-size: 14px; line-height: 1.5; }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: var(--font); cursor: pointer; }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      height: 64px;
+      display: flex; align-items: center;
+      padding: 0 2rem;
+      gap: 1rem;
+    }
+    .nb-brand {
+      display: flex; align-items: center; gap: 0.6rem;
+      flex-shrink: 0;
+    }
+    .nb-eagle {
+      height: 3.5rem; width: auto;
+      display: block;
+    }
+    .nb-brand-text { line-height: 1.2; }
+    .nb-brand-text strong {
+      display: block; font-size: 0.9rem; font-weight: 800;
+      letter-spacing: 0.04em; color: var(--gray-900);
+    }
+    .nb-brand-text medium {
+      font-size: 0.6rem; font-weight: 600; letter-spacing: 0.08em;
+      color: var(--gray-400); text-transform: uppercase;
+    }
+
+    .nb-links {
+      display: flex; align-items: center; gap: 2rem;
+      list-style: none; margin: 0 auto;
+    }
+    .nb-links a {
+      font-size: 0.875rem; font-weight: 500; color: var(--gray-500);
+      transition: color 0.15s;
+    }
+    .nb-links a:hover { color: var(--gray-900); }
+
+    .nb-right {
+      display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0;
+    }
+    .nb-user {
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .nb-avatar {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--green); color: var(--white);
+      font-size: 0.8rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .nb-user-info { line-height: 1.2; }
+    .nb-user-info strong { display: block; font-size: 0.8rem; font-weight: 600; color: var(--gray-800); }
+    .nb-user-info small { font-size: 0.7rem; color: var(--gray-400); }
+    .btn-dashboard {
+      background: var(--green); color: var(--white);
+      border: none; border-radius: 7px;
+      padding: 0.4rem 1rem;
+      font-size: 0.8rem; font-weight: 700;
+      transition: background 0.15s;
+    }
+    .btn-dashboard:hover { background: var(--green-dark); }
+    .btn-logout {
+      background: var(--white); color: var(--gray-700);
+      border: 1px solid var(--gray-200); border-radius: 7px;
+      padding: 0.4rem 0.9rem;
+      font-size: 0.8rem; font-weight: 600;
+      transition: all 0.15s;
+    }
+    .btn-logout:hover { border-color: var(--gray-400); color: var(--gray-900); }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--hero-bg);
+      padding: 4rem 3rem 4.5rem;
+    }
+    .hero-label {
+      font-size: 0.75rem; font-weight: 600;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.06em; text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-size: 4rem; font-weight: 900;
+      color: var(--white);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+    .hero-desc {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.45);
+      max-width: 500px;
+      line-height: 1.7;
+    }
+
+    /* ── SECTION TABS ── */
+    .section-tabs {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      position: sticky; top: 64px; z-index: 90;
+      display: flex; align-items: stretch;
+    }
+    .tab-arrow {
+      width: 36px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gray-400); font-size: 0.85rem;
+      border-right: 1px solid var(--gray-200);
+      cursor: pointer;
+      background: none; border-top: none; border-bottom: none; border-left: none;
+    }
+    .tab-arrow.right { border-right: none; border-left: 1px solid var(--gray-200); }
+    .tab-arrow:hover { color: var(--gray-700); }
+    .tabs-inner {
+      display: flex; overflow-x: auto; flex: 1;
+      justify-content: center;
+      scrollbar-width: none;
+    }
+    .tabs-inner::-webkit-scrollbar { display: none; }
+    .tab-link {
+      padding: 0 1.25rem;
+      height: 48px;
+      display: flex; align-items: center;
+      font-size: 0.82rem; font-weight: 500;
+      color: var(--gray-500);
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .tab-link:hover { color: var(--gray-900); }
+    .tab-link.active {
+      color: var(--gray-900); font-weight: 600;
+      border-bottom-color: var(--amber);
+    }
+
+    /* ── CONTENT WRAPPER ── */
+    .content-section { border-bottom: 1px solid var(--gray-200); }
+    .content-section:nth-child(even) { background: var(--gray-50); }
+    .section-inner {
+      max-width: 1100px; margin: 0 auto;
+      padding: 3rem 3rem;
+    }
+
+    /* ── SECTION HEADER ── */
+    .sh-label {
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--green); margin-bottom: 0.5rem;
+    }
+    .sh-title {
+      font-size: 1.75rem; font-weight: 800;
+      color: var(--gray-900); letter-spacing: -0.02em;
+      line-height: 1.25; margin-bottom: 0.5rem;
+    }
+    .sh-title em {
+      font-style: italic; color: var(--green);
+    }
+    .sh-desc {
+      font-size: 0.85rem; color: var(--gray-500);
+      max-width: 560px; line-height: 1.65;
+      margin-bottom: 2rem;
+    }
+
+    /* ── WORKFLOW CARDS ── */
+    .wf-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+    .wf-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      transition: box-shadow 0.15s, border-color 0.15s;
+    }
+    .wf-card:hover { border-color: var(--gray-300); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .wf-top {
+      display: flex; align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+    .wf-name { font-size: 0.875rem; font-weight: 700; color: var(--gray-900); }
+    .wf-start {
+      font-size: 0.82rem; font-weight: 600;
+      color: var(--green); background: none; border: none;
+      display: flex; align-items: center; gap: 0.2rem;
+      transition: color 0.15s;
+    }
+    .wf-start:hover { color: var(--green-dark); }
+    .wf-steps {
+      display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap;
+    }
+    .wf-icon {
+      width: 28px; height: 28px;
+      background: var(--gray-100); border: 1px solid var(--gray-200);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem;
+    }
+    .wf-arrow { color: var(--gray-400); font-size: 0.75rem; }
+
+    /* ── POP CARDS (Member Design) ── */
+    .pop-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+    }
+    .pop-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 0;
+      display: flex; flex-direction: column;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .pop-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 48px rgba(0,0,0,0.14);
+    }
+    .pop-card-banner {
+      height: 100px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem;
+      position: relative;
+    }
+    .pop-card-banner.blue   { background: linear-gradient(135deg, #1e3a8a, #3b82f6); }
+    .pop-card-banner.teal   { background: linear-gradient(135deg, #134e4a, #14b8a6); }
+    .pop-card-banner.slate  { background: linear-gradient(135deg, #1e293b, #475569); }
+    .pop-card-banner.indigo { background: linear-gradient(135deg, #312e81, #818cf8); }
+    .pop-card-banner.emerald{ background: linear-gradient(135deg, #064e3b, #34d399); }
+    .pop-card-body {
+      padding: 1rem;
+      display: flex; flex-direction: column; gap: 0.4rem; flex: 1;
+    }
+    .pop-card-name { font-size: 0.9rem; font-weight: 800; color: var(--gray-900); }
+    .pop-card-desc { font-size: 0.78rem; color: var(--gray-500); line-height: 1.5; flex: 1; }
+    .pop-card-btn {
+      margin-top: 0.6rem;
+      width: 100%; padding: 0.4rem;
+      border-radius: 7px; border: none;
+      font-size: 0.78rem; font-weight: 700;
+      background: var(--gray-900); color: var(--white);
+      transition: background 0.15s;
+    }
+    .pop-card-btn:hover { background: var(--gray-700); }
+
+    /* ── APP GRID ── */
+    .app-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 0.75rem;
+    }
+    .app-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 10px;
+      padding: 1rem;
+      display: flex; flex-direction: column; gap: 0.45rem;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .app-card:hover { border-color: var(--gray-300); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .app-icon-wrap {
+      width: 40px; height: 40px; border-radius: 8px;
+      background: var(--gray-100); border: 1px solid var(--gray-200);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.15rem; margin-bottom: 0.2rem;
+    }
+    .app-name { font-size: 0.875rem; font-weight: 700; color: var(--gray-900); }
+    .app-desc { font-size: 0.78rem; color: var(--gray-500); line-height: 1.5; flex: 1; }
+    .app-btns { display: flex; gap: 0.35rem; margin-top: 0.3rem; }
+    .btn-vid, .btn-doc {
+      font-size: 0.72rem; font-weight: 600;
+      padding: 0.25rem 0.55rem; border-radius: 5px;
+      background: var(--white); color: var(--gray-600);
+      border: 1px solid var(--gray-200);
+      transition: all 0.15s;
+    }
+    .btn-vid:hover, .btn-doc:hover { border-color: var(--gray-400); color: var(--gray-800); }
+    .btn-open {
+      font-size: 0.72rem; font-weight: 700;
+      padding: 0.25rem 0.55rem; border-radius: 5px;
+      background: var(--gray-900); color: var(--white); border: none;
+      transition: background 0.15s;
+    }
+    .btn-open:hover { background: var(--gray-700); }
+
+    /* ── FEATURES TABLE ── */
+    .feat-controls {
+      display: flex; justify-content: flex-end; gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .ctrl-btn {
+      font-size: 0.75rem; font-weight: 600; color: var(--green);
+      background: none; border: none; cursor: pointer;
+    }
+    .ctrl-btn:hover { text-decoration: underline; }
+    .ctrl-sep { color: var(--gray-300); font-size: 0.75rem; display: flex; align-items: center; }
+
+    .feat-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    .feat-table th {
+      text-align: left; padding: 0.6rem 0.85rem;
+      background: var(--gray-50); border: 1px solid var(--gray-200);
+      font-weight: 700; color: var(--gray-700); font-size: 0.78rem;
+    }
+    .feat-table th:not(:first-child) { text-align: center; }
+    .feat-table td {
+      padding: 0.5rem 0.85rem;
+      border: 1px solid var(--gray-200); color: var(--gray-600);
+    }
+    .feat-table td:not(:first-child) { text-align: center; }
+    .feat-table tr:hover td { background: var(--gray-50); }
+    .feat-cat td {
+      background: var(--gray-100) !important;
+      font-weight: 700; color: var(--gray-800);
+      font-size: 0.78rem; letter-spacing: 0.02em;
+      cursor: pointer;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    .feat-expand { float: right; color: var(--green); font-weight: 600; }
+    .ck { color: var(--green); }
+    .dash { color: var(--gray-300); }
+
+    /* ── PRICING ── */
+    .pricing-toggle {
+      display: inline-flex;
+      background: var(--gray-100); border: 1px solid var(--gray-200);
+      border-radius: 8px; padding: 3px; gap: 2px;
+      margin-bottom: 1.75rem;
+    }
+    .ptoggle {
+      padding: 0.3rem 1rem; border-radius: 6px;
+      font-size: 0.8rem; font-weight: 600;
+      color: var(--gray-500); background: none; border: none;
+      transition: all 0.15s;
+    }
+    .ptoggle.active {
+      background: var(--white); color: var(--gray-900);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .save-pill {
+      display: inline-block;
+      background: #DCFCE7; color: var(--green);
+      font-size: 0.65rem; font-weight: 700;
+      padding: 0.1rem 0.45rem; border-radius: 100px;
+      vertical-align: middle;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem; align-items: start;
+    }
+    .pc {
+      border: 1px solid var(--gray-200); border-radius: 12px;
+      padding: 1.5rem; background: var(--white);
+    }
+    .pc.featured {
+      border-color: var(--green);
+      box-shadow: 0 0 0 1px var(--green), 0 4px 20px rgba(22,163,74,0.1);
+    }
+    .pc-badge {
+      display: inline-block;
+      background: var(--green); color: var(--white);
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.05em;
+      text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 4px;
+      margin-bottom: 0.75rem;
+    }
+    .pc-name { font-size: 0.9rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.2rem; }
+    .pc-price {
+      font-size: 2.2rem; font-weight: 900; color: var(--gray-900);
+      letter-spacing: -0.03em; line-height: 1.1;
+    }
+    .pc-price span { font-size: 0.9rem; font-weight: 500; color: var(--gray-400); }
+    .pc-period { font-size: 0.75rem; color: var(--gray-400); margin-bottom: 1.25rem; margin-top: 0.25rem; }
+    .pc-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.25rem; }
+    .pc-list li { display: flex; gap: 0.4rem; font-size: 0.8rem; color: var(--gray-600); align-items: flex-start; }
+    .pc-ck { color: var(--green); flex-shrink: 0; margin-top: 1px; }
+    .btn-buy {
+      width: 100%; padding: 0.55rem;
+      border-radius: 7px; border: none;
+      font-size: 0.875rem; font-weight: 700;
+      background: var(--gray-900); color: var(--white);
+      transition: background 0.15s;
+    }
+    .btn-buy:hover { background: var(--gray-700); }
+    .btn-buy.green { background: var(--green); }
+    .btn-buy.green:hover { background: var(--green-dark); }
+    .btn-buy.outline {
+      background: var(--white); color: var(--gray-700);
+      border: 1.5px solid var(--gray-300);
+    }
+    .btn-buy.outline:hover { border-color: var(--gray-500); color: var(--gray-900); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--gray-50);
+      border-top: 1px solid var(--gray-200);
+      padding: 3rem 3rem 1.5rem;
+    }
+    .footer-grid {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1.6fr repeat(3, 1fr);
+      gap: 3rem; margin-bottom: 2.5rem;
+    }
+    .footer-brand p { font-size: 0.78rem; color: var(--gray-400); line-height: 1.65; margin-top: 0.6rem; max-width: 220px; }
+    .footer-col h4 {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--gray-400); margin-bottom: 0.85rem;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-col a { font-size: 0.82rem; color: var(--gray-500); transition: color 0.15s; }
+    .footer-col a:hover { color: var(--gray-900); }
+    .footer-bottom {
+      max-width: 1100px; margin: 0 auto;
+      border-top: 1px solid var(--gray-200); padding-top: 1.25rem;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;
+    }
+    .footer-bottom p { font-size: 0.75rem; color: var(--gray-400); }
+    .footer-bottom-links { display: flex; gap: 1.5rem; }
+    .footer-bottom-links a { font-size: 0.75rem; color: var(--gray-400); transition: color 0.15s; }
+    .footer-bottom-links a:hover { color: var(--gray-700); }
+
+    @media (max-width: 768px) {
+      .hero { padding: 2.5rem 1.5rem; }
+      .hero h1 { font-size: 2.5rem; }
+      .section-inner { padding: 2rem 1.5rem; }
+      .wf-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="#" class="nb-brand">
+    <img src="eagle-eye-logo.svg" alt="Eagle Eye" class="nb-eagle" />
+    <div class="nb-brand-text">
+      <strong>EAGLE EYE</strong>
+      <small>Structural Engineering Platform</small>
+    </div>
+  </a>
+  <ul class="nb-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">Learning</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <div class="nb-right">
+    <div class="nb-user">
+      <div class="nb-avatar">R</div>
+      <div class="nb-user-info">
+        <strong>Roy</strong>
+        <small>roy@csibangkok.com</small>
+      </div>
+    </div>
+    <button type="button" class="btn-dashboard">Dashboard</button>
+    <button type="button" class="btn-logout">Log Out</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-label">Eagle Eye </div>
+  <h1>Gear</h1>
+  <p class="hero-desc">All connected apps for structural analysis, member design, section investigation, and engineering learning.</p>
+</div>
+
+<!-- SECTION TABS -->
+<div class="section-tabs">
+  <button type="button" class="tab-arrow">‹</button>
+  <div class="tabs-inner">
+    <a href="#workflows"  class="tab-link active">Workflows</a>
+    <a href="#analysis"   class="tab-link">Structural Analysis</a>
+    <a href="#design"     class="tab-link">Member Design</a>
+    <a href="#details"    class="tab-link">Design Details</a>
+    <a href="#learning"   class="tab-link">Learning Tools</a>
+    <a href="#features"   class="tab-link">Features</a>
+    <a href="#pricing"    class="tab-link">Pricing</a>
+  </div>
+  <button type="button" class="tab-arrow right">›</button>
+</div>
+
+<!-- WORKFLOWS -->
+<div class="content-section" id="workflows">
+  <div class="section-inner">
+    <div class="sh-label">Guided Workflows</div>
+    <h2 class="sh-title">Connected sequences for <em>complete design tasks.</em></h2>
+    <p class="sh-desc">Workflows open apps in order, pass data automatically between each step, and keep all results in one project folder. No copy-paste, no re-entry.</p>
+    <div class="wf-grid">
+      <div class="wf-card">
+        <div class="wf-top">
+          <span class="wf-name">RC Beam Design</span>
+          <button type="button" class="wf-start">Start →</button>
+        </div>
+        <div class="wf-steps">
+          <div class="wf-icon">📐</div><span class="wf-arrow">→</span>
+          <div class="wf-icon">🏗️</div><span class="wf-arrow">→</span>
+          <div class="wf-icon">🔍</div>
+        </div>
+      </div>
+      <div class="wf-card">
+        <div class="wf-top">
+          <span class="wf-name">Multiple RC Beams — Project Level</span>
+          <button type="button" class="wf-start">Start →</button>
+        </div>
+        <div class="wf-steps">
+          <div class="wf-icon">📦</div><span class="wf-arrow">→</span>
+          <div class="wf-icon">🧱</div><span class="wf-arrow">→</span>
+          <div class="wf-icon">🔍</div>
+        </div>
+      </div>
+      <div class="wf-card">
+        <div class="wf-top">
+          <span class="wf-name">Steel Beam Design</span>
+          <button type="button" class="wf-start">Start →</button>
+        </div>
+        <div class="wf-steps">
+          <div class="wf-icon">📐</div><span class="wf-arrow">→</span>
+          <div class="wf-icon">⚙️</div>
+        </div>
+      </div>
+      <div class="wf-card">
+        <div class="wf-top">
+          <span class="wf-name">RC Beam Full Investigation</span>
+          <button type="button" class="wf-start">Start →</button>
+        </div>
+        <div class="wf-steps">
+          <div class="wf-icon">📐</div><span class="wf-arrow">→</span>
+          <div class="wf-icon">🏗️</div><span class="wf-arrow">→</span>
+          <div class="wf-icon">🔍</div><span class="wf-arrow">→</span>
+          <div class="wf-icon">📈</div><span class="wf-arrow">→</span>
+          <div class="wf-icon">🎯</div><span class="wf-arrow">→</span>
+          <div class="wf-icon">〽️</div><span class="wf-arrow">→</span>
+          <div class="wf-icon">📉</div>
+        </div>
+      </div>
+      <div class="wf-card">
+        <div class="wf-top">
+          <span class="wf-name">Footing Design</span>
+          <button type="button" class="wf-start">Start →</button>
+        </div>
+        <div class="wf-steps">
+          <div class="wf-icon">🏗️</div><span class="wf-arrow">→</span>
+          <div class="wf-icon">⬜</div>
+        </div>
+      </div>
+      <div class="wf-card">
+        <div class="wf-top">
+          <span class="wf-name">ETABS to Member Design</span>
+          <button type="button" class="wf-start">Start →</button>
+        </div>
+        <div class="wf-steps">
+          <div class="wf-icon">📦</div><span class="wf-arrow">→</span>
+          <div class="wf-icon">🏗️</div><span class="wf-arrow">→</span>
+          <div class="wf-icon">🔍</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STRUCTURAL ANALYSIS -->
+<div class="content-section" id="analysis">
+  <div class="section-inner">
+    <div class="sh-label">Structural Analysis</div>
+    <h2 class="sh-title">Analyze any structure, <em>right in your browser.</em></h2>
+    <p class="sh-desc">Browser-based analysis apps for beams, frames, and imported models from ETABS, SAP2000, and Excel.</p>
+    <div class="app-grid">
+      <div class="app-card">
+        <div class="app-icon-wrap">📐</div>
+        <div class="app-name">Beam</div>
+        <div class="app-desc">Analysis of beams for various load types and support conditions.</div>
+        <div class="app-btns">
+          <button type="button" class="btn-vid">Video</button>
+          <button type="button" class="btn-doc">Docs</button>
+          <button type="button" class="btn-open">Open</button>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-icon-wrap">🔲</div>
+        <div class="app-name">Frame 2D</div>
+        <div class="app-desc">Analysis of frames for various load types and support conditions.</div>
+        <div class="app-btns">
+          <button type="button" class="btn-vid">Video</button>
+          <button type="button" class="btn-doc">Docs</button>
+          <button type="button" class="btn-open">Open</button>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-icon-wrap">📦</div>
+        <div class="app-name">From ETABS</div>
+        <div class="app-desc">Import your ETABS model into the Gear platform.</div>
+        <div class="app-btns">
+          <button type="button" class="btn-vid">Video</button>
+          <button type="button" class="btn-doc">Docs</button>
+          <button type="button" class="btn-open">Open</button>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-icon-wrap">📦</div>
+        <div class="app-name">From SAP2000</div>
+        <div class="app-desc">Import your SAP2000 model into the Gear platform.</div>
+        <div class="app-btns">
+          <button type="button" class="btn-vid">Video</button>
+          <button type="button" class="btn-doc">Docs</button>
+          <button type="button" class="btn-open">Open</button>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-icon-wrap">📊</div>
+        <div class="app-name">From Excel</div>
+        <div class="app-desc">Import your Excel model to start analysis immediately.</div>
+        <div class="app-btns">
+          <button type="button" class="btn-vid">Video</button>
+          <button type="button" class="btn-doc">Docs</button>
+          <button type="button" class="btn-open">Open</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MEMBER DESIGN -->
+<div class="content-section" id="design">
+  <div class="section-inner">
+    <div class="sh-label">Member Design</div>
+    <h2 class="sh-title">Design to code — <em>18+ standards supported.</em></h2>
+    <p class="sh-desc">RC and steel member design apps. Results transfer automatically to Design Details apps — no rekeying required.</p>
+    <div class="pop-grid">
+      <div class="pop-card">
+        <div class="pop-card-banner blue">🏗️</div>
+        <div class="pop-card-body">
+          <div class="pop-card-name">RC Beam</div>
+          <div class="pop-card-desc">Reinforced concrete beam design for flexure, shear, and torsion.</div>
+          <button type="button" class="pop-card-btn">Open</button>
+        </div>
+      </div>
+      <div class="pop-card">
+        <div class="pop-card-banner teal">🧱</div>
+        <div class="pop-card-body">
+          <div class="pop-card-name">RC Beams</div>
+          <div class="pop-card-desc">Batch RC beam design from an imported project model.</div>
+          <button type="button" class="pop-card-btn">Open</button>
+        </div>
+      </div>
+      <div class="pop-card">
+        <div class="pop-card-banner slate">⚙️</div>
+        <div class="pop-card-body">
+          <div class="pop-card-name">Steel Beam</div>
+          <div class="pop-card-desc">Steel beam design for bending, shear, and lateral-torsional buckling.</div>
+          <button type="button" class="pop-card-btn">Open</button>
+        </div>
+      </div>
+      <div class="pop-card">
+        <div class="pop-card-banner indigo">🔩</div>
+        <div class="pop-card-body">
+          <div class="pop-card-name">Steel Column</div>
+          <div class="pop-card-desc">Steel column design with axial, biaxial bending, and buckling checks.</div>
+          <button type="button" class="pop-card-btn">Open</button>
+        </div>
+      </div>
+      <div class="pop-card">
+        <div class="pop-card-banner emerald">⬜</div>
+        <div class="pop-card-body">
+          <div class="pop-card-name">Isolated Footing</div>
+          <div class="pop-card-desc">Design isolated footings for concentric and eccentric column loads.</div>
+          <button type="button" class="pop-card-btn">Open</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DESIGN DETAILS -->
+<div class="content-section" id="details">
+  <div class="section-inner">
+    <div class="sh-label">Design Details</div>
+    <h2 class="sh-title">Investigate section behavior <em>in depth.</em></h2>
+    <p class="sh-desc">Stress distributions, moment-curvature diagrams, performance limits, and deflection checks — all connected from your design results.</p>
+    <div class="app-grid">
+      <div class="app-card">
+        <div class="app-icon-wrap">🔍</div>
+        <div class="app-name">RC Beam Section</div>
+        <div class="app-desc">Visual cross-section investigation for reinforced concrete beams.</div>
+        <div class="app-btns">
+          <button type="button" class="btn-vid">Video</button>
+          <button type="button" class="btn-doc">Docs</button>
+          <button type="button" class="btn-open">Open</button>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-icon-wrap">📈</div>
+        <div class="app-name">Beam Elastic Stresses</div>
+        <div class="app-desc">Compute and visualize elastic stress distributions across beam sections.</div>
+        <div class="app-btns">
+          <button type="button" class="btn-vid">Video</button>
+          <button type="button" class="btn-doc">Docs</button>
+          <button type="button" class="btn-open">Open</button>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-icon-wrap">〽️</div>
+        <div class="app-name">Beam Moment-Curvature</div>
+        <div class="app-desc">Generate moment-curvature diagrams for ductility assessment.</div>
+        <div class="app-btns">
+          <button type="button" class="btn-vid">Video</button>
+          <button type="button" class="btn-doc">Docs</button>
+          <button type="button" class="btn-open">Open</button>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-icon-wrap">🎯</div>
+        <div class="app-name">Beam Performance</div>
+        <div class="app-desc">Evaluate demand-capacity ratios and performance limits under load.</div>
+        <div class="app-btns">
+          <button type="button" class="btn-vid">Video</button>
+          <button type="button" class="btn-doc">Docs</button>
+          <button type="button" class="btn-open">Open</button>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-icon-wrap">📉</div>
+        <div class="app-name">Beam Deflection</div>
+        <div class="app-desc">Short- and long-term deflection calculations per code limits.</div>
+        <div class="app-btns">
+          <button type="button" class="btn-vid">Video</button>
+          <button type="button" class="btn-doc">Docs</button>
+          <button type="button" class="btn-open">Open</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LEARNING TOOLS -->
+<div class="content-section" id="learning">
+  <div class="section-inner">
+    <div class="sh-label">Learning Tools</div>
+    <h2 class="sh-title">Built for <em>students and educators too.</em></h2>
+    <p class="sh-desc">Interactive apps that make structural engineering concepts tangible — ideal for teaching and self-study.</p>
+    <div class="app-grid">
+      <div class="app-card">
+        <div class="app-icon-wrap">🧮</div>
+        <div class="app-name">Equation Visualizer</div>
+        <div class="app-desc">Explore structural equations interactively with live parameter controls.</div>
+        <div class="app-btns">
+          <button type="button" class="btn-doc">Docs</button>
+          <button type="button" class="btn-open">Open</button>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-icon-wrap">🌊</div>
+        <div class="app-name">SDOF Dynamics</div>
+        <div class="app-desc">Single-degree-of-freedom dynamic response simulation with visual output.</div>
+        <div class="app-btns">
+          <button type="button" class="btn-doc">Docs</button>
+          <button type="button" class="btn-open">Open</button>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-icon-wrap">🏠</div>
+        <div class="app-name">Dead Load</div>
+        <div class="app-desc">Calculate dead loads from material weights and structural dimensions.</div>
+        <div class="app-btns">
+          <button type="button" class="btn-doc">Docs</button>
+          <button type="button" class="btn-open">Open</button>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-icon-wrap">👥</div>
+        <div class="app-name">Live Load</div>
+        <div class="app-desc">Determine occupancy live loads per code for various building uses.</div>
+        <div class="app-btns">
+          <button type="button" class="btn-doc">Docs</button>
+          <button type="button" class="btn-open">Open</button>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-icon-wrap">⚖️</div>
+        <div class="app-name">Load Combinations</div>
+        <div class="app-desc">Generate factored load combinations for LRFD, ASD, and other methods.</div>
+        <div class="app-btns">
+          <button type="button" class="btn-doc">Docs</button>
+          <button type="button" class="btn-open">Open</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<div class="content-section" id="features">
+  <div class="section-inner">
+    <div class="sh-label">Features</div>
+    <h2 class="sh-title">Everything you need — <em>nothing you don't.</em></h2>
+    <p class="sh-desc">Compare what's included across tiers.</p>
+    <div class="feat-controls">
+      <button type="button" class="ctrl-btn" onclick="setAll(true)">Expand all</button>
+      <span class="ctrl-sep">&nbsp;·&nbsp;</span>
+      <button type="button" class="ctrl-btn" onclick="setAll(false)">Collapse all</button>
+    </div>
+    <table class="feat-table">
+      <thead>
+        <tr>
+          <th style="width:55%">Feature</th>
+          <th>Free Trial</th>
+          <th>Pro</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="feat-cat" onclick="toggle('g1')">
+          <td colspan="3">Project / Files / Import <span class="feat-expand" id="g1-btn">▾</span></td>
+        </tr>
+        <tr class="g1"><td>Save &amp; load projects</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+        <tr class="g1"><td>Import from ETABS</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+        <tr class="g1"><td>Import from SAP2000</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+        <tr class="g1"><td>Import from Excel</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+        <tr class="g1"><td>Export to PDF</td><td><span class="dash">—</span></td><td><span class="ck">✓</span></td></tr>
+
+        <tr class="feat-cat" onclick="toggle('g2')">
+          <td colspan="3">Engineering <span class="feat-expand" id="g2-btn">▾</span></td>
+        </tr>
+        <tr class="g2"><td>18+ design codes</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+        <tr class="g2"><td>Automatic result transfer between apps</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+        <tr class="g2"><td>Guided workflows</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+        <tr class="g2"><td>Biaxial bending analysis</td><td><span class="dash">—</span></td><td><span class="ck">✓</span></td></tr>
+        <tr class="g2"><td>Parametric design</td><td><span class="dash">—</span></td><td><span class="ck">✓</span></td></tr>
+
+        <tr class="feat-cat" onclick="toggle('g3')">
+          <td colspan="3">Reinforcement &amp; Canvas <span class="feat-expand" id="g3-btn">▾</span></td>
+        </tr>
+        <tr class="g3"><td>Interactive section canvas</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+        <tr class="g3"><td>Custom rebar layout</td><td><span class="dash">—</span></td><td><span class="ck">✓</span></td></tr>
+        <tr class="g3"><td>Moment-curvature diagrams</td><td><span class="dash">—</span></td><td><span class="ck">✓</span></td></tr>
+
+        <tr class="feat-cat" onclick="toggle('g4')">
+          <td colspan="3">Capacity / Analysis <span class="feat-expand" id="g4-btn">▾</span></td>
+        </tr>
+        <tr class="g4"><td>On-screen result summaries</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+        <tr class="g4"><td>Detailed calculation report (PDF)</td><td><span class="dash">—</span></td><td><span class="ck">✓</span></td></tr>
+        <tr class="g4"><td>Result charts &amp; diagrams</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+
+        <tr class="feat-cat" onclick="toggle('g5')">
+          <td colspan="3">Tier Limits <span class="feat-expand" id="g5-btn">▾</span></td>
+        </tr>
+        <tr class="g5"><td>Trial duration</td><td>1 month</td><td>Unlimited</td></tr>
+        <tr class="g5"><td>Number of projects</td><td>Unlimited</td><td>Unlimited</td></tr>
+        <tr class="g5"><td>Apps per subscription</td><td>1 per trial</td><td>Per app or full bundle</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- PRICING -->
+<div class="content-section" id="pricing">
+  <div class="section-inner">
+    <div class="sh-label">Pricing</div>
+    <h2 class="sh-title">Start free. <em>Upgrade when you're ready.</em></h2>
+    <p class="sh-desc">Every app includes a full one-month free trial — no card, no account needed.</p>
+    <div class="pricing-toggle">
+      <button type="button" class="ptoggle active" onclick="setPricing('monthly',this)">Monthly</button>
+      <button type="button" class="ptoggle" onclick="setPricing('yearly',this)">Yearly &nbsp;<span class="save-pill">SAVE 30%</span></button>
+    </div>
+    <div class="pricing-grid">
+      <div class="pc">
+        <div class="pc-name">Free Trial</div>
+        <div class="pc-price">Free</div>
+        <div class="pc-period">1 month per app · no card needed</div>
+        <ul class="pc-list">
+          <li><span class="pc-ck">✓</span> Full access to any one app for 30 days</li>
+          <li><span class="pc-ck">✓</span> No registration required</li>
+          <li><span class="pc-ck">✓</span> Docs and video guides included</li>
+          <li><span class="pc-ck">✓</span> Automatic result transfer between apps</li>
+        </ul>
+        <button type="button" class="btn-buy outline">Start Free Trial</button>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Pro — Single App</div>
+        <div class="pc-price" id="single-price">$8<span>/mo</span></div>
+        <div class="pc-period" id="single-period">per app · billed monthly · from $8 to $15</div>
+        <ul class="pc-list">
+          <li><span class="pc-ck">✓</span> Unlimited access to one app</li>
+          <li><span class="pc-ck">✓</span> All 18+ design codes</li>
+          <li><span class="pc-ck">✓</span> PDF calculation reports</li>
+          <li><span class="pc-ck">✓</span> Priority feature updates</li>
+          <li><span class="pc-ck">✓</span> Cancel any time</li>
+        </ul>
+        <button type="button" class="btn-buy">Buy Now</button>
+      </div>
+      <div class="pc featured">
+        <div class="pc-badge">Best Value</div>
+        <div class="pc-name">Full Bundle</div>
+        <div class="pc-price" id="bundle-price">$39<span>/mo</span></div>
+        <div class="pc-period" id="bundle-period">17 apps · 4 categories · billed monthly &nbsp;<span class="save-pill">Save 76%</span></div>
+        <ul class="pc-list">
+          <li><span class="pc-ck">✓</span> Every app in the Gear platform</li>
+          <li><span class="pc-ck">✓</span> All guided workflows unlocked</li>
+          <li><span class="pc-ck">✓</span> All 18+ design codes</li>
+          <li><span class="pc-ck">✓</span> First access to new apps</li>
+          <li><span class="pc-ck">✓</span> Cancel any time</li>
+        </ul>
+        <button type="button" class="btn-buy green">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <img src="eagle-eye-logo.svg" alt="Eagle Eye" style="height:28px;width:auto;" />
+        <strong style="font-size:0.9rem;font-weight:800;letter-spacing:0.03em;color:var(--gray-900);">EAGLE EYE</strong>
+      </div>
+      <p>A product by CSI Bangkok. Structural engineering tools built for how engineers actually work — connected, fast, and free to try.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="#">Gear</a></li>
+        <li><a href="#">Bridge Express</a></li>
+        <li><a href="#">Column Designer</a></li>
+        <li><a href="#">Prism</a></li>
+        <li><a href="#">Axiom</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">Video Guides</a></li>
+        <li><a href="#">Learning Tools</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Cookies</a></li>
+        <li><a href="#">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Eagle Eye. A product by CSI Bangkok.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy</a>
+      <a href="#">Cookies</a>
+      <a href="#">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Feature table expand/collapse
+  function toggle(id) {
+    const rows = document.querySelectorAll('.' + id);
+    const btn  = document.getElementById(id + '-btn');
+    const hide = rows[0].style.display !== 'none';
+    rows.forEach(r => r.style.display = hide ? 'none' : '');
+    btn.textContent = hide ? '▸' : '▾';
+  }
+  function setAll(show) {
+    ['g1','g2','g3','g4','g5'].forEach(id => {
+      document.querySelectorAll('.' + id).forEach(r => r.style.display = show ? '' : 'none');
+      document.getElementById(id + '-btn').textContent = show ? '▾' : '▸';
+    });
+  }
+
+  // Pricing toggle
+  function setPricing(mode, el) {
+    document.querySelectorAll('.ptoggle').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+    const bp = document.getElementById('bundle-price');
+    const bd = document.getElementById('bundle-period');
+    const sd = document.getElementById('single-period');
+    const sp = document.getElementById('single-price');
+    if (mode === 'yearly') {
+      bp.innerHTML = '$27<span>/mo</span>';
+      bd.innerHTML = '17 apps · 4 categories · billed yearly &nbsp;<span class="save-pill">Save 30% vs monthly</span>';
+      sp.innerHTML = '$5.60<span>/mo</span>';
+      sd.textContent = 'per app · billed yearly · from $5.60 to $10.50';
+    } else {
+      bp.innerHTML = '$39<span>/mo</span>';
+      bd.innerHTML = '17 apps · 4 categories · billed monthly &nbsp;<span class="save-pill">Save 76%</span>';
+      sp.innerHTML = '$8<span>/mo</span>';
+      sd.textContent = 'per app · billed monthly · from $8 to $15';
+    }
+  }
+
+  // Active tab on scroll
+  const sectionIds = ['workflows','analysis','design','details','learning','features','pricing'];
+  const tabLinks = document.querySelectorAll('.tab-link');
+  window.addEventListener('scroll', () => {
+    let current = sectionIds[0];
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && el.getBoundingClientRect().top < 130) current = id;
+    });
+    tabLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+  });
+</script>
+</body>
+</html>

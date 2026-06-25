@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Meet the 110+ ethnic groups of the Philippine archipelago â€” their languages, oral histories, and living identities across 7,641 islands.">
+<meta name="description" content="Meet the 110+ ethnic groups of the Philippine archipelago — their languages, oral histories, and living identities across 7,641 islands.">
 <title>Expedition PH: People</title>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="../image/Logo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&family=Noto+Sans+Tagalog&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -57,6 +58,19 @@ header.scrolled { padding: 10px 48px; }
   letter-spacing: 0.1em;
   text-decoration: none;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.header-logo-icon {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(200,149,58,0.5);
+  object-fit: contain;
+  background: #fff;
+  padding: 1px;
+  flex-shrink: 0;
 }
 .header-sub {
   font-size: 0.58rem; letter-spacing: 0.18em;
@@ -472,7 +486,7 @@ nav a:hover, nav a.active { color: var(--gold); }
   cursor: pointer; z-index: 900;
   transition: color 0.25s, border-color 0.25s;
 }
-.audio-btn::before { content: 'â™ª'; font-size: 0.95rem; color: var(--gold); opacity: 0.6; transition: opacity 0.25s; }
+.audio-btn::before { content: '♪'; font-size: 0.95rem; color: var(--gold); opacity: 0.6; transition: opacity 0.25s; }
 .audio-btn:hover { color: var(--gold); border-color: rgba(200,149,58,0.55); }
 .audio-btn:hover::before { opacity: 1; }
 
@@ -563,10 +577,10 @@ footer ul li a:hover { color: var(--gold); }
 <section class="hero">
   <p class="hero-eyebrow">Philippine People</p>
   <h1>110+ Peoples of the <em>Archipelago</em></h1>
-  <p>7,641 islands. 180+ languages. A mosaic of highland farmers, seafaring traders, royal sultanates, and forest keepers â€” each with a story older than history.</p>
+  <p>7,641 islands. 180+ languages. A mosaic of highland farmers, seafaring traders, royal sultanates, and forest keepers — each with a story older than history.</p>
   <div class="hero-cta">
     <a href="languages.html" class="btn-gold">Explore Languages</a>
-    <a href="groups.html" class="btn-outline soon-btn">Ethnic Groups â€” Coming Soon</a>
+    <a href="groups.html" class="btn-outline soon-btn">Ethnic Groups — Coming Soon</a>
   </div>
   <div class="hero-scroll"><div class="scroll-bar"></div>Scroll</div>
 </section>
@@ -594,7 +608,7 @@ footer ul li a:hover { color: var(--gold); }
   </div>
   <div class="region-info reveal" id="region-desc"></div>
   <div class="grid grid-4 reveal" id="region-content"></div>
-  <a href="communities.html" class="preview-link reveal soon-link">Communities â€” Coming Soon</a>
+  <a href="communities.html" class="preview-link reveal soon-link">Communities — Coming Soon</a>
 </section>
 
 <div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Featured Peoples &nbsp; &#9670;</span><div class="div-line"></div></div>
@@ -610,8 +624,8 @@ footer ul li a:hover { color: var(--gold); }
     <div class="featured-card-body">
       <div class="featured-label">&#9670; &nbsp; Featured People</div>
       <div class="featured-name">Ifugao</div>
-      <div class="featured-sub">Cordillera Â· Luzon</div>
-      <p class="featured-desc">Engineers of the living landscape â€” the Ifugao people carved the Banaue Rice Terraces into the mountains of Luzon over 2,000 years ago. Their knowledge of water, soil, and seasons is passed down entirely through oral tradition, with no written record. The terraces are still farmed today by the same communities who built them.</p>
+      <div class="featured-sub">Cordillera · Luzon</div>
+      <p class="featured-desc">Engineers of the living landscape — the Ifugao people carved the Banaue Rice Terraces into the mountains of Luzon over 2,000 years ago. Their knowledge of water, soil, and seasons is passed down entirely through oral tradition, with no written record. The terraces are still farmed today by the same communities who built them.</p>
       <div class="badge-row">
         <span class="badge">Highland</span>
         <span class="badge">UNESCO Heritage</span>
@@ -625,47 +639,47 @@ footer ul li a:hover { color: var(--gold); }
   <div class="grid grid-4 reveal">
 
     <div class="card" onclick="openModal('maranao')">
-      <div class="no-photo"><div class="no-photo-icon">â—ˆ</div><div class="no-photo-txt">Photo Coming Soon</div></div>
+      <div class="no-photo"><div class="no-photo-icon">◈</div><div class="no-photo-txt">Photo Coming Soon</div></div>
       <div class="card-body">
         <div class="card-tag">Sultanate People</div>
         <div class="card-title">Maranao<em>Lanao del Sur, Mindanao</em></div>
-        <p class="card-desc">The "People of the Lake" â€” guardians of the okir art tradition and the kulintang musical ensemble, living along the shores of Lake Lanao in royal communities called torogan.</p>
+        <p class="card-desc">The "People of the Lake" — guardians of the okir art tradition and the kulintang musical ensemble, living along the shores of Lake Lanao in royal communities called torogan.</p>
         <span class="card-badge badge-sultanate">Sultanate</span>
       </div>
     </div>
 
     <div class="card" onclick="openModal('bajau')">
-      <div class="no-photo"><div class="no-photo-icon">â—ˆ</div><div class="no-photo-txt">Photo Coming Soon</div></div>
+      <div class="no-photo"><div class="no-photo-icon">◈</div><div class="no-photo-txt">Photo Coming Soon</div></div>
       <div class="card-body">
         <div class="card-tag">Sea Nomads</div>
         <div class="card-title">Sama-Bajau<em>Sulu Sea, Mindanao</em></div>
-        <p class="card-desc">Among the last true sea nomads â€” the Sama-Bajau have lived on boats across the Sulu Archipelago for centuries, diving to extraordinary depths and navigating by the stars with no written charts.</p>
+        <p class="card-desc">Among the last true sea nomads — the Sama-Bajau have lived on boats across the Sulu Archipelago for centuries, diving to extraordinary depths and navigating by the stars with no written charts.</p>
         <span class="card-badge badge-nomadic">Seafaring</span>
       </div>
     </div>
 
     <div class="card" onclick="openModal('mangyan')">
-      <div class="no-photo"><div class="no-photo-icon">â—ˆ</div><div class="no-photo-txt">Photo Coming Soon</div></div>
+      <div class="no-photo"><div class="no-photo-icon">◈</div><div class="no-photo-txt">Photo Coming Soon</div></div>
       <div class="card-body">
-        <div class="card-tag">Indigenous Â· Mindoro</div>
+        <div class="card-tag">Indigenous · Mindoro</div>
         <div class="card-title">Mangyan<em>Mindoro Island</em></div>
-        <p class="card-desc">One of the few Philippine groups to preserve a pre-colonial indigenous script â€” Hanunuo Mangyan write poetry on bamboo using a script descended from ancient Brahmic writing systems of Southeast Asia.</p>
+        <p class="card-desc">One of the few Philippine groups to preserve a pre-colonial indigenous script — Hanunuo Mangyan write poetry on bamboo using a script descended from ancient Brahmic writing systems of Southeast Asia.</p>
         <span class="card-badge badge-highland">Indigenous</span>
       </div>
     </div>
 
     <div class="card" onclick="openModal('ilocano')">
-      <div class="no-photo"><div class="no-photo-icon">â—ˆ</div><div class="no-photo-txt">Photo Coming Soon</div></div>
+      <div class="no-photo"><div class="no-photo-icon">◈</div><div class="no-photo-txt">Photo Coming Soon</div></div>
       <div class="card-body">
-        <div class="card-tag">Lowland Â· Luzon</div>
+        <div class="card-tag">Lowland · Luzon</div>
         <div class="card-title">Ilocano<em>Ilocos Region, Northern Luzon</em></div>
-        <p class="card-desc">Known throughout the Philippines for industriousness and frugality â€” the Ilocano built some of the archipelago's finest ancestral houses, wove the finest inabel cloth, and produced leaders who shaped modern Philippine history.</p>
+        <p class="card-desc">Known throughout the Philippines for industriousness and frugality — the Ilocano built some of the archipelago's finest ancestral houses, wove the finest inabel cloth, and produced leaders who shaped modern Philippine history.</p>
         <span class="card-badge badge-lowland">Lowland</span>
       </div>
     </div>
 
   </div>
-  <a href="groups.html" class="preview-link reveal soon-link">Ethnic Groups â€” Coming Soon</a>
+  <a href="groups.html" class="preview-link reveal soon-link">Ethnic Groups — Coming Soon</a>
 </section>
 
 <div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Languages & Scripts &nbsp; &#9670;</span><div class="div-line"></div></div>
@@ -674,33 +688,33 @@ footer ul li a:hover { color: var(--gold); }
 <section class="section section-dark2">
   <p class="section-eyebrow reveal">183 Living Languages</p>
   <h2 class="section-title reveal">Philippine <em>Languages & Scripts</em></h2>
-  <p class="section-body reveal">The Philippines is one of the world's great linguistic archipelagos. Each language is a distinct worldview â€” encoding knowledge of the sea, the forest, the stars, and the sacred that exists in no other tongue.</p>
+  <p class="section-body reveal">The Philippines is one of the world's great linguistic archipelagos. Each language is a distinct worldview — encoding knowledge of the sea, the forest, the stars, and the sacred that exists in no other tongue.</p>
 
   <div class="grid grid-3 reveal">
 
     <div class="script-card">
       <div class="script-glyph">áœŠáœŒáœ”áœŠáœŒáœ’áœˆáœ”</div>
       <div class="script-name">Baybayin</div>
-      <div class="script-sub">Pre-Colonial Script Â· Luzon</div>
-      <p class="script-desc">The indigenous writing system used across Luzon before Spanish colonization â€” an abugida script descended from the ancient Brahmic family. Baybayin was written on perishable materials, so almost no pre-colonial texts survive. A national revival movement is now returning it to everyday use.</p>
+      <div class="script-sub">Pre-Colonial Script · Luzon</div>
+      <p class="script-desc">The indigenous writing system used across Luzon before Spanish colonization — an abugida script descended from the ancient Brahmic family. Baybayin was written on perishable materials, so almost no pre-colonial texts survive. A national revival movement is now returning it to everyday use.</p>
     </div>
 
     <div class="script-card">
       <div class="script-glyph">áŠá“á‘á’áƒá“</div>
       <div class="script-name">Hanunuo Script</div>
-      <div class="script-sub">Living Script Â· Mangyan, Mindoro</div>
-      <p class="script-desc">One of only three pre-colonial Philippine scripts still actively written today â€” Hanunuo Mangyan poets use it to inscribe love poetry called ambahan onto bamboo tubes. Each poem is a form of courtship, passed between communities on the slopes of Mindoro.</p>
+      <div class="script-sub">Living Script · Mangyan, Mindoro</div>
+      <p class="script-desc">One of only three pre-colonial Philippine scripts still actively written today — Hanunuo Mangyan poets use it to inscribe love poetry called ambahan onto bamboo tubes. Each poem is a form of courtship, passed between communities on the slopes of Mindoro.</p>
     </div>
 
     <div class="script-card">
-      <div class="script-glyph">ÙƒÙŠØªØ§Ø¨ Ø¬Ø§ÙˆÙŠ</div>
+      <div class="script-glyph">كيتاب جاوي</div>
       <div class="script-name">Jawi Script</div>
-      <div class="script-sub">Arabic-Based Script Â· Mindanao & Sulu</div>
-      <p class="script-desc">Brought to Mindanao through trade with the Malay world in the 14th century â€” Jawi script is still used by Tausug and Maranao communities to write their languages, record Islamic scholarship, and preserve royal genealogies called the tarsila.</p>
+      <div class="script-sub">Arabic-Based Script · Mindanao & Sulu</div>
+      <p class="script-desc">Brought to Mindanao through trade with the Malay world in the 14th century — Jawi script is still used by Tausug and Maranao communities to write their languages, record Islamic scholarship, and preserve royal genealogies called the tarsila.</p>
     </div>
 
   </div>
-  <a href="languages.html" class="preview-link reveal">Explore all languages â†’</a>
+  <a href="languages.html" class="preview-link reveal">Explore all languages →</a>
 </section>
 
 <div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Portraits &nbsp; &#9670;</span><div class="div-line"></div></div>
@@ -719,7 +733,7 @@ footer ul li a:hover { color: var(--gold); }
     <div class="gal-item"><div class="gal-placeholder" style="height:180px;">Photo Coming Soon</div></div>
     <div class="gal-item"><div class="gal-placeholder" style="height:320px;">Photo Coming Soon</div></div>
   </div>
-  <a href="portraits.html" class="preview-link reveal soon-link">Portraits â€” Coming Soon</a>
+  <a href="portraits.html" class="preview-link reveal soon-link">Portraits — Coming Soon</a>
 </section>
 
 <!-- MODAL -->
@@ -788,30 +802,30 @@ footer ul li a:hover { color: var(--gold); }
 /* â”€â”€ REGION DATA â”€â”€ */
 const regions = {
   luzon: {
-    desc: "The largest island group is home to the highland peoples of the Cordillera â€” Ifugao, Bontoc, Ibaloi, Kalinga, and Apayao â€” alongside the great lowland communities of Ilocano, Tagalog, Kapampangan, and Bicolano who shaped colonial and modern Philippine history.",
+    desc: "The largest island group is home to the highland peoples of the Cordillera — Ifugao, Bontoc, Ibaloi, Kalinga, and Apayao — alongside the great lowland communities of Ilocano, Tagalog, Kapampangan, and Bicolano who shaped colonial and modern Philippine history.",
     items: [
-      { name: 'Ifugao', sub: 'Cordillera Â· Mountain Province' },
-      { name: 'Ilocano', sub: 'Ilocos Region Â· Northern Luzon' },
-      { name: 'Tagalog', sub: 'Central Luzon Â· Manila Region' },
-      { name: 'Mangyan', sub: 'Indigenous Â· Mindoro Island' }
+      { name: 'Ifugao', sub: 'Cordillera · Mountain Province' },
+      { name: 'Ilocano', sub: 'Ilocos Region · Northern Luzon' },
+      { name: 'Tagalog', sub: 'Central Luzon · Manila Region' },
+      { name: 'Mangyan', sub: 'Indigenous · Mindoro Island' }
     ]
   },
   visayas: {
-    desc: "The Visayas are home to the Cebuano, Waray, Hiligaynon, and Aklanon peoples â€” traders and seafarers whose languages are among the most widely spoken in the archipelago, and whose festivals are among the most celebrated.",
+    desc: "The Visayas are home to the Cebuano, Waray, Hiligaynon, and Aklanon peoples — traders and seafarers whose languages are among the most widely spoken in the archipelago, and whose festivals are among the most celebrated.",
     items: [
-      { name: 'Cebuano', sub: 'Cebu Â· Bohol Â· Eastern Visayas' },
-      { name: 'Waray', sub: 'Samar Â· Leyte' },
-      { name: 'Hiligaynon', sub: 'Iloilo Â· Negros Occidental' },
-      { name: 'Aklanon', sub: 'Aklan Â· Panay Island' }
+      { name: 'Cebuano', sub: 'Cebu · Bohol · Eastern Visayas' },
+      { name: 'Waray', sub: 'Samar · Leyte' },
+      { name: 'Hiligaynon', sub: 'Iloilo · Negros Occidental' },
+      { name: 'Aklanon', sub: 'Aklan · Panay Island' }
     ]
   },
   mindanao: {
-    desc: "Mindanao holds the Philippines' greatest diversity of indigenous peoples â€” 18 recognized Lumad groups in the highlands, the Maranao and Tausug sultanates with their royal courts and Islamic traditions, and the seafaring Sama-Bajau who navigate the Sulu Sea as their ancestors have for a thousand years.",
+    desc: "Mindanao holds the Philippines' greatest diversity of indigenous peoples — 18 recognized Lumad groups in the highlands, the Maranao and Tausug sultanates with their royal courts and Islamic traditions, and the seafaring Sama-Bajau who navigate the Sulu Sea as their ancestors have for a thousand years.",
     items: [
-      { name: 'Maranao', sub: 'Lanao del Sur Â· Lake Lanao' },
-      { name: 'Tausug', sub: 'Sulu Archipelago Â· Mindanao' },
-      { name: 'Sama-Bajau', sub: 'Sulu Sea Â· Sea Nomads' },
-      { name: 'Lumad', sub: 'Mindanao Highlands Â· Indigenous' }
+      { name: 'Maranao', sub: 'Lanao del Sur · Lake Lanao' },
+      { name: 'Tausug', sub: 'Sulu Archipelago · Mindanao' },
+      { name: 'Sama-Bajau', sub: 'Sulu Sea · Sea Nomads' },
+      { name: 'Lumad', sub: 'Mindanao Highlands · Indigenous' }
     ]
   }
 };
@@ -854,32 +868,32 @@ loadRegion('luzon', null);
 /* â”€â”€ MODAL DATA â”€â”€ */
 const modalData = {
   maranao: {
-    tag: 'Sultanate People Â· Mindanao',
+    tag: 'Sultanate People · Mindanao',
     title: 'Maranao',
     titleSub: 'People of the Lake',
-    desc: 'The Maranao are the dominant Muslim people of Lanao del Sur, living along the shores of Lake Lanao â€” one of the world\'s oldest lakes. Their culture is among the richest in the Philippines: the torogan (royal house), the okir arabesque art tradition, and the kulintang ensemble of gongs make Maranao material culture singular in Southeast Asia.',
-    story: 'The Maranao epic "Darangen" is one of the longest oral epics in Southeast Asia â€” a cycle of 25 episodes describing the life of the hero Bantugen. It has been transmitted entirely by memory for over 500 years and was recognized by UNESCO as an Intangible Cultural Heritage of Humanity in 2005.'
+    desc: 'The Maranao are the dominant Muslim people of Lanao del Sur, living along the shores of Lake Lanao — one of the world\'s oldest lakes. Their culture is among the richest in the Philippines: the torogan (royal house), the okir arabesque art tradition, and the kulintang ensemble of gongs make Maranao material culture singular in Southeast Asia.',
+    story: 'The Maranao epic "Darangen" is one of the longest oral epics in Southeast Asia — a cycle of 25 episodes describing the life of the hero Bantugen. It has been transmitted entirely by memory for over 500 years and was recognized by UNESCO as an Intangible Cultural Heritage of Humanity in 2005.'
   },
   bajau: {
-    tag: 'Sea Nomads Â· Sulu Sea',
+    tag: 'Sea Nomads · Sulu Sea',
     title: 'Sama-Bajau',
     titleSub: 'Wanderers of the Sea',
-    desc: 'The Sama-Bajau are among the last true sea nomads â€” communities who lived almost entirely on boats across the Sulu Archipelago and the Banda Sea. Exceptional free divers, some individuals can descend beyond 60 meters on a single breath. Studies have found that Bajau peoples have genetically larger spleens, likely an adaptation to their diving lifestyle over generations.',
-    story: 'The Sama-Bajau navigate using a system of star, current, and wave knowledge with no written charts. This oral cartography â€” passed from parent to child â€” encodes centuries of accumulated maritime knowledge that modern GPS cannot replicate.'
+    desc: 'The Sama-Bajau are among the last true sea nomads — communities who lived almost entirely on boats across the Sulu Archipelago and the Banda Sea. Exceptional free divers, some individuals can descend beyond 60 meters on a single breath. Studies have found that Bajau peoples have genetically larger spleens, likely an adaptation to their diving lifestyle over generations.',
+    story: 'The Sama-Bajau navigate using a system of star, current, and wave knowledge with no written charts. This oral cartography — passed from parent to child — encodes centuries of accumulated maritime knowledge that modern GPS cannot replicate.'
   },
   mangyan: {
-    tag: 'Indigenous Â· Mindoro Island',
+    tag: 'Indigenous · Mindoro Island',
     title: 'Mangyan',
     titleSub: 'Keepers of the Ancient Script',
-    desc: 'The Mangyan are eight distinct indigenous groups living in the mountains of Mindoro. The Hanunuo and Buhid Mangyan still use pre-colonial scripts descended from ancient Brahmic writing â€” one of only a handful of pre-colonial Philippine scripts still actively written. Their poetry tradition, the ambahan, uses this script to encode courtship, wisdom, and community memory.',
-    story: 'Hanunuo Mangyan ambahan poems are written on bamboo using a knife â€” a tradition so ancient that no one knows when it began. The poems are left as gifts or passed between communities. UNESCO recognized the Mangyan script as an endangered heritage in need of preservation.'
+    desc: 'The Mangyan are eight distinct indigenous groups living in the mountains of Mindoro. The Hanunuo and Buhid Mangyan still use pre-colonial scripts descended from ancient Brahmic writing — one of only a handful of pre-colonial Philippine scripts still actively written. Their poetry tradition, the ambahan, uses this script to encode courtship, wisdom, and community memory.',
+    story: 'Hanunuo Mangyan ambahan poems are written on bamboo using a knife — a tradition so ancient that no one knows when it began. The poems are left as gifts or passed between communities. UNESCO recognized the Mangyan script as an endangered heritage in need of preservation.'
   },
   ilocano: {
-    tag: 'Lowland People Â· Northern Luzon',
+    tag: 'Lowland People · Northern Luzon',
     title: 'Ilocano',
     titleSub: 'Builders of the Ilocos Coast',
-    desc: 'The Ilocano are the third largest ethnolinguistic group in the Philippines â€” known throughout the archipelago for their industriousness, frugality, and resilience. The stone ancestral houses of Vigan, the inabel textiles of Paoay, and the burnay pottery of Vigan are all Ilocano creations. Three Philippine presidents â€” including Ferdinand Marcos and his son â€” came from this community.',
-    story: 'The Ilocos region has produced more overseas Filipino workers per capita than any other region in the Philippines. Ilocano communities exist in Hawaii, California, and across the Middle East â€” carrying their language, food traditions, and inabel textiles with them.'
+    desc: 'The Ilocano are the third largest ethnolinguistic group in the Philippines — known throughout the archipelago for their industriousness, frugality, and resilience. The stone ancestral houses of Vigan, the inabel textiles of Paoay, and the burnay pottery of Vigan are all Ilocano creations. Three Philippine presidents — including Ferdinand Marcos and his son — came from this community.',
+    story: 'The Ilocos region has produced more overseas Filipino workers per capita than any other region in the Philippines. Ilocano communities exist in Hawaii, California, and across the Middle East — carrying their language, food traditions, and inabel textiles with them.'
   }
 };
 

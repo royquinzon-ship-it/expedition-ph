@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(ls -la /c/Users/royqu/philippine-natural-history/*.html)"
+      "Bash(ls -la /c/Users/royqu/philippine-natural-history/*.html)",
+      "Read(//c/Users/royqu/AppData/Local/Programs/Git/bin/**)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
