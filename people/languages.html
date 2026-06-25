@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Languages & Scripts â€” Expedition PH: People</title>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Languages & Scripts — Expedition PH: People</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&family=Noto+Sans+Tagalog&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
@@ -39,7 +39,7 @@ nav a:hover, nav a.active { color: var(--gold); }
 
 /* PAGE HERO */
 .page-hero { min-height: 48vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: calc(64px + 4rem) 2rem 4rem; background: var(--dark2); border-bottom: 1px solid var(--gold-border); position: relative; overflow: hidden; }
-.page-hero::before { content: 'áœŠáœŒáœ”áœŠáœŒáœ’áœˆáœ”'; position: absolute; font-size: 22rem; color: var(--gold); opacity: 0.18; top: 50%; left: 50%; transform: translate(-50%,-50%); white-space: nowrap; pointer-events: none; letter-spacing: 0.1em; filter: blur(1px); }
+.page-hero::before { content: '\170A\170C\1714\170A\170C\1711\1708\1714'; position: absolute; font-size: 22rem; font-family: 'Noto Sans Tagalog', serif; color: var(--gold); opacity: 0.18; top: 50%; left: 50%; transform: translate(-50%,-50%); white-space: nowrap; pointer-events: none; letter-spacing: 0.1em; filter: blur(1px); }
 .page-hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 30%, var(--dark2) 80%); pointer-events: none; }
 .page-eyebrow { font-size: 0.68rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; position: relative; }
 .page-title { font-family: 'Merriweather', serif; font-size: clamp(2rem, 4.5vw, 3.5rem); font-weight: 700; line-height: 1.2; margin-bottom: 1rem; position: relative; }
@@ -119,6 +119,7 @@ nav a:hover, nav a.active { color: var(--gold); }
   color: var(--gold);
   line-height: 1.4;
   word-break: break-all;
+  font-family: 'Noto Sans Tagalog', serif;
 }
 .trans-output.empty { font-size: 0.78rem; color: var(--dim); letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.4; display: flex; align-items: center; }
 .trans-note { margin-top: 1.2rem; font-size: 0.72rem; color: var(--dim); line-height: 1.65; border-top: 1px solid var(--gold-border); padding-top: 1rem; }
@@ -144,7 +145,7 @@ nav a:hover, nav a.active { color: var(--gold); }
 .script-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 14px; }
 .script-card { background: var(--dark3); border: 1px solid rgba(255,255,255,0.05); padding: 2rem 1.5rem; text-align: center; cursor: pointer; transition: border-color 0.3s, transform 0.3s; }
 .script-card:hover { border-color: rgba(200,149,58,0.4); transform: translateY(-3px); }
-.script-glyph { font-size: 2.8rem; color: var(--gold); opacity: 0.75; line-height: 1; margin-bottom: 1rem; letter-spacing: 0.05em; }
+.script-glyph { font-size: 2.8rem; color: var(--gold); opacity: 0.75; line-height: 1; margin-bottom: 1rem; letter-spacing: 0.05em; font-family: 'Noto Sans Tagalog', serif; }
 .script-name { font-family: 'Merriweather', serif; font-size: 0.92rem; font-weight: 700; margin-bottom: 0.2rem; }
 .script-origin { font-size: 0.65rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.6rem; }
 .script-status-live { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: #55b585; border: 1px solid rgba(85,181,133,0.35); display: inline-block; padding: 0.15rem 0.5rem; margin-bottom: 0.7rem; }
@@ -265,7 +266,7 @@ footer ul li a:hover { color: var(--gold); }
 
 <div class="breadcrumb">
   <a href="index.html">People</a>
-  <span>â€º</span>
+  <span>›</span>
   <span>Languages & Scripts</span>
 </div>
 
@@ -275,7 +276,7 @@ footer ul li a:hover { color: var(--gold); }
 <div class="page-hero">
   <p class="page-eyebrow">183 Living Languages</p>
   <h1 class="page-title">Languages & <em>Scripts</em></h1>
-  <p class="page-desc">The Philippines is one of the world's great linguistic archipelagos. Each language is a distinct worldview â€” encoding knowledge of the sea, the forest, the stars, and the sacred that exists in no other tongue.</p>
+  <p class="page-desc">The Philippines is one of the world's great linguistic archipelagos. Each language is a distinct worldview — encoding knowledge of the sea, the forest, the stars, and the sacred that exists in no other tongue.</p>
 </div>
 
 <!-- STATS -->
@@ -303,7 +304,7 @@ footer ul li a:hover { color: var(--gold); }
   </div>
 
   <div class="lang-grid" id="lang-grid"></div>
-  <a href="groups.html" class="preview-link reveal">View all 183 languages â†’</a>
+  <a href="groups.html" class="preview-link reveal">View all 183 languages →</a>
 </section>
 
 <div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Baybayin Transliterator &nbsp; &#9670;</span><div class="div-line"></div></div>
@@ -312,20 +313,20 @@ footer ul li a:hover { color: var(--gold); }
 <section class="section section-dark2">
   <p class="section-eyebrow reveal">Interactive Tool</p>
   <h2 class="section-title reveal">Baybayin <em>Transliterator</em></h2>
-  <p class="section-body reveal">Baybayin is the pre-colonial script of the Tagalog, Kapampangan, and Visayan peoples â€” written on perishable materials before Spanish colonization. Type any word or name below to see it rendered in Baybayin.</p>
+  <p class="section-body reveal">Baybayin is the pre-colonial script of the Tagalog, Kapampangan, and Visayan peoples — written on perishable materials before Spanish colonization. Type any word or name below to see it rendered in Baybayin.</p>
 
   <div class="transliterator reveal">
     <div class="trans-label">Type in English or Filipino</div>
-    <input type="text" class="trans-input" id="trans-input" placeholder="Type a word or your nameâ€¦" oninput="transliterate()" maxlength="40">
+    <input type="text" class="trans-input" id="trans-input" placeholder="Type a word or your name…" oninput="transliterate()" maxlength="40">
     <div class="trans-divider">
       <div class="trans-divider-line"></div>
-      <div class="trans-divider-icon">â†“</div>
+      <div class="trans-divider-icon">↓</div>
       <div class="trans-divider-line"></div>
     </div>
     <div class="trans-label">In Baybayin Script</div>
     <div class="trans-output empty" id="trans-output">Your text will appear here</div>
     <div class="trans-note">
-      Baybayin is an <em>abugida</em> â€” each character represents a consonant with an inherent "a" vowel. Small diacritics called <em>kudlit</em> modify the vowel sound. Final consonants are marked with a <em>pamudpod</em> (áœ”), the modern virama sign. Spanish and English loan letters are mapped to their closest Baybayin equivalents: câ†’k, fâ†’p, vâ†’b, jâ†’d, zâ†’s, xâ†’ks. Baybayin was in active use across Luzon and the Visayas before Spanish colonization in 1565.
+      Baybayin is an <em>abugida</em> — each character represents a consonant with an inherent "a" vowel. Small diacritics called <em>kudlit</em> modify the vowel sound. Final consonants are marked with a <em>pamudpod</em> (᜔), the modern virama sign. Spanish and English loan letters are mapped to their closest Baybayin equivalents: c→k, f→p, v→b, j→d, z→s, x→ks. Baybayin was in active use across Luzon and the Visayas before Spanish colonization in 1565.
     </div>
     <div class="trans-accuracy">
       <div class="trans-accuracy-icon">&#9670;</div>
@@ -355,44 +356,44 @@ footer ul li a:hover { color: var(--gold); }
 <section class="section">
   <p class="section-eyebrow reveal">5 Indigenous Scripts</p>
   <h2 class="section-title reveal">Philippine <em>Writing Systems</em></h2>
-  <p class="section-body reveal">Before Spanish colonization, the peoples of the Philippines had their own writing systems â€” all descended from the ancient Brahmic family of scripts that spread from India through Southeast Asia. Three are still actively written today.</p>
+  <p class="section-body reveal">Before Spanish colonization, the peoples of the Philippines had their own writing systems — all descended from the ancient Brahmic family of scripts that spread from India through Southeast Asia. Three are still actively written today.</p>
 
   <div class="script-grid reveal">
 
     <div class="script-card">
-      <div class="script-glyph">áœŠ áœŒ áœŠ</div>
+      <div class="script-glyph">ᜊ ᜌ ᜊ</div>
       <div class="script-name">Baybayin</div>
       <div class="script-origin">Luzon & Visayas</div>
       <div class="script-status-revival">Revival</div>
-      <p class="script-desc">The most widely known pre-colonial script â€” used by Tagalog, Kapampangan, and early Visayan peoples. Declared a national writing system in 2018. A growing revival movement is returning it to public signage, tattoos, and everyday use.</p>
+      <p class="script-desc">The most widely known pre-colonial script — used by Tagalog, Kapampangan, and early Visayan peoples. Declared a national writing system in 2018. A growing revival movement is returning it to public signage, tattoos, and everyday use.</p>
     </div>
 
     <div class="script-card">
-      <div class="script-glyph">áŠ á“ á‘</div>
+      <div class="script-glyph">ᜠ ᜣ ᜪ</div>
       <div class="script-name">Hanunuo</div>
-      <div class="script-origin">Mangyan Â· Mindoro</div>
+      <div class="script-origin">Mangyan · Mindoro</div>
       <div class="script-status-live">Still Written</div>
       <p class="script-desc">One of only three pre-colonial Philippine scripts still actively written today. Hanunuo Mangyan poets use it to inscribe ambahan love poetry on bamboo. UNESCO recognizes it as endangered intangible heritage.</p>
     </div>
 
     <div class="script-card">
-      <div class="script-glyph">á¦ á« á¤</div>
+      <div class="script-glyph">ᝀ ᝃ ᝊ</div>
       <div class="script-name">Buhid</div>
-      <div class="script-origin">Mangyan Â· Mindoro</div>
+      <div class="script-origin">Mangyan · Mindoro</div>
       <div class="script-status-live">Still Written</div>
       <p class="script-desc">Sister script to Hanunuo, used by the Buhid Mangyan of southern Mindoro. Like Hanunuo, it is written on bamboo and used primarily for poetry and personal correspondence between communities.</p>
     </div>
 
     <div class="script-card">
-      <div class="script-glyph">á° á® á¯</div>
+      <div class="script-glyph">ᝠ ᝣ ᝦ</div>
       <div class="script-name">Tagbanwa</div>
       <div class="script-origin">Palawan</div>
       <div class="script-status-live">Still Written</div>
-      <p class="script-desc">The script of the Tagbanwa people of Palawan â€” one of the oldest surviving Philippine scripts. It is used in religious rituals and recorded on bamboo. Fewer than 200 people are estimated to read and write it fluently today.</p>
+      <p class="script-desc">The script of the Tagbanwa people of Palawan — one of the oldest surviving Philippine scripts. It is used in religious rituals and recorded on bamboo. Fewer than 200 people are estimated to read and write it fluently today.</p>
     </div>
 
     <div class="script-card">
-      <div class="script-glyph">Ø¬Ø§ÙˆÙŠ</div>
+      <div class="script-glyph">جاوي</div>
       <div class="script-name">Jawi</div>
       <div class="script-origin">Mindanao & Sulu</div>
       <div class="script-status-live">Still Written</div>
@@ -408,7 +409,7 @@ footer ul li a:hover { color: var(--gold); }
 <section class="section section-dark2">
   <p class="section-eyebrow reveal">One Concept, Many Tongues</p>
   <h2 class="section-title reveal">Comparative <em>Vocabulary</em></h2>
-  <p class="section-body reveal">The same idea â€” expressed in twelve Philippine languages. The differences reveal centuries of separate evolution. The similarities reveal the shared roots that connected these peoples long before they had a common name.</p>
+  <p class="section-body reveal">The same idea — expressed in twelve Philippine languages. The differences reveal centuries of separate evolution. The similarities reveal the shared roots that connected these peoples long before they had a common name.</p>
 
   <div class="reveal table-scroll">
     <table class="vocab-table">
@@ -466,33 +467,33 @@ footer ul li a:hover { color: var(--gold); }
 <section class="section">
   <p class="section-eyebrow reveal">Ethnologue Vitality Index</p>
   <h2 class="section-title reveal">Language <em>Vitality</em></h2>
-  <p class="section-body reveal">Of the 183 Philippine languages, most are still spoken â€” but the picture beneath that number is more urgent. Languages are not dying slowly. Some are losing their last generation of speakers right now.</p>
+  <p class="section-body reveal">Of the 183 Philippine languages, most are still spoken — but the picture beneath that number is more urgent. Languages are not dying slowly. Some are losing their last generation of speakers right now.</p>
 
   <div class="vitality-wrap reveal">
     <div class="vitality-bar-wrap">
-      <div class="vitality-bar-header"><span class="vitality-bar-name">Vigorous â€” spoken across all generations</span><span class="vitality-bar-count">14 languages</span></div>
+      <div class="vitality-bar-header"><span class="vitality-bar-name">Vigorous — spoken across all generations</span><span class="vitality-bar-count">14 languages</span></div>
       <div class="vitality-bar-track"><div class="vitality-bar-fill fill-vigorous" data-width="8"></div></div>
     </div>
     <div class="vitality-bar-wrap">
-      <div class="vitality-bar-header"><span class="vitality-bar-name">Stable â€” used regularly, some decline</span><span class="vitality-bar-count">62 languages</span></div>
+      <div class="vitality-bar-header"><span class="vitality-bar-name">Stable — used regularly, some decline</span><span class="vitality-bar-count">62 languages</span></div>
       <div class="vitality-bar-track"><div class="vitality-bar-fill fill-stable" data-width="34"></div></div>
     </div>
     <div class="vitality-bar-wrap">
-      <div class="vitality-bar-header"><span class="vitality-bar-name">Threatened â€” aging speakers, youth shifting away</span><span class="vitality-bar-count">71 languages</span></div>
+      <div class="vitality-bar-header"><span class="vitality-bar-name">Threatened — aging speakers, youth shifting away</span><span class="vitality-bar-count">71 languages</span></div>
       <div class="vitality-bar-track"><div class="vitality-bar-fill fill-threatened" data-width="39"></div></div>
     </div>
     <div class="vitality-bar-wrap">
-      <div class="vitality-bar-header"><span class="vitality-bar-name">Endangered â€” not being passed to children</span><span class="vitality-bar-count">32 languages</span></div>
+      <div class="vitality-bar-header"><span class="vitality-bar-name">Endangered — not being passed to children</span><span class="vitality-bar-count">32 languages</span></div>
       <div class="vitality-bar-track"><div class="vitality-bar-fill fill-endangered" data-width="18"></div></div>
     </div>
     <div class="vitality-bar-wrap">
-      <div class="vitality-bar-header"><span class="vitality-bar-name">Nearly Extinct â€” fewer than 100 speakers</span><span class="vitality-bar-count">4 languages</span></div>
+      <div class="vitality-bar-header"><span class="vitality-bar-name">Nearly Extinct — fewer than 100 speakers</span><span class="vitality-bar-count">4 languages</span></div>
       <div class="vitality-bar-track"><div class="vitality-bar-fill fill-critical" data-width="2"></div></div>
     </div>
   </div>
 
   <p class="source-note reveal">
-    Source: Ethnologue 26th Edition (2023) Â· SIL International Â· Commission on the Filipino Language
+    Source: Ethnologue 26th Edition (2023) · SIL International · Commission on the Filipino Language
   </p>
 </section>
 
@@ -544,23 +545,23 @@ footer ul li a:hover { color: var(--gold); }
     </ul>
   </div>
 </footer>
-<div class="footer-bottom"><span>&copy; 2026 Expedition PH</span><span>183 Languages Â· 5 Scripts Â· One Archipelago</span></div>
+<div class="footer-bottom"><span>&copy; 2026 Expedition PH</span><span>183 Languages · 5 Scripts · One Archipelago</span></div>
 
 <script>
 /* â”€â”€ LANGUAGE DATA â”€â”€ */
 const languages = [
-  { id:'tagalog',    name:'Tagalog',       region:'luzon',    area:'Central Luzon & Metro Manila', speakers:'28 million', status:'vigorous',   sample:'Mahal ko ang Pilipinas.', translation:'I love the Philippines.', body:'Tagalog is the basis of Filipino, the national language of the Philippines. It is the first language of the people of Manila and surrounding provinces, and the second language for most other Filipinos. Its name comes from "taga-ilog" â€” people of the river.', fact:'The word "boondocks" in American English comes from the Tagalog word "bundok" meaning mountain â€” brought back by American soldiers after the Philippine-American War.' },
-  { id:'ilocano',   name:'Ilocano',       region:'luzon',    area:'Ilocos Region, Northern Luzon', speakers:'9.1 million', status:'vigorous',  sample:'Naimbag a bigat.', translation:'Good morning.', body:'Ilocano is the third most spoken language in the Philippines. The Ilocano diaspora has spread it across Mindanao, Hawaii, and the United States, where large Ilocano communities have maintained the language across multiple generations.', fact:'Ilocano has one of the richest bodies of pre-colonial oral literature in the Philippines â€” including the Biag ni Lam-ang, one of the oldest written epics in Southeast Asia.' },
-  { id:'kapampangan', name:'Kapampangan', region:'luzon',    area:'Pampanga & Tarlac, Central Luzon', speakers:'2.9 million', status:'stable', sample:'Malyari kung mÃ¡mye king Kapampangan?', translation:'Can I learn Kapampangan?', body:'Kapampangan, also called Pampango, is spoken in Pampanga and Tarlac. The Kapampangan people are known for their cuisine â€” considered among the finest in the Philippines â€” and their warrior tradition. The language has its own pre-colonial script called Kulitan, related to Baybayin.', fact:'Kapampangan has its own indigenous script called Kulitan, which is distinct from Baybayin. A revival effort led by local scholars has returned Kulitan to public signage in Pampanga.' },
-  { id:'ivatan',    name:'Ivatan',        region:'luzon',    area:'Batanes Islands, Far North Luzon', speakers:'30,000', status:'threatened', sample:'Mamaos kako.', translation:'I am going home.', body:'Ivatan is spoken on the Batanes islands â€” the northernmost inhabited islands of the Philippines, closer to Taiwan than to Manila. It is linguistically closer to Taiwanese indigenous languages than to other Philippine languages, reflecting ancient migration routes across the Luzon Strait.', fact:'Ivatan is one of the few Philippine languages that distinguishes between inclusive and exclusive "we" â€” whether "we" includes the person being spoken to or not. This grammatical feature reflects a deep cultural awareness of group membership.' },
-  { id:'cebuano',   name:'Cebuano',       region:'visayas',  area:'Cebu, Bohol, Eastern Visayas, Mindanao', speakers:'21 million', status:'vigorous', sample:'Maayo ka ba?', translation:'How are you?', body:'Cebuano â€” also called Bisaya or Binisaya â€” is the most widely spoken language in the Visayas and second only to Tagalog in the Philippines. It is the dominant language of Cebu, Bohol, and much of Mindanao, spread through centuries of Cebuano migration across the southern archipelago.', fact:'Cebuano has more native speakers than Tagalog in terms of first-language use, though Filipino (based on Tagalog) is the national language. This demographic reality is a source of ongoing cultural and political tension in the Philippines.' },
-  { id:'hiligaynon', name:'Hiligaynon',   region:'visayas',  area:'Iloilo, Negros Occidental, Capiz', speakers:'7 million', status:'vigorous', sample:'Kamusta ka na?', translation:'How are you now?', body:'Hiligaynon, also called Ilonggo, is the language of the people of Iloilo and Negros Occidental. It is known for its distinctive soft and flowing quality â€” often described as the most musical of the Philippine languages. Hiligaynon-speaking communities are known for their elaborate fiesta culture and strong sense of regional identity.', fact:'The Iloilo district of Jaro has the highest concentration of heritage architecture in the Visayas â€” a legacy of the Hiligaynon sugar planter class whose wealth built grand ancestral houses in the 19th century.' },
-  { id:'waray',     name:'Waray',         region:'visayas',  area:'Samar & Leyte', speakers:'3.1 million', status:'stable',    sample:'Maupay nga aga.', translation:'Good morning.', body:'Waray is spoken on the islands of Samar and Leyte â€” the islands hardest hit by Typhoon Haiyan in 2013. The Waray people are known throughout the Philippines for their reputation as fierce and fearless â€” a reputation rooted in the bloody history of resistance against Spanish, American, and Japanese occupation on their islands.', fact:'The Waray phrase "Waray waray" â€” meaning "nothing, nothing" â€” has entered Filipino popular culture as an expression of carefree indifference. It reflects a cultural attitude of resilience in the face of hardship that the people of Samar and Leyte are famous for.' },
-  { id:'maranao',   name:'Maranao',       region:'mindanao', area:'Lanao del Sur & Lanao del Norte', speakers:'1.3 million', status:'vigorous', sample:'Masalama ko so Ranaw.', translation:'I love the lake.', body:'Maranao is the language of the People of the Lake â€” spoken around the shores of Lake Lanao, one of the world\'s oldest lakes. It carries the entire Darangen epic â€” 25 cycles of oral narrative transmitted by memory for over 500 years â€” as well as the terminology for the okir art tradition and kulintang music.', fact:'The Maranao language has no word for "forest" as a wild or fearful place â€” because the Maranao relationship with the Lanao landscape is one of intimacy and belonging, not conquest. This linguistic gap reveals a fundamentally different ecological worldview from lowland Philippine languages.' },
-  { id:'tausug',    name:'Tausug',        region:'mindanao', area:'Sulu Archipelago', speakers:'900,000', status:'vigorous',  sample:'Marayaw in adlaw niya.', translation:'His/her day is good.', body:'Tausug â€” "People of the Current" â€” is the dominant language of the Sulu Archipelago and the language of the Sulu Sultanate, the oldest continuously existing sultanate in Southeast Asia. Tausug is also spoken in Sabah, Malaysia and parts of Indonesia, reflecting the maritime reach of Sulu political and trading networks.', fact:'The Sulu Sultanate, whose language is Tausug, has existed continuously since 1405 â€” making it older than many European nation-states. The current Sultan is the 34th in an unbroken line of succession.' },
-  { id:'arta',      name:'Arta',          region:'endangered', area:'Quirino Province, Luzon', speakers:'~11 speakers', status:'critical', sample:'(No documented sample)', translation:'', body:'Arta is the most endangered language in the Philippines â€” possibly the most endangered language in Asia. Spoken only by members of a single extended family in Quirino Province, Luzon, Arta has approximately 11 fluent speakers remaining, all elderly. No children are learning the language. Linguists estimate it will be extinct within a generation.', fact:'Arta is a linguistic isolate â€” it does not fit neatly into any of the Philippine language subgroups. Its grammar and vocabulary suggest it may be a remnant of a much older population that inhabited Luzon before the Austronesian migrations. When it disappears, this window into Philippine prehistory will close permanently.' },
-  { id:'batak',     name:'Batak',         region:'endangered', area:'Palawan Island', speakers:'~300 speakers', status:'critical', sample:'Mapia lem.', translation:'Good morning.', body:'Batak is the language of the Batak people â€” a forest-dwelling hunter-gatherer community in the interior mountains of northern Palawan. With fewer than 300 speakers and no younger generation learning the language, Batak is classified as critically endangered. The language encodes detailed knowledge of the Palawan forest ecosystem that exists nowhere else.', fact:'The Batak people practice a form of forest management called "talon" â€” a system of resting forest patches in rotation to allow regeneration. This ecological knowledge, encoded in Batak vocabulary and oral tradition, is being studied by conservation biologists as a model for sustainable forest management.' },
-  { id:'yakan',     name:'Yakan',         region:'mindanao', area:'Basilan Island', speakers:'120,000', status:'threatened', sample:'Mbal nu?', translation:'Where are you going?', body:'Yakan is spoken on Basilan Island off the coast of Zamboanga City. The Yakan are known for their extraordinary geometric weaving tradition â€” the pis siyabit headcloth with its kaleidoscopic patterns is among the most technically complex woven textiles in Southeast Asia. The language is losing ground to Tausug and Chavacano among younger generations.', fact:'Yakan weavers use a counting system embedded in the weaving process itself â€” the number of thread crossings determines the pattern. This makes Yakan weaving a form of mathematical notation, encoding complex geometric information in textile form.' },
+  { id:'tagalog',    name:'Tagalog',       region:'luzon',    area:'Central Luzon & Metro Manila', speakers:'28 million', status:'vigorous',   sample:'Mahal ko ang Pilipinas.', translation:'I love the Philippines.', body:'Tagalog is the basis of Filipino, the national language of the Philippines. It is the first language of the people of Manila and surrounding provinces, and the second language for most other Filipinos. Its name comes from "taga-ilog" — people of the river.', fact:'The word "boondocks" in American English comes from the Tagalog word "bundok" meaning mountain — brought back by American soldiers after the Philippine-American War.' },
+  { id:'ilocano',   name:'Ilocano',       region:'luzon',    area:'Ilocos Region, Northern Luzon', speakers:'9.1 million', status:'vigorous',  sample:'Naimbag a bigat.', translation:'Good morning.', body:'Ilocano is the third most spoken language in the Philippines. The Ilocano diaspora has spread it across Mindanao, Hawaii, and the United States, where large Ilocano communities have maintained the language across multiple generations.', fact:'Ilocano has one of the richest bodies of pre-colonial oral literature in the Philippines — including the Biag ni Lam-ang, one of the oldest written epics in Southeast Asia.' },
+  { id:'kapampangan', name:'Kapampangan', region:'luzon',    area:'Pampanga & Tarlac, Central Luzon', speakers:'2.9 million', status:'stable', sample:'Malyari kung mámye king Kapampangan?', translation:'Can I learn Kapampangan?', body:'Kapampangan, also called Pampango, is spoken in Pampanga and Tarlac. The Kapampangan people are known for their cuisine — considered among the finest in the Philippines — and their warrior tradition. The language has its own pre-colonial script called Kulitan, related to Baybayin.', fact:'Kapampangan has its own indigenous script called Kulitan, which is distinct from Baybayin. A revival effort led by local scholars has returned Kulitan to public signage in Pampanga.' },
+  { id:'ivatan',    name:'Ivatan',        region:'luzon',    area:'Batanes Islands, Far North Luzon', speakers:'30,000', status:'threatened', sample:'Mamaos kako.', translation:'I am going home.', body:'Ivatan is spoken on the Batanes islands — the northernmost inhabited islands of the Philippines, closer to Taiwan than to Manila. It is linguistically closer to Taiwanese indigenous languages than to other Philippine languages, reflecting ancient migration routes across the Luzon Strait.', fact:'Ivatan is one of the few Philippine languages that distinguishes between inclusive and exclusive "we" — whether "we" includes the person being spoken to or not. This grammatical feature reflects a deep cultural awareness of group membership.' },
+  { id:'cebuano',   name:'Cebuano',       region:'visayas',  area:'Cebu, Bohol, Eastern Visayas, Mindanao', speakers:'21 million', status:'vigorous', sample:'Maayo ka ba?', translation:'How are you?', body:'Cebuano — also called Bisaya or Binisaya — is the most widely spoken language in the Visayas and second only to Tagalog in the Philippines. It is the dominant language of Cebu, Bohol, and much of Mindanao, spread through centuries of Cebuano migration across the southern archipelago.', fact:'Cebuano has more native speakers than Tagalog in terms of first-language use, though Filipino (based on Tagalog) is the national language. This demographic reality is a source of ongoing cultural and political tension in the Philippines.' },
+  { id:'hiligaynon', name:'Hiligaynon',   region:'visayas',  area:'Iloilo, Negros Occidental, Capiz', speakers:'7 million', status:'vigorous', sample:'Kamusta ka na?', translation:'How are you now?', body:'Hiligaynon, also called Ilonggo, is the language of the people of Iloilo and Negros Occidental. It is known for its distinctive soft and flowing quality — often described as the most musical of the Philippine languages. Hiligaynon-speaking communities are known for their elaborate fiesta culture and strong sense of regional identity.', fact:'The Iloilo district of Jaro has the highest concentration of heritage architecture in the Visayas — a legacy of the Hiligaynon sugar planter class whose wealth built grand ancestral houses in the 19th century.' },
+  { id:'waray',     name:'Waray',         region:'visayas',  area:'Samar & Leyte', speakers:'3.1 million', status:'stable',    sample:'Maupay nga aga.', translation:'Good morning.', body:'Waray is spoken on the islands of Samar and Leyte — the islands hardest hit by Typhoon Haiyan in 2013. The Waray people are known throughout the Philippines for their reputation as fierce and fearless — a reputation rooted in the bloody history of resistance against Spanish, American, and Japanese occupation on their islands.', fact:'The Waray phrase "Waray waray" — meaning "nothing, nothing" — has entered Filipino popular culture as an expression of carefree indifference. It reflects a cultural attitude of resilience in the face of hardship that the people of Samar and Leyte are famous for.' },
+  { id:'maranao',   name:'Maranao',       region:'mindanao', area:'Lanao del Sur & Lanao del Norte', speakers:'1.3 million', status:'vigorous', sample:'Masalama ko so Ranaw.', translation:'I love the lake.', body:'Maranao is the language of the People of the Lake — spoken around the shores of Lake Lanao, one of the world\'s oldest lakes. It carries the entire Darangen epic — 25 cycles of oral narrative transmitted by memory for over 500 years — as well as the terminology for the okir art tradition and kulintang music.', fact:'The Maranao language has no word for "forest" as a wild or fearful place — because the Maranao relationship with the Lanao landscape is one of intimacy and belonging, not conquest. This linguistic gap reveals a fundamentally different ecological worldview from lowland Philippine languages.' },
+  { id:'tausug',    name:'Tausug',        region:'mindanao', area:'Sulu Archipelago', speakers:'900,000', status:'vigorous',  sample:'Marayaw in adlaw niya.', translation:'His/her day is good.', body:'Tausug — "People of the Current" — is the dominant language of the Sulu Archipelago and the language of the Sulu Sultanate, the oldest continuously existing sultanate in Southeast Asia. Tausug is also spoken in Sabah, Malaysia and parts of Indonesia, reflecting the maritime reach of Sulu political and trading networks.', fact:'The Sulu Sultanate, whose language is Tausug, has existed continuously since 1405 — making it older than many European nation-states. The current Sultan is the 34th in an unbroken line of succession.' },
+  { id:'arta',      name:'Arta',          region:'endangered', area:'Quirino Province, Luzon', speakers:'~11 speakers', status:'critical', sample:'(No documented sample)', translation:'', body:'Arta is the most endangered language in the Philippines — possibly the most endangered language in Asia. Spoken only by members of a single extended family in Quirino Province, Luzon, Arta has approximately 11 fluent speakers remaining, all elderly. No children are learning the language. Linguists estimate it will be extinct within a generation.', fact:'Arta is a linguistic isolate — it does not fit neatly into any of the Philippine language subgroups. Its grammar and vocabulary suggest it may be a remnant of a much older population that inhabited Luzon before the Austronesian migrations. When it disappears, this window into Philippine prehistory will close permanently.' },
+  { id:'batak',     name:'Batak',         region:'endangered', area:'Palawan Island', speakers:'~300 speakers', status:'critical', sample:'Mapia lem.', translation:'Good morning.', body:'Batak is the language of the Batak people — a forest-dwelling hunter-gatherer community in the interior mountains of northern Palawan. With fewer than 300 speakers and no younger generation learning the language, Batak is classified as critically endangered. The language encodes detailed knowledge of the Palawan forest ecosystem that exists nowhere else.', fact:'The Batak people practice a form of forest management called "talon" — a system of resting forest patches in rotation to allow regeneration. This ecological knowledge, encoded in Batak vocabulary and oral tradition, is being studied by conservation biologists as a model for sustainable forest management.' },
+  { id:'yakan',     name:'Yakan',         region:'mindanao', area:'Basilan Island', speakers:'120,000', status:'threatened', sample:'Mbal nu?', translation:'Where are you going?', body:'Yakan is spoken on Basilan Island off the coast of Zamboanga City. The Yakan are known for their extraordinary geometric weaving tradition — the pis siyabit headcloth with its kaleidoscopic patterns is among the most technically complex woven textiles in Southeast Asia. The language is losing ground to Tausug and Chavacano among younger generations.', fact:'Yakan weavers use a counting system embedded in the weaving process itself — the number of thread crossings determines the pattern. This makes Yakan weaving a form of mathematical notation, encoding complex geometric information in textile form.' },
 ];
 
 function renderLang(filter) {
@@ -597,7 +598,7 @@ renderLang('all');
 /* â”€â”€ MODAL â”€â”€ */
 function openModal(l) {
   const statusLabel = { vigorous:'Vigorous', stable:'Stable', threatened:'Threatened', endangered:'Endangered', critical:'Critically Endangered' }[l.status];
-  document.getElementById('modal-tag').textContent = `${l.area} Â· ${statusLabel}`;
+  document.getElementById('modal-tag').textContent = `${l.area} · ${statusLabel}`;
   document.getElementById('modal-title').textContent = l.name;
   document.getElementById('modal-sub').textContent = l.speakers + ' speakers';
   document.getElementById('modal-body').textContent = l.body;
@@ -614,28 +615,28 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal()
 /* â”€â”€ BAYBAYIN TRANSLITERATOR â”€â”€ */
 const conMap = {
   // Native Baybayin consonants
-  'ng':'áœ…',
-  'k':'áœƒ', 'g':'áœ„',
-  't':'áœ†', 'd':'áœ‡', 'n':'áœˆ',
-  'p':'áœ‰', 'b':'áœŠ', 'm':'áœ‹',
-  'y':'áœŒ', 'r':'áœ', 'l':'áœŽ',
-  'w':'áœ', 's':'áœ', 'h':'áœ‘',
+  'ng':'ᜅ',
+  'k':'ᜃ', 'g':'ᜄ',
+  't':'ᜆ', 'd':'ᜇ', 'n':'ᜈ',
+  'p':'ᜉ', 'b':'ᜊ', 'm':'ᜋ',
+  'y':'ᜌ', 'r':'ᜍ', 'l':'ᜎ',
+  'w':'ᜏ', 's':'ᜐ', 'h':'ᜑ',
   // Spanish/English loan letter mappings
-  'c':'áœƒ',  // â†’ k sound
-  'f':'áœ‰',  // â†’ p (closest Baybayin equivalent)
-  'j':'áœ‡',  // â†’ d sound
-  'q':'áœƒ',  // â†’ k sound
-  'v':'áœŠ',  // â†’ b (closest Baybayin equivalent)
-  'z':'áœ',  // â†’ s sound
+  'c':'ᜃ',  // → k sound
+  'f':'ᜉ',  // → p (closest Baybayin equivalent)
+  'j':'ᜇ',  // → d sound
+  'q':'ᜃ',  // → k sound
+  'v':'ᜊ',  // → b (closest Baybayin equivalent)
+  'z':'ᜐ',  // → s sound
 };
-const vowelChar = { 'a':'áœ€','e':'áœ','i':'áœ','o':'áœ‚','u':'áœ‚' };
-const kudlit    = { 'a':'', 'e':'áœ’','i':'áœ’','o':'áœ“','u':'áœ“' };
-const PAMUDPOD  = 'áœ”'; // virama â€” cancels inherent vowel on final consonants
+const vowelChar = { 'a':'ᜀ','e':'ᜁ','i':'ᜁ','o':'ᜂ','u':'ᜂ' };
+const kudlit    = { 'a':'', 'e':'ᜒ','i':'ᜒ','o':'ᜓ','u':'ᜓ' };
+const PAMUDPOD  = '᜔'; // virama -- cancels inherent vowel on final consonants
 const isV = c => 'aeiou'.includes(c);
 const isC = c => conMap[c] !== undefined;
 
 function toBaybayin(text) {
-  // Expand 'x' â†’ 'ks' before processing, then strip non-alpha
+  // Expand 'x' → 'ks' before processing, then strip non-alpha
   const s = text.toLowerCase()
     .replace(/x/g, 'ks')
     .replace(/[^a-z\s]/g, '');
