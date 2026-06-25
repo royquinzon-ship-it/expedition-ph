@@ -475,16 +475,6 @@
 
 <script src="museum.js"></script>
 <script>
-const hdr = document.getElementById('header');
-window.addEventListener('scroll', () => hdr.classList.toggle('scrolled', window.scrollY > 60), { passive: true });
-
-const navToggle = document.getElementById('nav-toggle');
-const navEl = document.querySelector('nav');
-navToggle.addEventListener('click', () => {
-  const open = navEl.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', open);
-});
-
 // Banner slideshow
 const slides = document.querySelectorAll('.hub-slide');
 let current = 0;
