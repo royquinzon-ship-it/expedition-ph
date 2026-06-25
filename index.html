@@ -19,31 +19,61 @@
 }
 .nav-soon { opacity: 0.3; pointer-events: none; }
 
-/* ── BANNER IMAGE (not full screen) ── */
+/* ── BANNER SLIDESHOW ── */
 .hub-banner {
   width: 100%;
   height: 60vh;
   min-height: 320px;
   overflow: hidden;
   position: relative;
-  margin-top: 57px; /* header height */
+  margin-top: 57px;
+  background: #080808;
 }
-.hub-banner img {
+.hub-slide {
+  position: absolute; inset: 0;
+  opacity: 0;
+  transition: opacity 1.4s ease-in-out;
+}
+.hub-slide.active { opacity: 1; }
+
+.hub-slide img {
   width: 100%; height: 100%;
   object-fit: cover;
   object-position: center 30%;
   display: block;
 }
+
+/* Ken Burns — 4 directional variations */
+.hub-slide:nth-child(1) img { animation: kb-center 10s ease-in-out infinite alternate; }
+.hub-slide:nth-child(2) img { animation: kb-topleft 10s ease-in-out infinite alternate; }
+.hub-slide:nth-child(3) img { animation: kb-topright 10s ease-in-out infinite alternate; }
+.hub-slide:nth-child(4) img { animation: kb-bottomleft 10s ease-in-out infinite alternate; }
+
+@keyframes kb-center    { from { transform: scale(1.0) translate(0,0); }      to { transform: scale(1.07) translate(0,0); } }
+@keyframes kb-topleft   { from { transform: scale(1.0) translate(0,0); }      to { transform: scale(1.07) translate(1%,1%); } }
+@keyframes kb-topright  { from { transform: scale(1.0) translate(0,0); }      to { transform: scale(1.07) translate(-1%,1%); } }
+@keyframes kb-bottomleft{ from { transform: scale(1.0) translate(0,0); }      to { transform: scale(1.07) translate(1%,-1%); } }
+
 .hub-banner-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(to bottom, rgba(5,5,5,0.1) 0%, rgba(5,5,5,0.45) 100%);
+  background: linear-gradient(to bottom, rgba(5,5,5,0.1) 0%, rgba(5,5,5,0.5) 100%);
+  z-index: 1;
 }
 
 /* ── HEADLINE BELOW BANNER ── */
 .hub-headline {
   background: var(--dark2);
-  padding: 2.5rem 3rem 3rem;
+  padding: 3rem 3rem 3.5rem;
   border-bottom: 1px solid var(--gold-border);
+}
+.hub-headline-eyebrow {
+  font-size: 0.62rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.8;
+  margin-bottom: 1rem;
+  display: block;
 }
 .hub-headline h1 {
   font-family: 'Merriweather', serif;
@@ -55,6 +85,27 @@
   margin-bottom: 1.5rem;
 }
 .hub-headline h1 em { font-style: italic; color: var(--gold); }
+.hub-headline-verse {
+  font-family: 'Merriweather', serif;
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  font-weight: 300;
+  font-style: italic;
+  color: #bbb;
+  line-height: 2;
+  max-width: 620px;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--gold);
+}
+.hub-headline-verse em { font-style: normal; color: var(--gold); }
+.hub-headline-sub {
+  font-size: 0.93rem;
+  color: #999;
+  line-height: 1.95;
+  max-width: 680px;
+  margin-bottom: 2rem;
+}
+.hub-headline-sub strong { color: #ccc; font-weight: 500; }
 
 /* ── FEATURED SECTION ── */
 .hub-featured {
@@ -270,16 +321,42 @@
 
 <main>
 
-<!-- BANNER IMAGE -->
+<!-- BANNER SLIDESHOW -->
 <div class="hub-banner">
-  <img src="image/Pinas.jpg" alt="Philippine archipelago">
+  <div class="hub-slide active"><img src="image/Pinas.jpg" alt="Philippine archipelago"></div>
+  <div class="hub-slide"><img src="image/Agila.jpg" alt="Philippine Eagle"></div>
+  <div class="hub-slide"><img src="image/Tubataha reef.jpg" alt="Tubataha Reef"></div>
+  <div class="hub-slide"><img src="image/Sierra Madre.jpg" alt="Sierra Madre forest"></div>
   <div class="hub-banner-overlay"></div>
 </div>
 
 <!-- HEADLINE + CTA BELOW BANNER -->
 <div class="hub-headline">
+  <span class="hub-headline-eyebrow">For Every Filipino &middot; Wherever You Are</span>
   <h1>Seven Thousand Islands.<br><em>One Expedition.</em></h1>
-  <a href="natural-history.html" class="btn-gold">Explore Natural History</a>
+
+  <p class="hub-headline-verse">
+    The islands did not wait to be discovered.<br>
+    They rose from the Pacific, one by one &mdash;<br>
+    born of fire, shaped by tide,<br>
+    ancient beyond naming, <em>alive beyond counting.</em><br>
+    They have always been here.<br>
+    And so have you.
+  </p>
+
+  <p class="hub-headline-sub">
+    You come from one of the most extraordinary places on Earth.
+    Seven thousand islands at the edge of the Pacific. <strong>52,177 known species</strong> &mdash;
+    eagles, tarsiers, whale sharks, forests that outlasted the ice age,
+    reefs so alive they defy counting. Traditions and languages spoken by no one else on the planet.
+    A history that stretches back further than most of the world knows.<br><br>
+    This is not just a place. <strong>This is who you are.</strong><br><br>
+    Expedition PH is an invitation &mdash; to every Filipino, whether you were born on these islands
+    or carry them with you across the world &mdash; to go deeper into the land, the life,
+    and the people that made you.
+  </p>
+
+  <a href="natural-history.html" class="btn-gold">Begin the Expedition</a>
 </div>
 
 <!-- FEATURED -->
@@ -407,6 +484,15 @@ navToggle.addEventListener('click', () => {
   const open = navEl.classList.toggle('open');
   navToggle.setAttribute('aria-expanded', open);
 });
+
+// Banner slideshow
+const slides = document.querySelectorAll('.hub-slide');
+let current = 0;
+setInterval(() => {
+  slides[current].classList.remove('active');
+  current = (current + 1) % slides.length;
+  slides[current].classList.add('active');
+}, 5000);
 </script>
 </body>
 </html>
