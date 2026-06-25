@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta id="meta-desc" name="description" content="">
+<link rel="icon" href="image/Logo.jpg"><link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title id="page-title">Province · Expedition PH</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="museum.css">
+<style>
+
+/* ── HERO ── */
+.art-hero {
+  width: 100%;
+  height: 52vh;
+  min-height: 280px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 57px;
+}
+.art-hero img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+}
+.art-hero { cursor: zoom-in; }
+
+/* ── IMAGE LIGHTBOX ── */
+#img-lightbox {
+  display: none;
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,0.92);
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+#img-lightbox.open { display: flex; }
+#img-lightbox img {
+  max-width: 94vw;
+  max-height: 92vh;
+  object-fit: contain;
+  display: block;
+  box-shadow: 0 8px 60px rgba(0,0,0,0.7);
+}
+#img-lightbox-close {
+  position: absolute;
+  top: 1.2rem; right: 1.5rem;
+  font-size: 1.6rem;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s;
+  background: none; border: none;
+}
+#img-lightbox-close:hover { color: #fff; }
+#img-lightbox-caption {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%; transform: translateX(-50%);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.45);
+  text-align: center;
+  pointer-events: none;
+}
+.art-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(5,5,5,0.1) 0%, rgba(5,5,5,0.88) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 2.5rem 3.5rem;
+}
+.art-hero-content {}
+.art-hero-eyebrow {
+  font-size: 0.6rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+.art-hero-title {
+  font-family: 'Merriweather', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.art-hero-sub {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(201,168,76,0.85);
+}
+
+/* ── ARTICLE WRAPPER ── */
+.art-wrapper {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  align-items: start;
+}
+
+/* ── TOC SIDEBAR ── */
+.art-toc {
+  position: sticky;
+  top: 80px;
+  padding: 2.5rem 1.5rem 2.5rem 0;
+  border-right: 1px solid var(--gold-border);
+  min-height: 200px;
+}
+.art-toc-heading {
+  font-size: 0.55rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+  margin-bottom: 1rem;
+  display: block;
+}
+.art-toc nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.art-toc nav a {
+  font-size: 0.8rem;
+  color: var(--dim);
+  text-decoration: none;
+  padding: 0.5rem 0.6rem 0.5rem 0;
+  border-left: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  line-height: 1.4;
+}
+.art-toc nav a:hover,
+.art-toc nav a.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+.art-toc-divider {
+  height: 1px;
+  background: var(--gold-border);
+  margin: 1.5rem 0;
+}
+.art-toc-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.art-toc-meta-item {}
+.art-toc-meta-label {
+  font-size: 0.52rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.65;
+  margin-bottom: 0.2rem;
+}
+.art-toc-meta-value {
+  font-size: 0.78rem;
+  color: var(--text);
+  line-height: 1.45;
+}
+.island-chip {
+  display: inline-block;
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid;
+  margin-top: 0.2rem;
+}
+.island-chip.luzon    { color: var(--gold); border-color: rgba(201,168,76,0.5); }
+.island-chip.visayas  { color: #4cb9c4;     border-color: rgba(76,185,196,0.5); }
+.island-chip.mindanao { color: #c9784c;     border-color: rgba(201,120,76,0.5); }
+
+/* ── MAIN ARTICLE ── */
+.art-main {
+  padding: 3rem 0 3rem 3.5rem;
+}
+
+/* Section spacing */
+.art-section {
+  margin-bottom: 3.5rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  scroll-margin-top: 100px;
+}
+.art-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.art-section-label {
+  font-size: 0.56rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+  margin-bottom: 0.65rem;
+  display: block;
+}
+.art-section h2 {
+  font-family: 'Merriweather', serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+}
+.art-section p {
+  font-size: 0.97rem;
+  color: var(--text);
+  line-height: 2;
+  max-width: 720px;
+}
+
+/* At a Glance stats */
+.art-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--gold-border);
+  border: 1px solid var(--gold-border);
+  margin-top: 0.5rem;
+  max-width: 620px;
+}
+.art-stat {
+  background: var(--dark2);
+  padding: 1.2rem 1.4rem;
+}
+.art-stat-num {
+  font-family: 'Merriweather', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.art-stat-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+.art-stat-sub {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.35);
+  margin-top: 0.15rem;
+}
+
+/* Did You Know box */
+.art-fact-box {
+  border-left: 3px solid var(--gold);
+  background: rgba(201,168,76,0.05);
+  padding: 1.6rem 2rem;
+  max-width: 680px;
+}
+.art-fact-label {
+  font-size: 0.56rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+  display: block;
+}
+.art-fact-text {
+  font-family: 'Merriweather', serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #ccc;
+  line-height: 1.9;
+}
+
+/* Back link */
+.art-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dim);
+  text-decoration: none;
+  margin-bottom: 2.5rem;
+  transition: color 0.2s;
+}
+.art-back:hover { color: var(--gold); }
+
+/* ── RELATED PROVINCES ── */
+.art-related {
+  background: var(--dark2);
+  border-top: 1px solid var(--gold-border);
+  padding: 4rem 3.5rem;
+}
+.art-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 2rem;
+}
+.art-related-grid a.card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.art-related-grid a.card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1000px) {
+  .art-wrapper { grid-template-columns: 180px 1fr; }
+  .art-main { padding-left: 2.5rem; }
+}
+@media (max-width: 768px) {
+  .art-hero { margin-top: 53px; height: 42vh; }
+  .art-hero-overlay { padding: 1.5rem; }
+  .art-wrapper { grid-template-columns: 1fr; padding: 0; }
+  .art-toc {
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid var(--gold-border);
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    align-items: center;
+  }
+  .art-toc-heading { margin-bottom: 0; }
+  .art-toc nav { flex-direction: row; flex-wrap: wrap; gap: 0; }
+  .art-toc nav a { border-left: none; border-bottom: 2px solid transparent; padding: 0.3rem 0.5rem; font-size: 0.75rem; }
+  .art-toc nav a:hover, .art-toc nav a.active { border-left-color: transparent; border-bottom-color: var(--gold); }
+  .art-toc-divider { display: none; }
+  .art-toc-meta { display: none; }
+  .art-main { padding: 2rem 1.5rem; }
+  .art-stats-grid { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
+  .art-related { padding: 3rem 1.5rem; }
+  .art-related-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <a href="index.html" class="header-logo"><img src="image/Logo.jpg" class="header-logo-icon" alt="">Expedition PH <span class="header-sub">Natural History</span></a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="regions.html" class="active">Island Groups</a>
+    <a href="flora.html">Flora</a>
+    <a href="fauna.html">Fauna</a>
+    <a href="geology.html">Geology</a>
+    <a href="places.html">Places</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="history.html">History</a>
+    <a href="exhibits.html">Exhibits</a>
+  </nav>
+</header>
+
+<div class="subpage-breadcrumb">
+  <a href="index.html">Home</a>
+  <span class="breadcrumb-sep">›</span>
+  <a href="regions.html">Island Groups</a>
+  <span class="breadcrumb-sep">›</span>
+  <span id="d-breadcrumb-region"></span>
+  <span class="breadcrumb-sep">›</span>
+  <span id="d-breadcrumb-name"></span>
+</div>
+
+<!-- HERO -->
+<div class="art-hero" id="d-hero">
+  <img id="d-img" src="" alt="">
+  <div class="art-hero-overlay">
+    <div class="art-hero-content">
+      <p class="art-hero-eyebrow" id="d-eyebrow"></p>
+      <h1 class="art-hero-title" id="d-name"></h1>
+      <p class="art-hero-sub" id="d-subtitle"></p>
+    </div>
+  </div>
+</div>
+
+<!-- IMAGE LIGHTBOX -->
+<div id="img-lightbox" role="dialog" aria-modal="true" aria-label="Full image view">
+  <button id="img-lightbox-close" aria-label="Close">&times;</button>
+  <img id="img-lightbox-img" src="" alt="">
+  <div id="img-lightbox-caption"></div>
+</div>
+
+<!-- ARTICLE LAYOUT -->
+<div class="art-wrapper">
+
+  <!-- LEFT TOC -->
+  <aside class="art-toc" id="d-toc">
+    <span class="art-toc-heading">Contents</span>
+    <nav id="toc-nav">
+      <a href="#overview">Overview</a>
+      <a href="#at-a-glance">At a Glance</a>
+      <a href="#did-you-know">Did You Know</a>
+      <a href="#more-provinces">More Provinces</a>
+    </nav>
+    <div class="art-toc-divider"></div>
+    <div class="art-toc-meta" id="toc-meta"></div>
+  </aside>
+
+  <!-- MAIN ARTICLE -->
+  <article class="art-main">
+    <a href="regions.html" class="art-back">← Back to Island Groups</a>
+
+    <!-- Overview -->
+    <section class="art-section" id="overview">
+      <span class="art-section-label">Province Overview</span>
+      <h2 id="overview-heading"></h2>
+      <p id="d-desc"></p>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="art-section" id="at-a-glance">
+      <span class="art-section-label">At a Glance</span>
+      <h2>Key Facts &amp; Figures</h2>
+      <div class="art-stats-grid" id="d-stats-grid"></div>
+    </section>
+
+    <!-- Did You Know -->
+    <section class="art-section" id="did-you-know">
+      <span class="art-section-label">Did You Know</span>
+      <h2 id="fact-heading"></h2>
+      <div class="art-fact-box">
+        <span class="art-fact-label">◆ Natural History Fact</span>
+        <p class="art-fact-text" id="d-fact"></p>
+      </div>
+    </section>
+
+  </article>
+</div>
+
+<!-- RELATED PROVINCES -->
+<section class="art-related" id="more-provinces">
+  <p class="section-eyebrow">Same Region</p>
+  <h2 class="section-title">More Provinces in <em id="d-related-region"></em></h2>
+  <div class="art-related-grid" id="d-related-grid"></div>
+</section>
+
+<footer>
+  <div><div class="footer-brand-name">Expedition PH</div><p class="footer-tagline">A digital exploration of the Philippine archipelago's natural heritage.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="regions.html">Island Groups</a></li><li><a href="flora.html">Flora</a></li><li><a href="fauna.html">Fauna</a></li><li><a href="geology.html">Geology</a></li></ul></div>
+  <div><h4>Fauna</h4><ul><li><a href="birds.html">Birds</a></li><li><a href="mammals.html">Mammals</a></li><li><a href="reptiles.html">Reptiles</a></li><li><a href="marine.html">Marine</a></li><li><a href="insects.html">Insects</a></li><li><a href="freshwater.html">Freshwater</a></li><li><a href="extinct.html">Lost Species</a></li></ul></div>
+  <div><h4>Discover</h4><ul><li><a href="places.html">Places</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="species.html">Species Index</a></li><li><a href="protected-areas.html">Protected Areas</a></li></ul></div>
+  <div><h4>About</h4><ul><li><a href="exhibits.html">Exhibits</a></li><li><a href="visit.html">About This Project</a></li></ul></div>
+</footer>
+<div class="footer-bottom"><span>&copy; 2026 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
+
+<button type="button" class="audio-btn" id="audio-btn" onclick="toggleSound()">&#9654; Ambient Sound</button>
+<audio id="sound" loop><source src="image/Expedition PH ost.mp3" type="audio/mpeg"></audio>
+
+<script src="museum.js"></script>
+<script src="ph-provinces.js"></script>
+<script src="ph-province-admin.js"></script>
+<script src="ph-province-pop.js"></script>
+<script>
+(function () {
+
+  var REGION_NAMES = {
+    region1:  'Ilocos Region',
+    region2:  'Cagayan Valley',
+    car:      'Cordillera Administrative Region',
+    region3:  'Central Luzon',
+    region4a: 'CALABARZON',
+    region4b: 'MIMAROPA',
+    region5:  'Bicol Region',
+    region6:  'Western Visayas',
+    region7:  'Central Visayas',
+    region8:  'Eastern Visayas',
+    region9:  'Zamboanga Peninsula',
+    region10: 'Northern Mindanao',
+    region11: 'Davao Region',
+    region12: 'SOCCSKSARGEN',
+    region13: 'Caraga',
+    ncr:      'National Capital Region',
+    barmm:    'Bangsamoro Autonomous Region'
+  };
+
+  var REGION_ROMAN = {
+    region1:'I', region2:'II', car:'CAR', region3:'III',
+    region4a:'IV-A', region4b:'IV-B', region5:'V',
+    region6:'VI', region7:'VII', region8:'VIII',
+    region9:'IX', region10:'X', region11:'XI',
+    region12:'XII', region13:'XIII', ncr:'NCR', barmm:'BARMM'
+  };
+
+  var ISLAND_LABELS = { luzon: 'Luzon', visayas: 'Visayas', mindanao: 'Mindanao' };
+
+  var params = new URLSearchParams(window.location.search);
+  var id = params.get('id');
+  var province = null;
+
+  if (id && PH_PROVINCES) {
+    for (var i = 0; i < PH_PROVINCES.length; i++) {
+      if (PH_PROVINCES[i].img_seed === id) { province = PH_PROVINCES[i]; break; }
+    }
+  }
+
+  if (!province) {
+    document.getElementById('d-name').textContent = 'Province Not Found';
+    document.getElementById('art-wrapper').style.display = 'none';
+    document.getElementById('more-provinces').style.display = 'none';
+    return;
+  }
+
+  var regionName   = REGION_NAMES[province.region_key]  || province.region_key;
+  var regionRoman  = REGION_ROMAN[province.region_key]  || '';
+  var islandLabel  = ISLAND_LABELS[province.island_group] || province.island_group;
+  var regionLabel  = regionRoman ? 'Region ' + regionRoman + ' — ' + regionName : regionName;
+
+  // Page meta
+  document.title = province.name + ' · ' + regionName + ' · Expedition PH';
+  document.getElementById('meta-desc').setAttribute('content', province.desc.substring(0, 160));
+
+  // Breadcrumb
+  document.getElementById('d-breadcrumb-region').textContent = regionName;
+  document.getElementById('d-breadcrumb-name').textContent   = province.name;
+
+  // Hero
+  document.getElementById('d-img').src = province.img;
+  document.getElementById('d-img').alt = province.name;
+  document.getElementById('d-eyebrow').textContent  = regionLabel + ' · ' + islandLabel;
+  document.getElementById('d-name').textContent     = province.name;
+  document.getElementById('d-subtitle').textContent = province.known_for;
+
+  // Article sections
+  document.getElementById('overview-heading').textContent = province.name + ' — Natural Heritage';
+  document.getElementById('d-desc').textContent = province.desc;
+  document.getElementById('fact-heading').textContent = province.known_for;
+  document.getElementById('d-fact').textContent = province.fact;
+
+  // TOC meta
+  var tocMeta = document.getElementById('toc-meta');
+  var metaItems = [
+    { label: 'Capital',       value: province.capital },
+    { label: 'Region',        value: regionLabel },
+    { label: 'Island Group',  value: islandLabel, chip: province.island_group }
+  ];
+  metaItems.forEach(function (m) {
+    var div = document.createElement('div');
+    div.className = 'art-toc-meta-item';
+    var chipHtml = m.chip ? '<br><span class="island-chip ' + m.chip + '">' + m.value + '</span>' : '';
+    div.innerHTML =
+      '<div class="art-toc-meta-label">' + m.label + '</div>' +
+      '<div class="art-toc-meta-value">' + (m.chip ? '' : m.value) + chipHtml + '</div>';
+    tocMeta.appendChild(div);
+  });
+
+  // At a Glance stats
+  var pop   = PH_PROVINCE_POP   && PH_PROVINCE_POP[province.name];
+  var admin = PH_PROVINCE_ADMIN && PH_PROVINCE_ADMIN[province.name];
+  var statsGrid = document.getElementById('d-stats-grid');
+
+  function addStat(num, label, sub) {
+    var div = document.createElement('div');
+    div.className = 'art-stat';
+    div.innerHTML =
+      '<div class="art-stat-num">' + (typeof num === 'number' ? num.toLocaleString() : num) + '</div>' +
+      '<div class="art-stat-label">' + label + '</div>' +
+      (sub ? '<div class="art-stat-sub">' + sub + '</div>' : '');
+    statsGrid.appendChild(div);
+  }
+
+  if (pop)   addStat(pop, 'Population', '2020 Census');
+  if (admin) {
+    addStat(admin.municipalities, 'Municipalities', '');
+    addStat(admin.cities,         'Component Cities', '');
+    addStat(admin.barangays,      'Barangays', '');
+  }
+  addStat(islandLabel, 'Island Group', '');
+  addStat(province.capital, 'Capital', 'City / Municipality');
+
+  // Related provinces — same region, up to 3
+  var related = PH_PROVINCES.filter(function (p) {
+    return p.region_key === province.region_key && p.img_seed !== id;
+  }).slice(0, 3);
+
+  document.getElementById('d-related-region').textContent = regionName;
+
+  var grid = document.getElementById('d-related-grid');
+  if (!related.length) {
+    document.getElementById('more-provinces').style.display = 'none';
+  } else {
+    related.forEach(function (p) {
+      var a = document.createElement('a');
+      a.className = 'card';
+      a.href = 'province-detail.html?id=' + p.img_seed;
+      var snippet = p.desc.length > 110 ? p.desc.substring(0, 110) + '…' : p.desc;
+      a.innerHTML =
+        '<img src="' + p.img + '" alt="' + p.name + '" loading="lazy">' +
+        '<div class="card-body">' +
+          '<div class="card-tag">' + p.known_for + '</div>' +
+          '<div class="card-title">' + p.name + '</div>' +
+          '<p class="card-desc">' + snippet + '</p>' +
+        '</div>';
+      grid.appendChild(a);
+    });
+  }
+
+  // Hero image lightbox
+  var lightbox     = document.getElementById('img-lightbox');
+  var lbImg        = document.getElementById('img-lightbox-img');
+  var lbCaption    = document.getElementById('img-lightbox-caption');
+  var lbClose      = document.getElementById('img-lightbox-close');
+  var heroImg      = document.getElementById('d-img');
+
+  function openLightbox() {
+    lbImg.src        = heroImg.src;
+    lbImg.alt        = heroImg.alt;
+    lbCaption.textContent = province.name + ' — ' + province.known_for;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('d-hero').addEventListener('click', openLightbox);
+  lbClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', closeLightbox);
+  lbImg.addEventListener('click', function (e) { e.stopPropagation(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  // Active TOC highlight on scroll
+  var sections = document.querySelectorAll('.art-section');
+  var tocLinks = document.querySelectorAll('#toc-nav a');
+  function onScroll() {
+    var scrollY = window.scrollY + 120;
+    var current = '';
+    sections.forEach(function (s) {
+      if (s.offsetTop <= scrollY) current = s.id;
+    });
+    tocLinks.forEach(function (a) {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+})();
+</script>
+</body>
+</html>

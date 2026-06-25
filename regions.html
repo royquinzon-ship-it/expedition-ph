@@ -325,6 +325,8 @@
   display: flex; flex-wrap: wrap; gap: 0.5rem;
 }
 .prov-btn {
+  display: inline-block;
+  text-decoration: none;
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.1);
   color: rgba(255,255,255,0.75);
@@ -962,9 +964,9 @@ document.addEventListener('DOMContentLoaded', function(){
       var provs = PH_PROVINCES.filter(function(p){ return p.region_key === reg.key; });
       if (!provs.length) return '';
       var buttons = provs.map(function(p){
-        return '<button type="button" class="prov-btn" onclick="openProvModal(\'' + p.name + '\')">' +
+        return '<a href="province-detail.html?id=' + p.img_seed + '" class="prov-btn">' +
           p.name +
-        '</button>';
+        '</a>';
       }).join('');
       return '<div class="ig-region-block">' +
         '<div class="ig-region-header">' +
