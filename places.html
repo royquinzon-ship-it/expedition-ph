@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Explore the Philippines' most remarkable natural destinations — from Tubbataha Reef to Chocolate Hills and the Palawan Underground River.">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" href="image/Logo.jpg"><link rel="icon" type="image/svg+xml" href="favicon.svg">
 <title>Places · Expedition PH: Natural History</title>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="museum.css">
@@ -12,7 +12,7 @@
 <body>
 
 <header id="header">
-  <a href="index.html" class="header-logo">Expedition PH <span class="header-sub">Natural History</span></a>
+  <a href="index.html" class="header-logo"><img src="image/Logo.jpg" class="header-logo-icon" alt="">Expedition PH <span class="header-sub">Natural History</span></a>
   <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
   <nav>
     <a href="regions.html">Island Groups</a>
@@ -420,12 +420,15 @@
 .modal-threat-box { background: rgba(220,50,50,0.07); border-left: 2px solid #e05555; padding: 0.7rem 0.9rem; margin-top: 0.8rem; }
 .modal-threat-label { font-size: 0.54rem; letter-spacing: 0.18em; text-transform: uppercase; color: #e05555; margin-bottom: 0.3rem; font-weight: 600; }
 .modal-threat-text { font-size: 0.78rem; line-height: 1.7; color: rgba(255,255,255,0.6); margin: 0; }
+.place-fullpage-link { display: inline-block; margin-top: 0.8rem; font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(212,175,55,0.3); padding-bottom: 1px; transition: border-color 0.2s; }
+.place-fullpage-link:hover { border-color: var(--gold); }
 @media(max-width: 700px) {
   .places-search-wrap { max-width: 100%; }
   .featured-nav { gap: 0.8rem; }
   .feat-nav-btn { padding: 0.3rem 0.8rem; font-size: 0.68rem; }
 }
 </style>
+<script src="places-data.js"></script>
 <script src="museum.js"></script>
 <script>
 (function(){
@@ -557,6 +560,29 @@
     dots[featIdx].classList.add('active');
   };
   window.slideFeatured = function(dir) { goFeatured(featIdx + dir); };
+})();
+</script>
+<script>
+(function () {
+  var nameToId = {};
+  Object.keys(PLACES).forEach(function (id) {
+    nameToId[PLACES[id].name.toLowerCase()] = id;
+  });
+  document.querySelectorAll('.filterable').forEach(function (card) {
+    var titleEl = card.querySelector('.card-title');
+    if (!titleEl) return;
+    var placeId = nameToId[titleEl.textContent.trim().toLowerCase()];
+    if (!placeId) return;
+    card.onclick = function () {
+      window.location.href = 'place-detail.html?id=' + placeId;
+    };
+    var link = document.createElement('a');
+    link.href = 'place-detail.html?id=' + placeId;
+    link.className = 'place-fullpage-link';
+    link.textContent = '◆ View Full Page';
+    link.addEventListener('click', function (e) { e.stopPropagation(); });
+    card.querySelector('.card-body').appendChild(link);
+  });
 })();
 </script>
 </body>

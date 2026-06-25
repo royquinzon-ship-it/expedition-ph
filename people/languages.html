@@ -26,7 +26,8 @@ body { font-family: 'Inter', sans-serif; background: var(--dark); color: var(--t
 /* HEADER */
 header { position: fixed; top: 0; left: 0; right: 0; padding: 16px 48px; display: flex; justify-content: space-between; align-items: center; background: rgba(6,5,4,0.82); backdrop-filter: blur(14px); border-bottom: 1px solid var(--gold-border); z-index: 1000; transition: padding 0.3s; }
 header.scrolled { padding: 10px 48px; }
-.header-logo { font-family: 'Merriweather', serif; font-size: 0.88rem; color: var(--gold); letter-spacing: 0.1em; text-decoration: none; white-space: nowrap; }
+.header-logo { font-family: 'Merriweather', serif; font-size: 0.88rem; color: var(--gold); letter-spacing: 0.1em; text-decoration: none; white-space: nowrap; display: flex; align-items: center; gap: 0.6rem; }
+.header-logo-icon { height: 30px; width: 30px; border-radius: 50%; border: 1.5px solid rgba(200,149,58,0.5); object-fit: contain; background: #fff; padding: 1px; flex-shrink: 0; }
 .header-sub { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--dim); margin-left: 0.5rem; }
 nav { display: flex; gap: 24px; align-items: center; }
 nav a { color: var(--dim); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; }
@@ -252,7 +253,7 @@ footer ul li a:hover { color: var(--gold); }
 <body>
 
 <header id="header">
-  <a href="../index.html" class="header-logo">Expedition PH <span class="header-sub">People</span></a>
+  <a href="../index.html" class="header-logo"><img src="../image/Logo.jpg" class="header-logo-icon" alt="">Expedition PH <span class="header-sub">People</span></a>
   <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
   <nav>
     <a href="groups.html" class="nav-soon">Ethnic Groups</a>

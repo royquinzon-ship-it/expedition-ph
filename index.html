@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Expedition PH — discover the Philippines through natural history, heritage, people, and food.">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" href="image/Logo.jpg"><link rel="icon" type="image/svg+xml" href="favicon.svg">
 <title>Expedition PH</title>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="museum.css">
@@ -16,6 +16,9 @@
   letter-spacing: 0.12em;
   text-decoration: none;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 .nav-soon { opacity: 0.3; pointer-events: none; }
 
@@ -307,7 +310,7 @@
 <body>
 
 <header id="header">
-  <a href="index.html" class="hub-header-logo">Expedition PH</a>
+  <a href="index.html" class="hub-header-logo"><img src="image/Logo.jpg" class="header-logo-icon" alt="">Expedition PH</a>
   <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>

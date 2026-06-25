@@ -50,6 +50,19 @@ header.scrolled { padding: 10px 48px; }
   letter-spacing: 0.1em;
   text-decoration: none;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.header-logo-icon {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(200,149,58,0.5);
+  object-fit: contain;
+  background: #fff;
+  padding: 1px;
+  flex-shrink: 0;
 }
 .header-sub {
   font-size: 0.58rem; letter-spacing: 0.18em;

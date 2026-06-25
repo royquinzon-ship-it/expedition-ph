@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta id="meta-desc" name="description" content="">
+<link rel="icon" href="image/Logo.jpg"><link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title id="page-title">Place Â· Expedition PH</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="museum.css">
+<style>
+.detail-hero {
+  min-height: 72vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+.detail-hero-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.38;
+}
+.detail-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(5,5,5,0.05) 0%, rgba(5,5,5,0.97) 100%);
+}
+.detail-hero-inner {
+  position: relative; z-index: 1;
+  padding: 120px 5rem 4rem;
+  max-width: 860px;
+  width: 100%;
+}
+.detail-eyebrow {
+  font-size: 0.65rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.detail-name {
+  font-family: 'Merriweather', serif;
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.12;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.detail-subtitle {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--gold);
+  margin-bottom: 1.6rem;
+}
+.detail-body {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 4rem;
+  padding: 5rem 5rem;
+}
+.detail-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dim);
+  text-decoration: none;
+  margin-bottom: 2.5rem;
+  transition: color 0.2s;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+}
+.detail-back:hover { color: var(--gold); border-color: rgba(212,175,55,0.3); }
+.detail-desc {
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 2;
+  margin-bottom: 2.5rem;
+}
+.detail-funfact {
+  padding: 1.3rem 1.6rem;
+  border-left: 2px solid var(--gold);
+  background: rgba(212,175,55,0.06);
+  margin-bottom: 2rem;
+}
+.detail-funfact-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.detail-funfact-text {
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.85;
+}
+.detail-threat {
+  background: rgba(220,50,50,0.07);
+  border-left: 2px solid #e05555;
+  padding: 1.1rem 1.4rem;
+  display: none;
+}
+.detail-threat-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #e05555;
+  margin-bottom: 0.4rem;
+}
+.detail-threat-text {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.75;
+}
+.detail-sidebar {
+  border: 1px solid var(--gold-border);
+  padding: 2rem;
+  align-self: start;
+  position: sticky;
+  top: 90px;
+  background: var(--dark2);
+}
+.sidebar-section {
+  margin-bottom: 1.6rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid rgba(212,175,55,0.09);
+}
+.sidebar-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.sidebar-label {
+  font-size: 0.57rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.45rem;
+}
+.sidebar-value {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+.sidebar-wildlife {
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.sidebar-wildlife li {
+  font-size: 0.82rem;
+  color: var(--dim);
+  padding: 0.28rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.sidebar-wildlife li::before {
+  content: 'â—†';
+  color: var(--gold);
+  font-size: 0.45rem;
+  opacity: 0.65;
+  flex-shrink: 0;
+}
+.sidebar-wildlife li:last-child { border-bottom: none; }
+.detail-related {
+  padding: 5rem 5rem;
+  background: var(--dark2);
+  border-top: 1px solid var(--gold-border);
+}
+.detail-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+  margin-top: 2rem;
+}
+.detail-related-grid a.card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.detail-related-grid a.card img {
+  height: 180px;
+  object-fit: cover;
+}
+.detail-not-found {
+  text-align: center;
+  padding: 10rem 2rem;
+}
+@media(max-width:1100px) {
+  .detail-body { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 3rem; }
+  .detail-sidebar { position: static; }
+  .detail-hero-inner { padding: 100px 3rem 3rem; }
+  .detail-related { padding: 4rem 3rem; }
+  .detail-related-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media(max-width:700px) {
+  .detail-hero-inner { padding: 90px 1.5rem 2.5rem; }
+  .detail-body { padding: 3rem 1.5rem; }
+  .detail-related { padding: 3rem 1.5rem; }
+  .detail-related-grid { grid-template-columns: 1fr; }
+  .detail-name { font-size: 2rem; }
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <a href="index.html" class="header-logo"><img src="image/Logo.jpg" class="header-logo-icon" alt="">Expedition PH <span class="header-sub">Natural History</span></a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="regions.html">Island Groups</a>
+    <a href="flora.html">Flora</a>
+    <a href="fauna.html">Fauna</a>
+    <a href="geology.html">Geology</a>
+    <a href="places.html" class="active">Places</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="history.html">History</a>
+    <a href="exhibits.html">Exhibits</a>
+  </nav>
+</header>
+
+<div class="subpage-breadcrumb">
+  <a href="index.html">Home</a>
+  <span class="breadcrumb-sep">â€º</span>
+  <a href="places.html">Places</a>
+  <span class="breadcrumb-sep">â€º</span>
+  <span id="d-breadcrumb-name"></span>
+</div>
+
+<!-- HERO -->
+<div class="detail-hero">
+  <img class="detail-hero-img" id="d-img" src="" alt="">
+  <div class="detail-hero-overlay"></div>
+  <div class="detail-hero-inner">
+    <p class="detail-eyebrow" id="d-tag"></p>
+    <h1 class="detail-name" id="d-name"></h1>
+    <p class="detail-subtitle" id="d-subtitle"></p>
+    <div class="badge-row" id="d-badges"></div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="detail-body" id="d-body">
+  <div class="detail-main">
+    <a href="places.html" class="detail-back">â† Back to Places</a>
+    <p class="detail-desc" id="d-desc"></p>
+    <div class="detail-funfact">
+      <div class="detail-funfact-label">â—† Did You Know</div>
+      <p class="detail-funfact-text" id="d-funfact-text"></p>
+    </div>
+    <div class="detail-threat" id="d-threat-box">
+      <div class="detail-threat-label">âš  Conservation Concern</div>
+      <p class="detail-threat-text" id="d-threat-text"></p>
+    </div>
+  </div>
+
+  <aside class="detail-sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-label">Location</div>
+      <div class="sidebar-value" id="d-region"></div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Best Season</div>
+      <div class="sidebar-value" id="d-season"></div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Type</div>
+      <div class="sidebar-value" id="d-type"></div>
+    </div>
+    <div class="sidebar-section" id="d-wildlife-section" style="display:none">
+      <div class="sidebar-label">Wildlife Here</div>
+      <ul class="sidebar-wildlife" id="d-wildlife"></ul>
+    </div>
+    <div class="sidebar-section">
+      <a href="places.html" class="btn-outline" style="width:100%;text-align:center;display:block;font-size:0.68rem;box-sizing:border-box;">â† All Places</a>
+    </div>
+  </aside>
+</div>
+
+<!-- RELATED -->
+<section class="detail-related">
+  <p class="section-eyebrow">Explore More</p>
+  <h2 class="section-title">Related <em>Destinations</em></h2>
+  <div class="detail-related-grid" id="d-related-grid"></div>
+</section>
+
+<footer>
+  <div><div class="footer-brand-name">Expedition PH</div><p class="footer-tagline">A digital exploration of the Philippine archipelago's natural heritage.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="regions.html">Island Groups</a></li><li><a href="flora.html">Flora</a></li><li><a href="fauna.html">Fauna</a></li><li><a href="geology.html">Geology</a></li></ul></div>
+  <div><h4>Fauna</h4><ul><li><a href="birds.html">Birds</a></li><li><a href="mammals.html">Mammals</a></li><li><a href="reptiles.html">Reptiles</a></li><li><a href="marine.html">Marine</a></li><li><a href="insects.html">Insects</a></li><li><a href="freshwater.html">Freshwater</a></li><li><a href="extinct.html">Lost Species</a></li></ul></div>
+  <div><h4>Discover</h4><ul><li><a href="places.html">Places</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="species.html">Species Index</a></li><li><a href="protected-areas.html">Protected Areas</a></li></ul></div>
+  <div><h4>About</h4><ul><li><a href="exhibits.html">Exhibits</a></li><li><a href="visit.html">About This Project</a></li></ul></div>
+</footer>
+<div class="footer-bottom"><span>&copy; 2026 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
+
+<button type="button" class="audio-btn" id="audio-btn" onclick="toggleSound()">&#9654; Ambient Sound</button>
+<audio id="sound" loop><source src="image/Expedition PH ost.mp3" type="audio/mpeg"></audio>
+
+<script src="museum.js"></script>
+<script src="places-data.js"></script>
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var id = params.get('id');
+
+  if (!id || !PLACES[id]) {
+    document.getElementById('d-name').textContent = 'Destination Not Found';
+    document.getElementById('d-subtitle').textContent = 'Return to Places to explore all destinations.';
+    document.getElementById('d-body').style.display = 'none';
+    document.querySelector('.detail-related').style.display = 'none';
+    return;
+  }
+
+  var p = PLACES[id];
+
+  document.title = p.name + ' Â· Places Â· Expedition PH';
+  document.getElementById('meta-desc').setAttribute('content', p.description.substring(0, 160));
+  document.getElementById('d-breadcrumb-name').textContent = p.name;
+  document.getElementById('d-img').src = p.image;
+  document.getElementById('d-img').alt = p.name;
+  document.getElementById('d-tag').textContent = p.tag;
+  document.getElementById('d-name').textContent = p.name;
+  document.getElementById('d-subtitle').textContent = p.subtitle;
+  document.getElementById('d-desc').textContent = p.description;
+  document.getElementById('d-funfact-text').textContent = p.funfact;
+  document.getElementById('d-region').textContent = p.region;
+  document.getElementById('d-season').textContent = p.season;
+
+  var typeLabels = { marine:'Marine', volcanic:'Volcanic', highland:'Highland', cultural:'Cultural', wildlife:'Wildlife' };
+  document.getElementById('d-type').textContent = typeLabels[p.type] || p.type;
+
+  // Badges
+  var badgeRow = document.getElementById('d-badges');
+  p.badges.forEach(function (b) {
+    var span = document.createElement('span');
+    span.className = 'badge';
+    span.textContent = b;
+    badgeRow.appendChild(span);
+  });
+
+  // Threat
+  if (p.threat && p.threatReason) {
+    document.getElementById('d-threat-text').textContent = p.threatReason;
+    document.getElementById('d-threat-box').style.display = 'block';
+  }
+
+  // Wildlife sidebar
+  if (p.wildlife && p.wildlife.length > 0) {
+    var list = document.getElementById('d-wildlife');
+    p.wildlife.forEach(function (w) {
+      var li = document.createElement('li');
+      li.textContent = w;
+      list.appendChild(li);
+    });
+    document.getElementById('d-wildlife-section').style.display = 'block';
+  }
+
+  // Related places â€” same type first, fill from same category
+  var allIds = Object.keys(PLACES);
+  var sameType = allIds.filter(function (k) { return k !== id && PLACES[k].type === p.type; });
+  var sameCat  = allIds.filter(function (k) { return k !== id && PLACES[k].category === p.category && PLACES[k].type !== p.type; });
+  var related  = sameType.concat(sameCat).slice(0, 3);
+
+  var grid = document.getElementById('d-related-grid');
+  related.forEach(function (k) {
+    var pl = PLACES[k];
+    var a  = document.createElement('a');
+    a.className = 'card';
+    a.href = 'place-detail.html?id=' + k;
+    var desc = pl.description.length > 110 ? pl.description.substring(0, 110) + 'â€¦' : pl.description;
+    a.innerHTML =
+      '<img src="' + pl.image + '" alt="' + pl.name + '" loading="lazy">' +
+      '<div class="card-body">' +
+        '<div class="card-tag">' + pl.tag + '</div>' +
+        '<div class="card-title">' + pl.name + '</div>' +
+        '<p class="card-desc">' + desc + '</p>' +
+      '</div>';
+    grid.appendChild(a);
+  });
+})();
+</script>
+</body>
+</html>
