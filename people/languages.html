@@ -31,6 +31,9 @@ header.scrolled { padding: 10px 48px; }
 nav { display: flex; gap: 24px; align-items: center; }
 nav a { color: var(--dim); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; }
 nav a:hover, nav a.active { color: var(--gold); }
+.nav-soon { opacity: 0.35; pointer-events: none; }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; z-index: 1100; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: var(--gold); transition: transform 0.3s, opacity 0.3s; }
 .breadcrumb { position: fixed; top: 58px; left: 48px; z-index: 999; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--dim); display: flex; gap: 0.5rem; align-items: center; }
 .breadcrumb a { color: var(--gold); text-decoration: none; }
 
@@ -215,6 +218,24 @@ footer ul li a:hover { color: var(--gold); }
 }
 @media(max-width:700px) {
   header { padding: 14px 20px; }
+  .nav-toggle { display: flex; }
+  header nav {
+    position: fixed;
+    top: 0; right: -100%; bottom: 0;
+    width: 75vw; max-width: 300px;
+    background: rgba(6,5,4,0.97);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    border-left: 1px solid var(--gold-border);
+    flex-direction: column;
+    padding: 5rem 2.5rem 2rem;
+    gap: 0;
+    z-index: 999;
+    transition: right 0.35s ease;
+    overflow-y: auto;
+  }
+  header nav.open { right: 0; }
+  header nav a { font-size: 0.88rem; padding: 0.9rem 0; border-bottom: 1px solid rgba(200,149,58,0.08); }
   .breadcrumb { display: none; }
   .section { padding: 3rem 1.5rem; }
   .divider { padding: 1.2rem 1.5rem; }
@@ -231,13 +252,14 @@ footer ul li a:hover { color: var(--gold); }
 
 <header id="header">
   <a href="../index.html" class="header-logo">Expedition PH <span class="header-sub">People</span></a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
   <nav>
-    <a href="groups.html">Ethnic Groups</a>
+    <a href="groups.html" class="nav-soon">Ethnic Groups</a>
     <a href="languages.html" class="active">Languages</a>
-    <a href="oral.html">Oral Traditions</a>
-    <a href="communities.html">Communities</a>
-    <a href="portraits.html">Portraits</a>
-    <a href="stories.html">Stories</a>
+    <a href="oral.html" class="nav-soon">Oral Traditions</a>
+    <a href="communities.html" class="nav-soon">Communities</a>
+    <a href="portraits.html" class="nav-soon">Portraits</a>
+    <a href="stories.html" class="nav-soon">Stories</a>
   </nav>
 </header>
 
@@ -508,9 +530,9 @@ footer ul li a:hover { color: var(--gold); }
   <div>
     <h4>Expedition PH</h4>
     <ul>
-      <li><a href="../philippine-natural-history/index.html">Natural History</a></li>
+      <li><a href="../natural-history.html">Natural History</a></li>
       <li><a href="index.html">People</a></li>
-      <li><a href="../expedition-ph-culture/index.html">Culture & Heritage</a></li>
+      <li><a href="../index.html">Hub</a></li>
     </ul>
   </div>
   <div>
@@ -706,6 +728,31 @@ document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 /* â”€â”€ HEADER SHRINK â”€â”€ */
 window.addEventListener('scroll', () => {
   document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+/* ── MOBILE NAV ── */
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('nav-toggle');
+  const nav = document.querySelector('nav');
+  if (!toggle || !nav) return;
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  document.addEventListener('click', e => {
+    if (nav.classList.contains('open') && !nav.contains(e.target) && !toggle.contains(e.target)) {
+      nav.classList.remove('open'); toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
+    }
+  });
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open'); toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
+    });
+  });
 });
 </script>
 </body>
