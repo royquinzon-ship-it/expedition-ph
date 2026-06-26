@@ -11,7 +11,29 @@ var PH_PROVINCES = [
     desc: "Ilocos Norte occupies the northwestern tip of Luzon, where rolling sand dunes near Paoay and the Bangui Windmill Complex line a rugged coastline battered by the South China Sea. The Kapurpurawan Rock Formation in Burgos stands as one of the most striking coastal geological features in the north, while Paoay Lake — a natural barrier lake formed by coastal sand dune progradation during the late Quaternary — shelters freshwater birds and endemic aquatic life year-round. The province's coastline along Pagudpud is a nesting ground for sea turtles, and Saud Beach and Patapat Viaduct offer dramatic encounters with the raw Luzon Strait shoreline. Inland, Ilocos Norte's rivers and wetlands support migratory waterbirds, and the Cordillera foothills harbour resident Cordillera raptors and forest birds.",
     fact: "The Kapurpurawan Rock Formation is a rare coastal outcrop of calcium carbonate-rich sedimentary rock sculpted by millennia of wind and wave erosion along the Luzon Strait — its blindingly white surface is caused by dense concentrations of calcium carbonate originally deposited by ancient marine organisms.",
     img_seed: "ilocos-norte",
-    img: "image/Kapurpurawan  Rock Formation.jpg"
+    img: "image/Kapurpurawan  Rock Formation.jpg",
+    geography: {
+      area: "3,467.89 km²",
+      highest_peak: "Mount Sicapoo (2,361 m)",
+      major_river: "Padsan River (Laoag River, 73.1 km)",
+      coastline: "South China Sea & Luzon Strait"
+    },
+    wildlife: [
+      { name: "Hawksbill Sea Turtle", latin: "Eretmochelys imbricata", status: "Critically Endangered", note: "Documented nesting at Pagudpud coastline", page: "reptiles.html" },
+      { name: "Olive Ridley Sea Turtle", latin: "Lepidochelys olivacea", status: "Vulnerable", note: "Documented along Pagudpud and Patapat coastline" },
+      { name: "Green Sea Turtle", latin: "Chelonia mydas", status: "Least Concern", note: "Nesting recorded at Pagudpud; globally downlisted Oct 2025", page: "reptiles.html" }
+    ],
+    flora: [
+      "Agoho (Casuarina equisetifolia) — characteristic coastal tree of the Ilocos shoreline, stabilising sand dunes near Paoay",
+      "Mangrove forests — intertidal fringe along river estuaries of the South China Sea coast",
+      "Dipterocarp lowland forest — remnant patches on Cordillera foothills in the eastern interior"
+    ],
+    protected_areas: [
+      { name: "Paoay Lake Protected Landscape", type: "Protected Landscape", pa_id: "paoay-lake" },
+      { name: "Kalbario-Patapat Natural Park", type: "Natural Monument", pa_id: "kalbario-patapat" }
+    ],
+
+    conservation_note: "Paoay Lake, declared a Protected Landscape under R.A. 12230 (2025), faces ongoing threats from agricultural runoff and invasive water hyacinth that choke native aquatic habitats."
   },
   {
     name: "Ilocos Sur",
@@ -22,7 +44,22 @@ var PH_PROVINCES = [
     desc: "Ilocos Sur stretches along the northwestern Luzon coast, its narrow coastal plain squeezed between the Cordillera foothills and the South China Sea. Pinsal Falls in Santa Maria is a powerful multi-cascade waterfall set within forested slopes, fed by Cordillera rivers at their most dramatic during the wet season. The Abra River delta creates productive wetlands that attract egrets, herons, and migratory ducks each dry season, while the Nagbacalan Lily Pond in Caoayan offers a rare lowland wetland rich in native aquatic plants and waterbirds. The Bantay Nature Park preserves a remnant patch of lowland forest, and the rugged coastline south of Vigan shelters small coves and rocky intertidal zones teeming with marine invertebrates.",
     fact: "Pinsal Falls in Santa Maria plunges 85 feet from a wide limestone ledge into twin basins flanked by limestone cliffs — considered the largest waterfall in Ilocandia, it is fed by rivers draining the western slopes of the Cordillera and runs at its most dramatic during the wet season when monsoon rainfall channels directly into the falls.",
     img_seed: "ilocos-sur",
-    img: "image/Pinsal Falls ILocos Sur.jpg"
+    img: "image/Pinsal Falls ILocos Sur.jpg",
+    geography: {
+      area: "2,596 km²",
+      highest_peak: "Mount Namandiraan (2,331 m)",
+      major_river: "Abra River",
+      coastline: "South China Sea (western)"
+    },
+    flora: [
+      "Limestone canyon forest — Pinsal Falls gorge walls, Santa Maria",
+      "Riparian forest — Abra River lower corridor before it meets the South China Sea near Vigan",
+      "Dipterocarp lowland forest — foothill remnants along the Cordillera western slopes"
+    ],
+    protected_areas: [
+      { name: "Tirad Pass Protected Landscape", type: "Protected Landscape", pa_id: "tirad-pass" }
+    ],
+    conservation_note: "Ilocos Sur's remaining lowland forest cover is among the most fragmented in Luzon — the Abra River corridor is its last significant lowland riparian habitat."
   },
   {
     name: "La Union",
@@ -33,7 +70,22 @@ var PH_PROVINCES = [
     desc: "La Union is the smallest province in the Ilocos Region, yet it packs a remarkable diversity of natural landscapes. Immuki Island off the coast of Balaoan is a dead coral island whose compacted coral rock forms a series of crystal-clear tidal lagoons and natural pools, offering some of the most distinctive coastal formations along the Ilocos shoreline. Tangadan Falls in San Gabriel tumbles through dense montane forest in the lower Cordillera, while the Baroro River valley provides a rich riparian corridor for kingfishers, herons, and native freshwater fish. The Pugo highlands along the Cordillera foothills are blanketed in pine forest, and the surf beaches of San Juan sit on a coastline shaped by the long-shore drift of the South China Sea.",
     fact: "Immuki Island in Balaoan, La Union is a dead coral island — its surface composed entirely of compacted coral rock — whose sheltered tidal lagoons and crystal-clear pools are formed by water trapped between ancient coral formations, making it one of the most unusual coastal natural features along the Ilocos shoreline.",
     img_seed: "la-union",
-    img: "image/Immuki Island La Union.jpg"
+    img: "image/Immuki Island La Union.jpg",
+    geography: {
+      area: "1,497.70 km²",
+      highest_peak: "Mount Mugong, San Gabriel",
+      major_river: "Amburayan River",
+      coastline: "Lingayen Gulf (South China Sea)"
+    },
+    flora: [
+      "Benguet Pine (Pinus kesiya) — montane forest on Cordillera foothills, Pugo and Bagulin highlands",
+      "Mossy cloud forest — upper watershed above Tangadan Falls, San Gabriel",
+      "Mangrove and coastal vegetation — Agoo-Damortis shoreline, Lingayen Gulf"
+    ],
+    protected_areas: [
+      { name: "Agoo-Damortis Protected Landscape and Seascape", type: "Protected Landscape & Seascape", pa_id: "agoo-damortis" }
+    ],
+    conservation_note: "The Agoo-Damortis Protected Landscape and Seascape (10,648 ha along Lingayen Gulf) protects critical mangrove and seagrass habitat that serves as nursery ground for coastal fisheries."
   },
   {
     name: "Pangasinan",
@@ -41,10 +93,29 @@ var PH_PROVINCES = [
     region_key: "region1",
     island_group: "luzon",
     known_for: "Hundred Islands & Bolinao Falls",
-    desc: "Pangasinan faces Lingayen Gulf along a wide coastal plain flanked by the Cordillera and Zambales mountain ranges, creating one of Luzon's most productive agricultural and fishery landscapes. The Hundred Islands National Park — actually 124 islands at low tide — shelters coral reefs, sea turtles, and hawksbill turtle nesting grounds within Alaminos Bay. The province's vast salt beds in Dasol and Infanta are some of the country's largest, and its bangus (milkfish) aquaculture industry supplies much of the national demand.",
-    fact: "Bolinao in northwestern Pangasinan hosts one of the largest colonies of the Critically Endangered giant clam (Tridacna gigas) under active mariculture conservation, with some individuals exceeding 1 metre in shell width.",
+    desc: "Pangasinan faces Lingayen Gulf along a wide coastal plain flanked by the Cordillera and Zambales mountain ranges, creating one of Luzon's most productive agricultural and fishery landscapes. The Hundred Islands National Park — actually 124 islands at low tide — shelters coral reefs and rich marine ecosystems within Alaminos Bay. The province's vast salt beds in Dasol and Infanta are some of the country's largest, and its bangus (milkfish) aquaculture industry supplies much of the national demand.",
+    fact: "Bolinao in northwestern Pangasinan hosts one of the largest colonies of the Vulnerable giant clam (Tridacna gigas) under active mariculture conservation by the UP Marine Science Institute, with some individuals exceeding 1 metre in shell width.",
     img_seed: "pangasinan",
-    img: "image/Bolinao Falls Panggasinan.jpg"
+    img: "image/Bolinao Falls Panggasinan.jpg",
+    geography: {
+      area: "5,451 km²",
+      highest_peak: "Mount San Isidro (770 m), Labrador",
+      major_river: "Agno River (248 km)",
+      coastline: "Lingayen Gulf"
+    },
+    wildlife: [
+      { name: "Giant Clam", latin: "Tridacna gigas", status: "Vulnerable", note: "Active mariculture conservation colony in Bolinao, managed by UP Marine Science Institute" }
+    ],
+
+    flora: [
+      "Mangrove forests — Lingayen Gulf coast, critical nursery habitat for coastal fisheries",
+      "Seagrass beds — Hundred Islands shallow bays and Bolinao coastal zones",
+      "Limestone karst vegetation — 124 islands and islets of Hundred Islands National Park"
+    ],
+    protected_areas: [
+      { name: "Hundred Islands National Park", type: "Natural Monument", pa_id: "hundred-islands" }
+    ],
+    conservation_note: "Hundred Islands National Park was declared a Natural Monument under NIPAS in 2013 — its 124 islands protect coral reefs and hawksbill turtle nesting grounds in Lingayen Gulf."
   },
 
   // ── REGION II – Cagayan Valley ────────────────────────────────────────────
@@ -56,6 +127,15 @@ var PH_PROVINCES = [
     known_for: "Naidi Hills",
     desc: "Batanes is the northernmost province of the Philippines, a remote archipelago perched between the Luzon Strait and the Pacific, battered by typhoons and sculpted into sweeping green hillscapes unlike anywhere else in the country. The islands sit atop the Luzon Strait volcanic arc, and their exposed position means they intercept nearly every typhoon system forming in the western Pacific before it reaches mainland Luzon. The surrounding seas support seasonal runs of flying fish, mahi-mahi, skipjack, and yellowfin tuna through the Luzon Strait — one of the most productive and ecologically dynamic marine passages in the western Pacific.",
     fact: "Batanes sits atop the Luzon Strait volcanic arc and receives more direct typhoon hits per year than any other Philippine province — its exposed position between the Pacific Ocean and the South China Sea places it directly in the path of typhoon systems forming in the western Pacific before they track toward the Philippine mainland.",
+    geography: {
+      area: "203.22 km²",
+      highest_peak: "Mount Iraya, Batan Island (1,085 m)",
+      coastline: "Pacific Ocean, South China Sea, Babuyan Channel & Luzon Strait"
+    },
+    protected_areas: [
+      { name: "Batanes Protected Landscape and Seascape", type: "Protected Landscape & Seascape", pa_id: "batanes" }
+    ],
+    conservation_note: "The Batanes Islands serve as a critical migratory bird flyway between East Asia and the Philippines; their deep marine waters support some of the last remaining pink and red coral beds in Philippine territory.",
     img_seed: "batanes",
     img: "image/Batanes Light House .jpg"
   },
@@ -67,6 +147,15 @@ var PH_PROVINCES = [
     known_for: "Cape Engaño & Callao Cave",
     desc: "Cagayan is the fifth-largest province in the Philippines by land area, occupying the wide Cagayan Valley drained by the Cagayan River — the country's longest river at 505 kilometres. The Sierra Madre mountain range lines its eastern edge, sheltering the largest remaining tract of old-growth tropical rainforest in the Philippines and harbouring endemic species including the Philippine Eagle, the Giant Cloud Rat, and hundreds of bird species documented across the Cagayan Valley. Fossil beds in the Cagayan Valley have yielded Pleistocene megafauna including Stegodon and giant tortoise remains, making the province a treasure trove of Philippine paleontology.",
     fact: "The Callao Cave archaeological site in Cagayan contains fossilised bones of Homo luzonensis, a distinct human species described in a 2019 Nature paper — 2023 dating research revised the age of specimens to at least 134,000 years ago, making Homo luzonensis the oldest known human species documented in the Philippines.",
+    geography: {
+      area: "9,398.07 km²",
+      major_river: "Cagayan River (505 km, longest river in the Philippines)",
+      coastline: "Pacific Ocean & Babuyan Channel"
+    },
+    protected_areas: [
+      { name: "Palaui Island Protected Landscape and Seascape", type: "Protected Landscape & Seascape", pa_id: "palaui-island" }
+    ],
+    conservation_note: "Palaui Island off Santa Ana — designated under R.A. 11038 (2018) — protects pristine coral reefs, mangroves, and volcanic rock formations at the northeastern tip of Luzon where the Pacific meets the Babuyan Channel.",
     img_seed: "cagayan",
     img: "image/Capen Engano Cagayan.jpg"
   },
@@ -78,6 +167,20 @@ var PH_PROVINCES = [
     known_for: "Sta. Victoria Caves & Sierra Madre",
     desc: "Isabela is the second-largest Philippine province by land area, a vast lowland agricultural plain flanked by the Sierra Madre to the east and the Caraballo Mountains to the southwest, drained by the Cagayan River and its tributaries. The Magat River watershed feeds the Magat Dam, one of the country's largest hydroelectric reservoirs, which creates an important freshwater ecosystem for wading birds and migratory waterfowl. Vast tracts of Sierra Madre old-growth forest within Isabela form one of the most critical bird conservation landscapes in Luzon, recognised in peer-reviewed literature for its role in sheltering the majority of Luzon's threatened and near-threatened bird species.",
     fact: "The Northern Sierra Madre Natural Park in Isabela is the largest protected area in the Philippines at 359,486 hectares, sheltering approximately 1,500 vascular plant species — over 50 locally endemic — and 291 bird species including 83 endemic taxa, making it the single richest protected area in the Philippines in terms of species and habitat diversity.",
+    geography: {
+      area: "10,664.56 km²",
+      highest_peak: "Mount Dos Cuernos (1,785 m), San Pablo",
+      major_river: "Cagayan River and Magat River",
+      coastline: "Pacific Ocean (eastern Sierra Madre coast)"
+    },
+    wildlife: [
+      { name: "Philippine Eagle", latin: "Pithecophaga jefferyi", status: "Critically Endangered", note: "Documented within Northern Sierra Madre Natural Park", page: "birds.html" },
+      { name: "Philippine Crocodile", latin: "Crocodylus mindorensis", status: "Critically Endangered", note: "Breeding population documented in San Mariano — Disulap River, Dinang Creek, and Dunoy Lake", page: "reptiles.html" }
+    ],
+    protected_areas: [
+      { name: "Northern Sierra Madre Natural Park", type: "Natural Park", pa_id: "northern-sierra-madre" }
+    ],
+    conservation_note: "Northern Sierra Madre Natural Park (359,486 ha, R.A. 9125, 2001) is the largest protected area in the Philippines and shelters a critically endangered Philippine Crocodile breeding population in the San Mariano river system — one of the last confirmed sites in northern Luzon.",
     img_seed: "isabela",
     img: "image/Sta. Victoria Caves Isabela.jpg"
   },
@@ -89,6 +192,15 @@ var PH_PROVINCES = [
     known_for: "Caraballo Range & Magat River",
     desc: "Nueva Vizcaya is a landlocked highland province sitting astride the Caraballo Mountains and the southern end of the Cagayan Valley, serving as the gateway between Luzon's northern highlands and the southern lowlands. Its cool climate and fertile clay loam soils support the province's role as the Vegetable Bowl of Region II, producing strawberries, citrus, and highland vegetables across its upland farms, while its river valleys and mossy forest patches shelter a diverse community of montane birds and small mammals. The Magat River originates in its mountains, and traditional Ifugao and Isinai communities maintain ancestral domain forests across much of the province.",
     fact: "The river valleys of Nueva Vizcaya sit within the southern Cagayan Valley fossil basin — the same geological depression that has yielded Pleistocene megafauna including Stegodon, an extinct proboscidean relative of modern elephants whose remains have been documented across northern Luzon, indicating that this highland corridor was once a corridor for large mammals moving through ancient forested valleys.",
+    geography: {
+      area: "4,813.88 km²",
+      major_river: "Magat River (226 km, originates in Aritao)"
+    },
+    protected_areas: [
+      { name: "Mount Pulag Protected Landscape", type: "Protected Landscape", pa_id: "mount-pulag" },
+      { name: "Casecnan Protected Landscape", type: "Protected Landscape", pa_id: "casecnan" }
+    ],
+    conservation_note: "Nueva Vizcaya forms the headwaters of the Magat River — the largest tributary of the Cagayan River by discharge — making its upland forests critical to irrigation and flood control for farming communities throughout the Cagayan Valley.",
     img_seed: "nueva-vizcaya",
     img: "image/Caraballo Range Nueva Viscaya.jpg"
   },
@@ -100,6 +212,19 @@ var PH_PROVINCES = [
     known_for: "Siitan River & Quirino Rainforest",
     desc: "Quirino is one of the least-populated provinces in Luzon, a rugged upland territory nestled between the Sierra Madre to the east and the Caraballo Mountains to the southwest, largely blanketed by tropical rainforest and bisected by white-water rivers including the Cagayan tributary system. The Quirino Protected Landscape shelters Philippine Eagles, the Critically Endangered Philippine Crocodile (Crocodylus mindorensis) in its river systems, and a remarkable diversity of endemic reptiles and amphibians. Its remoteness has kept significant forest cover intact, making it a priority landscape for Philippine biodiversity conservation.",
     fact: "The Philippine Crocodile (Crocodylus mindorensis) — listed as Critically Endangered by the IUCN and considered one of the most threatened crocodile species in the world — is known to persist in the river systems of northern Luzon, including within the forested river corridors of the Quirino Protected Landscape, making the province one of the last strongholds of this endemic freshwater species.",
+    geography: {
+      area: "3,323.47 km²",
+      highest_peak: "Mount Dialanese (1,808 m), Maddela",
+      major_river: "Addalam River (tributary of Cagayan River)"
+    },
+    wildlife: [
+      { name: "Philippine Eagle", latin: "Pithecophaga jefferyi", status: "Critically Endangered", note: "Recorded within Quirino Protected Landscape", page: "birds.html" },
+      { name: "Cantor's Giant Softshell Turtle", latin: "Pelochelys cantorii", status: "Critically Endangered", note: "Documented in Addalam River, Cabarroguis", page: "reptiles.html" }
+    ],
+    protected_areas: [
+      { name: "Quirino Protected Landscape", type: "Protected Landscape", pa_id: "quirino-pl" }
+    ],
+    conservation_note: "The Quirino Protected Landscape (175,943 ha, Proclamation 548, 2004) anchors the central Sierra Madre Biodiversity Corridor — recording at least 41 threatened species and serving as one of the last Philippine Eagle strongholds in the Cagayan Valley region.",
     img_seed: "quirino",
     img: "image/Nagtipunan Quirino.jpg"
   },
@@ -113,6 +238,11 @@ var PH_PROVINCES = [
     known_for: "Kaparkan Falls",
     desc: "Abra is a landlocked Cordillera province drained by the Abra River, which cuts through steep mountain ridges before emptying into the Ilocos Sur coast. Kaparkan Falls in Tineg is the province's most spectacular natural feature — a rare travertine cascade whose terraced limestone pools are unlike any other waterfall formation in northern Luzon. Kili Falls in Tubo offers a further deep-forest waterfall experience along the Cordillera river systems, while the province's remote mountain interior shelters dense montane forest rich in endemic birds. The upper Abra River tributaries support one of the last confirmed populations of the Philippine Freshwater Crocodile, and the surrounding forest slopes shelter a remarkable diversity of Cordillera raptors and hornbills.",
     fact: "Kaparkan Falls in Tineg, Abra is a rare multi-tiered travertine waterfall — its stepped terraces are built up over centuries by calcium carbonate deposits precipitating out of the mineral-rich mountain water, the same geological process that forms cave stalactites, making it one of the few travertine formations of its kind in the Philippines.",
+    geography: {
+      area: "4,199.72 km²",
+      major_river: "Abra River (179 km)"
+    },
+    conservation_note: "The Abra River drains the western Cordillera highlands toward the Ilocos lowlands — its upper watershed forests are among the last intact highland-to-coast forest corridors on the western slope of the Cordillera range.",
     img_seed: "abra",
     img: "image/Kaparkan Falls Abra.jpg"
   },
@@ -124,6 +254,12 @@ var PH_PROVINCES = [
     known_for: "Lussok Cave",
     desc: "Apayao is the most remote and least-visited province of the Cordillera, a densely forested upland territory where vast limestone karst formations hide some of the most spectacular cave systems in northern Luzon. Lussok Cave in Luna is the province's crown jewel — a cathedral-like underground river cave carved through ancient limestone by the Lussok River, navigable by boat through chambers draped with stalactites and flowstone curtains. The Maton River in Pudtol and other forest rivers offer pristine deep-forest water features within old-growth forest, while natural hot springs in Kabugao provide a rare geothermal feature deep within the mountain interior. The Apayao-Abulug River flows through dramatic limestone gorges that remain virtually untouched, supporting endemic freshwater fish, Philippine Crocodile populations, and some of the richest montane bird communities in northern Luzon.",
     fact: "Lussok Cave in Luna, Apayao is an active underground river cave carved through Miocene-age limestone by the Lussok River — its cave formations, including stalactites and flowstone curtains, are still actively growing as mineral-saturated groundwater seeps through the rock, depositing calcite layer by layer over thousands of years.",
+    geography: {
+      area: "4,502.33 km²",
+      highest_peak: "Mount Sicapoo (2,361 m), Calanasan — straddles Apayao–Ilocos Norte border",
+      major_river: "Apayao River"
+    },
+    conservation_note: "Apayao is the least densely-populated province in the Philippines — its vast river basin forests remain largely intact, making it one of the most ecologically significant yet least-studied landscapes in northern Luzon.",
     img_seed: "apayao",
     img: "image/Lussok Cave.jpeg"
   },
@@ -135,6 +271,15 @@ var PH_PROVINCES = [
     known_for: "Mt. Pulag, Ambongdolan River & Cordillera Highlands",
     desc: "Benguet is the gateway to the Cordillera highlands, home to the summer capital Baguio City and some of the Philippines' most dramatic mountain scenery. Mount Pulag — the highest peak in Luzon at 2,928 metres — rises through mossy forest into rare Philippine dwarf bamboo grassland above the clouds. The Ambongdolan River flows through scenic gorges and turquoise pools in Tublay, one of the province's most pristine river ecosystems. Bued River carves its way through the lowlands and has been central to Ibaloy settlements for generations. The vast pine forests of Atok and Kabayan shelter cold-spring creeks and waterfalls including Lengsad Falls and other cascades near Kibungan. The Kankanaey and Ibaloy peoples have terraced these mountain slopes for agriculture for centuries, maintaining an intimate land-culture relationship.",
     fact: "The summit grasslands of Mount Pulag create a sea of clouds phenomenon at dawn that draws tens of thousands of hikers annually, and they shelter endemic Luzon montane birds including the Luzon Water-redstart and the Whiskered Pitta — both restricted to the forests and mountain slopes of Luzon and documented in Mount Pulag National Park. The Ambongdolan River in Tublay is known for its striking blue-green waters fed by cold mountain springs, and remains one of the cleanest river systems in the Cordillera.",
+    geography: {
+      area: "2,769.08 km²",
+      highest_peak: "Mount Pulag (2,922 m), Kabayan — highest peak in Luzon",
+      major_river: "Agno River (headwaters in Benguet highlands)"
+    },
+    protected_areas: [
+      { name: "Mount Pulag Protected Landscape", type: "Protected Landscape", pa_id: "mount-pulag" }
+    ],
+    conservation_note: "Mount Pulag, Luzon's highest peak at 2,922 metres, is sacred to the Ibaloi and Kalanguya peoples — its summit hosts rare dwarf bamboo grasslands above a cloud forest belt, a landscape with no parallel elsewhere in the Philippines.",
     img_seed: "benguet",
     img: "image/Ambongdolan River Benguet.jpg"
   },
@@ -146,6 +291,11 @@ var PH_PROVINCES = [
     known_for: "Tappiyah Falls & Hapao Wetlands",
     desc: "Ifugao rises into the heart of the Cordillera Central, its steep mountain slopes carved by the Ibulao River and its tributaries into limestone gorges and dense forest corridors. Mount Napulawan, one of the Cordillera's highest peaks at over 2,600 metres, shelters old-growth mossy forest and is a critical habitat for the Philippine Eagle. The Hapao wetlands in Hungduan host migratory waterbirds and endemic freshwater species, while Tappiyah Falls plunges approximately 70 metres into a clear pool below cloud-forest ridges that shelter the Philippine Bush Warbler — a montane endemic restricted to the Cordillera of northern Luzon — and dozens of other endemic highland birds.",
     fact: "Mount Napulawan in Ifugao rises to over 2,600 metres and is mantled in old-growth mossy forest — the province's cloud forest ridges shelter the Philippine Bush Warbler and other Luzon montane endemics, while the Ibulao River and its limestone gorge tributaries form one of the Cordillera's most intact highland watershed systems.",
+    geography: {
+      area: "2,618.01 km²",
+      major_river: "Ibulao River and Magat River"
+    },
+    conservation_note: "The Rice Terraces of the Philippine Cordilleras — five clusters in Ifugao inscribed as a UNESCO World Heritage Site in 1995 — represent over 2,000 years of continuous Ifugao agricultural engineering, sustaining living ecosystems of flooded paddies, cloud forest, and terraced hillsides as a single unified cultural landscape.",
     img_seed: "ifugao",
     img: "image/Banaue Rice Terreces.jpg"
   },
@@ -157,6 +307,14 @@ var PH_PROVINCES = [
     known_for: "Chico River & Tinglayan Gorge",
     desc: "Kalinga is a rugged mountain province carved by the Chico River and its tributaries, which have cut dramatic gorges and river terraces through ancient limestone and granite. The Chico River Gorge in Tinglayan is one of the most spectacular river canyons in the Philippines, its sheer cliff walls and rapids defining a wild hydrological corridor through the Cordillera highlands. Balbalasang-Balbalan National Park in the northern highlands protects vast tracts of old-growth montane forest, cloud forest, and mossy ridgelines that are home to the Philippine Eagle and the elusive Whiskered Pitta. The Pasil River, another major Chico tributary, flows through limestone outcrops rich in cave formations and unexplored forest catchments.",
     fact: "Balbalasang-Balbalan National Park is one of the least disturbed protected areas in Luzon, with elevations ranging from 700 to over 2,400 metres — its intact watershed forests shelter the Philippine Eagle, Whiskered Pitta, and some of the Cordillera's most undisturbed old-growth montane ecosystems.",
+    geography: {
+      area: "3,282.04 km²",
+      major_river: "Chico River (longest tributary of the Cagayan River, 233 km)"
+    },
+    protected_areas: [
+      { name: "Banao Protected Landscape", type: "Protected Landscape", pa_id: "banao" }
+    ],
+    conservation_note: "The Chico River — referred to as the 'River of Life' by the Kalinga people — was the subject of a landmark 1970s indigenous-led resistance that successfully halted a World Bank-funded dam project, one of the earliest victories for indigenous rights and environmental protection in Philippine history.",
     img_seed: "kalinga",
     img: "image/Chicko River Kalinga.jpg"
   },
@@ -168,6 +326,15 @@ var PH_PROVINCES = [
     known_for: "Sagada Caves, Blue Soil Hills & Bomod-ok Falls",
     desc: "Mountain Province sits at the geographic heart of the Cordillera, its landscape a dramatic succession of river gorges, pine-forested ridges, and ancient rice terraces carved into steep mountain slopes. Sagada is home to Sumaguing Cave and Lumiang Cave, two interconnected limestone caverns whose towering chambers and underground rivers rank among the most impressive cave systems in the Philippines. The Blue Soil Hills of Sagada — locally known as Kaman-utek — are an otherworldly geological formation, their rolling slopes stained a striking bluish-grey by high concentrations of copper sulfate in the soil. Lake Danum in Sagada is a serene high-altitude lake ringed by mossy forest, while the Bomod-ok (Big) Falls in Sagada drops about 60 metres through dense forest and is one of the most powerful waterfalls in the Cordillera. The province's upper elevation forests shelter endemic amphibians and birds found only in the central Cordillera, including the Mountain Shrike, a Near Threatened Philippine endemic restricted to highland forest above 1,200 metres on Luzon, Mindoro, and Mindanao.",
     fact: "The Blue Soil Hills of Sagada owe their otherworldly bluish-grey colour to high concentrations of copper sulfate in the soil — the same oxidation chemistry that turns copper rooftops and bronze statues green — making this one of the only natural copper-mineral soil exposures of its kind in the Philippines. Below ground, Sumaguing Cave, the deepest cave in Sagada at over 150 metres, has been sculpted over millennia by dripping calcium carbonate into cathedral-like chambers of stalactites, stalagmites, and underground pools, while its connection through roughly 500 metres of subterranean passages to the adjacent Lumiang Cave creates one of the most spectacular underground traverses in Southeast Asia.",
+    geography: {
+      area: "2,157.38 km²",
+      highest_peak: "Mount Data (2,310 m), Bauko",
+      major_river: "Chico River (originates in Mountain Province, 233 km total)"
+    },
+    protected_areas: [
+      { name: "Mount Data National Park", type: "National Park", pa_id: "mount-data" }
+    ],
+    conservation_note: "Mount Data National Park straddles the Mountain Province–Benguet border along the Halsema Highway — its mossy montane forest marks the watershed divide between rivers draining east into the Cagayan Valley and west into the Ilocos lowlands.",
     img_seed: "mountain-province",
     img: "image/Blue Soil Hills Mountain Province.jpg"
   },
@@ -181,6 +348,18 @@ var PH_PROVINCES = [
     known_for: "Millennium Balete Tree & Sierra Madre Rainforest",
     desc: "Aurora faces the Pacific Ocean along Luzon's eastern coast, sheltered from the west by the Sierra Madre — the Philippines' longest mountain range and one of its most biodiverse forest landscapes. Within the municipality of Maria Aurora stands the Millennium Balete Tree (Ficus balete), one of the oldest and largest trees in the Philippines, its massive intertwined root system encircling a cold freshwater spring pool where visitors swim beneath an ancient canopy. Aurora's interior Sierra Madre forests are critical habitat for the Philippine Eagle, the Golden-crowned Flying Fox, and more than 60 species of Luzon-endemic birds, while its Pacific-facing coast hosts powerful swells that first brought surfing to the Philippines.",
     fact: "The Millennium Balete Tree of Maria Aurora is a Ficus species carbon-dated at between 400 and 600 years old, with a trunk so vast that dozens of people linking hands cannot encircle it — freshwater springs well up naturally at its roots to form a clear swimming pool, making it one of the few trees in the Philippines that functions as both a living ecological monument and an active bathing site for the local community.",
+    geography: {
+      area: "3,147.32 km²",
+      highest_peak: "Mount Anacuao (1,850 m)",
+      coastline: "Pacific Ocean (eastern Luzon coast)"
+    },
+    wildlife: [
+      { name: "Philippine Eagle", latin: "Pithecophaga jefferyi", status: "Critically Endangered", note: "Documented within Aurora Memorial National Park", page: "birds.html" }
+    ],
+    protected_areas: [
+      { name: "Aurora Memorial National Park", type: "National Park", pa_id: "aurora-memorial" }
+    ],
+    conservation_note: "Aurora Memorial National Park (est. 1949, Proclamation 130) shelters the Philippine Eagle in the Sierra Madre's old-growth forest — one of the few mainland Luzon sites where the eagle's presence within a protected area has been specifically documented.",
     img_seed: "aurora",
     img: "image/Balete Tree , Balete Park Aurora.jpg"
   },
@@ -192,6 +371,15 @@ var PH_PROVINCES = [
     known_for: "Pantingan Peak & Mangrove Coast",
     desc: "Bataan is a mountainous peninsula jutting into Manila Bay, its rugged interior anchored by two separate volcanic massifs: Pantingan Peak — the highest summit in the province at 1,388 metres, rising from the Mariveles Mountain Range in southern Bataan — and the dormant stratovolcano Mount Natib in the north, whose dense rainforest feeds the Manila Bay watershed. The western shore is lined with some of Luzon's best-preserved mangrove ecosystems, while Bataan's landscape of cloud-shrouded peaks, jungle, and coastal wetlands frames one of the Philippines' most historically significant peninsulas, site of the World War II Bataan Death March.",
     fact: "Pantingan Peak, the highest point in Bataan at 1,388 metres, rises from the Mariveles Mountain Range in the province's southern tip — a separate massif from Mount Natib's dormant stratovolcano in the north, whose 6-by-7-kilometre caldera complex contains five geothermal spring fields with water temperatures reaching 56°C. Together these two forested massifs shelter populations of the Philippine Hawk-Eagle and the Luzon Hornbill within Bataan National Park's old-growth dipterocarp and mossy forest.",
+    geography: {
+      area: "1,372.98 km²",
+      highest_peak: "Pantingan Peak, Mariveles Mountains (1,388 m)",
+      coastline: "Manila Bay and South China Sea"
+    },
+    protected_areas: [
+      { name: "Bataan Natural Park", type: "Natural Park", pa_id: "bataan-natural" }
+    ],
+    conservation_note: "Bataan Natural Park (18,335 ha, Proclamation 24, 1945) covers the Mariveles Mountains at the tip of the Bataan Peninsula — its forest watershed filters runoff into Manila Bay and shelters endemic species in one of the Philippines' most historically significant landscapes.",
     img_seed: "bataan",
     img: "image/Pantingan Peak  Bataan.jpg"
   },
@@ -203,6 +391,11 @@ var PH_PROVINCES = [
     known_for: "Biak-na-Bato National Park & Angat Watershed",
     desc: "Bulacan occupies the northern fringe of Manila Bay's vast delta system, with its uplands anchored by Biak-na-Bato National Park — a labyrinthine landscape of limestone formations, cave networks, and forest-clad ridges carved by centuries of erosion along the foothills of the Sierra Madre. The Angat Reservoir and its surrounding watershed forests form the primary water supply for Metro Manila, making Bulacan's upland ecosystems critically important to millions of people. The province's broad alluvial plains, fed by the Pampanga and Angat rivers, transition from productive rice-growing lowlands into these rugged forested highlands sheltering endemic wildlife.",
     fact: "Biak-na-Bato National Park's limestone cave network shelters large colonies of cave-roosting bats and swiftlets whose accumulated guano builds up deep deposits on cave floors over thousands of years — these deposits sustain entire invertebrate food webs of cave-adapted beetles, mites, and detritivores that form the base of a self-contained underground ecosystem independent of sunlight.",
+    geography: {
+      area: "2,783.69 km²",
+      major_river: "Pampanga River"
+    },
+    conservation_note: "Bulacan's lowlands are drained by the lower Pampanga River basin before it reaches Manila Bay — the Candaba Swamp in its northern lowlands is one of the last significant freshwater wetland habitats remaining in the heavily developed Central Luzon plain.",
     img_seed: "bulacan",
     img: "image/Biak na Bato Bulacan.jpg"
   },
@@ -214,6 +407,14 @@ var PH_PROVINCES = [
     known_for: "Minalungao National Park & Pantabangan Reservoir",
     desc: "Nueva Ecija is the Philippines' premier rice-producing province, but its eastern edge rises into the Caraballo Mountains where Minalungao National Park preserves a dramatic gorge carved by the Peñaranda River through towering limestone karst formations, its turquoise waters threading beneath sheer rock faces draped in forest. The Pantabangan Reservoir and surrounding watershed forest reserve protect the upstream catchment feeding one of the largest irrigation networks in Southeast Asia. The province's vast rice paddies and wetlands also serve as critical wintering habitat for migratory shorebirds and ducks along the East Asian-Australasian Flyway.",
     fact: "Minalungao National Park's gorge was sculpted by millions of years of river erosion cutting through Miocene-age limestone, producing sheer karst cliffs and a vivid turquoise river channel that contrasts sharply with the surrounding lowland plain. Pantabangan Reservoir, covering approximately 8,400 hectares when full, is one of the largest dam-created inland water bodies in the Philippines; during severe drought years, the submerged ruins of the old town of Pantabangan re-emerge from the receding water.",
+    geography: {
+      area: "5,689.69 km²",
+      major_river: "Pampanga River (260 km)"
+    },
+    protected_areas: [
+      { name: "Pantabangan–Carranglan Watershed Forest Reserve", type: "Watershed Forest Reserve", pa_id: "pantabangan" }
+    ],
+    conservation_note: "The Pantabangan–Carranglan Watershed Forest Reserve (84,500 ha, Proclamation 561, 1969) protects the catchment feeding the Pantabangan Reservoir — which irrigates farmland across 24 municipalities, directly sustaining Nueva Ecija's role as the Rice Granary of the Philippines.",
     img_seed: "nueva-ecija",
     img: "image/Minalungao Park Nueva Ecija.jpg"
   },
@@ -225,6 +426,16 @@ var PH_PROVINCES = [
     known_for: "Tutulari Avatar Gorge & Mount Arayat",
     desc: "Pampanga's dramatic natural interior is anchored by the Tutulari Avatar Gorge — a narrow canyon of towering volcanic rock walls draped in hanging vegetation, carved by centuries of river erosion through the Zambales mountain foothills. The isolated volcanic cone of Mount Arayat rises from the flat Pampanga plain, its forests forming a sky-island supporting Philippine forest birds separated from the main Luzon ranges. Along Manila Bay's northern shore, the province's wetlands and fishponds are internationally important wintering grounds for migratory shorebirds, including globally significant populations of the Far Eastern Curlew.",
     fact: "Tutulari Gorge sits within the foothills of the Zambales volcanic arc, where ancient lava flows and pyroclastic deposits were later incised by river erosion to form sheer canyon walls — the same volcanic geology that produced Mount Pinatubo to the northwest. Mount Arayat, rising 1,026 metres above an otherwise featureless plain, is an isolated Pleistocene volcano whose forest interior shelters the endemic Luzon Bleeding-heart Pigeon.",
+    geography: {
+      area: "2,001.22 km²",
+      highest_peak: "Mount Arayat (1,026 m)",
+      major_river: "Pampanga River"
+    },
+    protected_areas: [
+      { name: "Mount Arayat National Park", type: "National Park", pa_id: "mount-arayat" },
+      { name: "Mount Pinatubo Natural Park", type: "Natural Park", pa_id: "mount-pinatubo" }
+    ],
+    conservation_note: "Mount Arayat stands as an isolated Pleistocene volcano rising from the flat Pampanga plain — its 3,715-hectare forest is the only significant upland habitat in an otherwise entirely low-lying agricultural province.",
     img_seed: "pampanga",
     img: "image/Tutulari Avatar Gorge  Pampanga.jpg"
   },
@@ -236,6 +447,14 @@ var PH_PROVINCES = [
     known_for: "Ubod Falls & Zambales Mountain Foothills",
     desc: "Tarlac is a landlocked province at the heart of Central Luzon, its western edge climbing into the Zambales Mountains where forest streams cascade down to form Ubod Falls — a powerful waterfall fed by cold springs deep within the foothills. The province's vast plains are divided between sugarcane estates and rice paddies, while the Tarlac River and its tributaries support productive wetlands hosting nesting Purple Heron and Purple Swamphen colonies. The Sacobia-Bamban River basin was dramatically reshaped by the 1991 eruption of Mount Pinatubo, whose lahar flows buried entire barrios and farmlands before secondary vegetation slowly reclaimed the hardened plains.",
     fact: "Ubod Falls in the Zambales foothills is fed by springs draining through volcanic rock of the Zambales Ophiolite Complex — one of the oldest and best-exposed sections of ancient oceanic crust on land in Southeast Asia, thrust onto the surface by tectonic collision during the Oligocene to Miocene. The same Pinatubo eruption that reshaped Tarlac's river valleys temporarily lowered global temperatures by 0.5°C — the largest climate cooling event since Krakatoa in 1883.",
+    geography: {
+      area: "3,046.49 km²",
+      major_river: "Tarlac River (95.2 km, tributary of Agno River)"
+    },
+    protected_areas: [
+      { name: "Mount Pinatubo Natural Park", type: "Natural Park", pa_id: "mount-pinatubo" }
+    ],
+    conservation_note: "The 1991 Pinatubo eruption deposited lahar flows across Tarlac's river valleys, temporarily reshaping the province's hydrology and cooling global temperatures by 0.5°C — the largest volcanic climate cooling event since Krakatoa in 1883.",
     img_seed: "tarlac",
     img: "image/Ubod Falls Tarlac.jpg"
   },
@@ -247,6 +466,16 @@ var PH_PROVINCES = [
     known_for: "Camara Island & Mt. Pinatubo Crater Lake",
     desc: "Zambales is a rugged coastal province on Luzon's western seaboard where ancient oceanic geology, active volcanism, and coral-rich island waters converge in a single landscape. Camara Island — twin coral-sand islands off the coast of Pundaquit that connect at low tide across a shared sandbar — rises from coral-encrusted shallows that support medium to high diversity reef fish communities, part of a broader arc of coral reef ecosystems documented in surveys extending along the Zambales coastline. Inland, the province rests on the Zambales Ophiolite Complex — one of the largest and best-preserved exposures of ancient oceanic crust on land in the world, spanning 160 kilometres north to south and documented in publications by the United States Geological Survey as a scientifically significant window into the earth's tectonic history. Mt. Pinatubo, on the province's eastern boundary, erupted catastrophically in 1991, burying approximately 18,000 hectares of forest under volcanic ash; its flooded summit crater is now one of the most dramatic crater lakes in Southeast Asia, and its post-eruption lahar landscape has become one of the most intensively studied sites of primary ecological succession in the region.",
     fact: "The Zambales Ophiolite Complex — a 160-kilometre-long exposure of ancient ocean floor thrust onto Luzon by tectonic collision — preserves two structurally distinct blocks with different geological origins: the Acoje Block, composed of Late Jurassic to Early Cretaceous island arc rocks, and the Coto Block, composed of Eocene mid-ocean ridge basalt; the complex is documented by the United States Geological Survey as one of the most geologically significant ophiolite sequences in Southeast Asia.",
+    geography: {
+      area: "3,630.35 km²",
+      highest_peak: "Mount Tapulao (2,044 m), Palauig",
+      coastline: "South China Sea"
+    },
+    protected_areas: [
+      { name: "Subic Bay Forest Reserve", type: "Wildlife Sanctuary", pa_id: "subic-forest" },
+      { name: "Mount Pinatubo Natural Park", type: "Natural Park", pa_id: "mount-pinatubo" }
+    ],
+    conservation_note: "Mount Tapulao (2,044 m), the highest peak in the Zambales Mountains, harbours pine forests above an otherwise largely degraded mountain range — its upper slopes retain biodiversity amid a landscape significantly altered by decades of chromite mining.",
     img_seed: "zambales",
     img: "image/Camara Island Zambales.jpg"
   },

@@ -278,6 +278,204 @@
   line-height: 1.9;
 }
 
+/* ── Natural Geography stat row ── */
+.art-geo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--gold-border);
+  border: 1px solid var(--gold-border);
+  max-width: 720px;
+  margin-bottom: 0;
+}
+.art-geo-stat {
+  background: var(--dark2);
+  padding: 1rem 1.2rem;
+}
+.art-geo-label {
+  font-size: 0.52rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+  margin-bottom: 0.35rem;
+}
+.art-geo-value {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* ── Wildlife Spotlight ── */
+.art-wildlife-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  max-width: 680px;
+}
+.art-wildlife-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.07);
+  padding: 0.9rem 1.1rem;
+}
+.art-wildlife-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+.art-wildlife-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.3;
+}
+.art-wildlife-latin {
+  font-size: 0.7rem;
+  font-style: italic;
+  color: var(--dim);
+  margin-bottom: 0.4rem;
+}
+.art-wildlife-note {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.5;
+}
+.status-badge {
+  font-size: 0.5rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.45rem;
+  border: 1px solid;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.status-cr  { color: #e05c5c; border-color: rgba(224,92,92,0.4); }
+.status-en  { color: #e07c3a; border-color: rgba(224,124,58,0.4); }
+.status-vu  { color: #c9b84c; border-color: rgba(201,184,76,0.4); }
+.status-nt  { color: #6abf69; border-color: rgba(106,191,105,0.4); }
+.status-lc  { color: var(--dim); border-color: rgba(255,255,255,0.15); }
+.status-end { color: var(--gold); border-color: rgba(201,168,76,0.4); }
+
+/* ── Flora & Ecosystems ── */
+.art-flora-list {
+  list-style: none;
+  padding: 0; margin: 0;
+  max-width: 680px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.art-flora-list li {
+  padding: 0.75rem 1.1rem;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.6;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  position: relative;
+  padding-left: 1.8rem;
+}
+.art-flora-list li:last-child { border-bottom: none; }
+.art-flora-list li::before {
+  content: '◆';
+  position: absolute; left: 0.7rem;
+  color: var(--gold); opacity: 0.45;
+  font-size: 0.45rem; top: 50%; transform: translateY(-50%);
+}
+
+/* ── Protected Areas ── */
+.art-pa-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 680px;
+}
+.art-pa-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 1rem;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+.art-pa-type {
+  font-size: 0.5rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(201,168,76,0.3);
+  padding: 0.18rem 0.5rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.art-pa-name {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.8);
+}
+
+/* ── Conservation Note ── */
+.art-conservation-box {
+  border-left: 3px solid #e05c5c;
+  background: rgba(224,92,92,0.04);
+  padding: 1.2rem 1.6rem;
+  max-width: 680px;
+}
+.art-conservation-label {
+  font-size: 0.52rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #e05c5c;
+  opacity: 0.85;
+  margin-bottom: 0.55rem;
+  display: block;
+}
+.art-conservation-text {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Linked wildlife card */
+a.art-wildlife-link {
+  text-decoration: none; color: inherit; display: block;
+  transition: border-color 0.2s, background 0.2s;
+  cursor: pointer;
+}
+a.art-wildlife-link:hover {
+  border-color: rgba(201,168,76,0.4);
+  background: rgba(201,168,76,0.04);
+}
+a.art-wildlife-link .art-wildlife-name::after {
+  content: ' →';
+  font-size: 0.7rem;
+  color: var(--gold);
+  opacity: 0.6;
+}
+
+/* Linked protected area item */
+a.art-pa-link {
+  text-decoration: none; color: inherit; display: flex;
+  transition: border-color 0.2s, background 0.2s;
+  cursor: pointer;
+}
+a.art-pa-link:hover {
+  border-color: rgba(201,168,76,0.4);
+  background: rgba(201,168,76,0.04);
+}
+.art-pa-arrow {
+  margin-left: auto;
+  color: var(--gold);
+  opacity: 0.5;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .art-geo-grid { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
+  .art-wildlife-grid { grid-template-columns: 1fr; max-width: 100%; }
+}
+
 /* Back link */
 .art-back {
   display: inline-flex;
@@ -402,6 +600,10 @@
     <nav id="toc-nav">
       <a href="#overview">Overview</a>
       <a href="#at-a-glance">At a Glance</a>
+      <a href="#natural-geography">Geography</a>
+      <a href="#wildlife">Wildlife</a>
+      <a href="#flora">Flora</a>
+      <a href="#protected-areas">Protected Areas</a>
       <a href="#did-you-know">Did You Know</a>
       <a href="#more-provinces">More Provinces</a>
     </nav>
@@ -427,6 +629,34 @@
       <div class="art-stats-grid" id="d-stats-grid"></div>
     </section>
 
+    <!-- Natural Geography -->
+    <section class="art-section" id="natural-geography">
+      <span class="art-section-label">Natural Geography</span>
+      <h2>Land &amp; Water</h2>
+      <div class="art-geo-grid" id="d-geo-grid"></div>
+    </section>
+
+    <!-- Wildlife Spotlight -->
+    <section class="art-section" id="wildlife">
+      <span class="art-section-label">Wildlife Spotlight</span>
+      <h2>Notable Species</h2>
+      <div class="art-wildlife-grid" id="d-wildlife-grid"></div>
+    </section>
+
+    <!-- Flora & Ecosystems -->
+    <section class="art-section" id="flora">
+      <span class="art-section-label">Flora &amp; Ecosystems</span>
+      <h2>Vegetation &amp; Habitats</h2>
+      <ul class="art-flora-list" id="d-flora-list"></ul>
+    </section>
+
+    <!-- Protected Areas -->
+    <section class="art-section" id="protected-areas">
+      <span class="art-section-label">Protected Areas</span>
+      <h2>Conservation Designations</h2>
+      <div class="art-pa-list" id="d-pa-list"></div>
+    </section>
+
     <!-- Did You Know -->
     <section class="art-section" id="did-you-know">
       <span class="art-section-label">Did You Know</span>
@@ -434,6 +664,12 @@
       <div class="art-fact-box">
         <span class="art-fact-label">◆ Natural History Fact</span>
         <p class="art-fact-text" id="d-fact"></p>
+      </div>
+      <div id="d-conservation-wrap" style="margin-top:1.5rem; display:none;">
+        <div class="art-conservation-box">
+          <span class="art-conservation-label">◆ Conservation Alert</span>
+          <p class="art-conservation-text" id="d-conservation-note"></p>
+        </div>
       </div>
     </section>
 
@@ -579,6 +815,111 @@
   }
   addStat(islandLabel, 'Island Group', '');
   addStat(province.capital, 'Capital', 'City / Municipality');
+
+  // ── Natural Geography ──
+  var geoGrid = document.getElementById('d-geo-grid');
+  if (province.geography) {
+    var g = province.geography;
+    [
+      { label: 'Land Area',      value: g.area },
+      { label: 'Highest Peak',   value: g.highest_peak },
+      { label: 'Major River',    value: g.major_river },
+      { label: 'Coastline',      value: g.coastline }
+    ].forEach(function (item) {
+      var div = document.createElement('div');
+      div.className = 'art-geo-stat';
+      div.innerHTML = '<div class="art-geo-label">' + item.label + '</div><div class="art-geo-value">' + item.value + '</div>';
+      geoGrid.appendChild(div);
+    });
+  } else {
+    document.getElementById('natural-geography').style.display = 'none';
+    document.querySelector('#toc-nav a[href="#natural-geography"]').style.display = 'none';
+  }
+
+  // ── Wildlife Spotlight ──
+  var STATUS_CLASS = {
+    'Critically Endangered': 'status-cr',
+    'Endangered':            'status-en',
+    'Vulnerable':            'status-vu',
+    'Near Threatened':       'status-nt',
+    'Least Concern':         'status-lc',
+    'Endemic':               'status-end'
+  };
+  var wildlifeGrid = document.getElementById('d-wildlife-grid');
+  if (province.wildlife && province.wildlife.length) {
+    province.wildlife.forEach(function (sp) {
+      var cls = STATUS_CLASS[sp.status] || 'status-lc';
+      var inner =
+        '<div class="art-wildlife-header">' +
+          '<div class="art-wildlife-name">' + sp.name + '</div>' +
+          '<span class="status-badge ' + cls + '">' + sp.status + '</span>' +
+        '</div>' +
+        '<div class="art-wildlife-latin">' + sp.latin + '</div>' +
+        '<div class="art-wildlife-note">' + sp.note + '</div>';
+      var el;
+      if (sp.page) {
+        el = document.createElement('a');
+        el.href = sp.page;
+        el.className = 'art-wildlife-card art-wildlife-link';
+        el.title = 'View ' + sp.name + ' on Expedition PH';
+      } else {
+        el = document.createElement('div');
+        el.className = 'art-wildlife-card';
+      }
+      el.innerHTML = inner;
+      wildlifeGrid.appendChild(el);
+    });
+  } else {
+    document.getElementById('wildlife').style.display = 'none';
+    document.querySelector('#toc-nav a[href="#wildlife"]').style.display = 'none';
+  }
+
+  // ── Flora & Ecosystems ──
+  var floraList = document.getElementById('d-flora-list');
+  if (province.flora && province.flora.length) {
+    province.flora.forEach(function (item) {
+      var li = document.createElement('li');
+      li.textContent = item;
+      floraList.appendChild(li);
+    });
+  } else {
+    document.getElementById('flora').style.display = 'none';
+    document.querySelector('#toc-nav a[href="#flora"]').style.display = 'none';
+  }
+
+  // ── Protected Areas ──
+  var paList = document.getElementById('d-pa-list');
+  if (province.protected_areas && province.protected_areas.length) {
+    province.protected_areas.forEach(function (pa) {
+      var inner = '<span class="art-pa-type">' + pa.type + '</span><span class="art-pa-name">' + pa.name + '</span>';
+      var el;
+      if (pa.pa_id) {
+        el = document.createElement('a');
+        el.href = 'protected-areas.html?pa=' + pa.pa_id;
+        el.className = 'art-pa-item art-pa-link';
+        el.title = 'View ' + pa.name + ' in Protected Areas';
+        var arrow = document.createElement('span');
+        arrow.className = 'art-pa-arrow';
+        arrow.textContent = '→';
+        el.innerHTML = inner;
+        el.appendChild(arrow);
+      } else {
+        el = document.createElement('div');
+        el.className = 'art-pa-item';
+        el.innerHTML = inner;
+      }
+      paList.appendChild(el);
+    });
+  } else {
+    document.getElementById('protected-areas').style.display = 'none';
+    document.querySelector('#toc-nav a[href="#protected-areas"]').style.display = 'none';
+  }
+
+  // ── Conservation Note ──
+  if (province.conservation_note) {
+    document.getElementById('d-conservation-note').textContent = province.conservation_note;
+    document.getElementById('d-conservation-wrap').style.display = '';
+  }
 
   // Related provinces — same region, up to 3
   var related = PH_PROVINCES.filter(function (p) {
