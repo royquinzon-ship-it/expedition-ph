@@ -1022,6 +1022,10 @@ var PH_PROVINCES = [
     known_for: "Ati-Atihan Festival & Boracay",
     desc: "Aklan is a small province on the northwestern coast of Panay, its coastal lowlands rising to the northern Panay highlands and its offshore island of Boracay being the Philippines' most internationally renowned beach destination, famous for its powdery White Beach. The Aklan River winds through a lowland plain of rice paddies and coconut groves before entering the Sibuyan Sea, while the province's interior rainforest patches shelter endemic Panay birds including the Critically Endangered Visayan Warty Pig and the Writhed-billed Hornbill. The Ati-Atihan Festival in Kalibo, considered the mother of all Philippine festivals, celebrates the original Ati indigenous people and the Christianization of Aklan.",
     fact: "Boracay's iconic White Beach sand is composed almost entirely of crushed coral fragments with a mean grain size of 0.25 mm — finer than most beach sands globally — which gives it its characteristic powdery texture and brilliant white colour even in direct noon sunlight.",
+    landmarks: [
+      { name: "Jawili Falls", type: "Tiered Waterfall", note: "Seven natural terraced basins on a limestone staircase in Tangalan; cool spring water cascades through each level into clear swimming and diving pools; highest basin at ~30 m" },
+      { name: "Boracay White Beach", type: "White-sand Beach", note: "4 km beach in Malay composed of pulverised coral and shell fragments from surrounding fringing reefs; one of the most visited beaches in the Philippines" }
+    ],
     img_seed: "aklan"
   },
   {
@@ -1032,6 +1036,10 @@ var PH_PROVINCES = [
     known_for: "Hinagdanan Caves & Mountain Terrain",
     desc: "Antique occupies the western coast of Panay Island, squeezed between the Sulu Sea and the Central Panay Mountain Range, which rises to 2,117 metres at Mount Madja-as and forms one of the most rugged and biodiverse highland landscapes in the Visayas. The province's rugged interior forests are critical habitat for the Critically Endangered Visayan Hornbill, the Philippine Cockatoo, and the endemic Visayan Warty Pig, while its coastal mangroves and seagrass beds shelter dugongs and hawksbill turtles. The Kinaray-a-speaking people of Antique maintain a proud highland cultural tradition, and the province's mountain trails connect remote Ati communities still practicing traditional forest resource management.",
     fact: "The Central Panay Mountain Range, which runs through Antique, Iloilo, and Capiz, has been identified as one of the world's most important biodiversity hotspot areas for Visayan endemic birds, with 18 endemic bird species — five of which are found in the Visayas and nowhere else on Earth.",
+    landmarks: [
+      { name: "Mount Madja-as", type: "Mountain", note: "2,117 m — highest peak in Panay and 2nd highest in the Visayas; source of four major rivers (Dalanas, Tibiao, Bacong, Mali-ao); crown-shyness mossy forest, sea of clouds, and 14 waterfalls on its slopes" },
+      { name: "Mararison Island", type: "Island Marine Sanctuary", note: "Small island off Culasi with fringing coral reefs showing 53–65% live coral cover on the northwest side; declared marine sanctuary with seagrass beds and diverse reef fish" }
+    ],
     img_seed: "antique"
   },
   {
@@ -1042,6 +1050,9 @@ var PH_PROVINCES = [
     known_for: "Seafood Capital & Capiz Shells",
     desc: "Capiz is the \"Seafood Capital of the Philippines,\" its flat coastal plain facing the Sibuyan Sea and supporting one of the country's richest coastal fisheries, with Roxas City's fish market handling enormous volumes of crab, oysters, scallops, and capiz-shell bivalves daily. The Capiz shell — Placuna placenta — has been harvested from these waters for centuries and is crafted into translucent lampshades, decorative panels, and jeepney ornaments exported worldwide. Inland, Capiz' rice paddies and freshwater rivers provide habitat for nesting herons and migratory ducks, while the province's low profile and coastal geography have traditionally made it highly vulnerable to storm surges.",
     fact: "The Capiz shell (Placuna placenta) is a flat, nearly transparent bivalve up to 15 cm in diameter that was historically used as window glass in colonial Philippine buildings — window panes made from these shells can still be found in heritage bahay na bato houses across the Visayas.",
+    landmarks: [
+      { name: "Suhot Cave & Spring", type: "Cave & Spring", note: "Interconnected caverns in Dumalag fed by a cold sulfur-rich spring from Mount Panginra-on; natural pool at the cave entrance; stalactites and stalagmites inside the cave complex" }
+    ],
     img_seed: "capiz"
   },
   {
@@ -1052,6 +1063,9 @@ var PH_PROVINCES = [
     known_for: "Sweetest Mangoes on Earth",
     desc: "Guimaras is a small island province in the Iloilo Strait between Panay and Negros, its gently rolling terrain blanketed in mango orchards, coconut groves, and coastal mangroves that frame pristine white-sand beaches. The island is internationally recognised for producing the sweetest mangoes in the world — a claim supported by sugar content measurements, and the Guimaras mango has secured a Geographical Indication status. The surrounding Iloilo Strait and its coral reefs were severely affected by the 2006 Solar I oil spill — the worst in Philippine history — though coral and mangrove restoration efforts have achieved remarkable recovery over the following decade.",
     fact: "The 2006 Solar I oil tanker sinking off Guimaras released approximately 2.1 million litres of bunker fuel, coating 300 km of coastline and killing tens of thousands of seabirds and marine animals; however, the subsequent community-led mangrove replanting effort was so successful that the area was cited by the IUCN as a global model for oil spill ecological restoration.",
+    landmarks: [
+      { name: "Taklong Island National Marine Reserve", type: "Marine Reserve", note: "1,000 ha national marine reserve established 1990 in Nueva Valencia; mosaic of coral reefs, seagrass beds, and mangroves; UP-Visayas Marine Station within the reserve; directly impacted by the 2006 Solar I oil spill and subject of long-term ecological recovery monitoring" }
+    ],
     img_seed: "guimaras"
   },
   {
@@ -1062,6 +1076,9 @@ var PH_PROVINCES = [
     known_for: "Dinagyang Festival & Jusi Weaving",
     desc: "Iloilo Province wraps around the southern and eastern coast of Panay island and across to the separate island of Iloilo's peninsula, its broad river delta system creating extensive wetlands and shallow coastal seas that are among the most productive fishing grounds in the Visayas. The Jalaur River, the longest in Panay, drains the highland interior through a series of reservoirs that provide irrigation for Panay's central rice bowl. Iloilo City is considered the \"City of Love\" and the heritage centre of the Western Visayas, with a remarkable collection of colonial churches, Art Deco commercial buildings, and the vibrant Dinagyang Festival honoring the Santo Niño.",
     fact: "The Miag-ao Church in Iloilo Province, a UNESCO World Heritage Site, features a baroque facade carved with tropical plants — papaya, coconut, and guava — integrated into classical European religious iconography, creating one of the world's most botanically distinctive church facades.",
+    landmarks: [
+      { name: "Gigantes Islands", type: "Island Group", note: "~10 limestone islands and islets in Carles off the Visayan Sea; 73 documented caves including Bakwitan Cave; saltwater lagoons; two endemic species — Gekko gigante lizard and Island Forest Frog; classified as high conservation priority under the Philippine Biodiversity Conservation Priority-Setting Program" }
+    ],
     img_seed: "iloilo"
   },
   {
@@ -1072,6 +1089,10 @@ var PH_PROVINCES = [
     known_for: "Sugar Industry & MassKara Festival",
     desc: "Negros Occidental is the Philippines' sugarcane capital, its vast western coastal plain blanketed in cane fields stretching from Bacolod City north and south along the Guimaras Strait, producing over half the country's total sugar output. The province's interior, rising to the peaks of the Kanlaon Natural Park on Mount Kanlaon — the Visayas' highest and most active volcano at 2,465 metres — shelters old-growth dipterocarp forest that is one of the most important wildlife sanctuaries for Critically Endangered Visayan endemic species. The MassKara Festival in Bacolod, born out of economic hardship in the 1980s, is now the Philippines' second most famous festival, celebrated with elaborately crafted smiling masks.",
     fact: "Mount Kanlaon Natural Park in Negros Occidental protects the last large tract of primary forest in the Visayas and is the only known habitat of the Critically Endangered Visayan Hornbill and the Negros Bleeding-heart Pigeon, both of which number fewer than 1,000 individuals in the wild.",
+    landmarks: [
+      { name: "Mount Kanlaon", type: "Active Volcano", note: "2,465 m — highest peak in the Visayas; most active volcano in the Visayas with 40+ eruptions since 1819; within Mount Kanlaon Natural Park (24,557 ha); only natural park in the greater Negros-Panay region protecting endemic birds including the Negros Bleeding-heart Pigeon" },
+      { name: "Mambukal", type: "Hot Spring & Waterfall Complex", note: "Seven waterfalls and sulfur hot springs at 365 m elevation on the lower slopes of Mount Kanlaon in Murcia; colony of 7,500–8,000 Giant Golden-crowned Flying Fox" }
+    ],
     img_seed: "negros-occidental"
   },
 
