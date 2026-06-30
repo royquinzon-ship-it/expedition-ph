@@ -1105,6 +1105,10 @@ var PH_PROVINCES = [
     known_for: "Chocolate Hills & Tarsiers",
     desc: "Bohol is one of the Philippines' most naturally spectacular provinces, famous worldwide for its 1,268 perfectly symmetrical Chocolate Hills — ancient coral limestone mounds carpeted in grass that turn chocolate-brown in the dry season — and for the Philippine Tarsier, one of the world's smallest primates, with enormous forward-facing eyes adapted to its nocturnal forest life. The Bohol Sea and the Danajon Bank — one of only two double barrier reefs in the Indo-Pacific — shelter whale sharks, spinner dolphins, and extraordinary coral diversity, while the Loboc River winds through dense tropical forest alive with fireflies and endemic birds. The 2013 magnitude-7.2 earthquake caused significant destruction but also revealed new geological formations in the karst landscape.",
     fact: "The Danajon Double Barrier Reef off Bohol's northern coast is one of only two double barrier reefs in the Indo-Pacific and one of the most biodiverse reef systems in the Coral Triangle, yet it experienced over 90% decline in live coral cover due to destructive fishing — making it also one of the most dramatic examples of reef degradation and ongoing restoration in Southeast Asia.",
+    landmarks: [
+      { name: "Chocolate Hills", type: "Karst Formation", note: "At least 1,268 conical marine limestone hills across Carmen, Batuan, and Sagbayan; turn chocolate-brown in the dry season; span more than 50 km²; part of the Bohol UNESCO Global Geopark (2023)" },
+      { name: "Danajon Bank", type: "Double Barrier Reef", note: "One of three double barrier reefs in the Indo-Pacific and one of six worldwide; 272 km² total reef area with 40 islands and 699 km aggregate coastline; located north of Bohol island" }
+    ],
     img_seed: "bohol"
   },
   {
@@ -1115,6 +1119,10 @@ var PH_PROVINCES = [
     known_for: "First Baptism & Marine Biodiversity",
     desc: "Cebu is the Philippines' oldest city and most historically significant province, the site of Ferdinand Magellan's arrival in 1521 and the first Catholic baptism in the Philippines, yet equally remarkable for its extraordinary marine biodiversity — the Cebu waters are part of the Coral Triangle and host whale shark aggregations at Oslob and the world-famous thresher shark dive site off Malapascua Island. The province is a long, narrow island surrounded by smaller satellite islands, its coastline mostly developed but its offshore reefs still harbouring remarkable density and diversity of reef life. Cebu City, the Queen City of the South, is the commercial and cultural capital of the Visayas.",
     fact: "The Oslob whale shark interaction site in southern Cebu has become one of the world's most visited wildlife tourism attractions, with researchers identifying over 200 individual whale sharks by their unique spot patterns using photographic AI recognition — making it simultaneously the most studied and most controversially managed whale shark population on Earth.",
+    landmarks: [
+      { name: "Kawasan Falls", type: "Tiered Waterfall", note: "Three-tiered cascade in Badian fed by Kabukalan Spring; first tier ~14 m high; total height ~40 m; vivid turquoise water flows to the Matutinao River and Tanon Strait" },
+      { name: "Malapascua Island", type: "Marine Dive Site", note: "Only place in the world where pelagic thresher sharks visit a cleaning station at diveable depths on an almost daily basis; sharks gather at dawn at Kimud Shoal, a seamount rising from 200 m depth off northern Cebu" }
+    ],
     img_seed: "cebu"
   },
   {
@@ -1125,6 +1133,11 @@ var PH_PROVINCES = [
     known_for: "Apo Island & University Town",
     desc: "Negros Oriental occupies the eastern side of Negros island, its rugged interior highlands of the Central Negros Mountain Range forming a critical wildlife corridor with the Kanlaon Natural Park, and its coastline on the Bohol Strait facing the biodiverse waters of the Tanon Strait and the famous marine sanctuary of Apo Island. Apo Island's coral reef is considered one of the most successful examples of community-based marine protection in the world, with coral cover and fish biomass recovering dramatically after a fishing ban imposed by the community itself in 1985. Dumaguete City, a compact university town nicknamed the \"City of Gentle People,\" is a cultural hub for arts, literature, and marine biology research.",
     fact: "Apo Island Marine Reserve, established by local fishers in 1985 with the assistance of Silliman University, has increased fish biomass inside the reserve by over 400% compared to unprotected reefs, and fish spillover from the reserve has increased catches for surrounding fishing communities by more than 50% — making it the world's most-cited community-managed marine protected area success story.",
+    landmarks: [
+      { name: "Apo Island Marine Reserve", type: "Marine Reserve", note: "Small volcanic island 7 km off southeastern Negros; community-managed sanctuary established 1982 with Dr. Angel Alcala of Silliman University; fish biomass increased 400%+ compared to unprotected reefs" },
+      { name: "Balinsasayao Twin Lakes", type: "Twin Crater Lakes", note: "Twin volcanic crater lakes within 8,016 ha natural park in Sibulan; Lake Balinsasayao (76 ha, 90 m deep) and Lake Danao (30 ha, 58 m deep) in a caldera formed by four surrounding mountains; ASEAN Heritage Park (2024)" },
+      { name: "Casaroro Falls", type: "Waterfall", note: "~30 m narrow horsetail cascade in Valencia fed by springs from Mount Talinis; single-layer drop into a cold deep natural pool; distinctively narrow form unlike most Philippine waterfalls" }
+    ],
     img_seed: "negros-oriental"
   },
   {
@@ -1135,6 +1148,10 @@ var PH_PROVINCES = [
     known_for: "Faith Healing & Mystical Reputation",
     desc: "Siquijor is the second-smallest province of the Philippines by population, a small circular island rising to 628 metres at Mount Malabahoc and surrounded by productive fringing reefs and crystal-clear waters that have made it a premier scuba diving destination in the Central Visayas. The island is steeped in a centuries-old mystical reputation — it is known locally as \"Isla del Fuego\" (Island of Fire) from the bioluminescent plankton blooms seen by Magellan's crew — and its folk healers (mananambal) gather annually during Holy Week to prepare traditional herbal medicine. The island's forests shelter endemic reptiles and the spectacular Flame Tree forests that erupt in scarlet blossoms each March.",
     fact: "Siquijor's bioluminescent coastal waters, observed by Spanish explorers in 1565 as an island glowing at night, are caused by dinoflagellate plankton blooms in the warm shallow waters — the same phenomenon that gave the island its name, Isla del Fuego, or Island of Fire.",
+    landmarks: [
+      { name: "Cambugahay Falls", type: "Tiered Waterfall", note: "Three-tiered waterfall with vivid turquoise pools in Lazi; natural swimming basins along a forest-lined river" },
+      { name: "Cantabon Cave", type: "Cave", note: "~800 m limestone cave system in Barangay Cantabon; underground river passage, stalactites, and stalagmites; the most visited cave on Siquijor" }
+    ],
     img_seed: "siquijor"
   },
 
