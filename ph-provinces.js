@@ -902,6 +902,10 @@ var PH_PROVINCES = [
     known_for: "Quitinday Green Hills",
     desc: "Albay's landscape is defined by two geological extremes — the near-perfect cone of Mayon Volcano rising to 2,463 metres above the coastal plain, and the rolling limestone mounds of Quitinday Green Hills, formed from ancient coral reef deposits compressed and uplifted by tectonic plate movement millions of years ago. Mayon is the Philippines' most active stratovolcano, having erupted over 52 times in recorded history, yet its forested slopes support 104 land vertebrate species including the Giant Golden-Crowned Flying Fox and the Philippine Warty Pig. The Albay Gulf and Ticao Pass shelter diverse cetaceans, with sperm whales, whale sharks, and dolphins sighted offshore during the dry season.",
     fact: "The Quitinday Green Hills of Camalig are a field of limestone mounds formed from ancient coral reef deposits compressed and uplifted by tectonic plate movement millions of years ago — prehistoric marine fossils can still be found embedded in the slopes, making the hills a visible record of the seafloor that once lay beneath this part of Luzon.",
+    landmarks: [
+      { name: "Mayon Volcano", type: "Active Stratovolcano", note: "Philippines' most active stratovolcano, 2,463 m; near-perfect cone above the Albay Gulf; 52+ recorded historical eruptions; forested slopes shelter the Giant Golden-crowned Flying Fox" },
+      { name: "Quitinday Green Hills", type: "Limestone Karst", note: "Field of limestone mounds in Camalig formed from ancient coral reef deposits uplifted by tectonic movement; prehistoric marine fossils embedded in the slopes" }
+    ],
     img_seed: "albay",
     img: "image/Quitinday Green Hills Albay.jpg"
   },
@@ -913,6 +917,10 @@ var PH_PROVINCES = [
     known_for: "Colasi Falls",
     desc: "Camarines Norte is the northernmost province of the Bicol Region, its landscape shaped by a Pacific-facing coastal plain bordering Lamon Bay and forested interior hills drained by rivers flowing east toward the Philippine Sea. In the municipality of Mercedes, Colasi Falls drops approximately 21 metres through three successive cascades in intact tropical forest, its catchment sustaining riparian habitat for migratory and resident birds. Offshore, the Calaguas Islands — a remote archipelago of 17 islands and islets — support a marine protected sanctuary whose reefs are among the most isolated along the Pacific coast of Luzon, though they face recurring Crown-of-Thorns starfish outbreaks that threaten live coral cover.",
     fact: "Colasi Falls in Mercedes drops approximately 21 metres in three successive cascades — the tiered structure is characteristic of waterfalls carved through alternating bands of harder and softer rock, where each resistant layer produces a distinct step in the stream's longitudinal profile as the river gradually incises through the hillside.",
+    landmarks: [
+      { name: "Colasi Falls", type: "Waterfall", note: "21 m three-cascade waterfall in Mercedes; tiered structure carved through alternating hard and soft rock bands; set within dense tropical forest" },
+      { name: "Calaguas Islands", type: "Island Group", note: "Remote archipelago of 17 islands and islets off the Pacific coast; fringing coral reefs and white-sand beaches; one of the most isolated island groups along Luzon's Pacific seaboard" }
+    ],
     img_seed: "camarines-norte",
     img: "image/Colasi Falls Camarines Norte.jpg"
   },
@@ -924,6 +932,11 @@ var PH_PROVINCES = [
     known_for: "Caramoan Islands",
     desc: "Camarines Sur is the largest province in Bicol, its landscape ranging from the limestone karst islets of the Caramoan Peninsula to the volcanic slopes of Mount Isarog, whose mossy forest harbours the endemic Bicol Shrew and a subspecies of the Philippine Scops Owl. The province's coastal lagoons and river deltas provide nesting habitat for sea turtles and Philippine Forest Turtles, while Lake Buhi shelters the Sinarapan (Mistichthys luzonensis) — the world's smallest commercially harvested fish at just 9–12 mm in length, endemic to this single lake. The Ragay Gulf coastline supports mangrove systems and seagrass beds that serve as nursery grounds for diverse marine species.",
     fact: "Caramoan National Park was established in 1938, making it one of the oldest protected areas in the Philippines — its 34.5 square kilometres of limestone karst islets, sea cliffs, and coral-rich waters on the Bicol Peninsula preserve cave-adapted wildlife and coastal ecosystems that have been under formal protection for nearly nine decades.",
+    landmarks: [
+      { name: "Caramoan Islands", type: "Limestone Karst / National Park", note: "34.5 km² of limestone karst islets, sea cliffs, and coral-rich waters on the Bicol Peninsula; Caramoan National Park established 1938 — one of the oldest protected areas in the Philippines" },
+      { name: "Mount Isarog", type: "Volcanic Mountain", note: "1,966 m potentially active stratovolcano above Naga City; 1,300+ vascular plant species; 143 bird species with 15 endemic; habitat of the endemic Isarog Shrewmouse and Isarog Shrew-rat" },
+      { name: "Lake Buhi", type: "Freshwater Lake", note: "1,800 ha lake at ~91 m elevation; sole habitat of the Sinarapan (Mistichthys luzonensis) — world's smallest commercially harvested fish, averaging 12 mm in length" }
+    ],
     img_seed: "camarines-sur",
     img: "image/Caramoan Islands Camrines Sur.jpg"
   },
@@ -935,6 +948,9 @@ var PH_PROVINCES = [
     known_for: "Binurong Point",
     desc: "Catanduanes is an island province off the Pacific coast of Bicol, positioned directly in the path of typhoons sweeping toward Luzon — one of the most typhoon-exposed landmasses in the world, averaging around five direct typhoon hits per year. Its rugged coastline is defined by volcanic rock formations like those of Binurong Point in Baras, where sheer cliffs drop directly into the Philippine Sea and strong updrafts draw raptors and seabirds to the exposed headland. The island's interior forests shelter endemic Bicol birds, while coastal wetlands and seagrass beds provide habitat for nesting marine turtles and dugongs.",
     fact: "Binurong Point in Baras sits atop volcanic rock formations where sheer cliffs plunge directly into the Philippine Sea — the exposed headland funnels strong coastal updrafts that attract raptors including the Philippine hawk-eagle and white-collared kingfisher, making it one of the most accessible seacliff bird-watching sites on Catanduanes.",
+    landmarks: [
+      { name: "Binurong Point", type: "Sea Cliff", note: "Volcanic rock headland in Baras where sheer cliffs plunge directly into the Philippine Sea; exposed coastal updrafts attract raptors and seabirds; one of the most accessible seacliff viewpoints on Catanduanes" }
+    ],
     img_seed: "catanduanes",
     img: "image/Binurong point Catanduanes.jpg"
   },
@@ -946,6 +962,10 @@ var PH_PROVINCES = [
     known_for: "Catandayagan Falls",
     desc: "Masbate is a three-island province sitting at the junction of the Sibuyan Sea, Visayan Sea, and Ticao Pass, its strategic position making it one of the most important cetacean migration corridors in the Philippines. The nutrient-rich Ticao Pass draws blue whales, Bryde's whales, and spinner dolphins and has been documented as one of Southeast Asia's most productive whale-watching straits. On the western shoreline of Ticao Island, Catandayagan Falls drops approximately 30 metres from a limestone sea cliff directly into the Masbate Pass, its source a small freshwater lake hidden within dense forest at the top of the escarpment.",
     fact: "Catandayagan Falls on Ticao Island is among an estimated 40 waterfalls worldwide that empty directly into the ocean — its cascade plunges approximately 30 metres from the edge of a limestone sea cliff straight into the Masbate Pass, fed by a freshwater lake concealed within dense forest on top of the escarpment.",
+    landmarks: [
+      { name: "Catandayagan Falls", type: "Sea-cliff Waterfall", note: "~30 m waterfall on Ticao Island that drops from a limestone sea cliff directly into Masbate Pass; fed by a freshwater lake within forest on the escarpment; one of ~40 waterfalls worldwide that empty directly into the ocean" },
+      { name: "Ticao Pass", type: "Marine Strait", note: "Nutrient-rich tidal passage between Ticao Island and Luzon; documented blue whales, Bryde's whales, whale sharks, and spinner dolphins; one of Southeast Asia's most productive cetacean corridors" }
+    ],
     img_seed: "masbate",
     img: "image/Catandayagan Falls Ticao Island Masbate.jpg"
   },
@@ -957,6 +977,11 @@ var PH_PROVINCES = [
     known_for: "Tikling Island",
     desc: "Sorsogon occupies the southernmost tip of Luzon, its landscape shaped by the active Bulusan Volcano and its crater lake, and its waters at Donsol Bay hosting the world's largest known seasonal aggregation of whale sharks. Off the coast of Matnog, Tikling Island's beach glows pink from the accumulated shells of foraminifera — microscopic marine organisms whose calcium carbonate remains wash ashore and blend with the fine white coral sand. The island's northern shore is fringed by dense mangrove forest, and its surrounding reefs serve as breeding habitat for diverse reef fish. Sorsogon's coastline opens onto the San Bernardino Strait, one of the most powerful tidal passages in the archipelago.",
     fact: "The pink hue of Tikling Island's beach in Matnog comes from the accumulated shells of foraminifera — microscopic single-celled marine organisms that build calcium carbonate shells tinted red and pink, which break down over time and mix with the white coral sand to give the beach its distinctive colour.",
+    landmarks: [
+      { name: "Bulusan Volcano", type: "Active Stratovolcano", note: "1,565 m; fourth most active volcano in the Philippines; 300 m wide summit crater; within Bulusan Volcano National Park (3,672 ha)" },
+      { name: "Tikling Island", type: "Pink Sand Beach", note: "Matnog, Sorsogon; distinctive pink hue from accumulated foraminifera shells mixed with white coral sand; mangrove forest on the island's northern shore" },
+      { name: "Donsol Bay", type: "Marine Aggregation Site", note: "World's largest known seasonal aggregation of whale sharks; primary season December–June when plankton blooms draw feeding sharks to the Sorsogon coast" }
+    ],
     img_seed: "sorsogon",
     img: "image/Tikling Island Sorsogon.jpg"
   },
