@@ -155,6 +155,11 @@ var PH_PROVINCES = [
     protected_areas: [
       { name: "Batanes Protected Landscape and Seascape", type: "Protected Landscape & Seascape", pa_id: "batanes" }
     ],
+    landmarks: [
+      { name: "Mount Iraya", type: "Active Volcano", note: "PHIVOLCS-monitored active stratovolcano, 1,085 m, Batan Island; cloud forest on upper slopes; one of three volcanoes in the Batanes island group" },
+      { name: "Valugan Boulder Beach", type: "Boulder Beach", note: "Pacific-facing shoreline in northern Basco strewn with volcanic boulders averaging 1–2 m in diameter; displaced onto shore by typhoon swells" },
+      { name: "Marlboro Country (Rakuh-a-Payaman)", type: "Plateau Pasturelands", note: "Open rolling pasturelands on Sabtang Island's western plateau with sea cliffs dropping to the Pacific; Rakuh-a-Payaman is the Ivatan name" }
+    ],
     conservation_note: "The Batanes Islands serve as a critical migratory bird flyway between East Asia and the Philippines; their deep marine waters support some of the last remaining pink and red coral beds in Philippine territory.",
     img_seed: "batanes",
     img: "image/Batanes Light House .jpg"
@@ -174,6 +179,10 @@ var PH_PROVINCES = [
     },
     protected_areas: [
       { name: "Palaui Island Protected Landscape and Seascape", type: "Protected Landscape & Seascape", pa_id: "palaui-island" }
+    ],
+    landmarks: [
+      { name: "Callao Cave", type: "Limestone Cave", note: "Seven-chamber limestone cave in Peñablanca; main chamber lit by a natural ceiling skylight; site where Homo luzonensis fossil bones were recovered, described in a 2019 Nature paper" },
+      { name: "Palaui Island", type: "Volcanic Island", note: "Pristine volcanic island off Santa Ana; boulder beaches, fringing coral reefs, and coastal forest; part of Palaui Island Protected Landscape and Seascape" }
     ],
     conservation_note: "Palaui Island off Santa Ana — designated under R.A. 11038 (2018) — protects pristine coral reefs, mangroves, and volcanic rock formations at the northeastern tip of Luzon where the Pacific meets the Babuyan Channel.",
     img_seed: "cagayan",
@@ -200,6 +209,10 @@ var PH_PROVINCES = [
     protected_areas: [
       { name: "Northern Sierra Madre Natural Park", type: "Natural Park", pa_id: "northern-sierra-madre" }
     ],
+    landmarks: [
+      { name: "Sta. Victoria Caves", type: "Limestone Cave", note: "Limestone cave complex within Fuyot Springs National Park, Ilagan City; 12+ caves with 3 open to visitors; subterranean waterfalls and sparkling crystalline rock formations" },
+      { name: "Dibulo Falls", type: "Waterfall", note: "~100 m single-drop waterfall in Barangay Dibulo, Dinapigue; tallest waterfall in Isabela; fed by Sierra Madre streams; 15–20 minute forest trek from trailhead" }
+    ],
     conservation_note: "Northern Sierra Madre Natural Park (359,486 ha, R.A. 9125, 2001) is the largest protected area in the Philippines and shelters a critically endangered Philippine Crocodile breeding population in the San Mariano river system — one of the last confirmed sites in northern Luzon.",
     img_seed: "isabela",
     img: "image/Sta. Victoria Caves Isabela.jpg"
@@ -219,6 +232,10 @@ var PH_PROVINCES = [
     protected_areas: [
       { name: "Mount Pulag Protected Landscape", type: "Protected Landscape", pa_id: "mount-pulag" },
       { name: "Casecnan Protected Landscape", type: "Protected Landscape", pa_id: "casecnan" }
+    ],
+    landmarks: [
+      { name: "Capisaan Cave System", type: "Cave System", note: "4.2 km limestone cave system in Kasibu; fifth-longest cave in the Philippines; nine entrances, subterranean river, and formations including stalactites, stalagmites, soda straws, and helictites" },
+      { name: "Imugan Falls", type: "Waterfall", note: "35-foot (10.7 m) cascade in Santa Fe at the foot of the Caraballo Mountains; rock formations rim a shallow pool at the base" }
     ],
     conservation_note: "Nueva Vizcaya forms the headwaters of the Magat River — the largest tributary of the Cagayan River by discharge — making its upland forests critical to irrigation and flood control for farming communities throughout the Cagayan Valley.",
     img_seed: "nueva-vizcaya",
@@ -243,6 +260,10 @@ var PH_PROVINCES = [
     ],
     protected_areas: [
       { name: "Quirino Protected Landscape", type: "Protected Landscape", pa_id: "quirino-pl" }
+    ],
+    landmarks: [
+      { name: "Aglipay Crystal Caves", type: "Limestone Cave", note: "Multi-chamber limestone cave system in Aglipay; stalactites, stalagmites, and crystal formations; one of the principal cave attractions in the Quirino Protected Landscape area" },
+      { name: "Siitan River", type: "River / Whitewater", note: "Major tributary of the Cagayan River through the Quirino Protected Landscape; known for whitewater rapids through intact old-growth rainforest canopy" }
     ],
     conservation_note: "The Quirino Protected Landscape (175,943 ha, Proclamation 548, 2004) anchors the central Sierra Madre Biodiversity Corridor — recording at least 41 threatened species and serving as one of the last Philippine Eagle strongholds in the Cagayan Valley region.",
     img_seed: "quirino",
