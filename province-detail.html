@@ -307,6 +307,44 @@
   font-weight: 500;
 }
 
+/* ── Natural Landmarks ── */
+.art-landmark-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  max-width: 680px;
+}
+.art-landmark-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.07);
+  padding: 0.9rem 1.1rem;
+}
+.art-landmark-type {
+  font-size: 0.5rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(201,168,76,0.3);
+  padding: 0.18rem 0.5rem;
+  display: inline-block;
+  margin-bottom: 0.55rem;
+}
+.art-landmark-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 0.35rem;
+}
+.art-landmark-note {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .art-landmark-grid { grid-template-columns: 1fr; max-width: 100%; }
+}
+
 /* ── Wildlife Spotlight ── */
 .art-wildlife-grid {
   display: grid;
@@ -601,6 +639,7 @@ a.art-pa-link:hover {
       <a href="#overview">Overview</a>
       <a href="#at-a-glance">At a Glance</a>
       <a href="#natural-geography">Geography</a>
+      <a href="#landmarks">Landmarks</a>
       <a href="#wildlife">Wildlife</a>
       <a href="#flora">Flora</a>
       <a href="#protected-areas">Protected Areas</a>
@@ -634,6 +673,13 @@ a.art-pa-link:hover {
       <span class="art-section-label">Natural Geography</span>
       <h2>Land &amp; Water</h2>
       <div class="art-geo-grid" id="d-geo-grid"></div>
+    </section>
+
+    <!-- Natural Landmarks -->
+    <section class="art-section" id="landmarks">
+      <span class="art-section-label">Natural Landmarks</span>
+      <h2>Places to Visit</h2>
+      <div class="art-landmark-grid" id="d-landmark-grid"></div>
     </section>
 
     <!-- Wildlife Spotlight -->
@@ -834,6 +880,23 @@ a.art-pa-link:hover {
   } else {
     document.getElementById('natural-geography').style.display = 'none';
     document.querySelector('#toc-nav a[href="#natural-geography"]').style.display = 'none';
+  }
+
+  // ── Natural Landmarks ──
+  var landmarkGrid = document.getElementById('d-landmark-grid');
+  if (province.landmarks && province.landmarks.length) {
+    province.landmarks.forEach(function (lm) {
+      var div = document.createElement('div');
+      div.className = 'art-landmark-card';
+      div.innerHTML =
+        '<div class="art-landmark-type">' + lm.type + '</div>' +
+        '<div class="art-landmark-name">' + lm.name + '</div>' +
+        '<div class="art-landmark-note">' + lm.note + '</div>';
+      landmarkGrid.appendChild(div);
+    });
+  } else {
+    document.getElementById('landmarks').style.display = 'none';
+    document.querySelector('#toc-nav a[href="#landmarks"]').style.display = 'none';
   }
 
   // ── Wildlife Spotlight ──
