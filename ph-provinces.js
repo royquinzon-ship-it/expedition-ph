@@ -284,6 +284,10 @@ var PH_PROVINCES = [
       major_river: "Abra River (179 km)"
     },
     conservation_note: "The Abra River drains the western Cordillera highlands toward the Ilocos lowlands — its upper watershed forests are among the last intact highland-to-coast forest corridors on the western slope of the Cordillera range.",
+    landmarks: [
+      { name: "Kaparkan Falls", type: "Travertine Waterfall", note: "Multi-tiered travertine cascade in Tineg; calcium carbonate terraces built over centuries by mineral-rich mountain water cascading 530 m to the Tineg River; one of the few travertine formations in the Philippines" },
+      { name: "Kili Falls", type: "Waterfall & Hot Spring", note: "Waterfall in Tubo where a hot spring meets an icy cold river at the base; natural wading pool and small cave at the basin; remote forest setting in the western Cordillera foothills" }
+    ],
     img_seed: "abra",
     img: "image/Kaparkan Falls Abra.jpg"
   },
@@ -301,6 +305,10 @@ var PH_PROVINCES = [
       major_river: "Apayao River"
     },
     conservation_note: "Apayao is the least densely-populated province in the Philippines — its vast river basin forests remain largely intact, making it one of the most ecologically significant yet least-studied landscapes in northern Luzon.",
+    landmarks: [
+      { name: "Lussok Cave", type: "Underground River Cave", note: "Seven-chamber cave in Luna carved through limestone by the Lussok River; ~100 m navigable by boat on calm azure waters; stalactites, stalagmites, and crystal formations" },
+      { name: "Apayao-Abulug River", type: "River System", note: "9th largest river system in the Philippines by watershed; limestone karst gorges through the Cordillera interior; vast old-growth forest corridor along its banks" }
+    ],
     img_seed: "apayao",
     img: "image/Lussok Cave.jpeg"
   },
@@ -321,6 +329,10 @@ var PH_PROVINCES = [
       { name: "Mount Pulag Protected Landscape", type: "Protected Landscape", pa_id: "mount-pulag" }
     ],
     conservation_note: "Mount Pulag, Luzon's highest peak at 2,922 metres, is sacred to the Ibaloi and Kalanguya peoples — its summit hosts rare dwarf bamboo grasslands above a cloud forest belt, a landscape with no parallel elsewhere in the Philippines.",
+    landmarks: [
+      { name: "Mount Pulag", type: "Protected Mountain", note: "2,922 m — highest peak in Luzon; rare dwarf bamboo summit grasslands above a cloud forest belt; sea of clouds at dawn; within Mount Pulag National Park" },
+      { name: "Ambongdolan River", type: "River", note: "Clear deep-green river in Tublay fed by cold mountain springs; flows past the mouths of Paterno and Bengaongao Caves; one of the cleanest river systems in the Cordillera" }
+    ],
     img_seed: "benguet",
     img: "image/Ambongdolan River Benguet.jpg"
   },
@@ -337,6 +349,11 @@ var PH_PROVINCES = [
       major_river: "Ibulao River and Magat River"
     },
     conservation_note: "The Rice Terraces of the Philippine Cordilleras — five clusters in Ifugao inscribed as a UNESCO World Heritage Site in 1995 — represent over 2,000 years of continuous Ifugao agricultural engineering, sustaining living ecosystems of flooded paddies, cloud forest, and terraced hillsides as a single unified cultural landscape.",
+    landmarks: [
+      { name: "Tappiyah Falls", type: "Waterfall", note: "Tall waterfall near Batad village accessible via trek through Banaue rice terraces and cloud forest; set within a limestone gorge below mossy ridgelines" },
+      { name: "Mount Napulawan", type: "Mountain", note: "2,642 m; old-growth mossy forest on the upper slopes; critical Philippine Eagle habitat; among the highest and least-disturbed peaks in the Cordillera Central" },
+      { name: "Hapao Birdwatching Site", type: "Birdwatching Site", note: "Alfonso Lista Birdwatching Site in Hungduan; rice paddies and river banks of the Hapao-Baang-Nungulunan UNESCO terraces cluster attract resident and migratory birds" }
+    ],
     img_seed: "ifugao",
     img: "image/Banaue Rice Terreces.jpg"
   },
@@ -356,6 +373,10 @@ var PH_PROVINCES = [
       { name: "Banao Protected Landscape", type: "Protected Landscape", pa_id: "banao" }
     ],
     conservation_note: "The Chico River — referred to as the 'River of Life' by the Kalinga people — was the subject of a landmark 1970s indigenous-led resistance that successfully halted a World Bank-funded dam project, one of the earliest victories for indigenous rights and environmental protection in Philippine history.",
+    landmarks: [
+      { name: "Chico River", type: "River Corridor", note: "233 km — longest tributary of the Cagayan River; white-water rafting through basalt gorges from Luplupa to Tinglayan on Class II–III rapids; corridor of towering mountains and old-growth rainforest through Kalinga" },
+      { name: "Balbalasang-Balbalan National Park", type: "National Park", note: "1,338 ha in Balbalan municipality; elevations 700–2,400 m; one of the least-disturbed protected areas in Luzon; Philippine Eagle and Whiskered Pitta habitat" }
+    ],
     img_seed: "kalinga",
     img: "image/Chicko River Kalinga.jpg"
   },
@@ -376,6 +397,12 @@ var PH_PROVINCES = [
       { name: "Mount Data National Park", type: "National Park", pa_id: "mount-data" }
     ],
     conservation_note: "Mount Data National Park straddles the Mountain Province–Benguet border along the Halsema Highway — its mossy montane forest marks the watershed divide between rivers draining east into the Cagayan Valley and west into the Ilocos lowlands.",
+    landmarks: [
+      { name: "Sumaguing Cave", type: "Cave", note: "One of the largest cave systems in Sagada; 150+ m deep with vast stalactite chambers and underground pools; connects to Lumiang Cave via ~500 m subterranean passage" },
+      { name: "Lumiang Cave", type: "Burial Cave", note: "Entrance stacked with ~100 ancient coffins rising 9 layers high — oldest estimated at 500 years old; Kankanaey burial tradition still practised; connects underground to Sumaguing Cave" },
+      { name: "Blue Soil Hills", type: "Geological Formation", note: "Copper sulfate–stained rolling hills (Kaman-utek, meaning \"like a brain\" in Bontoc dialect) in Bontoc municipality; distinctive bluish-grey colour from copper oxidation; one of the only natural copper mineral soil exposures in the Philippines" },
+      { name: "Bomod-ok Falls", type: "Waterfall", note: "~200 feet (~60 m) waterfall in Banga-an accessible via trek through rice terraces; \"bomod-ok\" means \"big\" in Bontoc; among the most voluminous waterfalls in the Cordillera" }
+    ],
     img_seed: "mountain-province",
     img: "image/Blue Soil Hills Mountain Province.jpg"
   },
