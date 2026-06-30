@@ -400,6 +400,10 @@ var PH_PROVINCES = [
     protected_areas: [
       { name: "Aurora Memorial National Park", type: "National Park", pa_id: "aurora-memorial" }
     ],
+    landmarks: [
+      { name: "Millennium Balete Tree", type: "Ancient Tree", note: "Ficus balete in Barangay Quirino, Maria Aurora; carbon-dated 400–600 years; trunk too wide for dozens of people linking hands to encircle; freshwater spring wells up naturally at the roots" },
+      { name: "Ditumabo Falls (Mother Falls)", type: "Waterfall", note: "42 m (140 ft) waterfall in Barangay Ditumabo, San Luis; 30 m wide basin forms a natural cold swimming pool; fed by Sierra Madre streams" }
+    ],
     conservation_note: "Aurora Memorial National Park (est. 1949, Proclamation 130) shelters the Philippine Eagle in the Sierra Madre's old-growth forest — one of the few mainland Luzon sites where the eagle's presence within a protected area has been specifically documented.",
     img_seed: "aurora",
     img: "image/Balete Tree , Balete Park Aurora.jpg"
@@ -420,6 +424,10 @@ var PH_PROVINCES = [
     protected_areas: [
       { name: "Bataan Natural Park", type: "Natural Park", pa_id: "bataan-natural" }
     ],
+    landmarks: [
+      { name: "Mount Natib", type: "Volcanic Caldera", note: "Potentially active stratovolcano, 1,253 m, northern Bataan; 6×7 km caldera open to the northwest; five geothermal spring fields (Asin, Mamot, Tigulangin, Uyong, Paipit) with temperatures reaching 56°C" },
+      { name: "Pantingan Peak", type: "Mountain Summit", note: "1,388 m summit of the Mariveles Mountain Range, southern tip of Bataan; highest point in the province; old-growth dipterocarp and mossy forest within Bataan Natural Park" }
+    ],
     conservation_note: "Bataan Natural Park (18,335 ha, Proclamation 24, 1945) covers the Mariveles Mountains at the tip of the Bataan Peninsula — its forest watershed filters runoff into Manila Bay and shelters endemic species in one of the Philippines' most historically significant landscapes.",
     img_seed: "bataan",
     img: "image/Pantingan Peak  Bataan.jpg"
@@ -436,6 +444,9 @@ var PH_PROVINCES = [
       area: "2,783.69 km²",
       major_river: "Pampanga River"
     },
+    landmarks: [
+      { name: "Biak-na-Bato Cave Complex", type: "Limestone Caves", note: "100+ limestone caves carved by the Madlum River through karst terrain, San Miguel; includes Bahay Paniki Cave (House of Bats); \"Biak-na-Bato\" means \"split boulder\"" }
+    ],
     conservation_note: "Bulacan's lowlands are drained by the lower Pampanga River basin before it reaches Manila Bay — the Candaba Swamp in its northern lowlands is one of the last significant freshwater wetland habitats remaining in the heavily developed Central Luzon plain.",
     img_seed: "bulacan",
     img: "image/Biak na Bato Bulacan.jpg"
@@ -454,6 +465,9 @@ var PH_PROVINCES = [
     },
     protected_areas: [
       { name: "Pantabangan–Carranglan Watershed Forest Reserve", type: "Watershed Forest Reserve", pa_id: "pantabangan" }
+    ],
+    landmarks: [
+      { name: "Minalungao National Park", type: "Limestone Gorge", note: "Peñaranda River gorge with emerald-green waters threading beneath limestone walls up to 16 m high, General Tinio; 2,018 ha national park established 1967" }
     ],
     conservation_note: "The Pantabangan–Carranglan Watershed Forest Reserve (84,500 ha, Proclamation 561, 1969) protects the catchment feeding the Pantabangan Reservoir — which irrigates farmland across 24 municipalities, directly sustaining Nueva Ecija's role as the Rice Granary of the Philippines.",
     img_seed: "nueva-ecija",
@@ -476,6 +490,10 @@ var PH_PROVINCES = [
       { name: "Mount Arayat National Park", type: "National Park", pa_id: "mount-arayat" },
       { name: "Mount Pinatubo Natural Park", type: "Natural Park", pa_id: "mount-pinatubo" }
     ],
+    landmarks: [
+      { name: "Tutulari Avatar Gorge", type: "Rock Canyon", note: "Narrow moss-covered canyon in Porac within Aeta ancestral domain (Inarraro); 500 m gorge trail through dripping rock walls and hanging vegetation; shaped by post-Pinatubo volcanic geology; \"tutulu\" means \"dripping\" in Kapampangan" },
+      { name: "Mount Arayat", type: "Isolated Volcano", note: "Isolated Pleistocene volcanic cone, 1,026 m, rising from the flat Pampanga plain; sky-island forest separated from the main Luzon ranges; within Mount Arayat National Park" }
+    ],
     conservation_note: "Mount Arayat stands as an isolated Pleistocene volcano rising from the flat Pampanga plain — its 3,715-hectare forest is the only significant upland habitat in an otherwise entirely low-lying agricultural province.",
     img_seed: "pampanga",
     img: "image/Tutulari Avatar Gorge  Pampanga.jpg"
@@ -494,6 +512,9 @@ var PH_PROVINCES = [
     },
     protected_areas: [
       { name: "Mount Pinatubo Natural Park", type: "Natural Park", pa_id: "mount-pinatubo" }
+    ],
+    landmarks: [
+      { name: "Ubod Falls", type: "Waterfall", note: "Approximately 40 m multi-tiered waterfall in San Clemente, deep in the Zambales foothills; accessed via river trekking through dense forest" }
     ],
     conservation_note: "The 1991 Pinatubo eruption deposited lahar flows across Tarlac's river valleys, temporarily reshaping the province's hydrology and cooling global temperatures by 0.5°C — the largest volcanic climate cooling event since Krakatoa in 1883.",
     img_seed: "tarlac",
@@ -515,6 +536,11 @@ var PH_PROVINCES = [
     protected_areas: [
       { name: "Subic Bay Forest Reserve", type: "Wildlife Sanctuary", pa_id: "subic-forest" },
       { name: "Mount Pinatubo Natural Park", type: "Natural Park", pa_id: "mount-pinatubo" }
+    ],
+    landmarks: [
+      { name: "Lake Pinatubo", type: "Crater Lake", note: "2.5 km diameter crater lake formed after the 1991 Pinatubo eruption; 95–115 m deep; turquoise-green hue from dissolved volcanic minerals; Botolan, Zambales" },
+      { name: "Camara Island", type: "Coral Island / Sandbar", note: "Twin coral-sand islands off Pundaquit, San Antonio; connected at low tide across a shared sandbar; fringing coral reefs with documented reef fish diversity" },
+      { name: "Mount Tapulao", type: "Mountain Peak", note: "2,044 m summit of the Zambales Mountains, Palauig; highest peak in the range; pine forest on upper slopes above largely degraded terrain" }
     ],
     conservation_note: "Mount Tapulao (2,044 m), the highest peak in the Zambales Mountains, harbours pine forests above an otherwise largely degraded mountain range — its upper slopes retain biodiversity amid a landscape significantly altered by decades of chromite mining.",
     img_seed: "zambales",
