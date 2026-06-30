@@ -575,6 +575,10 @@ var PH_PROVINCES = [
     protected_areas: [
       { name: "Taal Volcano Protected Landscape", type: "Protected Landscape", pa_id: "taal-volcano" }
     ],
+    landmarks: [
+      { name: "Taal Volcano", type: "Active Volcano / Nested Caldera", note: "Active volcano on Volcano Island in Taal Lake; 39 recorded historical eruptions; contains Main Crater Lake with Vulcan Point — a unique nested structure: island within a lake within a lake within an island; Philippines' second most active volcano" },
+      { name: "Mount Maculot", type: "Mountain Summit", note: "~947 m basalt rockpile summit above the southern shore of Taal Lake, Cuenca; iconic silhouette visible from across the Taal Caldera" }
+    ],
     conservation_note: "The Tawilis (Sardinella tawilis) — the world's only freshwater sardine, endemic to Taal Lake — was assessed as Endangered on the IUCN Red List in 2019; overfishing pressure in the small lake leaves it with no alternative habitat should the lake ecosystem degrade.",
     img_seed: "batangas",
     img: "image/Mt Maculot Batangas.jpg"
@@ -604,6 +608,9 @@ var PH_PROVINCES = [
     ],
     protected_areas: [
       { name: "Mounts Palay-Palay–Mataas-na-Gulod Protected Landscape", type: "Protected Landscape", pa_id: "palay-palay" }
+    ],
+    landmarks: [
+      { name: "Malibiclibic Falls", type: "Waterfall", note: "Multi-tier waterfall in General Emilio Aguinaldo; cascades through forested slopes near the foot of Mount Mataas na Gulod; fed by rivers draining the southern Cavite highlands" }
     ],
     conservation_note: "The Mounts Palay-Palay–Mataas-na-Gulod Protected Landscape is Cavite's last lowland dipterocarp forest — a 3,973-hectare biodiversity refuge for over 80 bird species hemmed in by one of Southeast Asia's most rapidly urbanising coastlines.",
     img_seed: "cavite",
@@ -637,6 +644,10 @@ var PH_PROVINCES = [
       { name: "Mounts Banahaw–San Cristobal Protected Landscape", type: "Protected Landscape", pa_id: "banahaw-san-cristobal" },
       { name: "Pagsanjan Gorge National Park", type: "National Park", pa_id: "pagsanjan-gorge" }
     ],
+    landmarks: [
+      { name: "Pagsanjan Falls", type: "Waterfall / Gorge", note: "Approximately 90 m three-tiered waterfall in Cavinti; accessed by paddling 1.5 km upstream through a limestone and marble gorge; Devil's Cave lies behind the main falls" },
+      { name: "Mount Makiling", type: "Forest Reserve", note: "Dormant volcanic massif straddling Laguna and Quezon; administered by UP Los Baños since 1910; ASEAN Heritage Park designated 2013; over 1,000 plant species documented with 28% Philippine-endemic" }
+    ],
     conservation_note: "Laguna de Bay — the Philippines' largest lake at approximately 949 km² — supports a major commercial inland fishery yet receives untreated wastewater from Metro Manila's southern urbanised fringe; water quality degradation remains the province's most critical environmental pressure.",
     img_seed: "laguna",
     img: "image/Pagsanjan Falls Laguna.jpg"
@@ -669,6 +680,10 @@ var PH_PROVINCES = [
       { name: "Quezon Protected Landscape", type: "Protected Landscape", pa_id: "quezon-pl" },
       { name: "Mounts Banahaw–San Cristobal Protected Landscape", type: "Protected Landscape", pa_id: "banahaw-san-cristobal" }
     ],
+    landmarks: [
+      { name: "Mount Banahaw", type: "Active Volcanic Complex", note: "2,170 m active volcanic massif on the Laguna-Quezon boundary; type locality for multiple Luzon-endemic small mammals; mossy forest on summit slopes; within Mounts Banahaw–San Cristobal Protected Landscape" },
+      { name: "Jomalig Island", type: "Pacific Island / Wetland", note: "Remote island 25 km off the Quezon Pacific coast; designated Key Biodiversity Area; wetlands shelter the Philippine Duck and over 25 migratory shorebird species" }
+    ],
     conservation_note: "The Polillo Archipelago is a BirdLife Key Biodiversity Area harbouring seven endemic bird subspecies, the Gray's Monitor Lizard, and the Giant Golden-crowned Flying Fox — yet no part of the archipelago is currently gazetted under the NIPAS system, leaving its endemic wildlife without formal protection.",
     img_seed: "quezon",
     img: "image/Jomalig Island Quezon.jpg"
@@ -696,6 +711,9 @@ var PH_PROVINCES = [
     ],
     protected_areas: [
       { name: "Upper Marikina River Basin Protected Landscape", type: "Protected Landscape", pa_id: "upper-marikina" }
+    ],
+    landmarks: [
+      { name: "Masungi Georeserve", type: "Karst Limestone Forest", note: "400+ ha restored karst limestone forest in Tanay; type locality for the endemic land snail Hypselostoma latispira masungiensis (described 2020); documents the Northern Luzon Giant Cloud Rat within 50 km of Metro Manila" }
     ],
     conservation_note: "The Upper Marikina River Basin Protected Landscape (26,125 ha, Proclamation 296, 2011) is the last significant forest watershed above Metro Manila — its intact forest moderates flooding in the Marikina–Pasig floodplain, protecting millions of residents downstream.",
     img_seed: "rizal",
@@ -726,6 +744,10 @@ var PH_PROVINCES = [
     ],
     protected_areas: [
       { name: "Marinduque Wildlife Sanctuary", type: "Wildlife Sanctuary", pa_id: "marinduque-ws" }
+    ],
+    landmarks: [
+      { name: "Kawa Kawa Falls", type: "Waterfall", note: "Three-cascade waterfall in Sta. Cruz; centuries of hydraulic action carved deep rounded plunge pools up to 10 m across and 4 m deep in the bedrock; \"Kawa Kawa\" means cooking cauldron in Filipino" },
+      { name: "Malbog Sulfur Springs", type: "Hot Spring", note: "Solfataric hot springs at the foot of Mount Malindig, Buenavista; warm bluish-white sulfuric water fed by volcanic heat beneath the stratovolcano" }
     ],
     conservation_note: "The Boac River drainage still carries the ecological legacy of the 1996 Marcopper copper mine tailings spill — one of the worst mining environmental disasters in Philippine history — and while visible contamination has decreased, heavy metal accumulation in sediments persists decades later.",
     img_seed: "marinduque",
@@ -759,6 +781,10 @@ var PH_PROVINCES = [
       { name: "Mounts Iglit–Baco Natural Park", type: "Natural Park", pa_id: "iglit-baco" },
       { name: "Apo Reef Natural Park", type: "Natural Park", pa_id: "apo-reef" }
     ],
+    landmarks: [
+      { name: "Apo Reef", type: "Coral Reef System", note: "34 km² coral reef system in the Mindoro Strait; second-largest contiguous coral reef in the world after the Great Barrier Reef; within Apo Reef Natural Park" },
+      { name: "Mount Baco", type: "Mountain Summit", note: "2,488 m summit within Mounts Iglit–Baco Natural Park; highest peak in Occidental Mindoro; core highland habitat of the Tamaraw" }
+    ],
     conservation_note: "Mounts Iglit–Baco Natural Park is the only secure refuge of the Tamaraw (Bubalus mindorensis) — a dwarf buffalo found nowhere else on Earth; the species has been recovering at roughly 5% per year since active protection began, but encroachment on park boundaries from agricultural expansion remains a persistent threat.",
     img_seed: "occidental-mindoro",
     img: "image/Mt. Iglit Oc. Mindoro.jpg"
@@ -788,6 +814,10 @@ var PH_PROVINCES = [
     ],
     protected_areas: [
       { name: "Naujan Lake National Park", type: "National Park", pa_id: "naujan-lake" }
+    ],
+    landmarks: [
+      { name: "Mount Halcon", type: "Mountain Peak / KBA", note: "2,585 m summit, highest peak in the MIMAROPA region; Key Biodiversity Area spanning 509 km²; harbours 16 threatened endemic species including the Mindoro Bleeding-heart and Mindoro Imperial Pigeon" },
+      { name: "Naujan Lake", type: "Freshwater Lake", note: "Philippines' fourth-largest freshwater lake at the eastern foothills of Mount Halcon; 3,448 ha; National Park; critical wintering habitat for migratory waterfowl" }
     ],
     conservation_note: "Puerto Galera's coral reefs in northern Oriental Mindoro — documented with over 750 reef fish species within a 3-kilometre radius — are part of the Verde Island Passage, the Earth's most fish-species-dense marine strait; increasing dive tourism and coastal development directly threaten this globally significant reef.",
     img_seed: "oriental-mindoro",
@@ -822,6 +852,11 @@ var PH_PROVINCES = [
       { name: "Tubbataha Reefs Natural Park", type: "UNESCO Natural World Heritage Site", pa_id: "tubbataha-reef" },
       { name: "Mount Mantalingahan Protected Landscape", type: "Protected Landscape", pa_id: "mount-mantalingahan" }
     ],
+    landmarks: [
+      { name: "Puerto Princesa Subterranean River", type: "Underground River", note: "UNESCO World Heritage Site; 8.2 km navigable underground river through karst chambers; lower reach is tidal and brackish, emptying directly into the sea at St. Paul Bay" },
+      { name: "Tubbataha Reefs", type: "Coral Atoll", note: "UNESCO World Heritage Site in the Sulu Sea; two remote coral atolls; nesting ground for hawksbill and green sea turtles; documented manta ray and whale shark aggregations" },
+      { name: "Bacuit Archipelago (El Nido)", type: "Karst Island Cluster", note: "45 limestone karst islands north of El Nido town; oldest rock formations date to 270 million years ago; vertical cliffs drop into hidden lagoons formed by collapsed limestone chambers" }
+    ],
     conservation_note: "Palawan holds two UNESCO World Heritage Sites — the Puerto Princesa Subterranean River and Tubbataha Reefs — and houses the largest remaining Philippine Cockatoo population; rapid expansion of nickel mining concessions across the island's interior is the most immediate threat to its ecological integrity.",
     img_seed: "palawan",
     img: "image/Palawan Karst.jpg"
@@ -849,6 +884,9 @@ var PH_PROVINCES = [
     ],
     protected_areas: [
       { name: "Mount Guiting-Guiting Natural Park", type: "Natural Park", pa_id: "guiting-guiting" }
+    ],
+    landmarks: [
+      { name: "Mount Guiting-Guiting", type: "Granite Mountain", note: "2,058 m granite massif on Sibuyan Island; jagged ultramafic ridgeline; 700+ vascular plant species documented with ~54 endemic to Sibuyan Island; one of the most technically demanding treks in the Philippines" }
     ],
     conservation_note: "Sibuyan Island — called the Galápagos of Asia — has been geologically isolated for millions of years, producing extraordinary endemism; Mount Guiting-Guiting Natural Park (15,235 ha) is the island's only gazetted protected area, leaving significant lowland forest outside any formal protection.",
     img_seed: "romblon",
