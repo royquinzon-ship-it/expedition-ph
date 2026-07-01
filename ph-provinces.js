@@ -1164,6 +1164,11 @@ var PH_PROVINCES = [
     known_for: "Volcanoes & Waterfalls",
     desc: "Biliran is a small island province north of Leyte, its compact territory dominated by the forested slopes of Mount Biliran — an active volcano — and a series of dramatic waterfalls cascading through dense forest into coastal streams that shelter endemic freshwater species. The island's compact geography means that a short hike from the coast brings a traveller into cloud forest at 1,301 metres, making it one of the most vertically dramatic small provinces in the Philippines. Biliran's surrounding waters in the Visayan Sea and Carigara Bay are important fishing grounds, and its coastal mangroves provide critical nursery habitat for the local fishery.",
     fact: "The Biliran volcano complex contains at least four volcanic vents with active geothermal energy potential; the Philippine government has developed a geothermal energy facility on the island that provides a significant portion of Biliran's electricity from renewable volcanic heat.",
+    landmarks: [
+      { name: "Mount Suiro (Biliran Volcano)", type: "Stratovolcano", note: "Biliran's highest peak at 1,301 m; classified as potentially active by PHIVOLCS with fumarolic activity; last recorded eruption 1939" },
+      { name: "Tinago Falls", type: "Waterfall", note: "27 m cascade in Caibiran municipality, dropping into a natural pool ringed by old-growth rainforest; name means \"hidden\" in Visayan" },
+      { name: "Ulan-Ulan Falls", type: "Waterfall", note: "Horsetail cascade 20–25 m high in Almeria; name means \"rain\" (ulan) in Visayan, earned from the fine mist spray; waters run at approximately 20°C year-round" }
+    ],
     img_seed: "biliran"
   },
   {
@@ -1174,6 +1179,10 @@ var PH_PROVINCES = [
     known_for: "Pacific Coastline & Typhoon Corridor",
     desc: "Eastern Samar faces the open Pacific Ocean and is one of the first landmasses struck by typhoons approaching from the Pacific, its coastline sculpted by immense wave energy into dramatic sea cliffs, pocket beaches, and offshore islets. The province's interior is largely covered by the Northern Samar-Eastern Samar Rainforest, one of the largest remaining tracts of old-growth lowland forest in the Visayas, sheltering Philippine Eagles, Rufous Hornbills, and the endemic Samar Hornbill. The Llorente area hosts an important Philippine Cockatoo colony, and the coastal lagoons at Borongan City are critical nesting grounds for endangered marine turtles.",
     fact: "Super Typhoon Haiyan (Yolanda) made its first Philippine landfall near Guiuan in Eastern Samar on November 8, 2013, with sustained winds of 315 km/h and gusts exceeding 380 km/h — making it the most powerful typhoon ever recorded at landfall in world meteorological history.",
+    landmarks: [
+      { name: "Calicoan Island", type: "Limestone Island / Protected Seascape", note: "Largest limestone forest within the Guiuan Marine Reserve Protected Landscape and Seascape (NIPAS, 1994; 60,448 ha); karst terrain with sea caves, saltwater lagoons, and coastal cliffs; 60 bird species documented in the limestone forest" },
+      { name: "Linao Cave", type: "Cenote / Cave", note: "Semi-open sinkhole cenote on Calicoan Island, Guiuan; brackish water in a partially roofed limestone cavity with stalactites and stalagmites; \"linao\" means clear in Waray-Waray" }
+    ],
     img_seed: "eastern-samar"
   },
   {
@@ -1184,6 +1193,10 @@ var PH_PROVINCES = [
     known_for: "WWII Liberation & Leyte Gulf",
     desc: "Leyte is the largest province of Eastern Visayas, its northern plains and the broad Leyte Valley sandwiched between two mountain ranges that channel typhoon rainfall into the fertile agricultural lowlands. The Lake Danao National Park and the Leyte mountain ranges shelter remarkable endemic species including the Leyte Hawk-Eagle and the Philippine Crocodile in upper river tributaries. Tacloban City, devastated by Typhoon Haiyan in 2013, has become a global symbol of post-disaster resilience, while Palo's Red Beach commemorates General MacArthur's 1944 \"I shall return\" landing — one of WWII's pivotal Pacific engagements.",
     fact: "The Battle of Leyte Gulf in October 1944 remains the largest naval battle in recorded history by total tonnage of ships engaged, involving over 200,000 combatants and 367 warships across 115,000 square kilometres of the Philippine Sea — a four-day engagement that effectively ended Japan's naval power in WWII.",
+    landmarks: [
+      { name: "Lake Danao Natural Park", type: "Volcanogenic Lake / Natural Park", note: "Guitar-shaped volcanogenic lake at 650 m elevation, 18 km northeast of Ormoc; 148 ha lake within a 2,193-ha natural park; source of potable water for seven eastern Leyte towns" },
+      { name: "Mahagnao Volcano Natural Park", type: "Dormant Volcano / Natural Park", note: "Dormant stratovolcano (860 m) in Burauen; 635-ha park proclaimed 1937; two crater lakes — Danao and Malagsom (green acidic water) — plus active fumaroles and multi-coloured mud pools" }
+    ],
     img_seed: "leyte"
   },
   {
@@ -1194,6 +1207,10 @@ var PH_PROVINCES = [
     known_for: "Biri Rock Formations & Old Forest",
     desc: "Northern Samar occupies the northernmost part of Samar Island, its interior forests forming the core of the Samar Island Natural Park — the second-largest protected area in the Philippines and one of the largest remaining lowland rainforests in Southeast Asia south of Palawan. The province's Pacific-facing coast is dotted with dramatic volcanic rock formations, most spectacularly at Biri Island where wave-sculpted basalt columns and sinkholes create a surreal coastal landscape. Endemic biodiversity in the Samar rainforest includes the Samar Bleeding-heart Pigeon, the Philippine Forest Turtle, and enormous Rafflesia blooms found within the forest interior.",
     fact: "The Biri Protected Landscape and Seascape in Northern Samar contains wave-eroded basalt formations formed from Pleistocene underwater lava flows that were subsequently exposed by tectonic uplift; the largest formation, called \"Magasang,\" is a natural rock arch 30 metres tall carved entirely by Pacific wave action.",
+    landmarks: [
+      { name: "Biri Rock Formations", type: "Basalt Rock Formation", note: "Seven named wave-sculpted basalt formations (Magasang, Magsapad, Macadlaw, Puhunan, Bel-at, Caranas, Pinanahawan) within the Biri Larosa Protected Landscape; formed ~18 million years ago from submarine lava exposed by tectonic uplift; declared a National Geological Monument" },
+      { name: "Pinipisakan Falls", type: "Tiered Waterfall", note: "Four-tiered cascade on the Catubig River in Las Navas municipality, 15 km upstream from town; designated ecotourism site by SINP-DENR in 2009" }
+    ],
     img_seed: "northern-samar"
   },
   {
@@ -1204,6 +1221,10 @@ var PH_PROVINCES = [
     known_for: "Calbiga Caves & Pristine Rainforest",
     desc: "Samar (Western Samar) occupies the western portion of Samar Island, its coastline facing the Leyte Gulf and Samar Sea and its interior forming part of the Samar Island Natural Park's vast contiguous old-growth dipterocarp forest — one of the most ecologically intact large forest landscapes remaining in the Philippines. The Calbiga Cave System is one of the largest cave systems in Asia, its enormous chambers sheltering millions of swiftlets whose nests are harvested, and its passages containing rivers, waterfalls, and fossil evidence of pre-colonial human habitation. The province's rivers descend rapidly from the central Samar highlands, creating powerful rapids and cascades that attract adventure kayakers.",
     fact: "The Calbiga-Lanao Cave System in Samar extends for at least 2.9 kilometres of mapped passages and contains a chamber — Lanao Chamber — that is large enough to fit a 60-story building inside, with a ceiling height exceeding 180 metres, making it one of the largest cave chambers by volume in Asia.",
+    landmarks: [
+      { name: "Sohoton Caves and Natural Bridge National Park", type: "Cave System / Natural Bridge", note: "840-ha national park in Basey (established 1935); natural limestone arch spanning the Kadak-an River gorge; cave system with stalactites, stalagmites, underground rivers, and waterfalls; accessible by river boat" },
+      { name: "Langun-Gobingob Cave System", type: "Cave System", note: "Largest cave system in the Philippines, in Calbiga; 12 major caves including Langun and Gobingob; Gobingob's main chamber measures approximately 340 × 140 m; multiple underground rivers and flowstones documented" }
+    ],
     img_seed: "samar"
   },
   {
@@ -1214,6 +1235,10 @@ var PH_PROVINCES = [
     known_for: "Whale Watching & Diverse Reefs",
     desc: "Southern Leyte is a rugged peninsula province at the southern tip of Leyte Island, its coastline facing the Surigao Strait and the open Mindanao Sea where strong tidal currents upwell cold, nutrient-rich water that fuels extraordinarily productive coral reef and cetacean ecosystems. Sogod Bay, a broad semi-enclosed gulf on the province's eastern coast, is one of Asia's most reliable sites for whale shark sightings and is also home to feeding aggregations of Bryde's whales and sperm whales. The landmass collapsed into the sea during the February 2006 Southern Leyte mudslide — the deadliest landslide in Philippine history — burying the village of Guinsaugon.",
     fact: "The Southern Leyte mudslide of February 17, 2006, buried the barangay of Guinsaugon under millions of cubic metres of liquefied rock and soil triggered by heavy rainfall and a small earthquake; the disaster killed approximately 1,100 people and was attributed partly to illegal logging that destabilised the hillside above the village.",
+    landmarks: [
+      { name: "Sogod Bay", type: "Marine Bay / Protected Seascape", note: "Semi-enclosed bay on the province's eastern coast; seasonal whale shark aggregation site (November–May); Bryde's whales and sperm whales also documented; Panaon Island designated Protected Seascape under Republic Act 12238 (2025)" },
+      { name: "Mount Cabalian", type: "Active Stratovolcano / Crater Lake", note: "Active stratovolcano (945 m) in San Juan–Anahawan; PHIVOLCS-classified active with solfataric activity; summit crater holds Lake Danao (500 m wide, 733 m elevation); last eruption ~1820 by radiocarbon dating; flanks have hot springs reaching 63–64°C" }
+    ],
     img_seed: "southern-leyte"
   },
 
