@@ -1294,6 +1294,9 @@ var PH_PROVINCES = [
     known_for: "Highlands & Pineapple Plantations",
     desc: "Bukidnon is a vast, cool upland plateau province at the heart of Mindanao, its sweeping highland landscapes of pineapple plantations, sugarcane fields, and broad grasslands framed by the peaks of Mount Kitanglad — one of the Philippines' highest mountains at 2,899 metres and home to an extraordinary concentration of Mindanao endemic birds in its mossy forests. The Pulangi River, the longest river on Mindanao, originates in the Kitanglad range and drains north through dramatic gorges before entering the Mindanao Sea. The province is home to eight major indigenous groups including the Bukidnon, Higaonon, and Talaandig, who maintain traditional governance systems across significant portions of the highland.",
     fact: "Mount Kitanglad Natural Park harbours over 70 species of Philippine endemic birds, including the Philippine Eagle — Mindanao's highest-density eagle population — and the critically endemic Apo Sunbird, making it the single most species-rich Important Bird Area in the entire Philippine archipelago.",
+    landmarks: [
+      { name: "Mount Kitanglad Range Natural Park", type: "Natural Park / Mountain Range", note: "47,270-ha natural park (RA 8978, 2000) and ASEAN Heritage Park (2009); fourth highest summit in the Philippines at 2,899 m; harbours Rafflesia schadenbergiana (Critically Endangered; Philippines' largest Rafflesia, diameter 52–80 cm) within its mossy forests" }
+    ],
     img_seed: "bukidnon"
   },
   {
@@ -1304,6 +1307,10 @@ var PH_PROVINCES = [
     known_for: "Volcanoes & White Island Sandbar",
     desc: "Camiguin is a small island province in the Bohol Sea nicknamed the \"Island Born of Fire\" — it has more volcanoes per square kilometre than any other island on Earth, with five volcanic peaks on an island smaller than Singapore, and eruptions have historically buried entire towns beneath lava and ash. The White Island sandbar off Mambajao is a pristine crescent of white sand that appears and disappears with the tides, surrounded by coral reefs with extraordinary fish diversity. Camiguin's cold freshwater springs emerge directly on the beach, creating unusual freshwater-saltwater mixing zones that support unique macro-algae and invertebrate communities.",
     fact: "The 1871–1875 eruptions of Vulcan Camiguin completely buried the old town of Catarman and its historic church under lava flows; today, the sunken cemetery and the ruined stone chapel cross — visible at low tide just offshore — have become one of the Philippines' most haunting and photographed heritage sites.",
+    landmarks: [
+      { name: "Mount Hibok-Hibok", type: "Active Stratovolcano", note: "Active stratovolcano and dome complex at 1,332 m; PHIVOLCS-classified active; six hot springs (including Ardent Spring) and three summit craters; last eruption 1953" },
+      { name: "White Island", type: "Sandbar", note: "Uninhabited crescent sandbar 1.4 km off Mambajao's northern shore; composed entirely of fine white sand with no vegetation; shifts shape seasonally with tides and currents" }
+    ],
     img_seed: "camiguin"
   },
   {
@@ -1314,6 +1321,9 @@ var PH_PROVINCES = [
     known_for: "Waterfalls & Industrial City",
     desc: "Lanao del Norte is a province of dramatic contrasts — its northern coast on Iligan Bay is heavily industrialised, anchored by Iligan City's hydroelectric-powered steel and chemical industries, while its southern interior rises into the Lanao Plateau and borders the ancient Lake Lanao. The Maria Cristina Falls, dropping 320 feet in twin cascades, powers the NAPOCOR Agus hydroelectric system that supplies electricity across Mindanao. The province's forests shelter the critically endemic Mindanao Shrew and a rich community of highland Mindanao birds, while the Maranao people of the lake basin maintain a vibrant tradition of okir woodcarving and malong weaving.",
     fact: "The Maria Cristina Falls in Iligan City, at 98 metres tall, powers the Agus River hydroelectric complex that generates approximately 970 megawatts of electricity — roughly 25% of Mindanao's total power supply — making this single waterfall one of the most economically important natural features in the Philippine archipelago.",
+    landmarks: [
+      { name: "Maria Cristina Falls", type: "Twin Waterfall", note: "98-m twin waterfall on the Agus River where waters from Lake Lanao plunge into a gorge before flowing to Iligan Bay; the two cascades are separated by a rock outcrop at the brink" }
+    ],
     img_seed: "lanao-del-norte"
   },
   {
@@ -1324,6 +1334,9 @@ var PH_PROVINCES = [
     known_for: "Layawan River & Rural Heartland",
     desc: "Misamis Occidental is a coastal province on Mindanao Bay, its gently rolling terrain producing coconut, rubber, and rice in abundance, while the Kauswagan and Sinacaban highlands to the south shelter secondary forest that is habitat for Mindanao endemic birds and fruit bats. The Layawan River watershed provides freshwater to much of the province and has been the focus of community-based watershed protection efforts by the indigenous Subanen communities of the interior. The province's coastline on Panguil Bay is sheltered by the narrow Ozamiz peninsula and sustains important small-scale fisheries and mangrove aquaculture.",
     fact: "The Pangil Bay area in Misamis Occidental historically supported one of Mindanao's largest Dugong populations; a 2015–2018 survey identified a residual population of approximately 35 individuals in the bay's seagrass beds, making it a priority site for the National Dugong Conservation Program.",
+    landmarks: [
+      { name: "Mount Malindang Range Natural Park", type: "Volcano / Natural Park", note: "Complex volcano (2,404 m) and highest peak in the Zamboanga Peninsula; 53,262-ha park (RA 9304, 2004) spanning Misamis Occidental, Zamboanga del Norte, and Zamboanga del Sur; features calderas, cinder cones, sulfurous hot springs, and crater lake (Lake Duminagat); ASEAN Heritage Park (2011)" }
+    ],
     img_seed: "misamis-occidental"
   },
   {
@@ -1334,6 +1347,9 @@ var PH_PROVINCES = [
     known_for: "Whitewater Rafting & Cagayan de Oro",
     desc: "Misamis Oriental is a dynamic coastal-highland province whose principal city, Cagayan de Oro, has grown into northern Mindanao's commercial capital, fed by the Cagayan de Oro River — which also provides some of the Philippines' most exhilarating Class III–IV white-water rapids through its canyon system just minutes from the city centre. The province's northern coast on Macajalar Bay is rich in skipjack tuna, squid, and coastal reef fish, while the inland mountain ranges of the Kitanglad and Kalatungan ranges shelter pristine mossy forest harbouring Mindanao's most diverse raptor community. The Initao Protected Landscape and Seascape harbours the country's densest flying fox (Pteropus vampyrus) roost colony.",
     fact: "The Initao Protected Landscape in Misamis Oriental contains one of the Philippines' largest known roost colonies of the Giant Golden-crowned Flying Fox (Acerodon jubatus) — the world's largest bat by wingspan at up to 1.7 metres — with a colony of over 10,000 individuals that departs en masse at dusk in a wildlife spectacle visible from the provincial highway.",
+    landmarks: [
+      { name: "Initao-Libertad Protected Landscape and Seascape", type: "Protected Limestone Forest / Seascape", note: "1,300-ha protected area (2002) in Initao and Libertad municipalities; last old-growth limestone forest in Misamis Oriental; limestone caves; rare endemic birds documented including Philippine Megapode, Steere's Pitta, and Philippine Sparrowhawk" }
+    ],
     img_seed: "misamis-oriental"
   },
 
