@@ -1251,6 +1251,10 @@ var PH_PROVINCES = [
     known_for: "Dakak Beach & Subanen Heritage",
     desc: "Zamboanga del Norte occupies the northwestern tip of the Zamboanga Peninsula, its coastline on the Sulu Sea and Bohol Strait sheltering white-sand beaches, coral reefs, and seagrass beds important for dugongs and green sea turtles. The interior mountain ranges harbour old-growth dipterocarp forest that is one of the last refugia for the Philippine Cockatoo and the Mindanao Bleeding-heart Pigeon in western Mindanao. The indigenous Subanen people, one of Mindanao's largest ethnolinguistic groups, maintain traditional communities throughout the province's forested highlands, practicing animist rituals and forest-based livelihoods.",
     fact: "The Siocon Bay area in Zamboanga del Norte contains one of the largest documented seagrass meadows in the Philippines, with Thalassia hemprichii beds extending over 5,000 hectares and supporting a dugong population that is among the most viable remaining herds in the Philippine archipelago.",
+    landmarks: [
+      { name: "Aliguay Island", type: "Coralline Island / Protected Seascape", note: "Flat coralline island 32 nautical miles northeast of Dapitan City; 2,440-ha Protected Landscape and Seascape (Proclamation 106, 1999); coral reefs and seagrass beds managed under NIPAS" },
+      { name: "Situbo Falls", type: "Tiered Waterfall", note: "Two-tiered horsetail cascade in Barangay Situbo, Tampilisan; cold turquoise plunge pool at base; set within old-growth forest" }
+    ],
     img_seed: "zamboanga-del-norte"
   },
   {
@@ -1261,6 +1265,10 @@ var PH_PROVINCES = [
     known_for: "Floating Villages & Colorful Vintas",
     desc: "Zamboanga del Sur wraps around the southern coast of the Zamboanga Peninsula and includes the culturally vibrant city of Zamboanga — the \"City of Flowers\" — famous for its Chabacano (Spanish-Creole) language, colorful outrigger vintas, and the fortified Real Fuerza de Nuestra Señora del Pilar. The province's coastal waters in the Moro Gulf and Basilan Strait are rich in commercially important fish species, and its offshore islands shelter diverse coral reefs that are heavily utilised by artisanal fishers. The Yakan and Tausug communities of the province maintain a rich material culture of weaving, brasswork, and maritime tradition.",
     fact: "Zamboanga City is the only place in the world where Chabacano — a Spanish-based creole language — is spoken as the dominant mother tongue by an entire urban population of over 800,000 people, having evolved from the interaction between 17th-century Spanish colonists and local Visayan and Malay-speaking populations.",
+    landmarks: [
+      { name: "Great Santa Cruz Island", type: "Coralline Island / Protected Seascape", note: "Protected Landscape and Seascape (Proclamation 271, 2000) in Basilan Strait, 4 km from Zamboanga City; pink coralline sand formed from surf-eroded red organ pipe coral (Tubipora musica) mixed with white sand" },
+      { name: "Mount Timolan Protected Landscape", type: "Mountain / Crater Lake", note: "Highest peak in Zamboanga del Sur at 1,177 m; 1,994-ha protected landscape (Proclamation 354, 2000); 20-ha heart-shaped crater lake (Lake Maragang) at 573 m elevation, 46.94 m deep; Important Bird Area sheltering Philippine Eagle and Philippine Cockatoo" }
+    ],
     img_seed: "zamboanga-del-sur"
   },
   {
@@ -1271,6 +1279,9 @@ var PH_PROVINCES = [
     known_for: "Rubber Plantations & Sibugay Bay",
     desc: "Zamboanga Sibugay is a relatively young province carved from Zamboanga del Sur in 2001, its territory encompassing the Sibugay River basin and facing the sheltered Sibugay Bay, whose mangrove-fringed shores and seagrass beds are important nursery grounds for commercially important marine species. The province's interior lowlands have been extensively converted to rubber, oil palm, and coconut plantations, though patches of secondary forest in the highland interior still shelter endemic Mindanao birds and small mammals. The Subanen people are the predominant indigenous community in the province's interior, and their traditional communal land governance system (pananum) is still practiced in some upland communities.",
     fact: "The Sibugay Bay Protected Landscape and Seascape in Zamboanga Sibugay contains one of the most extensive undisturbed mangrove forests on Mindanao's western coast, with Rhizophora apiculata stands reaching 25 metres in height and serving as a carbon-sequestration hotspot recognised in national climate mitigation plans.",
+    landmarks: [
+      { name: "Sibugay Wetland Nature Reserve", type: "Wetland / Ramsar Site", note: "Philippines' 9th Ramsar site (designated November 2024); 175,511 ha — the largest Ramsar site in the country; complex of mangroves, intertidal flats, coral reefs, and Sibugay Bay; shelters over 130,000 large flying foxes (Pteropus vampyrus) and nesting hawksbill and green sea turtles" }
+    ],
     img_seed: "zamboanga-sibugay"
   },
 
