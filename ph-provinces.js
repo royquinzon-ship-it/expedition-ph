@@ -1433,7 +1433,10 @@ var PH_PROVINCES = [
     known_for: "Mount Apo Foothills & Rice Plains",
     desc: "Cotabato Province (North Cotabato), not to be confused with Cotabato City which belongs to BARMM, is a landlocked province whose fertile Cotabato Basin produces much of Mindanao's rice and corn, drained by the Mindanao River system — the Philippines' second-longest river and most voluminous watercourse. The province's western edge rises to the foothills of Mount Apo Natural Park, where old-growth forest shelters Philippine Eagles and the critically endemic Mindanao Shrew, while the expansive Libungan and Kakar marshes in the basin are important wintering grounds for migratory waterbirds. The province's Manobo and Mandaya indigenous communities maintain traditional practices along the Mindanao River's upper tributaries.",
     fact: "The Mindanao River basin, which drains through Cotabato Province into Illana Bay, is the Philippines' largest river basin at 23,169 square kilometres — larger than the entire island of Taiwan — and its annual floodplain inundations create productive temporary wetlands that attract over 50,000 waterbirds in peak winter counts.",
-    img_seed: "cotabato"
+    img_seed: "cotabato",
+    landmarks: [
+      { name: "Asik-Asik Falls", type: "Waterfall", note: "Curtain-style waterfall in Alamada, North Cotabato; approximately 60 m tall and 140 m wide; water issues from crevices in the cliff face with no visible surface river, theorized to originate from an underground river in the slopes of Mount Ragang" }
+    ]
   },
   {
     name: "Sarangani",
@@ -1443,7 +1446,10 @@ var PH_PROVINCES = [
     known_for: "Coral Reefs & Blaan Tribal Culture",
     desc: "Sarangani is a coastal province at the southernmost tip of the Philippine mainland, its Sarangani Bay facing south toward the Celebes Sea and sheltering one of the most biodiverse and least-disturbed marine ecosystems in the country — with whale shark aggregation sites, manta ray cleaning stations, and coral reefs with over 400 fish species documented. The province's interior rises to forested mountain ranges inhabited by the B'laan and Tagakaulo indigenous peoples, whose colorful beadwork and brass crafts represent one of Mindanao's richest material cultural traditions. Sarangani is also famous as the home province of Manny Pacquiao, the world champion boxer who became a senator.",
     fact: "Sarangani Bay's whale shark aggregation site at Maasim hosts year-round sightings, with a population of over 50 identified individuals — and researchers from the Large Marine Vertebrates Research Institute Philippines have documented individual whale sharks travelling between this site and the Donsol aggregation in Sorsogon, over 1,000 kilometres north.",
-    img_seed: "sarangani"
+    img_seed: "sarangani",
+    landmarks: [
+      { name: "Sarangani Bay Protected Seascape", type: "Bay", note: "Protected seascape established by Proclamation No. 756 in 1996; covers over 210,000 ha at the southernmost tip of mainland Philippines; DENR records 411 reef fish species and 4 marine turtle species — hawksbill, olive ridley, loggerhead, and green" }
+    ]
   },
   {
     name: "South Cotabato",
@@ -1453,7 +1459,11 @@ var PH_PROVINCES = [
     known_for: "Marbel Valley & Pineapple Farms",
     desc: "South Cotabato is a province of broad river valleys, volcanic highland ridges, and one of the Philippines' most biologically remarkable lakes — Lake Sebu, a crater lake at 1,000 metres elevation that is the cultural heartland of the T'boli people and supports the critically endemic Sebu Silvertip Shark, a species of freshwater stingray found only in these highland lake waters. The province's Marbel River valley is one of the most productive agricultural areas in Mindanao, growing pineapple, asparagus, and temperate vegetables in its rich volcanic soils. The Seven Falls of Lake Sebu — seven cascading waterfalls connected by zip lines — have made the area one of Mindanao's premier ecotourism attractions.",
     fact: "Lake Sebu in South Cotabato is home to the freshwater stingray Himantura kittipongi and the endemic Sebu silvertip sawfish (Pristis zephyreus subspecies) — species that evolved in isolation after the lake was cut off from ocean connections by tectonic uplift, representing one of the world's most remarkable examples of marine fish evolving in a landlocked freshwater environment.",
-    img_seed: "south-cotabato"
+    img_seed: "south-cotabato",
+    landmarks: [
+      { name: "Lake Sebu", type: "Lake", note: "Natural highland lake at 1,000 m elevation, 354 ha in area, in the municipality of Lake Sebu; cultural heartland of the T'boli people; DENR-recognised as one of the Philippines' most important watershed forest reserves" },
+      { name: "Lake Holon", type: "Crater Lake", note: "Crater lake in T'boli, South Cotabato, formed by the January 4, 1641 eruption of Mount Melibengoy (1,824 m); the volcanic caldera is approximately 2.9 km wide with walls rising 200–500 m above the lake surface" }
+    ]
   },
   {
     name: "Sultan Kudarat",
@@ -1463,7 +1473,10 @@ var PH_PROVINCES = [
     known_for: "Mindanao River Basin & Corn Belt",
     desc: "Sultan Kudarat is a large interior province extending from the Cotabato Basin westward to the Moro Gulf coastline, its terrain transitioning from the flat, rice-growing Mindanao River floodplain through volcanic foothills to the Allah Valley — a fertile intermontane basin producing corn, asparagus, and cut flowers at scale. The Daguma Mountain Range and the Tiruray Highlands along the province's borders shelter primary forest that is critical refuge for the Philippine Eagle and the Mindanao Hornbill. The province is historically named after Sultan Muhammad Dipatuan Kudarat, the 17th-century Maguindanao sultan who united Muslim resistance against Spanish colonial incursion.",
     fact: "The Allah River Valley in Sultan Kudarat, carved from volcanic highlands into a broad agricultural plain, sits on a major fault system and has experienced multiple significant earthquakes; its floodplain soils, renewing annually from upstream volcanic sediment deposits, produce some of the most fertile farmland in the SOCCSKSARGEN region.",
-    img_seed: "sultan-kudarat"
+    img_seed: "sultan-kudarat",
+    landmarks: [
+      { name: "Daguma Mountain Range", type: "Mountain Range", note: "Key Biodiversity Area of approximately 32,366 ha in eastern Sultan Kudarat, within the municipalities of Bagumbayan, Isulan, and Esperanza; designated for threatened birds of the Mindanao Endemic Bird Area including the Philippine Hawk-eagle; forms the southern escarpment of the Allah Valley" }
+    ]
   },
 
   // ── REGION XIII – CARAGA ──────────────────────────────────────────────────
