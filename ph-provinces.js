@@ -1362,7 +1362,11 @@ var PH_PROVINCES = [
     known_for: "Gold Mining & Mountain Forests",
     desc: "Davao de Oro (formerly Compostela Valley) is a mineral-rich interior province of the Davao Region, its mountains containing some of the Philippines' most productive gold deposits and its interior forests forming part of the Southern Mindanao Rainforest — a globally important biodiversity hotspot harbouring over 50 endemic vertebrate species. The province's rivers drain east toward the Davao Gulf and Compostela Valley's broad agricultural plain, which produces large volumes of banana and pineapple for export. Repeated conflicts between legal and illegal small-scale miners and international mining companies have left the province ecologically scarred in some areas while conservation efforts in the highland forests continue.",
     fact: "The Diwalwal Gold Rush area in Davao de Oro contains one of the richest alluvial gold deposits in Southeast Asia and has attracted over 20,000 small-scale miners; the area's streams have been severely contaminated by mercury from artisanal processing, creating one of the Philippines' most serious small-scale mining pollution problems.",
-    img_seed: "davao-de-oro"
+    img_seed: "davao-de-oro",
+    landmarks: [
+      { name: "Mount Candalaga", type: "Mountain", note: "Only known habitat of Rafflesia mira (IUCN: Critically Endangered), a species endemic to the Mt. Candalaga Range in Maragusan; Philippine Eagle has been recorded on its forested slopes; the range has no current NIPAS protective status" },
+      { name: "Tagbibinta Falls", type: "Waterfall", note: "Series of 13 cascades in Brgy. Coronobe, Maragusan, Davao de Oro; a site of cultural significance to the indigenous Mansaka community" }
+    ]
   },
   {
     name: "Davao del Norte",
@@ -1372,7 +1376,10 @@ var PH_PROVINCES = [
     known_for: "Banana Exports & Philippine Eagle Center",
     desc: "Davao del Norte is a coastal province north of Davao City facing the Davao Gulf, its vast river plains extensively planted in Cavendish banana for export — making it the centre of the Philippines' banana industry — while its eastern hinterland in the Compostela Valley and the Mount Apo Natural Park shelter critical old-growth forest for the Philippine Eagle. The Philippine Eagle Center in Malagos (shared administratively with Davao City's Calinan district but associated with this region) is the primary facility for Philippine Eagle captive breeding and research. The province's Gulf of Davao coastline supports important mangrove ecosystems and productive inshore fisheries.",
     fact: "The Philippine Eagle (Pithecophaga jefferyi), the world's largest eagle by length at up to 1.02 metres and the Philippines' national bird, raises only one chick every two years and requires a territory of up to 133 square kilometres of old-growth forest; fewer than 800 individuals remain in the wild, primarily in Mindanao's forests.",
-    img_seed: "davao-del-norte"
+    img_seed: "davao-del-norte",
+    landmarks: [
+      { name: "Monfort Bat Cave", type: "Cave", note: "Natural limestone cave on Samal Island, 75 m long, certified by Guinness World Records as the world's largest single-cave colony of Geoffroy's rousette bats (Rousettus amplexicaudatus); approximately 1.8 million individuals were estimated in the survey that secured the record" }
+    ]
   },
   {
     name: "Davao del Sur",
@@ -1382,7 +1389,11 @@ var PH_PROVINCES = [
     known_for: "Mount Apo & National Bird Refuge",
     desc: "Davao del Sur is dominated by the presence of Mount Apo — the Philippines' highest peak at 2,954 metres and a UNESCO-recognised natural site — whose forested slopes above 2,000 metres are cloaked in mossy forest and pitcher plant (Nepenthes) communities found nowhere else on Earth. The mountain is the stronghold of the Philippine Eagle, and the Mount Apo Natural Park encompasses one of the last intact mid-elevation to summit forest gradients in Mindanao. The province's coastal lowlands face the Moro Gulf and support the Davao Gulf mangroves, which are internationally recognised as critical nursery habitat for commercially important fish species.",
     fact: "Mount Apo's summit supports over 272 bird species including 111 Philippine endemics and 64 Mindanao-specific species; its upper slopes contain the Philippines' highest density of Nepenthes (pitcher plant) species, with eight carnivorous species occurring on a single mountain — the highest concentration in the Philippine archipelago.",
-    img_seed: "davao-del-sur"
+    img_seed: "davao-del-sur",
+    landmarks: [
+      { name: "Mount Apo", type: "Volcano", note: "Highest peak in the Philippines at 2,954 m; a dormant stratovolcano with active solfataric vents from 2,400 m to the summit and a 200-metre-wide summit crater containing a small lake; shelters over 272 bird species including 111 Philippine endemics" },
+      { name: "Tudaya Falls", type: "Waterfall", note: "Single-drop waterfall of 100 m within Mount Apo Natural Park in Bansalan, Davao del Sur; flows into the Sibulan River, which drains west into Davao Gulf" }
+    ]
   },
   {
     name: "Davao Occidental",
@@ -1392,7 +1403,10 @@ var PH_PROVINCES = [
     known_for: "Secluded Coasts & Indigenous Culture",
     desc: "Davao Occidental is the newest province in the Davao Region, created in 2013 from the southern portion of Davao del Sur, its territory encompassing a rugged Pacific-facing coastline, offshore island groups, and interior mountains inhabited by the B'laan and T'boli indigenous peoples. The province's undeveloped coastline shelters some of the most undisturbed coral reefs in the Davao Gulf system, with sea turtle nesting beaches and undisturbed mangrove forests protected partly by inaccessibility. The T'boli people of the interior highlands maintain one of the Philippines' richest material culture traditions, centred on the tak cloth — a dream-inspired woven textile considered a masterpiece of intangible cultural heritage.",
     fact: "The T'boli tak cloth weavers of Davao Occidental's interior produce their intricate patterns by weaving abaca fibres pre-dyed in a resist-dye process before weaving — the weaver works entirely from memory, with designs said to come from dream-visions, so no two pieces are identical; this tradition was proclaimed a UNESCO Intangible Cultural Heritage in 2016.",
-    img_seed: "davao-occidental"
+    img_seed: "davao-occidental",
+    landmarks: [
+      { name: "Balut Volcano", type: "Volcano", note: "Potentially active stratovolcano at 862 m on Balut Island in Sarangani municipality, southern Davao Occidental; PHIVOLCS-listed with solfataric activity and hot springs at 95–96 °C on its western slopes" }
+    ]
   },
   {
     name: "Davao Oriental",
@@ -1402,7 +1416,12 @@ var PH_PROVINCES = [
     known_for: "Pacific Beaches & Cape San Agustin",
     desc: "Davao Oriental faces the Pacific Ocean along Mindanao's eastern coast, its dramatic coastline of wave-battered headlands, sea caves, and pristine white-sand beaches at Dahican sheltering seasonal sea turtle nesting and year-round reef fish abundance. The Pujada Bay Protected Landscape, enclosing the semi-enclosed Pujada Bay, is one of the Philippines' richest marine biodiversity areas, with extensive seagrass beds, mangroves, and coral reefs forming an interconnected coastal ecosystem. The interior mountains of the Mount Hamiguitan range — a UNESCO World Heritage Site — harbour a unique \"pygmy forest\" of trees stunted by ultramafic soil growing to just 1–2 metres on the plateau, alongside the Philippine Eagle and the Davao Pitcher Plant.",
     fact: "Mount Hamiguitan Range Wildlife Sanctuary, a UNESCO World Heritage Site, is the only known habitat of the Rafflesia magnifica — the world's largest flower by diameter — and the serpentine plateau supports a \"pigmy forest\" of dwarfed trees and over 341 plant species, 75 of which are endemic to this single mountain.",
-    img_seed: "davao-oriental"
+    img_seed: "davao-oriental",
+    landmarks: [
+      { name: "Mount Hamiguitan Range Wildlife Sanctuary", type: "Mountain", note: "UNESCO World Heritage Site (2014); elevation range 75–1,637 m; shelters a pygmy forest of century-old trees stunted by ultramafic soil; 1,380 species are recorded within the sanctuary of which 341 are Philippine endemics" },
+      { name: "Aliwagwag Falls", type: "Waterfall", note: "Eighty-four-tier cascade with a combined descent of approximately 340 m in Cateel, within the Aliwagwag Protected Landscape (Proclamation No. 139, 2011); headwaters of the Cateel River in the Diuata Mountain Range" },
+      { name: "Pujada Bay Protected Landscape", type: "Bay", note: "Protected landscape and seascape declared by Presidential Proclamation No. 431 in 1994; encompasses approximately 21,200 ha of coral reefs, seagrass beds, and mangroves; supports nine of the sixteen seagrass species recorded in the Philippines" }
+    ]
   },
 
   // ── REGION XII – SOCCSKSARGEN ─────────────────────────────────────────────
