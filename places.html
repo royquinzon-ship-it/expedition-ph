@@ -402,6 +402,16 @@
   font-size: 0.56rem; letter-spacing: 0.14em; text-transform: uppercase;
   text-align: center; padding: 0.2rem 0; font-family: inherit;
 }
+/* Featured card — highlighted when arriving from a province page */
+.card-featured {
+  border-color: var(--gold, #c9a84c) !important;
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.25), 0 8px 32px rgba(201,168,76,0.12);
+  animation: featuredPulse 2s ease forwards;
+}
+@keyframes featuredPulse {
+  0%   { box-shadow: 0 0 0 6px rgba(201,168,76,0.45); }
+  100% { box-shadow: 0 0 0 3px rgba(201,168,76,0.25), 0 8px 32px rgba(201,168,76,0.12); }
+}
 </style>
 <script src="places-data.js"></script>
 <script src="museum.js"></script>
@@ -558,6 +568,24 @@
     link.addEventListener('click', function (e) { e.stopPropagation(); });
     card.querySelector('.card-body').appendChild(link);
   });
+})();
+</script>
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var featureId = params.get('feature');
+  if (featureId) {
+    var card = document.querySelector('a[href="place-detail.html?id=' + featureId + '"]');
+    if (card) {
+      // ensure grid is visible before scrolling
+      var grid = document.getElementById('main-places-grid');
+      if (grid) grid.classList.add('visible');
+      card.classList.add('card-featured');
+      setTimeout(function () {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 300);
+    }
+  }
 })();
 </script>
 <script>
