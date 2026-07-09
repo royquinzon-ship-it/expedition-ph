@@ -228,6 +228,8 @@ nav a:hover, nav a.active { color: var(--gold); }
   overflow: hidden;
   cursor: pointer;
   transition: border-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  color: inherit;
 }
 
 .card:hover { border-color: rgba(212,175,55,0.45); transform: translateY(-4px); }
