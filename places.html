@@ -572,14 +572,13 @@
 </script>
 <script>
 (function () {
-  var params = new URLSearchParams(window.location.search);
-  var featureId = params.get('feature');
+  var grid = document.getElementById('main-places-grid');
+  if (grid) grid.classList.add('visible');
+
+  var featureId = new URLSearchParams(window.location.search).get('feature');
   if (featureId) {
     var card = document.querySelector('a[href="place-detail.html?id=' + featureId + '"]');
     if (card) {
-      // ensure grid is visible before scrolling
-      var grid = document.getElementById('main-places-grid');
-      if (grid) grid.classList.add('visible');
       card.classList.add('card-featured');
       setTimeout(function () {
         card.scrollIntoView({ behavior: 'smooth', block: 'center' });
