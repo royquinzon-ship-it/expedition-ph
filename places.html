@@ -114,12 +114,12 @@
   </div>
 </section>
 
-<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; All Destinations &nbsp; &#9670;</span><div class="div-line"></div></div>
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Natural Destinations &amp; Landmarks &nbsp; &#9670;</span><div class="div-line"></div></div>
 
 <section class="section">
-  <p class="section-eyebrow reveal">39 Destinations</p>
-  <h2 class="section-title reveal">Natural <em>Destinations</em></h2>
-  <p class="section-body reveal">Extraordinary places across the archipelago — from UNESCO World Heritage sites to volcanic islands, coral sanctuaries, and highland wilderness.</p>
+  <p class="section-eyebrow reveal">Destinations &amp; Natural Landmarks</p>
+  <h2 class="section-title reveal">Natural <em>Places</em></h2>
+  <p class="section-body reveal">Extraordinary places across the archipelago — from UNESCO World Heritage sites to volcanic islands, coral sanctuaries, and highland wilderness — alongside every documented natural landmark across all provinces.</p>
   <p id="results-hint"></p>
 
   <div class="filter-bar reveal">
@@ -144,7 +144,7 @@
     <input type="search" id="places-search" class="places-search" placeholder="&#9670;  Search destinations — e.g. reef, volcano, lake, UNESCO…" autocomplete="off">
   </div>
 
-  <div class="grid grid-3 reveal">
+  <div class="grid grid-3 reveal" id="main-places-grid">
 
 
     <a class="card filterable" href="place-detail.html?id=tubbataha-reef" data-category="visayas" data-type="marine" data-threat="true" data-threat-reason="Threatened by climate-driven coral bleaching, illegal fishing by foreign vessels, and inadequate patrol coverage across its vast remote expanse in the Sulu Sea." data-season="Mar–Jun" data-funfact="Tubbataha is only accessible by liveaboard for about 3 months a year due to sea conditions. The rest of the year it is completely off-limits — which is precisely why it remains so pristine.">
@@ -327,14 +327,6 @@
   </div>
 </section>
 
-<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Natural Landmarks &nbsp; · &nbsp; By Province &nbsp; &#9670;</span><div class="div-line"></div></div>
-
-<section class="section">
-  <p class="section-eyebrow reveal">Across All Provinces</p>
-  <h2 class="section-title reveal">Natural <em>Landmarks</em></h2>
-  <p class="section-body reveal">Every documented natural landmark across all provinces — waterfalls, crater lakes, rock formations, caves, marine sites, and more. Click any card to explore the province or read the full article.</p>
-  <div class="grid grid-3" id="province-landmarks-grid"></div>
-</section>
 
 <div id="modal" class="modal">
   <div class="modal-card">
@@ -572,7 +564,7 @@ a.province-lm-card .card-title::after { content: ' \2192'; font-size: 0.7em; col
 </script>
 <script>
 (function () {
-  var grid = document.getElementById('province-landmarks-grid');
+  var grid = document.getElementById('main-places-grid');
   if (!grid || typeof PH_PROVINCES === 'undefined') return;
   PH_PROVINCES.forEach(function (province) {
     if (!province.landmarks || !province.landmarks.length) return;
