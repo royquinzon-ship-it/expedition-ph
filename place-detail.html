@@ -265,6 +265,11 @@
       <div class="sidebar-label">Location</div>
       <div class="sidebar-value" id="d-region"></div>
     </div>
+    <div class="sidebar-section" id="d-address-section" style="display:none">
+      <div class="sidebar-label">Address</div>
+      <div class="sidebar-value" id="d-address"></div>
+      <a id="d-directions" href="" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:0.5rem;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Get Directions ↗</a>
+    </div>
     <div class="sidebar-section">
       <div class="sidebar-label">Best Season</div>
       <div class="sidebar-value" id="d-season"></div>
@@ -332,7 +337,7 @@
   document.getElementById('d-region').textContent = p.region;
   document.getElementById('d-season').textContent = p.season;
 
-  var typeLabels = { marine:'Marine', volcanic:'Volcanic', highland:'Highland', cultural:'Cultural', wildlife:'Wildlife' };
+  var typeLabels = { marine:'Marine', volcanic:'Volcanic', highland:'Highland', cultural:'Cultural', wildlife:'Wildlife', geological:'Geological' };
   document.getElementById('d-type').textContent = typeLabels[p.type] || p.type;
 
   // Badges
@@ -361,7 +366,15 @@
     document.getElementById('d-wildlife-section').style.display = 'block';
   }
 
-  // Related places â€” same type first, fill from same category
+  // Address & directions
+  if (p.address) {
+    document.getElementById('d-address').textContent = p.address;
+    var mapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(p.name + ', ' + p.address);
+    document.getElementById('d-directions').href = mapsUrl;
+    document.getElementById('d-address-section').style.display = '';
+  }
+
+  // Related places — same type first, fill from same category
   var allIds = Object.keys(PLACES);
   var sameType = allIds.filter(function (k) { return k !== id && PLACES[k].type === p.type; });
   var sameCat  = allIds.filter(function (k) { return k !== id && PLACES[k].category === p.category && PLACES[k].type !== p.type; });

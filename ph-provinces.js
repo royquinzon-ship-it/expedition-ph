@@ -68,11 +68,11 @@ var PH_PROVINCES = [
     ],
 
     landmarks: [
-      { name: "Kapurpurawan Rock Formation", type: "Rock Formation", note: "White calcium carbonate coastal outcrop sculpted by millennia of wind and wave erosion; Burgos, facing the Luzon Strait" },
-      { name: "La Paz Sand Dunes", type: "Sand Dunes", note: "85 km² coastal sand desert in Laoag City; one of the largest dune systems in the Philippines" },
-      { name: "Kabigan Falls", type: "Waterfall", note: "27 m (87 ft) single-drop waterfall in dense forest, Balaoi, Pagudpud; accessible via a 15-minute trail" },
-      { name: "Bantay Abot Cave", type: "Rock Arch", note: "Natural coastal rock arch formed by wave erosion; name means 'mountain with a hole' in Ilocano; Balaoi, Pagudpud" },
-      { name: "Pagudpud Blue Lagoon", type: "Coastal Lagoon", note: "Clear cerulean cove near Dos Hermanos Islands with white sand and old-growth canopy shoreline; Pagudpud" }
+      { name: "Kapurpurawan Rock Formation", type: "Rock Formation", note: "White calcium carbonate coastal outcrop sculpted by millennia of wind and wave erosion; Burgos, facing the Luzon Strait", place_id: "kapurpurawan-rock-formation" },
+      { name: "La Paz Sand Dunes", type: "Sand Dunes", note: "85 km² coastal sand desert in Laoag City; one of the largest dune systems in the Philippines", place_id: "la-paz-sand-dunes" },
+      { name: "Kabigan Falls", type: "Waterfall", note: "27 m (87 ft) single-drop waterfall in dense forest, Balaoi, Pagudpud; accessible via a 15-minute trail", place_id: "kabigan-falls" },
+      { name: "Bantay Abot Cave", type: "Rock Arch", note: "Natural coastal rock arch formed by wave erosion; name means 'mountain with a hole' in Ilocano; Balaoi, Pagudpud", place_id: "bantay-abot-cave" },
+      { name: "Pagudpud Blue Lagoon", type: "Coastal Lagoon", note: "Clear cerulean cove near Dos Hermanos Islands with white sand and old-growth canopy shoreline; Pagudpud", place_id: "pagudpud-blue-lagoon" }
     ],
     conservation_note: "Paoay Lake, declared a Protected Landscape under R.A. 12230 (2025), faces ongoing threats from agricultural runoff and invasive water hyacinth that choke native aquatic habitats."
   },
