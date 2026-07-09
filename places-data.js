@@ -415,9 +415,9 @@ const PLACES = {
     threat: false, threatReason: '',
     address: 'Burgos, Ilocos Norte',
     image: 'image/Kapurpurawan  Rock Formation.jpg',
-    description: 'A rare coastal outcrop of calcium carbonate-rich sedimentary rock sculpted by millennia of wind and wave erosion along the Luzon Strait. Its blindingly white surface — caused by dense concentrations of calcium carbonate from ancient marine organisms — rises dramatically from the wave-battered shoreline of Burgos, Ilocos Norte.',
+    description: 'A rare coastal outcrop of calcium carbonate-rich sedimentary rock sculpted by millennia of wind and wave erosion along the Luzon Strait. Its blindingly white surface — caused by dense concentrations of calcium carbonate from ancient marine organisms — rises dramatically from the wave-battered shoreline of Burgos, Ilocos Norte. The formation is most dramatic at low tide, when the full base is exposed and the contrast between white rock, dark volcanic cobbles, and turquoise sea is at its sharpest. Strong Luzon Strait winds have carved the surface into ridged and pitted textures unique among Philippine coastal formations.',
     funfact: 'Kapurpurawan means "to make white" in Ilocano. The rock\'s brilliant white surface is formed from the same material as cave stalactites — calcium carbonate deposited by ancient marine organisms — now exposed and continuously shaped by centuries of sea and wind erosion along the Luzon Strait.',
-    badges: ['Rock Formation', 'Calcium Carbonate', 'Luzon Strait', 'Ilocos Norte'],
+    badges: ['Calcium Carbonate', 'Wave-Sculpted', 'Luzon Strait', 'Burgos'],
     wildlife: []
   },
   'la-paz-sand-dunes': {
@@ -428,10 +428,10 @@ const PLACES = {
     threat: false, threatReason: '',
     address: 'Laoag City, Ilocos Norte',
     image: 'image/Ilocos Norte Landmark.jpg',
-    description: 'An 85 km² coastal sand desert in Laoag City — one of the largest active dune systems in the Philippines, shaped by the northeast monsoon winds sweeping in from the South China Sea. Shifting dunes up to 30 metres high border the Ilocos coastline, creating a stark desert landscape between the sea and the farmland beyond.',
+    description: 'An 85 km² coastal sand desert in Laoag City — one of the largest active dune systems in the Philippines, shaped by the northeast monsoon winds sweeping in from the South China Sea. The dunes rise up to 30 metres and abruptly border irrigated rice fields and scrubland — one of the more striking ecological contrasts in northern Luzon. After each monsoon season, wind-sculpted ridgelines shift and reform, leaving the landscape visually different from visit to visit.',
     funfact: 'The La Paz dunes are alive and moving — the prevailing northeast monsoon pushes sand steadily inland each year, slowly burying vegetation and occasionally reclaiming farmland at the dune\'s advancing edge. The dune field is one of the few places in the Philippines where off-road sandboarding is possible.',
-    badges: ['Active Dunes', '85 km²', 'Northeast Monsoon', 'Laoag City'],
-    wildlife: []
+    badges: ['Active Dune System', '30m Dunes', 'Northeast Monsoon', 'Laoag City'],
+    wildlife: ['Asian Golden Plover', 'Pacific Reef Heron', 'Little Tern']
   },
   'kabigan-falls': {
     name: 'Kabigan Falls',
@@ -441,10 +441,10 @@ const PLACES = {
     threat: false, threatReason: '',
     address: 'Balaoi, Pagudpud, Ilocos Norte',
     image: 'image/Ilocos Norte Landmark.jpg',
-    description: 'A 27-metre single-drop waterfall set within dense forest in Balaoi, Pagudpud — accessible via a 15-minute forest trail from the trailhead. The Kabigan River plunges into a wide natural pool ringed by old-growth canopy, one of the most accessible wilderness waterfalls along the northern Ilocos coastline.',
+    description: 'A 27-metre single-drop waterfall set within dense forest in Balaoi, Pagudpud — accessible via a 15-minute forest trail from the trailhead. The Kabigan River plunges into a wide natural pool ringed by old-growth canopy, one of the most accessible wilderness waterfalls along the northern Ilocos coastline. Fed by streams draining the Sierra Madre foothill range, the river reaches peak flow during the southwest monsoon — the falls at full volume send spray and mist across the entire pool basin.',
     funfact: 'Kabigan Falls sits just a few kilometres inland from the Pagudpud coast — yet the forest is dense enough that the roar of the waterfall reaches you before you can see it through the canopy. The trail crosses the river multiple times before arriving at the base.',
-    badges: ['27m Waterfall', 'Forest Trail', 'Natural Pool', 'Pagudpud'],
-    wildlife: []
+    badges: ['27m Drop', 'Forest Trail', 'River Crossing', 'Pagudpud'],
+    wildlife: ['Philippine Kingfisher', 'Blue-naped Parrot', 'Large-billed Crow']
   },
   'bantay-abot-cave': {
     name: 'Bantay Abot Cave',
@@ -454,10 +454,10 @@ const PLACES = {
     threat: false, threatReason: '',
     address: 'Balaoi, Pagudpud, Ilocos Norte',
     image: 'image/Ilocos Norte Landmark.jpg',
-    description: 'A natural coastal rock arch carved entirely by wave erosion along the Pagudpud shoreline. The name means "mountain with a hole" in Ilocano — an apt description of the arch\'s dramatic perforation through solid coastal rock. Strong updrafts through the arch attract seabirds riding the coastal wind.',
+    description: 'A natural coastal rock arch carved entirely by wave erosion along the Pagudpud shoreline. The name means "mountain with a hole" in Ilocano — an apt description of the arch\'s dramatic perforation through solid coastal rock. At high tide, waves surge through the arch and emerge as spray on the landward side — the funnelled wind through the opening creates strong updrafts that attract seabirds and Pacific Swallows riding the coastal thermals.',
     funfact: 'Bantay Abot was formed by the same relentless wave action that carved Kapurpurawan to the south — but where Kapurpurawan was shaped from soft calcium carbonate, Bantay Abot punched clean through harder coastal rock, leaving a full natural arch standing above the sea.',
-    badges: ['Rock Arch', 'Wave Erosion', 'Pagudpud', 'Ilocos Norte'],
-    wildlife: []
+    badges: ['Natural Sea Arch', 'Wave Erosion', 'Coastal Updrafts', 'Pagudpud'],
+    wildlife: ['Edible-nest Swiftlet', 'Collared Kingfisher', 'Pacific Swallow']
   },
   'pagudpud-blue-lagoon': {
     name: 'Pagudpud Blue Lagoon',
@@ -467,10 +467,10 @@ const PLACES = {
     threat: false, threatReason: '',
     address: 'Saud, Pagudpud, Ilocos Norte',
     image: 'image/Ilocos Norte Landmark.jpg',
-    description: 'A vivid cerulean cove near Dos Hermanos Islands in Pagudpud, where crystal-clear turquoise water meets a white sand shoreline framed by old-growth canopy. One of the most northerly white-sand beaches in the Philippines, sheltered from open Pacific swells by the Dos Hermanos Islands offshore.',
+    description: 'A vivid cerulean cove near Dos Hermanos Islands in Pagudpud, where crystal-clear turquoise water meets a white sand shoreline framed by old-growth canopy. One of the most northerly white-sand beaches in the Philippines, sheltered from open Pacific swells by the Dos Hermanos Islands offshore. The islands break the prevailing ocean swell and create the unusually calm, lagoon-like conditions that give the beach its name — coral patches in the shallows support small reef fish communities, and Green Sea Turtles have been reported foraging along the cove edges.',
     funfact: 'Pagudpud sits at the northwestern tip of Luzon where the South China Sea and the Luzon Strait meet — making it one of the few beaches in the Philippines where you can watch the sun rise and set over open water from the same shoreline on the same day.',
-    badges: ['Blue Lagoon', 'White Sand', 'Dos Hermanos Islands', 'Pagudpud'],
-    wildlife: []
+    badges: ['Blue Lagoon', 'Dos Hermanos Islands', 'Coral Shallows', 'Far North Luzon'],
+    wildlife: ['Green Sea Turtle']
   },
   'palawan': {
     name: 'Palawan',

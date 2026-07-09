@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta id="meta-desc" name="description" content="">
 <link rel="icon" href="image/Logo.jpg"><link rel="icon" type="image/svg+xml" href="favicon.svg">
-<title id="page-title">Place Â· Expedition PH</title>
+<title id="page-title">Place &#183; Expedition PH</title>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="museum.css">
 <style>
@@ -161,7 +161,7 @@
   gap: 0.5rem;
 }
 .sidebar-wildlife li::before {
-  content: 'â—†';
+  content: '\25C6';
   color: var(--gold);
   font-size: 0.45rem;
   opacity: 0.65;
@@ -227,9 +227,9 @@
 
 <div class="subpage-breadcrumb">
   <a href="index.html">Home</a>
-  <span class="breadcrumb-sep">â€º</span>
+  <span class="breadcrumb-sep">&#8250;</span>
   <a href="places.html">Places</a>
-  <span class="breadcrumb-sep">â€º</span>
+  <span class="breadcrumb-sep">&#8250;</span>
   <span id="d-breadcrumb-name"></span>
 </div>
 
@@ -248,14 +248,14 @@
 <!-- BODY -->
 <div class="detail-body" id="d-body">
   <div class="detail-main">
-    <a href="places.html" class="detail-back">â† Back to Places</a>
+    <a href="places.html" class="detail-back">&#8592; Back to Places</a>
     <p class="detail-desc" id="d-desc"></p>
     <div class="detail-funfact">
-      <div class="detail-funfact-label">â—† Did You Know</div>
+      <div class="detail-funfact-label">&#9670; Did You Know</div>
       <p class="detail-funfact-text" id="d-funfact-text"></p>
     </div>
     <div class="detail-threat" id="d-threat-box">
-      <div class="detail-threat-label">âš  Conservation Concern</div>
+      <div class="detail-threat-label">&#9888;  Conservation Concern</div>
       <p class="detail-threat-text" id="d-threat-text"></p>
     </div>
   </div>
@@ -283,7 +283,7 @@
       <ul class="sidebar-wildlife" id="d-wildlife"></ul>
     </div>
     <div class="sidebar-section">
-      <a href="places.html" class="btn-outline" style="width:100%;text-align:center;display:block;font-size:0.68rem;box-sizing:border-box;">â† All Places</a>
+      <a href="places.html" class="btn-outline" style="width:100%;text-align:center;display:block;font-size:0.68rem;box-sizing:border-box;">&#8592; All Places</a>
     </div>
   </aside>
 </div>
@@ -324,7 +324,7 @@
 
   var p = PLACES[id];
 
-  document.title = p.name + ' Â· Places Â· Expedition PH';
+  document.title = p.name + ' &#183; Places &#183; Expedition PH';
   document.getElementById('meta-desc').setAttribute('content', p.description.substring(0, 160));
   document.getElementById('d-breadcrumb-name').textContent = p.name;
   document.getElementById('d-img').src = p.image;
@@ -386,7 +386,7 @@
     var a  = document.createElement('a');
     a.className = 'card';
     a.href = 'place-detail.html?id=' + k;
-    var desc = pl.description.length > 110 ? pl.description.substring(0, 110) + 'â€¦' : pl.description;
+    var desc = pl.description.length > 110 ? pl.description.substring(0, 110) + '...' : pl.description;
     a.innerHTML =
       '<img src="' + pl.image + '" alt="' + pl.name + '" loading="lazy">' +
       '<div class="card-body">' +
