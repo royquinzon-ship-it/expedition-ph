@@ -912,15 +912,9 @@ a.art-pa-link:hover {
   var landmarkGrid = document.getElementById('d-landmark-grid');
   if (province.landmarks && province.landmarks.length) {
     province.landmarks.forEach(function (lm) {
-      var el;
-      if (lm.place_id) {
-        el = document.createElement('a');
-        el.href = 'places.html?feature=' + lm.place_id;
-        el.className = 'art-landmark-card art-landmark-link';
-      } else {
-        el = document.createElement('div');
-        el.className = 'art-landmark-card';
-      }
+      var el = document.createElement('a');
+      el.href = lm.place_id ? 'places.html?feature=' + lm.place_id : 'places.html';
+      el.className = 'art-landmark-card art-landmark-link';
       el.innerHTML =
         '<div class="art-landmark-type">' + lm.type + '</div>' +
         '<div class="art-landmark-name">' + lm.name + '</div>' +
