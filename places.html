@@ -117,9 +117,7 @@
 <div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Natural Destinations &amp; Landmarks &nbsp; &#9670;</span><div class="div-line"></div></div>
 
 <section class="section">
-  <p class="section-eyebrow reveal">Destinations &amp; Natural Landmarks</p>
   <h2 class="section-title reveal">Natural <em>Places</em></h2>
-  <p class="section-body reveal">Extraordinary places across the archipelago — from UNESCO World Heritage sites to volcanic islands, coral sanctuaries, and highland wilderness — alongside every documented natural landmark across all provinces.</p>
   <p id="results-hint"></p>
 
   <div class="filter-bar reveal">
@@ -587,6 +585,15 @@ a.province-lm-card .card-title::after { content: ' \2192'; font-size: 0.7em; col
       grid.appendChild(a);
     });
   });
+
+  // Sort all cards alphabetically by title
+  var allCards = Array.prototype.slice.call(grid.querySelectorAll('.filterable'));
+  allCards.sort(function (a, b) {
+    var ta = ((a.querySelector('.card-title') || {}).textContent || '').trim().toLowerCase();
+    var tb = ((b.querySelector('.card-title') || {}).textContent || '').trim().toLowerCase();
+    return ta < tb ? -1 : ta > tb ? 1 : 0;
+  });
+  allCards.forEach(function (card) { grid.appendChild(card); });
 })();
 </script>
 </body>
