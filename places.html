@@ -594,6 +594,7 @@ a.province-lm-card .card-title::after { content: ' \2192'; font-size: 0.7em; col
     return ta < tb ? -1 : ta > tb ? 1 : 0;
   });
   allCards.forEach(function (card) { grid.appendChild(card); });
+  grid.classList.add('visible'); // grid is too tall for IntersectionObserver threshold
 })();
 </script>
 </body>
