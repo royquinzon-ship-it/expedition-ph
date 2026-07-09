@@ -397,6 +397,11 @@
   .featured-nav { gap: 0.8rem; }
   .feat-nav-btn { padding: 0.3rem 0.8rem; font-size: 0.68rem; }
 }
+.img-pending {
+  display: block; background: rgba(10,10,10,0.6); color: rgba(255,255,255,0.35);
+  font-size: 0.56rem; letter-spacing: 0.14em; text-transform: uppercase;
+  text-align: center; padding: 0.2rem 0; font-family: inherit;
+}
 </style>
 <script src="places-data.js"></script>
 <script src="museum.js"></script>
@@ -552,6 +557,28 @@
     link.textContent = '◆ View Full Page';
     link.addEventListener('click', function (e) { e.stopPropagation(); });
     card.querySelector('.card-body').appendChild(link);
+  });
+})();
+</script>
+<script>
+(function () {
+  var needsPhoto = [
+    'mount-hamiguitan-range','mt-pandadagsaan','siargao-island',
+    'el-nido','coron-kayangan-lake','lake-sebu','apo-reef',
+    'callao-cave-homo-luzonensis','balicasag-island',
+    'olango-island-wildlife-sanctuary','sohoton-cove',
+    'mount-kanlaon-natural-park','lake-lanao','aliwagwag-falls',
+    'lake-holon','samar-island-natural-park'
+  ];
+  needsPhoto.forEach(function (id) {
+    var card = document.querySelector('a[href="place-detail.html?id=' + id + '"]');
+    if (!card) return;
+    var img = card.querySelector('img');
+    if (!img) return;
+    var badge = document.createElement('div');
+    badge.className = 'img-pending';
+    badge.textContent = '◆ Photo Coming Soon';
+    img.insertAdjacentElement('afterend', badge);
   });
 })();
 </script>
