@@ -345,6 +345,23 @@
   .art-landmark-grid { grid-template-columns: 1fr; max-width: 100%; }
 }
 
+/* Linked landmark card */
+a.art-landmark-link {
+  text-decoration: none; color: inherit; display: block;
+  transition: border-color 0.2s, background 0.2s;
+  cursor: pointer;
+}
+a.art-landmark-link:hover {
+  border-color: rgba(201,168,76,0.4);
+  background: rgba(201,168,76,0.04);
+}
+a.art-landmark-link .art-landmark-name::after {
+  content: ' →';
+  font-size: 0.7rem;
+  color: var(--gold);
+  opacity: 0.6;
+}
+
 /* ── Wildlife Spotlight ── */
 .art-wildlife-grid {
   display: grid;
@@ -809,8 +826,16 @@ a.art-pa-link:hover {
   document.getElementById('d-breadcrumb-name').textContent   = province.name;
 
   // Hero
-  document.getElementById('d-img').src = province.img;
-  document.getElementById('d-img').alt = province.name;
+  var heroEl  = document.getElementById('d-hero');
+  var heroImg = document.getElementById('d-img');
+  if (province.img) {
+    heroImg.src = province.img;
+    heroImg.alt = province.name;
+  } else {
+    heroImg.style.display = 'none';
+    heroEl.style.background = 'linear-gradient(160deg, #0e1a14 0%, #111 60%, #1a1408 100%)';
+    heroEl.style.cursor = 'default';
+  }
   document.getElementById('d-eyebrow').textContent  = regionLabel + ' · ' + islandLabel;
   document.getElementById('d-name').textContent     = province.name;
   document.getElementById('d-subtitle').textContent = province.known_for;
@@ -871,7 +896,8 @@ a.art-pa-link:hover {
       { label: 'Highest Peak',   value: g.highest_peak },
       { label: 'Major River',    value: g.major_river },
       { label: 'Coastline',      value: g.coastline }
-    ].forEach(function (item) {
+    ].filter(function (item) { return item.value; })
+    .forEach(function (item) {
       var div = document.createElement('div');
       div.className = 'art-geo-stat';
       div.innerHTML = '<div class="art-geo-label">' + item.label + '</div><div class="art-geo-value">' + item.value + '</div>';
@@ -886,13 +912,20 @@ a.art-pa-link:hover {
   var landmarkGrid = document.getElementById('d-landmark-grid');
   if (province.landmarks && province.landmarks.length) {
     province.landmarks.forEach(function (lm) {
-      var div = document.createElement('div');
-      div.className = 'art-landmark-card';
-      div.innerHTML =
+      var el;
+      if (lm.place_id) {
+        el = document.createElement('a');
+        el.href = 'place-detail.html?id=' + lm.place_id;
+        el.className = 'art-landmark-card art-landmark-link';
+      } else {
+        el = document.createElement('div');
+        el.className = 'art-landmark-card';
+      }
+      el.innerHTML =
         '<div class="art-landmark-type">' + lm.type + '</div>' +
         '<div class="art-landmark-name">' + lm.name + '</div>' +
         '<div class="art-landmark-note">' + lm.note + '</div>';
-      landmarkGrid.appendChild(div);
+      landmarkGrid.appendChild(el);
     });
   } else {
     document.getElementById('landmarks').style.display = 'none';
@@ -1030,7 +1063,7 @@ a.art-pa-link:hover {
     document.body.style.overflow = '';
   }
 
-  document.getElementById('d-hero').addEventListener('click', openLightbox);
+  if (province.img) document.getElementById('d-hero').addEventListener('click', openLightbox);
   lbClose.addEventListener('click', closeLightbox);
   lightbox.addEventListener('click', closeLightbox);
   lbImg.addEventListener('click', function (e) { e.stopPropagation(); });

@@ -12,18 +12,6 @@ const PLACES = {
     badges: ['UNESCO Heritage', 'Marine Protected Area', 'Hammerhead Sharks', '600+ Fish Species'],
     wildlife: ['Scalloped Hammerhead', 'Sea Turtles', 'Reef Sharks', 'Manta Ray']
   },
-  'banaue-rice-terraces': {
-    name: 'Banaue Rice Terraces',
-    subtitle: 'Stairway to the Sky',
-    tag: 'UNESCO · Ifugao',
-    category: 'luzon', type: 'cultural', region: 'Cordillera · Ifugao', season: 'Nov–Apr',
-    threat: false, threatReason: '',
-    image: 'image/Banaue Rice Terreces.jpg',
-    description: 'Carved into the Cordillera mountains by the Ifugao people over 2,000 years ago using only hand tools, the Banaue terraces are one of the world\'s great feats of human engineering. A living cultural landscape where ancient irrigation systems still water active rice fields — maintained by a community whose relationship with the mountain has never been broken. The Ifugao Hudhud chants, sung during harvest, are themselves a UNESCO Intangible Heritage.',
-    funfact: 'If all the Banaue Rice Terraces were laid end to end, they would circle half the globe. They are maintained using the same hand-built irrigation channels constructed by the Ifugao people over 2,000 years ago — with no machinery, only the knowledge passed from generation to generation.',
-    badges: ['UNESCO Heritage', '2,000 Years Old', 'Living Landscape', 'Ifugao Culture'],
-    wildlife: []
-  },
   'mount-hamiguitan-range': {
     name: 'Mount Hamiguitan Range',
     subtitle: 'Pygmy Forest of Mindanao',
@@ -85,18 +73,6 @@ const PLACES = {
     funfact: 'The floating islands of Agusan Marsh physically move with the seasons — entire plant communities drift across the marsh, shifting the landscape every year. Indigenous Manobo communities have lived on and with them for generations.',
     badges: ['Wetland Reserve', 'Floating Islands', 'Ramsar Site', 'Manobo Heritage'],
     wildlife: ['Philippine Crocodile', 'Estuarine Crocodile', 'Purple Heron']
-  },
-  'batanes': {
-    name: 'Batanes',
-    subtitle: 'Where the Pacific Meets the Sea',
-    tag: 'Island Province · Luzon',
-    category: 'luzon', type: 'cultural', region: 'Northernmost Philippines', season: 'Mar–May',
-    threat: false, threatReason: '',
-    image: 'image/Batanes.jpg',
-    description: 'The northernmost Philippine islands — rugged, windswept, and unlike anywhere else in the archipelago. Rolling hills, stone villages, and dramatic cliff coastlines shaped by the full fury of Pacific typhoons.',
-    funfact: 'The stone houses of the Ivatan people in Batanes are built with walls up to a metre thick to withstand winds exceeding 200 km/h. The islands sit directly in the path of more typhoons than almost anywhere else on Earth.',
-    badges: ['Stone Villages', 'Ivatan Culture', 'Pacific Typhoon Path', 'Northernmost PH'],
-    wildlife: []
   },
   'chocolate-hills': {
     name: 'Chocolate Hills',
@@ -172,54 +148,6 @@ const PLACES = {
     badges: ['Crater Lake', '1991 Eruption', 'Turquoise Lake', 'Aeta Heritage'],
     wildlife: ['Forest Birds', 'Monitor Lizard']
   },
-  'sunken-cemetery-of-camiguin': {
-    name: 'Sunken Cemetery of Camiguin',
-    subtitle: 'Where the Dead Meet the Reef',
-    tag: 'Volcanic Site · Camiguin',
-    category: 'mindanao', type: 'volcanic', region: 'Camiguin · Northern Mindanao', season: 'Nov–May',
-    threat: false, threatReason: '',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Sunken_Cemetery_Cross_Camiguin.jpg/1280px-Sunken_Cemetery_Cross_Camiguin.jpg',
-    description: 'In 1871, a series of volcanic eruptions on Camiguin Island caused the ground to sink — taking the local cemetery with it into the sea. A large white cross now marks the spot above the waterline, surrounded by the open ocean. Below, coral has colonised the grave markers. The dead and the reef have become one.',
-    funfact: 'The original stone grave markers are still visible below the water. Divers visit the cemetery today — making it one of the only dive sites in the world that is also an active burial ground.',
-    badges: ['1871 Eruption', 'Coral Cemetery', 'Dive Site', 'Camiguin'],
-    wildlife: ['Coral Reef Fish', 'Sea Turtles']
-  },
-  'sagada-hanging-coffins': {
-    name: 'Sagada & Hanging Coffins',
-    subtitle: 'Where the Ancestors Watch from the Cliffs',
-    tag: 'Cultural Heritage · Mountain Province',
-    category: 'luzon', type: 'cultural', region: 'Mountain Province · Cordillera', season: 'Nov–Apr',
-    threat: false, threatReason: '',
-    image: 'image/Sagada.jpg',
-    description: 'Nestled in the Cordillera highlands, Sagada is surrounded by pine forests, limestone caves, and dramatic cliffs where ancient hanging coffins bear witness to the Igorot\'s ancestral burial tradition. Echo Valley and Sumaguing Cave draw explorers from around the world.',
-    funfact: 'The Igorot practice of hanging coffins on cliffsides in Sagada dates back at least 2,000 years. The higher the coffin is placed, the closer the deceased is to the ancestral spirits — and the more difficult it becomes for enemies to disturb their rest.',
-    badges: ['Hanging Coffins', 'Igorot Culture', 'Limestone Caves', 'Pine Forests'],
-    wildlife: ['Pine Forest Birds', 'Cloud Rat']
-  },
-  'vigan-heritage-city': {
-    name: 'Vigan Heritage City',
-    subtitle: 'The Best-Preserved Spanish Colonial City in Asia',
-    tag: 'UNESCO Heritage · Ilocos Sur',
-    category: 'luzon', type: 'cultural', region: 'Ilocos Sur · Luzon', season: 'Nov–Apr',
-    threat: false, threatReason: '',
-    image: 'image/Vigan.jpg',
-    description: 'The best-preserved Spanish colonial city in Asia — its Mestizo District of cobblestone streets and ancestral mansions is a UNESCO World Heritage Site. The surrounding Ilocos coast is a landscape of red sand beaches, tobacco farms, and centuries of maritime history.',
-    funfact: 'Vigan is one of only a handful of Spanish colonial towns in Asia preserved almost entirely intact. Its cobblestone streets were once paved with the ballast stones of galleons — Chinese merchants traded goods here in exchange for silver from Mexico during the Manila Galleon Trade era.',
-    badges: ['UNESCO Heritage', 'Spanish Colonial', 'Galleon Trade', 'Ilocos Sur'],
-    wildlife: []
-  },
-  'boracay': {
-    name: 'Boracay',
-    subtitle: 'Four Kilometres of Powdered Coral',
-    tag: 'Island Beach · Aklan',
-    category: 'visayas', type: 'marine', region: 'Aklan · Western Visayas', season: 'Nov–May',
-    threat: false, threatReason: '',
-    image: 'image/Boracay.jpg',
-    description: 'A slender island of powdered coral beaches, clear turquoise shallows, and dramatic kite-surfing winds off Bulabog Beach. Boracay\'s White Beach stretches 4 kilometres and is consistently ranked among the world\'s finest. The surrounding waters hold extensive seagrass beds — habitat for dugong and sea turtles.',
-    funfact: 'Boracay\'s famous White Beach is composed almost entirely of coral fragments — not continental sand. The fine powder texture comes from centuries of coral breakdown, and its brilliant white colour is caused by the high calcium carbonate content reflecting sunlight.',
-    badges: ['White Beach', 'Coral Sand', 'Seagrass Beds', 'Aklan'],
-    wildlife: ['Dugong', 'Sea Turtles', 'Reef Fish']
-  },
   'camiguin': {
     name: 'Camiguin',
     subtitle: 'Island Born of Fire',
@@ -271,15 +199,15 @@ const PLACES = {
   },
   'coron-kayangan-lake': {
     name: 'Coron & Kayangan Lake',
-    subtitle: 'WWII Wrecks and Asia\'s Cleanest Lake',
-    tag: 'Wreck Diving & Lakes · Palawan · Region IV-B',
+    subtitle: 'Ancient Karst and Asia\'s Clearest Lake',
+    tag: 'Karst Lakes · Palawan · Region IV-B',
     category: 'luzon', type: 'marine', region: 'Palawan · Region IV-B', season: 'Nov–May',
     threat: false, threatReason: '',
     image: 'https://picsum.photos/seed/ph-coron/600/400',
-    description: 'Coron is dominated by jagged limestone peaks rising from turquoise waters. Kayangan Lake — fed by underground springs and rated among Asia\'s cleanest lakes — sits inside a karst crater accessible only by a steep forest trail. Below the bay, WWII wreck dives reveal coral-encrusted history.',
-    funfact: 'Coron Bay holds some of the most famous wreck dives in the world — a fleet of Japanese supply ships sunk by American aircraft in a single raid in 1944. The wrecks now form artificial reefs draped in corals and inhabited by enormous groupers, lionfish, and resident sea turtles.',
-    badges: ['WWII Wrecks', 'Kayangan Lake', 'Limestone Peaks', 'Wreck Diving'],
-    wildlife: ['Grouper', 'Sea Turtles', 'Reef Fish', 'Lionfish']
+    description: 'Coron\'s jagged limestone peaks — among the oldest karst formations in Palawan — rise dramatically from turquoise waters. Kayangan Lake, fed entirely by underground springs filtering through ancient karst rock, is rated among Asia\'s clearest lakes. The surrounding cliffs and forest shelter endemic birds, roosting flying foxes, and monitor lizards descending to the water\'s edge.',
+    funfact: 'Kayangan Lake sits inside an ancient limestone crater — its water so clear that visibility extends to the bottom, fed entirely by underground springs filtering through millions of years of karst rock. The surrounding cliffs are among the oldest exposed limestone formations in Palawan.',
+    badges: ['Kayangan Lake', 'Ancient Karst', 'Underground Springs', 'Palawan'],
+    wildlife: ['Flying Fox', 'Monitor Lizard', 'Sea Turtles', 'Reef Fish']
   },
   'lake-sebu': {
     name: 'Lake Sebu',

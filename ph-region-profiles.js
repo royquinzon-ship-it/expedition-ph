@@ -11,7 +11,7 @@ var PH_PROFILES = {
     wildlife: ["Sea Turtle nesting sites along the Ilocos coast", "Philippine Hawk-Eagle in the Ilocos forest corridor", "Dugong in the coastal waters of Pangasinan", "Migratory shorebirds along Lingayen Gulf"],
     flora: ["Molave hardwood forests of the Ilocos range", "Tobacco fields — the region's historic cash crop", "Windswept coastal scrub of the Bangui coast", "Residual lowland forest in the Balbalasang corridor"],
     geology: ["Bangui Wind Farm — built on a volcanic ridge facing the South China Sea", "Paoay Lake — a natural lake of tectonic origin", "Ilocos limestone cliffs and sea caves", "Lingayen Gulf — site of the 1945 Allied landing"],
-    destinations: ["Vigan City (UNESCO Heritage Town)", "Paoay Church (UNESCO Baroque Church)", "Pagudpud (Cape Bojeador lighthouse & Bangui windmills)", "Hundred Islands National Park"],
+    destinations: ["Vigan City (UNESCO Heritage Town)", "Paoay Church (UNESCO Baroque Church)", "Pagudpud (Cape Bojeador lighthouse & Bangui windmills)", "Hundred Islands Natural Monument"],
     fact: "The sand of Pagudpud's Saud Beach is so fine it squeaks when you walk on it — caused by the high quartz content of the grains grinding against each other."
   },
 
