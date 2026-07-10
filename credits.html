@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Credits and data sources for Expedition PH Natural History — species records, photography, conservation data, and field observations.">
+<link rel="icon" href="image/Logo.jpg"><link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title>Credits &amp; Sources · Expedition PH: Natural History</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="museum.css">
+<style>
+.credits-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.credit-card {
+  background: var(--dark2);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 4px;
+  padding: 1.6rem 1.5rem;
+}
+.credit-card-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.credit-card-name {
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 0.4rem;
+}
+.credit-card-desc {
+  font-size: 0.8rem;
+  color: var(--dim);
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+}
+.credit-card-link {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+}
+.credit-card-link:hover { text-decoration: underline; }
+.accuracy-box {
+  max-width: 760px;
+  margin: 0 auto;
+  background: rgba(212,175,55,0.05);
+  border-left: 2px solid var(--gold);
+  padding: 1.5rem 2rem;
+}
+.accuracy-box p {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.85;
+  margin: 0;
+}
+@media(max-width:700px) {
+  .credits-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <a href="index.html" class="header-logo"><img src="image/Logo.jpg" class="header-logo-icon" alt="">Expedition PH <span class="header-sub">Natural History</span></a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="regions.html">Island Groups</a>
+    <a href="flora.html">Flora</a>
+    <a href="fauna.html">Fauna</a>
+    <a href="geology.html">Geology</a>
+    <a href="places.html">Places</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="history.html">History</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <img class="page-hero-img" src="image/Sierra Madre.jpg" alt="Philippine Sierra Madre forest">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-inner">
+    <p class="page-eyebrow">Transparency &amp; Attribution</p>
+    <h1 class="page-title">Credits <em>&amp; Sources</em></h1>
+    <p class="page-desc">All wildlife records, conservation data, and geographic information on this site are drawn from verified scientific sources. This page credits the researchers, naturalists, and institutions behind them.</p>
+  </div>
+</div>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Accuracy Commitment &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section">
+  <p class="section-eyebrow reveal" style="text-align:center">Our Standard</p>
+  <h2 class="section-title reveal reveal-delay-1" style="text-align:center">How We <em>Verify</em></h2>
+  <div class="accuracy-box reveal reveal-delay-2">
+    <p>Every species listed on Expedition PH has been cross-referenced against at least one verifiable scientific source — field observation records, institutional checklists, or peer-reviewed literature. If a species cannot be confirmed for a specific location, it is not listed. Conservation status follows the IUCN Red List. Where records conflict, the most conservative interpretation is used.</p>
+  </div>
+</section>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Wildlife &amp; Species Data &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section">
+  <p class="section-eyebrow reveal" style="text-align:center">Primary Sources</p>
+  <h2 class="section-title reveal reveal-delay-1" style="text-align:center">Wildlife <em>Records</em></h2>
+  <div class="credits-grid">
+
+    <div class="credit-card reveal">
+      <div class="credit-card-label">Citizen Science Platform</div>
+      <div class="credit-card-name">iNaturalist</div>
+      <p class="credit-card-desc">Species occurrence records and observation data for Philippine provinces. Used to verify presence of species at the provincial level against community-verified observations.</p>
+      <a href="https://www.inaturalist.org" target="_blank" rel="noopener noreferrer" class="credit-card-link">Visit iNaturalist &#8250;</a>
+    </div>
+
+    <div class="credit-card reveal reveal-delay-1">
+      <div class="credit-card-label">Regional Bird Checklist</div>
+      <div class="credit-card-name">Avibase — Bird Checklists of the World</div>
+      <p class="credit-card-desc">Provincial and regional bird checklists for the Philippines following Howard &amp; Moore 4th edition taxonomy. Used to validate species presence and enumerate threatened species per province.</p>
+      <a href="https://avibase.bsc-eoc.org" target="_blank" rel="noopener noreferrer" class="credit-card-link">Visit Avibase &#8250;</a>
+    </div>
+
+    <div class="credit-card reveal">
+      <div class="credit-card-label">Field Birding Records</div>
+      <div class="credit-card-name">Alain Pascua — Birds of Ilocos Norte</div>
+      <p class="credit-card-desc">Field observation records documenting bird species at specific sites across Ilocos Norte — Gabu (Laoag City), Pasuquin, Adams, Bangui, and Pagudpud. Used as a primary verification source for the province.</p>
+      <a href="https://www.alainpascua.com" target="_blank" rel="noopener noreferrer" class="credit-card-link">Visit alainpascua.com &#8250;</a>
+    </div>
+
+    <div class="credit-card reveal reveal-delay-1">
+      <div class="credit-card-label">Birding Survey</div>
+      <div class="credit-card-name">Wild Bird Club of the Philippines</div>
+      <p class="credit-card-desc">First Region I Birding Caravan (2025) — field survey documenting bird species across Ilocos Sur and La Union, including records from Bessang Pass. Primary verification source for Ilocos Sur wildlife.</p>
+      <a href="https://birdwatch.ph" target="_blank" rel="noopener noreferrer" class="credit-card-link">Visit birdwatch.ph &#8250;</a>
+    </div>
+
+    <div class="credit-card reveal">
+      <div class="credit-card-label">Conservation Status</div>
+      <div class="credit-card-name">IUCN Red List of Threatened Species</div>
+      <p class="credit-card-desc">All conservation status designations — Critically Endangered, Endangered, Vulnerable, Near Threatened, Least Concern — follow the IUCN Red List. Statuses are updated as new assessments are published.</p>
+      <a href="https://www.iucnredlist.org" target="_blank" rel="noopener noreferrer" class="credit-card-link">Visit IUCN Red List &#8250;</a>
+    </div>
+
+    <div class="credit-card reveal reveal-delay-1">
+      <div class="credit-card-label">Protected Areas</div>
+      <div class="credit-card-name">DENR — Dept. of Environment &amp; Natural Resources</div>
+      <p class="credit-card-desc">Protected area designations and management status follow DENR records under the National Integrated Protected Areas System (NIPAS), including updates from the Expanded NIPAS Act of 2018.</p>
+      <a href="https://www.denr.gov.ph" target="_blank" rel="noopener noreferrer" class="credit-card-link">Visit DENR &#8250;</a>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Photography &nbsp; &#9670;</span><div class="div-line"></div></div>
+
+<section class="section">
+  <p class="section-eyebrow reveal" style="text-align:center">Images</p>
+  <h2 class="section-title reveal reveal-delay-1" style="text-align:center">Photo <em>Credits</em></h2>
+  <div style="max-width:760px;margin:0 auto">
+    <p class="section-body reveal reveal-delay-2">Photographs on this site are sourced from the project's own collection and are used for educational and non-commercial purposes. Species and location photographs are selected to accurately represent the subject — where a dedicated photograph is not yet available, a representative image from the same region or habitat type is used as a temporary placeholder.</p>
+    <p class="section-body reveal reveal-delay-3">If you are a photographer whose work appears here without attribution, or if you would like to contribute verified field photographs of Philippine species and landscapes, please get in touch via the <a href="visit.html" style="color:var(--gold)">About page</a>.</p>
+  </div>
+</section>
+
+<button type="button" class="audio-btn" id="audio-btn" onclick="toggleSound()">&#9654; Ambient Sound</button>
+<audio id="sound" loop><source src="image/Expedition PH ost.mp3" type="audio/mpeg"></audio>
+
+<footer>
+  <div><div class="footer-brand-name">Expedition PH</div><p class="footer-tagline">A digital exploration of the Philippine archipelago's natural heritage.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="regions.html">Island Groups</a></li><li><a href="flora.html">Flora</a></li><li><a href="fauna.html">Fauna</a></li><li><a href="geology.html">Geology</a></li></ul></div>
+  <div><h4>Fauna</h4><ul><li><a href="birds.html">Birds</a></li><li><a href="mammals.html">Mammals</a></li><li><a href="reptiles.html">Reptiles</a></li><li><a href="marine.html">Marine</a></li><li><a href="insects.html">Insects</a></li><li><a href="freshwater.html">Freshwater</a></li><li><a href="extinct.html">Lost Species</a></li></ul></div>
+  <div><h4>Discover</h4><ul><li><a href="places.html">Places</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="species.html">Species Index</a></li><li><a href="protected-areas.html">Protected Areas</a></li></ul></div>
+  <div><h4>About</h4><ul><li><a href="exhibits.html">Exhibits</a></li><li><a href="visit.html">About This Project</a></li><li><a href="credits.html">Credits &amp; Sources</a></li></ul></div>
+</footer>
+<div class="footer-bottom"><span>&copy; 2026 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
+
+<script src="museum.js"></script>
+</body>
+</html>
