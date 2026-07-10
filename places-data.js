@@ -518,7 +518,7 @@ const PLACES = {
     category: 'luzon', type: 'marine', region: 'La Union · Luzon', season: 'Nov–May',
     threat: false, threatReason: '',
     address: 'Off Barangay Balaoan, Balaoan, La Union',
-    image: 'image/Pagudpud Blue Lagoon.jpg',
+    image: 'image/Immuki Island La Union.jpg',
     description: 'A compact dead-coral island lying offshore from Balaoan — formed from compacted coral rock rather than sand or sediment, giving it a pale, bleached appearance surrounded by crystal-clear water. Tidal pools and natural channels cut across its surface at low tide, exposing small reef-flat lagoons ideal for wading and snorkelling. The surrounding shallows sit directly on La Union\'s narrow continental shelf, with visibility reaching the sandy bottom in calm conditions.',
     funfact: 'Immuki is technically a cay — an island formed entirely from coral rubble and reef debris rather than volcanic or sedimentary rock. Its flat, low profile means the highest point is just a few metres above sea level, making it one of La Union\'s most ephemeral landscapes.',
     badges: ['Coral Rock Island', 'Tidal Pools', 'Snorkelling', 'Balaoan'],
