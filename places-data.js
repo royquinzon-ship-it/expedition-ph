@@ -472,6 +472,32 @@ const PLACES = {
     badges: ['Blue Lagoon', 'Dos Hermanos Islands', 'Coral Shallows', 'Far North Luzon'],
     wildlife: ['Green Sea Turtle']
   },
+  'pinsal-falls': {
+    name: 'Pinsal Falls',
+    subtitle: 'Largest Waterfall of Ilocandia',
+    tag: 'Waterfall · Ilocos Sur',
+    category: 'luzon', type: 'highland', region: 'Ilocos Sur · Luzon', season: 'Jun–Nov',
+    threat: false, threatReason: '',
+    address: 'Santa Maria, Ilocos Sur',
+    image: 'image/Pinsal Falls ILocos Sur.jpg',
+    description: 'A powerful 85-foot twin-cascade waterfall dropping from a wide limestone ledge into twin plunge basins flanked by canyon walls in Santa Maria, Ilocos Sur — the largest waterfall in the Ilocos Region. Fed by rivers draining the western Cordillera slopes, the falls run at their most dramatic during the southwest monsoon when peak flow sends white sheets of water across the full width of the limestone ledge. The gorge walls are draped in limestone canyon forest of ferns, mosses, and spray-adapted species thriving in the perpetual mist zone.',
+    funfact: 'Pinsal Falls sits just an hour from Vigan City — one of the most visited historic destinations in the Philippines — yet it remains largely unknown to most visitors. The largest waterfall in Ilocandia stands a short drive north of one of the country\'s most famous heritage towns.',
+    badges: ['85-Foot Drop', 'Twin Cascade', 'Limestone Gorge', 'Santa Maria'],
+    wildlife: ['Brown-breasted Kingfisher', 'Coleto', 'Balicassiao']
+  },
+  'pikkang-falls': {
+    name: 'Pikkang Falls',
+    subtitle: 'Hidden Curtain of San Juan',
+    tag: 'Waterfall · Ilocos Sur',
+    category: 'luzon', type: 'highland', region: 'Ilocos Sur · Luzon', season: 'Jun–Nov',
+    threat: false, threatReason: '',
+    address: 'Barangay Malamin, San Juan, Ilocos Sur',
+    image: 'image/Pinsal Falls ILocos Sur.jpg',
+    description: 'A curtain-style multi-cascade waterfall in Barangay Malamin, San Juan — reached via a 30-minute trek that crosses the river multiple times before arriving at the base. The falls spread across a wide rock face in overlapping sheets of white water, creating a natural amphitheatre of spray and mist. Far less visited than Pinsal Falls to the north, Pikkang is one of the more rewarding off-trail waterfalls along the Cordillera\'s western foothills.',
+    funfact: 'Pikkang\'s curtain formation is caused by bedrock that dips outward at the lip — rather than concentrating at a single point, the river fans laterally across the full rock face, producing a wide veil of water instead of a single plunging column.',
+    badges: ['Curtain Waterfall', 'River Crossing Trek', 'San Juan', 'Ilocos Sur'],
+    wildlife: []
+  },
   'palawan': {
     name: 'Palawan',
     subtitle: 'The Last Frontier',

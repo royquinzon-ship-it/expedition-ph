@@ -100,9 +100,17 @@ var PH_PROVINCES = [
     protected_areas: [
       { name: "Tirad Pass Protected Landscape", type: "Protected Landscape", pa_id: "tirad-pass" }
     ],
+    wildlife: [
+      { name: "Brown-breasted Kingfisher", latin: "Halcyon gularis", status: "Least Concern", note: "Documented in Region I birding surveys; Philippine endemic found along waterways and forest edges", page: "birds.html" },
+      { name: "Coleto", latin: "Sarcops calvus", status: "Least Concern", note: "Documented in Region I Birding Caravan; distinctive Philippine endemic starling of lowland forest", page: "birds.html" },
+      { name: "Balicassiao", latin: "Dicrurus balicassius", status: "Least Concern", note: "Documented in Region I Birding Caravan; Philippine endemic drongo found at Bessang Pass and forest edges", page: "birds.html" },
+      { name: "Luzon Boobook", latin: "Ninox philippensis", status: "Least Concern", note: "Documented in Region I Birding Caravan; only owl species recorded in the survey", page: "birds.html" },
+      { name: "Philippine Flying Dragon", latin: "Draco spilopterus", status: "Least Concern", note: "Documented on iNaturalist; endemic gliding lizard found in forests throughout Ilocos Sur", page: "reptiles.html" },
+      { name: "Marbled Water Monitor", latin: "Varanus marmoratus", status: "Least Concern", note: "Documented on iNaturalist; Philippine endemic monitor lizard found along rivers and forest edges", page: "reptiles.html" }
+    ],
     landmarks: [
-      { name: "Pinsal Falls", type: "Waterfall", note: "85-foot twin-cascade waterfall in Santa Maria; largest waterfall in the Ilocos Region; fed by Cordillera rivers" },
-      { name: "Pikkang Falls", type: "Waterfall", note: "Curtain-style multi-cascade waterfall in Barangay Malamin, San Juan; reached via a 30-minute river-crossing trek" }
+      { name: "Pinsal Falls", type: "Waterfall", note: "85-foot twin-cascade waterfall in Santa Maria; largest waterfall in the Ilocos Region; fed by Cordillera rivers", place_id: "pinsal-falls" },
+      { name: "Pikkang Falls", type: "Waterfall", note: "Curtain-style multi-cascade waterfall in Barangay Malamin, San Juan; reached via a 30-minute river-crossing trek", place_id: "pikkang-falls" }
     ],
     conservation_note: "Ilocos Sur's remaining lowland forest cover is among the most fragmented in Luzon — the Abra River corridor is its last significant lowland riparian habitat."
   },
