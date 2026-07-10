@@ -1,4 +1,4 @@
-const PLACES = {
+﻿const PLACES = {
   'tubbataha-reef': {
     name: 'Tubbataha Reef',
     subtitle: 'Heart of the Coral Triangle',
