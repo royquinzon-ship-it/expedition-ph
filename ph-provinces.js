@@ -55,7 +55,15 @@ var PH_PROVINCES = [
     wildlife: [
       { name: "Hawksbill Sea Turtle", latin: "Eretmochelys imbricata", status: "Critically Endangered", note: "Documented nesting at Pagudpud coastline", page: "reptiles.html" },
       { name: "Olive Ridley Sea Turtle", latin: "Lepidochelys olivacea", status: "Vulnerable", note: "Documented along Pagudpud and Patapat coastline" },
-      { name: "Green Sea Turtle", latin: "Chelonia mydas", status: "Least Concern", note: "Nesting recorded at Pagudpud; globally downlisted Oct 2025", page: "reptiles.html" }
+      { name: "Green Sea Turtle", latin: "Chelonia mydas", status: "Least Concern", note: "Nesting recorded at Pagudpud; globally downlisted Oct 2025", page: "reptiles.html" },
+      { name: "Philippine Duck", latin: "Anas luzonica", status: "Vulnerable", note: "Philippine endemic; documented at Gabu (Laoag City), Pagudpud, and Paoay Lake", page: "birds.html" },
+      { name: "Rufous Hornbill", latin: "Buceros hydrocorax", status: "Endangered", note: "Philippine endemic; documented at Adams, Ilocos Norte", page: "birds.html" },
+      { name: "Spotted Imperial Pigeon", latin: "Ducula carola", status: "Vulnerable", note: "Philippine endemic; documented at Pasuquin", page: "birds.html" },
+      { name: "Chinese Egret", latin: "Egretta eulophotes", status: "Vulnerable", note: "Migratory; documented at Burgos near the Kapurpurawan coastline", page: "birds.html" },
+      { name: "Philippine Green Pigeon", latin: "Treron lucionensis", status: "Least Concern", note: "Philippine endemic; documented at Pasuquin", page: "birds.html" },
+      { name: "Brahminy Kite", latin: "Haliastur indus", status: "Least Concern", note: "Documented at Gabu, Vintar, and Bangui", page: "birds.html" },
+      { name: "Grey-faced Buzzard", latin: "Butastur indicus", status: "Least Concern", note: "Migratory raptor; documented at Adams, Ilocos Norte", page: "birds.html" },
+      { name: "Pacific Reef Egret", latin: "Egretta sacra", status: "Least Concern", note: "Documented at Burgos coastline near Kapurpurawan", page: "birds.html" }
     ],
     flora: [
       "Agoho (Casuarina equisetifolia) — characteristic coastal tree of the Ilocos shoreline, stabilising sand dunes near Paoay",
@@ -138,9 +146,16 @@ var PH_PROVINCES = [
     protected_areas: [
       { name: "Agoo-Damortis Protected Landscape and Seascape", type: "Protected Landscape and Seascape", pa_id: "agoo-damortis" }
     ],
+    wildlife: [
+      { name: "Purple Heron", latin: "Ardea purpurea", status: "Least Concern", note: "Documented in La Union wetlands; Baroro River valley and Agoo-Damortis coastal wetlands", page: "birds.html" },
+      { name: "Brown-breasted Kingfisher", latin: "Halcyon gularis", status: "Least Concern", note: "Philippine endemic; documented along La Union waterways and the Baroro River corridor", page: "birds.html" },
+      { name: "Pheasant-tailed Jacana", latin: "Hydrophasianus chirurgus", status: "Least Concern", note: "Documented in La Union wetlands; distinctive long-tailed wader of shallow freshwater habitats", page: "birds.html" },
+      { name: "Brahminy Kite", latin: "Haliastur indus", status: "Least Concern", note: "Documented along the Lingayen Gulf coastline", page: "birds.html" },
+      { name: "Philippine Hanging-Parrot", latin: "Loriculus philippensis", status: "Least Concern", note: "Philippine endemic (Colasisi); documented in La Union forest edges", page: "birds.html" }
+    ],
     landmarks: [
-      { name: "Tangadan Falls", type: "Waterfall", note: "Two-tier cascade along the Baroro River, San Gabriel; 15 m lower drop with a deep natural plunge pool; cold water draining from the Cordillera highlands" },
-      { name: "Immuki Island", type: "Coral Island", note: "Dead coral island off Balaoan; compacted coral rock forming crystal-clear tidal lagoons and natural pools" }
+      { name: "Tangadan Falls", type: "Waterfall", note: "Two-tier cascade along the Baroro River, San Gabriel; 15 m lower drop with a deep natural plunge pool; cold water draining from the Cordillera highlands", place_id: "tangadan-falls" },
+      { name: "Immuki Island", type: "Coral Island", note: "Dead coral island off Balaoan; compacted coral rock forming crystal-clear tidal lagoons and natural pools", place_id: "immuki-island" }
     ],
     conservation_note: "The Agoo-Damortis Protected Landscape and Seascape (10,648 ha along Lingayen Gulf) protects critical mangrove and seagrass habitat that serves as nursery ground for coastal fisheries."
   },

@@ -498,6 +498,32 @@ const PLACES = {
     badges: ['Curtain Waterfall', 'River Crossing Trek', 'San Juan', 'Ilocos Sur'],
     wildlife: []
   },
+  'tangadan-falls': {
+    name: 'Tangadan Falls',
+    subtitle: 'Twin-Drop of the Baroro River',
+    tag: 'Waterfall · La Union',
+    category: 'luzon', type: 'highland', region: 'La Union · Luzon', season: 'Jun–Nov',
+    threat: false, threatReason: '',
+    address: 'Barangay Poblacion, San Gabriel, La Union',
+    image: 'image/Kabigan Falls.jpg',
+    description: 'A two-tier waterfall along the Baroro River in San Gabriel — one of La Union\'s most accessible highland destinations despite lying at the foot of the Cordillera. The lower drop descends roughly 15 metres into a wide natural plunge pool cold enough even in summer, fed by Cordillera snowmelt and mountain springs. The trek follows the river upstream through bamboo groves and second-growth forest, crossing the Baroro three times before reaching the base of the falls.',
+    funfact: 'The Baroro River that feeds Tangadan Falls is one of the few rivers in the Ilocos region that drains the western Cordillera directly into the South China Sea — carrying cold, mineral-rich highland water year-round even during the dry season.',
+    badges: ['Two-Tier Falls', 'Baroro River', 'Cordillera Highlands', 'San Gabriel'],
+    wildlife: ['Purple Heron', 'Brown-breasted Kingfisher', 'Brahminy Kite']
+  },
+  'immuki-island': {
+    name: 'Immuki Island',
+    subtitle: 'Coral Rock Island of Balaoan',
+    tag: 'Coral Island · La Union',
+    category: 'luzon', type: 'marine', region: 'La Union · Luzon', season: 'Nov–May',
+    threat: false, threatReason: '',
+    address: 'Off Barangay Balaoan, Balaoan, La Union',
+    image: 'image/Pagudpud Blue Lagoon.jpg',
+    description: 'A compact dead-coral island lying offshore from Balaoan — formed from compacted coral rock rather than sand or sediment, giving it a pale, bleached appearance surrounded by crystal-clear water. Tidal pools and natural channels cut across its surface at low tide, exposing small reef-flat lagoons ideal for wading and snorkelling. The surrounding shallows sit directly on La Union\'s narrow continental shelf, with visibility reaching the sandy bottom in calm conditions.',
+    funfact: 'Immuki is technically a cay — an island formed entirely from coral rubble and reef debris rather than volcanic or sedimentary rock. Its flat, low profile means the highest point is just a few metres above sea level, making it one of La Union\'s most ephemeral landscapes.',
+    badges: ['Coral Rock Island', 'Tidal Pools', 'Snorkelling', 'Balaoan'],
+    wildlife: ['Brahminy Kite', 'Pacific Reef Egret']
+  },
   'palawan': {
     name: 'Palawan',
     subtitle: 'The Last Frontier',
