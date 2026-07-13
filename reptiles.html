@@ -317,7 +317,7 @@
     </div>
 
     <div class="card filterable" data-category="reptile" onclick="openCard(this)" data-funfact="Olive Ridleys are the only sea turtles that nest in mass synchronised events called 'arribadas' — thousands of females emerge from the sea on the same night to nest on the same beach, overwhelming predators with sheer numbers in a strategy called predator satiation.">
-      <img src="https://picsum.photos/seed/ph-olive-ridley/600/400" alt="Olive Ridley Sea Turtle" loading="lazy">
+      <img src="image/Olive Ridley Sea turtle.jpg" alt="Olive Ridley Sea Turtle" loading="lazy">
       <div class="card-body">
         <div class="card-tag">Reptile · Sea Turtle</div>
         <div class="card-title">Olive Ridley Sea Turtle<em>Lepidochelys olivacea</em></div>
@@ -386,18 +386,22 @@
   var sp = new URLSearchParams(window.location.search).get('species');
   if (sp) { window.location.replace('species-detail.html?id=' + sp); return; }
   var cards = document.querySelectorAll('.card.filterable');
-  for (var i = 0; i < cards.length; i++) {
-    (function (card) {
-      var titleEl = card.querySelector('.card-title');
-      if (!titleEl) return;
-      var name = titleEl.childNodes[0].textContent.trim();
-      var slug = name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-      card.removeAttribute('onclick');
-      card.style.cursor = 'pointer';
-      card.addEventListener('click', function () {
-        window.location.href = 'species-detail.html?id=' + slug;
-      });
-    }(cards[i]));
+  var list = [];
+  for (var i = 0; i < cards.length; i++) list.push(cards[i]);
+  for (var i = 0; i < list.length; i++) {
+    var card = list[i];
+    var titleEl = card.querySelector('.card-title');
+    if (!titleEl) continue;
+    var name = titleEl.childNodes[0].textContent.trim();
+    var slug = name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+    var a = document.createElement('a');
+    a.href = 'species-detail.html?id=' + slug;
+    for (var j = 0; j < card.attributes.length; j++) {
+      var attr = card.attributes[j];
+      if (attr.name !== 'onclick') a.setAttribute(attr.name, attr.value);
+    }
+    a.innerHTML = card.innerHTML;
+    card.parentNode.replaceChild(a, card);
   }
 }());
 </script>

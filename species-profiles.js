@@ -1159,7 +1159,7 @@ const SPECIES_PROFILES = {
     tag: 'Reptile · Sea Turtle',
     status: 'Vulnerable',
     statusCode: 'VU',
-    image: 'image/Photo coming soon.jpg',
+    image: 'image/Olive Ridley Sea turtle.jpg',
     island: 'Philippine Coast · Widespread',
     size: '60–70 cm carapace length',
     weight: '35–45 kg',
