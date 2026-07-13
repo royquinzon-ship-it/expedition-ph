@@ -641,7 +641,7 @@ const SPECIES_PROFILES = {
     tag: 'Reptile · Sea Turtle',
     status: 'Critically Endangered',
     statusCode: 'CR',
-    image: 'image/Photo coming soon.jpg',
+    image: 'image/Hawksbill sea turtle (Eretmochelys imbricata) .jpg',
     island: 'Philippine Reefs · Widespread',
     description: 'Critically endangered and among the most threatened sea turtles in the world. Philippine coral reefs are critical foraging and nesting habitat. Historically decimated for its beautiful tortoiseshell scutes (used in jewellery and accessories), it now faces ongoing threats from habitat loss and incidental capture.',
     funfact: 'Has a unique hawk-like beak that reaches into narrow coral crevices to extract sea sponges — its primary food. It is the only animal that eats sponges as a dietary staple, making it irreplaceable in reef ecology.',
