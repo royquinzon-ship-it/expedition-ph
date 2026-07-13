@@ -485,18 +485,20 @@
 <script>
 (function () {
   var sp = new URLSearchParams(window.location.search).get('species');
-  if (!sp) return;
-  var cards = document.querySelectorAll('.card');
+  if (sp) { window.location.replace('species-detail.html?id=' + sp); return; }
+  var cards = document.querySelectorAll('.card.filterable');
   for (var i = 0; i < cards.length; i++) {
-    var titleEl = cards[i].querySelector('.card-title');
-    if (!titleEl) continue;
-    var name = titleEl.childNodes[0].textContent.trim();
-    var slug = name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-    if (slug === sp) {
-      cards[i].scrollIntoView({ behavior: 'smooth', block: 'center' });
-      openCard(cards[i]);
-      break;
-    }
+    (function (card) {
+      var titleEl = card.querySelector('.card-title');
+      if (!titleEl) return;
+      var name = titleEl.childNodes[0].textContent.trim();
+      var slug = name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+      card.removeAttribute('onclick');
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', function () {
+        window.location.href = 'species-detail.html?id=' + slug;
+      });
+    }(cards[i]));
   }
 }());
 </script>
