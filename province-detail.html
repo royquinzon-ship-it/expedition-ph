@@ -25,7 +25,7 @@
   object-position: center 40%;
   display: block;
 }
-.art-hero { cursor: zoom-in; }
+.art-hero { cursor: default; }
 
 /* ── IMAGE LIGHTBOX ── */
 #img-lightbox {
@@ -1038,32 +1038,7 @@ a.art-pa-link:hover {
     });
   }
 
-  // Hero image lightbox
-  var lightbox     = document.getElementById('img-lightbox');
-  var lbImg        = document.getElementById('img-lightbox-img');
-  var lbCaption    = document.getElementById('img-lightbox-caption');
-  var lbClose      = document.getElementById('img-lightbox-close');
-  var heroImg      = document.getElementById('d-img');
-
-  function openLightbox() {
-    lbImg.src        = heroImg.src;
-    lbImg.alt        = heroImg.alt;
-    lbCaption.textContent = province.name + ' — ' + province.known_for;
-    lightbox.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeLightbox() {
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  if (province.img) document.getElementById('d-hero').addEventListener('click', openLightbox);
-  lbClose.addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', closeLightbox);
-  lbImg.addEventListener('click', function (e) { e.stopPropagation(); });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeLightbox();
-  });
+  // lightbox removed — hero click-to-zoom disabled
 
   // Active TOC highlight on scroll
   var sections = document.querySelectorAll('.art-section');

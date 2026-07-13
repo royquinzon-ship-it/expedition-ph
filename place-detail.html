@@ -15,7 +15,20 @@
   overflow: hidden;
   display: flex;
   align-items: flex-end;
+  cursor: zoom-in;
 }
+#place-lightbox {
+  display: none; position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,0.92); align-items: center; justify-content: center; cursor: zoom-out;
+}
+#place-lightbox.open { display: flex; }
+#place-lightbox img { max-width: 92vw; max-height: 88vh; object-fit: contain; box-shadow: 0 8px 60px rgba(0,0,0,0.8); }
+#place-lightbox-close {
+  position: absolute; top: 1.2rem; right: 1.5rem;
+  background: none; border: none; color: rgba(255,255,255,0.6);
+  font-size: 2rem; cursor: pointer; line-height: 1;
+}
+#place-lightbox-close:hover { color: #fff; }
 .detail-hero-img {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
@@ -233,8 +246,14 @@
   <span id="d-breadcrumb-name"></span>
 </div>
 
+<!-- LIGHTBOX -->
+<div id="place-lightbox" role="dialog" aria-modal="true" aria-label="Full image view">
+  <button id="place-lightbox-close" aria-label="Close">&times;</button>
+  <img id="place-lightbox-img" src="" alt="">
+</div>
+
 <!-- HERO -->
-<div class="detail-hero">
+<div class="detail-hero" id="d-hero">
   <img class="detail-hero-img" id="d-img" src="" alt="">
   <div class="detail-hero-overlay"></div>
   <div class="detail-hero-inner">
@@ -396,6 +415,32 @@
       '</div>';
     grid.appendChild(a);
   });
+})();
+</script>
+<script>
+(function () {
+  var lightbox = document.getElementById('place-lightbox');
+  var lbImg    = document.getElementById('place-lightbox-img');
+  var lbClose  = document.getElementById('place-lightbox-close');
+  var heroImg  = document.getElementById('d-img');
+
+  function open() {
+    if (!heroImg.src || heroImg.src.endsWith('Photo coming soon.jpg')) return;
+    lbImg.src = heroImg.src;
+    lbImg.alt = heroImg.alt;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('d-hero').addEventListener('click', open);
+  lbClose.addEventListener('click', function (e) { e.stopPropagation(); close(); });
+  lightbox.addEventListener('click', close);
+  lbImg.addEventListener('click', function (e) { e.stopPropagation(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
 })();
 </script>
 </body>
