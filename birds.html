@@ -482,5 +482,23 @@
 <div class="footer-bottom"><span>&copy; 2026 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
 
 <script src="museum.js"></script>
+<script>
+(function () {
+  var sp = new URLSearchParams(window.location.search).get('species');
+  if (!sp) return;
+  var cards = document.querySelectorAll('.card');
+  for (var i = 0; i < cards.length; i++) {
+    var titleEl = cards[i].querySelector('.card-title');
+    if (!titleEl) continue;
+    var name = titleEl.childNodes[0].textContent.trim();
+    var slug = name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+    if (slug === sp) {
+      cards[i].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      openCard(cards[i]);
+      break;
+    }
+  }
+}());
+</script>
 </body>
 </html>

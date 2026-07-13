@@ -949,7 +949,8 @@ a.art-pa-link:hover {
       var el;
       if (sp.page) {
         el = document.createElement('a');
-        el.href = sp.page;
+        var spSlug = sp.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+        el.href = sp.page + '?species=' + spSlug;
         el.className = 'art-wildlife-card art-wildlife-link';
         el.title = 'View ' + sp.name + ' on Expedition PH';
       } else {
