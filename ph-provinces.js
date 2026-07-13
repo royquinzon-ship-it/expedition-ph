@@ -53,7 +53,7 @@ var PH_PROVINCES = [
       coastline: "South China Sea & Luzon Strait"
     },
     wildlife: [
-      { name: "Hawksbill Sea Turtle", latin: "Eretmochelys imbricata", status: "Critically Endangered", note: "Documented nesting at Pagudpud coastline", page: "reptiles.html" },
+      { name: "Hawksbill Sea Turtle", latin: "Eretmochelys imbricata", status: "Critically Endangered", note: "Nesting documented at Pagudpud and Saud Beach; Kalbario-Patapat Natural Park protects the province's primary sea turtle nesting habitat along the Luzon Strait coast", page: "reptiles.html" },
       { name: "Olive Ridley Sea Turtle", latin: "Lepidochelys olivacea", status: "Vulnerable", note: "Documented along Pagudpud and Patapat coastline", page: "reptiles.html" },
       { name: "Green Sea Turtle", latin: "Chelonia mydas", status: "Least Concern", note: "Nesting recorded at Pagudpud; globally downlisted Oct 2025", page: "reptiles.html" },
       { name: "Philippine Duck", latin: "Anas luzonica", status: "Vulnerable", note: "Philippine endemic; documented at Gabu (Laoag City), Pagudpud, and Paoay Lake", page: "birds.html" },
@@ -176,7 +176,8 @@ var PH_PROVINCES = [
       coastline: "Lingayen Gulf"
     },
     wildlife: [
-      { name: "Giant Clam", latin: "Tridacna gigas", status: "Vulnerable", note: "Active mariculture conservation colony in Bolinao, managed by UP Marine Science Institute" }
+      { name: "Giant Clam", latin: "Tridacna gigas", status: "Vulnerable", note: "Active mariculture conservation colony in Bolinao, managed by UP Marine Science Institute", page: "marine.html" },
+      { name: "Hawksbill Sea Turtle", latin: "Eretmochelys imbricata", status: "Critically Endangered", note: "Nesting recorded at Hundred Islands; the Hundred Islands Natural Monument conservation management plan specifically identifies hawksbill turtle nesting grounds among its primary ecological values", page: "reptiles.html" }
     ],
 
     flora: [
