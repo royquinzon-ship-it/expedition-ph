@@ -128,6 +128,33 @@
   color: var(--text);
   line-height: 1.85;
 }
+.detail-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+.detail-meta-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.detail-meta-text {
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.85;
+}
+.detail-behavior {
+  margin-bottom: 2.5rem;
+}
+.detail-behavior .detail-meta-text {
+  line-height: 2;
+}
+@media(max-width:700px) {
+  .detail-meta-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+}
 .detail-sidebar {
   border: 1px solid var(--gold-border);
   padding: 2rem;
@@ -253,6 +280,20 @@
   <div class="detail-main">
     <a id="sp-back" href="fauna.html" class="detail-back">&#8592; Back to Fauna</a>
     <p class="detail-desc" id="sp-desc"></p>
+    <div class="detail-meta-grid">
+      <div>
+        <div class="detail-meta-label">&#9670; Habitat</div>
+        <p class="detail-meta-text" id="sp-habitat"></p>
+      </div>
+      <div>
+        <div class="detail-meta-label">&#9670; Diet</div>
+        <p class="detail-meta-text" id="sp-diet"></p>
+      </div>
+    </div>
+    <div class="detail-behavior">
+      <div class="detail-meta-label">&#9670; Behavior &amp; Reproduction</div>
+      <p class="detail-meta-text" id="sp-behavior"></p>
+    </div>
     <div class="detail-funfact">
       <div class="detail-funfact-label">&#9670; Did You Know</div>
       <p class="detail-funfact-text" id="sp-funfact-text"></p>
@@ -271,6 +312,18 @@
     <div class="sidebar-section">
       <div class="sidebar-label">Group</div>
       <div class="sidebar-value" id="sb-group"></div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Size</div>
+      <div class="sidebar-value" id="sb-size"></div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Weight</div>
+      <div class="sidebar-value" id="sb-weight"></div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Lifespan</div>
+      <div class="sidebar-value" id="sb-lifespan"></div>
     </div>
     <div class="sidebar-section">
       <div class="sidebar-label">Found In</div>
@@ -312,13 +365,15 @@
     birds:      'Birds',
     reptiles:   'Reptiles & Amphibians',
     marine:     'Marine Life',
-    freshwater: 'Freshwater Life'
+    freshwater: 'Freshwater Life',
+    mammals:    'Mammals'
   };
   var categoryPages = {
     birds:      'birds.html',
     reptiles:   'reptiles.html',
     marine:     'marine.html',
-    freshwater: 'freshwater.html'
+    freshwater: 'freshwater.html',
+    mammals:    'mammals.html'
   };
 
   if (!id || !SPECIES_PROFILES[id]) {
@@ -355,31 +410,60 @@
   badge.textContent = s.status;
   statusRow.appendChild(badge);
 
-  // Back link
+  // Back link — return to the specific province the user came from, if any
   var backLink = document.getElementById('sp-back');
-  backLink.href = catPage;
-  backLink.textContent = '← Back to ' + catLabel;
+  var fromProvinceId   = params.get('fromId');
+  var fromProvinceName = params.get('fromName');
+  if (params.get('from') === 'province' && fromProvinceId && fromProvinceName) {
+    backLink.href = 'province-detail.html?id=' + encodeURIComponent(fromProvinceId);
+    backLink.textContent = '← Back to ' + fromProvinceName;
+  } else {
+    backLink.href = catPage;
+    backLink.textContent = '← Back to ' + catLabel;
+  }
 
   // Body
   document.getElementById('sp-desc').textContent = s.description;
+  document.getElementById('sp-habitat').textContent = s.habitat;
+  document.getElementById('sp-diet').textContent = s.diet;
+  document.getElementById('sp-behavior').textContent = s.behavior;
   document.getElementById('sp-funfact-text').textContent = s.funfact;
 
   // Sidebar
   document.getElementById('sb-status').textContent = s.status + ' (' + (s.statusCode || 'DD') + ')';
   document.getElementById('sb-latin').textContent = s.latin;
   document.getElementById('sb-group').textContent = catLabel;
+  document.getElementById('sb-size').textContent = s.size;
+  document.getElementById('sb-weight').textContent = s.weight;
+  document.getElementById('sb-lifespan').textContent = s.lifespan;
   document.getElementById('sb-island').textContent = s.island || 'Philippines';
 
   var catLink = document.getElementById('sb-category-link');
   catLink.href = catPage;
   catLink.textContent = '← All ' + catLabel;
 
-  // Related species — same category, exclude current
-  var allIds   = Object.keys(SPECIES_PROFILES);
-  var sameCat  = allIds.filter(function (k) { return k !== id && SPECIES_PROFILES[k].category === s.category; });
-  var threatened = sameCat.filter(function (k) { return ['CR','EN','VU'].indexOf(SPECIES_PROFILES[k].statusCode) !== -1; });
-  var others   = sameCat.filter(function (k) { return ['CR','EN','VU'].indexOf(SPECIES_PROFILES[k].statusCode) === -1; });
-  var related  = threatened.concat(others).slice(0, 3);
+  // Related species — one from each of 3 other categories, for variety
+  var allIds = Object.keys(SPECIES_PROFILES);
+  var allCategories = ['birds', 'reptiles', 'marine', 'freshwater', 'mammals'];
+
+  function hashPick(str, len) {
+    var h = 0;
+    for (var i = 0; i < str.length; i++) h = (h * 31 + str.charCodeAt(i)) >>> 0;
+    return len ? h % len : 0;
+  }
+
+  var otherCategories = allCategories.filter(function (c) { return c !== s.category; });
+  if (otherCategories.length > 3) {
+    var startIdx = hashPick(id + 'catrot', otherCategories.length);
+    otherCategories = [0, 1, 2].map(function (i) { return otherCategories[(startIdx + i) % otherCategories.length]; });
+  }
+
+  var related = otherCategories.map(function (cat) {
+    var candidates = allIds.filter(function (k) { return k !== id && SPECIES_PROFILES[k].category === cat; });
+    var threatened = candidates.filter(function (k) { return ['CR','EN','VU'].indexOf(SPECIES_PROFILES[k].statusCode) !== -1; });
+    var pool = threatened.length ? threatened : candidates;
+    return pool[hashPick(id + cat, pool.length)];
+  }).filter(Boolean);
 
   var grid = document.getElementById('sp-related-grid');
   related.forEach(function (k) {

@@ -48,7 +48,7 @@
 <div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Featured Species &nbsp; &#9670;</span><div class="div-line"></div></div>
 
 <section class="section section-dark2">
-  <div class="featured-card reveal" onclick="openCard(this)" data-funfact="Each of the tarsier's eyes is as large as its entire brain. Unable to move its eyeballs, it can rotate its head nearly 180° in each direction — like an owl.">
+  <a class="featured-card reveal" href="species-detail.html?id=philippine-tarsier" style="text-decoration:none;color:inherit;display:block;">
     <img class="featured-card-img" src="image/Tarsier.jpg" alt="Philippine Tarsier">
     <div class="featured-card-body">
       <div class="featured-label">&#9670; &nbsp; Mammal · Primate &nbsp; · &nbsp; Near Threatened</div>
@@ -63,7 +63,7 @@
         <span class="badge">Eyes Larger Than Brain</span>
       </div>
     </div>
-  </div>
+  </a>
 </section>
 
 <div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; All Species &nbsp; &#9670;</span><div class="div-line"></div></div>
@@ -362,5 +362,29 @@
 <div class="footer-bottom"><span>&copy; 2026 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
 
 <script src="museum.js"></script>
+<script>
+(function () {
+  var sp = new URLSearchParams(window.location.search).get('species');
+  if (sp) { window.location.replace('species-detail.html?id=' + sp); return; }
+  var cards = document.querySelectorAll('.card.filterable');
+  var list = [];
+  for (var i = 0; i < cards.length; i++) list.push(cards[i]);
+  for (var i = 0; i < list.length; i++) {
+    var card = list[i];
+    var titleEl = card.querySelector('.card-title');
+    if (!titleEl) continue;
+    var name = titleEl.childNodes[0].textContent.trim();
+    var slug = name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+    var a = document.createElement('a');
+    a.href = 'species-detail.html?id=' + slug;
+    for (var j = 0; j < card.attributes.length; j++) {
+      var attr = card.attributes[j];
+      if (attr.name !== 'onclick') a.setAttribute(attr.name, attr.value);
+    }
+    a.innerHTML = card.innerHTML;
+    card.parentNode.replaceChild(a, card);
+  }
+}());
+</script>
 </body>
 </html>

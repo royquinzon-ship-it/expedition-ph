@@ -957,7 +957,7 @@ a.art-pa-link:hover {
           'cantors-giant-softshell-turtle': 'philippine-soft-shell-turtle'
         };
         var spSlug = slugFix[rawSlug] || rawSlug;
-        el.href = 'species-detail.html?id=' + spSlug;
+        el.href = 'species-detail.html?id=' + spSlug + '&from=province&fromId=' + encodeURIComponent(province.img_seed) + '&fromName=' + encodeURIComponent(province.name);
         el.className = 'art-wildlife-card art-wildlife-link';
         el.title = 'View ' + sp.name + ' on Expedition PH';
       } else {
