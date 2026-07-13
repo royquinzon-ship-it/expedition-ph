@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta id="meta-desc" name="description" content="">
+<link rel="icon" href="image/Logo.jpg"><link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title id="page-title">Species · Expedition PH</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="museum.css">
+<style>
+.detail-hero {
+  min-height: 72vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  cursor: zoom-in;
+}
+#sp-lightbox {
+  display: none; position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,0.92); align-items: center; justify-content: center; cursor: zoom-out;
+}
+#sp-lightbox.open { display: flex; }
+#sp-lightbox img { max-width: 92vw; max-height: 88vh; object-fit: contain; box-shadow: 0 8px 60px rgba(0,0,0,0.8); }
+#sp-lightbox-close {
+  position: absolute; top: 1.2rem; right: 1.5rem;
+  background: none; border: none; color: rgba(255,255,255,0.6);
+  font-size: 2rem; cursor: pointer; line-height: 1;
+}
+#sp-lightbox-close:hover { color: #fff; }
+.detail-hero-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.38;
+}
+.detail-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(5,5,5,0.05) 0%, rgba(5,5,5,0.97) 100%);
+}
+.detail-hero-inner {
+  position: relative; z-index: 1;
+  padding: 120px 5rem 4rem;
+  max-width: 860px;
+  width: 100%;
+}
+.detail-eyebrow {
+  font-size: 0.65rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.detail-name {
+  font-family: 'Merriweather', serif;
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.12;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.detail-latin {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--gold);
+  margin-bottom: 1.6rem;
+}
+.sp-status-badge {
+  display: inline-block;
+  padding: 0.28rem 0.75rem;
+  border-radius: 2px;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+.sp-status-CR { background: rgba(200,40,40,0.22); color: #ff7070; border: 1px solid rgba(200,40,40,0.4); }
+.sp-status-EN { background: rgba(210,90,30,0.22); color: #ff9a55; border: 1px solid rgba(210,90,30,0.4); }
+.sp-status-VU { background: rgba(200,155,0,0.22); color: #f0c830; border: 1px solid rgba(200,155,0,0.4); }
+.sp-status-NT { background: rgba(100,165,80,0.22); color: #8bd470; border: 1px solid rgba(100,165,80,0.4); }
+.sp-status-LC { background: rgba(50,160,80,0.22); color: #6dcc80; border: 1px solid rgba(50,160,80,0.4); }
+.sp-status-DD { background: rgba(120,120,140,0.22); color: #aaa; border: 1px solid rgba(120,120,140,0.4); }
+.detail-body {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 4rem;
+  padding: 5rem 5rem;
+}
+.detail-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dim);
+  text-decoration: none;
+  margin-bottom: 2.5rem;
+  transition: color 0.2s;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+}
+.detail-back:hover { color: var(--gold); border-color: rgba(212,175,55,0.3); }
+.detail-desc {
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 2;
+  margin-bottom: 2.5rem;
+}
+.detail-funfact {
+  padding: 1.3rem 1.6rem;
+  border-left: 2px solid var(--gold);
+  background: rgba(212,175,55,0.06);
+  margin-bottom: 2rem;
+}
+.detail-funfact-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.detail-funfact-text {
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.85;
+}
+.detail-sidebar {
+  border: 1px solid var(--gold-border);
+  padding: 2rem;
+  align-self: start;
+  position: sticky;
+  top: 90px;
+  background: var(--dark2);
+}
+.sidebar-section {
+  margin-bottom: 1.6rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid rgba(212,175,55,0.09);
+}
+.sidebar-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.sidebar-label {
+  font-size: 0.57rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.45rem;
+}
+.sidebar-value {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+.sidebar-latin {
+  font-style: italic;
+  color: var(--dim);
+  font-size: 0.85rem;
+}
+.detail-related {
+  padding: 5rem 5rem;
+  background: var(--dark2);
+  border-top: 1px solid var(--gold-border);
+}
+.detail-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+  margin-top: 2rem;
+}
+.detail-related-grid a.card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.detail-related-grid a.card img {
+  height: 180px;
+  object-fit: cover;
+}
+.detail-not-found {
+  text-align: center;
+  padding: 10rem 2rem;
+}
+@media(max-width:1100px) {
+  .detail-body { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 3rem; }
+  .detail-sidebar { position: static; }
+  .detail-hero-inner { padding: 100px 3rem 3rem; }
+  .detail-related { padding: 4rem 3rem; }
+  .detail-related-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media(max-width:700px) {
+  .detail-hero-inner { padding: 90px 1.5rem 2.5rem; }
+  .detail-body { padding: 3rem 1.5rem; }
+  .detail-related { padding: 3rem 1.5rem; }
+  .detail-related-grid { grid-template-columns: 1fr; }
+  .detail-name { font-size: 2rem; }
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <a href="index.html" class="header-logo"><img src="image/Logo.jpg" class="header-logo-icon" alt="">Expedition PH <span class="header-sub">Natural History</span></a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="regions.html">Island Groups</a>
+    <a href="flora.html">Flora</a>
+    <a href="fauna.html" class="active">Fauna</a>
+    <a href="geology.html">Geology</a>
+    <a href="places.html">Places</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="history.html">History</a>
+    <a href="exhibits.html">Exhibits</a>
+  </nav>
+</header>
+
+<div class="subpage-breadcrumb">
+  <a href="index.html">Home</a>
+  <span class="breadcrumb-sep">&#8250;</span>
+  <a href="fauna.html">Fauna</a>
+  <span class="breadcrumb-sep">&#8250;</span>
+  <a id="sp-breadcrumb-group" href="fauna.html"></a>
+  <span class="breadcrumb-sep">&#8250;</span>
+  <span id="sp-breadcrumb-name"></span>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="sp-lightbox" role="dialog" aria-modal="true" aria-label="Full image view">
+  <button id="sp-lightbox-close" aria-label="Close">&times;</button>
+  <img id="sp-lightbox-img" src="" alt="">
+</div>
+
+<!-- HERO -->
+<div class="detail-hero" id="sp-hero">
+  <img class="detail-hero-img" id="sp-img" src="" alt="">
+  <div class="detail-hero-overlay"></div>
+  <div class="detail-hero-inner">
+    <p class="detail-eyebrow" id="sp-tag"></p>
+    <h1 class="detail-name" id="sp-name"></h1>
+    <p class="detail-latin" id="sp-latin"></p>
+    <div id="sp-status-row"></div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="detail-body" id="sp-body">
+  <div class="detail-main">
+    <a id="sp-back" href="fauna.html" class="detail-back">&#8592; Back to Fauna</a>
+    <p class="detail-desc" id="sp-desc"></p>
+    <div class="detail-funfact">
+      <div class="detail-funfact-label">&#9670; Did You Know</div>
+      <p class="detail-funfact-text" id="sp-funfact-text"></p>
+    </div>
+  </div>
+
+  <aside class="detail-sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-label">Conservation Status</div>
+      <div class="sidebar-value" id="sb-status"></div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Scientific Name</div>
+      <div class="sidebar-value sidebar-latin" id="sb-latin"></div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Group</div>
+      <div class="sidebar-value" id="sb-group"></div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Found In</div>
+      <div class="sidebar-value" id="sb-island"></div>
+    </div>
+    <div class="sidebar-section">
+      <a id="sb-category-link" href="fauna.html" class="btn-outline" style="width:100%;text-align:center;display:block;font-size:0.68rem;box-sizing:border-box;">&#8592; View All Species</a>
+    </div>
+  </aside>
+</div>
+
+<!-- RELATED -->
+<section class="detail-related">
+  <p class="section-eyebrow">Explore More</p>
+  <h2 class="section-title">More <em>Philippine Wildlife</em></h2>
+  <div class="detail-related-grid" id="sp-related-grid"></div>
+</section>
+
+<footer>
+  <div><div class="footer-brand-name">Expedition PH</div><p class="footer-tagline">A digital exploration of the Philippine archipelago's natural heritage.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="regions.html">Island Groups</a></li><li><a href="flora.html">Flora</a></li><li><a href="fauna.html">Fauna</a></li><li><a href="geology.html">Geology</a></li></ul></div>
+  <div><h4>Fauna</h4><ul><li><a href="birds.html">Birds</a></li><li><a href="mammals.html">Mammals</a></li><li><a href="reptiles.html">Reptiles</a></li><li><a href="marine.html">Marine</a></li><li><a href="insects.html">Insects</a></li><li><a href="freshwater.html">Freshwater</a></li><li><a href="extinct.html">Lost Species</a></li></ul></div>
+  <div><h4>Discover</h4><ul><li><a href="places.html">Places</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="species.html">Species Index</a></li><li><a href="protected-areas.html">Protected Areas</a></li></ul></div>
+  <div><h4>About</h4><ul><li><a href="exhibits.html">Exhibits</a></li><li><a href="visit.html">About This Project</a></li><li><a href="credits.html">Credits &amp; Sources</a></li></ul></div>
+</footer>
+<div class="footer-bottom"><span>&copy; 2026 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
+
+<button type="button" class="audio-btn" id="audio-btn" onclick="toggleSound()">&#9654; Ambient Sound</button>
+<audio id="sound" loop><source src="image/Expedition PH ost.mp3" type="audio/mpeg"></audio>
+
+<script src="museum.js"></script>
+<script src="species-profiles.js"></script>
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var id = params.get('id');
+
+  var categoryLabels = {
+    birds:      'Birds',
+    reptiles:   'Reptiles & Amphibians',
+    marine:     'Marine Life',
+    freshwater: 'Freshwater Life'
+  };
+  var categoryPages = {
+    birds:      'birds.html',
+    reptiles:   'reptiles.html',
+    marine:     'marine.html',
+    freshwater: 'freshwater.html'
+  };
+
+  if (!id || !SPECIES_PROFILES[id]) {
+    document.getElementById('sp-name').textContent = 'Species Not Found';
+    document.getElementById('sp-latin').textContent = 'Return to Fauna to explore all species.';
+    document.getElementById('sp-body').style.display = 'none';
+    document.querySelector('.detail-related').style.display = 'none';
+    return;
+  }
+
+  var s = SPECIES_PROFILES[id];
+  var catLabel = categoryLabels[s.category] || 'Fauna';
+  var catPage  = categoryPages[s.category]  || 'fauna.html';
+
+  document.title = s.name + ' · Fauna · Expedition PH';
+  document.getElementById('meta-desc').setAttribute('content', s.description.substring(0, 160));
+
+  // Breadcrumb
+  var bcGroup = document.getElementById('sp-breadcrumb-group');
+  bcGroup.textContent = catLabel;
+  bcGroup.href = catPage;
+  document.getElementById('sp-breadcrumb-name').textContent = s.name;
+
+  // Hero
+  document.getElementById('sp-img').src = s.image;
+  document.getElementById('sp-img').alt = s.name;
+  document.getElementById('sp-tag').textContent = s.tag;
+  document.getElementById('sp-name').textContent = s.name;
+  document.getElementById('sp-latin').textContent = s.latin;
+
+  var statusRow = document.getElementById('sp-status-row');
+  var badge = document.createElement('span');
+  badge.className = 'sp-status-badge sp-status-' + (s.statusCode || 'DD');
+  badge.textContent = s.status;
+  statusRow.appendChild(badge);
+
+  // Back link
+  var backLink = document.getElementById('sp-back');
+  backLink.href = catPage;
+  backLink.textContent = '← Back to ' + catLabel;
+
+  // Body
+  document.getElementById('sp-desc').textContent = s.description;
+  document.getElementById('sp-funfact-text').textContent = s.funfact;
+
+  // Sidebar
+  document.getElementById('sb-status').textContent = s.status + ' (' + (s.statusCode || 'DD') + ')';
+  document.getElementById('sb-latin').textContent = s.latin;
+  document.getElementById('sb-group').textContent = catLabel;
+  document.getElementById('sb-island').textContent = s.island || 'Philippines';
+
+  var catLink = document.getElementById('sb-category-link');
+  catLink.href = catPage;
+  catLink.textContent = '← All ' + catLabel;
+
+  // Related species — same category, exclude current
+  var allIds   = Object.keys(SPECIES_PROFILES);
+  var sameCat  = allIds.filter(function (k) { return k !== id && SPECIES_PROFILES[k].category === s.category; });
+  var threatened = sameCat.filter(function (k) { return ['CR','EN','VU'].indexOf(SPECIES_PROFILES[k].statusCode) !== -1; });
+  var others   = sameCat.filter(function (k) { return ['CR','EN','VU'].indexOf(SPECIES_PROFILES[k].statusCode) === -1; });
+  var related  = threatened.concat(others).slice(0, 3);
+
+  var grid = document.getElementById('sp-related-grid');
+  related.forEach(function (k) {
+    var sp = SPECIES_PROFILES[k];
+    var a  = document.createElement('a');
+    a.className = 'card';
+    a.href = 'species-detail.html?id=' + k;
+    var desc = sp.description.length > 110 ? sp.description.substring(0, 110) + '...' : sp.description;
+    a.innerHTML =
+      '<img src="' + sp.image + '" alt="' + sp.name + '" loading="lazy">' +
+      '<div class="card-body">' +
+        '<div class="card-tag">' + sp.tag + '</div>' +
+        '<div class="card-title">' + sp.name + '<em>' + sp.latin + '</em></div>' +
+        '<p class="card-desc">' + desc + '</p>' +
+      '</div>';
+    grid.appendChild(a);
+  });
+}());
+</script>
+<script>
+(function () {
+  var lightbox = document.getElementById('sp-lightbox');
+  var lbImg    = document.getElementById('sp-lightbox-img');
+  var lbClose  = document.getElementById('sp-lightbox-close');
+  var heroImg  = document.getElementById('sp-img');
+
+  function open() {
+    if (!heroImg.src || heroImg.src.endsWith('Photo coming soon.jpg')) return;
+    lbImg.src = heroImg.src;
+    lbImg.alt = heroImg.alt;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('sp-hero').addEventListener('click', open);
+  lbClose.addEventListener('click', function (e) { e.stopPropagation(); close(); });
+  lightbox.addEventListener('click', close);
+  lbImg.addEventListener('click', function (e) { e.stopPropagation(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+}());
+</script>
+</body>
+</html>

@@ -949,8 +949,15 @@ a.art-pa-link:hover {
       var el;
       if (sp.page) {
         el = document.createElement('a');
-        var spSlug = sp.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-        el.href = sp.page + '?species=' + spSlug;
+        var rawSlug = sp.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+        var slugFix = {
+          'philippine-duck':                'philippine-forest-duck',
+          'rufous-hornbill':                'philippine-hornbill',
+          'luzon-bleeding-heart':           'luzon-bleeding-heart-dove',
+          'cantors-giant-softshell-turtle': 'philippine-soft-shell-turtle'
+        };
+        var spSlug = slugFix[rawSlug] || rawSlug;
+        el.href = 'species-detail.html?id=' + spSlug;
         el.className = 'art-wildlife-card art-wildlife-link';
         el.title = 'View ' + sp.name + ' on Expedition PH';
       } else {
