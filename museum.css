@@ -235,7 +235,7 @@ nav a:hover, nav a.active { color: var(--gold); }
 .card:hover { border-color: rgba(212,175,55,0.45); transform: translateY(-4px); }
 
 .card img {
-  width: 100%; height: 220px;
+  width: 100%; height: 190px;
   object-fit: cover; display: block;
   background: var(--dark3);
   transition: transform 0.5s;
@@ -243,43 +243,36 @@ nav a:hover, nav a.active { color: var(--gold); }
 
 .card:hover img { transform: scale(1.05); }
 
-.card-body { padding: 1.25rem 1.4rem; }
+.card-body { padding: 0.75rem 0.9rem 0.9rem; }
 
 .card-tag {
-  font-size: 0.62rem;
-  letter-spacing: 0.2em;
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
 }
 
 .card-title {
   font-family: 'Merriweather', serif;
-  font-size: 1rem;
+  font-size: 0.88rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  line-height: 1.35;
+  margin-bottom: 0;
 }
 
 .card-title em {
   font-style: italic;
   font-weight: 300;
-  font-size: 0.83rem;
+  font-size: 0.75rem;
   color: var(--dim);
   display: block;
-  margin-top: 2px;
+  margin-top: 3px;
 }
 
-.card-desc { font-size: 0.82rem; color: var(--dim); line-height: 1.65; }
+.card-desc { display: none; }
 
-.card-status {
-  display: inline-block;
-  margin-top: 0.75rem;
-  padding: 0.2rem 0.7rem;
-  font-size: 0.6rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  border: 1px solid;
-}
+.card-status { display: none; }
 
 .status-critical  { color: #e05555; border-color: rgba(224,85,85,0.35); }
 .status-endangered{ color: #e09955; border-color: rgba(224,153,85,0.35); }

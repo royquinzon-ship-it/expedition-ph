@@ -366,18 +366,22 @@
   var sp = new URLSearchParams(window.location.search).get('species');
   if (sp) { window.location.replace('species-detail.html?id=' + sp); return; }
   var cards = document.querySelectorAll('.card.filterable');
-  for (var i = 0; i < cards.length; i++) {
-    (function (card) {
-      var titleEl = card.querySelector('.card-title');
-      if (!titleEl) return;
-      var name = titleEl.childNodes[0].textContent.trim();
-      var slug = name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-      card.removeAttribute('onclick');
-      card.style.cursor = 'pointer';
-      card.addEventListener('click', function () {
-        window.location.href = 'species-detail.html?id=' + slug;
-      });
-    }(cards[i]));
+  var list = [];
+  for (var i = 0; i < cards.length; i++) list.push(cards[i]);
+  for (var i = 0; i < list.length; i++) {
+    var card = list[i];
+    var titleEl = card.querySelector('.card-title');
+    if (!titleEl) continue;
+    var name = titleEl.childNodes[0].textContent.trim();
+    var slug = name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+    var a = document.createElement('a');
+    a.href = 'species-detail.html?id=' + slug;
+    for (var j = 0; j < card.attributes.length; j++) {
+      var attr = card.attributes[j];
+      if (attr.name !== 'onclick') a.setAttribute(attr.name, attr.value);
+    }
+    a.innerHTML = card.innerHTML;
+    card.parentNode.replaceChild(a, card);
   }
 }());
 </script>
