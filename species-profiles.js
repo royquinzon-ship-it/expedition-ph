@@ -492,7 +492,7 @@ const SPECIES_PROFILES = {
     tag: 'Bird · Egret',
     status: 'Vulnerable',
     statusCode: 'VU',
-    image: 'image/Photo coming soon.jpg',
+    image: 'image/Chinese Egret.jpg',
     island: 'Philippine Coast · Migratory',
     size: '65–68 cm long',
     weight: '320–450 g',
