@@ -54,16 +54,16 @@ var PH_PROVINCES = [
     },
     wildlife: [
       { name: "Hawksbill Sea Turtle", latin: "Eretmochelys imbricata", status: "Critically Endangered", note: "Nesting documented at Pagudpud and Saud Beach; Kalbario-Patapat Natural Park protects the province's primary sea turtle nesting habitat along the Luzon Strait coast", page: "reptiles.html" },
-      { name: "Olive Ridley Sea Turtle", latin: "Lepidochelys olivacea", status: "Vulnerable", note: "Documented along Pagudpud and Patapat coastline", page: "reptiles.html" },
-      { name: "Green Sea Turtle", latin: "Chelonia mydas", status: "Least Concern", note: "Nesting recorded at Pagudpud; globally downlisted Oct 2025", page: "reptiles.html" },
-      { name: "Philippine Duck", latin: "Anas luzonica", status: "Vulnerable", note: "Philippine endemic; documented at Gabu (Laoag City), Pagudpud, and Paoay Lake", page: "birds.html" },
-      { name: "Rufous Hornbill", latin: "Buceros hydrocorax", status: "Endangered", note: "Philippine endemic; documented at Adams, Ilocos Norte", page: "birds.html" },
-      { name: "Spotted Imperial Pigeon", latin: "Ducula carola", status: "Vulnerable", note: "Philippine endemic; documented at Pasuquin", page: "birds.html" },
-      { name: "Chinese Egret", latin: "Egretta eulophotes", status: "Vulnerable", note: "Migratory; documented at Burgos near the Kapurpurawan coastline", page: "birds.html" },
-      { name: "Philippine Green Pigeon", latin: "Treron axillaris", status: "Least Concern", note: "Philippine endemic; documented at Pasuquin", page: "birds.html" },
-      { name: "Brahminy Kite", latin: "Haliastur indus", status: "Least Concern", note: "Documented at Gabu, Vintar, and Bangui", page: "birds.html" },
-      { name: "Grey-faced Buzzard", latin: "Butastur indicus", status: "Least Concern", note: "Migratory raptor; documented at Adams, Ilocos Norte", page: "birds.html" },
-      { name: "Pacific Reef Egret", latin: "Egretta sacra", status: "Least Concern", note: "Documented at Burgos coastline near Kapurpurawan", page: "birds.html" }
+      { name: "Olive Ridley Sea Turtle", latin: "Lepidochelys olivacea", status: "Vulnerable", note: "Documented along Pagudpud and Patapat coastline; the smallest and most abundant sea turtle worldwide, foraging nearshore Luzon Strait waters for crabs, shrimp, and jellyfish", page: "reptiles.html" },
+      { name: "Green Sea Turtle", latin: "Chelonia mydas", status: "Least Concern", note: "Nesting recorded at Pagudpud; a seagrass-grazing herbivore whose global status was downlisted from Endangered to Least Concern by the IUCN in October 2025 following widespread population recovery", page: "reptiles.html" },
+      { name: "Philippine Duck", latin: "Anas luzonica", status: "Vulnerable", note: "Philippine endemic and the country's only dabbling duck; documented at Gabu (Laoag City), Pagudpud, and Paoay Lake, foraging the shallow freshwater fringing the dune-formed lake", page: "birds.html" },
+      { name: "Rufous Hornbill", latin: "Buceros hydrocorax", status: "Vulnerable", note: "Philippine endemic; documented in the undisturbed upland forest of Adams, where breeding females seal themselves into tree cavities with mud during incubation, entirely dependent on the male for food", page: "birds.html" },
+      { name: "Spotted Imperial Pigeon", latin: "Ducula carola", status: "Vulnerable", note: "Philippine endemic; documented at Pasuquin, where its large body lets it swallow and disperse big-seeded canopy fruit that smaller forest pigeons cannot manage", page: "birds.html" },
+      { name: "Chinese Egret", latin: "Egretta eulophotes", status: "Vulnerable", note: "Migratory; documented at Burgos near the Kapurpurawan coastline, one of the rarest herons in East Asia, wintering on rocky shorelines after breeding on offshore islets off China and Korea", page: "birds.html" },
+      { name: "Philippine Green Pigeon", latin: "Treron axillaris", status: "Least Concern", note: "Philippine endemic; documented at Pasuquin, feeding on wild figs in the coastal foothill forest, its cryptic green plumage rendering it nearly invisible against the canopy", page: "birds.html" },
+      { name: "Brahminy Kite", latin: "Haliastur indus", status: "Least Concern", note: "Documented at Gabu, Vintar, and Bangui, patrolling river mouths and coastal shallows for fish and carrion — one of the most visible raptors along the province's wind-exposed shoreline", page: "birds.html" },
+      { name: "Grey-faced Buzzard", latin: "Butastur indicus", status: "Least Concern", note: "Migratory raptor; documented at Adams, Ilocos Norte, part of the tens of thousands that funnel south through northern Luzon each October in one of Asia's most concentrated raptor migrations", page: "birds.html" },
+      { name: "Pacific Reef Egret", latin: "Egretta sacra", status: "Least Concern", note: "Documented at Burgos coastline near Kapurpurawan, occurring in both white and dark slate-grey colour morphs that hunt the same rocky intertidal shallows for fish and crabs", page: "birds.html" }
     ],
     flora: [
       "Agoho (Casuarina equisetifolia) — characteristic coastal tree of the Ilocos shoreline, stabilising sand dunes near Paoay",
