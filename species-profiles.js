@@ -2622,6 +2622,59 @@ const SPECIES_PROFILES = {
     description: 'Fully freshwater-adapted sea snake endemic to Taal Lake — one of only two truly landlocked sea snake populations on Earth. Isolated within Taal\'s volcanic caldera after its marine connection closed thousands of years ago, it adapted completely to fresh water over geological time.',
     funfact: 'One of the world\'s only sea snakes to have permanently colonised a freshwater lake — isolated within Taal\'s caldera after its marine connection closed, it adapted into a fully freshwater reptile over thousands of years.',
     category: 'reptiles'
+  },
+
+  // ── FLORA ────────────────────────────────────────────────────────────────
+
+  'agoho': {
+    name: 'Agoho',
+    latin: 'Casuarina equisetifolia',
+    tag: 'Coastal Tree',
+    status: 'Not Evaluated',
+    statusCode: 'DD',
+    image: 'image/Photo coming soon.jpg',
+    island: 'Philippine Coast · Widespread',
+    size: '30–40 m tall',
+    lifespan: 'Long-lived; fast growing, exceeding 10 m in its first 5 years',
+    habitat: 'Coastal sand dunes, beaches, and saline, nutrient-poor soils along the Philippine shoreline.',
+    diet: 'Draws nitrogen from the atmosphere through root-nodule symbiosis with Frankia bacteria, allowing it to colonise bare, nutrient-poor sandy ground.',
+    behavior: 'Salt- and drought-tolerant with an extensive lateral root system; forms dense windbreak stands that slow wind and stabilise shifting dunes.',
+    description: 'A tall, pine-like coastal tree found across Philippine shorelines, including the dune belt of Ilocos Norte. Its needle-like foliage and towering, slender form make it a defining feature of the Ilocos coast, where it has long been planted and has naturalised to anchor the province\'s sand dunes against the northeast monsoon.',
+    funfact: 'Despite resembling a conifer, Agoho is a flowering plant — its "needles" are actually jointed, photosynthetic green stems, and its true leaves are reduced to tiny scales at each joint.',
+    category: 'flora'
+  },
+
+  'nepenthes': {
+    name: 'Nepenthes',
+    latin: 'Nepenthes spp.',
+    tag: 'Carnivorous Plant',
+    status: 'Not Evaluated',
+    statusCode: 'DD',
+    image: 'image/Photo coming soon.jpg',
+    island: 'Philippine Mountain Forests · Widespread',
+    size: 'Pitchers from a few cm to over 30 cm, depending on species',
+    habitat: 'Nutrient-poor montane and lowland forest margins, often on ultramafic soils; recorded within the dipterocarp and mossy forest of Kalbario-Patapat Natural Park, Ilocos Norte.',
+    diet: 'Insects and other small invertebrates, drawn into fluid-filled pitcher traps and broken down by digestive enzymes; the largest Philippine species can also digest small vertebrates.',
+    behavior: 'A climbing or ground-dwelling vine that modifies its leaf tips into pitcher traps; nutrients absorbed from trapped prey substitute for the poor soils it grows in.',
+    description: 'The Philippines hosts over 30 Nepenthes (pitcher plant) species, several found only within single mountain ranges. Pitcher plants have been documented within Kalbario-Patapat Natural Park in Ilocos Norte, part of the park\'s recorded flora alongside giant tree ferns and jade vines.',
+    funfact: 'A pitcher plant does not digest prey with acid alone — many Nepenthes species host entire miniature ecosystems of insect larvae and bacteria inside their pitchers that help break down trapped prey.',
+    category: 'flora'
+  },
+
+  'mangrove-forest': {
+    name: 'Mangrove Forest',
+    latin: 'Rhizophoraceae spp.',
+    tag: 'Coastal · Forest',
+    status: 'Not Evaluated',
+    statusCode: 'DD',
+    image: 'image/Photo coming soon.jpg',
+    island: 'Philippine Coast · Widespread',
+    habitat: 'Intertidal zones along river estuaries and sheltered coastlines, including the South China Sea estuarine fringe of Ilocos Norte.',
+    diet: 'Draws nutrients from tidal sediment and decomposing organic matter, while its root network filters and traps sediment and land runoff before it reaches open water.',
+    behavior: 'Reproduces through vivipary — seeds germinate into free-floating seedlings while still attached to the parent tree, then drift with the tide until they root in soft sediment.',
+    description: 'The Philippines once had 500,000 hectares of mangrove forest, now reduced by over 70%. These coastal forests form a narrow intertidal fringe along river estuaries such as those on the South China Sea coast of Ilocos Norte, serving as nurseries for reef fish and a buffer against storm surge.',
+    funfact: 'Mangrove roots reduce wave energy by up to 70%, protecting coastlines from storm surge — and a single hectare of mangrove forest stores as much carbon as 10 hectares of tropical rainforest.',
+    category: 'flora'
   }
 
 };

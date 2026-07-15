@@ -193,6 +193,15 @@
       </div>
     </div>
 
+    <div class="card filterable" data-category="tree" onclick="openCard(this)" data-funfact="Despite resembling a conifer, Agoho is a flowering plant — its needles are actually jointed, photosynthetic green stems, and its true leaves are reduced to tiny scales at each joint.">
+      <img src="image/Photo coming soon.jpg" alt="Agoho" loading="lazy">
+      <div class="card-body">
+        <div class="card-tag">Coastal Tree</div>
+        <div class="card-title">Agoho<em>Casuarina equisetifolia</em></div>
+        <p class="card-desc">A tall, pine-like coastal tree found along Philippine shorelines, including the dune belt of Ilocos Norte, where its extensive roots help anchor shifting sand against the northeast monsoon.</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -271,5 +280,31 @@
 <div class="footer-bottom"><span>&copy; 2026 Expedition PH</span><span>Celebrating Philippine Biodiversity</span></div>
 
 <script src="museum.js"></script>
+<script src="species-profiles.js"></script>
+<script>
+(function () {
+  var sp = new URLSearchParams(window.location.search).get('species');
+  if (sp) { window.location.replace('species-detail.html?id=' + sp); return; }
+  var cards = document.querySelectorAll('.card.filterable');
+  var list = [];
+  for (var i = 0; i < cards.length; i++) list.push(cards[i]);
+  for (var i = 0; i < list.length; i++) {
+    var card = list[i];
+    var titleEl = card.querySelector('.card-title');
+    if (!titleEl) continue;
+    var name = titleEl.childNodes[0].textContent.trim();
+    var slug = name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+    if (!SPECIES_PROFILES[slug]) continue;
+    var a = document.createElement('a');
+    a.href = 'species-detail.html?id=' + slug;
+    for (var j = 0; j < card.attributes.length; j++) {
+      var attr = card.attributes[j];
+      if (attr.name !== 'onclick') a.setAttribute(attr.name, attr.value);
+    }
+    a.innerHTML = card.innerHTML;
+    card.parentNode.replaceChild(a, card);
+  }
+}());
+</script>
 </body>
 </html>

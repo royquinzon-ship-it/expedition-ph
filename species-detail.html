@@ -313,15 +313,15 @@
       <div class="sidebar-label">Group</div>
       <div class="sidebar-value" id="sb-group"></div>
     </div>
-    <div class="sidebar-section">
+    <div class="sidebar-section" id="sb-size-section">
       <div class="sidebar-label">Size</div>
       <div class="sidebar-value" id="sb-size"></div>
     </div>
-    <div class="sidebar-section">
+    <div class="sidebar-section" id="sb-weight-section">
       <div class="sidebar-label">Weight</div>
       <div class="sidebar-value" id="sb-weight"></div>
     </div>
-    <div class="sidebar-section">
+    <div class="sidebar-section" id="sb-lifespan-section">
       <div class="sidebar-label">Lifespan</div>
       <div class="sidebar-value" id="sb-lifespan"></div>
     </div>
@@ -366,14 +366,16 @@
     reptiles:   'Reptiles & Amphibians',
     marine:     'Marine Life',
     freshwater: 'Freshwater Life',
-    mammals:    'Mammals'
+    mammals:    'Mammals',
+    flora:      'Flora'
   };
   var categoryPages = {
     birds:      'birds.html',
     reptiles:   'reptiles.html',
     marine:     'marine.html',
     freshwater: 'freshwater.html',
-    mammals:    'mammals.html'
+    mammals:    'mammals.html',
+    flora:      'flora.html'
   };
 
   if (!id || !SPECIES_PROFILES[id]) {
@@ -433,9 +435,21 @@
   document.getElementById('sb-status').textContent = s.status + ' (' + (s.statusCode || 'DD') + ')';
   document.getElementById('sb-latin').textContent = s.latin;
   document.getElementById('sb-group').textContent = catLabel;
-  document.getElementById('sb-size').textContent = s.size;
-  document.getElementById('sb-weight').textContent = s.weight;
-  document.getElementById('sb-lifespan').textContent = s.lifespan;
+  if (s.size) {
+    document.getElementById('sb-size').textContent = s.size;
+  } else {
+    document.getElementById('sb-size-section').style.display = 'none';
+  }
+  if (s.weight) {
+    document.getElementById('sb-weight').textContent = s.weight;
+  } else {
+    document.getElementById('sb-weight-section').style.display = 'none';
+  }
+  if (s.lifespan) {
+    document.getElementById('sb-lifespan').textContent = s.lifespan;
+  } else {
+    document.getElementById('sb-lifespan-section').style.display = 'none';
+  }
   document.getElementById('sb-island').textContent = s.island || 'Philippines';
 
   var catLink = document.getElementById('sb-category-link');
