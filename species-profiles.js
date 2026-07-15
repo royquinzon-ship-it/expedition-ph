@@ -912,7 +912,7 @@ const SPECIES_PROFILES = {
     tag: 'Reptile · Sea Turtle',
     status: 'Endangered',
     statusCode: 'EN',
-    image: 'image/Photo coming soon.jpg',
+    image: 'image/Green Sea Turtle.jpg',
     island: 'Philippine Coast · Widespread',
     size: '1–1.2 m carapace length',
     weight: '110–190 kg',
