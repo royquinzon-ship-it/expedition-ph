@@ -71,8 +71,8 @@ var PH_PROVINCES = [
       "Dipterocarp lowland forest — remnant patches on Cordillera foothills in the eastern interior"
     ],
     protected_areas: [
-      { name: "Paoay Lake Protected Landscape", type: "Protected Landscape", pa_id: "paoay-lake" },
-      { name: "Kalbario-Patapat Natural Park", type: "Natural Park", pa_id: "kalbario-patapat" }
+      { name: "Paoay Lake Protected Landscape", type: "Protected Landscape", pa_id: "paoay-lake", location: "Paoay" },
+      { name: "Kalbario-Patapat Natural Park", type: "Natural Monument", pa_id: "kalbario-patapat", location: "Pagudpud & Adams" }
     ],
 
     landmarks: [
