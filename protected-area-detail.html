@@ -142,6 +142,27 @@
   color: var(--text);
   line-height: 1.6;
 }
+.sidebar-wildlife {
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.sidebar-wildlife li {
+  font-size: 0.82rem;
+  color: var(--dim);
+  padding: 0.28rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.sidebar-wildlife li::before {
+  content: '\25C6';
+  color: var(--gold);
+  font-size: 0.45rem;
+  opacity: 0.65;
+  flex-shrink: 0;
+}
+.sidebar-wildlife li:last-child { border-bottom: none; }
 .detail-related {
   padding: 5rem 5rem;
   background: var(--dark2);
@@ -258,6 +279,10 @@
       <div class="sidebar-label">Established</div>
       <div class="sidebar-value" id="d-est"></div>
     </div>
+    <div class="sidebar-section" id="d-wildlife-section" style="display:none">
+      <div class="sidebar-label">Wildlife Here</div>
+      <ul class="sidebar-wildlife" id="d-wildlife"></ul>
+    </div>
     <div class="sidebar-section">
       <a href="protected-areas.html" class="btn-outline" style="width:100%;text-align:center;display:block;font-size:0.68rem;box-sizing:border-box;">&#8592; All Protected Areas</a>
     </div>
@@ -299,7 +324,7 @@
   }
 
   var p = PROTECTED_AREAS[id];
-  var typeLabel = PA_TYPE_LABELS[p.type] || p.type;
+  var typeLabel = p.typeLabel || PA_TYPE_LABELS[p.type] || p.type;
   var islandLabel = PA_ISLAND_LABELS[p.island] || p.island;
 
   document.title = p.name + ' &#183; Protected Areas &#183; Expedition PH';
@@ -356,6 +381,26 @@
     document.getElementById('d-address-section').style.display = '';
   }
 
+  // Wildlife sidebar
+  if (p.wildlife && p.wildlife.length > 0) {
+    var list = document.getElementById('d-wildlife');
+    p.wildlife.forEach(function (w) {
+      var li = document.createElement('li');
+      if (w.id) {
+        var link = document.createElement('a');
+        link.href = 'species-detail.html?id=' + w.id;
+        link.textContent = w.name;
+        link.style.color = 'inherit';
+        link.style.textDecoration = 'none';
+        li.appendChild(link);
+      } else {
+        li.textContent = w.name || w;
+      }
+      list.appendChild(li);
+    });
+    document.getElementById('d-wildlife-section').style.display = 'block';
+  }
+
   // Related protected areas — same type first, fill from same island
   var allIds = Object.keys(PROTECTED_AREAS);
   var sameType   = allIds.filter(function (k) { return k !== id && PROTECTED_AREAS[k].type === p.type; });
@@ -372,7 +417,7 @@
     a.innerHTML =
       '<img src="' + pa.image + '" alt="' + pa.name + '" loading="lazy">' +
       '<div class="card-body">' +
-        '<div class="card-tag">' + (PA_TYPE_LABELS[pa.type] || pa.type) + '</div>' +
+        '<div class="card-tag">' + (pa.typeLabel || PA_TYPE_LABELS[pa.type] || pa.type) + '</div>' +
         '<div class="card-title">' + pa.name + '</div>' +
         '<p class="card-desc">' + desc + '</p>' +
       '</div>';

@@ -63,7 +63,8 @@ var PH_PROVINCES = [
       { name: "Philippine Green Pigeon", latin: "Treron axillaris", status: "Least Concern", note: "Philippine endemic; documented at Pasuquin, feeding on wild figs in the coastal foothill forest, its cryptic green plumage rendering it nearly invisible against the canopy", page: "birds.html" },
       { name: "Brahminy Kite", latin: "Haliastur indus", status: "Least Concern", note: "Documented at Gabu, Vintar, and Bangui, patrolling river mouths and coastal shallows for fish and carrion — one of the most visible raptors along the province's wind-exposed shoreline", page: "birds.html" },
       { name: "Grey-faced Buzzard", latin: "Butastur indicus", status: "Least Concern", note: "Migratory raptor; documented at Adams, Ilocos Norte, part of the tens of thousands that funnel south through northern Luzon each October in one of Asia's most concentrated raptor migrations", page: "birds.html" },
-      { name: "Pacific Reef Egret", latin: "Egretta sacra", status: "Least Concern", note: "Documented at Burgos coastline near Kapurpurawan, occurring in both white and dark slate-grey colour morphs that hunt the same rocky intertidal shallows for fish and crabs", page: "birds.html" }
+      { name: "Pacific Reef Egret", latin: "Egretta sacra", status: "Least Concern", note: "Documented at Burgos coastline near Kapurpurawan, occurring in both white and dark slate-grey colour morphs that hunt the same rocky intertidal shallows for fish and crabs", page: "birds.html" },
+      { name: "White-collared Kingfisher", latin: "Todiramphus chloris", status: "Least Concern", note: "Documented foraging the still waters and reed margins of Paoay Lake, hunting fish and crustaceans from exposed perches over the dune-formed lake", page: "birds.html" }
     ],
     flora: [
       "Agoho (Casuarina equisetifolia) — characteristic coastal tree of the Ilocos shoreline, stabilising sand dunes near Paoay",

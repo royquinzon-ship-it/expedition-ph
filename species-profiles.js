@@ -581,6 +581,25 @@ const SPECIES_PROFILES = {
     category: 'birds'
   },
 
+  'white-collared-kingfisher': {
+    name: 'White-collared Kingfisher',
+    latin: 'Todiramphus chloris',
+    tag: 'Bird · Kingfisher',
+    status: 'Least Concern',
+    statusCode: 'LC',
+    image: 'image/Photo coming soon.jpg',
+    island: 'Philippine Coast · Widespread',
+    size: '23–29 cm long',
+    weight: '51–100 g',
+    lifespan: 'Up to 11 years in the wild',
+    habitat: 'Mangroves, mudflats, and coastal wetlands; also follows rivers and lake shores inland to open woodland, gardens, and parks.',
+    diet: 'Opportunistic carnivore — crabs, shrimp, and small fish along the coast; inland populations also take insects, lizards, frogs, and small snakes.',
+    behavior: 'Hunts from an exposed perch, dropping onto prey below; territorial and usually encountered alone or in pairs along tidal flats and still water margins.',
+    description: 'A widespread Indo-Pacific kingfisher recorded from the Red Sea to Melanesia, and common along Philippine coastlines and lake shores. Its turquoise back and white collar make it one of the most recognisable kingfishers in the archipelago, documented foraging the still waters and reed margins of Paoay Lake in Ilocos Norte.',
+    funfact: 'Despite its coastal reputation, inland populations of the White-collared Kingfisher regularly take insects, lizards, frogs, and even small snakes — one of the most dietarily flexible kingfishers in its range.',
+    category: 'birds'
+  },
+
   'brown-breasted-kingfisher': {
     name: 'Brown-breasted Kingfisher',
     latin: 'Halcyon gularis',

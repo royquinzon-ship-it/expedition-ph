@@ -41,6 +41,7 @@ var PROTECTED_AREAS = {
   'banao': {
     name: 'Banao Protected Landscape',
     type: 'np',
+    typeLabel: 'Protected Landscape',
     island: 'luzon',
     province: 'Kalinga',
     area: '215.68 km²',
@@ -107,18 +108,24 @@ var PROTECTED_AREAS = {
   'paoay-lake': {
     name: 'Paoay Lake Protected Landscape',
     type: 'np',
+    typeLabel: 'Protected Landscape',
     island: 'luzon',
     province: 'Ilocos Norte',
     area: '3.47 km²',
     established: '2025',
-    desc: 'Paoay Lake is a natural barrier lake in the Municipality of Paoay, Ilocos Norte, formed by coastal sand dune progradation during the late Quaternary period. Roughly circular and about 2.5 kilometres across, the lake has no inflowing rivers — its water comes entirely from groundwater seepage and rainy-season runoff off the surrounding hills, with depths reaching nearly 5 metres at the height of the wet season. Its still waters support a diverse zooplankton community of two dozen-plus species alongside aquatic plants such as water spinach and tape grass, drawing resident waterbirds including the White-collared Kingfisher, Brahminy Kite, and Philippine Duck, along with migratory Grey Herons, Ospreys, and Great Egrets. The lake and its surrounding 347-hectare area were formally declared a Protected Landscape under Republic Act 12230, signed on August 4, 2025, in recognition of the biological resources — both flora and fauna — native and distinct to the lake and their aesthetic and ecological importance.',
+    desc: 'Paoay Lake is a natural barrier lake in the Municipality of Paoay, Ilocos Norte, formed by coastal sand dune progradation during the late Quaternary period. Roughly circular and about 2.5 kilometres across, the lake has no inflowing rivers — its water comes entirely from groundwater seepage and rainy-season runoff off the surrounding hills, with depths reaching nearly 5 metres at the height of the wet season. Its still waters support a diverse zooplankton community of two dozen-plus species alongside aquatic plants such as water spinach and tape grass, drawing resident waterbirds including the White-collared Kingfisher and Philippine Duck, along with migratory Grey Herons, Ospreys, and Great Egrets. The lake and its surrounding 347-hectare area were formally declared a Protected Landscape under Republic Act 12230, signed on August 4, 2025, in recognition of the biological resources — both flora and fauna — native and distinct to the lake and their aesthetic and ecological importance.',
     funfact: 'Paoay Lake was not formed by volcanic activity but by the gradual enclosure of a coastal lagoon by advancing sand dunes — making it a rare natural barrier lake, one of only a few of this type in the Philippines.',
     image: 'image/Paoay Lake Protected Landscape.jpg',
-    address: 'Paoay, Ilocos Norte'
+    address: 'Paoay, Ilocos Norte',
+    wildlife: [
+      { name: 'White-collared Kingfisher (Todiramphus chloris)', id: 'white-collared-kingfisher' },
+      { name: 'Philippine Duck (Anas luzonica)', id: 'philippine-forest-duck' }
+    ]
   },
   'kalbario-patapat': {
     name: 'Kalbario-Patapat Natural Park',
     type: 'np',
+    typeLabel: 'Natural Monument',
     island: 'luzon',
     province: 'Ilocos Norte',
     area: '38 km²',
@@ -126,11 +133,16 @@ var PROTECTED_AREAS = {
     desc: 'Kalbario-Patapat Natural Park covers 3,800 hectares of mountain forest — with a further 1,937-hectare buffer zone — in Pagudpud and Adams, at the northernmost tip of Ilocos Norte where the Patapat Mountains meet the Central Cordillera. Established by Proclamation No. 1275 on April 20, 2007, the park is classified as IUCN Category III (Natural Monument) and recognised as a Key Biodiversity Area, its terrain ranging from lowland dipterocarp to mossy montane forest across steep, fault-riddled slopes that feed numerous springs and waterfalls. It shelters the Vulnerable Rufous Hornbill and numerous restricted-range birds of the Luzon Endemic Bird Area, though its mammal fauna has never been formally surveyed — leaving much of the park\'s biodiversity still undocumented. The Patapat Viaduct — a 7-kilometre coastal highway carved into sheer sea cliffs — passes through its northern edge above Pasaleng Bay.',
     funfact: 'The Patapat Viaduct running along the park\'s coastal cliffs is one of the most dramatic road sections in the Philippines — a 7-kilometre highway cut into vertical sea cliffs, often misted by ocean spray from the South China Sea below.',
     image: 'image/Kalbario-Patapat Natural Park.jpg',
-    address: 'Pagudpud, Ilocos Norte'
+    address: 'Pagudpud, Ilocos Norte',
+    wildlife: [
+      { name: 'Rufous Hornbill (Buceros hydrocorax)', id: 'philippine-hornbill' },
+      { name: 'Hawksbill Sea Turtle (Eretmochelys imbricata)', id: 'hawksbill-sea-turtle' }
+    ]
   },
   'tirad-pass': {
     name: 'Tirad Pass Protected Landscape',
     type: 'np',
+    typeLabel: 'Protected Landscape',
     island: 'luzon',
     province: 'Ilocos Sur',
     area: '75 km²',
@@ -142,6 +154,7 @@ var PROTECTED_AREAS = {
   'agoo-damortis': {
     name: 'Agoo-Damortis Protected Landscape and Seascape',
     type: 'mpa',
+    typeLabel: 'Protected Landscape & Seascape',
     island: 'luzon',
     province: 'La Union',
     area: '106 km²',
@@ -164,6 +177,7 @@ var PROTECTED_AREAS = {
   'palaui-island': {
     name: 'Palaui Island Protected Landscape and Seascape',
     type: 'mpa',
+    typeLabel: 'Protected Landscape & Seascape',
     island: 'luzon',
     province: 'Cagayan',
     area: '80.49 km²',
@@ -175,6 +189,7 @@ var PROTECTED_AREAS = {
   'quirino-pl': {
     name: 'Quirino Protected Landscape',
     type: 'np',
+    typeLabel: 'Protected Landscape',
     island: 'luzon',
     province: 'Quirino',
     area: '1,759 km²',
@@ -186,6 +201,7 @@ var PROTECTED_AREAS = {
   'casecnan': {
     name: 'Casecnan Protected Landscape',
     type: 'wf',
+    typeLabel: 'Protected Landscape',
     island: 'luzon',
     province: 'Nueva Vizcaya / Quirino',
     established: '2000',
@@ -239,6 +255,7 @@ var PROTECTED_AREAS = {
   'bataan-natural': {
     name: 'Bataan Natural Park',
     type: 'np',
+    typeLabel: 'Natural Park',
     island: 'luzon',
     province: 'Bataan',
     area: '183.35 km²',
