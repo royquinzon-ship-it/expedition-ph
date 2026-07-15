@@ -60,7 +60,7 @@ var PH_PROVINCES = [
       { name: "Rufous Hornbill", latin: "Buceros hydrocorax", status: "Endangered", note: "Philippine endemic; documented at Adams, Ilocos Norte", page: "birds.html" },
       { name: "Spotted Imperial Pigeon", latin: "Ducula carola", status: "Vulnerable", note: "Philippine endemic; documented at Pasuquin", page: "birds.html" },
       { name: "Chinese Egret", latin: "Egretta eulophotes", status: "Vulnerable", note: "Migratory; documented at Burgos near the Kapurpurawan coastline", page: "birds.html" },
-      { name: "Philippine Green Pigeon", latin: "Treron lucionensis", status: "Least Concern", note: "Philippine endemic; documented at Pasuquin", page: "birds.html" },
+      { name: "Philippine Green Pigeon", latin: "Treron axillaris", status: "Least Concern", note: "Philippine endemic; documented at Pasuquin", page: "birds.html" },
       { name: "Brahminy Kite", latin: "Haliastur indus", status: "Least Concern", note: "Documented at Gabu, Vintar, and Bangui", page: "birds.html" },
       { name: "Grey-faced Buzzard", latin: "Butastur indicus", status: "Least Concern", note: "Migratory raptor; documented at Adams, Ilocos Norte", page: "birds.html" },
       { name: "Pacific Reef Egret", latin: "Egretta sacra", status: "Least Concern", note: "Documented at Burgos coastline near Kapurpurawan", page: "birds.html" }

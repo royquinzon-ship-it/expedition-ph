@@ -507,11 +507,11 @@ const SPECIES_PROFILES = {
 
   'philippine-green-pigeon': {
     name: 'Philippine Green Pigeon',
-    latin: 'Treron lucionensis',
+    latin: 'Treron axillaris',
     tag: 'Bird · Pigeon',
     status: 'Least Concern',
     statusCode: 'LC',
-    image: 'image/Photo coming soon.jpg',
+    image: 'image/Philippine Green Pigeon.jpg',
     island: 'Widespread Philippines',
     size: '27–30 cm long',
     weight: '150–200 g',
