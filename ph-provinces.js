@@ -102,9 +102,8 @@ var PH_PROVINCES = [
       coastline: "South China Sea (western)"
     },
     flora: [
-      "Limestone canyon forest — Pinsal Falls gorge walls, Santa Maria",
-      "Riparian forest — Abra River lower corridor before it meets the South China Sea near Vigan",
-      "Dipterocarp lowland forest — foothill remnants along the Cordillera western slopes"
+      { name: "Agoho", latin: "Casuarina equisetifolia", status: "Not Evaluated", note: "Windbreak tree naturalised along Ilocos Sur's South China Sea coastline, anchoring sandy shoreline soil against the northeast monsoon much as it does further north in Ilocos Norte", page: "flora.html" },
+      { name: "Mangrove Forest", latin: "Rhizophoraceae spp.", status: "Not Evaluated", note: "Forms an intertidal fringe where the Abra River meets the South China Sea near Vigan, serving as nursery habitat for coastal fisheries", page: "flora.html" }
     ],
     protected_areas: [
       { name: "Tirad Pass Protected Landscape", type: "Protected Landscape", pa_id: "tirad-pass" }
@@ -140,9 +139,8 @@ var PH_PROVINCES = [
       coastline: "Lingayen Gulf (South China Sea)"
     },
     flora: [
-      "Benguet Pine (Pinus kesiya) — montane forest on Cordillera foothills, Pugo and Bagulin highlands",
-      "Mossy cloud forest — upper watershed above Tangadan Falls, San Gabriel",
-      "Mangrove and coastal vegetation — Agoo-Damortis shoreline, Lingayen Gulf"
+      { name: "Benguet Pine", latin: "Pinus kesiya", status: "Least Concern", note: "Dominant pine of the Luzon tropical pine forests; documented on the montane foothills of Pugo and Bagulin highlands along the Cordillera", page: "flora.html" },
+      { name: "Mangrove Forest", latin: "Rhizophoraceae spp.", status: "Not Evaluated", note: "Dominates the foreshore of the Agoo-Damortis Protected Landscape and Seascape along Lingayen Gulf, declared in 2000 under the NIPAS Act to protect its mangrove and seagrass nursery habitat", page: "flora.html" }
     ],
     protected_areas: [
       { name: "Agoo-Damortis Protected Landscape and Seascape", type: "Protected Landscape and Seascape", pa_id: "agoo-damortis" }

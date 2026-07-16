@@ -119,7 +119,7 @@ var PROTECTED_AREAS = {
     address: 'Paoay, Ilocos Norte',
     wildlife: [
       { name: 'White-collared Kingfisher (Todiramphus chloris)', id: 'white-collared-kingfisher' },
-      { name: 'Philippine Duck (Anas luzonica)', id: 'philippine-forest-duck' }
+      { name: 'Philippine Duck (Anas luzonica)', id: 'philippine-duck' }
     ]
   },
   'kalbario-patapat': {

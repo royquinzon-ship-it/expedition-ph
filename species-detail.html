@@ -466,18 +466,29 @@
     return len ? h % len : 0;
   }
 
-  var otherCategories = allCategories.filter(function (c) { return c !== s.category; });
-  if (otherCategories.length > 3) {
-    var startIdx = hashPick(id + 'catrot', otherCategories.length);
-    otherCategories = [0, 1, 2].map(function (i) { return otherCategories[(startIdx + i) % otherCategories.length]; });
-  }
+  var related;
+  if (s.category === 'flora') {
+    // Flora is a separate pool from wildlife — suggest other flora, not fauna.
+    var floraPool = allIds.filter(function (k) { return k !== id && SPECIES_PROFILES[k].category === 'flora'; });
+    if (floraPool.length > 3) {
+      var floraStart = hashPick(id + 'florarot', floraPool.length);
+      floraPool = [0, 1, 2].map(function (i) { return floraPool[(floraStart + i) % floraPool.length]; });
+    }
+    related = floraPool;
+  } else {
+    var otherCategories = allCategories.filter(function (c) { return c !== s.category; });
+    if (otherCategories.length > 3) {
+      var startIdx = hashPick(id + 'catrot', otherCategories.length);
+      otherCategories = [0, 1, 2].map(function (i) { return otherCategories[(startIdx + i) % otherCategories.length]; });
+    }
 
-  var related = otherCategories.map(function (cat) {
-    var candidates = allIds.filter(function (k) { return k !== id && SPECIES_PROFILES[k].category === cat; });
-    var threatened = candidates.filter(function (k) { return ['CR','EN','VU'].indexOf(SPECIES_PROFILES[k].statusCode) !== -1; });
-    var pool = threatened.length ? threatened : candidates;
-    return pool[hashPick(id + cat, pool.length)];
-  }).filter(Boolean);
+    related = otherCategories.map(function (cat) {
+      var candidates = allIds.filter(function (k) { return k !== id && SPECIES_PROFILES[k].category === cat; });
+      var threatened = candidates.filter(function (k) { return ['CR','EN','VU'].indexOf(SPECIES_PROFILES[k].statusCode) !== -1; });
+      var pool = threatened.length ? threatened : candidates;
+      return pool[hashPick(id + cat, pool.length)];
+    }).filter(Boolean);
+  }
 
   var grid = document.getElementById('sp-related-grid');
   related.forEach(function (k) {
