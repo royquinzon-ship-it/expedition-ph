@@ -180,16 +180,16 @@ var PH_PROVINCES = [
     ],
 
     flora: [
-      "Mangrove forests — Lingayen Gulf coast, critical nursery habitat for coastal fisheries",
-      "Seagrass beds — Hundred Islands shallow bays and Bolinao coastal zones",
-      "Limestone karst vegetation — 124 islands and islets of Hundred Islands Natural Monument"
+      { name: "Molave", latin: "Vitex parviflora", status: "Least Concern", note: "Dominant hardwood of the karst forest across the Hundred Islands, growing alongside malaikmo and sablot on the islands' thin limestone soil", page: "flora.html" },
+      { name: "Mangrove Forest", latin: "Rhizophoraceae spp.", status: "Not Evaluated", note: "Fringes the Lingayen Gulf estuaries in roughly 40 species-rich stands, providing critical nursery habitat for juvenile fish and crustaceans", page: "flora.html" },
+      { name: "Seagrass Meadows", latin: "Thalassia hemprichii", status: "Least Concern", note: "Forms shallow subtidal meadows off Cape Bolinao alongside Enhalus acoroides and Cymodocea rotundata, feeding grounds for the province's dugong and sea turtle populations", page: "flora.html" }
     ],
     protected_areas: [
       { name: "Hundred Islands Natural Monument", type: "Natural Monument", pa_id: "hundred-islands" }
     ],
     landmarks: [
-      { name: "Hundred Islands Natural Monument", type: "Island Group", note: "124 islands at low tide in Lingayen Gulf, Alaminos; limestone cliffs, coral reefs, and white sand coves" },
-      { name: "Bolinao Falls", type: "Waterfall", note: "Three-cascade waterfall series with turquoise plunge pools in Bolinao; bamboo rafts navigate between levels" },
+      { name: "Hundred Islands Natural Monument", type: "Island Group", note: "124 islands at low tide in Lingayen Gulf, Alaminos; limestone cliffs, coral reefs, and white sand coves", place_id: "hundred-islands" },
+      { name: "Bolinao Falls", type: "Waterfall", note: "Three-cascade waterfall series with turquoise plunge pools in Bolinao; bamboo rafts navigate between levels", place_id: "bolinao-falls" },
       { name: "Enchanted Cave", type: "Limestone Cave", note: "Ancient coral reef limestone cave with an underground freshwater pool 3–6 ft deep; Bolinao; accessible via 14 m stairway" }
     ],
     conservation_note: "Hundred Islands Natural Monument was originally proclaimed a national park in 1940 and reclassified as a Natural Monument under NIPAS in 2013 — its 124 islands protect coral reefs and hawksbill turtle nesting grounds in Lingayen Gulf."

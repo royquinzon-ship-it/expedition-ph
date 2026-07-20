@@ -92,7 +92,7 @@ var PROTECTED_AREAS = {
     established: '1940',
     desc: 'Scattered across the Lingayen Gulf, the Hundred Islands were formed by millennia of wave erosion on uplifted coral limestone. Despite the name, there are actually 124 islands at low tide (123 at high tide). The park is one of the Philippines\' oldest protected areas and supports extensive reef fish communities, nesting seabirds, and centuries-old marine biodiversity.',
     funfact: 'Hundred Islands Natural Monument was originally proclaimed a national park in 1940 — predating the post-war republic itself — and reclassified as a Natural Monument under NIPAS in 2013.',
-    image: 'image/Photo coming soon.jpg'
+    image: 'image/Hundred Islands.jpg'
   },
   'taal-volcano': {
     name: 'Taal Volcano Protected Landscape',

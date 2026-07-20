@@ -472,6 +472,32 @@
     badges: ['Blue Lagoon', 'Dos Hermanos Islands', 'Coral Shallows', 'Far North Luzon'],
     wildlife: ['Green Sea Turtle']
   },
+  'hundred-islands': {
+    name: 'Hundred Islands National Park',
+    subtitle: 'The Philippines\' First National Park',
+    tag: 'Natural Monument · Pangasinan',
+    category: 'luzon', type: 'marine', region: 'Pangasinan · Luzon', season: 'Nov–May',
+    threat: false, threatReason: '',
+    address: 'Alaminos, Pangasinan',
+    image: 'image/Hundred Islands.jpg',
+    description: 'A scatter of 124 islands at low tide (123 at high tide, when one submerges) across 18 km² of Lingayen Gulf, formed by roughly two million years of wave erosion on uplifted coral limestone. Proclaimed a national park in 1940 — the Philippines\' first — and reclassified as a Natural Monument under NIPAS in 2013. Only four islands are developed for tourism: Quezon, Governor\'s, Children\'s, and Pilgrimage Island; the rest remain undeveloped karst outcrops ringed by reef and white sand coves. The park\'s conservation management plan identifies Hawksbill Sea Turtle nesting among its primary ecological values.',
+    funfact: 'Despite the name, the island count actually varies with the tide — 124 islands are countable at low tide, but one submerges completely at high tide, leaving 123. The islands are believed to be about two million years old, among the oldest karst landforms in the country.',
+    badges: ['First National Park', '124 Islands', 'Karst Limestone', 'Hawksbill Nesting'],
+    wildlife: ['Hawksbill Sea Turtle']
+  },
+  'bolinao-falls': {
+    name: 'Bolinao Falls',
+    subtitle: 'A Waterfall Trilogy',
+    tag: 'Waterfall · Pangasinan',
+    category: 'luzon', type: 'highland', region: 'Pangasinan · Luzon', season: 'Jun–Nov',
+    threat: false, threatReason: '',
+    address: 'Bolinao, Pangasinan',
+    image: 'image/Bolinao Falls Panggasinan.jpg',
+    description: 'A trio of distinct waterfalls along the same stream system in Bolinao, each with its own character. Bolinao Falls 1 has the tallest cliff of the three — about two storeys — plunging into a deep turquoise basin popular for cliff diving, swimming, and bamboo rafting. Bolinao Falls 2 spreads across shallower tiered pools reached by bamboo raft. Bolinao Falls 3 combines both: a tall diving cliff over a wide catch basin. Together they form one of Pangasinan\'s most visited freshwater destinations, fed by streams draining the province\'s northwestern hills.',
+    funfact: 'Locals and visitors call it a "waterfall trilogy" — Bolinao Falls 1, 2, and 3 sit along the same stream, close enough to visit all three in a single day, yet each has a distinct basin shape, cliff height, and character.',
+    badges: ['Three Cascades', 'Cliff Diving', 'Bamboo Rafting', 'Bolinao'],
+    wildlife: []
+  },
   'pinsal-falls': {
     name: 'Pinsal Falls',
     subtitle: 'Largest Waterfall of Ilocandia',
