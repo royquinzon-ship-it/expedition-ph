@@ -282,6 +282,19 @@ var PH_SPECIES = [
   // ─── REPTILES (9) ──────────────────────────────────────────────────────────
 
   {
+    id: 'philippine-soft-shell-turtle',
+    name: 'Philippine Soft-shell Turtle',
+    local: 'Philippine Soft-shell Turtle',
+    sci: 'Pelochelys cantorii',
+    group: 'reptiles',
+    status: 'cr',
+    endemic: false,
+    islands: ['luzon', 'mindanao'],
+    desc: 'One of the world\'s largest freshwater turtles — also known as Cantor\'s Giant Softshell Turtle — documented in Luzon river systems including the Addalam River in Quirino, and in Agusan del Sur and Davao del Norte on Mindanao. A highly secretive ambush predator, it spends nearly all its life buried in sand or mud at the bottom of rivers, its flat, leathery, scute-less shell and broad head barely visible.',
+    fact: 'Spends 95% of its life motionless, buried under sand or mud with only its eyes and snout exposed — surfacing only twice a day to breathe, and during nesting season.',
+    img: 'philippine-soft-shell-turtle'
+  },
+  {
     id: 'philippine-crocodile',
     name: 'Philippine Crocodile',
     local: 'Buwaya',
@@ -1914,19 +1927,6 @@ var PH_SPECIES = [
     img: 'mindanao-river-catfish'
   },
   {
-    id: 'palawan-softshell-turtle',
-    name: 'Cantor\'s Giant Softshell Turtle',
-    local: 'Kanandag',
-    sci: 'Pelochelys cantorii',
-    group: 'freshwater',
-    status: 'en',
-    endemic: false,
-    islands: ['palawan', 'luzon'],
-    desc: 'Cantor\'s Giant Softshell Turtle is one of the world\'s largest freshwater turtles, reaching over 2 meters in length and 100 kilograms, and is found in the large rivers and estuaries of Palawan and some Luzon river systems. It has a broad, flattened body with a smooth, leathery shell and spends most of its life buried in sandy riverbeds with only its eyes and snout exposed, ambushing fish and crustaceans that pass overhead. It is critically threatened by fishing, sand mining, and habitat loss in Philippine rivers.',
-    fact: 'Cantor\'s Giant Softshell Turtle comes to the surface to breathe only twice a day despite spending all other time buried in the riverbed — it accomplishes this oxygen economy partly through cutaneous (skin-based) gas exchange with the water, absorbing dissolved oxygen directly through the soft skin of its neck and leathery shell while motionless.',
-    img: 'palawan-softshell-turtle'
-  },
-  {
     id: 'philippine-gudgeon',
     name: 'Philippine Gudgeon',
     local: 'Biya sa Ilog',
@@ -2084,6 +2084,165 @@ var PH_SPECIES = [
     desc: 'A small, brilliantly coloured lorikeet found only in the montane forests of Mindanao above 1,000 metres elevation — one of the least-known parrots in the Philippines. Its high-altitude habitat, secretive habits, and restricted range make it rarely encountered even by experienced birders. It feeds almost exclusively on nectar and pollen from highland flowers, its brush-tipped tongue perfectly adapted to reach deep into blossoms.',
     fact: 'Johnstone\'s Lorikeet is so dependent on specific flowering trees that its movements track the blooming cycles of the Mindanao highlands — it essentially follows the flowers across the mountain slopes as different species come into bloom. This makes it an extraordinarily precise indicator of highland forest health.',
     img: 'johnstones-lorikeet'
+  },
+
+  // ─── REGION II ADDITIONS ────────────────────────────────────────────────────
+
+  {
+    id: 'scale-feathered-malkoha',
+    name: 'Scale-feathered Malkoha',
+    local: 'Scale-feathered Malkoha',
+    sci: 'Lepidogrammus cumingi',
+    group: 'birds',
+    status: 'lc',
+    endemic: true,
+    islands: ['luzon'],
+    desc: 'A distinctive Luzon-endemic cuckoo named for the scale-like feathering around its face and a bright patch of bare red skin encircling each eye. Documented across the montane forests of Nueva Vizcaya and the wider Sierra Madre and Cordillera ranges, moving in pairs or small family groups through the mid-canopy.',
+    fact: 'The bright red bare skin around its eyes is unfeathered — a rare trait among Philippine cuckoos — giving the bird a distinctive "masked" appearance unlike any other malkoha in the country.',
+    img: 'scale-feathered-malkoha'
+  },
+  {
+    id: 'mcgregors-pit-viper',
+    name: 'McGregor\'s Pit Viper',
+    local: 'McGregor\'s Pit Viper',
+    sci: 'Trimeresurus mcgregori',
+    group: 'reptiles',
+    status: 'en',
+    endemic: true,
+    islands: ['luzon'],
+    desc: 'Endemic to just two islands on Earth — Batan and Sabtang in the Batanes group — this is the only pit viper species recorded within the Batanes Islands. Named for American-Filipino ornithologist Richard McGregor, who collected the type specimen and survived its bite.',
+    fact: 'The species is named after ornithologist Richard Crittenden McGregor, who collected the first specimen in Batanes in the early 1900s — and survived being bitten by it in the process.',
+    img: 'mcgregors-pit-viper'
+  },
+  {
+    id: 'batan-flying-lizard',
+    name: 'Batan Flying Lizard',
+    local: 'Batan Flying Lizard',
+    sci: 'Draco jareckii',
+    group: 'reptiles',
+    status: 'lc',
+    endemic: true,
+    islands: ['luzon'],
+    desc: 'A gliding lizard endemic to Batan Island in the Batanes group, part of the Draco genus of "flying dragons" found across Southeast Asia. It spends almost its entire life in trees, gliding between trunks using wing-like flaps of skin stretched over elongated ribs.',
+    fact: 'Despite the name "flying lizard," Draco species don\'t truly fly — they glide, using a membrane of skin stretched over mobile rib extensions that fold flat against the body when not in use.',
+    img: 'batan-flying-lizard'
+  },
+  {
+    id: 'northern-luzon-giant-cloud-rat',
+    name: 'Northern Luzon Giant Cloud Rat',
+    local: 'Northern Luzon Giant Cloud Rat',
+    sci: 'Phloeomys pallidus',
+    group: 'mammals',
+    status: 'lc',
+    endemic: true,
+    islands: ['luzon'],
+    desc: 'One of the largest rodents on Earth, endemic to the forests of northern Luzon including the Sierra Madre range. Despite its size, it remains widespread and common across its range, foraging leaves, fruit, and bark almost entirely within the forest canopy.',
+    fact: 'Weighing up to 2.5 kg, the Northern Luzon Giant Cloud Rat is roughly the size of a house cat — one of the largest rodent species anywhere in the world, yet it lives almost entirely hidden in the forest canopy.',
+    img: 'northern-luzon-giant-cloud-rat'
+  },
+  {
+    id: 'short-footed-luzon-tree-rat',
+    name: 'Short-footed Luzon Tree Rat',
+    local: 'Short-footed Luzon Tree Rat',
+    sci: 'Carpomys melanurus',
+    group: 'mammals',
+    status: 'dd',
+    endemic: true,
+    islands: ['luzon'],
+    desc: 'One of the rarest mammals in the Philippines. First described from a specimen collected in 1896, it was not seen again by scientists for 112 years until researcher Dr. Danilo Balete and colleagues found a live individual in the canopy of Mount Pulag National Park in 2008.',
+    fact: 'For 112 years, this species was known to science only from a single 1896 specimen — long enough that many assumed it was extinct — until its dramatic rediscovery alive in the high canopy of Mount Pulag in 2008.',
+    img: 'short-footed-luzon-tree-rat'
+  },
+  {
+    id: 'giant-bushy-tailed-cloud-rat',
+    name: 'Giant Bushy-tailed Cloud Rat',
+    local: 'Giant Bushy-tailed Cloud Rat',
+    sci: 'Crateromys schadenbergi',
+    group: 'mammals',
+    status: 'vu',
+    endemic: true,
+    islands: ['luzon'],
+    desc: 'A large, thick-furred cloud rat restricted to the cool, high-elevation mossy forests of the Cordillera Central, including the Kayapa portion of Mount Pulag National Park that extends into Nueva Vizcaya. Almost entirely arboreal and nocturnal.',
+    fact: 'Its dense, bushy tail and thick fur are adaptations to life in the cold, near-constant mist of Cordillera mossy forest — conditions closer to a temperate cloud forest than the tropical lowlands most people associate with the Philippines.',
+    img: 'giant-bushy-tailed-cloud-rat'
+  },
+  {
+    id: 'vuyavuy-palm',
+    name: 'Vuyavuy Palm',
+    local: 'Voyavoy',
+    sci: 'Phoenix loureiroi',
+    group: 'plants',
+    status: 'lc',
+    endemic: false,
+    islands: ['luzon'],
+    desc: 'Known locally as voyavoy, this palm\'s fibrous fronds are the traditional raw material for the Ivatan vakul — a protective rain cape worn by women in Batanes — and the suhot worn in Itbayat, woven to shield against the islands\' near-constant wind, rain, and sun.',
+    fact: 'The vakul rain cape woven from vuyavuy fronds is so central to Ivatan identity that it appears on the official seal of Batanes province — a rare case of a plant-derived garment becoming a government emblem.',
+    img: 'vuyavuy-palm'
+  },
+  {
+    id: 'cogon-grass',
+    name: 'Cogon Grass',
+    local: 'Cogon',
+    sci: 'Imperata cylindrica',
+    group: 'plants',
+    status: 'dd',
+    endemic: false,
+    islands: ['luzon', 'visayas', 'mindanao'],
+    desc: 'One of the most widespread grasses in the Philippines, and the traditional thatching material of the Ivatan stone houses of Batanes — roofs are layered nearly a metre thick with cogon and lashed down with reeds and rattan for wind resistance.',
+    fact: 'A well-maintained cogon roof on a traditional Ivatan house can last decades and withstand direct typhoon winds — the same storms that regularly devastate lighter roofing materials elsewhere in the Philippines.',
+    img: 'cogon-grass'
+  },
+  {
+    id: 'utod-dwarf-bamboo',
+    name: 'Utod Dwarf Bamboo',
+    local: 'Útod',
+    sci: 'Yushania niitakayamensis',
+    group: 'plants',
+    status: 'dd',
+    endemic: false,
+    islands: ['luzon'],
+    desc: 'Known locally as útod, this dwarf bamboo is the dominant plant of the rolling grassland zone that carpets Mount Pulag above the mossy forest line, part of the protected landscape extending into Nueva Vizcaya\'s Kayapa municipality.',
+    fact: 'Mount Pulag\'s dwarf bamboo grassland is often nicknamed the mountain\'s "playground of the gods" — the rolling, close-cropped bamboo hills look almost manicured, despite being entirely natural and untended.',
+    img: 'utod-dwarf-bamboo'
+  },
+  {
+    id: 'red-lauan',
+    name: 'Red Lauan',
+    local: 'Tanguile',
+    sci: 'Shorea polysperma',
+    group: 'plants',
+    status: 'cr',
+    endemic: true,
+    islands: ['luzon'],
+    desc: 'Also known as Tanguile or dark red lauan, this dipterocarp hardwood was once the dominant tree of Philippine lowland forests. Its straight, buttressed trunk and red-brown heartwood made it one of the most heavily logged timber species in the country\'s history.',
+    fact: 'Within a single human generation, industrial logging of Red Lauan and related dipterocarps drove the Philippines from over 50% forest cover to under 20% — one of the fastest large-scale forest losses in recorded history.',
+    img: 'red-lauan'
+  },
+  {
+    id: 'mangrove-forest',
+    name: 'Mangrove Forest',
+    local: 'Bakawan',
+    sci: 'Rhizophoraceae spp.',
+    group: 'plants',
+    status: 'dd',
+    endemic: false,
+    islands: ['luzon', 'visayas', 'mindanao'],
+    desc: 'The Philippines once had 500,000 hectares of mangrove forest, now reduced by over 70%. These coastal forests form intertidal fringes along estuaries and sheltered coastlines nationwide, serving as nurseries for reef fish and a buffer against storm surge.',
+    fact: 'Mangrove roots reduce wave energy by up to 70%, protecting coastlines from storm surge — a single hectare of mangrove forest stores as much carbon as 10 hectares of tropical rainforest.',
+    img: 'mangrove-forest'
+  },
+  {
+    id: 'seagrass-meadows',
+    name: 'Seagrass Meadows',
+    local: 'Seagrass Meadows',
+    sci: 'Thalassia hemprichii',
+    group: 'plants',
+    status: 'lc',
+    endemic: false,
+    islands: ['luzon'],
+    desc: 'A dominant reef-flat seagrass forming extensive meadows in the Philippines, including the shallow subtidal zones off Cape Bolinao in Pangasinan. These meadows are critical feeding grounds for Dugongs and Green Sea Turtles and nursery habitat for reef fish.',
+    fact: 'A single Dugong can eat up to 40 kg of seagrass per day. Seagrass meadows also produce oxygen at a remarkable rate — one square metre can generate enough oxygen for a person to breathe for a full day.',
+    img: 'seagrass-meadows'
   }
 
 ];

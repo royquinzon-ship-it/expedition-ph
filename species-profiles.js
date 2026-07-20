@@ -315,6 +315,42 @@ const SPECIES_PROFILES = {
     category: 'birds'
   },
 
+  'johnstones-lorikeet': {
+    name: 'Johnstone\'s Lorikeet',
+    latin: 'Trichoglossus johnstoniae',
+    tag: 'Bird · Parrot',
+    status: 'Vulnerable',
+    statusCode: 'VU',
+    image: 'image/Philippine Johnstore lorekeet.jpg',
+    island: 'Mindanao',
+    size: 'Small lorikeet, roughly 19 cm long',
+    lifespan: 'Not well documented',
+    habitat: 'Montane forest of Mindanao above 1,000 m elevation.',
+    diet: 'Nectar and pollen from highland flowers, gathered with a brush-tipped tongue adapted to reach deep into blossoms.',
+    behavior: 'Highly nomadic within its highland range, tracking the blooming cycles of flowering trees across the Mindanao mountains.',
+    description: 'A small, brilliantly coloured lorikeet found only in the montane forests of Mindanao above 1,000 metres — one of the least-known parrots in the Philippines. Its high-altitude habitat and secretive habits make it rarely encountered even by experienced birders.',
+    funfact: 'Johnstone\'s Lorikeet is so dependent on specific flowering trees that its movements track the blooming cycles of the Mindanao highlands — it essentially follows the flowers across the mountain slopes as different species come into bloom.',
+    category: 'birds'
+  },
+
+  'scale-feathered-malkoha': {
+    name: 'Scale-feathered Malkoha',
+    latin: 'Lepidogrammus cumingi',
+    tag: 'Bird · Cuckoo',
+    status: 'Least Concern',
+    statusCode: 'LC',
+    image: 'image/Scale-feathered Malkoha (Lepidogrammus cumingi).jpg',
+    island: 'Luzon',
+    size: '38–41 cm long',
+    lifespan: 'Not well documented',
+    habitat: 'Montane and submontane forest of Luzon, including the Sierra Madre and Cordillera ranges.',
+    diet: 'Large insects, small reptiles, and fruit foraged within the forest canopy and understory.',
+    behavior: 'Moves in pairs or small family groups through the mid-canopy, often joining mixed-species foraging flocks.',
+    description: 'A distinctive Luzon-endemic cuckoo named for the scale-like feathering around its face and a bright patch of bare red skin encircling each eye. A pale hood, yellow bill, rufous-chestnut back and underparts, and a blackish tail tipped in white complete its unmistakable look. Documented across the montane forests of Nueva Vizcaya and the wider Sierra Madre and Cordillera ranges, it remains widespread despite ongoing habitat loss.',
+    funfact: 'The bright red bare skin around its eyes is unfeathered — a rare trait among Philippine cuckoos — giving the bird a distinctive "masked" appearance unlike any other malkoha in the country.',
+    category: 'birds'
+  },
+
   'philippine-falconet': {
     name: 'Philippine Falconet',
     latin: 'Microhierax erythrogenys',
@@ -1062,17 +1098,17 @@ const SPECIES_PROFILES = {
     name: 'Philippine Soft-shell Turtle',
     latin: 'Pelochelys cantorii',
     tag: 'Reptile · Turtle',
-    status: 'Endangered',
-    statusCode: 'EN',
-    image: 'image/Photo coming soon.jpg',
-    island: 'Luzon · Palawan',
+    status: 'Critically Endangered',
+    statusCode: 'CR',
+    image: "image/Cantor's Giant Softshell Turtle (Pelochelys cantorii).jpg",
+    island: 'Luzon · Mindanao',
     size: 'Up to 2 m long',
-    weight: 'Up to 50 kg',
+    weight: 'Up to 100 kg (documented wild captures have been considerably smaller, around 36 kg)',
     lifespan: 'Up to 100 years',
-    habitat: 'Major river systems of Luzon and Palawan, buried in sand or mud.',
+    habitat: 'Major river systems on Luzon (Cagayan, Isabela, Quirino — including the Addalam River) and Mindanao (Agusan del Sur, Davao del Norte), buried in sand or mud. Believed absent from Palawan despite older, unverified citations.',
     diet: 'Fish, crustaceans, and molluscs ambushed from concealment.',
     behavior: 'Extremely sedentary, spending nearly all its time buried in substrate; females nest on riverbanks, laying large clutches of eggs.',
-    description: 'One of the world\'s largest freshwater turtles — found in the major river systems of Luzon and Palawan. Also known as Cantor\'s Giant Softshell Turtle, it can reach over 2 metres in length. A highly secretive ambush predator that spends most of its life buried under sand or mud at the bottom of deep rivers.',
+    description: 'One of the world\'s largest freshwater turtles — documented in the Cagayan, Isabela, and Quirino river systems of Luzon and in Agusan del Sur and Davao del Norte on Mindanao. Also known as Cantor\'s Giant Softshell Turtle, it can reach over 2 metres in length. A highly secretive ambush predator that spends most of its life buried under sand or mud at the bottom of deep rivers.',
     funfact: 'Spends 95% of its life motionless, buried under sand or mud with only its eyes and snout exposed — surfacing only twice a day to breathe, and during nesting season.',
     category: 'reptiles'
   },
@@ -2624,6 +2660,97 @@ const SPECIES_PROFILES = {
     category: 'reptiles'
   },
 
+  'mcgregors-pit-viper': {
+    name: "McGregor's Pit Viper",
+    latin: 'Trimeresurus mcgregori',
+    tag: 'Reptile · Snake',
+    status: 'Endangered',
+    statusCode: 'EN',
+    image: "image/A McGregor's Pit Viper (Trimeresurus mcgregori).jpg",
+    island: 'Batan & Sabtang Islands · Batanes',
+    size: 'Up to 1 m long',
+    lifespan: 'Not well documented',
+    habitat: 'Forest and forest-edge vegetation on Batan and Sabtang islands — the only two islands where it has ever been recorded.',
+    diet: 'Small lizards, frogs, and rodents, struck with a venomous bite and heat-sensing pit organs.',
+    behavior: 'A venomous pit viper found nowhere else on Earth outside the Batanes group; assessed as Endangered by the Philippine Red List Committee based on its extremely restricted two-island range.',
+    description: 'Endemic to just two islands in the entire world — Batan and Sabtang in the Batanes group — this is the only pit viper species recorded within the Batanes Islands. Body colour ranges from olive-green to grey, white, or golden-yellow depending on the individual, but a solid red tail remains a consistent field mark across all colour morphs. Named for American-Filipino ornithologist Richard McGregor, who collected the type specimen and survived its bite. Its tiny range makes it highly vulnerable to habitat loss and collection for the pet trade.',
+    funfact: 'The species is named after ornithologist Richard Crittenden McGregor, who collected the first specimen in Batanes in the early 1900s — and survived being bitten by it in the process.',
+    category: 'reptiles'
+  },
+
+  'short-footed-luzon-tree-rat': {
+    name: 'Short-footed Luzon Tree Rat',
+    latin: 'Carpomys melanurus',
+    tag: 'Mammal · Rodent',
+    status: 'Data Deficient',
+    statusCode: 'DD',
+    image: 'image/A Short-footed Luzon Tree Rat (Carpomys melanurus).png',
+    island: 'Cordillera · Mount Pulag',
+    size: 'Small-to-medium, roughly 185 g — notably smaller than the giant cloud rats',
+    lifespan: 'Not well documented',
+    habitat: 'High-elevation mossy forest canopy of the Cordillera, above roughly 2,000 m; the only confirmed modern record is from Mount Pulag National Park.',
+    diet: 'Fruit and other plant material foraged in the forest canopy.',
+    behavior: 'Arboreal and nocturnal; so rarely encountered that it was presumed extinct for over a century. Dense reddish-tawny fur with a black mask around large dark eyes; the tail — longer than the head and body combined — is furred in the same colour at its base but turns glossy black for the rest of its length, the trait its species name "melanurus" (black-tailed) refers to.',
+    description: 'One of the rarest mammals in the Philippines. First described from a specimen collected in 1896, it was not seen again by scientists for 112 years until Filipino researcher Dr. Danilo Balete and colleagues found a live individual in the canopy of Mount Pulag National Park in 2008 — a park that straddles Benguet, Ifugao, and Nueva Vizcaya. Its true conservation status remains unknown due to how rarely it is recorded.',
+    funfact: 'For 112 years, this species was known to science only from a single 1896 specimen — long enough that many assumed it was extinct — until its dramatic rediscovery alive in the high canopy of Mount Pulag in 2008.',
+    category: 'mammals'
+  },
+
+  'giant-bushy-tailed-cloud-rat': {
+    name: 'Giant Bushy-tailed Cloud Rat',
+    latin: 'Crateromys schadenbergi',
+    tag: 'Mammal · Rodent',
+    status: 'Vulnerable',
+    statusCode: 'VU',
+    image: "image/A Giant Bushy-tailed Cloud Rat (Crateromys schadenbergi).jpg",
+    island: 'Northern Luzon · Cordillera',
+    size: 'Up to 60 cm long including tail',
+    lifespan: 'Not well documented',
+    habitat: 'High-elevation mossy forest of the Cordillera Central, including Mount Pulag National Park above 2,000 m.',
+    diet: 'Leaves, fruit, and bark foraged in the forest canopy.',
+    behavior: 'Almost entirely arboreal and nocturnal, sheltering by day in tree hollows within undisturbed old-growth mossy forest.',
+    description: 'A large, thick-furred cloud rat restricted to the cool, high-elevation mossy forests of the Cordillera Central, including the Kayapa portion of Mount Pulag National Park that extends into Nueva Vizcaya. Dark brown-to-black upperparts fade to grey on the flanks and a paler belly, with small black-furred ears sometimes ringed by a pale patch. Its long, genuinely bushy tail — nearly as long as its body — is the trait that gives the species its name, distinguishing it from the slender-tailed cloud rats of the Luzon lowlands. One of four cloud rat species recorded within the park\'s high-elevation forest.',
+    funfact: 'Its dense, bushy tail and thick fur are adaptations to life in the cold, near-constant mist of Cordillera mossy forest — conditions closer to a temperate cloud forest than the tropical lowlands most people associate with the Philippines.',
+    category: 'mammals'
+  },
+
+  'northern-luzon-giant-cloud-rat': {
+    name: 'Northern Luzon Giant Cloud Rat',
+    latin: 'Phloeomys pallidus',
+    tag: 'Mammal · Rodent',
+    status: 'Least Concern',
+    statusCode: 'LC',
+    image: 'image/Northern Luzon Giant Cloud Rat (Phloeomys pallidus),.jpg',
+    island: 'Northern Luzon · Sierra Madre',
+    size: 'Up to 77 cm long including tail',
+    weight: 'Up to 2.5 kg',
+    lifespan: 'Not well documented',
+    habitat: 'Old-growth and secondary forest canopy of northern Luzon, including the Sierra Madre range.',
+    diet: 'Leaves, fruit, bark, and other plant matter foraged in the forest canopy.',
+    behavior: 'Almost entirely arboreal and nocturnal; one of the largest rodents in the world, moving slowly through the canopy rather than fleeing quickly like smaller rats.',
+    description: 'One of the largest rodents on Earth, endemic to the forests of northern Luzon including the Sierra Madre range that shelters much of Cagayan and Isabela\'s old-growth forest. Its long tail is slender and sparsely furred — a key field mark distinguishing it from the bushier-tailed cloud rats of the Cordillera. Despite its size, it remains widespread and common across its range and is classified as Least Concern — though it still faces localised hunting and habitat pressure.',
+    funfact: 'Weighing up to 2.5 kg, the Northern Luzon Giant Cloud Rat is roughly the size of a house cat — one of the largest rodent species anywhere in the world, yet it lives almost entirely hidden in the forest canopy.',
+    category: 'mammals'
+  },
+
+  'batan-flying-lizard': {
+    name: 'Batan Flying Lizard',
+    latin: 'Draco jareckii',
+    tag: 'Reptile · Lizard',
+    status: 'Least Concern',
+    statusCode: 'LC',
+    image: 'image/A small arboreal gliding lizard (Draco species).jpg',
+    island: 'Batan Island · Batanes',
+    size: '18–20 cm long including tail',
+    lifespan: 'Not well documented',
+    habitat: 'Forest and forest-edge trees of Batan Island, the only place this species has been recorded.',
+    diet: 'Ants and other small arboreal insects.',
+    behavior: 'Glides between tree trunks using wing-like flaps of skin stretched over elongated ribs, using its gliding ability to travel, escape predators, and defend territory without descending to the ground.',
+    description: 'A gliding lizard endemic to Batan Island in the Batanes group, part of the Draco genus of "flying dragons" found across Southeast Asia. Typically found clinging to tree trunks 1.5–6 m above the ground, in forest from sea level up to 900 m elevation. Like other Draco species, it spends almost its entire life in trees, gliding rather than climbing down to cross open ground.',
+    funfact: 'Despite the name "flying lizard," Draco species don\'t truly fly — they glide, using a membrane of skin stretched over mobile rib extensions that fold flat against the body when not in use.',
+    category: 'reptiles'
+  },
+
   // ── FLORA ────────────────────────────────────────────────────────────────
 
   'agoho': {
@@ -2694,6 +2821,39 @@ const SPECIES_PROFILES = {
     category: 'flora'
   },
 
+  'utod-dwarf-bamboo': {
+    name: 'Utod Dwarf Bamboo',
+    latin: 'Yushania niitakayamensis',
+    tag: 'Bamboo · Grassland',
+    status: 'Not Evaluated',
+    statusCode: 'DD',
+    image: 'image/Photo coming soon.jpg',
+    island: 'Cordillera · Mount Pulag',
+    habitat: 'High-elevation grassland from roughly 2,600 m to the summit of Mount Pulag, above the mossy forest line.',
+    diet: 'Photosynthesises in open, exposed high-altitude grassland; spreads through underground rhizomes.',
+    behavior: 'Forms the dominant low, dense groundcover of Mount Pulag\'s famous summit grasslands, shaping the rolling, hobbit-like landscape hikers cross to reach the peak.',
+    description: 'Known locally as útod, this dwarf bamboo is the dominant plant of the rolling grassland zone that carpets Mount Pulag above the mossy forest line, part of the protected landscape extending into Nueva Vizcaya\'s Kayapa municipality. Its low, wind-sculpted growth defines the mountain\'s iconic "sea of clouds" summit scenery.',
+    funfact: 'Mount Pulag\'s dwarf bamboo grassland is often nicknamed the mountain\'s "playground of the gods" — the rolling, close-cropped bamboo hills look almost manicured, despite being entirely natural and untended.',
+    category: 'flora'
+  },
+
+  'red-lauan': {
+    name: 'Red Lauan',
+    latin: 'Shorea polysperma',
+    tag: 'Endemic Tree',
+    status: 'Critically Endangered',
+    statusCode: 'CR',
+    image: 'image/Red Lauan.jpg',
+    island: 'Luzon · Sierra Madre',
+    size: 'Large canopy tree with a straight, buttressed bole',
+    habitat: 'Lowland and old-growth dipterocarp forest, including the Northern Sierra Madre Natural Park in Isabela — the widest remaining tract of tropical rainforest on Luzon.',
+    diet: 'Draws water and nutrients through an extensive root system anchored in forest soil; canopy foliage captures sunlight above the surrounding understory.',
+    behavior: 'A dominant emergent tree of Philippine lowland dipterocarp forest, once forming vast continuous canopy stands before large-scale commercial logging.',
+    description: 'Also known as Tanguile or dark red lauan, this dipterocarp hardwood was once the dominant tree of Philippine lowland forests. Its straight, buttressed trunk and red-brown heartwood made it one of the most heavily logged timber species in the country\'s history, and it now survives mainly in protected old-growth remnants such as Isabela\'s Northern Sierra Madre Natural Park.',
+    funfact: 'Within a single human generation, industrial logging of Red Lauan and related dipterocarps drove the Philippines from over 50% forest cover to under 20% — one of the fastest large-scale forest losses in recorded history.',
+    category: 'flora'
+  },
+
   'molave': {
     name: 'Molave',
     latin: 'Vitex parviflora',
@@ -2724,6 +2884,38 @@ const SPECIES_PROFILES = {
     behavior: 'Forms dense mixed-species meadows that stabilise sediment and buffer wave energy; regarded as one of the most important nearshore feeding grounds for grazing marine megafauna.',
     description: 'A dominant reef-flat seagrass forming extensive meadows in the Philippines, including the shallow subtidal zones off Cape Bolinao in Pangasinan, where it grows alongside Enhalus acoroides and Cymodocea rotundata. These meadows are critical feeding grounds for Dugongs and Green Sea Turtles and nursery habitat for reef fish.',
     funfact: 'A single Dugong can eat up to 40 kg of seagrass per day. Seagrass meadows also produce oxygen at a remarkable rate — one square metre can generate enough oxygen for a person to breathe for a full day.',
+    category: 'flora'
+  },
+
+  'vuyavuy-palm': {
+    name: 'Vuyavuy Palm',
+    latin: 'Phoenix loureiroi',
+    tag: 'Tree · Palm',
+    status: 'Least Concern',
+    statusCode: 'LC',
+    image: 'image/Photo coming soon.jpg',
+    island: 'Sabtang · Ivuhos · Itbayat · Batanes',
+    habitat: 'Coastal cliffs and rocky slopes of Sabtang, its neighbouring islet Ivuhos, and Itbayat in the Batanes group.',
+    diet: 'Draws water and nutrients through roots anchored in thin, rocky coastal soil exposed to constant wind and salt spray.',
+    behavior: 'A slow-growing, wind-hardy palm whose fronds are traditionally harvested and woven by the Ivatan people rather than the tree being felled.',
+    description: 'Known locally as voyavoy, this palm\'s fibrous fronds are the traditional raw material for the Ivatan vakul — a protective rain cape worn by women — and the suhot worn in Itbayat, both woven to shield against Batanes\' near-constant wind, rain, and sun. The largest surviving stands grow on Sabtang and Ivuhos, with previously used names including Phoenix hanceana var. philippinensis now treated as a synonym.',
+    funfact: 'The vakul rain cape woven from vuyavuy fronds is so central to Ivatan identity that it appears on the official seal of Batanes province — a rare case of a plant-derived garment becoming a government emblem.',
+    category: 'flora'
+  },
+
+  'cogon-grass': {
+    name: 'Cogon Grass',
+    latin: 'Imperata cylindrica',
+    tag: 'Grass',
+    status: 'Not Evaluated',
+    statusCode: 'DD',
+    image: 'image/Photo coming soon.jpg',
+    island: 'Philippines · Widespread',
+    habitat: 'Open grassland, disturbed ground, and — in Batanes — the exposed hillsides used for traditional roof thatching.',
+    diet: 'A fast-growing, sun-loving grass that spreads readily through underground rhizomes.',
+    behavior: 'Fire- and wind-tolerant pioneer grass; regrows quickly after cutting, burning, or storm damage.',
+    description: 'One of the most widespread grasses in the Philippines, and the traditional thatching material of the Ivatan stone houses of Batanes — roofs are layered nearly a metre thick with cogon and lashed down with reeds and rattan, giving the houses the wind resistance to survive the province\'s frequent typhoons.',
+    funfact: 'A well-maintained cogon roof on a traditional Ivatan house can last decades and withstand direct typhoon winds — the same storms that regularly devastate lighter roofing materials elsewhere in the Philippines.',
     category: 'flora'
   }
 

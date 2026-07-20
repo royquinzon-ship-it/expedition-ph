@@ -210,14 +210,23 @@ var PH_PROVINCES = [
     fact: "Batanes sits atop the Luzon Strait volcanic arc and receives more direct typhoon hits per year than any other Philippine province — its exposed position between the Pacific Ocean and the South China Sea places it directly in the path of typhoon systems forming in the western Pacific before they track toward the Philippine mainland.",
     geography: {
       area: "203.22 km²",
-      highest_peak: "Mount Iraya, Batan Island (1,085 m)",
+      highest_peak: "Mount Iraya, Batan Island (1,009 m)",
       coastline: "Pacific Ocean, South China Sea, Babuyan Channel & Luzon Strait"
     },
+    wildlife: [
+      { name: "McGregor's Pit Viper", latin: "Trimeresurus mcgregori", status: "Endangered", note: "Batanes endemic found only on Batan and Sabtang islands; the only pit viper species recorded in the Batanes group", page: "reptiles.html" },
+      { name: "Batan Flying Lizard", latin: "Draco jareckii", status: "Least Concern", note: "Endemic to Batan Island; a gliding lizard that uses wing-like skin flaps between its ribs to travel between trees", page: "reptiles.html" },
+      { name: "Lowland White-eye", latin: "Zosterops meyeni", status: "Least Concern", note: "The Batanes population (subspecies batanis) is larger and brighter than the nominate race found across the rest of the Philippines", page: "birds.html" }
+    ],
+    flora: [
+      { name: "Vuyavuy Palm", latin: "Phoenix loureiroi", status: "Least Concern", note: "Grows on Sabtang, Ivuhos, and Itbayat islands; its fronds are the traditional material for the Ivatan vakul rain cape and suhot headgear", page: "flora.html" },
+      { name: "Cogon Grass", latin: "Imperata cylindrica", status: "Not Evaluated", note: "Traditional thatching material for Ivatan stone houses, layered a yard thick and lashed with reeds to withstand Batanes' frequent typhoons", page: "flora.html" }
+    ],
     protected_areas: [
       { name: "Batanes Protected Landscape and Seascape", type: "Protected Landscape and Seascape", pa_id: "batanes" }
     ],
     landmarks: [
-      { name: "Mount Iraya", type: "Active Volcano", note: "PHIVOLCS-monitored active stratovolcano, 1,085 m, Batan Island; cloud forest on upper slopes; one of three volcanoes in the Batanes island group" },
+      { name: "Mount Iraya", type: "Active Volcano", note: "PHIVOLCS-monitored active stratovolcano, 1,009 m, Batan Island; cloud forest on upper slopes; one of three volcanoes in the Batanes island group" },
       { name: "Valugan Boulder Beach", type: "Boulder Beach", note: "Pacific-facing shoreline in northern Basco strewn with volcanic boulders averaging 1–2 m in diameter; displaced onto shore by typhoon swells" },
       { name: "Marlboro Country (Rakuh-a-Payaman)", type: "Plateau Pasturelands", note: "Open rolling pasturelands on Sabtang Island's western plateau with sea cliffs dropping to the Pacific; Rakuh-a-Payaman is the Ivatan name" }
     ],
@@ -231,6 +240,7 @@ var PH_PROVINCES = [
     region_key: "region2",
     island_group: "luzon",
     known_for: "Cape Engaño & Callao Cave",
+    website: "https://cagayan.gov.ph/",
     desc: "Cagayan is the fifth-largest province in the Philippines by land area, occupying the wide Cagayan Valley drained by the Cagayan River — the country's longest river at 505 kilometres. The Sierra Madre mountain range lines its eastern edge, sheltering the largest remaining tract of old-growth tropical rainforest in the Philippines and harbouring endemic species including the Philippine Eagle, the Giant Cloud Rat, and hundreds of bird species documented across the Cagayan Valley. Fossil beds in the Cagayan Valley have yielded Pleistocene megafauna including Stegodon and giant tortoise remains, making the province a treasure trove of Philippine paleontology.",
     fact: "The Callao Cave archaeological site in Cagayan contains fossilised bones of Homo luzonensis, a distinct human species described in a 2019 Nature paper — 2023 dating research revised the age of specimens to at least 134,000 years ago, making Homo luzonensis the oldest known human species documented in the Philippines.",
     geography: {
@@ -238,6 +248,14 @@ var PH_PROVINCES = [
       major_river: "Cagayan River (505 km, longest river in the Philippines)",
       coastline: "Pacific Ocean & Babuyan Channel"
     },
+    wildlife: [
+      { name: "Philippine Eagle", latin: "Pithecophaga jefferyi", status: "Critically Endangered", note: "Confirmed sightings documented in Baggao and Peñablanca, Cagayan, with nest-search efforts focused on a resident pair near Barangay Sta. Margarita, Baggao", page: "birds.html" },
+      { name: "Northern Luzon Giant Cloud Rat", latin: "Phloeomys pallidus", status: "Least Concern", note: "One of the world's largest rodents, documented in the old-growth Sierra Madre forest along Cagayan's eastern border", page: "mammals.html" },
+      { name: "Philippine Sailfin Lizard", latin: "Hydrosaurus pustulatus", status: "Vulnerable", note: "Documented along Sierra Madre rivers and streams of northern Luzon; an excellent swimmer that can sprint across the water surface to escape predators", page: "reptiles.html" }
+    ],
+    flora: [
+      { name: "Mangrove Forest", latin: "Rhizophoraceae spp.", status: "Not Evaluated", note: "Palaui Island holds 16 true mangrove species — roughly 35% of the world's major mangrove species — with Rhizophora apiculata the densest species recorded", page: "flora.html" }
+    ],
     protected_areas: [
       { name: "Palaui Island Protected Landscape and Seascape", type: "Protected Landscape and Seascape", pa_id: "palaui-island" }
     ],
@@ -255,6 +273,7 @@ var PH_PROVINCES = [
     region_key: "region2",
     island_group: "luzon",
     known_for: "Sta. Victoria Caves & Sierra Madre",
+    website: "https://provinceofisabela.gov.ph/",
     desc: "Isabela is the second-largest Philippine province by land area, a vast lowland agricultural plain flanked by the Sierra Madre to the east and the Caraballo Mountains to the southwest, drained by the Cagayan River and its tributaries. The Magat River watershed feeds the Magat Dam, one of the country's largest hydroelectric reservoirs, which creates an important freshwater ecosystem for wading birds and migratory waterfowl. Vast tracts of Sierra Madre old-growth forest within Isabela form one of the most critical bird conservation landscapes in Luzon, recognised in peer-reviewed literature for its role in sheltering the majority of Luzon's threatened and near-threatened bird species.",
     fact: "The Northern Sierra Madre Natural Park in Isabela is the largest protected area in the Philippines at 359,486 hectares, sheltering approximately 1,500 vascular plant species — over 50 locally endemic — and 291 bird species including 83 endemic taxa, making it the single richest protected area in the Philippines in terms of species and habitat diversity.",
     geography: {
@@ -266,6 +285,9 @@ var PH_PROVINCES = [
     wildlife: [
       { name: "Philippine Eagle", latin: "Pithecophaga jefferyi", status: "Critically Endangered", note: "Documented within Northern Sierra Madre Natural Park", page: "birds.html" },
       { name: "Philippine Crocodile", latin: "Crocodylus mindorensis", status: "Critically Endangered", note: "Breeding population documented in San Mariano — Disulap River, Dinang Creek, and Dunoy Lake", page: "reptiles.html" }
+    ],
+    flora: [
+      { name: "Red Lauan", latin: "Shorea polysperma", status: "Critically Endangered", note: "Also known as Tanguile; dipterocarp hardwood of Northern Sierra Madre Natural Park's old-growth forest, the widest remaining tract of tropical rainforest on Luzon; heavily depleted elsewhere by commercial logging", page: "flora.html" }
     ],
     protected_areas: [
       { name: "Northern Sierra Madre Natural Park", type: "Natural Park", pa_id: "northern-sierra-madre" }
@@ -284,12 +306,21 @@ var PH_PROVINCES = [
     region_key: "region2",
     island_group: "luzon",
     known_for: "Caraballo Range & Magat River",
+    website: "https://nuevavizcaya.gov.ph/",
     desc: "Nueva Vizcaya is a landlocked highland province sitting astride the Caraballo Mountains and the southern end of the Cagayan Valley, serving as the gateway between Luzon's northern highlands and the southern lowlands. Its cool climate and fertile clay loam soils support the province's role as the Vegetable Bowl of Region II, producing strawberries, citrus, and highland vegetables across its upland farms, while its river valleys and mossy forest patches shelter a diverse community of montane birds and small mammals. The Magat River originates in its mountains, and traditional Ifugao and Isinai communities maintain ancestral domain forests across much of the province.",
     fact: "The river valleys of Nueva Vizcaya sit within the southern Cagayan Valley fossil basin — the same geological depression that has yielded Pleistocene megafauna including Stegodon, an extinct proboscidean relative of modern elephants whose remains have been documented across northern Luzon, indicating that this highland corridor was once a corridor for large mammals moving through ancient forested valleys.",
     geography: {
       area: "4,813.88 km²",
       major_river: "Magat River (226 km, originates in Aritao)"
     },
+    wildlife: [
+      { name: "Short-footed Luzon Tree Rat", latin: "Carpomys melanurus", status: "Data Deficient", note: "Presumed extinct for over a century until rediscovered in the canopy of Mount Pulag National Park in 2008 — the first scientifically confirmed individual since 1896", page: "mammals.html" },
+      { name: "Giant Bushy-tailed Cloud Rat", latin: "Crateromys schadenbergi", status: "Vulnerable", note: "Documented in the mossy forest of Mount Pulag National Park's Kayapa portion, above 2,000 m elevation", page: "mammals.html" },
+      { name: "Scale-feathered Malkoha", latin: "Lepidogrammus cumingi", status: "Least Concern", note: "Philippine endemic cuckoo documented across the montane forests of Nueva Vizcaya and the wider Sierra Madre and Cordillera ranges", page: "birds.html" }
+    ],
+    flora: [
+      { name: "Utod Dwarf Bamboo", latin: "Yushania niitakayamensis", status: "Not Evaluated", note: "Dominant species of the dwarf bamboo grassland above Mount Pulag's mossy forest line, from roughly 2,600 m to the summit", page: "flora.html" }
+    ],
     protected_areas: [
       { name: "Mount Pulag Protected Landscape", type: "Protected Landscape", pa_id: "mount-pulag" },
       { name: "Casecnan Protected Landscape", type: "Protected Landscape", pa_id: "casecnan" }
@@ -308,6 +339,7 @@ var PH_PROVINCES = [
     region_key: "region2",
     island_group: "luzon",
     known_for: "Siitan River & Quirino Rainforest",
+    website: "https://quirinoprovince.gov.ph/",
     desc: "Quirino is one of the least-populated provinces in Luzon, a rugged upland territory nestled between the Sierra Madre to the east and the Caraballo Mountains to the southwest, largely blanketed by tropical rainforest and bisected by white-water rivers including the Cagayan tributary system. The Quirino Protected Landscape shelters Philippine Eagles, the Critically Endangered Philippine Crocodile (Crocodylus mindorensis) in its river systems, and a remarkable diversity of endemic reptiles and amphibians. Its remoteness has kept significant forest cover intact, making it a priority landscape for Philippine biodiversity conservation.",
     fact: "The Philippine Crocodile (Crocodylus mindorensis) — listed as Critically Endangered by the IUCN and considered one of the most threatened crocodile species in the world — is known to persist in the river systems of northern Luzon, including within the forested river corridors of the Quirino Protected Landscape, making the province one of the last strongholds of this endemic freshwater species.",
     geography: {
@@ -318,6 +350,9 @@ var PH_PROVINCES = [
     wildlife: [
       { name: "Philippine Eagle", latin: "Pithecophaga jefferyi", status: "Critically Endangered", note: "Recorded within Quirino Protected Landscape", page: "birds.html" },
       { name: "Cantor's Giant Softshell Turtle", latin: "Pelochelys cantorii", status: "Critically Endangered", note: "Documented in Addalam River, Cabarroguis", page: "reptiles.html" }
+    ],
+    flora: [
+      { name: "Red Lauan", latin: "Shorea polysperma", status: "Critically Endangered", note: "Dipterocarp hardwood recorded within the old-growth remnant (24% of forest cover) of the Quirino Protected Landscape, part of the Sierra Madre Biodiversity Corridor", page: "flora.html" }
     ],
     protected_areas: [
       { name: "Quirino Protected Landscape", type: "Protected Landscape", pa_id: "quirino-pl" }

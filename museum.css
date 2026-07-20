@@ -277,7 +277,9 @@ nav a:hover, nav a.active { color: var(--gold); }
 .status-critical  { color: #e05555; border-color: rgba(224,85,85,0.35); }
 .status-endangered{ color: #e09955; border-color: rgba(224,153,85,0.35); }
 .status-vulnerable{ color: #b5c455; border-color: rgba(181,196,85,0.35); }
+.status-nt        { color: #c9a84c; border-color: rgba(201,168,76,0.35); }
 .status-lc        { color: #55b585; border-color: rgba(85,181,133,0.35); }
+.status-dd        { color: #9e9e9e; border-color: rgba(158,158,158,0.35); }
 
 /* ── FEATURED CARD (wide) ── */
 a.featured-card {
