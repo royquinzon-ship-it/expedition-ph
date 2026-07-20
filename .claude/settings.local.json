@@ -4,7 +4,12 @@
       "Bash(ls -la /c/Users/royqu/philippine-natural-history/*.html)",
       "Read(//c/Users/royqu/AppData/Local/Programs/Git/bin/**)",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080/province-detail.html)",
+      "WebSearch",
+      "WebFetch(domain:world-heritage-datasheets.unep-wcmc.org)",
+      "Bash(git push *)",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\royqu\\\\OneDrive\\\\philippine-natural-history\\\\image\\\\\" | Select-Object -Skip 100 | ForEach-Object { \"image\\\\\" + $_.Name })"
     ]
   }
 }

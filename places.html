@@ -421,6 +421,13 @@
     /* initial render */
     refresh();
 
+    /* sync guide count to actual PLACES data */
+    var guideText = document.getElementById('guide-text');
+    if (guideText && typeof PLACES !== 'undefined') {
+      var n = Object.keys(PLACES).length;
+      guideText.innerHTML = 'Explore ' + n + ' destinations — filter by island group or click any card to read the full article. &nbsp;&#9670;&nbsp; <a href="protected-areas.html" class="guide-pa-link">View all 243 Protected Areas &rarr;</a>';
+    }
+
     var searchEl = document.getElementById('places-search');
     if (searchEl) {
       searchEl.addEventListener('input', function () {
