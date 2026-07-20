@@ -280,6 +280,10 @@ nav a:hover, nav a.active { color: var(--gold); }
 .status-lc        { color: #55b585; border-color: rgba(85,181,133,0.35); }
 
 /* ── FEATURED CARD (wide) ── */
+a.featured-card {
+  text-decoration: none;
+  color: inherit;
+}
 .featured-card {
   display: grid;
   grid-template-columns: 1fr 1.1fr;

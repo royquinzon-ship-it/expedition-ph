@@ -19,14 +19,6 @@
 .season-note strong { color:var(--gold, #c9a84c); font-style:normal; }
 .filter-btn-threat { border-color: rgba(224,85,85,0.4) !important; }
 .filter-btn-threat:hover, .filter-btn-threat.active { background: rgba(224,85,85,0.15) !important; color: #e05555 !important; border-color: #e05555 !important; }
-.featured-slide { display: none; }
-.featured-slide.active { display: block; }
-.featured-nav { display: flex; align-items: center; justify-content: center; gap: 1.2rem; margin-top: 1.2rem; padding-top: 0.9rem; border-top: 1px solid rgba(255,255,255,0.08); }
-.feat-nav-btn { background: none; border: 1px solid rgba(201,168,76,0.4); color: var(--gold, #c9a84c); padding: 0.35rem 1.1rem; cursor: pointer; font-size: 0.74rem; letter-spacing: 0.05em; transition: background 0.2s; }
-.feat-nav-btn:hover { background: rgba(201,168,76,0.12); }
-.feat-dots { display: flex; gap: 0.55rem; align-items: center; }
-.feat-dot { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,0.2); border: none; cursor: pointer; padding: 0; transition: background 0.25s; }
-.feat-dot.active { background: var(--gold, #c9a84c); }
 .places-search-wrap { max-width: 540px; margin: 0.8rem auto 2rem; }
 .places-search { width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); color: #fff; padding: 0.6rem 1rem; font-size: 0.82rem; font-family: inherit; outline: none; box-sizing: border-box; }
 .places-search::placeholder { color: rgba(255,255,255,0.3); }
@@ -37,8 +29,6 @@
 .place-fullpage-link { display: none; }
 @media(max-width: 700px) {
   .places-search-wrap { max-width: 100%; }
-  .featured-nav { gap: 0.8rem; }
-  .feat-nav-btn { padding: 0.3rem 0.8rem; font-size: 0.68rem; }
 }
 /* ── Place cards (data-driven) ── */
 .place-card {
@@ -116,75 +106,24 @@
   <div class="stat-item reveal"><span class="stat-num" data-target="36000">0</span><span class="stat-lbl">km of Coastline</span></div>
 </div>
 
-<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Featured Destinations &nbsp; &#9670;</span><div class="div-line"></div></div>
+<div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Spotlight &nbsp; &#9670;</span><div class="div-line"></div></div>
 
 <section class="section section-dark2">
-  <div class="featured-slider reveal">
-
-    <div class="featured-slide active">
-      <a class="featured-card" href="place-detail.html?id=palawan">
-        <img class="featured-card-img" src="image/Palawan.jpg" alt="Palawan">
-        <div class="featured-card-body">
-          <div class="featured-label">&#9670; &nbsp; UNESCO World Heritage &nbsp; · &nbsp; Region IV-B · MIMAROPA</div>
-          <div class="featured-name">Palawan</div>
-          <div class="featured-sci">The Last Frontier</div>
-          <p class="featured-desc">Stretching 450 kilometres from Mindoro to Borneo, Palawan is the Philippines' most biodiverse island. Its forests contain some of the last intact lowland dipterocarp stands in Southeast Asia. The Puerto Princesa Subterranean River — the world's longest navigable underground river — runs 8.2 kilometres beneath the limestone karst before emptying into the South China Sea. Above ground, the island shelters the Irrawaddy Dolphin, Philippine Cockatoo, and Palawan Peacock-Pheasant.</p>
-          <div class="badge-row">
-            <span class="badge">UNESCO Heritage</span>
-            <span class="badge">Last Frontier</span>
-            <span class="badge">Underground River</span>
-            <span class="badge">Coral Triangle</span>
-          </div>
-        </div>
-      </a>
+  <a class="featured-card reveal" href="place-detail.html?id=tubbataha-reef">
+    <img class="featured-card-img" src="image/Tubataha reef.jpg" alt="Tubbataha Reef">
+    <div class="featured-card-body">
+      <div class="featured-label">&#9670; &nbsp; UNESCO World Heritage &nbsp; · &nbsp; Sulu Sea</div>
+      <div class="featured-name">Tubbataha Reef</div>
+      <div class="featured-sci">Heart of the Coral Triangle</div>
+      <p class="featured-desc">A remote atoll rising from the depths of the Sulu Sea — accessible only by liveaboard for three months a year. Tubbataha holds 360 coral species, 600 fish species, and nesting populations of sharks and sea turtles on atolls untouched by daily human contact. Its fish biomass rivals the most pristine mid-Pacific reefs, and its waters shelter the Scalloped Hammerhead, one of the ocean's most threatened sharks.</p>
+      <div class="badge-row">
+        <span class="badge">UNESCO Heritage</span>
+        <span class="badge">Marine Protected Area</span>
+        <span class="badge">Hammerhead Sharks</span>
+        <span class="badge">600+ Fish Species</span>
+      </div>
     </div>
-
-    <div class="featured-slide">
-      <a class="featured-card" href="place-detail.html?id=tubbataha-reef">
-        <img class="featured-card-img" src="image/Tubataha reef.jpg" alt="Tubbataha Reef">
-        <div class="featured-card-body">
-          <div class="featured-label">&#9670; &nbsp; UNESCO World Heritage &nbsp; · &nbsp; Sulu Sea</div>
-          <div class="featured-name">Tubbataha Reef</div>
-          <div class="featured-sci">Heart of the Coral Triangle</div>
-          <p class="featured-desc">A remote atoll rising from the depths of the Sulu Sea — accessible only by liveaboard for three months a year. Tubbataha holds 360 coral species, 600 fish species, and nesting populations of sharks and sea turtles on atolls untouched by daily human contact. Its fish biomass rivals the most pristine mid-Pacific reefs, and its waters shelter the Scalloped Hammerhead, one of the ocean's most threatened sharks.</p>
-          <div class="badge-row">
-            <span class="badge">UNESCO Heritage</span>
-            <span class="badge">Marine Protected Area</span>
-            <span class="badge">Hammerhead Sharks</span>
-            <span class="badge">600+ Fish Species</span>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <div class="featured-slide">
-      <a class="featured-card" href="place-detail.html?id=mount-apo">
-        <img class="featured-card-img" src="image/Mt. Apo.jpg" alt="Mount Apo">
-        <div class="featured-card-body">
-          <div class="featured-label">&#9670; &nbsp; National Park &nbsp; · &nbsp; Davao · Mindanao</div>
-          <div class="featured-name">Mount Apo</div>
-          <div class="featured-sci">Roof of the Philippines</div>
-          <p class="featured-desc">The Philippines' highest peak at 2,954 metres — an ancient stratovolcano with active solfataric vents and a summit crater lake. Its old-growth rainforests shelter over 272 bird species including 111 Philippine endemics, and its slopes are the stronghold of the Philippine Eagle — the national bird and one of the world's most powerful raptors. Geothermal energy from its flanks now lights up much of Mindanao.</p>
-          <div class="badge-row">
-            <span class="badge">Highest Peak</span>
-            <span class="badge">2,954m</span>
-            <span class="badge">Philippine Eagle</span>
-            <span class="badge">National Park</span>
-          </div>
-        </div>
-      </a>
-    </div>
-
-  </div>
-  <div class="featured-nav">
-    <button type="button" class="feat-nav-btn" onclick="slideFeatured(-1)">&#9664; Prev</button>
-    <div class="feat-dots">
-      <button type="button" class="feat-dot active" onclick="goFeatured(0)" title="Palawan"></button>
-      <button type="button" class="feat-dot" onclick="goFeatured(1)" title="Tubbataha Reef"></button>
-      <button type="button" class="feat-dot" onclick="goFeatured(2)" title="Mount Apo"></button>
-    </div>
-    <button type="button" class="feat-nav-btn" onclick="slideFeatured(1)">Next &#9654;</button>
-  </div>
+  </a>
 </section>
 
 <div class="divider"><div class="div-line"></div><span class="div-text">&#9670; &nbsp; Natural Destinations &amp; Landmarks &nbsp; &#9670;</span><div class="div-line"></div></div>
@@ -337,7 +276,7 @@
     var card = document.querySelector('.place-card[data-slug="' + featureId + '"]');
     if (card) {
       card.classList.add('card-featured');
-      setTimeout(function(){ card.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 300);
+      card.scrollIntoView({ behavior: 'auto', block: 'center' });
     }
   }
 
@@ -398,20 +337,6 @@
       sp.textContent = '(' + count + ')';
     });
   }
-
-  /* ── Featured slider ── */
-  var featIdx = 0;
-  window.goFeatured = function(n) {
-    var slides = document.querySelectorAll('.featured-slide');
-    var dots   = document.querySelectorAll('.feat-dot');
-    if (!slides.length) return;
-    slides[featIdx].classList.remove('active');
-    dots[featIdx].classList.remove('active');
-    featIdx = ((n % slides.length) + slides.length) % slides.length;
-    slides[featIdx].classList.add('active');
-    dots[featIdx].classList.add('active');
-  };
-  window.slideFeatured = function(dir) { goFeatured(featIdx + dir); };
 
   /* ── Search ── */
   document.addEventListener('DOMContentLoaded', function () {
