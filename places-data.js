@@ -498,6 +498,19 @@
     badges: ['Three Cascades', 'Cliff Diving', 'Bamboo Rafting', 'Bolinao'],
     wildlife: []
   },
+  'enchanted-cave': {
+    name: 'Enchanted Cave',
+    subtitle: 'Underground Spring Pool of Bolinao',
+    tag: 'Limestone Cave · Pangasinan',
+    category: 'luzon', type: 'geological', region: 'Pangasinan · Luzon', season: 'Nov–May',
+    threat: false, threatReason: '',
+    address: 'Bolinao, Pangasinan',
+    image: 'image/Photo coming soon.jpg',
+    description: 'An ancient coral reef limestone cave in Bolinao holding a cool, clear underground pool roughly 3–6 feet deep, reached by a 14-metre descending stairway carved into the rock. Stalactites hang from the cave ceiling above the turquoise water, and the chamber is naturally lit and ventilated through openings in the limestone. Visitors wear hard hats and life vests before descending to swim in the spring-fed pool.',
+    funfact: 'The pool inside Enchanted Cave is fed by a natural underground spring rather than seawater or rainfall runoff — its cool, clear water stays a near-constant temperature year-round regardless of the surface heat outside.',
+    badges: ['Underground Pool', '14m Stairway', 'Limestone Cave', 'Bolinao'],
+    wildlife: []
+  },
   'pinsal-falls': {
     name: 'Pinsal Falls',
     subtitle: 'Largest Waterfall of Ilocandia',

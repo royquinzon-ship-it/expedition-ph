@@ -167,6 +167,12 @@
   color: var(--text);
   line-height: 1.45;
 }
+.art-toc-meta-link {
+  color: var(--gold);
+  text-decoration: none;
+  word-break: break-word;
+}
+.art-toc-meta-link:hover { text-decoration: underline; }
 .island-chip {
   display: inline-block;
   font-size: 0.55rem;
@@ -841,13 +847,19 @@ a.art-pa-link .art-pa-name::after {
     { label: 'Region',        value: regionLabel },
     { label: 'Island Group',  value: islandLabel, chip: province.island_group }
   ];
+  if (province.website) {
+    metaItems.push({ label: 'Official Website', value: province.website, link: true });
+  }
   metaItems.forEach(function (m) {
     var div = document.createElement('div');
     div.className = 'art-toc-meta-item';
     var chipHtml = m.chip ? '<br><span class="island-chip ' + m.chip + '">' + m.value + '</span>' : '';
+    var valueHtml = m.link
+      ? '<a class="art-toc-meta-link" href="' + m.value + '" target="_blank" rel="noopener">' + m.value.replace(/^https?:\/\//, '').replace(/\/$/, '') + ' &rarr;</a>'
+      : (m.chip ? '' : m.value) + chipHtml;
     div.innerHTML =
       '<div class="art-toc-meta-label">' + m.label + '</div>' +
-      '<div class="art-toc-meta-value">' + (m.chip ? '' : m.value) + chipHtml + '</div>';
+      '<div class="art-toc-meta-value">' + valueHtml + '</div>';
     tocMeta.appendChild(div);
   });
 

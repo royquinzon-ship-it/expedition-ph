@@ -42,6 +42,7 @@ var PH_PROVINCES = [
     region_key: "region1",
     island_group: "luzon",
     known_for: "Kapurpurawan Rock Formation",
+    website: "https://ilocosnorte.gov.ph/",
     desc: "Ilocos Norte occupies the northwestern tip of Luzon — a narrow province squeezed between the South China Sea and the Cordillera foothills, with its northern coast fully exposed to the Luzon Strait. The landscape is shaped almost entirely by wind and wave: the northeast monsoon drives the province's dominant ecology, building the 85 km² La Paz Sand Dunes along the Laoag coast, sculpting the calcium carbonate cliffs of Burgos, and generating the constant gales that sweep the open Bangui shoreline. Paoay Lake, a natural barrier lake formed by coastal dune progradation during the late Quaternary, sits behind the dune belt and shelters year-round freshwater birds and endemic aquatic life largely isolated from the surrounding landscape. The Pagudpud coastline — where the Luzon Strait narrows and currents accelerate between Luzon and Taiwan — serves as a nesting ground for sea turtles and a migratory corridor for shorebirds and raptors moving between continental Asia and the Philippine interior. Inland, the foothills of the Cordillera rise steeply behind the coastal plain, harbouring forest birds including the Rufous Hornbill and Grey-faced Buzzard in the largely undisturbed upland forest of Adams — the province's smallest and only landlocked municipality, its mountainous terrain keeping much of that forest cover intact.",
     fact: "Ilocos Norte sits at the northwestern tip of Luzon where the South China Sea and the Luzon Strait converge — one of the most meteorologically exposed coastlines in the Philippines. This constant wind exposure is why the Bangui coast became the site of the country's first large-scale wind farm in 2005, and why the waters off Pagudpud are among the roughest and most dramatic in the archipelago outside of typhoon season.",
     img_seed: "ilocos-norte",
@@ -91,6 +92,7 @@ var PH_PROVINCES = [
     region_key: "region1",
     island_group: "luzon",
     known_for: "Pinsal Falls",
+    website: "https://mis.ilocossur.gov.ph/",
     desc: "Ilocos Sur stretches along the northwestern Luzon coast, its narrow coastal plain squeezed between the Cordillera foothills and the South China Sea. Pinsal Falls in Santa Maria is a powerful multi-cascade waterfall set within forested slopes, fed by Cordillera rivers at their most dramatic during the wet season. The Abra River delta creates productive wetlands that attract egrets, herons, and migratory ducks each dry season, while the Nagbacalan Lily Pond in Caoayan offers a rare lowland wetland rich in native aquatic plants and waterbirds. The Bantay Nature Park preserves a remnant patch of lowland forest, and the rugged coastline south of Vigan shelters small coves and rocky intertidal zones teeming with marine invertebrates.",
     fact: "Pinsal Falls in Santa Maria plunges 85 feet from a wide limestone ledge into twin basins flanked by limestone cliffs — considered the largest waterfall in Ilocandia, it is fed by rivers draining the western slopes of the Cordillera and runs at its most dramatic during the wet season when monsoon rainfall channels directly into the falls.",
     img_seed: "ilocos-sur",
@@ -128,6 +130,7 @@ var PH_PROVINCES = [
     region_key: "region1",
     island_group: "luzon",
     known_for: "Immuki Island",
+    website: "https://launion.gov.ph/",
     desc: "La Union is the smallest province in the Ilocos Region, yet it packs a remarkable diversity of natural landscapes. Immuki Island off the coast of Balaoan is a dead coral island whose compacted coral rock forms a series of crystal-clear tidal lagoons and natural pools, offering some of the most distinctive coastal formations along the Ilocos shoreline. Tangadan Falls in San Gabriel tumbles through dense montane forest in the lower Cordillera, while the Baroro River valley provides a rich riparian corridor for kingfishers, herons, and native freshwater fish. The Pugo highlands along the Cordillera foothills are blanketed in pine forest, and the surf beaches of San Juan sit on a coastline shaped by the long-shore drift of the South China Sea.",
     fact: "Immuki Island in Balaoan, La Union is a dead coral island — its surface composed entirely of compacted coral rock — whose sheltered tidal lagoons and crystal-clear pools are formed by water trapped between ancient coral formations, making it one of the most unusual coastal natural features along the Ilocos shoreline.",
     img_seed: "la-union",
@@ -164,6 +167,7 @@ var PH_PROVINCES = [
     region_key: "region1",
     island_group: "luzon",
     known_for: "Hundred Islands & Bolinao Falls",
+    website: "https://www.pangasinan.gov.ph/",
     desc: "Pangasinan faces Lingayen Gulf along a wide coastal plain flanked by the Cordillera and Zambales mountain ranges, creating one of Luzon's most productive agricultural and fishery landscapes. The Hundred Islands Natural Monument (124 islands at low tide) shelters coral reefs and rich marine ecosystems within Alaminos Bay. The province's vast salt beds in Dasol and Infanta are some of the country's largest, and its bangus (milkfish) aquaculture industry supplies much of the national demand.",
     fact: "Bolinao in northwestern Pangasinan hosts one of the largest colonies of the Vulnerable giant clam (Tridacna gigas) under active mariculture conservation by the UP Marine Science Institute, with some individuals exceeding 1 metre in shell width.",
     img_seed: "pangasinan",
@@ -181,7 +185,7 @@ var PH_PROVINCES = [
 
     flora: [
       { name: "Molave", latin: "Vitex parviflora", status: "Least Concern", note: "Dominant hardwood of the karst forest across the Hundred Islands, growing alongside malaikmo and sablot on the islands' thin limestone soil", page: "flora.html" },
-      { name: "Mangrove Forest", latin: "Rhizophoraceae spp.", status: "Not Evaluated", note: "Fringes the Lingayen Gulf estuaries in roughly 40 species-rich stands, providing critical nursery habitat for juvenile fish and crustaceans", page: "flora.html" },
+      { name: "Mangrove Forest", latin: "Rhizophoraceae spp.", status: "Not Evaluated", note: "Fringes the Lingayen Gulf estuaries, providing critical nursery habitat for juvenile fish and crustaceans in the only extensive mangrove lagoon system on Luzon's western and northern coast", page: "flora.html" },
       { name: "Seagrass Meadows", latin: "Thalassia hemprichii", status: "Least Concern", note: "Forms shallow subtidal meadows off Cape Bolinao alongside Enhalus acoroides and Cymodocea rotundata, feeding grounds for the province's dugong and sea turtle populations", page: "flora.html" }
     ],
     protected_areas: [
@@ -190,7 +194,7 @@ var PH_PROVINCES = [
     landmarks: [
       { name: "Hundred Islands Natural Monument", type: "Island Group", note: "124 islands at low tide in Lingayen Gulf, Alaminos; limestone cliffs, coral reefs, and white sand coves", place_id: "hundred-islands" },
       { name: "Bolinao Falls", type: "Waterfall", note: "Three-cascade waterfall series with turquoise plunge pools in Bolinao; bamboo rafts navigate between levels", place_id: "bolinao-falls" },
-      { name: "Enchanted Cave", type: "Limestone Cave", note: "Ancient coral reef limestone cave with an underground freshwater pool 3–6 ft deep; Bolinao; accessible via 14 m stairway" }
+      { name: "Enchanted Cave", type: "Limestone Cave", note: "Ancient coral reef limestone cave with an underground freshwater pool 3–6 ft deep; Bolinao; accessible via 14 m stairway", place_id: "enchanted-cave" }
     ],
     conservation_note: "Hundred Islands Natural Monument was originally proclaimed a national park in 1940 and reclassified as a Natural Monument under NIPAS in 2013 — its 124 islands protect coral reefs and hawksbill turtle nesting grounds in Lingayen Gulf."
   },

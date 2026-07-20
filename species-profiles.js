@@ -2692,6 +2692,39 @@ const SPECIES_PROFILES = {
     description: 'The dominant pine of the Luzon tropical pine forests, found in open stands across the Cordillera Central range — including the montane foothills of La Union\'s Pugo and Bagulin highlands. Named for Benguet province, where it forms the backbone of the Baguio pine forest landscape, it is also known locally as Saleng.',
     funfact: 'Benguet Pine forests are partly a fire-maintained ecosystem — the tree\'s thick bark lets it survive the dry-season fires that regularly sweep the Cordillera grasslands, fires that kill off the broadleaf trees that would otherwise outcompete it.',
     category: 'flora'
+  },
+
+  'molave': {
+    name: 'Molave',
+    latin: 'Vitex parviflora',
+    tag: 'Tree · Hardwood',
+    status: 'Least Concern',
+    statusCode: 'LC',
+    image: 'image/Photo coming soon.jpg',
+    island: 'Philippines · Indonesia · Malaysia',
+    size: 'Up to 30–38 m tall; bole diameter to 125–200 cm',
+    habitat: 'Seasonally dry lowland forest, often on karst or limestone soils; dominant hardwood of the karst forest across Pangasinan\'s Hundred Islands, growing alongside malaikmo and sablot.',
+    diet: 'A light-loving, shade-intolerant tree that draws water and nutrients through soil rooted in thin, well-drained limestone substrate; partially or entirely sheds its leaves in the dry season.',
+    behavior: 'Slow-growing with an open, wide-spreading crown; its pale gray to yellowish-brown bark and small blue-purple flowers give way to small bluish-black drupes.',
+    description: 'One of the Philippines\' most valued native hardwoods, historically prized for construction and shipbuilding for its durability and resistance to termites and fungal decay. Documented as a dominant tree of the karst forest across the Hundred Islands in Pangasinan. Downlisted from earlier threatened assessments to Least Concern on the 2020 IUCN Red List, reflecting its wide native range across the Philippines, Indonesia, and Malaysia.',
+    funfact: 'Manuel Quezon invoked the Molave as a symbol of Filipino strength: "I want our people to be like a Molave tree, strong and resilient, standing on the hillsides, unafraid of the rising tide, lightning, and the storm, confident of its strength." The tree grew extensively in Tayabas — Quezon\'s home province, later renamed Quezon in his honour.',
+    category: 'flora'
+  },
+
+  'seagrass-meadows': {
+    name: 'Seagrass Meadows',
+    latin: 'Thalassia hemprichii',
+    tag: 'Marine · Aquatic',
+    status: 'Least Concern',
+    statusCode: 'LC',
+    image: 'image/Photo coming soon.jpg',
+    island: 'Philippine Coast · Widespread',
+    habitat: 'Shallow subtidal sandy and reef-flat zones; forms meadows off Cape Bolinao, Pangasinan alongside Enhalus acoroides and Cymodocea rotundata.',
+    diet: 'Photosynthesises in shallow, sunlit water; a slow-growing, late-successional "climax" seagrass that recolonises disturbed meadows after faster-growing pioneer species establish.',
+    behavior: 'Forms dense mixed-species meadows that stabilise sediment and buffer wave energy; regarded as one of the most important nearshore feeding grounds for grazing marine megafauna.',
+    description: 'A dominant reef-flat seagrass forming extensive meadows in the Philippines, including the shallow subtidal zones off Cape Bolinao in Pangasinan, where it grows alongside Enhalus acoroides and Cymodocea rotundata. These meadows are critical feeding grounds for Dugongs and Green Sea Turtles and nursery habitat for reef fish.',
+    funfact: 'A single Dugong can eat up to 40 kg of seagrass per day. Seagrass meadows also produce oxygen at a remarkable rate — one square metre can generate enough oxygen for a person to breathe for a full day.',
+    category: 'flora'
   }
 
 };
