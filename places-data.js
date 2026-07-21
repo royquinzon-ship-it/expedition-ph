@@ -254,8 +254,8 @@
     threat: false, threatReason: '',
     image: 'image/Photo coming soon.jpg',
     description: 'A seven-chambered limestone cave on the banks of the Pinacanauan River in Cagayan — where sunlight streams through a natural skylight to illuminate a chapel inside the cave. Its deeper passages yielded bones of Homo luzonensis, rewriting the timeline of human presence in Southeast Asia.',
-    funfact: 'Callao Cave is where archaeologists in 2019 announced the discovery of Homo luzonensis — a previously unknown human species that lived in the Philippines at least 50,000 years ago. The cave became one of the most scientifically significant sites in all of Southeast Asian prehistory.',
-    badges: ['Homo luzonensis', '50,000 Years', 'Limestone Cave', 'Prehistoric Site'],
+    funfact: 'Callao Cave is where archaeologists in 2019 announced the discovery of Homo luzonensis — a previously unknown human species. Dating research in 2023 revised the age of the specimens to at least 134,000 years ago, making it the oldest known human species documented in the Philippines and one of the most scientifically significant sites in all of Southeast Asian prehistory.',
+    badges: ['Homo luzonensis', '134,000 Years', 'Limestone Cave', 'Prehistoric Site'],
     wildlife: ['Cave Bats', 'Cave Swiftlets']
   },
   'balicasag-island': {
@@ -526,15 +526,15 @@
   },
   'pikkang-falls': {
     name: 'Pikkang Falls',
-    subtitle: 'Hidden Curtain of San Juan',
+    subtitle: 'Hidden Paradise of San Juan',
     tag: 'Waterfall · Ilocos Sur',
     category: 'luzon', type: 'highland', region: 'Ilocos Sur · Luzon', season: 'Jun–Nov',
     threat: false, threatReason: '',
     address: 'Barangay Malamin, San Juan, Ilocos Sur',
-    image: 'image/Photo coming soon.jpg',
-    description: 'A curtain-style multi-cascade waterfall in Barangay Malamin, San Juan — reached via a 30-minute trek that crosses the river multiple times before arriving at the base. The falls spread across a wide rock face in overlapping sheets of white water, creating a natural amphitheatre of spray and mist. Far less visited than Pinsal Falls to the north, Pikkang is one of the more rewarding off-trail waterfalls along the Cordillera\'s western foothills.',
-    funfact: 'Pikkang\'s curtain formation is caused by bedrock that dips outward at the lip — rather than concentrating at a single point, the river fans laterally across the full rock face, producing a wide veil of water instead of a single plunging column.',
-    badges: ['Curtain Waterfall', 'River Crossing Trek', 'San Juan', 'Ilocos Sur'],
+    image: 'image/Pikkang Falls.jpg',
+    description: 'A powerful three-tiered waterfall in Barangay Malamin, San Juan — reached via a 20–30 minute trek that crosses the river multiple times before arriving at the base. The falls drop with significant force into a shallow pool, with a cave-like rock structure behind the main cascade. Far less visited than Pinsal Falls to the north, Pikkang remains one of the more rugged, off-trail waterfalls along the Cordillera\'s western foothills.',
+    funfact: 'Visitors who get close to Pikkang Falls are guaranteed a soaking — the force of the three-tiered drop throws spray well beyond the base pool, and loose rock along the tiers means the falls are best admired with some distance and caution.',
+    badges: ['Three-Tiered Waterfall', 'River Crossing Trek', 'San Juan', 'Ilocos Sur'],
     wildlife: []
   },
   'tangadan-falls': {
@@ -544,8 +544,8 @@
     category: 'luzon', type: 'highland', region: 'La Union · Luzon', season: 'Jun–Nov',
     threat: false, threatReason: '',
     address: 'Barangay Poblacion, San Gabriel, La Union',
-    image: 'image/Photo coming soon.jpg',
-    description: 'A two-tier waterfall along the Baroro River in San Gabriel — one of La Union\'s most accessible highland destinations despite lying at the foot of the Cordillera. The lower drop descends roughly 15 metres into a wide natural plunge pool cold enough even in summer, fed by Cordillera snowmelt and mountain springs. The trek follows the river upstream through bamboo groves and second-growth forest, crossing the Baroro three times before reaching the base of the falls.',
+    image: 'image/Tangadan Falls.jpg',
+    description: 'A two-tier waterfall along the Baroro River in San Gabriel — one of La Union\'s most accessible highland destinations despite lying at the foot of the Cordillera. The lower drop descends roughly 15 metres into a wide natural plunge pool cold enough even in summer, fed by shaded Cordillera mountain springs and upland streams. The trek follows the river upstream through bamboo groves and second-growth forest, crossing the Baroro three times before reaching the base of the falls.',
     funfact: 'The Baroro River that feeds Tangadan Falls is one of the few rivers in the Ilocos region that drains the western Cordillera directly into the South China Sea — carrying cold, mineral-rich highland water year-round even during the dry season.',
     badges: ['Two-Tier Falls', 'Baroro River', 'Cordillera Highlands', 'San Gabriel'],
     wildlife: ['Purple Heron', 'Brown-breasted Kingfisher', 'Brahminy Kite']

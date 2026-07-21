@@ -149,7 +149,7 @@ var PROTECTED_AREAS = {
     established: '2022',
     desc: 'Tirad Pass Protected Landscape covers 7,507.60 hectares across the municipalities of Gregorio del Pilar, Quirino, Sigay, Cervantes, and Suyo in Ilocos Sur, declared under Republic Act No. 11687, signed on April 8, 2022. The protected area encompasses the historic mountain pass where General Gregorio del Pilar and 60 Filipino soldiers made their last stand against American forces during the Philippine-American War of 1899, set within the rugged terrain of the Cordillera range.',
     funfact: 'At Tirad Pass on December 2, 1899, General Gregorio del Pilar — just 24 years old — and 60 soldiers held off 500 American troops for hours to allow President Emilio Aguinaldo to escape. Del Pilar was killed at the pass and is honoured as the "Boy General" of the Philippine Revolution.',
-    image: 'image/Photo coming soon.jpg'
+    image: 'image/Tirad Pass Protected Landscape.jpg'
   },
   'agoo-damortis': {
     name: 'Agoo-Damortis Protected Landscape and Seascape',

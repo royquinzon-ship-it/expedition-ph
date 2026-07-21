@@ -120,7 +120,7 @@ var PH_PROVINCES = [
     ],
     landmarks: [
       { name: "Pinsal Falls", type: "Waterfall", note: "85-foot twin-cascade waterfall in Santa Maria; largest waterfall in the Ilocos Region; fed by Cordillera rivers", place_id: "pinsal-falls" },
-      { name: "Pikkang Falls", type: "Waterfall", note: "Curtain-style multi-cascade waterfall in Barangay Malamin, San Juan; reached via a 30-minute river-crossing trek", place_id: "pikkang-falls" }
+      { name: "Pikkang Falls", type: "Waterfall", note: "Powerful three-tiered waterfall with a cave-like structure behind the main cascade in Barangay Malamin, San Juan; reached via a 20–30 minute river-crossing trek", place_id: "pikkang-falls" }
     ],
     conservation_note: "Ilocos Sur's remaining lowland forest cover is among the most fragmented in Luzon — the Abra River corridor is its last significant lowland riparian habitat."
   },
