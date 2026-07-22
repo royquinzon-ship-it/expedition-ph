@@ -254,7 +254,7 @@ var PH_PROVINCES = [
       { name: "Philippine Sailfin Lizard", latin: "Hydrosaurus pustulatus", status: "Vulnerable", note: "Documented along Sierra Madre rivers and streams of northern Luzon; an excellent swimmer that can sprint across the water surface to escape predators", page: "reptiles.html" }
     ],
     flora: [
-      { name: "Mangrove Forest", latin: "Rhizophoraceae spp.", status: "Not Evaluated", note: "Palaui Island holds 16 true mangrove species — roughly 35% of the world's major mangrove species — with Rhizophora apiculata the densest species recorded", page: "flora.html" }
+      { name: "Mangrove Forest", latin: "Rhizophoraceae spp.", status: "Not Evaluated", note: "Palaui Island holds 16 true mangrove species across 7 families, with Rhizophora apiculata the densest species recorded", page: "flora.html" }
     ],
     protected_areas: [
       { name: "Palaui Island Protected Landscape and Seascape", type: "Protected Landscape and Seascape", pa_id: "palaui-island" }
@@ -361,7 +361,7 @@ var PH_PROVINCES = [
       { name: "Aglipay Crystal Caves", type: "Limestone Cave", note: "Multi-chamber limestone cave system in Aglipay; stalactites, stalagmites, and crystal formations; one of the principal cave attractions in the Quirino Protected Landscape area" },
       { name: "Siitan River", type: "River / Whitewater", note: "Major tributary of the Cagayan River through the Quirino Protected Landscape; known for whitewater rapids through intact old-growth rainforest canopy" }
     ],
-    conservation_note: "The Quirino Protected Landscape (175,943 ha, Proclamation 548, 2004) anchors the central Sierra Madre Biodiversity Corridor — recording at least 41 threatened species and serving as one of the last Philippine Eagle strongholds in the Cagayan Valley region.",
+    conservation_note: "The Quirino Protected Landscape (175,943 ha, redrawn from Proclamation 548's original 206,875 ha by Proclamation 779 in 2005) anchors the central Sierra Madre Biodiversity Corridor — recording at least 41 threatened species and serving as one of the last Philippine Eagle strongholds in the Cagayan Valley region.",
     img_seed: "quirino",
     img: "image/Nagtipunan Quirino.jpg"
   },

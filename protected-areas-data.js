@@ -194,7 +194,7 @@ var PROTECTED_AREAS = {
     province: 'Quirino',
     area: '1,759 km²',
     established: '2004',
-    desc: 'The Quirino Protected Landscape covers 175,943 hectares of the central Sierra Madre Mountain Range, proclaimed on February 9, 2004, under Presidential Proclamation No. 548. Spanning five municipalities — Diffun, Cabarroguis, Aglipay, Maddela, and Nagtipunan — it serves as the headwaters of the Cagayan River system and supports at least 41 threatened species. The Philippine Eagle and the Critically Endangered Cantor\'s Giant Softshell Turtle have been documented in its rivers, placing Quirino among the most biologically significant protected landscapes in northern Luzon.',
+    desc: 'The Quirino Protected Landscape covers 175,943 hectares of the central Sierra Madre Mountain Range. Presidential Proclamation No. 548 established the area at 206,875 hectares on February 9, 2004; it was redrawn to its current 175,943 hectares under Proclamation No. 779 in 2005. Spanning five municipalities — Diffun, Cabarroguis, Aglipay, Maddela, and Nagtipunan — it serves as the headwaters of the Cagayan River system and supports at least 41 threatened species. The Philippine Eagle and the Critically Endangered Cantor\'s Giant Softshell Turtle have been documented in its rivers, placing Quirino among the most biologically significant protected landscapes in northern Luzon.',
     funfact: 'The Addalam River flowing through Quirino Protected Landscape is one of the few rivers in the Philippines where the Cantor\'s Giant Softshell Turtle — one of the world\'s largest freshwater turtles — has been confirmed present in the wild.',
     image: 'image/Photo coming soon.jpg'
   },
