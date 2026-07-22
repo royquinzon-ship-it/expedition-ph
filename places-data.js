@@ -544,7 +544,7 @@
     category: 'luzon', type: 'highland', region: 'La Union · Luzon', season: 'Jun–Nov',
     threat: false, threatReason: '',
     address: 'Barangay Poblacion, San Gabriel, La Union',
-    image: 'image/Tangadan Falls.jpg',
+    image: 'image/Photo coming soon.jpg',
     description: 'A two-tier waterfall along the Baroro River in San Gabriel — one of La Union\'s most accessible highland destinations despite lying at the foot of the Cordillera. The lower drop descends roughly 15 metres into a wide natural plunge pool cold enough even in summer, fed by shaded Cordillera mountain springs and upland streams. The trek follows the river upstream through bamboo groves and second-growth forest, crossing the Baroro three times before reaching the base of the falls.',
     funfact: 'The Baroro River that feeds Tangadan Falls is one of the few rivers in the Ilocos region that drains the western Cordillera directly into the South China Sea — carrying cold, mineral-rich highland water year-round even during the dry season.',
     badges: ['Two-Tier Falls', 'Baroro River', 'Cordillera Highlands', 'San Gabriel'],

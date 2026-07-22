@@ -258,9 +258,9 @@ var PROTECTED_AREAS = {
     typeLabel: 'Natural Park',
     island: 'luzon',
     province: 'Bataan',
-    area: '183.35 km²',
+    area: '200.04 km²',
     established: '1945',
-    desc: 'Bataan Natural Park covers 18,335 hectares of the Mariveles Mountains at the southern tip of the Bataan Peninsula, first proclaimed as Bataan National Park through Presidential Proclamation No. 24 in 1945. Its intact tropical forest shelters the upper watershed of the Bataan Peninsula, filtering freshwater runoff into Manila Bay. Surrounded by military and industrial zones, it is one of the last significant natural ecosystems in Bataan, sheltering endemic Luzon species in a landscape of deep historical significance — the same mountains that formed the backdrop for the Bataan Death March of 1942.',
+    desc: 'Bataan Natural Park covers 20,004.17 hectares of the Mariveles Mountains at the southern tip of the Bataan Peninsula today, under its current designation via the Expanded NIPAS Act (R.A. 11038, 2018) — down from the roughly 31,400 hectares first proclaimed as Bataan National Park through Presidential Proclamation No. 24 in 1945, after decades of boundary reductions. Its intact tropical forest shelters the upper watershed of the Bataan Peninsula, filtering freshwater runoff into Manila Bay. Surrounded by military and industrial zones, it is one of the last significant natural ecosystems in Bataan, sheltering endemic Luzon species in a landscape of deep historical significance — the same mountains that formed the backdrop for the Bataan Death March of 1942.',
     funfact: 'Bataan Natural Park covers the mountains across which the Bataan Death March of April 1942 began — making it simultaneously one of the Philippines\' most important historical landscapes and one of its most ecologically significant forest reserves.',
     image: 'image/Photo coming soon.jpg'
   },

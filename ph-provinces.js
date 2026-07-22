@@ -520,11 +520,16 @@ var PH_PROVINCES = [
     fact: "The Millennium Balete Tree of Maria Aurora is a Ficus species carbon-dated at between 400 and 600 years old, with a trunk so vast that dozens of people linking hands cannot encircle it — freshwater springs well up naturally at its roots to form a clear swimming pool, making it one of the few trees in the Philippines that functions as both a living ecological monument and an active bathing site for the local community.",
     geography: {
       area: "3,147.32 km²",
-      highest_peak: "Mount Anacuao (1,850 m)",
+      highest_peak: "Mount Mingan (1,901 m)",
       coastline: "Pacific Ocean (eastern Luzon coast)"
     },
     wildlife: [
-      { name: "Philippine Eagle", latin: "Pithecophaga jefferyi", status: "Critically Endangered", note: "Documented within Aurora Memorial Natural Park", page: "birds.html" }
+      { name: "Philippine Eagle", latin: "Pithecophaga jefferyi", status: "Critically Endangered", note: "Documented within Aurora Memorial Natural Park", page: "birds.html" },
+      { name: "Luzon Water-Redstart", latin: "Rhyacornis bicolor", status: "Near Threatened", note: "Documented among the birds of Aurora Memorial Natural Park's fast-flowing Sierra Madre streams, including those feeding Ditumabo Falls", page: "birds.html" },
+      { name: "Northern Sierra Madre Forest Monitor", latin: "Varanus bitatawa", status: "Near Threatened", note: "Frugivorous, canopy-dwelling monitor lizard described from Sierra Madre forest surveys spanning Aurora and Isabela provinces", page: "reptiles.html" }
+    ],
+    flora: [
+      { name: "Rafflesia", latin: "Rafflesia lagascae", status: "Vulnerable", note: "Recorded blooming for a second consecutive year (2026) within Aurora Memorial Natural Park, Maria Aurora — the Philippines' most widespread Rafflesia species", page: "flora.html" }
     ],
     protected_areas: [
       { name: "Aurora Memorial Natural Park", type: "Natural Park", pa_id: "aurora-memorial" }
@@ -534,7 +539,7 @@ var PH_PROVINCES = [
       { name: "Ditumabo Falls (Mother Falls)", type: "Waterfall", note: "42 m (140 ft) waterfall in Barangay Ditumabo, San Luis; 30 m wide basin forms a natural cold swimming pool; fed by Sierra Madre streams" },
       { name: "Sierra Madre", type: "Mountain Range", note: "Longest mountain range in the Philippines; stretches ~540 km along Luzon's Pacific coast; last great forest frontier sheltering the Philippine Eagle, Philippine Crocodile, and one of Asia's largest remaining rainforest blocks", place_id: "sierra-madre" }
     ],
-    conservation_note: "Aurora Memorial Natural Park (est. 1949, Proclamation 130) shelters the Philippine Eagle in the Sierra Madre's old-growth forest — one of the few mainland Luzon sites where the eagle's presence within a protected area has been specifically documented.",
+    conservation_note: "Aurora Memorial Natural Park — originally established as Bongabon-Baler National Park in 1937 under Proclamation 220, then renamed by Proclamation 130 in 1949 — shelters the Philippine Eagle in the Sierra Madre's old-growth forest, one of the few mainland Luzon sites where the eagle's presence within a protected area has been specifically documented.",
     img_seed: "aurora",
     img: "image/Balete Tree , Balete Park Aurora.jpg"
   },
@@ -551,6 +556,13 @@ var PH_PROVINCES = [
       highest_peak: "Pantingan Peak, Mariveles Mountains (1,388 m)",
       coastline: "Manila Bay and South China Sea"
     },
+    wildlife: [
+      { name: "Zambales Forest Mouse", latin: "Apomys zambalensis", status: "Least Concern", note: "Recorded as the most abundant small mammal in field surveys of Mount Natib, within Bataan Natural Park", page: "mammals.html" },
+      { name: "Philippine Hawk-Eagle", latin: "Nisaetus philippensis", status: "Vulnerable", note: "Documented within Bataan Natural Park's old-growth forest across the Mariveles Mountains and Mount Natib", page: "birds.html" }
+    ],
+    flora: [
+      { name: "Dipterocarp Forest", latin: "Dipterocarpaceae spp.", status: "Not Evaluated", note: "Shorea, Hopea, Vatica, Dipterocarpus, and Anisoptera genera documented dominating the old-growth canopy of Bataan Natural Park's northern portion", page: "flora.html" }
+    ],
     protected_areas: [
       { name: "Bataan Natural Park", type: "Natural Park", pa_id: "bataan-natural" }
     ],
@@ -558,7 +570,7 @@ var PH_PROVINCES = [
       { name: "Mount Natib", type: "Volcanic Caldera", note: "Potentially active stratovolcano, 1,253 m, northern Bataan; 6×7 km caldera open to the northwest; five geothermal spring fields (Asin, Mamot, Tigulangin, Uyong, Paipit) with temperatures reaching 56°C" },
       { name: "Pantingan Peak", type: "Mountain Summit", note: "1,388 m summit of the Mariveles Mountain Range, southern tip of Bataan; highest point in the province; old-growth dipterocarp and mossy forest within Bataan Natural Park" }
     ],
-    conservation_note: "Bataan Natural Park (18,335 ha, Proclamation 24, 1945) covers the Mariveles Mountains at the tip of the Bataan Peninsula — its forest watershed filters runoff into Manila Bay and shelters endemic species in one of the Philippines' most historically significant landscapes.",
+    conservation_note: "Bataan Natural Park (20,004 ha today, down from ~31,400 ha at its 1945 proclamation under Proclamation 24) covers the Mariveles Mountains at the tip of the Bataan Peninsula — its forest watershed filters runoff into Manila Bay and shelters endemic species in one of the Philippines' most historically significant landscapes.",
     img_seed: "bataan",
     img: "image/Pantingan Peak  Bataan.jpg"
   },
@@ -574,8 +586,15 @@ var PH_PROVINCES = [
       area: "2,783.69 km²",
       major_river: "Pampanga River"
     },
+    wildlife: [
+      { name: "Rufous Hornbill", latin: "Buceros hydrocorax", status: "Vulnerable", note: "Directly observed at Macua and Sinilaban within Angat Watershed Forest Reserve during Philippine Eagle survey expeditions", page: "birds.html" },
+      { name: "Wrinkle-lipped Free-tailed Bat", latin: "Chaerephon plicatus", status: "Least Concern", note: "Roosts by the thousands in Bahay Paniki Cave (\"House of Bats\"), part of the Biak-na-Bato Cave Complex, San Miguel", page: "mammals.html" }
+    ],
+    flora: [
+      { name: "Narra", latin: "Pterocarpus indicus", status: "Endangered", note: "Canopy-forming hardwood of Biak-na-Bato Natural Park's limestone forest; the Philippines' national tree", page: "flora.html" }
+    ],
     protected_areas: [
-      { name: "Angat Watershed Forest Reserve", type: "Watershed Forest Reserve", pa_id: "angat-watershed" }
+      { name: "Angat Watershed Forest Reserve", type: "Watershed Forest Reserve", pa_id: "angat" }
     ],
     landmarks: [
       { name: "Biak-na-Bato Cave Complex", type: "Limestone Caves", note: "100+ limestone caves carved by the Madlum River through karst terrain, San Miguel; includes Bahay Paniki Cave (House of Bats); \"Biak-na-Bato\" means \"split boulder\"" }
@@ -596,13 +615,19 @@ var PH_PROVINCES = [
       area: "5,689.69 km²",
       major_river: "Pampanga River (260 km)"
     },
+    wildlife: [
+      { name: "Philippine Deer", latin: "Rusa marianna", status: "Vulnerable", note: "Documented within the Pantabangan–Carranglan Watershed Forest Reserve's Caraballo forest corridor, alongside monitor lizards and forest raptors", page: "mammals.html" }
+    ],
+    flora: [
+      { name: "Molave", latin: "Vitex parviflora", status: "Least Concern", note: "Dominant hardwood of Minalungao Natural Park's karst forest, confirmed in a peer-reviewed tree checklist of 55 species along the Peñaranda River gorge", page: "flora.html" }
+    ],
     protected_areas: [
       { name: "Pantabangan–Carranglan Watershed Forest Reserve", type: "Watershed Forest Reserve", pa_id: "pantabangan" }
     ],
     landmarks: [
       { name: "Minalungao Natural Park", type: "Limestone Gorge", note: "Peñaranda River gorge with emerald-green waters threading beneath limestone walls up to 16 m high, General Tinio; 2,018 ha natural park established 1967" }
     ],
-    conservation_note: "The Pantabangan–Carranglan Watershed Forest Reserve (84,500 ha, Proclamation 561, 1969) protects the catchment feeding the Pantabangan Reservoir — which irrigates farmland across 24 municipalities, directly sustaining Nueva Ecija's role as the Rice Granary of the Philippines.",
+    conservation_note: "The Pantabangan–Carranglan Watershed Forest Reserve (84,500 ha, Proclamation 561, 1969) protects the catchment feeding the Pantabangan Reservoir — which irrigates farmland across 23 municipalities, directly sustaining Nueva Ecija's role as the Rice Granary of the Philippines.",
     img_seed: "nueva-ecija",
     img: "image/Minalungao Park Nueva Ecija.jpg"
   },
@@ -619,6 +644,14 @@ var PH_PROVINCES = [
       highest_peak: "Mount Arayat (1,026 m)",
       major_river: "Pampanga River"
     },
+    wildlife: [
+      { name: "Far Eastern Curlew", latin: "Numenius madagascariensis", status: "Endangered", note: "Recorded among internationally important shorebird congregations at the Sasmuan Pampanga Coastal Wetlands, a Ramsar Site since 2021 — the first in Central Luzon", page: "birds.html" },
+      { name: "Luzon Bleeding-Heart Dove", latin: "Gallicolumba luzonica", status: "Near Threatened", note: "Documented among the endemic fauna of Mount Arayat Natural Park's forest interior", page: "birds.html" }
+    ],
+    flora: [
+      { name: "Pyrostria arayatensis", latin: "Pyrostria arayatensis", status: "Not Evaluated", note: "A Rubiaceae species new to science, discovered in Mount Arayat National Park's lowland forest in 2017 and formally described in 2020; endemic to the mountain", page: "flora.html" },
+      { name: "Arayat Pitogo", latin: "Cycas riuminiana", status: "Endangered", note: "Cycad subpopulation documented on Mount Arayat's northwestern slope, one of only five known Cycas riuminiana subpopulations in the Philippines", page: "flora.html" }
+    ],
     protected_areas: [
       { name: "Mount Arayat Natural Park", type: "Natural Park", pa_id: "mount-arayat" },
       { name: "Mount Pinatubo Natural Park", type: "Natural Park", pa_id: "mount-pinatubo" }
@@ -637,12 +670,19 @@ var PH_PROVINCES = [
     region_key: "region3",
     island_group: "luzon",
     known_for: "Ubod Falls & Zambales Mountain Foothills",
-    desc: "Tarlac is a landlocked province at the heart of Central Luzon, its western edge climbing into the Zambales Mountains where forest streams cascade down to form Ubod Falls — a powerful waterfall fed by cold springs deep within the foothills. The province's vast plains are divided between sugarcane estates and rice paddies, while the Tarlac River and its tributaries support productive wetlands hosting nesting Purple Heron and Purple Swamphen colonies. The Sacobia-Bamban River basin was dramatically reshaped by the 1991 eruption of Mount Pinatubo, whose lahar flows buried entire barrios and farmlands before secondary vegetation slowly reclaimed the hardened plains.",
+    desc: "Tarlac is a landlocked province at the heart of Central Luzon, its western edge climbing into the Zambales Mountains where forest streams cascade down to form Ubod Falls — a powerful waterfall fed by cold springs deep within the foothills. The province's vast plains are divided between sugarcane estates and rice paddies, while Canarem Lake Bird Sanctuary in Victoria supports a diverse wintering and resident wetland bird population monitored through the Asian Waterbird Census. The Sacobia-Bamban River basin was dramatically reshaped by the 1991 eruption of Mount Pinatubo, whose lahar flows buried entire barrios and farmlands before secondary vegetation slowly reclaimed the hardened plains.",
     fact: "Ubod Falls in the Zambales foothills is fed by springs draining through volcanic rock of the Zambales Ophiolite Complex — one of the oldest and best-exposed sections of ancient oceanic crust on land in Southeast Asia, thrust onto the surface by tectonic collision during the Oligocene to Miocene. The same Pinatubo eruption that reshaped Tarlac's river valleys temporarily lowered global temperatures by 0.5°C — the largest climate cooling event since Krakatoa in 1883.",
     geography: {
       area: "3,046.49 km²",
       major_river: "Tarlac River (95.2 km, tributary of Agno River)"
     },
+    wildlife: [
+      { name: "Philippine Duck", latin: "Anas luzonica", status: "Vulnerable", note: "Documented at Canarem Lake Bird Sanctuary, Victoria — one of Tarlac's most consistently monitored wetland bird sites", page: "birds.html" },
+      { name: "Black-winged Stilt", latin: "Himantopus himantopus", status: "Least Concern", note: "Among the most abundant migrants counted at Canarem Lake during recent Asian Waterbird Census surveys", page: "birds.html" }
+    ],
+    flora: [
+      { name: "Talahib", latin: "Saccharum spontaneum", status: "Not Evaluated", note: "Dominant pioneer species recolonizing Mount Pinatubo's lahar deposits across the Sacobia-Bamban river basin", page: "flora.html" }
+    ],
     protected_areas: [
       { name: "Mount Pinatubo Natural Park", type: "Natural Park", pa_id: "mount-pinatubo" }
     ],
@@ -666,6 +706,13 @@ var PH_PROVINCES = [
       highest_peak: "Mount Tapulao (2,044 m), Palauig",
       coastline: "South China Sea"
     },
+    wildlife: [
+      { name: "Giant Golden-crowned Flying Fox", latin: "Acerodon jubatus", status: "Endangered", note: "Roosting colonies documented within Subic Bay Forest Reserve's old-growth and secondary forest", page: "mammals.html" },
+      { name: "Philippine Warty Pig", latin: "Sus philippensis", status: "Vulnerable", note: "Documented in biodiversity surveys of Subic Bay Forest Reserve's forest interior", page: "mammals.html" }
+    ],
+    flora: [
+      { name: "Apitong", latin: "Dipterocarpus grandiflorus", status: "Endangered", note: "Codominant canopy species, alongside white lauan, of Subic Bay Forest Reserve's lowland dipterocarp forest", page: "flora.html" }
+    ],
     protected_areas: [
       { name: "Subic Bay Forest Reserve", type: "Wildlife Sanctuary", pa_id: "subic-forest" },
       { name: "Mount Pinatubo Natural Park", type: "Natural Park", pa_id: "mount-pinatubo" }
