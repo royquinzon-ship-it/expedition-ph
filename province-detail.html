@@ -913,7 +913,7 @@ a.art-pa-link .art-pa-name::after {
   if (province.landmarks && province.landmarks.length) {
     province.landmarks.forEach(function (lm) {
       var el = document.createElement('a');
-      el.href = lm.place_id ? 'places.html?feature=' + lm.place_id : 'places.html';
+      el.href = lm.place_id ? 'place-detail.html?id=' + lm.place_id : 'places.html';
       el.className = 'art-landmark-card art-landmark-link';
       el.innerHTML =
         '<div class="art-landmark-type">' + lm.type + '</div>' +
